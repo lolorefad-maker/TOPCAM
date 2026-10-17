@@ -36,6 +36,32 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('gear_up_updated', () => {
     loadGearUpSettingsAdmin();
   });
+
+  // دعم السحب والإفلات لصورة البضاعة في نافذة الإضافة
+  const dropzone = document.getElementById('prodUploadDropzone');
+  if (dropzone) {
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropzone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropzone.classList.add('border-yellow-500', 'bg-yellow-100/50');
+      }, false);
+    });
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropzone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropzone.classList.remove('border-yellow-500', 'bg-yellow-100/50');
+      }, false);
+    });
+    dropzone.addEventListener('drop', (e) => {
+      const dt = e.dataTransfer;
+      const files = dt.files;
+      if (files && files.length > 0) {
+        handleImageFileUpload({ target: { files: files } }, 'prodImage', 'prodImagePreview', 'prodImagePreviewBox');
+      }
+    }, false);
+  }
 });
 
 // ================= 1. التحكم بالسايدبار والتنقل =================
@@ -798,6 +824,89 @@ function loadGearUpSettingsAdmin() {
   }
 }
 
+// ================= محرك رفع وضغط الصور من المعرض والجهاز =================
+function triggerGalleryUpload(fileInputId) {
+  const input = document.getElementById(fileInputId);
+  if (input) {
+    input.value = '';
+    input.click();
+  }
+}
+
+function handleImageFileUpload(event, targetInputId, previewImgId, containerId = null) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  if (!file.type.startsWith('image/')) {
+    showAdminToast('يرجى اختيار ملف صورة صالح (JPG, PNG, WEBP)', 'error');
+    return;
+  }
+
+  showAdminToast('جاري استيراد وضغط الصورة من ألبوم الصور...', 'info');
+
+  compressImageFile(file, 1200, 0.85, (compressedDataUrl) => {
+    const targetInput = document.getElementById(targetInputId);
+    if (targetInput) {
+      targetInput.value = compressedDataUrl;
+      targetInput.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+
+    const previewImg = document.getElementById(previewImgId);
+    if (previewImg) {
+      previewImg.src = compressedDataUrl;
+    }
+
+    if (containerId) {
+      const container = document.getElementById(containerId);
+      if (container) container.classList.remove('hidden');
+    }
+
+    showAdminToast('تم استيراد الصورة بنجاح وجاهزة للنشر في المتجر! 📸', 'success');
+  });
+}
+
+function compressImageFile(file, maxDimension, quality, callback) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onload = () => {
+      let width = img.width;
+      let height = img.height;
+
+      if (width > maxDimension || height > maxDimension) {
+        if (width > height) {
+          height = Math.round((height * maxDimension) / width);
+          width = maxDimension;
+        } else {
+          width = Math.round((width * maxDimension) / height);
+          height = maxDimension;
+        }
+      }
+
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, width, height);
+
+      const dataUrl = canvas.toDataURL('image/jpeg', quality);
+      callback(dataUrl);
+    };
+    img.onerror = () => {
+      showAdminToast('حدث خطأ أثناء قراءة الصورة، يرجى المحاولة بصورة أخرى.', 'error');
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function setFastProdImg(imgPath) {
+  const input = document.getElementById('prodImage');
+  const preview = document.getElementById('prodImagePreview');
+  if (input) input.value = imgPath;
+  if (preview) preview.src = imgPath;
+}
+
 function setGearImg(inputId, previewId, imgPath) {
   const input = document.getElementById(inputId);
   const preview = document.getElementById(previewId);
@@ -888,7 +997,10 @@ function loadPromoPopupSettings() {
   document.getElementById('promoCode').value = promo.promoCode || '';
   document.getElementById('promoCategory').value = promo.targetCategory || 'stands';
   document.getElementById('promoBtnText').value = promo.buttonText || '';
-  document.getElementById('promoImage').value = promo.image || 'images/gear_frame_matters.jpg';
+  const promoImgVal = promo.image || 'images/gear_frame_matters.jpg';
+  document.getElementById('promoImage').value = promoImgVal;
+  const promoPreview = document.getElementById('previewPromoFormImg');
+  if (promoPreview) promoPreview.src = promoImgVal;
 }
 
 function savePromoPopupSettings(e) {
@@ -943,6 +1055,8 @@ function openProductEditModal(productId = null) {
   form.reset();
   document.getElementById('editProductId').value = '';
 
+  const preview = document.getElementById('prodImagePreview');
+
   if (productId) {
     const product = storeDB.getProductById(productId);
     if (!product) return;
@@ -957,11 +1071,14 @@ function openProductEditModal(productId = null) {
     document.getElementById('prodPrice').value = product.price || '';
     document.getElementById('prodOldPrice').value = product.oldPrice || '';
     document.getElementById('prodStock').value = product.stock !== undefined ? product.stock : 10;
-    document.getElementById('prodImage').value = product.image || '';
+    document.getElementById('prodImage').value = product.image || 'images/camera_body.jpg';
+    if (preview) preview.src = product.image || 'images/camera_body.jpg';
     document.getElementById('prodDescription').value = product.description || '';
   } else {
     title.textContent = 'إضافة بضاعة جديدة للمخزن';
     document.getElementById('prodStock').value = 10;
+    document.getElementById('prodImage').value = 'images/camera_body.jpg';
+    if (preview) preview.src = 'images/camera_body.jpg';
   }
 
   modal.classList.remove('hidden');
