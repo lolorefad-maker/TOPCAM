@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم العالمية وإدارة المتجر | TOP CAM Control Center</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandYellow: '#facc15',
+            brandGold: '#eab308',
+            brandGoldDark: '#ca8a04',
+            darkSidebar: '#0b0f19',
+            darkSurface: '#111827',
+          },
+          fontFamily: {
+            sans: ['Tajawal', 'Cairo', 'Plus Jakarta Sans', 'sans-serif'],
+            en: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: 'Tajawal', 'Cairo', sans-serif;
+      background-color: #f8fafc;
+      overflow-x: hidden;
+    }
+    .font-en {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    /* Sidebar Active Tab Indicator */
+    .sidebar-link.active {
+      background: linear-gradient(90deg, rgba(250, 204, 21, 0.15) 0%, rgba(250, 204, 21, 0.05) 100%);
+      color: #facc15 !important;
+      border-right: 3px solid #facc15;
+    }
+    .sidebar-link.active i {
+      color: #facc15 !important;
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex bg-[#f1f5f9]">
+
+  <!-- ══════════════════════════════════════════════════════════
+       SIDEBAR NAVIGATION (سايدبار عالمي أنيق وثابت)
+       ══════════════════════════════════════════════════════════ -->
+  <aside id="adminSidebar" class="fixed inset-y-0 right-0 z-50 w-72 bg-[#0b0f19] text-white flex flex-col justify-between border-l border-white/10 shadow-2xl transition-transform duration-300 md:translate-x-0 translate-x-full">
+    
+    <div>
+      <!-- Brand & Header -->
+      <div class="p-5 border-b border-white/10 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="bg-black/80 px-2.5 py-1.5 rounded-xl border border-yellow-400/50 shadow-md">
+            <img src="images/logo.svg" alt="TOP CAM" class="h-6 w-auto transition-transform group-hover:scale-105">
+          </div>
+          <div>
+            <div class="text-[9px] font-black uppercase tracking-widest text-yellow-400 font-mono">CONTROL CENTER</div>
+            <div class="text-xs font-bold text-slate-200">لوحة الإدارة الشاملة</div>
+          </div>
+        </a>
+
+        <!-- Mobile Close Button -->
+        <button onclick="toggleSidebar(false)" class="md:hidden w-8 h-8 rounded-lg bg-white/10 text-slate-300 hover:text-white flex items-center justify-center">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Live Connection Pill -->
+      <div class="px-5 py-3 border-b border-white/5">
+        <div class="flex items-center justify-between text-[11px] bg-slate-900/80 px-3 py-1.5 rounded-xl border border-white/5">
+          <span class="flex items-center gap-1.5 text-emerald-400 font-bold">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>المتجر متصل ومباشر</span>
+          </span>
+          <span class="text-slate-400 font-mono text-[10px]">v2.6 PRO</span>
+        </div>
+      </div>
+
+      <!-- Navigation Menu Links -->
+      <nav class="p-3 space-y-1.5">
+        <div class="text-[10px] uppercase font-bold text-slate-400 tracking-wider px-3 py-1 font-mono">الأقسام الرئيسية</div>
+
+        <!-- 1. Dashboard & Charts -->
+        <button onclick="switchSidebarTab('dashboardTab', this)" class="sidebar-link active w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-chart-pie text-sm text-slate-400 w-5 text-center"></i>
+            <span>المؤشرات والرسوم البيانية</span>
+          </div>
+          <i class="fa-solid fa-chevron-left text-[10px] text-slate-500"></i>
+        </button>
+
+        <!-- 2. Orders -->
+        <button onclick="switchSidebarTab('ordersTab', this)" class="sidebar-link w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-clipboard-list text-sm text-slate-400 w-5 text-center"></i>
+            <span>إدارة واعتماد الطلبات</span>
+          </div>
+          <span class="bg-yellow-400 text-slate-950 text-[10px] font-black px-1.5 py-0.2 rounded-full font-en shadow-xs" id="sidebarOrdersBadge">0</span>
+        </button>
+
+        <!-- 3. Inventory & Stocks -->
+        <button onclick="switchSidebarTab('inventoryTab', this)" class="sidebar-link w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-boxes-stacked text-sm text-slate-400 w-5 text-center"></i>
+            <span>الجرد والأسهم والأسعار</span>
+          </div>
+          <span class="text-[10px] text-slate-400 font-en" id="sidebarStockBadge">0</span>
+        </button>
+
+        <!-- 4. Best Sellers -->
+        <button onclick="switchSidebarTab('bestSellersTab', this)" class="sidebar-link w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-fire text-sm text-amber-500 w-5 text-center"></i>
+            <span>جرد الأكثر مبيعاً</span>
+          </div>
+          <i class="fa-solid fa-chevron-left text-[10px] text-slate-500"></i>
+        </button>
+
+        <!-- 5. Brands & Agencies -->
+        <button onclick="switchSidebarTab('brandsTab', this)" class="sidebar-link w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-award text-sm text-yellow-600 w-5 text-center"></i>
+            <span>الوكالات والعلامات</span>
+          </div>
+          <i class="fa-solid fa-chevron-left text-[10px] text-slate-500"></i>
+        </button>
+
+        <div class="text-[10px] uppercase font-bold text-slate-400 tracking-wider px-3 pt-3 pb-1 font-mono">الوسائط والتسويق</div>
+
+        <!-- 6. Media & Gear Up Manager -->
+        <button onclick="switchSidebarTab('mediaTab', this)" class="sidebar-link w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-images text-sm text-indigo-400 w-5 text-center"></i>
+            <span>الصور وقسم Gear Up</span>
+          </div>
+          <span class="text-[9px] bg-indigo-500/30 text-indigo-300 px-1.5 py-0.2 rounded font-bold font-mono">HOT</span>
+        </button>
+
+        <!-- 7. Promo Popup Modal -->
+        <button onclick="switchSidebarTab('promoPopupTab', this)" class="sidebar-link w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-bullhorn text-sm text-rose-500 w-5 text-center"></i>
+            <span>نافذة العرض المنبثقة</span>
+          </div>
+          <span class="w-2 h-2 rounded-full bg-emerald-500" id="sidebarPromoDot"></span>
+        </button>
+
+        <!-- 8. Settings -->
+        <button onclick="switchSidebarTab('settingsTab', this)" class="sidebar-link w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-sliders text-sm text-slate-400 w-5 text-center"></i>
+            <span>إعدادات المتجر والشحن</span>
+          </div>
+          <i class="fa-solid fa-chevron-left text-[10px] text-slate-500"></i>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Sidebar Bottom Actions -->
+    <div class="p-4 border-t border-white/10 space-y-2">
+      <button onclick="openProductEditModal()" class="w-full bg-yellow-400 hover:bg-yellow-500 active:scale-95 text-slate-950 font-black text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+        <i class="fa-solid fa-plus-circle"></i>
+        <span>إضافة بضاعة جديدة</span>
+      </button>
+
+      <div class="grid grid-cols-2 gap-2">
+        <button onclick="addMockTestOrder()" class="bg-white/5 hover:bg-white/10 text-slate-200 text-[10.5px] font-bold py-2 rounded-xl transition flex items-center justify-center gap-1 border border-white/5" title="إنشاء طلب فحص فوري">
+          <i class="fa-solid fa-bell text-amber-400 text-xs"></i>
+          <span>طلب تجريبي</span>
+        </button>
+
+        <a href="index.html" target="_blank" class="bg-white/5 hover:bg-white/10 text-slate-200 text-[10.5px] font-bold py-2 rounded-xl transition flex items-center justify-center gap-1 border border-white/5">
+          <i class="fa-solid fa-arrow-up-right-from-square text-yellow-400 text-[9px]"></i>
+          <span>فتح المتجر</span>
+        </a>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Sidebar Overlay for Mobile -->
+  <div id="sidebarOverlay" onclick="toggleSidebar(false)" class="fixed inset-0 bg-black/60 z-40 md:hidden hidden transition-opacity"></div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN CONTENT VIEWPORT (محاذاة مع السايدبار)
+       ══════════════════════════════════════════════════════════ -->
+  <div class="flex-1 md:mr-72 min-h-screen flex flex-col">
+    
+    <!-- Top Sticky Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-30 px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-xs">
+      <div class="flex items-center gap-3">
+        <!-- Mobile Sidebar Toggle -->
+        <button onclick="toggleSidebar(true)" class="md:hidden w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 flex items-center justify-center text-sm">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div>
+          <h1 id="currentSectionTitle" class="text-base sm:text-lg font-black text-slate-900">المؤشرات العامة والرسوم البيانية</h1>
+          <p class="text-[11px] text-slate-400 hidden sm:block">نظام الرصد الذكي للمبيعات وحركة المخزون</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="renderAdminStats(); renderAdminOrders(); renderAdminInventory(); showAdminToast('تم تحديث البيانات!', 'info');" class="w-8 h-8 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition text-xs" title="تحديث البيانات">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </button>
+
+        <a href="index.html" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-yellow-400 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-xs">
+          <i class="fa-solid fa-store text-xs"></i>
+          <span class="hidden sm:inline">واجهة المتجر</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="p-4 sm:p-8 flex-1 w-full max-w-7xl mx-auto space-y-6">
+
+      <!-- ══════════════════════════════════════════════════════════
+           TAB 0: DASHBOARD & CHARTS (رسوم بيانية وكروت بصرية وأسهم صعود)
+           ══════════════════════════════════════════════════════════ -->
+      <div id="dashboardTab" class="admin-pane space-y-6">
+        
+        <!-- 4 Top Visual Cards with Trend Arrows -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <!-- Card 1: Total Sales with Up Arrow -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex flex-col justify-between hover:shadow-md transition">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-slate-400">إجمالي المبيعات المؤكدة</span>
+              <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-base">
+                <i class="fa-solid fa-sack-dollar"></i>
+              </div>
+            </div>
+            <div class="text-2xl sm:text-3xl font-black text-slate-900 font-en mb-2" id="dashTotalSales">$0</div>
+            <div class="flex items-center justify-between text-[11px] pt-2 border-t border-slate-100">
+              <span class="inline-flex items-center gap-1 text-emerald-600 font-bold font-en">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <span>+18.4% نمو</span>
+              </span>
+              <span class="text-slate-400">مقارنة بالأسبوع الماضي</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Inventory Stocks with Health Meter -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex flex-col justify-between hover:shadow-md transition">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-slate-400">جرد الأسهم والقطع المتوفرة</span>
+              <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-base">
+                <i class="fa-solid fa-warehouse"></i>
+              </div>
+            </div>
+            <div class="text-2xl sm:text-3xl font-black text-slate-900 font-en mb-2" id="dashTotalUnits">0</div>
+            <div class="flex items-center justify-between text-[11px] pt-2 border-t border-slate-100">
+              <span class="inline-flex items-center gap-1 text-blue-600 font-bold font-en">
+                <i class="fa-solid fa-shield-check"></i>
+                <span>94% توفر صحي</span>
+              </span>
+              <span class="text-slate-400" id="dashTotalProducts">0 صنف مسجل</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Pending Orders with Bell Alert -->
+          <div class="bg-white p-5 rounded-2xl border border-amber-200 shadow-xs flex flex-col justify-between hover:shadow-md transition bg-gradient-to-br from-white to-amber-50/40">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-amber-800">طلبات بانتظار الاعتماد</span>
+              <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-base">
+                <i class="fa-solid fa-bell animate-bounce"></i>
+              </div>
+            </div>
+            <div class="text-2xl sm:text-3xl font-black text-amber-700 font-en mb-2" id="dashPendingOrders">0</div>
+            <div class="flex items-center justify-between text-[11px] pt-2 border-t border-amber-100">
+              <span class="inline-flex items-center gap-1 text-amber-800 font-bold">
+                <i class="fa-solid fa-circle-exclamation text-amber-600"></i>
+                <span>تتطلب موافقتك فورا</span>
+              </span>
+              <button onclick="switchSidebarTab('ordersTab', document.querySelectorAll('.sidebar-link')[1])" class="text-yellow-700 font-bold hover:underline">عرض &larr;</button>
+            </div>
+          </div>
+
+          <!-- Card 4: Inventory Valuation ($) -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex flex-col justify-between hover:shadow-md transition">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold text-slate-400">القيمة المالية للمستودع</span>
+              <div class="w-9 h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-base">
+                <i class="fa-solid fa-coins"></i>
+              </div>
+            </div>
+            <div class="text-xl sm:text-2xl font-black text-slate-900 font-en mb-2" id="dashTotalValuation">$0</div>
+            <div class="flex items-center justify-between text-[11px] pt-2 border-t border-slate-100">
+              <span class="inline-flex items-center gap-1 text-purple-600 font-bold">
+                <i class="fa-solid fa-gem text-xs"></i>
+                <span>أصول بضاعة معتمدة</span>
+              </span>
+              <span class="text-slate-400">بأسعار البيع الرسمية</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ══════════ INTERACTIVE CHARTS & VISUAL CARDS ══════════ -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          
+          <!-- Visual Chart 1: Brand Inventory Distribution (8 Cols) -->
+          <div class="lg:col-span-8 bg-white p-6 rounded-3xl border border-slate-200/90 shadow-xs space-y-5">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+                  <i class="fa-solid fa-chart-simple text-amber-500"></i>
+                  <span>رسم بياني لتوزيع المخزون وحجم الأصناف حسب الوكالات</span>
+                </h3>
+                <p class="text-xs text-slate-400 mt-0.5">توزيع الأسهم والقيمة المالية لكل وكالة تصوير</p>
+              </div>
+              <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2.5 py-1 rounded-lg font-mono">LIVE SYNC</span>
+            </div>
+
+            <!-- Dynamic Brand Progress Bars -->
+            <div id="chartBrandBars" class="space-y-3.5">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Visual Chart 2: Order Status Radial Distribution (4 Cols) -->
+          <div class="lg:col-span-4 bg-white p-6 rounded-3xl border border-slate-200/90 shadow-xs space-y-5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+                  <i class="fa-solid fa-pie-chart text-yellow-600"></i>
+                  <span>حالات الطلبات</span>
+                </h3>
+                <span class="text-xs text-slate-400 font-en" id="dashTotalOrdersCount">0 طلب</span>
+              </div>
+
+              <!-- Visual Status Breakdown List -->
+              <div class="space-y-2.5" id="dashOrderStatusList">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Bottom Notice -->
+            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 text-[11px] text-slate-500 flex items-center gap-2.5">
+              <i class="fa-solid fa-bolt text-yellow-500 text-sm"></i>
+              <span>يتم تحديث الرسوم والنسب آلياً بمجرد قبول أو تسليم أي طلب.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Low Stock Warning Row -->
+        <div class="bg-white p-5 rounded-3xl border border-rose-200 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-lg shrink-0">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-black text-slate-900">تنبيهات المخزون الحرج والنفاذ</h4>
+              <p class="text-xs text-slate-500" id="dashAlertsSummary">يوجد 0 أصناف شارفت على النفاذ أو نفذت كميتها.</p>
+            </div>
+          </div>
+          <button onclick="switchSidebarTab('inventoryTab', document.querySelectorAll('.sidebar-link')[2]); document.getElementById('inventoryStockFilter').value='low_stock'; renderAdminInventory();" class="bg-rose-600 hover:bg-rose-700 active:scale-95 text-white font-bold text-xs px-4 py-2 rounded-xl transition flex items-center gap-1.5 self-start sm:self-auto">
+            <span>فحص الأصناف الحرجة</span>
+            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           TAB 1: ORDERS MANAGEMENT (كل الطلبات + موافقة + رفض + وصلت)
+           ══════════════════════════════════════════════════════════ -->
+      <div id="ordersTab" class="admin-pane space-y-6 hidden">
+        
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/90 shadow-xs space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+                <span>سجل الطلبات الواردة والموافقة الفورية</span>
+                <span class="text-xs font-normal text-slate-400 font-en" id="ordersTotalCountLabel">(0 طلب)</span>
+              </h3>
+              <p class="text-xs text-slate-500 mt-0.5">
+                تصل كل طلبات المتجر هنا لحظياً؛ يمكنك اعتماد الطلب، رفضه، تحديد حالة الشحن، أو تأكيد أنه وصل للزبون.
+              </p>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
+              <button onclick="filterAdminOrders('all', this)" class="order-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-yellow-400 shadow-xs">الكل</button>
+              <button onclick="filterAdminOrders('pending', this)" class="order-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700">
+                بانتظار الموافقة (<span id="filterCountPending" class="font-en font-black text-amber-600">0</span>)
+              </button>
+              <button onclick="filterAdminOrders('approved', this)" class="order-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700">معتمدة</button>
+              <button onclick="filterAdminOrders('shipped', this)" class="order-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700">قيد الشحن</button>
+              <button onclick="filterAdminOrders('completed', this)" class="order-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700">وصلت بنجاح</button>
+              <button onclick="filterAdminOrders('cancelled', this)" class="order-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700">ملغية / مرفوضة</button>
+            </div>
+          </div>
+
+          <!-- Orders Table -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-right text-xs">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold">
+                  <th class="py-3 px-3.5">رقم الطلب</th>
+                  <th class="py-3 px-3.5">التاريخ والوقت</th>
+                  <th class="py-3 px-3.5">بيانات العميل والعنوان</th>
+                  <th class="py-3 px-3.5">المعدات المطلوبة</th>
+                  <th class="py-3 px-3.5">الإجمالي ($)</th>
+                  <th class="py-3 px-3.5">الحالة الحالية</th>
+                  <th class="py-3 px-3.5 text-center">التحكم والإجراء الفوري</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody" class="divide-y divide-slate-100 bg-white">
+                <!-- Orders rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           TAB 2: INVENTORY & STOCKS (جرد شامل + تغيير الاسعار)
+           ══════════════════════════════════════════════════════════ -->
+      <div id="inventoryTab" class="admin-pane space-y-6 hidden">
+        
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/90 shadow-xs space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h3 class="text-base font-black text-slate-900">جرد الأسهم والمخزون وتعديل الأسعار الفوري</h3>
+              <p class="text-xs text-slate-500 mt-0.5">يمكنك تغيير أي سعر مباشرة في الجدول أو زيادة وإنقاص القطع بضغطة واحدة (+ / -).</p>
+            </div>
+
+            <div class="flex items-center gap-2 flex-wrap">
+              <!-- Search -->
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="inventorySearchInput" 
+                  placeholder="بحث بالاسم أو الكود..." 
+                  oninput="renderAdminInventory()" 
+                  class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 pl-8 text-xs outline-none focus:border-yellow-400 font-sans"
+                >
+                <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-slate-400 text-xs"></i>
+              </div>
+
+              <!-- Stock Filter -->
+              <select id="inventoryStockFilter" onchange="renderAdminInventory()" class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 text-xs outline-none focus:border-yellow-400 cursor-pointer">
+                <option value="all">كل المستودع</option>
+                <option value="in_stock">متوفر (&ge; 5)</option>
+                <option value="low_stock">مخزون حرج (&lt; 5)</option>
+                <option value="out_of_stock">نفذت الكمية (0)</option>
+              </select>
+
+              <!-- Category Filter -->
+              <select id="inventoryCategoryFilter" onchange="renderAdminInventory()" class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 text-xs outline-none focus:border-yellow-400 cursor-pointer">
+                <option value="all">كل الأقسام</option>
+                <option value="cameras">كاميرات</option>
+                <option value="stands">ستاندات وترايبود</option>
+                <option value="lighting">إضاءات واستوديو</option>
+                <option value="filters">فلاتر وعدسات</option>
+                <option value="memory">ميموريات وذاكرة</option>
+                <option value="stabilizers">جيمبل وستيبلايزر</option>
+                <option value="chargers_batteries">شواحن وبطاريات</option>
+                <option value="bags">شناتي وحقائب</option>
+                <option value="cages">كيج وتثبيت</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Inventory Table -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-right text-xs">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold">
+                  <th class="py-3 px-3">الصورة</th>
+                  <th class="py-3 px-3">اسم الصنف والموديل</th>
+                  <th class="py-3 px-3">الوكالة</th>
+                  <th class="py-3 px-3">القسم</th>
+                  <th class="py-3 px-3">السعر ($)</th>
+                  <th class="py-3 px-3">السعر القديم</th>
+                  <th class="py-3 px-3">المخزون (القطع)</th>
+                  <th class="py-3 px-3">قيمة المخزون</th>
+                  <th class="py-3 px-3 text-center">إجراءات</th>
+                </tr>
+              </thead>
+              <tbody id="inventoryTableBody" class="divide-y divide-slate-100 bg-white">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           TAB 3: BEST SELLERS (جرد الأكثر مبيعاً)
+           ══════════════════════════════════════════════════════════ -->
+      <div id="bestSellersTab" class="admin-pane space-y-6 hidden">
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/90 shadow-xs space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-fire text-amber-500"></i>
+                <span>جرد المنتجات الأكثر مبيعاً وطلباً</span>
+              </h3>
+              <p class="text-xs text-slate-500 mt-0.5">تحليل فوري لحجم المبيعات المستخرج من سجل الطلبات لترتيب الأصناف بحسب الإقبال.</p>
+            </div>
+            <button onclick="renderAdminBestSellers()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1.5 rounded-xl transition flex items-center gap-1.5 self-start sm:self-auto">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <span>تحديث التقرير</span>
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4" id="topThreeBestSellersCards">
+            <!-- Top 3 podiums -->
+          </div>
+
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-right text-xs">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold">
+                  <th class="py-3 px-3.5">الترتيب</th>
+                  <th class="py-3 px-3.5">المنتج</th>
+                  <th class="py-3 px-3.5">القطع المباعة</th>
+                  <th class="py-3 px-3.5">إجمالي إيراد الصنف</th>
+                  <th class="py-3 px-3.5">المخزون المتبقي</th>
+                  <th class="py-3 px-3.5">مؤشر الإقبال</th>
+                  <th class="py-3 px-3.5 text-center">إجراءات العرض</th>
+                </tr>
+              </thead>
+              <tbody id="bestSellersTableBody" class="divide-y divide-slate-100 bg-white">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           TAB 4: AGENCIES & BRANDS (وكالاتس بتبين كلشي)
+           ══════════════════════════════════════════════════════════ -->
+      <div id="brandsTab" class="admin-pane space-y-6 hidden">
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/90 shadow-xs space-y-6">
+          <div>
+            <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-award text-yellow-600"></i>
+              <span>جرد الوكالات والعلامات التجارية العالمية (Agencies & Brands Audit)</span>
+            </h3>
+            <p class="text-xs text-slate-500 mt-0.5">
+              فحص شامل لكافة الوكالات (Sony, Canon, DJI, Aputure, Godox, SmallRig...) مع عدد الأصناف والمخزون وإجمالي المبيعات.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="brandsGrid">
+            <!-- Brand cards rendered dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           TAB 5: MEDIA, BANNERS & GEAR UP MANAGER (التحكم بالصور وقير اب)
+           ══════════════════════════════════════════════════════════ -->
+      <div id="mediaTab" class="admin-pane space-y-6 hidden">
+        
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/90 shadow-xs space-y-6">
+          <div>
+            <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-images text-indigo-500"></i>
+              <span>التحكم بجميع صور المتجر وبانرات قسم (Gear Up) والرئيسية</span>
+            </h3>
+            <p class="text-xs text-slate-500 mt-0.5">
+              تحكم كامل ومباشر بصور قسم Gear Up for What's Next، وسلايدر الهيرو، وبانر Frame What Matters بألوان سينمائية متناسقة وخالية من أي اصفرار.
+            </p>
+          </div>
+
+          <!-- Section 1: Gear Up For What's Next Control -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-2.5">
+              <span class="font-black text-slate-900 text-sm flex items-center gap-2">
+                <i class="fa-solid fa-camera-retro text-amber-500"></i>
+                <span>قسم: Gear Up for What's Next (الصفحة الرئيسية)</span>
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">HOMEPAGE_GEAR_UP_SECTION</span>
+            </div>
+
+            <form id="gearUpForm" onsubmit="saveGearUpSettingsAdmin(event)" class="space-y-4">
+              
+              <!-- Card 1: Camera Dials -->
+              <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
+                <div class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-slate-900 text-yellow-400 flex items-center justify-center text-[10px] font-black">1</span>
+                  <span>الصورة الأولى: ماكرو أزرار وعجلات الكاميرا (Card 1)</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
+                  <div class="sm:col-span-3 h-20 rounded-lg overflow-hidden border border-slate-200 bg-black">
+                    <img id="previewGearCard1" src="images/gear_camera_dials.jpg" class="w-full h-full object-cover" alt="Preview">
+                  </div>
+                  <div class="sm:col-span-9 space-y-1.5">
+                    <input type="text" id="gearCard1Img" value="images/gear_camera_dials.jpg" oninput="document.getElementById('previewGearCard1').src=this.value" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs outline-none focus:border-yellow-400 font-en">
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-[10px] text-slate-400">صور جاهزة:</span>
+                      <button type="button" onclick="setGearImg('gearCard1Img', 'previewGearCard1', 'images/gear_camera_dials.jpg')" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded font-bold">عجلات الكاميرا الطبيعية (جديد)</button>
+                      <button type="button" onclick="setGearImg('gearCard1Img', 'previewGearCard1', 'images/about_gear_testing_lab.jpg')" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded font-bold">مختبر العدسات</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Sale Offer Content -->
+              <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-3">
+                <div class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-slate-900 text-yellow-400 flex items-center justify-center text-[10px] font-black">2</span>
+                  <span>البطاقة الثانية: نص التخفيض والعرض (Gear Up for What's Next)</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-[11px] font-bold text-slate-700 mb-1">العنوان الرئيسي</label>
+                    <input type="text" id="gearCard2Title" value="Gear Up for What's Next" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs outline-none focus:border-yellow-400">
+                  </div>
+                  <div>
+                    <label class="block text-[11px] font-bold text-slate-700 mb-1">الشارة الترويجية (Badge)</label>
+                    <input type="text" id="gearCard2Badge" value="LIMITED TIME" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs outline-none focus:border-yellow-400 font-mono">
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-700 mb-1">الوصف الفرعي</label>
+                  <input type="text" id="gearCard2Subtitle" value="Up to 25% Off Selected Cameras & Lenses" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs outline-none focus:border-yellow-400">
+                </div>
+              </div>
+
+              <!-- Card 3: Mountain Peak & Story -->
+              <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
+                <div class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-slate-900 text-yellow-400 flex items-center justify-center text-[10px] font-black">3</span>
+                  <span>الصورة الثالثة: الجبال والقصص الملهمة (Better Gear Brighter Stories)</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
+                  <div class="sm:col-span-3 h-20 rounded-lg overflow-hidden border border-slate-200 bg-black">
+                    <img id="previewGearCard3" src="images/gear_snow_mountain.jpg" class="w-full h-full object-cover" alt="Preview">
+                  </div>
+                  <div class="sm:col-span-9 space-y-1.5">
+                    <input type="text" id="gearCard3Img" value="images/gear_snow_mountain.jpg" oninput="document.getElementById('previewGearCard3').src=this.value" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs outline-none focus:border-yellow-400 font-en">
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-[10px] text-slate-400">صور جاهزة:</span>
+                      <button type="button" onclick="setGearImg('gearCard3Img', 'previewGearCard3', 'images/gear_snow_mountain.jpg')" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded font-bold">جبال الألب الصافية (جديد)</button>
+                      <button type="button" onclick="setGearImg('gearCard3Img', 'previewGearCard3', 'images/gear_frame_matters.jpg')" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded font-bold">مصور في الطبيعة</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame What Matters Banner -->
+              <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
+                <div class="text-xs font-bold text-slate-800 flex items-center gap-2">
+                  <i class="fa-solid fa-panorama text-amber-600"></i>
+                  <span>بانر Frame What Matters البانورامي</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
+                  <div class="sm:col-span-3 h-20 rounded-lg overflow-hidden border border-slate-200 bg-black">
+                    <img id="previewFrameMatters" src="images/gear_frame_matters.jpg" class="w-full h-full object-cover" alt="Preview">
+                  </div>
+                  <div class="sm:col-span-9 space-y-1.5">
+                    <input type="text" id="gearFrameImg" value="images/gear_frame_matters.jpg" oninput="document.getElementById('previewFrameMatters').src=this.value" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs outline-none focus:border-yellow-400 font-en">
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-[10px] text-slate-400">صور جاهزة:</span>
+                      <button type="button" onclick="setGearImg('gearFrameImg', 'previewFrameMatters', 'images/gear_frame_matters.jpg')" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded font-bold">المصور بالطبيعة الأردنية (طبيعي)</button>
+                      <button type="button" onclick="setGearImg('gearFrameImg', 'previewFrameMatters', 'images/about_filmmaker_set.jpg')" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded font-bold">موقع تصوير سينمائي</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="bg-slate-900 hover:bg-slate-800 text-yellow-400 font-black text-xs px-5 py-2.5 rounded-xl transition flex items-center gap-2 shadow-xs">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <span>حفظ وتطبيق صور قسم Gear Up في المتجر</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Section 2: Hero Carousel Slides -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-2.5">
+              <span class="font-black text-slate-900 text-sm flex items-center gap-2">
+                <i class="fa-solid fa-sliders text-indigo-500"></i>
+                <span>سلايدر الهيرو الرئيسي (3 بانرات رئيسية)</span>
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">HERO_CAROUSEL_SLIDES</span>
+            </div>
+
+            <form id="heroBannersForm" onsubmit="saveHeroBannersAdmin(event)" class="space-y-4">
+              <!-- Slide 1 -->
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 space-y-2">
+                <div class="text-xs font-bold text-slate-800">البانر الأول (Hero Slide 1)</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <input type="text" id="hBanner1Title" placeholder="العنوان" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs outline-none focus:border-yellow-400">
+                  <input type="text" id="hBanner1Image" placeholder="مسار الصورة" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs outline-none focus:border-yellow-400 font-en">
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 space-y-2">
+                <div class="text-xs font-bold text-slate-800">البانر الثاني (Hero Slide 2)</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <input type="text" id="hBanner2Title" placeholder="العنوان" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs outline-none focus:border-yellow-400">
+                  <input type="text" id="hBanner2Image" placeholder="مسار الصورة" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs outline-none focus:border-yellow-400 font-en">
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="bg-white p-3.5 rounded-xl border border-slate-200 space-y-2">
+                <div class="text-xs font-bold text-slate-800">البانر الثالث (Hero Slide 3 - ستوديو السينما)</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <input type="text" id="hBanner3Title" placeholder="العنوان" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs outline-none focus:border-yellow-400">
+                  <input type="text" id="hBanner3Image" placeholder="مسار الصورة" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 text-xs outline-none focus:border-yellow-400 font-en">
+                </div>
+              </div>
+
+              <button type="submit" class="bg-slate-900 hover:bg-slate-800 text-yellow-400 font-black text-xs px-5 py-2.5 rounded-xl transition flex items-center gap-2 shadow-xs">
+                <i class="fa-solid fa-floppy-disk"></i>
+                <span>حفظ وتحديث السلايدر الرئيسي</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           TAB 6: PROMO POPUP MODAL (نافذة العرض الترويجي المنبثقة)
+           ══════════════════════════════════════════════════════════ -->
+      <div id="promoPopupTab" class="admin-pane space-y-6 hidden">
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/90 shadow-xs space-y-6 max-w-2xl">
+          <div>
+            <h3 class="text-base font-black text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-bullhorn text-rose-500"></i>
+              <span>التحكم بنافذة العروض الترويجية المنبثقة للزوار (Promo Popup Modal)</span>
+            </h3>
+            <p class="text-xs text-slate-500 mt-0.5">
+              تظهر نافذة منبثقة فاخرة لكل زائر يدخل المتجر تعلن عن عروض وتخفيضات محددة (مثل: خصم 25% على الستاندات).
+            </p>
+          </div>
+
+          <form id="promoPopupForm" onsubmit="savePromoPopupSettings(event)" class="space-y-4">
+            
+            <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-between">
+              <div>
+                <label for="promoEnabledToggle" class="font-bold text-xs text-amber-950 cursor-pointer">تفعيل ظهور النافذة الترويجية للزوار</label>
+                <p class="text-[11px] text-amber-800/80">عند التفعيل، تنبثق النافذة للزائر تلقائياً بعد 1.2 ثانية.</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="promoEnabledToggle" class="sr-only peer">
+                <div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+              </label>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">عنوان العرض الترويجي *</label>
+              <input type="text" id="promoTitle" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs outline-none focus:border-yellow-400">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">تفاصيل ووصف العرض *</label>
+              <textarea id="promoSubtitle" rows="2" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400"></textarea>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">شارة العرض (Badge)</label>
+                <input type="text" id="promoBadge" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">كود الخصم (Promo Code)</label>
+                <input type="text" id="promoCode" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en text-right">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">القسم المستهدف عند ضغط الزر</label>
+                <select id="promoCategory" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs outline-none focus:border-yellow-400 cursor-pointer">
+                  <option value="stands">ستاندات وترايبود (Stands & Tripods)</option>
+                  <option value="lighting">إضاءات واستوديو (Studio Lighting)</option>
+                  <option value="cameras">كاميرات احترافية (Cameras)</option>
+                  <option value="stabilizers">جيمبل وستيبلايزر (Gimbals)</option>
+                  <option value="deals">العروض الحصرية (Deals)</option>
+                  <option value="all">كل الأقسام (All Products)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">نص زر التفاعل</label>
+                <input type="text" id="promoBtnText" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">صورة العرض</label>
+              <input type="text" id="promoImage" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en">
+            </div>
+
+            <div class="pt-2 flex items-center gap-3">
+              <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-black text-xs px-6 py-2.5 rounded-xl shadow-xs transition">
+                <i class="fa-solid fa-floppy-disk ml-1"></i> حفظ وتفعيل
+              </button>
+              <button type="button" onclick="previewPromoPopupInAdmin()" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs px-4 py-2.5 rounded-xl transition">
+                <i class="fa-solid fa-eye ml-1"></i> معاينة النافذة
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════
+           TAB 7: STORE SETTINGS
+           ══════════════════════════════════════════════════════════ -->
+      <div id="settingsTab" class="admin-pane space-y-6 hidden">
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/90 shadow-xs space-y-6 max-w-xl">
+          <div>
+            <h3 class="text-base font-black text-slate-900">إعدادات متجر TOP CAM</h3>
+            <p class="text-xs text-slate-500 mt-0.5">تحديد رقم الواتساب الرسمي للشراء وقيم الشحن المجاني.</p>
+          </div>
+
+          <form id="settingsForm" onsubmit="saveStoreSettings(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">اسم المتجر</label>
+              <input type="text" id="settingStoreName" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">
+                <i class="fa-brands fa-whatsapp text-emerald-600 ml-1"></i> رقم الواتساب الرسمي (بدون +)
+              </label>
+              <input type="text" id="settingWhatsapp" placeholder="962790000000" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en text-right">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">الحد الأدنى للشحن المجاني ($)</label>
+              <input type="number" id="settingFreeShipping" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en">
+            </div>
+
+            <button type="submit" class="bg-slate-900 hover:bg-slate-800 text-yellow-400 font-black text-xs px-6 py-2.5 rounded-xl shadow-xs transition">
+              <i class="fa-solid fa-floppy-disk ml-1"></i> حفظ الإعدادات
+            </button>
+          </form>
+
+          <div class="pt-6 border-t border-slate-200">
+            <h4 class="text-xs font-bold text-slate-900 mb-1">إعادة تعيين المنتجات الافتراضية</h4>
+            <p class="text-[11px] text-slate-500 mb-3">يمكنك استرجاع الأصناف والمواصفات الافتراضية في أي وقت في حال الرغبة.</p>
+            <button onclick="resetStoreData()" class="text-xs font-bold text-rose-600 hover:text-rose-700 bg-rose-50 border border-rose-200 px-4 py-2 rounded-xl transition">
+              <i class="fa-solid fa-arrow-rotate-left ml-1"></i> إعادة تعيين المنتجات الافتراضية
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ═══════════════ PRODUCT ADD / EDIT MODAL ═══════════════ -->
+  <div id="productFormModal" class="fixed inset-0 bg-slate-950/75 backdrop-blur-xs z-50 hidden items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-5 sm:p-7 border border-slate-100">
+      
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+        <div>
+          <h3 id="productFormTitle" class="text-base font-black text-slate-900">إضافة بضاعة جديدة للمخزن</h3>
+          <p class="text-[11px] text-slate-400">ستظهر البضاعة فوراً لجميع زوار المتجر مع السعر والوصف.</p>
+        </div>
+        <button onclick="closeModal('productFormModal')" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <form id="productEditForm" onsubmit="handleProductFormSubmit(event)" class="space-y-4">
+        <input type="hidden" id="editProductId">
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">اسم المنتج / الصنف بالعربية *</label>
+          <input type="text" id="prodName" required placeholder="مثال: كاميرا سوني سينمائية Sony FX3" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">اسم الموديل بالإنجليزية</label>
+          <input type="text" id="prodNameEn" placeholder="Sony FX3 Cinema Line Full-Frame Camera" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en text-right">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">الوكالة / العلامة التجارية *</label>
+            <select id="prodBrand" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs outline-none focus:border-yellow-400 cursor-pointer font-bold">
+              <option value="Sony">Sony (سوني)</option>
+              <option value="Canon">Canon (كانون)</option>
+              <option value="DJI">DJI (دي جي آي)</option>
+              <option value="Aputure">Aputure (أبوتشر)</option>
+              <option value="Godox">Godox (جودوكس)</option>
+              <option value="Tilta">Tilta (تيلتا)</option>
+              <option value="SmallRig">SmallRig (سمول ريج)</option>
+              <option value="Sigma">Sigma (سيجما)</option>
+              <option value="Sennheiser">Sennheiser (سنهيزر)</option>
+              <option value="Røde">Røde (رود)</option>
+              <option value="SanDisk">SanDisk (سان ديسك)</option>
+              <option value="TOP CAM Exclusive">TOP CAM Exclusive</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">القسم والتصنيف *</label>
+            <select id="prodCategory" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs outline-none focus:border-yellow-400 cursor-pointer">
+              <option value="cameras">كاميرات سينما وميرورليس</option>
+              <option value="stands">ستاندات وترايبود</option>
+              <option value="lighting">إضاءات واستوديو</option>
+              <option value="filters">فلاتر وعدسات</option>
+              <option value="memory">ميموريات وذاكرة</option>
+              <option value="chargers_batteries">شواحن وبطاريات</option>
+              <option value="bags">شناتي وحقائب معدات</option>
+              <option value="stabilizers">ستيبلايزرز وجيمبل</option>
+              <option value="cages">كيج كاميرا وتثبيت</option>
+              <option value="straps">أحزمة وستراب</option>
+              <option value="covers">أغطية وحماية</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">السعر ($) *</label>
+            <input type="number" step="1" id="prodPrice" required placeholder="3899" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">السعر قبل الخصم ($)</label>
+            <input type="number" step="1" id="prodOldPrice" placeholder="4200" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">الكمية في المخزن (الأسهم) *</label>
+            <input type="number" id="prodStock" value="10" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en font-bold">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">الشارة الترويجية (Badge)</label>
+            <input type="text" id="prodBadge" placeholder="الأكثر طلباً / جديد / خصم 15%" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">رابط أو مسار الصورة</label>
+          <input type="text" id="prodImage" placeholder="images/camera_body.jpg" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en">
+          <div class="flex items-center gap-1.5 mt-1.5 flex-wrap">
+            <span class="text-[10px] text-slate-400">صور سريعة جاهزة:</span>
+            <button type="button" onclick="document.getElementById('prodImage').value='images/gear_camera_dials.jpg'" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded">عجلات الكاميرا الطبيعية</button>
+            <button type="button" onclick="document.getElementById('prodImage').value='images/camera_body.jpg'" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded">سوني FX3</button>
+            <button type="button" onclick="document.getElementById('prodImage').value='images/new_camera.jpg'" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded">سوني A7</button>
+            <button type="button" onclick="document.getElementById('prodImage').value='images/gear_cinema_studio.jpg'" class="text-[9.5px] bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded">ستوديو سينمائي</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">الوصف التفصيلي للبضاعة</label>
+          <textarea id="prodDescription" rows="3" placeholder="مواصفات السنسور، الكفالة، ومزايا التصوير..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 leading-relaxed"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 active:scale-98 text-slate-950 font-black text-xs py-3 rounded-xl shadow-xs transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-floppy-disk"></i>
+          <span>حفظ البضاعة ونشرها في المتجر فورا</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ═══════════════ PROMO POPUP PREVIEW MODAL ═══════════════ -->
+  <div id="promoPreviewModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-yellow-400/40 relative">
+      <button onclick="closeModal('promoPreviewModal')" class="absolute top-3 left-3 z-10 w-8 h-8 rounded-full bg-black/60 text-white hover:bg-black flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark text-xs"></i>
+      </button>
+
+      <div class="h-44 bg-slate-900 relative overflow-hidden">
+        <img id="previewPromoImg" src="images/gear_frame_matters.jpg" class="w-full h-full object-cover opacity-85" alt="Promo">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute bottom-3 right-4 left-4 text-white">
+          <span id="previewPromoBadge" class="bg-yellow-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded font-mono uppercase">
+            خصم 25% لفترة محدودة
+          </span>
+          <div class="text-[11px] text-slate-300 mt-1 font-mono">CODE: <span id="previewPromoCode" class="font-bold text-yellow-300">TOP25</span></div>
+        </div>
+      </div>
+
+      <div class="p-5 text-right space-y-2">
+        <h3 id="previewPromoTitle" class="text-base font-black text-slate-950 leading-snug">
+          🔥 عرض خاص: خصم 25% على جميع الستاندات ومعدات الاستوديو!
+        </h3>
+        <p id="previewPromoSubtitle" class="text-xs text-slate-600 leading-relaxed font-normal">
+          استخدم كود الخصم عند إتمام الطلب، العرض متاح لكافة صناع المحتوى في الأردن.
+        </p>
+
+        <div class="pt-3">
+          <button onclick="closeModal('promoPreviewModal')" id="previewPromoBtn" class="w-full bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-black text-xs py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+            <span>تصفح عروض الستاندات الآن 🛍️</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

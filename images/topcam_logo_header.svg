@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="100%" height="100%">
+  <defs>
+    <!-- Luxury Gold Gradient for Aperture and Typography -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE875"/>
+      <stop offset="35%" stop-color="#E5A93B"/>
+      <stop offset="70%" stop-color="#B87314"/>
+      <stop offset="100%" stop-color="#F5C564"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 8)">
+    <!-- Aperture Camera Shutter Iris Icon -->
+    <g transform="translate(24, 22)">
+      <!-- Outer Ring -->
+      <circle cx="0" cy="0" r="20" fill="none" stroke="url(#goldGradient)" stroke-width="2.5"/>
+      <!-- Aperture Shutter Blades -->
+      <g stroke="#141414" stroke-width="1.2" fill="url(#goldGradient)">
+        <path d="M 0,-19 L 14,-13 L 5,-4 Z" />
+        <path d="M 17,-8 L 19,7 L 6,3 Z" />
+        <path d="M 17,9 L 4,19 L 1,6 Z" />
+        <path d="M 0,19 L -14,13 L -5,4 Z" />
+        <path d="M -17,9 L -19,-7 L -6,-3 Z" />
+        <path d="M -17,-8 L -4,-19 L -1,-6 Z" />
+      </g>
+      <!-- Center Hole -->
+      <circle cx="0" cy="0" r="5" fill="#141414" />
+    </g>
+
+    <!-- TOP Typography -->
+    <text x="56" y="32" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" letter-spacing="1">TOP</text>
+
+    <!-- CAM Typography in Gold -->
+    <text x="136" y="32" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="30" font-weight="900" fill="url(#goldGradient)" letter-spacing="1">CAM</text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="58" y="44" font-family="'Cairo', sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.5">PRO IMAGING &amp; CINEMA GEAR</text>
+  </g>
+</svg>

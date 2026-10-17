@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TOP CAM | Pro Imaging & Cinema Gear Store - Jordan</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandYellow: '#facc15',
+            brandYellowHover: '#eab308',
+            brandYellowDark: '#ca8a04',
+            darkHeader: '#0b0f19',
+            darkHero: '#070b14',
+            lightBg: '#f8fafc',
+            cardBorder: '#e2e8f0',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Cairo', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            cursive: ['Caveat', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Luxury Slanted Serif, Display & Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,600;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Cairo', -apple-system, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .font-cursive {
+      font-family: 'Caveat', cursive;
+    }
+    .font-editorial {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+    .font-luxury-italic {
+      font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+      font-style: italic;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    /* Touch momentum scrolling for iOS */
+    .touch-scroll {
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+</head>
+<body class="antialiased pb-16 md:pb-0">
+
+  <!-- ═══════════════ TOP CAM HEADER (Exact 1:1 Matching Reference Screenshots) ═══════════════ -->
+  <header class="sticky top-0 z-40 bg-[#141414] shadow-md border-b border-white/5">
+    
+    <!-- Top Black Header Bar: Hamburger | Centered TOP CAM Logo | Cart -->
+    <div class="max-w-7xl mx-auto px-4 h-14 sm:h-16 flex items-center justify-between">
+      
+      <!-- Hamburger Menu Button (Left) -->
+      <button 
+        onclick="toggleMobileMenu()" 
+        class="w-10 h-10 -ml-2 flex items-center justify-center text-white hover:text-amber-400 active:scale-90 transition"
+        title="القائمة"
+        id="hamburgerBtn"
+      >
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+
+      <!-- Center: Official TOP CAM Logo (Pure Brand, No Subtext, Prominently Enlarged) -->
+      <a href="index.html" class="flex items-center justify-center py-1 group">
+        <img 
+          src="images/logo.svg" 
+          alt="TOP CAM" 
+          class="h-8 sm:h-9.5 md:h-11 w-auto transition-transform duration-300 group-hover:scale-105 object-contain"
+        >
+      </a>
+
+      <!-- Right: Official Shopping Cart Icon with Orange Badge '2' -->
+      <button 
+        onclick="toggleCartDrawer(true)" 
+        class="relative w-10 h-10 -mr-2 flex items-center justify-center text-white hover:text-amber-400 active:scale-90 transition"
+        title="عربة التسوق (Cart)"
+        id="mainCartBtn"
+      >
+        <i class="fa-solid fa-bag-shopping text-xl"></i>
+        <span class="absolute top-1.5 right-1.5 bg-[#e5a93b] text-slate-950 font-black font-mono text-[10px] w-4 h-4 rounded-full flex items-center justify-center shadow-xs" id="cartBadge">2</span>
+      </button>
+
+    </div>
+
+    <!-- Sub-Bar: Search Input & Hot Offers SALE Badge (Exact Screenshot Layout) -->
+    <div class="bg-white border-b border-slate-200/90 py-2.5 px-3 sm:px-4">
+      <div class="max-w-7xl mx-auto flex items-center gap-2 sm:gap-3">
+        
+        <!-- Search Input -->
+        <div class="relative flex-1">
+          <input 
+            type="text" 
+            placeholder="Search for products" 
+            oninput="handleSearch(this.value)"
+            class="w-full bg-white text-slate-900 placeholder-slate-400 text-xs sm:text-sm rounded-full pl-4 pr-11 py-2 border border-slate-300 focus:border-amber-500 focus:outline-none transition font-sans shadow-2xs"
+            dir="ltr"
+          >
+          <button 
+            onclick="scrollToProducts()" 
+            class="absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#f59e0b] hover:bg-[#d97706] active:scale-95 text-white flex items-center justify-center text-xs transition"
+            title="بحث"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <!-- Hot Offers Red Starburst Badge (Exact 1:1 Screenshot Layout) -->
+        <button 
+          onclick="filterByCategory('deals'); scrollToProducts();" 
+          class="flex items-center gap-1.5 shrink-0 group cursor-pointer hover:opacity-90 transition active:scale-95"
+          title="عروض حصرية (Hot Offers)"
+        >
+          <!-- Red Starburst SALE Icon -->
+          <div class="w-8 h-8 rounded-full bg-[#e11d48] text-white flex items-center justify-center text-[9px] font-black tracking-tight relative shadow-2xs">
+            <span class="transform -rotate-6">SALE</span>
+          </div>
+          <!-- Text: Hot Offers -->
+          <div class="text-left leading-tight hidden xs:block font-sans">
+            <div class="text-[11px] font-extrabold text-slate-900">Hot</div>
+            <div class="text-[10px] font-bold text-slate-700">Offers</div>
+          </div>
+        </button>
+
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ═══════════════ CLEAN WHITE LUXURY SIDEBAR (MOBILE DRAWER MENU) ═══════════════ -->
+  <div id="mobileDrawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="drawerContent" class="fixed inset-y-0 left-0 w-84 max-w-[85vw] bg-white text-slate-900 p-5 flex flex-col justify-between -translate-x-full transition-transform duration-300 shadow-[10px_0_40px_rgba(0,0,0,0.18)] overflow-y-auto">
+      <div>
+        <!-- Drawer Header with Sharp Dark Logo & Sleek Close Button -->
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+          <a href="index.html" class="flex items-center">
+            <img src="images/logo_dark.svg" alt="TOP CAM" class="h-8 sm:h-8.5 w-auto">
+          </a>
+          <button onclick="toggleMobileMenu()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 active:scale-90 flex items-center justify-center text-slate-700 transition cursor-pointer">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+
+        <!-- Verified Store Badge -->
+        <div class="mt-3.5 px-3 py-2 rounded-xl bg-amber-50 border border-amber-200/90 flex items-center gap-2 text-[11px] text-amber-900 font-bold" dir="rtl">
+          <i class="fa-solid fa-circle-check text-amber-600 text-xs"></i>
+          <span>الوجهة الرسمية الأولى لمعدات التصوير والسينما - الأردن</span>
+        </div>
+
+        <!-- Categorized & Organized Links -->
+        <nav class="mt-5 space-y-4 text-right" dir="rtl">
+          
+          <!-- Group 1: Navigation -->
+          <div>
+            <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
+              التنقل الرئيسي
+            </div>
+            <div class="space-y-1">
+              <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber-500/10 text-amber-800 text-xs sm:text-sm font-black border border-amber-500/25">
+                <i class="fa-solid fa-house text-amber-600 w-5 text-center"></i>
+                <span>الرئيسية (Home)</span>
+              </a>
+
+              <!-- About Us Link -->
+              <a href="about.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-bold transition group">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-info text-amber-500 w-5 text-center"></i>
+                  <div>
+                    <div>من نحن (About TOP CAM)</div>
+                    <div class="text-[10px] text-slate-400 font-normal">قصتنا وماذا نوفر بالتفصيل</div>
+                  </div>
+                </div>
+                <i class="fa-solid fa-chevron-left text-xs text-slate-400 group-hover:text-amber-500 transition"></i>
+              </a>
+
+              <!-- Admin Panel Link -->
+              <a href="admin.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-amber-50/60 text-slate-800 text-xs sm:text-sm font-bold transition group border border-transparent hover:border-amber-200">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-shield-halved text-yellow-600 w-5 text-center"></i>
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <span>لوحة التحكم والإدارة</span>
+                      <span class="bg-yellow-400 text-slate-950 text-[8px] font-black px-1.5 py-0.2 rounded uppercase">ADMIN</span>
+                    </div>
+                    <div class="text-[10px] text-slate-400 font-normal">الطلبات، المخزون، الأسعار، العروض</div>
+                  </div>
+                </div>
+                <i class="fa-solid fa-chevron-left text-xs text-slate-400 group-hover:text-yellow-600 transition"></i>
+              </a>
+
+              <a href="#productsSection" onclick="filterByCategory('deals'); toggleMobileMenu();" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-bold transition">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-bolt text-rose-500 w-5 text-center"></i>
+                  <span>العروض الحصرية (Hot Offers)</span>
+                </div>
+                <span class="text-[9px] bg-rose-600 text-white px-2 py-0.5 rounded-full font-black animate-pulse">SALE</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Group 2: Product Categories -->
+          <div class="pt-2 border-t border-slate-100">
+            <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
+              أقسام المنتجات الاحترافية
+            </div>
+            <div class="space-y-1">
+              <a href="#productsSection" onclick="filterByCategory('cameras'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
+                <i class="fa-solid fa-camera text-slate-600 w-5 text-center"></i>
+                <span>كاميرات السينما والتصوير</span>
+              </a>
+
+              <a href="#productsSection" onclick="filterByCategory('lighting'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
+                <i class="fa-solid fa-lightbulb text-slate-600 w-5 text-center"></i>
+                <span>إضاءات الاستوديو (Aputure / Godox)</span>
+              </a>
+
+              <a href="#productsSection" onclick="filterByCategory('filters'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
+                <i class="fa-solid fa-circle-notch text-slate-600 w-5 text-center"></i>
+                <span>العدسات والفلاتر الاحترافية</span>
+              </a>
+
+              <a href="#productsSection" onclick="filterByCategory('gimbals'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
+                <i class="fa-solid fa-arrows-to-dot text-slate-600 w-5 text-center"></i>
+                <span>مثبتات الحركة والـ Rigs (DJI / Tilta)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Group 3: Services & Account -->
+          <div class="pt-2 border-t border-slate-100">
+            <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
+              خدماتي والإدارة
+            </div>
+            <div class="space-y-1">
+              <button onclick="toggleCartDrawer(true); toggleMobileMenu();" class="w-full flex items-center justify-between px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-bag-shopping text-slate-600 w-5 text-center"></i>
+                  <span>عربة التسوق (Cart)</span>
+                </div>
+                <span class="text-[10px] bg-amber-500 text-slate-950 px-1.5 py-0.2 rounded-full font-mono font-bold">2</span>
+              </button>
+
+              <button onclick="toggleWishlistModal(); toggleMobileMenu();" class="w-full flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition text-right">
+                <i class="fa-regular fa-heart text-slate-600 w-5 text-center"></i>
+                <span>قائمة المفضلة (Wishlist)</span>
+              </button>
+
+              <a href="admin.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-500 text-xs sm:text-sm font-semibold transition">
+                <i class="fa-solid fa-sliders text-slate-500 w-5 text-center"></i>
+                <span>لوحة تحكم الإدارة</span>
+              </a>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+
+      <!-- Drawer Footer with WhatsApp Card -->
+      <div class="pt-4 border-t border-slate-100 space-y-2">
+        <a href="https://wa.me/962790000000" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold text-xs py-3 rounded-xl flex items-center justify-center gap-2 transition shadow-md">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>تواصل فوري عبر الواتساب (VIP)</span>
+        </a>
+        <div class="text-[10px] text-slate-400 text-center font-mono">عمان، الأردن • TOP CAM Official Store</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ INTERACTIVE 3-SLIDE HERO BANNER (With Rotating Flip Arrows) ═══════════════ -->
+  <section class="relative w-full bg-[#0a0a0c] overflow-hidden select-none">
+    
+    <!-- Carousel Slides Container -->
+    <div id="heroCarouselWrapper" class="relative w-full min-h-[380px] sm:min-h-[460px] lg:min-h-[520px] flex items-center">
+      
+      <!-- SLIDE 1: APUTURE THE SPOTLIGHT MAX (Exact 1:1 Image 1) -->
+      <div class="hero-slide active absolute inset-0 w-full h-full transition-opacity duration-700 opacity-100 z-10 flex items-center justify-center text-center">
+        <!-- Crisp Studio Image (Zero Yellow Filter) -->
+        <img 
+          src="images/slide_aputure_spotlight.jpg" 
+          alt="Aputure Spotlight Max" 
+          class="absolute inset-0 w-full h-full object-cover object-center"
+        >
+        <!-- Dark Cinematic Contrast Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 px-4 sm:px-8 max-w-2xl mx-auto space-y-4">
+          <!-- Aputure Stylized Logo with Red Accent Triangle -->
+          <div class="flex items-center justify-center gap-1.5 mb-2">
+            <span class="text-red-600 text-2xl sm:text-3xl font-black">▲</span>
+            <span class="text-white text-3xl sm:text-5xl font-black tracking-tight font-sans">puture</span>
+          </div>
+
+          <h2 class="text-xl sm:text-3xl lg:text-4xl font-normal text-white tracking-wide font-sans">
+            Introducing The Spotlight Max
+          </h2>
+
+          <div class="pt-3">
+            <button 
+              onclick="filterByCategory('lighting'); scrollToProducts();" 
+              class="border-2 border-white/80 hover:border-white bg-black/40 hover:bg-white hover:text-black active:scale-95 text-white font-bold text-xs sm:text-sm px-7 py-2.5 rounded-full transition tracking-wider uppercase backdrop-blur-xs shadow-lg"
+            >
+              TO SHOP
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: LANDSCAPE PHOTOGRAPHY (Exact 1:1 Image 2 & 4) -->
+      <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-700 opacity-0 z-0 flex items-center justify-center text-center">
+        <!-- Breathtaking Mountain Peaks (Natural Authentic Colors, Zero Yellow Tint) -->
+        <img 
+          src="images/slide_landscape_mountains.jpg" 
+          alt="Secrets of Landscape Photography" 
+          class="absolute inset-0 w-full h-full object-cover object-center"
+        >
+        <!-- Soft Contrast Overlay for Crisp White Typography -->
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/25"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 px-6 sm:px-12 max-w-2xl mx-auto space-y-4">
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-normal text-white tracking-wide leading-tight font-sans drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            From the Mountaintop to Your Lens: Secrets of Landscape Photography
+          </h2>
+
+          <div class="pt-3">
+            <button 
+              onclick="filterByCategory('cameras'); scrollToProducts();" 
+              class="border-2 border-white/80 hover:border-white bg-black/40 hover:bg-white hover:text-black active:scale-95 text-white font-bold text-xs sm:text-sm px-7 py-2.5 rounded-full transition tracking-wider uppercase backdrop-blur-xs shadow-lg"
+            >
+              TO SHOP
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: YOUCAM PRO IMAGING GEAR (Exact 1:1 Image 3 with Director Chair) -->
+      <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-700 opacity-0 z-0 flex items-center justify-center text-center">
+        <!-- Professional Cinema Studio with Leather Chair (Hyper-Realistic, Zero Yellow Mud) -->
+        <img 
+          src="images/slide_youcam_studio.jpg" 
+          alt="YouCam Pro Imaging Gear" 
+          class="absolute inset-0 w-full h-full object-cover object-center"
+        >
+        <!-- Clean Neutral Studio Shadow Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/30"></div>
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 px-4 sm:px-8 max-w-2xl mx-auto space-y-4">
+          <!-- Official TOP CAM Brand Logo with Aperture Iris -->
+          <div class="flex items-center justify-center mb-1">
+            <img src="images/logo.svg" alt="TOP CAM" class="h-8 sm:h-11 w-auto filter drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+          </div>
+
+          <h2 class="text-xl sm:text-3xl lg:text-4xl font-normal text-white tracking-wide font-sans drop-shadow-md">
+            2,000+ Products, 50+ Brands.
+          </h2>
+
+          <p class="text-sm sm:text-lg text-slate-200 font-light tracking-wide font-sans">
+            ( Pro Imaging Gear )
+          </p>
+
+          <!-- Dual Buttons: VIEW MORE & TO SHOP (Exact Screenshot 3) -->
+          <div class="flex items-center justify-center gap-3 pt-3">
+            <!-- VIEW MORE (Opens About Us Page / Modal) -->
+            <a 
+              href="about.html" 
+              class="bg-amber-500 hover:bg-amber-400 active:scale-95 text-slate-950 font-black text-xs sm:text-sm px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition tracking-wider uppercase shadow-lg inline-block"
+            >
+              VIEW MORE
+            </a>
+            <!-- TO SHOP (Scrolls to catalog) -->
+            <button 
+              onclick="scrollToProducts()" 
+              class="border-2 border-white/80 hover:border-white bg-black/40 hover:bg-white hover:text-black active:scale-95 text-white font-bold text-xs sm:text-sm px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transition tracking-wider uppercase backdrop-blur-xs shadow-lg"
+            >
+              TO SHOP
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════ SLIDER FLIP ARROWS (LEFT & RIGHT - Exact Screenshot) ═══════════════ -->
+      <!-- Left Arrow (<) -->
+      <button 
+        onclick="prevSlide()" 
+        class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center text-lg sm:text-xl backdrop-blur-xs border border-white/20 active:scale-90 transition shadow-lg cursor-pointer"
+        title="السابق"
+        aria-label="Previous Slide"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <!-- Right Arrow (>) -->
+      <button 
+        onclick="nextSlide()" 
+        class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center text-lg sm:text-xl backdrop-blur-xs border border-white/20 active:scale-90 transition shadow-lg cursor-pointer"
+        title="التالي"
+        aria-label="Next Slide"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Slider Pagination Dots -->
+      <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2">
+        <button onclick="goToSlide(0)" class="slide-dot w-2.5 h-2.5 rounded-full bg-amber-400 transition" aria-label="Slide 1"></button>
+        <button onclick="goToSlide(1)" class="slide-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white transition" aria-label="Slide 2"></button>
+        <button onclick="goToSlide(2)" class="slide-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white transition" aria-label="Slide 3"></button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════ 8 CIRCULAR CATEGORIES (Touch Scroll Carousel) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-4">
+    <div class="flex items-center justify-between gap-3 sm:gap-4 overflow-x-auto no-scrollbar touch-scroll py-2 -mx-3 px-3 sm:mx-0 sm:px-0">
+      
+      <!-- 1. Cameras -->
+      <div onclick="filterByCategory('cameras')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#e0f2fe] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/camera_body.jpg" alt="Cameras" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Cameras</span>
+      </div>
+
+      <!-- 2. Lenses & Filters -->
+      <div onclick="filterByCategory('filters')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#f3e8ff] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/filter_lens.jpg" alt="Filters" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Filters</span>
+      </div>
+
+      <!-- 3. Studio Lighting -->
+      <div onclick="filterByCategory('lighting')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#e0f2fe] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/flash_light.jpg" alt="Lighting" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Lighting</span>
+      </div>
+
+      <!-- 4. Gimbals -->
+      <div onclick="filterByCategory('gimbals')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#e2e8f0] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/gimbal_stab.jpg" alt="Gimbals" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Gimbals</span>
+      </div>
+
+      <!-- 5. Tripods & Stands -->
+      <div onclick="filterByCategory('stands')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#dcfce7] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/tripod_stand.jpg" alt="Tripods" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Tripods</span>
+      </div>
+
+      <!-- 6. Cages & Rigs -->
+      <div onclick="filterByCategory('cages')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#ccfbf1] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/camera_cage.jpg" alt="Cages" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Cages</span>
+      </div>
+
+      <!-- 7. Batteries & Power -->
+      <div onclick="filterByCategory('batteries')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#ede9fe] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/vmount_battery.jpg" alt="Batteries" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Batteries</span>
+      </div>
+
+      <!-- 8. Bags & Straps -->
+      <div onclick="filterByCategory('bags')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#fce7f3] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/camera_bag.jpg" alt="Bags" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Bags</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 1: TRENDING PRODUCTS (Responsive 2-Col Mobile Grid) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6" id="productsSection">
+    <div class="flex items-center justify-between mb-3 sm:mb-4">
+      <h2 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">Trending Products</h2>
+      <a href="#" onclick="filterByCategory('all'); return false;" class="text-xs font-bold text-yellow-600 hover:text-yellow-700 hover:underline flex items-center gap-1">
+        <span>View All</span>
+        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
+    </div>
+
+    <!-- 5 Photography Products: 2 columns on mobile, 3 on tablet, 5 on desktop -->
+    <div id="dynamicProductGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4">
+      
+      <!-- 1. Sony FX3 Cinema Line -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/camera_body.jpg" alt="Sony FX3 Cinema Line" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Sony FX3 Cinema Line</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$3,899</div>
+        </div>
+        <button onclick="addToCartMock('Sony FX3 Cinema Line', 3899, 'images/camera_body.jpg', 'CAM-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 2. Sony Alpha 7 IV -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/new_camera.jpg" alt="Sony Alpha 7 IV" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Sony Alpha 7 IV</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$2,499</div>
+        </div>
+        <button onclick="addToCartMock('Sony Alpha 7 IV', 2499, 'images/new_camera.jpg', 'CAM-002')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 3. Canon EOS R5 Mark II -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/hero_camera.jpg" alt="Canon EOS R5 Mark II" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Canon EOS R5 Mark II</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$4,299</div>
+        </div>
+        <button onclick="addToCartMock('Canon EOS R5 Mark II', 4299, 'images/hero_camera.jpg', 'CAM-003')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 4. DJI RS 3 Pro Combo -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/gimbal_stab.jpg" alt="DJI RS 3 Pro Combo" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">DJI RS 3 Pro Combo</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$869</div>
+        </div>
+        <button onclick="addToCartMock('DJI RS 3 Pro Combo', 869, 'images/gimbal_stab.jpg', 'GMB-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 5. Aputure Amaran 200d S -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group col-span-2 sm:col-span-1">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/flash_light.jpg" alt="Aputure Amaran 200d S" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Aputure Amaran 200d S</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$299</div>
+        </div>
+        <button onclick="addToCartMock('Aputure Amaran 200d S', 299, 'images/flash_light.jpg', 'LGT-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROMO BANNERS ROW (Responsive 1-Col Mobile Stack) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-5">
+      
+      <!-- Flash Offers Banner -->
+      <div class="relative overflow-hidden rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#0b0f19] via-[#1a1608] to-[#261f05] p-4 sm:p-6 text-white border border-yellow-500/30 flex items-center justify-between shadow-md">
+        <div class="space-y-2 sm:space-y-3 z-10 max-w-[65%]">
+          <div class="flex items-center gap-1.5">
+            <span class="text-yellow-400 text-sm sm:text-base">⚡</span>
+            <h3 class="text-base sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-amber-400">FLASH OFFERS</h3>
+          </div>
+          <div class="text-[10px] sm:text-[11px] text-yellow-100/90 leading-tight">
+            Studio Lights & Audio Gear.<br>
+            Hurry, Limited Time Only!
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 sm:gap-4 pt-1">
+            <button class="bg-yellow-400 hover:bg-yellow-500 active:scale-95 text-slate-950 text-[10px] sm:text-xs font-bold px-3 sm:px-4 py-1.5 rounded-full flex items-center gap-1.5 transition">
+              <span>Shop Now</span>
+              <i class="fa-solid fa-arrow-right text-[9px]"></i>
+            </button>
+
+            <!-- Countdown Boxes -->
+            <div class="flex items-center gap-1 text-center font-bold">
+              <div class="bg-black/60 border border-yellow-400/20 px-1.5 py-0.5 rounded text-[10px] sm:text-xs text-yellow-300">
+                <div>12</div>
+                <div class="text-[7px] font-normal text-slate-400">Hours</div>
+              </div>
+              <div class="bg-black/60 border border-yellow-400/20 px-1.5 py-0.5 rounded text-[10px] sm:text-xs text-yellow-300">
+                <div>36</div>
+                <div class="text-[7px] font-normal text-slate-400">Mins</div>
+              </div>
+              <div class="bg-black/60 border border-yellow-400/20 px-1.5 py-0.5 rounded text-[10px] sm:text-xs text-yellow-300">
+                <div>18</div>
+                <div class="text-[7px] font-normal text-slate-400">Secs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Studio Light Image with Glow -->
+        <div class="relative w-28 h-28 sm:w-40 sm:h-36 flex items-center justify-center shrink-0">
+          <img src="images/flash_light.jpg" alt="Studio Light" class="w-full h-full object-contain filter drop-shadow-[0_10px_20px_rgba(234,179,8,0.3)] rounded-xl">
+        </div>
+      </div>
+
+      <!-- New Arrivals Banner -->
+      <div class="relative overflow-hidden rounded-xl sm:rounded-2xl bg-[#f8fafc] p-4 sm:p-6 text-slate-900 border border-slate-200 flex items-center justify-between shadow-xs">
+        <div class="space-y-2 sm:space-y-3 z-10 max-w-[65%]">
+          <div class="flex items-center gap-2">
+            <h3 class="text-base sm:text-xl font-black text-slate-900">New Arrivals</h3>
+            <span class="bg-yellow-400 text-slate-950 text-[8px] sm:text-[9px] font-black px-1.5 py-0.2 rounded-full">NEW</span>
+          </div>
+          <div class="text-[10px] sm:text-[11px] text-slate-500 leading-tight">
+            Be the First to Experience<br>
+            Cinema 8K Flagships!
+          </div>
+
+          <div class="pt-1">
+            <button class="bg-[#0f172a] hover:bg-black active:scale-95 text-white text-[10px] sm:text-xs font-bold px-3.5 sm:px-5 py-1.5 rounded-full flex items-center gap-1.5 transition">
+              <span>Explore Now</span>
+              <i class="fa-solid fa-arrow-right text-[9px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cinema Camera Cutout Image -->
+        <div class="relative w-28 h-28 sm:w-44 sm:h-36 flex items-center justify-center shrink-0">
+          <img src="images/new_camera.jpg" alt="New Cinema Camera" class="w-full h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.15)] rounded-xl">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 2: RECOMMENDED FOR YOU (Responsive 2-Col Mobile Grid) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6">
+    <div class="flex items-center justify-between mb-3 sm:mb-4">
+      <h2 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">Recommended for You</h2>
+      <a href="#" onclick="filterByCategory('all'); return false;" class="text-xs font-bold text-yellow-600 hover:text-yellow-700 hover:underline flex items-center gap-1">
+        <span>View All</span>
+        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
+    </div>
+
+    <!-- 5 Camera Accessories -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4">
+      
+      <!-- 1. PolarPro Peter McKinnon VND 82mm -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/filter_lens.jpg" alt="PolarPro VND Filter" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">PolarPro VND Filter (82mm)</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$249</div>
+        </div>
+        <button onclick="addToCartMock('PolarPro VND Filter 82mm', 249)" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 2. Manfrotto Carbon Tripod -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/tripod_stand.jpg" alt="Manfrotto Carbon Tripod" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Manfrotto Carbon Tripod</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$349</div>
+        </div>
+        <button onclick="addToCartMock('Manfrotto Carbon Tripod', 349)" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 3. SmallRig FX3 Camera Cage -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/camera_cage.jpg" alt="SmallRig FX3 Camera Cage" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">SmallRig FX3 Camera Cage</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$99</div>
+        </div>
+        <button onclick="addToCartMock('SmallRig FX3 Camera Cage', 99)" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 4. Cinergy Nano 99 V-Mount -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/vmount_battery.jpg" alt="Mini V-Mount Battery" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Cinergy Nano 99 V-Mount</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$279</div>
+        </div>
+        <button onclick="addToCartMock('Cinergy Nano 99 V-Mount', 279)" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- 5. Wandrd PRVKE 31L Backpack -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group col-span-2 sm:col-span-1">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
+          <img src="images/camera_bag.jpg" alt="Wandrd PRVKE 31L Backpack" class="max-h-full max-w-full object-contain">
+        </div>
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Wandrd PRVKE 31L Bag</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$299</div>
+        </div>
+        <button onclick="addToCartMock('Wandrd PRVKE 31L Backpack', 299)" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+          Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ STATS & VALUE BAR (1:1 from Image 1) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-2">
+    <div class="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 grid grid-cols-2 lg:grid-cols-4 gap-4 shadow-xs text-left">
+      
+      <div class="flex items-center gap-3">
+        <div class="text-slate-800 text-xl sm:text-2xl shrink-0">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <div>
+          <h5 class="text-xs sm:text-sm font-bold text-slate-900 leading-tight">100K+</h5>
+          <p class="text-[10px] sm:text-[11px] text-slate-500">Happy Customers</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="text-slate-800 text-xl sm:text-2xl shrink-0">
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <div>
+          <h5 class="text-xs sm:text-sm font-bold text-slate-900 leading-tight">4.9/5</h5>
+          <p class="text-[10px] sm:text-[11px] text-slate-500">Average Rating</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="text-slate-800 text-xl sm:text-2xl shrink-0">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h5 class="text-xs sm:text-sm font-bold text-slate-900 leading-tight">30-Day Returns</h5>
+          <p class="text-[10px] sm:text-[11px] text-slate-500">Shop with Confidence</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="text-slate-800 text-xl sm:text-2xl shrink-0">
+          <i class="fa-solid fa-feather-pointed"></i>
+        </div>
+        <div>
+          <h5 class="text-xs sm:text-sm font-bold text-slate-900 leading-tight">A More Creative World</h5>
+          <p class="text-[10px] sm:text-[11px] text-slate-500">Through Photography</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROMO 3-BANNER ROW (1:1 from Image 1) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-3">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4">
+      
+      <!-- Card 1: Camera Dials Macro -->
+      <div class="md:col-span-4 relative overflow-hidden rounded-xl bg-black min-h-[160px] sm:min-h-[180px] border border-slate-800 shadow-sm group">
+        <img id="gearCard1ImgEl" src="images/gear_camera_dials.jpg" alt="Camera Dials" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+      </div>
+
+      <!-- Card 2: Limited Time Sale -->
+      <div class="md:col-span-4 bg-[#f4f4f5] rounded-xl border border-slate-200 p-5 sm:p-6 flex flex-col items-center justify-center text-center shadow-xs">
+        <div id="gearCard2BadgeEl" class="text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-slate-500 uppercase font-mono mb-1">
+          LIMITED TIME
+        </div>
+        <h3 id="gearCard2TitleEl" class="text-lg sm:text-xl font-serif text-slate-900 font-bold mb-1">
+          Gear Up for What's Next
+        </h3>
+        <p id="gearCard2SubEl" class="text-[11px] sm:text-xs text-slate-500 mb-3">
+          Up to 25% Off Selected Cameras & Lenses
+        </p>
+        <button onclick="scrollToProducts()" class="bg-yellow-400 hover:bg-yellow-500 text-slate-950 text-[11px] font-bold px-4 py-1.5 rounded flex items-center gap-1.5 transition">
+          <span>Shop the Sale</span>
+          <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        </button>
+      </div>
+
+      <!-- Card 3: Snow Mountain Peak & Story -->
+      <div class="md:col-span-4 relative overflow-hidden rounded-xl bg-[#090d16] border border-slate-800 shadow-sm flex items-center justify-between text-white group">
+        <div class="w-1/2 h-full overflow-hidden">
+          <img id="gearCard3ImgEl" src="images/gear_snow_mountain.jpg" alt="Snow Peaks" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="w-1/2 p-4 sm:p-5 flex flex-col justify-center space-y-1 bg-black text-left">
+          <h4 id="gearCard3HeadlineEl" class="text-sm sm:text-base font-serif font-bold text-white leading-tight">
+            Better<br>Gear<br>Brighter<br>Stories
+          </h4>
+          <div class="w-6 h-[2px] bg-yellow-400 mt-2"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ COMMUNITY PHOTO GALLERY (1:1 from Image 1) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-3">
+    <div class="text-left mb-2 text-[10px] sm:text-[11px] text-slate-500 flex items-center gap-2">
+      <span class="font-bold text-slate-800 font-mono">@TOPCAMLAB</span>
+      <span>Real People. Real Photos. Tag #TopCamLab to be featured.</span>
+    </div>
+
+    <div class="grid grid-cols-4 md:grid-cols-8 gap-1.5 sm:gap-2">
+      <div class="aspect-square rounded-md overflow-hidden bg-slate-900">
+        <img src="images/snow_mountain.jpg" alt="Mountain Lake" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+      </div>
+      <div class="aspect-square rounded-md overflow-hidden bg-slate-900">
+        <img src="images/gallery_street.jpg" alt="Rainy Street" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+      </div>
+      <div class="aspect-square rounded-md overflow-hidden bg-slate-900">
+        <img src="images/gallery_dome.jpg" alt="Dome Architecture" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+      </div>
+      <div class="aspect-square rounded-md overflow-hidden bg-slate-900">
+        <img src="images/gallery_eagle.jpg" alt="Eagle in Flight" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+      </div>
+      <div class="aspect-square rounded-md overflow-hidden bg-slate-900">
+        <img src="images/gallery_photographer.jpg" alt="Photographer" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+      </div>
+      <div class="aspect-square rounded-md overflow-hidden bg-slate-900">
+        <img src="images/hero_photography_moves.jpg" alt="Portrait Outdoors" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+      </div>
+      <div class="aspect-square rounded-md overflow-hidden bg-slate-900">
+        <img src="images/frame_what_matters.jpg" alt="Mountain Fog" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+      </div>
+      <div class="aspect-square rounded-md bg-black text-white p-2.5 flex flex-col justify-center items-start text-left border border-slate-800">
+        <span class="text-[9px] sm:text-[10px] font-bold font-mono tracking-wider leading-tight">GOOD<br>PHOTOS<br>BRIGHTER<br>PEOPLE</span>
+        <div class="w-4 h-[2px] bg-yellow-400 mt-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 2: FRAME WHAT MATTERS (1:1 from Image 2) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6">
+    <div class="relative overflow-hidden rounded-xl sm:rounded-2xl bg-black text-white border border-slate-800 shadow-2xl min-h-[380px] sm:min-h-[460px] flex items-center">
+      
+      <!-- Background Panoramic Photo: Backpacker Photographer at Mountains -->
+      <img 
+        id="frameMattersImgEl"
+        src="images/gear_frame_matters.jpg" 
+        alt="Frame What Matters" 
+        class="absolute inset-0 w-full h-full object-cover object-right md:object-center"
+      >
+      <!-- Dark gradient on left for high-contrast text readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 w-full p-6 sm:p-10 lg:p-14 flex flex-col justify-between min-h-[380px] sm:min-h-[460px]">
+        
+        <!-- Top Cursive Text on the right (like Image 2) -->
+        <div class="absolute top-6 right-6 sm:right-10 text-right hidden sm:block">
+          <div class="font-cursive text-xl sm:text-2xl text-slate-200 transform -rotate-6">
+            Good<br>Photos<br>Brighter<br>Days
+          </div>
+          <div class="w-10 h-[1.5px] bg-slate-300 ml-auto mt-1 transform -rotate-6"></div>
+        </div>
+
+        <!-- Main Headline & Actions -->
+        <div class="space-y-4 max-w-lg pt-4 sm:pt-6 text-left">
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.05]">
+            Frame What<br>Matters
+          </h2>
+          <div class="w-10 h-[3px] bg-yellow-400"></div>
+
+          <p class="text-slate-300 text-xs sm:text-sm font-normal">
+            Cameras. Lenses. Film. A More Creative You.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <button onclick="scrollToProducts()" class="bg-yellow-400 hover:bg-yellow-500 active:scale-95 text-slate-950 font-bold text-xs sm:text-sm px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg transition">
+              <span>Shop Cameras</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+            <button onclick="scrollToProducts()" class="border border-white/40 hover:border-white bg-black/40 hover:bg-white/10 active:scale-95 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-lg transition backdrop-blur-xs">
+              <span>Explore the Story</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom 3 Feature Badges (1:1 from Image 2) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-white/10 max-w-2xl text-left">
+          <div class="flex items-center gap-2.5">
+            <div class="text-slate-300 text-lg">
+              <i class="fa-solid fa-camera"></i>
+            </div>
+            <div>
+              <div class="text-[11px] sm:text-xs font-bold text-white">Curated by Experts</div>
+              <div class="text-[9px] sm:text-[10px] text-slate-400">Real advice. Real photographers.</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2.5">
+            <div class="text-slate-300 text-lg">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div>
+              <div class="text-[11px] sm:text-xs font-bold text-white">Fast & Reliable Shipping</div>
+              <div class="text-[9px] sm:text-[10px] text-slate-400">Get your gear, faster.</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2.5">
+            <div class="text-slate-300 text-lg">
+              <i class="fa-solid fa-shield"></i>
+            </div>
+            <div>
+              <div class="text-[11px] sm:text-xs font-bold text-white">Trusted by Creators</div>
+              <div class="text-[9px] sm:text-[10px] text-slate-400">A community of 100K+</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ VIDEO SHOWCASE (Luxury Slanted Italic Style) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6">
+    <div class="relative overflow-hidden rounded-2xl bg-white border-2 border-yellow-400 p-6 sm:p-10 text-slate-900 shadow-xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Video Player (Col 1-7) -->
+        <div class="lg:col-span-7 relative rounded-xl overflow-hidden border-2 border-yellow-400 bg-black shadow-lg group">
+          <div class="absolute top-3 left-3 z-20 flex items-center gap-2 bg-white/95 text-slate-950 backdrop-blur-md px-3.5 py-1 rounded-full border border-yellow-400 text-[9px] sm:text-[10px] font-bold shadow-md transform -skew-x-6">
+            <span class="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></span>
+            <span class="text-slate-950 font-editorial italic tracking-wider font-black">LIVE PRO CAMERA SENSOR DEMO</span>
+          </div>
+
+          <video 
+            id="heroCameraVideo"
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            poster="images/camera_dials.jpg"
+            class="w-full h-[220px] sm:h-[320px] lg:h-[360px] object-cover block"
+          >
+            <source src="videos/camera_hero.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="absolute bottom-3 right-3 z-20 flex items-center gap-2">
+            <button onclick="toggleVideoMute()" id="videoMuteBtn" class="bg-yellow-400 hover:bg-yellow-500 text-slate-950 w-8 h-8 rounded-full flex items-center justify-center text-xs backdrop-blur-md border border-yellow-500 transition shadow" title="Mute/Unmute">
+              <i class="fa-solid fa-volume-xmark" id="muteIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Text Description Next to Video (Col 8-12) with Slanted Fonts -->
+        <div class="lg:col-span-5 space-y-4 text-left">
+          <div class="text-[10px] sm:text-[11px] font-black text-slate-950 tracking-wider uppercase font-editorial italic bg-yellow-400 border border-yellow-500 px-3.5 py-1 rounded-sm inline-block shadow-xs transform -skew-x-12">
+            ENGINEERED FOR CINEMATOGRAPHERS
+          </div>
+
+          <h3 class="text-3xl sm:text-4xl font-editorial italic font-black text-slate-950 tracking-tight leading-tight">
+            “Cinematic Precision.<br>
+            <span class="text-amber-600 bg-yellow-100 px-2 py-0.5 rounded-md inline-block mt-1 font-editorial italic">Optical Mastery.”</span>
+          </h3>
+
+          <p class="text-slate-800 text-xs sm:text-sm font-editorial italic font-medium leading-relaxed">
+            Every camera, lens, and cinema rig at TOP CAM undergoes rigorous calibration. Experience ultra-slow-motion shutter dynamics, high dynamic range full-frame sensors, and unmatched color science tailored for visual storytellers.
+          </p>
+
+          <!-- Micro Spec Bullets with Slanted Italic Styling -->
+          <div class="grid grid-cols-2 gap-3 pt-2 text-[11px] text-slate-950 font-bold">
+            <div class="flex items-center gap-2 bg-yellow-50/90 p-2.5 rounded-xl border border-yellow-300 shadow-2xs transform -skew-x-3 hover:skew-x-0 transition">
+              <i class="fa-solid fa-bolt text-yellow-600 not-italic"></i>
+              <span class="font-editorial italic">120fps 4K RAW Capture</span>
+            </div>
+            <div class="flex items-center gap-2 bg-yellow-50/90 p-2.5 rounded-xl border border-yellow-300 shadow-2xs transform -skew-x-3 hover:skew-x-0 transition">
+              <i class="fa-solid fa-bullseye text-yellow-600 not-italic"></i>
+              <span class="font-editorial italic">16+ Stops Dynamic Range</span>
+            </div>
+            <div class="flex items-center gap-2 bg-yellow-50/90 p-2.5 rounded-xl border border-yellow-300 shadow-2xs transform -skew-x-3 hover:skew-x-0 transition">
+              <i class="fa-solid fa-shield-halved text-yellow-600 not-italic"></i>
+              <span class="font-editorial italic">Full Agent Warranty</span>
+            </div>
+            <div class="flex items-center gap-2 bg-yellow-50/90 p-2.5 rounded-xl border border-yellow-300 shadow-2xs transform -skew-x-3 hover:skew-x-0 transition">
+              <i class="fa-solid fa-film text-yellow-600 not-italic"></i>
+              <span class="font-editorial italic">Pro Color Science</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ VALUE PROPOSITIONS BAR (Responsive 2x2 Grid) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6">
+    <div class="bg-white rounded-xl sm:rounded-2xl border border-slate-200 p-4 sm:p-6 grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
+      
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-yellow-50 border border-yellow-200/80 flex items-center justify-center text-yellow-600 shrink-0 text-xs sm:text-sm">
+          <i class="fa-solid fa-truck"></i>
+        </div>
+        <div>
+          <h5 class="text-[11px] sm:text-xs font-bold text-slate-900">Free Shipping</h5>
+          <p class="text-[9px] sm:text-[11px] text-slate-400">Over $100</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-yellow-50 border border-yellow-200/80 flex items-center justify-center text-yellow-600 shrink-0 text-xs sm:text-sm">
+          <i class="fa-solid fa-rotate-left"></i>
+        </div>
+        <div>
+          <h5 class="text-[11px] sm:text-xs font-bold text-slate-900">Easy Returns</h5>
+          <p class="text-[9px] sm:text-[11px] text-slate-400">Within 7 Days</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-yellow-50 border border-yellow-200/80 flex items-center justify-center text-yellow-600 shrink-0 text-xs sm:text-sm">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <div>
+          <h5 class="text-[11px] sm:text-xs font-bold text-slate-900">24/7 Support</h5>
+          <p class="text-[9px] sm:text-[11px] text-slate-400">Filmmakers on Call</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-yellow-50 border border-yellow-200/80 flex items-center justify-center text-yellow-600 shrink-0 text-xs sm:text-sm">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h5 class="text-[11px] sm:text-xs font-bold text-slate-900">Genuine Gear</h5>
+          <p class="text-[9px] sm:text-[11px] text-slate-400">100% Original</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════ NEWSLETTER STRIP (Responsive) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-4">
+    <div class="rounded-xl sm:rounded-2xl bg-[#0b0f19] text-white p-5 sm:p-10 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center md:text-left">
+      <div class="space-y-1">
+        <h4 class="text-lg sm:text-xl font-bold">Join <span class="text-yellow-400">TOP CAM+</span></h4>
+        <p class="text-[11px] sm:text-xs text-slate-400">Get exclusive gear discounts & early access to new camera launches.</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+        <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to TOP CAM VIP Club!');" class="flex gap-2 w-full sm:w-80">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            required 
+            class="flex-1 bg-white text-slate-900 placeholder-slate-400 text-xs rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-yellow-400"
+          >
+          <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold text-xs px-4 py-2 rounded-lg transition shrink-0">
+            Subscribe
+          </button>
+        </form>
+
+        <div class="hidden lg:flex items-center gap-2 text-slate-400 text-xs">
+          <i class="fa-regular fa-paper-plane text-yellow-400 text-base"></i>
+          <span class="font-cursive text-sm text-yellow-300">Smarter Deals Straight to Your Inbox</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER (Responsive Multi-Column) ═══════════════ -->
+  <footer class="bg-white border-t border-slate-200 mt-8 sm:mt-12 pt-8 sm:pt-12 pb-6 text-xs text-slate-600">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 pb-8 border-b border-slate-200">
+        
+        <!-- Col 1: TOP CAM Logo -->
+        <div class="col-span-2 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="bg-black px-4 py-2 rounded-xl border border-yellow-400/60 shadow-md flex items-center">
+              <img src="images/logo.svg" alt="TOP CAM - لبيع جميع معدات التصوير" class="h-8 sm:h-9 w-auto">
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 max-w-xs leading-relaxed">Your Ultimate Pro Photography & Cinema Equipment Destination.</p>
+          <div class="flex gap-3 text-slate-400 text-sm pt-1">
+            <a href="#" class="hover:text-yellow-600"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-yellow-600"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-yellow-600"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="hover:text-yellow-600"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/962790000000" target="_blank" class="hover:text-emerald-500"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Shop -->
+        <div>
+          <h5 class="font-bold text-slate-900 mb-2.5">Shop Gear</h5>
+          <ul class="space-y-1.5 text-[11px] text-slate-500">
+            <li><a href="#" onclick="filterByCategory('cameras'); return false;" class="hover:text-yellow-600">Cinema Cameras</a></li>
+            <li><a href="#" onclick="filterByCategory('lighting'); return false;" class="hover:text-yellow-600">Studio Lights</a></li>
+            <li><a href="#" onclick="filterByCategory('gimbals'); return false;" class="hover:text-yellow-600">Gimbals</a></li>
+            <li><a href="#" onclick="filterByCategory('tripods'); return false;" class="hover:text-yellow-600">Tripods</a></li>
+            <li><a href="#" onclick="filterByCategory('deals'); return false;" class="hover:text-yellow-600">Special Deals</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support & Admin -->
+        <div>
+          <h5 class="font-bold text-slate-900 mb-2.5">Support</h5>
+          <ul class="space-y-1.5 text-[11px] text-slate-500">
+            <li><a href="admin.html" class="hover:text-yellow-600 font-bold text-yellow-600"><i class="fa-solid fa-sliders mr-1"></i> لوحة الإدارة</a></li>
+            <li><a href="#" class="hover:text-yellow-600">Track Order</a></li>
+            <li><a href="#" class="hover:text-yellow-600">Returns & Refunds</a></li>
+            <li><a href="#" class="hover:text-yellow-600">Warranty Policy</a></li>
+            <li><a href="https://wa.me/962790000000" target="_blank" class="hover:text-emerald-500">WhatsApp Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: About & App Download -->
+        <div class="col-span-2 md:col-span-1">
+          <h5 class="font-bold text-slate-900 mb-2.5">About</h5>
+          <ul class="space-y-1.5 text-[11px] text-slate-500 mb-3">
+            <li><a href="#" class="hover:text-yellow-600">Our Studio Story</a></li>
+            <li><a href="#" class="hover:text-yellow-600">Filmmaking Blog</a></li>
+            <li><a href="#" class="hover:text-yellow-600">Contact Us</a></li>
+          </ul>
+
+          <h5 class="font-bold text-slate-900 mb-1.5 text-[11px]">Download App</h5>
+          <div class="flex md:flex-col gap-1.5">
+            <button class="bg-black text-white text-[9px] px-2.5 py-1 rounded flex items-center gap-1.5 hover:bg-slate-900">
+              <i class="fa-brands fa-google-play"></i> Google Play
+            </button>
+            <button class="bg-black text-white text-[9px] px-2.5 py-1 rounded flex items-center gap-1.5 hover:bg-slate-900">
+              <i class="fa-brands fa-apple"></i> App Store
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[10px] sm:text-[11px] text-slate-400 text-center sm:text-left">
+        <p>© 2026 YouCam. All rights reserved. (youcamjor.com - Pro Imaging Gear)</p>
+        <div class="flex items-center gap-3 text-slate-400">
+          <span class="flex items-center gap-1"><i class="fa-solid fa-lock text-[9px]"></i> Secure Checkout</span>
+          <span class="font-bold text-slate-600">VISA</span>
+          <span class="font-bold text-slate-600">MasterCard</span>
+          <span class="font-bold text-slate-600">Apple Pay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ MOBILE BOTTOM NAVIGATION BAR (Exact 1:1 Screenshots) ═══════════════ -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-200 shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+    <div class="px-4 py-2 flex items-center justify-around font-sans">
+      <!-- 1. Shop -->
+      <button onclick="scrollToProducts()" class="flex flex-col items-center gap-0.5 text-slate-800 hover:text-amber-500 active:scale-95 transition">
+        <i class="fa-solid fa-store text-lg text-slate-700"></i>
+        <span class="text-[10px] font-medium tracking-tight">Shop</span>
+      </button>
+
+      <!-- 2. Wishlist -->
+      <button onclick="toggleWishlistModal()" class="flex flex-col items-center gap-0.5 text-slate-800 hover:text-amber-500 active:scale-95 transition">
+        <i class="fa-regular fa-heart text-lg text-slate-700"></i>
+        <span class="text-[10px] font-medium tracking-tight">Wishlist</span>
+      </button>
+
+      <!-- 3. Cart with Counter Badge (Exact Screenshot) -->
+      <button onclick="toggleCartDrawer(true)" class="relative flex flex-col items-center gap-0.5 text-slate-800 hover:text-amber-500 active:scale-95 transition">
+        <i class="fa-solid fa-bag-shopping text-lg text-slate-700"></i>
+        <span class="absolute -top-1 -right-2 bg-amber-500 text-slate-950 font-bold font-mono text-[9px] w-4 h-4 rounded-full flex items-center justify-center border border-white" id="mobileCartBadge">2</span>
+        <span class="text-[10px] font-medium tracking-tight">Cart</span>
+      </button>
+
+      <!-- 4. My Account / About Us -->
+      <a href="about.html" class="flex flex-col items-center gap-0.5 text-slate-800 hover:text-amber-500 active:scale-95 transition">
+        <i class="fa-regular fa-user text-lg text-slate-700"></i>
+        <span class="text-[10px] font-medium tracking-tight">My account</span>
+      </a>
+    </div>
+
+    <!-- Official Website Footer Pill -->
+    <div class="text-center text-[10px] text-slate-400 font-mono py-0.5 border-t border-slate-100 bg-slate-50/50 flex items-center justify-center gap-2">
+      <a href="about.html" class="hover:text-amber-600 transition">youcamjor.com</a>
+      <span>•</span>
+      <a href="admin.html" class="text-yellow-600 hover:text-yellow-700 font-bold transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[9px]"></i>
+        <span>لوحة الإدارة</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CART DRAWER MODAL (Responsive Full / Slide-Over) ═══════════════ -->
+  <div id="cartOverlay" onclick="handleCartOverlay(event)" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 opacity-0 pointer-events-none transition-opacity duration-200">
+    <div id="cartBox" class="fixed top-0 right-0 bottom-0 w-full sm:max-w-sm bg-white shadow-2xl p-4 sm:p-6 flex flex-col transform translate-x-full transition-transform duration-200">
+      <div class="flex items-center justify-between pb-3 sm:pb-4 border-b border-slate-100">
+        <h3 class="font-bold text-sm sm:text-base flex items-center gap-2">
+          <i class="fa-solid fa-bag-shopping text-yellow-500"></i>
+          <span>Your Cart (<span id="cartCount">0</span>)</span>
+        </h3>
+        <button onclick="toggleCartDrawer(false)" class="text-slate-400 hover:text-slate-700 p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+
+      <div id="cartItemsList" class="flex-1 overflow-y-auto py-3 space-y-2.5">
+        <!-- Cart Items -->
+      </div>
+
+      <div class="border-t border-slate-100 pt-3 sm:pt-4 space-y-2.5 pb-6 sm:pb-0">
+        <div class="flex justify-between text-xs sm:text-sm font-bold">
+          <span>Total:</span>
+          <span id="cartTotal" class="text-yellow-600 font-extrabold text-base">$0</span>
+        </div>
+
+        <button onclick="openCheckoutModal()" class="w-full bg-yellow-400 hover:bg-yellow-500 active:scale-98 text-slate-950 font-black py-3 rounded-xl text-xs flex items-center justify-center gap-2 transition shadow-md">
+          <i class="fa-solid fa-receipt text-sm"></i>
+          <span>متابعة إتمام الطلب وإدخال العنوان (Checkout)</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CHECKOUT & CUSTOMER INFO MODAL ═══════════════ -->
+  <div id="checkoutModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full max-h-[92vh] overflow-y-auto shadow-2xl p-5 sm:p-7 relative border border-slate-100 text-right">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+        <h3 class="font-black text-sm sm:text-base text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-truck-ramp-box text-yellow-500"></i>
+          <span>بيانات التوصيل والتسليم</span>
+        </h3>
+        <button onclick="closeCheckoutModal()" class="text-slate-400 hover:text-slate-700 p-1 text-base">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Order Summary Pill -->
+      <div class="bg-yellow-50 border border-yellow-200/80 rounded-xl p-3 mb-4 flex items-center justify-between text-xs">
+        <span class="text-slate-900 font-bold flex items-center gap-1.5">
+          <i class="fa-solid fa-bag-shopping text-yellow-600"></i> إجمالي الطلب:
+        </span>
+        <span id="checkoutModalTotal" class="text-yellow-700 font-black text-sm">$0</span>
+      </div>
+
+      <!-- Customer Details Form -->
+      <form id="checkoutDetailsForm" onsubmit="handleCustomerCheckout(event)" class="space-y-3.5 text-xs">
+        
+        <!-- Name Field -->
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">الاسم الكامل (Full Name) *</label>
+          <input 
+            type="text" 
+            id="custName" 
+            placeholder="مثال: أحمد محمد" 
+            required 
+            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs outline-none focus:border-yellow-500 focus:bg-white transition"
+          >
+        </div>
+
+        <!-- Phone / WhatsApp Field -->
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">رقم الهاتف / الواتساب (Phone / WhatsApp) *</label>
+          <input 
+            type="tel" 
+            id="custPhone" 
+            placeholder="مثال: 0791234567 أو +962..." 
+            required 
+            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs outline-none focus:border-yellow-500 focus:bg-white transition text-right"
+          >
+        </div>
+
+        <!-- City Field -->
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">المدينة والمنطقة (City / Area) *</label>
+          <input 
+            type="text" 
+            id="custCity" 
+            placeholder="مثال: عمان - دابوق / الرياض - النرجس" 
+            required 
+            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs outline-none focus:border-yellow-500 focus:bg-white transition"
+          >
+        </div>
+
+        <!-- Detailed Location / Address Field with GPS Auto-locate -->
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <label class="font-bold text-slate-700">العنوان التفصيلي أو رابط اللوكيشن *</label>
+            <button 
+              type="button" 
+              onclick="detectGPSLocation()" 
+              id="gpsBtn"
+              class="text-slate-950 hover:bg-yellow-200 font-bold flex items-center gap-1 text-[11px] bg-yellow-100 px-2 py-0.5 rounded-lg border border-yellow-300 transition shadow-2xs"
+            >
+              <i class="fa-solid fa-location-crosshairs text-yellow-600"></i>
+              <span>تحديد موقعي GPS</span>
+            </button>
+          </div>
+          <input 
+            type="text" 
+            id="custLocation" 
+            placeholder="اسم الشارع، رقم البناية، أو رابط خرائط Google" 
+            required 
+            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs outline-none focus:border-yellow-500 focus:bg-white transition"
+          >
+          <span class="text-[10px] text-slate-400 mt-1 block">يمكنك الضغط على "تحديد موقعي GPS" لجلب إحداثيات موقعك الحالي تلقائياً.</span>
+        </div>
+
+        <!-- Payment Method Field -->
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">طريقة الدفع (Payment Method)</label>
+          <select id="custPayment" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs outline-none focus:border-yellow-500 focus:bg-white transition cursor-pointer">
+            <option value="cash_on_delivery">الدفع نقداً عند الاستلام (Cash on Delivery)</option>
+            <option value="bank_transfer">تحويل بنكي / محفظة إلكترونية (CliQ / Wallet)</option>
+            <option value="credit_card">بطاقة إلكترونية (Visa / MasterCard)</option>
+          </select>
+        </div>
+
+        <!-- Notes (Optional) -->
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">ملاحظات إضافية للتوصيل (اختياري)</label>
+          <textarea id="custNotes" rows="2" placeholder="أي تعليمات خاصة بالوقت أو الفحص..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-xs outline-none focus:border-yellow-500 focus:bg-white transition"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full bg-[#25d366] hover:bg-[#20bd5a] active:scale-98 text-white font-bold py-3.5 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition shadow-md mt-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>تأكيد الطلب وإرسال البيانات عبر واتساب</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════ ORDER SUCCESS MODAL ═══════════════ -->
+  <div id="orderSuccessModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl border border-slate-100">
+      <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mx-auto mb-3">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="text-base font-black text-slate-900 mb-1">تم تسجيل طلبك بنجاح!</h3>
+      <p class="text-xs text-slate-500 mb-3">تم إرسال بياناتك وموقعك للتوصيل إلى لوحة الإدارة.</p>
+
+      <div class="bg-yellow-50 border border-yellow-200 rounded-lg py-1.5 px-3 inline-block font-mono font-bold text-slate-950 text-sm mb-4" id="successOrderNum">
+        #ORD-00000
+      </div>
+
+      <a id="successDirectWhatsApp" href="#" target="_blank" class="w-full bg-[#25d366] hover:bg-[#20bd5a] text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 transition shadow-md mb-2">
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        <span>متابعة الطلب عبر واتساب</span>
+      </a>
+
+      <button onclick="closeSuccessModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2 rounded-xl text-xs transition">
+        إغلاق والعودة للتسوق
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════ PROMOTIONAL POPUP MODAL (العرض الترويجي المنبثق) ═══════════════ -->
+  <div id="storefrontPromoModal" class="fixed inset-0 bg-black/75 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-yellow-400/40 relative transform transition-all scale-95 opacity-0 duration-300" id="storefrontPromoBox">
+      <!-- Close Button -->
+      <button onclick="closeStorefrontPromo()" class="absolute top-3 left-3 z-20 w-8 h-8 rounded-full bg-black/60 text-white hover:bg-black active:scale-90 flex items-center justify-center transition shadow-md cursor-pointer">
+        <i class="fa-solid fa-xmark text-xs"></i>
+      </button>
+
+      <!-- Visual Top Banner -->
+      <div class="h-44 sm:h-48 bg-slate-900 relative overflow-hidden">
+        <img id="sfPromoImg" src="images/about_filmmaker_set.jpg" class="w-full h-full object-cover opacity-85 transition-transform duration-700 hover:scale-105" alt="Offer">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute bottom-3.5 right-4 left-4 text-white">
+          <span id="sfPromoBadge" class="bg-yellow-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded font-mono uppercase shadow-md inline-block">
+            خصم 25% لفترة محدودة
+          </span>
+          <div class="text-[11px] text-slate-200 mt-1 font-mono flex items-center gap-1.5">
+            <span>PROMO CODE:</span>
+            <span id="sfPromoCode" class="font-bold text-yellow-300 bg-black/50 px-2 py-0.2 rounded border border-yellow-400/30">TOP25</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="p-5 sm:p-6 text-right space-y-2.5">
+        <h3 id="sfPromoTitle" class="text-base sm:text-lg font-black text-slate-950 leading-snug">
+          🔥 عرض خاص: خصم 25% على جميع الستاندات ومعدات الاستوديو!
+        </h3>
+        <p id="sfPromoSubtitle" class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+          استخدم كود الخصم عند إتمام أي طلب، العرض متاح لكافة صناع المحتوى والمصورين في الأردن لفترة محدودة.
+        </p>
+
+        <div class="pt-2 flex flex-col gap-2">
+          <button onclick="acceptStorefrontPromo()" id="sfPromoBtn" class="w-full bg-yellow-400 hover:bg-yellow-500 active:scale-95 text-slate-950 font-black text-xs sm:text-sm py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2 cursor-pointer">
+            <span>تصفح عروض الستاندات الآن 🛍️</span>
+          </button>
+          <button onclick="closeStorefrontPromo()" class="w-full text-slate-400 hover:text-slate-600 text-[11px] font-medium py-1 transition cursor-pointer">
+            شكراً، متابعة التصفح العادي
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script>
+    let cart = [];
+
+    function toggleVideoMute() {
+      const vid = document.getElementById('heroCameraVideo');
+      const icon = document.getElementById('muteIcon');
+      if (vid) {
+        vid.muted = !vid.muted;
+        if (icon) {
+          icon.className = vid.muted ? 'fa-solid fa-volume-xmark' : 'fa-solid fa-volume-high';
+        }
+      }
+    }
+
+    function addToCartMock(name, price, image = 'images/camera_body.jpg', id = null) {
+      const existing = cart.find(i => i.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ id: id || ('PRD-' + Math.floor(1000 + Math.random() * 9000)), name, price, qty: 1, image });
+      }
+      updateCartUI();
+      toggleCartDrawer(true);
+    }
+
+    function updateCartUI() {
+      const badge = document.getElementById('cartBadge');
+      const mobileBadge = document.getElementById('mobileCartBadge');
+      const count = document.getElementById('cartCount');
+      const list = document.getElementById('cartItemsList');
+      const totalEl = document.getElementById('cartTotal');
+
+      const totalQty = cart.reduce((sum, i) => sum + i.qty, 0);
+      const totalPrice = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+
+      if (badge) badge.textContent = totalQty;
+      if (mobileBadge) mobileBadge.textContent = totalQty;
+      if (count) count.textContent = totalQty;
+      if (totalEl) totalEl.textContent = '$' + totalPrice.toLocaleString();
+
+      if (!list) return;
+
+      if (cart.length === 0) {
+        list.innerHTML = '<div class="text-center py-12 text-slate-400 text-xs">Your cart is empty.</div>';
+        return;
+      }
+
+      list.innerHTML = cart.map((item, index) => `
+        <div class="flex items-center justify-between p-2 sm:p-2.5 bg-slate-50 rounded-lg text-xs">
+          <div>
+            <div class="font-bold text-slate-900">${item.name}</div>
+            <div class="text-slate-500 font-semibold">$${item.price.toLocaleString()} × ${item.qty}</div>
+          </div>
+          <button onclick="removeFromCart(${index})" class="text-slate-400 hover:text-yellow-600 p-1">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function toggleCartDrawer(open) {
+      const overlay = document.getElementById('cartOverlay');
+      const box = document.getElementById('cartBox');
+      if (open) {
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        box.classList.remove('translate-x-full');
+      } else {
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        box.classList.add('translate-x-full');
+      }
+    }
+
+    function handleCartOverlay(e) {
+      if (e.target.id === 'cartOverlay') toggleCartDrawer(false);
+    }
+
+    function toggleWish(btn) {
+      const i = btn.querySelector('i');
+      if (i.classList.contains('fa-regular')) {
+        i.classList.replace('fa-regular', 'fa-solid');
+        btn.classList.add('text-yellow-500');
+      } else {
+        i.classList.replace('fa-solid', 'fa-regular');
+        btn.classList.remove('text-yellow-500');
+      }
+    }
+
+    function toggleWishlistModal() {
+      alert('Wishlist feature active! Click the heart icons on products to add items.');
+    }
+
+    function focusMobileSearch() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        const inp = document.querySelector('header input');
+        if (inp) inp.focus();
+      }, 300);
+    }
+
+    function openCheckoutModal() {
+      if (cart.length === 0) return alert('سلتك فارغة حالياً! أضف معدات إلى السلة أولاً.');
+      const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+      document.getElementById('checkoutModalTotal').textContent = '$' + total.toLocaleString();
+      toggleCartDrawer(false);
+      
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function closeSuccessModal() {
+      const modal = document.getElementById('orderSuccessModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function detectGPSLocation() {
+      const btn = document.getElementById('gpsBtn');
+      const input = document.getElementById('custLocation');
+      if (!navigator.geolocation) {
+        alert('ميزة تحديد الموقع GPS غير مدعومة في متصفحك.');
+        return;
+      }
+
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>جاري التحديد...</span>';
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          const mapsUrl = `https://maps.google.com/?q=${lat},${lng}`;
+          input.value = `موقع الخريطة: ${mapsUrl}`;
+          btn.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600"></i> <span class="text-emerald-700">تم التحديد!</span>';
+        },
+        (error) => {
+          btn.innerHTML = '<i class="fa-solid fa-location-crosshairs text-yellow-600"></i> <span>تحديد موقعي GPS</span>';
+          alert('تعذر الوصول إلى موقعك تلقائياً. يرجى كتابة اسم الشارع أو الحي يدوياً.');
+        },
+        { enableHighAccuracy: true, timeout: 8000 }
+      );
+    }
+
+    function handleCustomerCheckout(e) {
+      e.preventDefault();
+      if (cart.length === 0) return alert('سلتك فارغة حالياً!');
+
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const city = document.getElementById('custCity').value.trim();
+      const location = document.getElementById('custLocation').value.trim();
+      const paymentMethod = document.getElementById('custPayment').value;
+      const notes = document.getElementById('custNotes').value.trim();
+
+      const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+
+      // تسجيل الطلب الرسمي ببيانات العميل في قاعدة بيانات المتجر (storeDB)
+      const orderResult = storeDB.createOrder({
+        customerName: name,
+        phone: phone,
+        city: city,
+        address: location,
+        paymentMethod: paymentMethod,
+        notes: notes,
+        items: cart.map(i => ({ id: i.id || 'PRD-CAM', name: i.name, price: i.price, quantity: i.qty, image: i.image || 'images/camera_body.jpg' })),
+        subtotal: total,
+        shipping: 0,
+        total: total
+      });
+
+      // صياغة رسالة واتساب الشاملة
+      let waMessage = `*🛒 طلب جديد من متجر TOP CAM*\n`;
+      waMessage += `*رقم الطلب:* #${orderResult.order.id}\n\n`;
+      waMessage += `*👤 بيانات العميل والتوصيل:*\n`;
+      waMessage += `- *الاسم:* ${name}\n`;
+      waMessage += `- *الهاتف:* ${phone}\n`;
+      waMessage += `- *المدينة:* ${city}\n`;
+      waMessage += `- *الموقع / العنوان:* ${location}\n`;
+      waMessage += `- *طريقة الدفع:* ${paymentMethod === 'cash_on_delivery' ? 'الدفع عند الاستلام' : 'تحويل بنكي / محفظة'}\n`;
+      if (notes) waMessage += `- *ملاحظات:* ${notes}\n`;
+
+      waMessage += `\n*📦 تفاصيل المعدات المطلوبة:*\n`;
+      cart.forEach(item => {
+        waMessage += `• ${item.name} (${item.qty}×) - $${(item.price * item.qty).toLocaleString()}\n`;
+      });
+      waMessage += `\n*💵 الإجمالي الكلي:* $${total.toLocaleString()}`;
+
+      const waUrl = orderResult.whatsappUrl || `https://wa.me/962790000000?text=${encodeURIComponent(waMessage)}`;
+
+      // تفريغ السلة وغلق النوافذ
+      cart = [];
+      updateCartUI();
+      closeCheckoutModal();
+
+      // فتح نافذة النجاح
+      document.getElementById('successOrderNum').textContent = `#${orderResult.order.id}`;
+      const waBtn = document.getElementById('successDirectWhatsApp');
+      waBtn.href = waUrl;
+
+      const successModal = document.getElementById('orderSuccessModal');
+      successModal.classList.remove('hidden');
+      successModal.classList.add('flex');
+
+      // فتح واتساب مباشرة
+      window.open(waUrl, '_blank');
+    }
+
+    function scrollToProducts() {
+      document.getElementById('productsSection')?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ═══════════════ YOUCAM HERO CAROUSEL LOGIC ═══════════════
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.slide-dot');
+    let slideInterval = null;
+
+    function showSlide(index) {
+      if (!slides || slides.length === 0) return;
+      if (index >= slides.length) currentSlide = 0;
+      else if (index < 0) currentSlide = slides.length - 1;
+      else currentSlide = index;
+
+      slides.forEach((slide, i) => {
+        if (i === currentSlide) {
+          slide.classList.remove('opacity-0', 'z-0');
+          slide.classList.add('opacity-100', 'z-10');
+        } else {
+          slide.classList.remove('opacity-100', 'z-10');
+          slide.classList.add('opacity-0', 'z-0');
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        if (i === currentSlide) {
+          dot.className = 'slide-dot w-2.5 h-2.5 rounded-full bg-amber-400 transition';
+        } else {
+          dot.className = 'slide-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white transition';
+        }
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    function goToSlide(n) {
+      showSlide(n);
+      resetSlideTimer();
+    }
+
+    function startSlideTimer() {
+      if (slideInterval) clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetSlideTimer() {
+      startSlideTimer();
+    }
+
+    // Start auto-play
+    startSlideTimer();
+
+    // Touch swipe support for mobile
+    const carouselWrapper = document.getElementById('heroCarouselWrapper');
+    if (carouselWrapper) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      carouselWrapper.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      carouselWrapper.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+
+      function handleSwipe() {
+        const threshold = 45;
+        if (touchStartX - touchEndX > threshold) {
+          nextSlide();
+          resetSlideTimer();
+        } else if (touchEndX - touchStartX > threshold) {
+          prevSlide();
+          resetSlideTimer();
+        }
+      }
+
+      carouselWrapper.addEventListener('mouseenter', () => clearInterval(slideInterval));
+      carouselWrapper.addEventListener('mouseleave', startSlideTimer);
+    }
+
+    // ═══════════════ MOBILE DRAWER MENU ═══════════════
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      const content = document.getElementById('drawerContent');
+      if (!drawer || !content) return;
+
+      if (drawer.classList.contains('opacity-0')) {
+        drawer.classList.remove('opacity-0', 'pointer-events-none');
+        content.classList.remove('-translate-x-full');
+      } else {
+        drawer.classList.add('opacity-0', 'pointer-events-none');
+        content.classList.add('-translate-x-full');
+      }
+    }
+
+    // Close drawer when clicking outside content
+    document.getElementById('mobileDrawer')?.addEventListener('click', (e) => {
+      if (e.target.id === 'mobileDrawer') {
+        toggleMobileMenu();
+      }
+    });
+
+    // ═══════════════ DYNAMIC PRODUCTS RENDERING & SYNC ═══════════════
+    let currentCategory = 'all';
+
+    function renderStorefrontProducts(cat = 'all', searchTerm = '') {
+      currentCategory = cat;
+      const grid = document.getElementById('dynamicProductGrid');
+      if (!grid) return;
+
+      let products = storeDB.getProducts();
+
+      if (cat && cat !== 'all') {
+        if (cat === 'deals') {
+          products = products.filter(p => p.oldPrice || (p.badge && (p.badge.includes('خصم') || p.badge.includes('الأكثر') || p.badge.includes('عرض'))));
+        } else {
+          products = products.filter(p => p.category === cat);
+        }
+      }
+
+      if (searchTerm) {
+        const s = searchTerm.toLowerCase();
+        products = products.filter(p => 
+          (p.name || '').toLowerCase().includes(s) || 
+          (p.nameEn || '').toLowerCase().includes(s) || 
+          (p.description || '').toLowerCase().includes(s) ||
+          (p.brand || '').toLowerCase().includes(s)
+        );
+      }
+
+      if (products.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-slate-400">
+            <i class="fa-solid fa-camera-rotate text-3xl mb-2 text-slate-300"></i>
+            <p class="text-xs font-bold text-slate-700">لا توجد معدات في هذا القسم حالياً.</p>
+            <button onclick="filterByCategory('all')" class="mt-3 bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl transition cursor-pointer">
+              عرض جميع المعدات
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = products.map(product => {
+        const safeName = (product.name || '').replace(/'/g, "\\'");
+        const safeImg = product.image || 'images/camera_body.jpg';
+
+        return `
+          <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+            <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden">
+              <img src="${safeImg}" alt="${product.name}" class="max-h-full max-w-full object-contain">
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900 line-clamp-1">${product.name}</h4>
+              <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$${(product.price || 0).toLocaleString()}</div>
+            </div>
+            <button onclick="addToCartMock('${safeName}', ${product.price}, '${safeImg}', '${product.id}')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+              Add to Cart
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ═══════════════ SEARCH & FILTER ═══════════════
+    function handleSearch(q) {
+      if (!q || q.trim() === '') {
+        if (currentCategory === 'all') {
+          // If search cleared and on all, reload or render
+          renderStorefrontProducts('all');
+          return;
+        }
+      }
+      renderStorefrontProducts(currentCategory, q);
+    }
+
+    function filterByCategory(cat) {
+      currentCategory = cat || 'all';
+      renderStorefrontProducts(currentCategory);
+      scrollToProducts();
+    }
+
+    // ═══════════════ DYNAMIC BANNERS & PROMO POPUP MODAL ═══════════════
+    function initStorefrontDynamicFeatures() {
+      // 1. مزامنة البانرات الحية من لوحة التحكم
+      const banners = storeDB.getBanners();
+      const heroSlides = document.querySelectorAll('.hero-slide');
+      if (banners && heroSlides.length >= 3) {
+        if (banners.slide1) {
+          const img1 = heroSlides[0].querySelector('img');
+          const h2_1 = heroSlides[0].querySelector('h2');
+          if (img1 && banners.slide1.image) img1.src = banners.slide1.image;
+          if (h2_1 && banners.slide1.title) h2_1.textContent = banners.slide1.title;
+        }
+        if (banners.slide2) {
+          const img2 = heroSlides[1].querySelector('img');
+          const h2_2 = heroSlides[1].querySelector('h2');
+          if (img2 && banners.slide2.image) img2.src = banners.slide2.image;
+          if (h2_2 && banners.slide2.title) h2_2.textContent = banners.slide2.title;
+        }
+        if (banners.slide3) {
+          const img3 = heroSlides[2].querySelector('img');
+          const h2_3 = heroSlides[2].querySelector('h2');
+          if (img3 && banners.slide3.image) img3.src = banners.slide3.image;
+          if (h2_3 && banners.slide3.title) h2_3.textContent = banners.slide3.title;
+        }
+      }
+
+      // 2. نافذة العرض المنبثقة الترويجية (اذا في عرض يطلع زي نافذة انو في اوفر)
+      const promo = storeDB.getPromoPopup();
+      if (promo && promo.enabled) {
+        const modal = document.getElementById('storefrontPromoModal');
+        const box = document.getElementById('storefrontPromoBox');
+        if (modal && box) {
+          const titleEl = document.getElementById('sfPromoTitle');
+          const subEl = document.getElementById('sfPromoSubtitle');
+          const badgeEl = document.getElementById('sfPromoBadge');
+          const codeEl = document.getElementById('sfPromoCode');
+          const btnEl = document.getElementById('sfPromoBtn');
+          const imgEl = document.getElementById('sfPromoImg');
+
+          if (titleEl) titleEl.textContent = promo.title || '';
+          if (subEl) subEl.textContent = promo.subtitle || '';
+          if (badgeEl) badgeEl.textContent = promo.badge || 'عرض خاص';
+          if (codeEl) codeEl.textContent = promo.promoCode || 'TOP25';
+          if (btnEl && promo.buttonText) btnEl.querySelector('span').textContent = promo.buttonText;
+          if (imgEl && promo.image) imgEl.src = promo.image;
+
+          // إظهار النافذة الترويجية بسلاسة
+          setTimeout(() => {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+              box.classList.remove('scale-95', 'opacity-0');
+              box.classList.add('scale-100', 'opacity-100');
+            }, 60);
+          }, 1200);
+        }
+      }
+
+      // 3. مزامنة قسم Gear Up for What's Next وبانر Frame What Matters
+      const gearUp = storeDB.getGearUp();
+      if (gearUp) {
+        const c1 = document.getElementById('gearCard1ImgEl');
+        const c2Title = document.getElementById('gearCard2TitleEl');
+        const c2Badge = document.getElementById('gearCard2BadgeEl');
+        const c2Sub = document.getElementById('gearCard2SubEl');
+        const c3 = document.getElementById('gearCard3ImgEl');
+        const fr = document.getElementById('frameMattersImgEl');
+
+        if (c1 && gearUp.card1Image) c1.src = gearUp.card1Image;
+        if (c2Title && gearUp.card2Title) c2Title.textContent = gearUp.card2Title;
+        if (c2Badge && gearUp.card2Badge) c2Badge.textContent = gearUp.card2Badge;
+        if (c2Sub && gearUp.card2Subtitle) c2Sub.textContent = gearUp.card2Subtitle;
+        if (c3 && gearUp.card3Image) c3.src = gearUp.card3Image;
+        if (fr && gearUp.frameMattersImage) fr.src = gearUp.frameMattersImage;
+      }
+    }
+
+    function closeStorefrontPromo() {
+      const modal = document.getElementById('storefrontPromoModal');
+      const box = document.getElementById('storefrontPromoBox');
+      if (box) {
+        box.classList.remove('scale-100', 'opacity-100');
+        box.classList.add('scale-95', 'opacity-0');
+      }
+      setTimeout(() => {
+        if (modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }, 250);
+    }
+
+    function acceptStorefrontPromo() {
+      const promo = storeDB.getPromoPopup();
+      const targetCategory = promo.targetCategory || 'stands';
+      closeStorefrontPromo();
+      filterByCategory(targetCategory);
+      scrollToProducts();
+    }
+
+    // تشغيل عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', () => {
+      // الاحتفاظ بالكاميرات الأصلية وتصميم الكارد المطابق لـ Recommended for You
+      initStorefrontDynamicFeatures();
+
+      // مزامنة فورية عند أي تعديل بالمنتجات أو البانرات أو قسم Gear Up
+      window.addEventListener('products_updated', () => {
+        if (currentCategory !== 'all') renderStorefrontProducts(currentCategory);
+      });
+      window.addEventListener('banners_updated', () => initStorefrontDynamicFeatures());
+      window.addEventListener('promo_popup_updated', () => initStorefrontDynamicFeatures());
+      window.addEventListener('gear_up_updated', () => initStorefrontDynamicFeatures());
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="100%" height="100%">
+  <defs>
+    <!-- Luxury Gold Gradient -->
+    <linearGradient id="youcamGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF275"/>
+      <stop offset="30%" stop-color="#E5A93B"/>
+      <stop offset="70%" stop-color="#C5851F"/>
+      <stop offset="100%" stop-color="#F3C35D"/>
+    </linearGradient>
+    <!-- Soft Metallic Shimmer -->
+    <linearGradient id="apertureGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFDF00"/>
+      <stop offset="50%" stop-color="#E5A93B"/>
+      <stop offset="100%" stop-color="#B87314"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <!-- Letter Y -->
+    <text x="0" y="50" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="52" font-weight="800" fill="url(#youcamGold)" letter-spacing="-1">Y</text>
+    
+    <!-- Camera Aperture Iris for 'o' -->
+    <g transform="translate(62, 33)">
+      <!-- Outer Aperture Ring -->
+      <circle cx="0" cy="0" r="19" fill="none" stroke="url(#apertureGold)" stroke-width="2.5"/>
+      <!-- Aperture Shutter Blades -->
+      <g stroke="#121212" stroke-width="1.2" fill="url(#youcamGold)">
+        <!-- 6 Geometric Iris Blades forming central hexagonal aperture -->
+        <path d="M 0,-18 L 13,-12 L 5,-4 Z" />
+        <path d="M 16,-8 L 18,7 L 6,3 Z" />
+        <path d="M 16,8 L 4,18 L 1,6 Z" />
+        <path d="M 0,18 L -13,12 L -5,4 Z" />
+        <path d="M -16,8 L -18,-7 L -6,-3 Z" />
+        <path d="M -16,-8 L -4,-18 L -1,-6 Z" />
+      </g>
+      <!-- Central Hole -->
+      <circle cx="0" cy="0" r="5" fill="#121212" />
+    </g>
+
+    <!-- Letter u -->
+    <text x="89" y="50" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="52" font-weight="800" fill="url(#youcamGold)" letter-spacing="-1">u</text>
+
+    <!-- Cam -->
+    <text x="122" y="50" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="52" font-weight="800" fill="url(#youcamGold)" letter-spacing="-0.5">Cam</text>
+  </g>
+</svg>

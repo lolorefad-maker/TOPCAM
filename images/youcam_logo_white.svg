@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="100%" height="100%">
+  <g transform="translate(10, 10)">
+    <!-- Letter Y -->
+    <text x="0" y="50" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="-1">Y</text>
+    
+    <!-- Camera Aperture Iris for 'o' -->
+    <g transform="translate(62, 33)">
+      <circle cx="0" cy="0" r="19" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+      <g stroke="#000000" stroke-width="1.2" fill="#FFFFFF">
+        <path d="M 0,-18 L 13,-12 L 5,-4 Z" />
+        <path d="M 16,-8 L 18,7 L 6,3 Z" />
+        <path d="M 16,8 L 4,18 L 1,6 Z" />
+        <path d="M 0,18 L -13,12 L -5,4 Z" />
+        <path d="M -16,8 L -18,-7 L -6,-3 Z" />
+        <path d="M -16,-8 L -4,-18 L -1,-6 Z" />
+      </g>
+      <circle cx="0" cy="0" r="5" fill="#000000" />
+    </g>
+
+    <!-- Letter u -->
+    <text x="89" y="50" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="-1">u</text>
+
+    <!-- Cam -->
+    <text x="122" y="50" font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">Cam</text>
+  </g>
+</svg>
