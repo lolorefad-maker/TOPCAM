@@ -1,19 +1,19 @@
 // بيانات المنتجات الأصلية لمتجر TOP CAM لمعدات التصوير والسينما
-// صور استوديو احترافية بخلفيات بيضاء نقية ومواصفات تفصيلية
+// صور استوديو احترافية ومحلية 100% لكاميرات ومعدات وستاندات حقيقية
 
 const INITIAL_CATEGORIES = [
   { id: 'all', name: 'جميع المعدات', icon: 'fa-layer-group', count: 0 },
-  { id: 'cameras', name: 'كاميرات سينما وميرورليس', icon: 'fa-camera', count: 0, image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=300&q=80' },
-  { id: 'stands', name: 'ستاندات وترايبود', icon: 'fa-monument', count: 0, image: 'https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&w=300&q=80' },
-  { id: 'lighting', name: 'إضاءات وسوفت بوكس', icon: 'fa-lightbulb', count: 0, image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=300&q=80' },
-  { id: 'filters', name: 'فلاتر وعدسات', icon: 'fa-circle-half-stroke', count: 0, image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=300&q=80' },
-  { id: 'memory', name: 'ميموريات وكروت ذاكرة', icon: 'fa-sd-card', count: 0, image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=300&q=80' },
-  { id: 'chargers_batteries', name: 'شواحن وبطاريات', icon: 'fa-battery-full', count: 0, image: 'https://images.unsplash.com/photo-1619725002198-6a689b72f41d?auto=format&fit=crop&w=300&q=80' },
-  { id: 'bags', name: 'شناتي وحقائب معدات', icon: 'fa-suitcase-rolling', count: 0, image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=300&q=80' },
-  { id: 'stabilizers', name: 'ستيبلايزرز وجيمبل', icon: 'fa-gamepad', count: 0, image: 'https://images.unsplash.com/photo-1589872545564-96464f89d311?auto=format&fit=crop&w=300&q=80' },
-  { id: 'cages', name: 'كيج كاميرا وتجهيزات', icon: 'fa-border-all', count: 0, image: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=300&q=80' },
-  { id: 'straps', name: 'أحزمة وستراب كاميرا', icon: 'fa-ribbon', count: 0, image: 'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=300&q=80' },
-  { id: 'covers', name: 'أغطية وحماية الكاميرات', icon: 'fa-shield-halved', count: 0, image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80' }
+  { id: 'cameras', name: 'كاميرات سينما وميرورليس', icon: 'fa-camera', count: 0, image: 'images/camera_body.jpg' },
+  { id: 'stands', name: 'ستاندات وترايبود', icon: 'fa-monument', count: 0, image: 'images/tripod_stand.jpg' },
+  { id: 'lighting', name: 'إضاءات وسوفت بوكس', icon: 'fa-lightbulb', count: 0, image: 'images/flash_light.jpg' },
+  { id: 'filters', name: 'فلاتر وعدسات', icon: 'fa-circle-half-stroke', count: 0, image: 'images/filter_lens.jpg' },
+  { id: 'memory', name: 'ميموريات وكروت ذاكرة', icon: 'fa-sd-card', count: 0, image: 'images/camera_dials.jpg' },
+  { id: 'chargers_batteries', name: 'شواحن وبطاريات', icon: 'fa-battery-full', count: 0, image: 'images/vmount_battery.jpg' },
+  { id: 'bags', name: 'شناتي وحقائب معدات', icon: 'fa-suitcase-rolling', count: 0, image: 'images/camera_bag.jpg' },
+  { id: 'stabilizers', name: 'ستيبلايزرز وجيمبل', icon: 'fa-gamepad', count: 0, image: 'images/gimbal_stab.jpg' },
+  { id: 'cages', name: 'كيج كاميرا وتجهيزات', icon: 'fa-border-all', count: 0, image: 'images/camera_cage.jpg' },
+  { id: 'straps', name: 'أحزمة وستراب كاميرا', icon: 'fa-ribbon', count: 0, image: 'images/camera_bag.jpg' },
+  { id: 'covers', name: 'أغطية وحماية الكاميرات', icon: 'fa-shield-halved', count: 0, image: 'images/camera_body.jpg' }
 ];
 
 const INITIAL_PRODUCTS = [
@@ -23,6 +23,7 @@ const INITIAL_PRODUCTS = [
     name: 'Sony FX3 Cinema Line',
     nameEn: 'Full-Frame 4K 120p Camera',
     category: 'cameras',
+    brand: 'Sony',
     price: 3899,
     oldPrice: 4200,
     rating: 4.9,
@@ -43,6 +44,7 @@ const INITIAL_PRODUCTS = [
     name: 'Sony Alpha 7 IV',
     nameEn: '33MP Hybrid Stills & Video',
     category: 'cameras',
+    brand: 'Sony',
     price: 2499,
     oldPrice: 2699,
     rating: 4.8,
@@ -62,6 +64,7 @@ const INITIAL_PRODUCTS = [
     name: 'Canon EOS R5 Mark II',
     nameEn: '45MP 8K RAW Cinema Body',
     category: 'cameras',
+    brand: 'Canon',
     price: 4299,
     oldPrice: 4599,
     rating: 5.0,
@@ -83,6 +86,7 @@ const INITIAL_PRODUCTS = [
     name: 'DJI RS 3 Pro Combo',
     nameEn: 'Carbon Fiber Handheld Gimbal',
     category: 'stabilizers',
+    brand: 'DJI',
     price: 869,
     oldPrice: 999,
     rating: 4.9,
@@ -99,9 +103,10 @@ const INITIAL_PRODUCTS = [
   },
   {
     id: 'GMB-002',
-    name: 'DJI RS 4 Mini Lightweight Travel Gimbal',
-    nameEn: 'مانع اهتزاز ميني خفيف الوزن يدعم التصوير العمودي فوري لتيك توك',
+    name: 'DJI RS 4 Mini Travel Gimbal',
+    nameEn: 'Lightweight Travel Gimbal Stabilizer',
     category: 'stabilizers',
+    brand: 'DJI',
     price: 369,
     oldPrice: 410,
     rating: 4.8,
@@ -121,8 +126,9 @@ const INITIAL_PRODUCTS = [
   {
     id: 'LGT-001',
     name: 'Aputure Amaran 200d S',
-    nameEn: '200W Daylight COB Light',
+    nameEn: '200W Daylight COB Video Light',
     category: 'lighting',
+    brand: 'Aputure',
     price: 299,
     oldPrice: 349,
     rating: 4.9,
@@ -134,15 +140,15 @@ const INITIAL_PRODUCTS = [
     description: 'ضوء فيديو COB بقوة 200 واط بدرجة لونية نهارية فائقة الدقة 5600K وتحكم لاسلكي عبر تطبيق Sidus Link.',
     specs: {
       'القدرة': '200 واط COB LED',
-      'درجة اللون': '5600K نهارية ثابتة',
-      'التحكم': 'تطبيق هاتف ذكي بلوتوث Sidus Link'
+      'درجة اللون': '5600K نهارية ثابتة'
     }
   },
   {
     id: 'LGT-002',
-    name: 'Aputure Lantern 65cm Quick-Setup Softbox',
-    nameEn: 'سوفت بوكس كروي فانوسي يوزع الإضاءة بزاوية 360 درجة ناعمة',
+    name: 'Aputure Lantern 65cm Softbox',
+    nameEn: 'Quick-Setup 360 Omnidirectional Softbox',
     category: 'lighting',
+    brand: 'Aputure',
     price: 89,
     oldPrice: 110,
     rating: 4.8,
@@ -150,11 +156,10 @@ const INITIAL_PRODUCTS = [
     stock: 20,
     badge: '',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80',
-    description: 'سوفت بوكس فانوسي كروي ينتج إضاءة ناعمة محيطية 360 درجة، مثالي للبثوث وصناع المحتوى وتصوير المقابلات مع تركيب سريع في ثوانٍ معدودة.',
+    image: 'images/flash_light.jpg',
+    description: 'سوفت بوكس فانوسي كروي ينتج إضاءة ناعمة محيطية 360 درجة، مثالي للبثوث وصناع المحتوى وتصوير المقابلات.',
     specs: {
       'القطر': '65 سم (26 بوصة)',
-      'التركيب': 'فتح سريع بضغطة واحدة',
       'القاعدة': 'Bowens Mount قياسية'
     }
   },
@@ -162,9 +167,10 @@ const INITIAL_PRODUCTS = [
   // 4. ستاندات وترايبود
   {
     id: 'STD-001',
-    name: 'Manfrotto Befree Advanced Carbon Fiber Tripod',
-    nameEn: 'ترايبود سفر احترافي من ألياف الكربون خفيف وقوي مع رأس هيدروليكي',
+    name: 'Manfrotto Befree Carbon Tripod',
+    nameEn: 'Professional Carbon Fiber Travel Tripod',
     category: 'stands',
+    brand: 'Manfrotto',
     price: 349,
     oldPrice: 399,
     rating: 4.8,
@@ -172,19 +178,19 @@ const INITIAL_PRODUCTS = [
     stock: 14,
     badge: 'كربون فايبر',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&w=800&q=80',
-    description: 'ترايبود سفر احترافي مصنوع من ألياف الكربون فائقة القوة وخفة الوزن، مزود برأس كروي هيدروليكي 494 Center Ball Head مع أقفال M-Lock سريعة.',
+    image: 'images/tripod_stand.jpg',
+    description: 'ترايبود سفر احترافي مصنوع من ألياف الكربون فائقة القوة وخفة الوزن مع رأس هيدروليكي كروي دقيق.',
     specs: {
       'الخامة': 'ألياف كربون 100%',
-      'أقصى حمولة': '9 كجم',
-      'أقصى ارتفاع': '150 سم'
+      'أقصى حمولة': '9 كجم'
     }
   },
   {
     id: 'STD-002',
-    name: 'Heavy-Duty 3.3m Stainless Steel C-Stand with Boom Arm',
-    nameEn: 'ستاند سي ستاند فولاذي مع ذراع بوم أرم لحمل الإضاءات الثقيلة في الاستوديو',
+    name: 'Heavy-Duty 3.3m Stainless C-Stand',
+    nameEn: 'Professional Studio C-Stand with Boom Arm',
     category: 'stands',
+    brand: 'TOP CAM Pro',
     price: 189,
     oldPrice: 220,
     rating: 4.9,
@@ -192,11 +198,10 @@ const INITIAL_PRODUCTS = [
     stock: 18,
     badge: 'استوديو ثقيل',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1520390138845-fd2d229dd553?auto=format&fit=crop&w=800&q=80',
-    description: 'ستاند سي ستاند من الستانلس ستيل المقاوم للصدأ للاستوديوهات الاحترافية مع ذراع تثبيت Grip Head وبوم أرم لحمل الإضاءات الثقيلة والسوفت بوكس بأمان تام.',
+    image: 'images/tripod_stand.jpg',
+    description: 'ستاند سي ستاند من الفولاذ المقاوم للصدأ للاستوديوهات الاحترافية مع ذراع بوم أرم لحمل الإضاءات الثقيلة.',
     specs: {
       'أقصى ارتفاع': '330 سم (3.3 متر)',
-      'الذراع': 'بوم أرم 128 سم مع رأس قبضة مزدوج',
       'الحمولة': 'حتى 20 كجم'
     }
   },
@@ -204,9 +209,10 @@ const INITIAL_PRODUCTS = [
   // 5. فلاتر وعدسات
   {
     id: 'FLT-001',
-    name: 'PolarPro 82mm Peter McKinnon Variable ND (2-5 Stop)',
-    nameEn: 'فلتر بولاربرو إن دي المتغير زجاج ألماني نقي بدون تشويه سينمائي',
+    name: 'PolarPro VND Filter (82mm)',
+    nameEn: 'Peter McKinnon Edition II 2-5 Stop',
     category: 'filters',
+    brand: 'PolarPro',
     price: 249,
     oldPrice: 280,
     rating: 5.0,
@@ -214,19 +220,19 @@ const INITIAL_PRODUCTS = [
     stock: 11,
     badge: 'زجاج كوارتز',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80',
-    description: 'فلتر ND متغير من زجاج الكوارتز الألماني النقي يمنحك تحكماً دقيقاً في التعريض الضوئي من 2 إلى 5 وقفات بدون أي تشويه ألوان أو خطوط متقاطعة X-Pattern.',
+    image: 'images/filter_lens.jpg',
+    description: 'فلتر ND متغير من زجاج الكوارتز الألماني النقي يمنحك تحكماً دقيقاً في التعريض الضوئي من 2 إلى 5 وقفات.',
     specs: {
       'القطر': '82 مم',
-      'الوقفات': '2 إلى 5 وقفات (ND4 إلى ND32)',
-      'الزجاج': 'CinemaSeries Quartz Glass'
+      'الوقفات': '2 إلى 5 وقفات'
     }
   },
   {
     id: 'FLT-002',
-    name: 'NiSi 77mm Black Mist 1/4 Cinema Effect Filter',
-    nameEn: 'فلتر ضباب سينمائي ينعم ملامح البشرة ويمنح الهايلايت هالة سينمائية دافئة',
+    name: 'NiSi 77mm Black Mist 1/4 Filter',
+    nameEn: 'Cinema Diffusion Effect Glass Filter',
     category: 'filters',
+    brand: 'NiSi',
     price: 79,
     oldPrice: 95,
     rating: 4.8,
@@ -234,21 +240,21 @@ const INITIAL_PRODUCTS = [
     stock: 16,
     badge: 'طابع سينمائي',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
-    description: 'فلتر تنعيم وتشتيت الضوء لتخفيف حدة المستشعرات الرقمية، يمنح الهايلايت هالة ناعمة سينمائية دافئة وينعم تفاصيل البشرة دون فقدان التباين.',
+    image: 'images/filter_lens.jpg',
+    description: 'فلتر تنعيم وتشتيت الضوء لتخفيف حدة المستشعرات الرقمية، يمنح الهايلايت هالة ناعمة سينمائية دافئة.',
     specs: {
       'القطر': '77 مم',
-      'الكثافة': '1/4 Black Mist',
-      'الطلاء': 'Nano Coating مضاد للماء والخدوش'
+      'الكثافة': '1/4 Black Mist'
     }
   },
 
   // 6. ميموريات وكروت ذاكرة
   {
     id: 'MEM-001',
-    name: 'Sony TOUGH CFexpress Type A 160GB Memory Card',
-    nameEn: 'بطاقة ذاكرة سوني تاف غير قابلة للكسر لتسجيل 4K 120p بسرعة 800MB/s',
+    name: 'Sony TOUGH CFexpress Type A 160GB',
+    nameEn: 'High-Speed 800MB/s Cinema Memory Card',
     category: 'memory',
+    brand: 'Sony',
     price: 369,
     oldPrice: 399,
     rating: 4.9,
@@ -256,21 +262,21 @@ const INITIAL_PRODUCTS = [
     stock: 15,
     badge: 'مقاوم للصدمات',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
-    description: 'أقوى بطاقة ذاكرة CFexpress Type A بتصميم TOUGH غير قابل للكسر، سرعة قراءة تصل إلى 800 ميجابايت/ثانية وكتابة 700 ميجابايت/ثانية لتصوير 4K 120p و All-Intra.',
+    image: 'images/camera_dials.jpg',
+    description: 'أقوى بطاقة ذاكرة CFexpress Type A بتصميم TOUGH غير قابل للكسر، سرعة قراءة تصل إلى 800 ميجابايت/ثانية.',
     specs: {
       'السعة': '160 جيجابايت',
-      'سرعة القراءة': '800 ميجابايت/ثانية',
-      'سرعة الكتابة': '700 ميجابايت/ثانية'
+      'سرعة القراءة': '800 ميجابايت/ثانية'
     }
   },
 
   // 7. شواحن وبطاريات
   {
     id: 'BAT-001',
-    name: 'SmallRig NP-FZ100 USB-C Rechargeable Battery',
-    nameEn: 'بطارية لكاميرات سوني تشحن مباشرة بسلك تايب سي دون الحاجة لشاحن خارجي',
+    name: 'SmallRig NP-FZ100 USB-C Battery',
+    nameEn: 'Direct USB-C Rechargeable Camera Battery',
     category: 'chargers_batteries',
+    brand: 'SmallRig',
     price: 49,
     oldPrice: 65,
     rating: 4.8,
@@ -278,19 +284,19 @@ const INITIAL_PRODUCTS = [
     stock: 30,
     badge: 'منفذ Type-C',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1619725002198-6a689b72f41d?auto=format&fit=crop&w=800&q=80',
-    description: 'بطارية بديلة لكاميرات سوني تتميز بمنفذ شحن USB-C مدمج لشحنها مباشرة من الباوربانك أو شاحن الهاتف دون الحاجة لشاحن خارجي.',
+    image: 'images/vmount_battery.jpg',
+    description: 'بطارية بديلة لكاميرات سوني تتميز بمنفذ شحن USB-C مدمج لشحنها مباشرة من الباوربانك.',
     specs: {
       'السعة': '2400 مللي أمبير',
-      'المنفذ': 'USB Type-C مدمج للشحن السريع',
-      'التوافق': 'Sony FX3, FX30, A7IV, A7SIII, A7CII'
+      'المنفذ': 'USB Type-C'
     }
   },
   {
     id: 'BAT-002',
-    name: 'SmallRig VB99 Pro Mini V-Mount Battery 99Wh',
-    nameEn: 'بطارية سينمائية ميني مصرح بها في الطائرات مع شاشة OLED ومنافذ 100W PD',
+    name: 'Cinergy Nano 99 V-Mount Battery',
+    nameEn: 'Mini 99Wh Airline-Safe Cinema V-Mount',
     category: 'chargers_batteries',
+    brand: 'SmallRig',
     price: 279,
     oldPrice: 320,
     rating: 4.9,
@@ -298,21 +304,21 @@ const INITIAL_PRODUCTS = [
     stock: 8,
     badge: '100W PD',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80',
-    description: 'بطارية V-Mount سينمائية فائقة الصغر مطابقة لمعايير الطيران، بقدرة 99Wh وشاشة ملونة TFT لعرض الوقت المتبقي، ومنافذ شحن 100W PD و D-Tap و DC.',
+    image: 'images/vmount_battery.jpg',
+    description: 'بطارية V-Mount سينمائية فائقة الصغر مطابقة لمعايير الطيران، بقدرة 99Wh وشاشة لعرض الوقت المتبقي ومنافذ 100W PD.',
     specs: {
-      'السعة': '99Wh (معتمدة للسفر بالطائرات)',
-      'المنافذ': 'USB-C 100W PD, D-Tap, USB-A, DC',
-      'الشاشة': 'TFT ملونة تعرض مستوى الشحن والواط'
+      'السعة': '99Wh (مصرح بها بالطائرات)',
+      'المنافذ': 'USB-C 100W PD, D-Tap, DC'
     }
   },
 
   // 8. حقائب وشناتي
   {
     id: 'BAG-001',
-    name: 'Wandrd PRVKE 31L V3 Photography Backpack',
-    nameEn: 'حقيبة ظهر المصورين الأشهر عالمياً مقاومة للأمطار مع وصول جانبي سريع للكاميرا',
+    name: 'Wandrd PRVKE 31L Bag',
+    nameEn: 'Weatherproof Photography Backpack V3',
     category: 'bags',
+    brand: 'Wandrd',
     price: 299,
     oldPrice: 350,
     rating: 4.9,
@@ -320,21 +326,21 @@ const INITIAL_PRODUCTS = [
     stock: 10,
     badge: 'مقاومة للماء',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80',
-    description: 'حقيبة المصورين الأكثر أناقة وعملية، مصنوعة من القماش المشمع المقاوم للماء وسحابات YKK محكمة، مع وصول جانبي سريع للكاميرا ومكان مخصص للابتوب والترايبود.',
+    image: 'images/camera_bag.jpg',
+    description: 'حقيبة المصورين الأكثر أناقة وعملية، مصنوعة من القماش المشمع المقاوم للماء وسحابات YKK مع وصول جانبي سريع.',
     specs: {
       'السعة': '31 لتر وتتوسع إلى 36 لتر',
-      'المادة': 'قماش Tarpaulin مقاوم للمطر وسحابات عازلة',
-      'حجرة اللابتوب': 'تتسع لأجهزة حتى 16 بوصة'
+      'المادة': 'Tarpaulin مقاوم للمطر'
     }
   },
 
   // 9. كيج كاميرا وتجهيزات التثبيت
   {
     id: 'CAG-001',
-    name: 'SmallRig Camera Cage for Sony FX3 & FX30',
-    nameEn: 'قفص كاميرا سمول ريج لكاميرات سوني FX3/FX30 من الألومنيوم مع قفل كابل HDMI',
+    name: 'SmallRig FX3 Camera Cage',
+    nameEn: 'Aluminum Cage Rig with Cable Clamp',
     category: 'cages',
+    brand: 'SmallRig',
     price: 99,
     oldPrice: 120,
     rating: 4.8,
@@ -342,21 +348,21 @@ const INITIAL_PRODUCTS = [
     stock: 18,
     badge: 'أكثر طلباً',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=800&q=80',
-    description: 'كيج حماية وتثبيت ألومنيوم مصمم بدقة متناهية ليطابق هيكل كاميرات Sony FX3/FX30، يوفر فتحات براغي 1/4 و 3/8 وقاعدة Arca-Swiss سريعة ومنفذ Cold Shoe.',
+    image: 'images/camera_cage.jpg',
+    description: 'كيج حماية وتثبيت ألومنيوم مصمم بدقة متناهية ليطابق هيكل كاميرات Sony FX3/FX30، يوفر فتحات براغي ومسار NATO.',
     specs: {
       'الخامة': 'ألومنيوم طيران مدمج',
-      'التوافق': 'Sony FX3 و FX30 متوافق مع المقبض الصوتي الأصلي XLR',
-      'القاعدة': 'Arca-Swiss جاهزة للجيمبل والترايبود'
+      'التوافق': 'Sony FX3 / FX30'
     }
   },
 
   // 10. أحزمة وستراب
   {
     id: 'STP-001',
-    name: 'Peak Design Slide Camera Sling Strap',
-    nameEn: 'حزام كتف بيك ديزاين سريع الفك بنظام Anchor Links فائق التحمل',
+    name: 'Peak Design Slide Strap',
+    nameEn: 'Pro Camera Sling Quick-Release Strap',
     category: 'straps',
+    brand: 'Peak Design',
     price: 69,
     oldPrice: 85,
     rating: 4.9,
@@ -364,20 +370,21 @@ const INITIAL_PRODUCTS = [
     stock: 25,
     badge: 'سريع الفك',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=800&q=80',
-    description: 'الحزام الأكثر شهرة عالمياً بين المصورين بنظام الروابط Anchor Links السريعة، يتميز بحشوة داخلية ناعمة لتوزيع وزن الكاميرا الثقيلة على الكتف بدون إجهاد.',
+    image: 'images/camera_bag.jpg',
+    description: 'الحزام الأكثر شهرة عالمياً بين المصورين بنظام الروابط Anchor Links السريعة، يتميز بحشوة ناعمة لتوزيع وزن الكاميرا.',
     specs: {
-      'قوة التحمل': 'تتحمل روابط Anchor حتى 90 كجم من الوزن',
-      'العرض': '45 مم مبطن ناعم'
+      'قوة التحمل': 'تتحمل روابط Anchor حتى 90 كجم',
+      'العرض': '45 مم مبطن'
     }
   },
 
   // 11. أغطية وحماية
   {
     id: 'COV-001',
-    name: 'EasyCover Silicone Armor Case for Sony A7IV',
-    nameEn: 'غطاء سيليكون مدرع يحمي جسم الكاميرا من الصدمات والخدوش مع الحفاظ على الأزرار',
+    name: 'EasyCover Silicone Armor Case',
+    nameEn: 'Protective Body Armor for Sony Alpha 7 IV',
     category: 'covers',
+    brand: 'EasyCover',
     price: 35,
     oldPrice: 45,
     rating: 4.7,
@@ -385,11 +392,11 @@ const INITIAL_PRODUCTS = [
     stock: 20,
     badge: 'حماية صدمات',
     section: 'recommended',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80',
-    description: 'جراب سيليكون مصبوب خصيصاً يحمي جسم الكاميرا من الخدوش والصدمات دون إعاقة الوصول إلى الأزرار والشاشة الدوارة ومنافذ البطارية والكروت.',
+    image: 'images/camera_body.jpg',
+    description: 'جراب سيليكون مصبوب خصيصاً يحمي جسم الكاميرا من الخدوش والصدمات دون إعاقة الوصول إلى الأزرار.',
     specs: {
       'الخامة': 'سيليكون ناعم عالي الكثافة مضاد للانزلاق',
-      'الحماية': 'ضد الخدوش والضربات والأتربة'
+      'الحماية': 'ضد الخدوش والضربات'
     }
   }
 ];

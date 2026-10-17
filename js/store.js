@@ -86,13 +86,26 @@ class StoreDB {
   }
 
   init() {
-    // 1. تهيئة وتحديث صور المنتجات المحلية الأساسية لضمان بقاء صور الكاميرات الأصلية
+    // 1. تهيئة وتحديث صور المنتجات المحلية الأساسية لضمان بقاء صور الكاميرات والستاندات والعدسات الحقيقية
     const localImageMap = {
       'CAM-001': 'images/camera_body.jpg',
       'CAM-002': 'images/new_camera.jpg',
       'CAM-003': 'images/hero_camera.jpg',
       'GMB-001': 'images/gimbal_stab.jpg',
-      'LGT-001': 'images/flash_light.jpg'
+      'GMB-002': 'images/gimbal_stab.jpg',
+      'LGT-001': 'images/flash_light.jpg',
+      'LGT-002': 'images/flash_light.jpg',
+      'STD-001': 'images/tripod_stand.jpg',
+      'STD-002': 'images/tripod_stand.jpg',
+      'FLT-001': 'images/filter_lens.jpg',
+      'FLT-002': 'images/filter_lens.jpg',
+      'MEM-001': 'images/camera_dials.jpg',
+      'BAT-001': 'images/vmount_battery.jpg',
+      'BAT-002': 'images/vmount_battery.jpg',
+      'BAG-001': 'images/camera_bag.jpg',
+      'CAG-001': 'images/camera_cage.jpg',
+      'STP-001': 'images/camera_bag.jpg',
+      'COV-001': 'images/camera_body.jpg'
     };
     let currentProds = [];
     try {
@@ -101,11 +114,17 @@ class StoreDB {
     } catch(e) {
       currentProds = typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : [];
     }
-    currentProds.forEach(p => {
-      if (localImageMap[p.id]) {
-        p.image = localImageMap[p.id];
-      }
-    });
+    // مسح وتحديث أي صور خارجية قديمة (كصور السيارات أو الأشخاص) فوراً
+    const hasExternalImages = currentProds.some(p => p.image && (p.image.startsWith('http') || p.image.includes('unsplash')));
+    if (hasExternalImages || currentProds.length === 0) {
+      currentProds = (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : []);
+    } else {
+      currentProds.forEach(p => {
+        if (localImageMap[p.id]) {
+          p.image = localImageMap[p.id];
+        }
+      });
+    }
     localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(currentProds));
 
     // 2. تهيئة الطلبات الأولية
