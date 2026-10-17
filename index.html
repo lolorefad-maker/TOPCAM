@@ -544,98 +544,124 @@
 
   <!-- ═══════════════ SECTION 1: TRENDING PRODUCTS (Responsive 2-Col Mobile Grid) ═══════════════ -->
   <section class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6" id="productsSection">
+    <!-- Section Top Bar -->
     <div class="flex items-center justify-between mb-3 sm:mb-4">
-      <h2 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">Trending Products</h2>
-      <a href="#" onclick="filterByCategory('all'); return false;" class="text-xs font-bold text-yellow-600 hover:text-yellow-700 hover:underline flex items-center gap-1">
-        <span>View All</span>
+      <div>
+        <h2 id="productsSectionTitle" class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">Trending Products</h2>
+        <p id="productsSectionSubtitle" class="text-[11px] text-slate-500 mt-0.5">تشكيلة مختارة من أفضل معدات التصوير والسينما</p>
+      </div>
+      <a href="#" id="viewAllBtn" onclick="filterByCategory('all'); return false;" class="text-xs font-bold text-yellow-600 hover:text-yellow-700 hover:underline flex items-center gap-1">
+        <span>التشكيلة المختارة (5 قطع)</span>
         <i class="fa-solid fa-arrow-right text-[10px]"></i>
       </a>
     </div>
 
-    <!-- 5 Photography Products: 2 columns on mobile, 3 on tablet, 5 on desktop -->
+    <!-- ═══════════════ BRAND SELECTOR BAR (Appears when a category is selected) ═══════════════ -->
+    <div id="categoryHeaderContainer" class="hidden mb-4 sm:mb-5 bg-slate-50 border border-slate-200/80 rounded-2xl p-3 sm:p-4 transition-all duration-300">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2.5">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+          <h3 id="categoryDisplayTitle" class="text-xs sm:text-sm font-black text-slate-900 tracking-tight">الكاميرات وأنظمة السينما</h3>
+          <span id="categoryCountBadge" class="bg-white border border-slate-200 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded-full">40 موديل</span>
+        </div>
+        <p class="text-[11px] font-medium text-slate-500">اختر البراند لعرض الموديلات المتوفرة:</p>
+      </div>
+
+      <!-- Dynamic Brands Pills Row -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none" id="brandFilterContainer">
+        <!-- Rendered dynamically e.g. [الكل (All)] [Sony] [Canon] [DJI] -->
+      </div>
+    </div>
+
+    <!-- 5 Diverse Products: 2 columns on mobile, 3 on tablet, 5 on desktop -->
     <div id="dynamicProductGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4">
       
-      <!-- 1. Sony FX3 Cinema Line -->
+      <!-- 1. Sony FX3 Cinema Line (كاميرا) -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
-          <img src="images/camera_body.jpg" alt="Sony FX3 Cinema Line" class="max-h-full max-w-full object-contain">
+        <div onclick="openCameraSpecsBubble('CAM-001')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات">
+          <img src="images/camera_body.jpg" alt="Sony FX3 Cinema Line" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
         <div>
-          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Sony FX3 Cinema Line</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$3,899</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">كاميرا سينما</span>
+          <h4 onclick="openCameraSpecsBubble('CAM-001')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FX3 Cinema Line">Sony FX3 Cinema Line</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$3,899</div>
         </div>
-        <button onclick="addToCartMock('Sony FX3 Cinema Line', 3899, 'images/camera_body.jpg', 'CAM-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+        <button onclick="addToCartMock('Sony FX3 Cinema Line', 3899, 'images/camera_body.jpg', 'CAM-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
 
-      <!-- 2. Sony Alpha 7 IV -->
+      <!-- 2. Sony FE 24-70mm f/2.8 GM II (عدسة) -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
-          <img src="images/new_camera.jpg" alt="Sony Alpha 7 IV" class="max-h-full max-w-full object-contain">
+        <div onclick="openCameraSpecsBubble('LNS-001')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات">
+          <img src="images/filter_lens.jpg" alt="Sony FE 24-70mm f/2.8 GM II" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
         <div>
-          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Sony Alpha 7 IV</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$2,499</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">عدسة احترافية</span>
+          <h4 onclick="openCameraSpecsBubble('LNS-001')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FE 24-70mm f/2.8 GM II">Sony FE 24-70mm f/2.8 GM II</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$2,299</div>
         </div>
-        <button onclick="addToCartMock('Sony Alpha 7 IV', 2499, 'images/new_camera.jpg', 'CAM-002')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+        <button onclick="addToCartMock('Sony FE 24-70mm f/2.8 GM II', 2299, 'images/filter_lens.jpg', 'LNS-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
 
-      <!-- 3. Canon EOS R5 Mark II -->
+      <!-- 3. Manfrotto Pro Carbon Tripod (ستاند) -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
-          <img src="images/hero_camera.jpg" alt="Canon EOS R5 Mark II" class="max-h-full max-w-full object-contain">
+        <div onclick="openCameraSpecsBubble('STN-001')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات">
+          <img src="images/tripod_stand.jpg" alt="Manfrotto Pro Carbon Tripod" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
         <div>
-          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Canon EOS R5 Mark II</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$4,299</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">ستاند وترايبود</span>
+          <h4 onclick="openCameraSpecsBubble('STN-001')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Manfrotto Pro Carbon Tripod">Manfrotto Pro Carbon Tripod</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$349</div>
         </div>
-        <button onclick="addToCartMock('Canon EOS R5 Mark II', 4299, 'images/hero_camera.jpg', 'CAM-003')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+        <button onclick="addToCartMock('Manfrotto Pro Carbon Tripod', 349, 'images/tripod_stand.jpg', 'STN-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
 
-      <!-- 4. DJI RS 3 Pro Combo -->
+      <!-- 4. Aputure Amaran 200d S (إضاءة) -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
-          <img src="images/gimbal_stab.jpg" alt="DJI RS 3 Pro Combo" class="max-h-full max-w-full object-contain">
+        <div onclick="openCameraSpecsBubble('LGT-001')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات">
+          <img src="images/flash_light.jpg" alt="Aputure Amaran 200d S" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
         <div>
-          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">DJI RS 3 Pro Combo</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$869</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">إضاءة استوديو</span>
+          <h4 onclick="openCameraSpecsBubble('LGT-001')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Aputure Amaran 200d S">Aputure Amaran 200d S</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$299</div>
         </div>
-        <button onclick="addToCartMock('DJI RS 3 Pro Combo', 869, 'images/gimbal_stab.jpg', 'GMB-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+        <button onclick="addToCartMock('Aputure Amaran 200d S', 299, 'images/flash_light.jpg', 'LGT-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
 
-      <!-- 5. Aputure Amaran 200d S -->
+      <!-- 5. DJI RS 3 Pro Combo (جمبل / مانع اهتزاز) -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group col-span-2 sm:col-span-1">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg">
-          <img src="images/flash_light.jpg" alt="Aputure Amaran 200d S" class="max-h-full max-w-full object-contain">
+        <div onclick="openCameraSpecsBubble('GMB-001')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات">
+          <img src="images/gimbal_stab.jpg" alt="DJI RS 3 Pro Combo" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
         <div>
-          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Aputure Amaran 200d S</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$299</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5">مانع اهتزاز وجمبل</span>
+          <h4 onclick="openCameraSpecsBubble('GMB-001')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="DJI RS 3 Pro Combo">DJI RS 3 Pro Combo</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$869</div>
         </div>
-        <button onclick="addToCartMock('Aputure Amaran 200d S', 299, 'images/flash_light.jpg', 'LGT-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
+        <button onclick="addToCartMock('DJI RS 3 Pro Combo', 869, 'images/gimbal_stab.jpg', 'GMB-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
@@ -2046,27 +2072,151 @@
 
     // ═══════════════ DYNAMIC PRODUCTS RENDERING & SYNC ═══════════════
     let currentCategory = 'all';
+    let currentBrand = 'all';
 
-    function renderStorefrontProducts(cat = 'all', searchTerm = '') {
+    const CATEGORY_META = {
+      all: { ar: 'Trending Products', sub: 'تشكيلة مختارة من أفضل معدات التصوير والسينما' },
+      cameras: { ar: 'الكاميرات وأنظمة السينما', sub: 'اختر الماركة لتصفح كاميرات السينما والميرورليس' },
+      filters: { ar: 'العدسات وفلاتر التصوير', sub: 'اختر الماركة لتصفح العدسات الاحترافية وفلاتر ND' },
+      lighting: { ar: 'إضاءات وسوفت بوكس الاستوديو', sub: 'اختر الماركة لتصفح أضواء الاستوديو المستمرة والإضاءة المحمولة' },
+      stands: { ar: 'الستاندات والحوامل الثلاثية', sub: 'اختر الماركة لتصفح ستاندات الإضاءة وترايبود الكاميرا' },
+      gimbals: { ar: 'مانعات الاهتزاز والجمبل', sub: 'اختر الماركة لتصفح مثبتات الحركة والـ Gimbals' },
+      cages: { ar: 'أقفاص الكاميرا والمقابض (Cages & Rigs)', sub: 'اختر الماركة لتصفح أقفاص الحماية وإكسسوارات التثبيت' },
+      audio: { ar: 'مايكات وأنظمة الصوت اللاسلكية', sub: 'اختر الماركة لتصفح مايكات الشوت جن والميكروفونات اللاسلكية' },
+      monitors: { ar: 'شاشات المراقبة والتليبرومبتر', sub: 'اختر الماركة لتصفح شاشات الاستوديو الميدانية' },
+      chargers_batteries: { ar: 'البطاريات والشواحن ومحطات الطاقة', sub: 'اختر الماركة لتصفح بطاريات V-Mount والشواحن' },
+      bags: { ar: 'حقائب الكاميرات ومعدات الحماية', sub: 'اختر الماركة لتصفح حقائب الظهر وحقائب النقل الصلبة' },
+      deals: { ar: 'عروض وتخفيضات حصرية', sub: 'معدات مميزة بأسعار وتخفيضات خاصة' }
+    };
+
+    // 5 diverse products for initial view (Camera, Lens, Stand, Light, Gimbal)
+    const FEATURED_5_PRODUCTS = [
+      {
+        id: 'CAM-001',
+        name: 'Sony FX3 Cinema Line',
+        category: 'cameras',
+        brand: 'Sony',
+        badge: 'كاميرا سينما',
+        price: 3899,
+        image: 'images/camera_body.jpg'
+      },
+      {
+        id: 'LNS-001',
+        name: 'Sony FE 24-70mm f/2.8 GM II',
+        category: 'filters',
+        brand: 'Sony',
+        badge: 'عدسة احترافية',
+        price: 2299,
+        image: 'images/filter_lens.jpg'
+      },
+      {
+        id: 'STN-001',
+        name: 'Manfrotto Pro Carbon Tripod',
+        category: 'stands',
+        brand: 'Manfrotto',
+        badge: 'ستاند وترايبود',
+        price: 349,
+        image: 'images/tripod_stand.jpg'
+      },
+      {
+        id: 'LGT-001',
+        name: 'Aputure Amaran 200d S',
+        category: 'lighting',
+        brand: 'Aputure',
+        badge: 'إضاءة استوديو',
+        price: 299,
+        image: 'images/flash_light.jpg'
+      },
+      {
+        id: 'GMB-001',
+        name: 'DJI RS 3 Pro Combo',
+        category: 'gimbals',
+        brand: 'DJI',
+        badge: 'مانع اهتزاز وجمبل',
+        price: 869,
+        image: 'images/gimbal_stab.jpg'
+      }
+    ];
+
+    function renderStorefrontProductCard(product) {
+      const safeName = (product.name || '').replace(/'/g, "\\'");
+      const safeImg = product.image || 'images/camera_body.jpg';
+      const categoryBadge = product.badge || product.brand || '';
+
+      return `
+        <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+          <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <div 
+            onclick="openCameraSpecsBubble('${product.id}')"
+            class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" 
+            title="انقر لعرض المواصفات"
+          >
+            <img src="${safeImg}" alt="${product.name}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+          </div>
+          <div>
+            ${categoryBadge ? `<span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 line-clamp-1">${categoryBadge}</span>` : ''}
+            <h4 
+              onclick="openCameraSpecsBubble('${product.id}')"
+              class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" 
+              title="${product.name}"
+            >
+              ${product.name}
+            </h4>
+            <div class="flex items-baseline gap-1.5 mt-1 font-en">
+              <span class="text-xs sm:text-sm font-bold text-slate-900">$${(product.price || 0).toLocaleString()}</span>
+              ${product.oldPrice ? `<span class="text-[10px] text-slate-400 line-through">$${product.oldPrice.toLocaleString()}</span>` : ''}
+            </div>
+          </div>
+          <button onclick="addToCartMock('${safeName}', ${product.price}, '${safeImg}', '${product.id}')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+            Add to Cart
+          </button>
+        </div>
+      `;
+    }
+
+    function renderStorefrontProducts(cat = 'all', brand = 'all', searchTerm = '') {
       currentCategory = cat;
+      currentBrand = brand;
+
       const grid = document.getElementById('dynamicProductGrid');
+      const headerBox = document.getElementById('categoryHeaderContainer');
+      const brandContainer = document.getElementById('brandFilterContainer');
+      const titleEl = document.getElementById('productsSectionTitle');
+      const subEl = document.getElementById('productsSectionSubtitle');
+      const catTitleEl = document.getElementById('categoryDisplayTitle');
+      const catCountEl = document.getElementById('categoryCountBadge');
       if (!grid) return;
 
-      let products = storeDB.getProducts();
+      // 1. الوضع الافتراضي عند فتح الموقع (5 قطع متنوعة بدون أوفر لود)
+      if (cat === 'all' && (!searchTerm || searchTerm.trim() === '')) {
+        if (headerBox) headerBox.classList.add('hidden');
+        if (titleEl) titleEl.textContent = 'Trending Products';
+        if (subEl) subEl.textContent = 'تشكيلة مختارة من أفضل معدات التصوير والسينما';
 
-      if (cat && cat !== 'all') {
-        if (cat === 'deals') {
-          products = products.filter(p => p.oldPrice || (p.badge && (p.badge.includes('خصم') || p.badge.includes('وفر') || p.badge.includes('الأكثر') || p.badge.includes('عرض'))));
-        } else if (cat === 'gimbals') {
-          products = products.filter(p => p.category === 'gimbals' || p.category === 'stabilizers');
-        } else {
-          products = products.filter(p => p.category === cat);
-        }
+        grid.innerHTML = FEATURED_5_PRODUCTS.map(renderStorefrontProductCard).join('');
+        return;
       }
 
+      // 2. عند اختيار قسم أو البحث
+      let allProducts = storeDB.getProducts();
+      let catProducts = [];
+
+      if (cat === 'deals') {
+        catProducts = allProducts.filter(p => p.oldPrice || (p.badge && (p.badge.includes('خصم') || p.badge.includes('وفر') || p.badge.includes('الأكثر') || p.badge.includes('عرض'))));
+      } else if (cat === 'gimbals') {
+        catProducts = allProducts.filter(p => p.category === 'gimbals' || p.category === 'stabilizers');
+      } else if (cat !== 'all') {
+        catProducts = allProducts.filter(p => p.category === cat);
+      } else {
+        catProducts = allProducts;
+      }
+
+      // فلترة بالبحث إذا وجد
       if (searchTerm) {
         const s = searchTerm.toLowerCase();
-        products = products.filter(p => 
+        catProducts = catProducts.filter(p => 
           (p.name || '').toLowerCase().includes(s) || 
           (p.nameEn || '').toLowerCase().includes(s) || 
           (p.description || '').toLowerCase().includes(s) ||
@@ -2074,87 +2224,83 @@
         );
       }
 
-      if (products.length === 0) {
+      // استخراج البراندات المتاحة لهذا القسم
+      const brandsSet = new Set();
+      catProducts.forEach(p => {
+        if (p.brand && p.brand.trim()) brandsSet.add(p.brand.trim());
+      });
+      const availableBrands = Array.from(brandsSet).sort();
+
+      // إظهار شريط البراندات إذا كان هناك قسم محدد
+      if (headerBox) {
+        headerBox.classList.remove('hidden');
+        const meta = CATEGORY_META[cat] || { ar: cat, sub: 'تصفح المعدات حسب البراند' };
+        if (catTitleEl) catTitleEl.textContent = meta.ar;
+        if (catCountEl) catCountEl.textContent = `${catProducts.length} منتج`;
+        if (subEl) subEl.textContent = meta.sub;
+      }
+
+      // توليد أزرار البراندات (Pills)
+      if (brandContainer) {
+        let brandPillsHtml = `
+          <button 
+            onclick="filterByBrand('all')" 
+            class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition shrink-0 cursor-pointer ${
+              currentBrand === 'all' 
+                ? 'bg-slate-900 text-yellow-400 shadow-sm border border-slate-900' 
+                : 'bg-white text-slate-700 border border-slate-200 hover:border-yellow-400 hover:text-slate-900'
+            }"
+          >
+            كل البراندات (${catProducts.length})
+          </button>
+        `;
+
+        availableBrands.forEach(b => {
+          const count = catProducts.filter(p => p.brand === b).length;
+          const isActive = currentBrand === b;
+          brandPillsHtml += `
+            <button 
+              onclick="filterByBrand('${b.replace(/'/g, "\\'")}')" 
+              class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition shrink-0 cursor-pointer flex items-center gap-1.5 ${
+                isActive 
+                  ? 'bg-slate-900 text-yellow-400 shadow-sm border border-slate-900' 
+                  : 'bg-white text-slate-700 border border-slate-200 hover:border-yellow-400 hover:text-slate-900'
+              }"
+            >
+              <span>${b}</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? 'bg-yellow-400/20 text-yellow-300' : 'bg-slate-100 text-slate-500'}">${count}</span>
+            </button>
+          `;
+        });
+
+        brandContainer.innerHTML = brandPillsHtml;
+      }
+
+      // تصفية المنتجات حسب البراند المختار
+      let finalProducts = catProducts;
+      if (currentBrand && currentBrand !== 'all') {
+        finalProducts = catProducts.filter(p => p.brand === currentBrand);
+      }
+
+      if (finalProducts.length === 0) {
         grid.innerHTML = `
           <div class="col-span-full py-16 text-center text-slate-400 bg-white rounded-2xl border border-dashed border-slate-200 p-8">
             <i class="fa-solid fa-camera-rotate text-3xl mb-2 text-slate-300"></i>
-            <p class="text-xs font-bold text-slate-700">لا توجد معدات في هذا القسم حالياً.</p>
-            <button onclick="filterByCategory('all')" class="mt-3 bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl transition cursor-pointer">
-              عرض جميع المعدات
+            <p class="text-xs font-bold text-slate-700">لا توجد معدات في هذا البراند حالياً.</p>
+            <button onclick="filterByBrand('all')" class="mt-3 bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl transition cursor-pointer">
+              عرض كل براندات القسم
             </button>
           </div>
         `;
         return;
       }
 
-      grid.innerHTML = products.map(product => {
-        const safeName = (product.name || '').replace(/'/g, "\\'");
-        const safeImg = product.image || 'images/camera_body.jpg';
-        const hasSpecs = product.specs && Object.keys(product.specs).length > 0;
-        const badgeText = product.badge || product.brand || 'TOP CAM';
+      grid.innerHTML = finalProducts.map(renderStorefrontProductCard).join('');
+    }
 
-        return `
-          <div 
-            onclick="openCameraSpecsBubble('${product.id}')"
-            class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3 flex flex-col justify-between hover:shadow-lg hover:border-yellow-400/80 transition-all duration-300 relative group cursor-pointer"
-          >
-            <!-- Badge & Wishlist Row -->
-            <div class="flex items-center justify-between mb-1">
-              <span class="bg-yellow-400 text-slate-950 text-[9px] font-black px-1.5 py-0.5 rounded font-mono uppercase tracking-wide">
-                ${badgeText}
-              </span>
-              <button 
-                onclick="event.stopPropagation(); toggleWish(this)" 
-                class="text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1"
-                title="إضافة للمفضلة"
-              >
-                <i class="fa-regular fa-heart"></i>
-              </button>
-            </div>
-
-            <!-- Product Studio Image -->
-            <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/70 rounded-lg overflow-hidden group-hover:bg-slate-100/60 transition">
-              <img 
-                src="${safeImg}" 
-                alt="${product.name}" 
-                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-              >
-            </div>
-
-            <!-- Product Details -->
-            <div>
-              <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">${product.brand || ''}</div>
-              <h4 class="text-xs font-bold text-slate-900 line-clamp-1 group-hover:text-yellow-600 transition" title="${product.name}">
-                ${product.name}
-              </h4>
-              <div class="flex items-baseline gap-1.5 mt-1 font-en">
-                <span class="text-xs sm:text-sm font-black text-slate-900">$${(product.price || 0).toLocaleString()}</span>
-                ${product.oldPrice ? `<span class="text-[10px] text-slate-400 line-through">$${product.oldPrice.toLocaleString()}</span>` : ''}
-              </div>
-            </div>
-
-            <!-- Action Buttons Row: Specs Bubble & Add to Cart -->
-            <div class="mt-2.5 flex items-center gap-1.5">
-              <button 
-                onclick="event.stopPropagation(); openCameraSpecsBubble('${product.id}')" 
-                class="flex-1 bg-slate-100 hover:bg-yellow-100/80 hover:text-slate-900 text-slate-700 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 cursor-pointer"
-                title="عرض مواصفات الكاميرا والمعدات"
-              >
-                <i class="fa-solid fa-sliders text-[9px] text-yellow-600"></i>
-                <span>المواصفات</span>
-              </button>
-              <button 
-                onclick="event.stopPropagation(); addToCartMock('${safeName}', ${product.price}, '${safeImg}', '${product.id}')" 
-                class="w-8 h-8 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold flex items-center justify-center active:scale-95 transition shadow-2xs shrink-0 cursor-pointer"
-                title="إضافة للسلة"
-              >
-                <i class="fa-solid fa-cart-plus text-xs"></i>
-              </button>
-            </div>
-          </div>
-        `;
-      }).join('');
+    function filterByBrand(brand) {
+      currentBrand = brand || 'all';
+      renderStorefrontProducts(currentCategory, currentBrand);
     }
 
     // ═══════════════ CAMERA SPECS BUBBLE POPUP LOGIC ═══════════════
@@ -2287,17 +2433,17 @@
     function handleSearch(q) {
       if (!q || q.trim() === '') {
         if (currentCategory === 'all') {
-          // If search cleared and on all, reload or render
           renderStorefrontProducts('all');
           return;
         }
       }
-      renderStorefrontProducts(currentCategory, q);
+      renderStorefrontProducts(currentCategory, 'all', q);
     }
 
     function filterByCategory(cat) {
       currentCategory = cat || 'all';
-      renderStorefrontProducts(currentCategory);
+      currentBrand = 'all';
+      renderStorefrontProducts(currentCategory, 'all');
       scrollToProducts();
     }
 
@@ -2487,7 +2633,7 @@
 
       // مزامنة فورية عند أي تعديل بالمنتجات أو البانرات
       window.addEventListener('products_updated', () => {
-        renderStorefrontProducts(currentCategory);
+        renderStorefrontProducts(currentCategory, currentBrand);
       });
       window.addEventListener('banners_updated', () => initStorefrontDynamicFeatures());
       window.addEventListener('promo_popup_updated', () => initStorefrontDynamicFeatures());
