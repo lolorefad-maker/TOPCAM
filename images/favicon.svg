@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="favApertureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF275"/>
+      <stop offset="50%" stop-color="#FFED00"/>
+      <stop offset="100%" stop-color="#E5A93B"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="512" height="512" rx="128" fill="#0B0F19"/>
+  <!-- Gold Outer Camera Lens Rim -->
+  <circle cx="256" cy="256" r="216" fill="#141824" stroke="url(#favApertureGrad)" stroke-width="14"/>
+  <circle cx="256" cy="256" r="185" fill="#000000" stroke="#334155" stroke-width="4"/>
+  <!-- TOP CAM Official Aperture Iris Blades -->
+  <g transform="matrix(0.48 0 0 -0.48 -748 1582)">
+    <path d='M 2136.01 2932.11 L 1761.64 2932.11 C 1804.74 3012.66 1880.84 3071.82 1964.49 3105.88 Z ' fill='url(#favApertureGrad)' />
+    <path d='M 1902.01 2438.63 C 1888.79 2425.06 1800.54 2510.21 1789.24 2523.65 C 1775.28 2540.25 1731.64 2605.04 1731.94 2623.8 C 1732.14 2636.5 1895.07 2777.74 1914.75 2800.23 Z ' fill='url(#favApertureGrad)' />
+    <path d='M 2187.06 2613.04 L 2461.42 2864.08 C 2484.03 2779.47 2469.17 2691.75 2433.81 2613.04 Z ' fill='url(#favApertureGrad)' />
+    <path d='M 2258.88 3101.8 L 2248.77 2855.56 L 1999.9 3119.28 C 2088.47 3138.89 2173.99 3134.2 2258.88 3101.8 ' fill='url(#favApertureGrad)' />
+    <path d='M 1936.1 2659.84 C 2019.96 2581.37 2099.15 2498.12 2178.57 2415.22 C 2183.28 2411.84 2183.91 2409.76 2178.64 2406.63 C 2169.1 2400.99 2109.47 2392.6 2095.55 2391.86 C 2041.32 2388.98 1979.5 2400.39 1929.5 2421.42 Z ' fill='url(#favApertureGrad)' />
+    <path d='M 2267.92 2732.18 L 2291.21 3085.2 C 2362.71 3042.16 2424.53 2977.63 2449.95 2896.52 Z ' fill='url(#favApertureGrad)' />
+    <path d='M 1991.37 2906.59 L 1721.26 2659.8 C 1697.18 2741.56 1712.9 2829.33 1744.62 2906.59 Z ' fill='url(#favApertureGrad)' />
+    <path d='M 2113.6 2590.41 C 2114.95 2589.8 2113.21 2583.9 2120.84 2582.93 C 2206.96 2571.89 2320.11 2594.79 2406.24 2583.27 C 2411.08 2582.62 2414.86 2584.9 2412.48 2576.96 C 2407.96 2561.9 2356.52 2506.6 2342.23 2494.04 C 2322.41 2476.6 2242.18 2421.07 2218.87 2421.25 C 2214 2421.28 2209.64 2422.21 2205.97 2425.63 L 2051.01 2585.39 C 2050.83 2594.16 2106.13 2593.77 2113.6 2590.41 ' fill='url(#favApertureGrad)' />
+  </g>
+  <!-- Small Center Shutter Pin -->
+  <circle cx="256" cy="256" r="14" fill="#000000" stroke="#FFED00" stroke-width="3"/>
+</svg>
