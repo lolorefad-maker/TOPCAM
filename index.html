@@ -472,10 +472,18 @@
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#f3e8ff] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
           <img src="images/filter_lens.jpg" alt="Filters" class="w-full h-full object-contain rounded-full">
         </div>
-        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Filters</span>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Lenses</span>
       </div>
 
-      <!-- 3. Studio Lighting -->
+      <!-- 3. Audio & Microphones -->
+      <div onclick="filterByCategory('audio')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#fef3c7] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/camera_dials.jpg" alt="Audio" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Audio</span>
+      </div>
+
+      <!-- 4. Studio Lighting -->
       <div onclick="filterByCategory('lighting')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#e0f2fe] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
           <img src="images/flash_light.jpg" alt="Lighting" class="w-full h-full object-contain rounded-full">
@@ -483,7 +491,7 @@
         <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Lighting</span>
       </div>
 
-      <!-- 4. Gimbals -->
+      <!-- 5. Gimbals -->
       <div onclick="filterByCategory('gimbals')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#e2e8f0] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
           <img src="images/gimbal_stab.jpg" alt="Gimbals" class="w-full h-full object-contain rounded-full">
@@ -491,7 +499,7 @@
         <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Gimbals</span>
       </div>
 
-      <!-- 5. Tripods & Stands -->
+      <!-- 6. Tripods & Stands -->
       <div onclick="filterByCategory('stands')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#dcfce7] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
           <img src="images/tripod_stand.jpg" alt="Tripods" class="w-full h-full object-contain rounded-full">
@@ -499,7 +507,7 @@
         <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Tripods</span>
       </div>
 
-      <!-- 6. Cages & Rigs -->
+      <!-- 7. Cages & Rigs -->
       <div onclick="filterByCategory('cages')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#ccfbf1] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
           <img src="images/camera_cage.jpg" alt="Cages" class="w-full h-full object-contain rounded-full">
@@ -507,15 +515,23 @@
         <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Cages</span>
       </div>
 
-      <!-- 7. Batteries & Power -->
-      <div onclick="filterByCategory('batteries')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+      <!-- 8. Monitors & Teleprompters -->
+      <div onclick="filterByCategory('monitors')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#f1f5f9] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/camera_dials.jpg" alt="Monitors" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Monitors</span>
+      </div>
+
+      <!-- 9. Batteries & Power -->
+      <div onclick="filterByCategory('chargers_batteries')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#ede9fe] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
           <img src="images/vmount_battery.jpg" alt="Batteries" class="w-full h-full object-contain rounded-full">
         </div>
         <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Batteries</span>
       </div>
 
-      <!-- 8. Bags & Straps -->
+      <!-- 10. Bags & Straps -->
       <div onclick="filterByCategory('bags')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#fce7f3] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
           <img src="images/camera_bag.jpg" alt="Bags" class="w-full h-full object-contain rounded-full">
@@ -1599,6 +1615,104 @@
     </div>
   </div>
 
+  <!-- ═══════════════ CAMERA SPECS BUBBLE MODAL (Bubble / Popup) ═══════════════ -->
+  <div id="cameraSpecsBubbleModal" onclick="if(event.target === this) closeCameraSpecsBubble()" class="fixed inset-0 bg-slate-950/75 backdrop-blur-md z-50 hidden items-center justify-center p-3 sm:p-5 transition-all duration-300">
+    <div id="cameraSpecsBubbleBox" class="bg-white rounded-3xl max-w-2xl w-full border border-slate-200/90 shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300 max-h-[92vh] flex flex-col text-right">
+      
+      <!-- Modal Header Bar -->
+      <div class="px-5 py-3.5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80 shrink-0">
+        <div class="flex items-center gap-2">
+          <span id="bubbleBrandBadge" class="bg-yellow-400 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-lg font-mono uppercase tracking-wider">SONY</span>
+          <span id="bubbleCategoryBadge" class="bg-slate-200 text-slate-700 text-[10px] font-bold px-2 py-0.5 rounded-md font-en">Cameras</span>
+          <span class="text-[10px] text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md hidden sm:inline-flex items-center gap-1">
+            <i class="fa-solid fa-shield-check text-emerald-600"></i> كفالة رسمية سنتين
+          </span>
+        </div>
+        <button onclick="closeCameraSpecsBubble()" class="w-8 h-8 rounded-full bg-white hover:bg-slate-200 text-slate-500 hover:text-slate-800 border border-slate-200 flex items-center justify-center text-sm transition shadow-2xs cursor-pointer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Scrollable Modal Body -->
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-5 flex-1">
+        
+        <!-- Top Hero Section: Photo & Primary Info -->
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+          
+          <!-- Image Box with Clean Studio Look matching Card -->
+          <div class="sm:col-span-5 bg-gradient-to-b from-slate-50 to-slate-100/70 rounded-2xl border border-slate-200/80 p-4 flex items-center justify-center min-h-[190px] relative overflow-hidden group">
+            <img id="bubbleCameraImg" src="images/camera_body.jpg" alt="Camera" class="max-h-44 max-w-full object-contain transform group-hover:scale-105 transition duration-500">
+            <span class="absolute bottom-2 right-2 text-[9px] font-mono text-slate-400 bg-white/80 px-1.5 py-0.5 rounded border border-slate-100">TOP CAM STUDIO</span>
+          </div>
+
+          <!-- Product Main Info & Price Block -->
+          <div class="sm:col-span-7 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 id="bubbleCameraTitle" class="text-base sm:text-lg font-black text-slate-900 leading-snug">Sony A7 IV</h3>
+              <p id="bubbleCameraSub" class="text-xs text-slate-500 mt-1 line-clamp-2">كاميرا سينمائية وميرورليس باحترافية كاملة مع كفالة الوكيل الرسمي.</p>
+            </div>
+
+            <!-- Price & Discount -->
+            <div class="bg-slate-50 rounded-xl p-3 border border-slate-200/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-slate-400 block font-bold">السعر النهائي بعد الخصم</span>
+                <div class="flex items-baseline gap-2 font-en">
+                  <span id="bubbleFinalPrice" class="text-xl sm:text-2xl font-black text-slate-900">$1,400</span>
+                  <span id="bubbleOldPrice" class="text-xs text-slate-400 line-through">$1,450</span>
+                </div>
+              </div>
+              <span id="bubbleDiscountPill" class="bg-emerald-500 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg shadow-xs font-en">خصم $50</span>
+            </div>
+
+            <div class="flex items-center gap-2 text-[11px] text-slate-600">
+              <span class="inline-flex items-center gap-1.5 font-bold text-emerald-600">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                متوفر في المستودع
+              </span>
+              <span class="text-slate-300">•</span>
+              <span>توصيل سريع مجاني في الأردن</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specifications Section (المواصفات التقنية الرسمية) -->
+        <div class="pt-2">
+          <div class="flex items-center justify-between mb-3 border-b border-slate-100 pb-2">
+            <h4 class="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-sliders text-yellow-500"></i>
+              <span>المواصفات التقنية والمميزات الرسمية</span>
+            </h4>
+            <span class="text-[10px] text-slate-400 font-mono">TECHNICAL SPECS</span>
+          </div>
+
+          <!-- Specs Bubbles Grid -->
+          <div id="bubbleSpecsGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
+            <!-- Dynamically populated spec items -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Bottom Actions Bar -->
+      <div class="px-5 py-3.5 border-t border-slate-100 bg-slate-50/70 flex flex-col sm:flex-row items-center justify-between gap-2.5 shrink-0">
+        <div class="text-[11px] text-slate-500 hidden sm:block">
+          استفسر أو اطلب مباشرة مع خدمة العملاء
+        </div>
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <button id="bubbleWhatsAppBtn" onclick="orderCurrentViaWhatsApp()" class="flex-1 sm:flex-none bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>طلب عبر واتساب</span>
+          </button>
+          <button id="bubbleAddToCartBtn" onclick="addCurrentFromBubbleToCart()" class="flex-1 sm:flex-none bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold text-xs px-5 py-2.5 rounded-xl transition flex items-center justify-center gap-1.5 shadow-sm active:scale-95 cursor-pointer">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>إضافة للسلة</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script src="js/data.js"></script>
   <script src="js/store.js"></script>
   <script>
@@ -1942,7 +2056,9 @@
 
       if (cat && cat !== 'all') {
         if (cat === 'deals') {
-          products = products.filter(p => p.oldPrice || (p.badge && (p.badge.includes('خصم') || p.badge.includes('الأكثر') || p.badge.includes('عرض'))));
+          products = products.filter(p => p.oldPrice || (p.badge && (p.badge.includes('خصم') || p.badge.includes('وفر') || p.badge.includes('الأكثر') || p.badge.includes('عرض'))));
+        } else if (cat === 'gimbals') {
+          products = products.filter(p => p.category === 'gimbals' || p.category === 'stabilizers');
         } else {
           products = products.filter(p => p.category === cat);
         }
@@ -1960,7 +2076,7 @@
 
       if (products.length === 0) {
         grid.innerHTML = `
-          <div class="col-span-full py-16 text-center text-slate-400">
+          <div class="col-span-full py-16 text-center text-slate-400 bg-white rounded-2xl border border-dashed border-slate-200 p-8">
             <i class="fa-solid fa-camera-rotate text-3xl mb-2 text-slate-300"></i>
             <p class="text-xs font-bold text-slate-700">لا توجد معدات في هذا القسم حالياً.</p>
             <button onclick="filterByCategory('all')" class="mt-3 bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl transition cursor-pointer">
@@ -1974,25 +2090,197 @@
       grid.innerHTML = products.map(product => {
         const safeName = (product.name || '').replace(/'/g, "\\'");
         const safeImg = product.image || 'images/camera_body.jpg';
+        const hasSpecs = product.specs && Object.keys(product.specs).length > 0;
+        const badgeText = product.badge || product.brand || 'TOP CAM';
 
         return `
-          <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
-            <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
-              <i class="fa-regular fa-heart"></i>
-            </button>
-            <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden">
-              <img src="${safeImg}" alt="${product.name}" class="max-h-full max-w-full object-contain">
+          <div 
+            onclick="openCameraSpecsBubble('${product.id}')"
+            class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3 flex flex-col justify-between hover:shadow-lg hover:border-yellow-400/80 transition-all duration-300 relative group cursor-pointer"
+          >
+            <!-- Badge & Wishlist Row -->
+            <div class="flex items-center justify-between mb-1">
+              <span class="bg-yellow-400 text-slate-950 text-[9px] font-black px-1.5 py-0.5 rounded font-mono uppercase tracking-wide">
+                ${badgeText}
+              </span>
+              <button 
+                onclick="event.stopPropagation(); toggleWish(this)" 
+                class="text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1"
+                title="إضافة للمفضلة"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
             </div>
+
+            <!-- Product Studio Image -->
+            <div class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/70 rounded-lg overflow-hidden group-hover:bg-slate-100/60 transition">
+              <img 
+                src="${safeImg}" 
+                alt="${product.name}" 
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              >
+            </div>
+
+            <!-- Product Details -->
             <div>
-              <h4 class="text-xs font-bold text-slate-900 line-clamp-1">${product.name}</h4>
-              <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$${(product.price || 0).toLocaleString()}</div>
+              <div class="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">${product.brand || ''}</div>
+              <h4 class="text-xs font-bold text-slate-900 line-clamp-1 group-hover:text-yellow-600 transition" title="${product.name}">
+                ${product.name}
+              </h4>
+              <div class="flex items-baseline gap-1.5 mt-1 font-en">
+                <span class="text-xs sm:text-sm font-black text-slate-900">$${(product.price || 0).toLocaleString()}</span>
+                ${product.oldPrice ? `<span class="text-[10px] text-slate-400 line-through">$${product.oldPrice.toLocaleString()}</span>` : ''}
+              </div>
             </div>
-            <button onclick="addToCartMock('${safeName}', ${product.price}, '${safeImg}', '${product.id}')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
-              Add to Cart
-            </button>
+
+            <!-- Action Buttons Row: Specs Bubble & Add to Cart -->
+            <div class="mt-2.5 flex items-center gap-1.5">
+              <button 
+                onclick="event.stopPropagation(); openCameraSpecsBubble('${product.id}')" 
+                class="flex-1 bg-slate-100 hover:bg-yellow-100/80 hover:text-slate-900 text-slate-700 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 cursor-pointer"
+                title="عرض مواصفات الكاميرا والمعدات"
+              >
+                <i class="fa-solid fa-sliders text-[9px] text-yellow-600"></i>
+                <span>المواصفات</span>
+              </button>
+              <button 
+                onclick="event.stopPropagation(); addToCartMock('${safeName}', ${product.price}, '${safeImg}', '${product.id}')" 
+                class="w-8 h-8 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold flex items-center justify-center active:scale-95 transition shadow-2xs shrink-0 cursor-pointer"
+                title="إضافة للسلة"
+              >
+                <i class="fa-solid fa-cart-plus text-xs"></i>
+              </button>
+            </div>
           </div>
         `;
       }).join('');
+    }
+
+    // ═══════════════ CAMERA SPECS BUBBLE POPUP LOGIC ═══════════════
+    let currentBubbleProduct = null;
+
+    function openCameraSpecsBubble(productId) {
+      const product = storeDB.getProductById(productId) || (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS.find(p => p.id === productId) : null);
+      if (!product) return;
+      currentBubbleProduct = product;
+
+      const modal = document.getElementById('cameraSpecsBubbleModal');
+      const box = document.getElementById('cameraSpecsBubbleBox');
+      if (!modal || !box) return;
+
+      // Populate Main Product Elements
+      document.getElementById('bubbleBrandBadge').textContent = (product.brand || 'TOP CAM').toUpperCase();
+      document.getElementById('bubbleCategoryBadge').textContent = product.category || 'Gear';
+      document.getElementById('bubbleCameraImg').src = product.image || 'images/camera_body.jpg';
+      document.getElementById('bubbleCameraTitle').textContent = product.name;
+      document.getElementById('bubbleCameraSub').textContent = product.description || product.nameEn || '';
+      document.getElementById('bubbleFinalPrice').textContent = '$' + (product.price || 0).toLocaleString();
+
+      const oldPriceEl = document.getElementById('bubbleOldPrice');
+      const discountPill = document.getElementById('bubbleDiscountPill');
+      if (product.oldPrice && product.oldPrice > product.price) {
+        oldPriceEl.textContent = '$' + product.oldPrice.toLocaleString();
+        oldPriceEl.classList.remove('hidden');
+        const diff = Math.round(product.oldPrice - product.price);
+        discountPill.textContent = 'وفر $' + diff.toLocaleString();
+        discountPill.classList.remove('hidden');
+      } else {
+        oldPriceEl.classList.add('hidden');
+        discountPill.classList.add('hidden');
+      }
+
+      // Populate Technical Specs Bubbles
+      const specsGrid = document.getElementById('bubbleSpecsGrid');
+      const specs = product.specs || {};
+      const entries = Object.entries(specs);
+
+      const iconMap = {
+        'المستشعر': 'fa-microchip',
+        'الفيديو': 'fa-film',
+        'نظام التركيز': 'fa-crosshairs',
+        'التركيز البؤري': 'fa-crosshairs',
+        'مانع الاهتزاز': 'fa-shield-halved',
+        'حساسية الضوء': 'fa-sun',
+        'المدى الديناميكي': 'fa-circle-half-stroke',
+        'سرعة الالتقاط': 'fa-bolt',
+        'المنافذ والذاكرة': 'fa-sd-card',
+        'البطارية': 'fa-battery-full',
+        'المانت': 'fa-circle-notch',
+        'الشاشة': 'fa-tv',
+        'الشاشة والمنظار': 'fa-tv',
+        'الوزن': 'fa-weight-scale',
+        'الصوت': 'fa-microphone',
+        'نظام التبريد': 'fa-fan',
+        'العدسة المرفقة': 'fa-camera',
+        'الهيكل': 'fa-cube',
+        'الضمان': 'fa-award',
+        'الكفالة': 'fa-award',
+        'النوع': 'fa-camera',
+        'التوافق': 'fa-link',
+        'المادة': 'fa-wrench',
+        'الاستخدام': 'fa-video'
+      };
+
+      if (entries.length > 0) {
+        specsGrid.innerHTML = entries.map(([key, val]) => {
+          const icon = iconMap[key] || 'fa-sliders';
+          return `
+            <div class="bg-[#f8fafc] border border-slate-200/80 rounded-xl p-2.5 sm:p-3 flex items-start gap-2.5 hover:border-yellow-400 hover:bg-white transition group">
+              <div class="w-7 h-7 rounded-lg bg-white border border-slate-200 text-slate-700 flex items-center justify-center text-xs shrink-0 group-hover:text-yellow-600 group-hover:border-yellow-300 transition shadow-2xs">
+                <i class="fa-solid ${icon}"></i>
+              </div>
+              <div class="min-w-0 flex-1">
+                <span class="text-[10px] font-bold text-slate-400 block leading-tight mb-0.5">${key}</span>
+                <span class="text-xs font-bold text-slate-900 leading-snug block font-en">${val}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        specsGrid.innerHTML = `
+          <div class="col-span-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-center text-slate-500 text-xs">
+            <i class="fa-solid fa-circle-check text-emerald-500 ml-1"></i>
+            منتج أصلي 100% بكفالة رسمية من الوكيل المعتمد في الأردن.
+          </div>
+        `;
+      }
+
+      // Display Modal with Smooth Scale Animation
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      setTimeout(() => {
+        box.classList.remove('scale-95', 'opacity-0');
+        box.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeCameraSpecsBubble() {
+      const modal = document.getElementById('cameraSpecsBubbleModal');
+      const box = document.getElementById('cameraSpecsBubbleBox');
+      if (!modal || !box) return;
+
+      box.classList.remove('scale-100', 'opacity-100');
+      box.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+        currentBubbleProduct = null;
+      }, 200);
+    }
+
+    function addCurrentFromBubbleToCart() {
+      if (currentBubbleProduct) {
+        addToCartMock(currentBubbleProduct.name, currentBubbleProduct.price, currentBubbleProduct.image, currentBubbleProduct.id);
+        closeCameraSpecsBubble();
+      }
+    }
+
+    function orderCurrentViaWhatsApp() {
+      if (!currentBubbleProduct) return;
+      const phone = '962790000000';
+      const text = `مرحباً TOP CAM، أود الاستفسار وطلب الكاميرا/المنتج:\n*${currentBubbleProduct.name}*\nالسعر النهائي: $${currentBubbleProduct.price}\nكود الصنف: ${currentBubbleProduct.id}`;
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
     }
 
     // ═══════════════ SEARCH & FILTER ═══════════════
@@ -2194,16 +2482,15 @@
 
     // تشغيل عند تحميل الصفحة
     document.addEventListener('DOMContentLoaded', () => {
-      // الاحتفاظ بالكاميرات الأصلية وتصميم الكارد المطابق لـ Recommended for You
       initStorefrontDynamicFeatures();
+      renderStorefrontProducts('all');
 
-      // مزامنة فورية عند أي تعديل بالمنتجات أو البانرات أو قسم Gear Up
+      // مزامنة فورية عند أي تعديل بالمنتجات أو البانرات
       window.addEventListener('products_updated', () => {
-        if (currentCategory !== 'all') renderStorefrontProducts(currentCategory);
+        renderStorefrontProducts(currentCategory);
       });
       window.addEventListener('banners_updated', () => initStorefrontDynamicFeatures());
       window.addEventListener('promo_popup_updated', () => initStorefrontDynamicFeatures());
-      window.addEventListener('gear_up_updated', () => initStorefrontDynamicFeatures());
     });
 
   </script>
