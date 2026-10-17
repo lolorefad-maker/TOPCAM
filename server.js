@@ -21,14 +21,22 @@ const MIME_TYPES = {
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
+  '.webm': 'video/webm',
+  '.mp4': 'video/mp4',
   '.woff2': 'font/woff2',
   '.woff': 'font/woff',
   '.ttf': 'font/ttf'
 };
 
 const server = http.createServer((req, res) => {
-  // التعامل مع مسار الصفحة الرئيسية
-  let reqPath = req.url.split('?')[0];
+  // التعامل مع مسار الصفحة الرئيسية وفك تشفير الروابط
+  let rawPath = req.url.split('?')[0];
+  let reqPath;
+  try {
+    reqPath = decodeURIComponent(rawPath);
+  } catch (e) {
+    reqPath = rawPath;
+  }
   if (reqPath === '/' || reqPath === '') {
     reqPath = '/index.html';
   }
