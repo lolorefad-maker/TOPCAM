@@ -105,7 +105,17 @@ class StoreDB {
       'BAG-001': 'images/camera_bag.jpg',
       'CAG-001': 'images/camera_cage.jpg',
       'STP-001': 'images/camera_bag.jpg',
-      'COV-001': 'images/camera_body.jpg'
+      'COV-001': 'images/camera_body.jpg',
+      'STU-001': 'images/godox_la150d_extracted.jpg',
+      'STU-002': 'images/flash_light.jpg',
+      'STU-003': 'images/cat_cage_white.jpg',
+      'STU-004': 'images/cat_tripod_white.jpg',
+      'STU-005': 'images/about_store_showroom.jpg',
+      'STU-006': 'images/about_filmmaker_set.jpg',
+      'STU-007': 'images/gear_cinema_studio.jpg',
+      'STU-008': 'images/flash_light.jpg',
+      'STU-009': 'images/tripod_stand.jpg',
+      'STU-010': 'images/slide_aputure_spotlight.jpg'
     };
     let currentProds = [];
     try {
@@ -124,6 +134,14 @@ class StoreDB {
           p.image = localImageMap[p.id];
         }
       });
+      // دمج أي منتجات جديدة أضيفت لـ INITIAL_PRODUCTS ولم تكن موجودة بعد في التخزين
+      if (typeof INITIAL_PRODUCTS !== 'undefined') {
+        INITIAL_PRODUCTS.forEach(initP => {
+          if (!currentProds.some(cp => cp.id === initP.id)) {
+            currentProds.push(initP);
+          }
+        });
+      }
     }
     localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(currentProds));
 

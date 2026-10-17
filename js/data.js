@@ -398,6 +398,217 @@ const INITIAL_PRODUCTS = [
       'الخامة': 'سيليكون ناعم عالي الكثافة مضاد للانزلاق',
       'الحماية': 'ضد الخدوش والضربات'
     }
+  },
+
+  // 12. معدات استوديو التصوير التفاعلي (Interactive Studio Setup Gear)
+  {
+    id: 'STU-001',
+    name: 'Godox Litemons LA150D Daylight LED Light',
+    nameEn: '150W Compact Daylight Studio Light',
+    category: 'lighting',
+    brand: 'Godox',
+    price: 250,
+    oldPrice: 285,
+    rating: 4.9,
+    reviewsCount: 148,
+    stock: 12,
+    badge: 'الأكثر طلباً',
+    section: 'trending',
+    image: 'images/godox_la150d_extracted.jpg',
+    description: 'إضاءة استوديو سينمائية مدمجة بقوة 150 واط بدرجة حرارة نهارية 5600K نقية، سلكية وخفيفة، متوافقة مع جميع مشتتات ومعدات البوينز Bowens Mount.',
+    specs: {
+      'القدرة': '150W Daylight LED 5600K',
+      'دقة الألوان': 'CRI 96+ / TLCI 97+',
+      'القاعدة': 'Bowens S-Mount قياسية'
+    }
+  },
+  {
+    id: 'STU-002',
+    name: 'Godox QR-P90 Parabolic Softbox 90cm',
+    nameEn: 'Quick-Release Deep Parabolic Softbox with Grid',
+    category: 'lighting',
+    brand: 'Godox',
+    price: 110,
+    oldPrice: 135,
+    rating: 4.9,
+    reviewsCount: 84,
+    stock: 15,
+    badge: 'سوفت بوكس عميق',
+    section: 'recommended',
+    image: 'images/flash_light.jpg',
+    description: 'سوفت بوكس بارابوليك عميق بـ 16 ضلع بنظام فتح سريع يشبه المظلة، يمنح ضوءاً ناعماً محيطياً مع شبكة قريد Honeycomb لتوجيه الضوء بدقة.',
+    specs: {
+      'القطر': '90 سم (35.4 بوصة)',
+      'العمق': 'تصميم بارابوليك عميق 16 ضلع',
+      'الملحقات': 'مشتت داخلي وخارجي + شبكة قريد'
+    }
+  },
+  {
+    id: 'STU-003',
+    name: 'Godox S2 Speedlite Bowens Mount Bracket',
+    nameEn: 'Precision Adjustable Bowens Mount Adapter',
+    category: 'stands',
+    brand: 'Godox',
+    price: 35,
+    oldPrice: 45,
+    rating: 4.8,
+    reviewsCount: 96,
+    stock: 25,
+    badge: 'قاعدة معدنية',
+    section: 'recommended',
+    image: 'images/cat_cage_white.jpg',
+    description: 'محول وقاعدة تثبيت احترافية لتثبيت وحدات الإضاءة والفلاشات مع قاعدة بوينز Bowens S-Mount ومقبض تعديل زاوية الإمالة.',
+    specs: {
+      'المادة': 'بوليمر مقوى عالي المتانة',
+      'التوافق': 'جميع إضاءات وفلاشات Bowens'
+    }
+  },
+  {
+    id: 'STU-004',
+    name: 'Heavy-Duty 3.3m Stainless Steel C-Stand',
+    nameEn: 'Studio C-Stand with Grip Head & Boom Arm',
+    category: 'stands',
+    brand: 'TOP CAM Exclusive',
+    price: 165,
+    oldPrice: 195,
+    rating: 5.0,
+    reviewsCount: 112,
+    stock: 14,
+    badge: 'فولاذ ثقيل',
+    section: 'recommended',
+    image: 'images/cat_tripod_white.jpg',
+    description: 'ستاند استوديو سي ستاند فولاذي شديد التحمل بقاعدة سلحفاة Turtle Base قابلة للإزالة وذراع بوم لحمل أثقل وحدات الإضاءة والسوفت بوكس.',
+    specs: {
+      'الارتفاع الأقصى': '330 سم (3.3 متر)',
+      'الحمولة القصوى': 'حتى 20 كجم',
+      'المادة': 'ستانلس ستيل مطلي كروم'
+    }
+  },
+  {
+    id: 'STU-005',
+    name: 'Solid Beechwood Cinema Director Chair',
+    nameEn: 'Classic Folding Director Chair with Black Canvas',
+    category: 'stands',
+    brand: 'TOP CAM Exclusive',
+    price: 145,
+    oldPrice: 175,
+    rating: 4.9,
+    reviewsCount: 42,
+    stock: 8,
+    badge: 'راحة المخرجين',
+    section: 'recommended',
+    image: 'images/about_store_showroom.jpg',
+    description: 'كرسي المخرج السينمائي الكلاسيكي المريح القابل للطي، مصنوع من خشب الزان الصلب عالي الجودة مع قماش كانفاس متين ومسند مريح للأقدام.',
+    specs: {
+      'الخامة': 'خشب زان طبيعي صلب',
+      'القماش': 'كانفاس عالي الكثافة مقاوم للتمزق',
+      'الحمولة': 'حتى 130 كجم'
+    }
+  },
+  {
+    id: 'STU-006',
+    name: 'Magnetic Acrylic Film Clapperboard Slate',
+    nameEn: 'Professional Dry-Erase Production Clapper Slate',
+    category: 'cameras',
+    brand: 'TOP CAM Exclusive',
+    price: 35,
+    oldPrice: 45,
+    rating: 4.8,
+    reviewsCount: 88,
+    stock: 30,
+    badge: 'تصوير سينمائي',
+    section: 'recommended',
+    image: 'images/about_filmmaker_set.jpg',
+    description: 'لوح كلاكيت سينمائي للمخرجين ومديري التصوير لكتابة المشاهد واللقطات والتيك، سطح أكريليك للكتابة القابلة للمسح مع إغلاق مغناطيسي لصوت دقيق.',
+    specs: {
+      'المادة': 'أكريليك عضوي عالي الجودة',
+      'الأبعاد': '30 × 25 سم',
+      'المغناطيس': 'مغناطيس مدمج بصوت نقي'
+    }
+  },
+  {
+    id: 'STU-007',
+    name: 'Superior Seamless Studio Paper Backdrop (Grey)',
+    nameEn: 'Seamless Professional Photo Paper Roll 2.72m x 11m',
+    category: 'lighting',
+    brand: 'TOP CAM Exclusive',
+    price: 75,
+    oldPrice: 90,
+    rating: 4.9,
+    reviewsCount: 65,
+    stock: 18,
+    badge: 'خلفيات أصلية',
+    section: 'recommended',
+    image: 'images/gear_cinema_studio.jpg',
+    description: 'رول خلفية استوديو ورقية متصلة بلون رمادي حيادي مانع للانعكاسات، مثالي لتصوير الإعلانات والمنتجات والبورتريه السينمائي.',
+    specs: {
+      'الأبعاد': 'عرض 2.72 متر × طول 11 متر',
+      'اللون': 'Neutral Studio Grey رمادي حيادي',
+      'الورق': 'ثقيل غير عاكس للضوء'
+    }
+  },
+  {
+    id: 'STU-008',
+    name: 'Godox 7" Standard Studio Reflector Dish',
+    nameEn: 'Bowens Mount Studio Reflector with Honeycomb',
+    category: 'lighting',
+    brand: 'Godox',
+    price: 39,
+    oldPrice: 50,
+    rating: 4.7,
+    reviewsCount: 73,
+    stock: 22,
+    badge: 'إضاءة مركزة',
+    section: 'recommended',
+    image: 'images/flash_light.jpg',
+    description: 'عاكس إضاءة استوديو قياسي 7 بوصة مطلي بالفضة العاكسة داخلياً لتكثيف وتوجيه حزمة الضوء مع شبكة قريد لمنع التشتت.',
+    specs: {
+      'القطر': '7 بوصة (18 سم)',
+      'القاعدة': 'Bowens S-Mount',
+      'الملحقات': 'شبكة Honeycomb Grid لتوجيه الضوء'
+    }
+  },
+  {
+    id: 'STU-009',
+    name: 'Godox 280CS Air-Cushioned Studio Stand',
+    nameEn: 'Heavy-Duty Air-Cushioned Light Stand 2.8m',
+    category: 'stands',
+    brand: 'Godox',
+    price: 55,
+    oldPrice: 68,
+    rating: 4.8,
+    reviewsCount: 91,
+    stock: 20,
+    badge: 'مانع للسقوط',
+    section: 'recommended',
+    image: 'images/tripod_stand.jpg',
+    description: 'ستاند إضاءة استوديو شديد التحمل بارتفاع 2.8 متر، مزود بنظام مساعدات هوائية مدمجة لحماية الإضاءات والمعدات من الارتطام المفاجئ.',
+    specs: {
+      'الارتفاع': 'من 100 سم حتى 280 سم',
+      'نظام الأمان': 'مساعدات هوائية Air-Cushioned',
+      'الحمولة': 'حتى 8 كجم'
+    }
+  },
+  {
+    id: 'STU-010',
+    name: 'Godox TL60 Full Color RGB Tube Light',
+    nameEn: 'Wireless Cinematic RGB Tube Light Kit',
+    category: 'lighting',
+    brand: 'Godox',
+    price: 195,
+    oldPrice: 230,
+    rating: 5.0,
+    reviewsCount: 57,
+    stock: 10,
+    badge: 'ألوان سينمائية',
+    section: 'recommended',
+    image: 'images/slide_aputure_spotlight.jpg',
+    description: 'تيوب إضاءة سينمائي كامل الألوان RGB يدعم 36,000 لون مع 39 مؤثراً ضوئياً مدمجاً وبطارية ليثيوم قابلة لإعادة الشحن وتحكم بالهاتف.',
+    specs: {
+      'الطول': '75 سم',
+      'الألوان': 'RGB Full Color (HSI / RGB / CCT)',
+      'التحكم': 'تطبيق هاتف Bluetooth + DMX'
+    }
   }
 ];
 
