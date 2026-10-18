@@ -556,20 +556,20 @@
       </a>
     </div>
 
-    <!-- ═══════════════ BRAND SELECTOR BAR (Appears when a category is selected) ═══════════════ -->
-    <div id="categoryHeaderContainer" class="hidden mb-4 sm:mb-5 bg-slate-50 border border-slate-200/80 rounded-2xl p-3 sm:p-4 transition-all duration-300">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2.5">
-        <div class="flex items-center gap-2">
+    <!-- ═══════════════ BRAND SELECTOR BAR (Centered, Transparent Background) ═══════════════ -->
+    <div id="categoryHeaderContainer" class="mb-5 sm:mb-6 transition-all duration-300">
+      <div class="flex flex-col items-center justify-center text-center gap-1 mb-2.5">
+        <div class="flex items-center justify-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
           <h3 id="categoryDisplayTitle" class="text-xs sm:text-sm font-black text-slate-900 tracking-tight">الكاميرات وأنظمة السينما</h3>
-          <span id="categoryCountBadge" class="bg-white border border-slate-200 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded-full">40 موديل</span>
+          <span id="categoryCountBadge" class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2.5 py-0.5 rounded-full">40 موديل</span>
         </div>
-        <p class="text-[11px] font-medium text-slate-500">اختر البراند لعرض الموديلات المتوفرة:</p>
+        <p id="categoryFilterSubtitle" class="text-[11px] font-medium text-slate-400">اختر البراند لعرض الموديلات المتوفرة:</p>
       </div>
 
-      <!-- Dynamic Brands Pills Row -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none" id="brandFilterContainer">
-        <!-- Rendered dynamically e.g. [الكل (All)] [Sony] [Canon] [DJI] -->
+      <!-- Dynamic Brands Logos Row (Centered, 100% Transparent Background) -->
+      <div class="flex items-center justify-center flex-wrap gap-2 sm:gap-3.5 py-1" id="brandFilterContainer">
+        <!-- Rendered dynamically with real brand logos e.g. [الكل] [Canon] [Sony] [DJI] -->
       </div>
     </div>
 
@@ -2189,17 +2189,92 @@
       const catCountEl = document.getElementById('categoryCountBadge');
       if (!grid) return;
 
-      // 1. الوضع الافتراضي عند فتح الموقع (5 قطع متنوعة بدون أوفر لود)
-      if (cat === 'all' && (!searchTerm || searchTerm.trim() === '')) {
-        if (headerBox) headerBox.classList.add('hidden');
+      // Brand Logos dictionary (100% authentic vector SVGs)
+      const BRAND_LOGOS = {
+        'Sony': 'images/brands/sony.svg',
+        'Canon': 'images/brands/canon.svg',
+        'DJI': 'images/brands/dji.svg',
+        'Aputure': 'images/brands/aputure.svg',
+        'Godox': 'images/brands/godox.svg',
+        'RODE': 'images/brands/rode.svg',
+        'Rode': 'images/brands/rode.svg',
+        'SmallRig': 'images/brands/smallrig.svg',
+        'Sigma': 'images/brands/sigma.svg',
+        'Hollyland': 'images/brands/hollyland.svg',
+        'Nanlite': 'images/brands/nanlite.svg',
+        'Viltrox': 'images/brands/viltrox.svg',
+        'K&F Concept': 'images/brands/kf-concept.svg',
+        'Ulanzi': 'images/brands/ulanzi.svg',
+        'FeelWorld': 'images/brands/feelworld.svg',
+        'Colbor': 'images/brands/colbor.svg',
+        'Desview': 'images/brands/desview.svg',
+        'Lilliput': 'images/brands/lilliput.svg',
+        'Seetec': 'images/brands/seetec.svg',
+        'Lensgo': 'images/brands/lensgo.svg',
+        'Qihe': 'images/brands/qihe.svg',
+        'TOPCAM Pro': 'images/brands/topcam.svg',
+        'TOP CAM': 'images/brands/topcam.svg',
+        'Blackmagic': 'images/brands/blackmagic.svg',
+        'Fujifilm': 'images/brands/fujifilm.svg',
+        'Panasonic': 'images/brands/panasonic.svg',
+        'Leica': 'images/brands/leica.svg',
+        'Hasselblad': 'images/brands/hasselblad.svg'
+      };
+
+      // 1. الوضع الافتراضي عند فتح الموقع (5 قطع مميزة مع فلاتر البراندات العالمية الشفافة)
+      if (cat === 'all' && (!searchTerm || searchTerm.trim() === '') && currentBrand === 'all') {
+        if (headerBox) headerBox.classList.remove('hidden');
         if (titleEl) titleEl.textContent = 'Trending Products';
         if (subEl) subEl.textContent = 'تشكيلة مختارة من أفضل معدات التصوير والسينما';
+        if (catTitleEl) catTitleEl.textContent = 'تصفح حسب البراند الرسمي';
+        if (catCountEl) catCountEl.textContent = 'أصلية 100%';
 
+        const topBrands = ['Canon', 'Sony', 'DJI', 'Aputure', 'Godox', 'RODE', 'SmallRig'];
+        let brandPillsHtml = `
+          <button 
+            onclick="filterByBrand('all')" 
+            class="group relative flex flex-col items-center justify-center px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 cursor-pointer bg-transparent border border-yellow-400 bg-yellow-400/10 shadow-xs scale-105 ring-2 ring-yellow-400/30"
+            title="كل التشكيلة"
+          >
+            <div class="h-6 sm:h-7 w-20 sm:w-24 flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-shapes text-yellow-500 text-xs sm:text-sm"></i>
+              <span class="text-xs sm:text-sm font-black text-slate-900">المميزة</span>
+            </div>
+            <div class="flex items-center justify-center gap-1 mt-1 text-[10px] sm:text-[11px] font-bold text-slate-950">
+              <span class="text-[9px] px-1.5 py-0.2 rounded-full bg-yellow-400 text-slate-950 font-black">5 قطع</span>
+            </div>
+          </button>
+        `;
+
+        topBrands.forEach(b => {
+          const logoSrc = BRAND_LOGOS[b];
+          const safeB = b.replace(/'/g, "\\'");
+          brandPillsHtml += `
+            <button 
+              onclick="filterByBrand('${safeB}')" 
+              class="group relative flex flex-col items-center justify-center px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 cursor-pointer bg-transparent border border-transparent hover:border-slate-200 hover:bg-white/50 opacity-70 hover:opacity-100 hover:scale-105"
+              title="${b}"
+            >
+              <div class="h-6 sm:h-7 w-20 sm:w-24 flex items-center justify-center px-1">
+                ${logoSrc ? `
+                  <img src="${logoSrc}" alt="${b}" class="max-h-5 sm:max-h-6 max-w-full object-contain transition duration-200 group-hover:scale-105" loading="lazy">
+                ` : `
+                  <span class="text-xs font-black tracking-wider text-slate-800">${b}</span>
+                `}
+              </div>
+              <div class="flex items-center justify-center gap-1 mt-1 text-[10px] sm:text-[11px] font-bold text-slate-500 group-hover:text-slate-800 transition">
+                <span>${b}</span>
+              </div>
+            </button>
+          `;
+        });
+
+        if (brandContainer) brandContainer.innerHTML = brandPillsHtml;
         grid.innerHTML = FEATURED_5_PRODUCTS.map(renderStorefrontProductCard).join('');
         return;
       }
 
-      // 2. عند اختيار قسم أو البحث
+      // 2. عند اختيار قسم أو البحث أو اختيار براند محدد
       let allProducts = storeDB.getProducts();
       let catProducts = [];
 
@@ -2231,7 +2306,7 @@
       });
       const availableBrands = Array.from(brandsSet).sort();
 
-      // إظهار شريط البراندات إذا كان هناك قسم محدد
+      // إظهار شريط البراندات في المنتصف بخلفية شفافة
       if (headerBox) {
         headerBox.classList.remove('hidden');
         const meta = CATEGORY_META[cat] || { ar: cat, sub: 'تصفح المعدات حسب البراند' };
@@ -2240,35 +2315,60 @@
         if (subEl) subEl.textContent = meta.sub;
       }
 
-      // توليد أزرار البراندات (Pills)
+      // توليد أزرار البراندات باللوقو الحقيقي وبخلفية شفافة في المنتصف
       if (brandContainer) {
         let brandPillsHtml = `
           <button 
             onclick="filterByBrand('all')" 
-            class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition shrink-0 cursor-pointer ${
+            class="group relative flex flex-col items-center justify-center px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 cursor-pointer bg-transparent border ${
               currentBrand === 'all' 
-                ? 'bg-slate-900 text-yellow-400 shadow-sm border border-slate-900' 
-                : 'bg-white text-slate-700 border border-slate-200 hover:border-yellow-400 hover:text-slate-900'
+                ? 'border-yellow-400 bg-yellow-400/10 shadow-xs scale-105 opacity-100 ring-2 ring-yellow-400/30' 
+                : 'border-transparent hover:border-slate-200 hover:bg-white/50 opacity-70 hover:opacity-100 hover:scale-105'
             }"
+            title="كل الموديلات"
           >
-            كل البراندات (${catProducts.length})
+            <div class="h-6 sm:h-7 w-20 sm:w-24 flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-layer-group text-yellow-500 text-xs sm:text-sm"></i>
+              <span class="text-xs sm:text-sm font-black text-slate-900">الكل</span>
+            </div>
+            <div class="flex items-center justify-center gap-1 mt-1 text-[10px] sm:text-[11px] font-bold text-slate-500 group-hover:text-slate-900 transition ${currentBrand === 'all' ? 'text-slate-950 font-black' : ''}">
+              <span>جميعها</span>
+              <span class="text-[9px] px-1.5 py-0.2 rounded-full ${currentBrand === 'all' ? 'bg-yellow-400 text-slate-950 font-bold' : 'bg-slate-100 text-slate-500'}">
+                ${catProducts.length}
+              </span>
+            </div>
           </button>
         `;
 
         availableBrands.forEach(b => {
           const count = catProducts.filter(p => p.brand === b).length;
           const isActive = currentBrand === b;
+          const safeB = b.replace(/'/g, "\\'");
+          const logoSrc = BRAND_LOGOS[b];
+
           brandPillsHtml += `
             <button 
-              onclick="filterByBrand('${b.replace(/'/g, "\\'")}')" 
-              class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition shrink-0 cursor-pointer flex items-center gap-1.5 ${
+              onclick="filterByBrand('${safeB}')" 
+              class="group relative flex flex-col items-center justify-center px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 cursor-pointer bg-transparent border ${
                 isActive 
-                  ? 'bg-slate-900 text-yellow-400 shadow-sm border border-slate-900' 
-                  : 'bg-white text-slate-700 border border-slate-200 hover:border-yellow-400 hover:text-slate-900'
+                  ? 'border-yellow-400 bg-yellow-400/10 shadow-xs scale-105 opacity-100 ring-2 ring-yellow-400/30' 
+                  : 'border-transparent hover:border-slate-200 hover:bg-white/50 opacity-70 hover:opacity-100 hover:scale-105'
               }"
+              title="${b}"
             >
-              <span>${b}</span>
-              <span class="text-[10px] px-1.5 py-0.2 rounded-full ${isActive ? 'bg-yellow-400/20 text-yellow-300' : 'bg-slate-100 text-slate-500'}">${count}</span>
+              <div class="h-6 sm:h-7 w-20 sm:w-24 flex items-center justify-center px-1">
+                ${logoSrc ? `
+                  <img src="${logoSrc}" alt="${b}" class="max-h-5 sm:max-h-6 max-w-full object-contain transition duration-200 group-hover:scale-105" loading="lazy">
+                ` : `
+                  <span class="text-xs font-black tracking-wider text-slate-800">${b}</span>
+                `}
+              </div>
+              <div class="flex items-center justify-center gap-1 mt-1 text-[10px] sm:text-[11px] font-bold text-slate-500 group-hover:text-slate-900 transition ${isActive ? 'text-slate-950 font-black' : ''}">
+                <span>${b}</span>
+                <span class="text-[9px] px-1.5 py-0.2 rounded-full ${isActive ? 'bg-yellow-400 text-slate-950 font-bold' : 'bg-slate-100 text-slate-500'}">
+                  ${count}
+                </span>
+              </div>
             </button>
           `;
         });

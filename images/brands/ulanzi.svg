@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 50" fill="none">
+  <!-- Ulanzi Logo -->
+  <g transform="translate(15, 10)">
+    <rect x="0" y="3" width="22" height="22" rx="4" fill="#E53935"/>
+    <text x="11" y="19" text-anchor="middle" font-family="'Arial Black', sans-serif" font-size="15" font-weight="900" fill="#FFFFFF">U</text>
+    <text x="30" y="21" font-family="'Arial Black', sans-serif" font-size="20" font-weight="900" letter-spacing="1" fill="#111827">ulanzi</text>
+  </g>
+</svg>

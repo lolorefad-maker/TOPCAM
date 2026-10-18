@@ -1,0 +1,6 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <!-- Viltrox Logo -->
+  <g transform="translate(15, 10)">
+    <text x="50%" y="24" text-anchor="middle" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="24" font-weight="900" letter-spacing="3" fill="#111827">VILTR<tspan fill="#E53935">O</tspan>X</text>
+  </g>
+</svg>

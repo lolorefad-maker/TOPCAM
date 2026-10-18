@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 50" fill="none">
+  <!-- SmallRig Logo: Modern Tech Minimalist -->
+  <g transform="translate(10, 10)">
+    <rect x="2" y="4" width="24" height="24" rx="5" fill="#000000"/>
+    <circle cx="14" cy="16" r="6" stroke="#00D2FF" stroke-width="3" fill="none"/>
+    <text x="34" y="24" font-family="'Inter', 'Arial', sans-serif" font-size="24" font-weight="900" letter-spacing="-0.5" fill="#111827">Small<tspan fill="#0099FF">Rig</tspan></text>
+  </g>
+</svg>

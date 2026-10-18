@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <!-- TOP CAM Official Aperture Brand Logo -->
+  <g transform="translate(10, 8)">
+    <text x="12" y="27" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="26" font-weight="900" fill="#111827">T</text>
+    <g transform="translate(38, 16)">
+      <circle cx="0" cy="0" r="12" fill="#FFED00" stroke="#111827" stroke-width="2.5"/>
+      <polygon points="0,-10 6,-3 2,7 -7,7 -9,-2" fill="#111827"/>
+      <circle cx="0" cy="0" r="3" fill="#FFED00"/>
+    </g>
+    <text x="56" y="27" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="26" font-weight="900" fill="#111827">P CAM</text>
+  </g>
+</svg>
