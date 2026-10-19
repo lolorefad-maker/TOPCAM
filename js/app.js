@@ -385,7 +385,7 @@ function openProductModal(productId) {
             <i class="fa-solid fa-check"></i> متوفر في المستودع (${product.stock} قطع)
           </span>
           <span class="text-[11px] font-bold text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
-            <i class="fa-solid fa-shield"></i> كفالة سنتين
+            <i class="fa-solid fa-shield"></i> كفالة رسمية معتمدة
           </span>
         </div>
 
