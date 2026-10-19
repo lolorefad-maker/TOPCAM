@@ -2,7 +2,7 @@
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
-  PRODUCTS: 'camera_store_products_v10_real_images',
+  PRODUCTS: 'camera_store_products_v11_pure_authentic',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',
@@ -96,7 +96,8 @@ class StoreDB {
       'camera_store_products_v6',
       'camera_store_products_v7',
       'camera_store_products_v8',
-      'camera_store_products_v9'
+      'camera_store_products_v9',
+      'camera_store_products_v10_real_images'
     ];
     legacyKeys.forEach(k => {
       try { localStorage.removeItem(k); } catch(e){}
@@ -110,9 +111,11 @@ class StoreDB {
       currentProds = typeof INITIAL_PRODUCTS !== 'undefined' ? JSON.parse(JSON.stringify(INITIAL_PRODUCTS)) : [];
     }
 
-    // مزامنة الصور ومعارض الزوايا الحقيقية من INITIAL_PRODUCTS دائماً
+    // تصفية وحصر الكتالوج بالكامل على المنتجات الأصلية الحقيقية فقط
     if (typeof INITIAL_PRODUCTS !== 'undefined' && INITIAL_PRODUCTS.length > 0) {
       const initMap = new Map(INITIAL_PRODUCTS.map(p => [p.id, p]));
+      // استبعاد أي منتجات قديمة محذوفة لا توجد في الكتالوج الأصلي المصفى
+      currentProds = currentProds.filter(p => initMap.has(p.id));
       if (!currentProds || currentProds.length === 0) {
         currentProds = JSON.parse(JSON.stringify(INITIAL_PRODUCTS));
       } else {
