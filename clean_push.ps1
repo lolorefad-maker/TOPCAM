@@ -60,7 +60,33 @@ $tempFiles = @(
     "images/delivery_van_trunk.jpg",
     "images/pexels_courier_hand.jpg",
     "images/pexels_delivery_box.jpg",
-    "images/pexels_delivery_van.jpg"
+    "images/pexels_delivery_van.jpg",
+    "apply_patch.ps1",
+    "catalog_patch.json",
+    "update_catalog_accurate.js",
+    "update_catalog_ps.ps1",
+    "dl_2000d.ps1",
+    "dl_250d.ps1",
+    "dl_r10.ps1",
+    "dl_rfs1845.ps1",
+    "dl_rfs18150.ps1",
+    "dl_test_angles.ps1",
+    "check_cam_files.ps1",
+    "check_cam_images.ps1",
+    "check_corrupt.ps1",
+    "check_images.ps1",
+    "check_phrases.ps1",
+    "inspect_descriptions.ps1",
+    "sub_images.ps1",
+    "catalog_images.ps1",
+    "audit_cameras_full.ps1",
+    "audit_lenses_full.ps1",
+    "test_bh_url.ps1",
+    "test_dl.ps1",
+    "test_wc_html.ps1",
+    "test_wiki_dl.ps1",
+    "test_bh.jpg",
+    "test_r6.jpg"
 )
 
 foreach ($file in $tempFiles) {
@@ -75,6 +101,6 @@ $authHeader = "AUTHORIZATION: basic " + [Convert]::ToBase64String([System.Text.E
 
 $git = "C:\Users\publisher\AppData\Local\GitHubDesktop\app-3.6.6\resources\app\git\cmd\git.exe"
 & $git add -A
-& $git commit -m "Restore 100% authentic Excel catalog, accurate body-only camera photos, isolated lens photos, clean typography, remove Godox stand"
+& $git commit -m "Update camera catalog with authentic multi-angle galleries, pure body-only photos, isolated lens photos, and official Jordan distributor warranty"
 & $git -c "http.extraheader=$authHeader" push origin main
 Write-Host "GIT_SYNC_COMPLETE"
