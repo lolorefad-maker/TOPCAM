@@ -49,7 +49,7 @@ $tempPatterns = @(
 )
 
 # Keep core files
-$keepFiles = @("server.ps1", "clean_push.ps1")
+$keepFiles = @("server.ps1", "clean_push.ps1", "server.js", "package.json")
 
 Get-ChildItem -Path . -File | Where-Object {
     $name = $_.Name
