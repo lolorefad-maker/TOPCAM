@@ -15,70 +15,70 @@ const INITIAL_CATEGORIES = [
         "id":  "cameras",
         "name":  "ظƒط§ظ…ظٹط±ط§طھ ط³ظٹظ†ظ…ط§ ظˆظ…ظٹط±ظˆط±ظ„ظٹط³",
         "icon":  "fa-camera",
-        "count":  30,
+        "count":  45,
         "image":  "images/prod_sony_fx3_white.jpg"
     },
     {
         "id":  "filters",
         "name":  "ط¹ط¯ط³ط§طھ ظˆظپظ„ط§طھط±",
         "icon":  "fa-circle-half-stroke",
-        "count":  31,
+        "count":  56,
         "image":  "images/prod_sony_2470_gm2.png"
     },
     {
         "id":  "lighting",
         "name":  "ط¥ط¶ط§ط،ط§طھ ظˆط³ظˆظپطھ ط¨ظˆظƒط³",
         "icon":  "fa-lightbulb",
-        "count":  25,
+        "count":  60,
         "image":  "images/prod_godox_sl100d.jpg"
     },
     {
         "id":  "audio",
         "name":  "ظ…ط§ظٹظƒط§طھ ظˆط£ظ†ط¸ظ…ط© طµظˆطھ",
         "icon":  "fa-microphone",
-        "count":  30,
+        "count":  55,
         "image":  "images/prod_rode_wigo2.png"
     },
     {
         "id":  "gimbals",
         "name":  "ط³طھظٹط¨ظ„ط§ظٹط²ط±ط² ظˆط¬ظٹظ…ط¨ظ„",
         "icon":  "fa-gamepad",
-        "count":  15,
+        "count":  23,
         "image":  "images/prod_dji_rs4_pro.jpg"
     },
     {
         "id":  "stands",
         "name":  "ط³طھط§ظ†ط¯ط§طھ ظˆطھط±ط§ظٹط¨ظˆط¯",
         "icon":  "fa-monument",
-        "count":  11,
+        "count":  18,
         "image":  "images/prod_manfrotto_504x.jpg"
     },
     {
         "id":  "cages",
         "name":  "ظƒظٹط¬ ظƒط§ظ…ظٹط±ط§ ظˆطھط¬ظ‡ظٹط²ط§طھ",
         "icon":  "fa-border-all",
-        "count":  14,
+        "count":  29,
         "image":  "images/prod_smallrig_fx3_cage.jpg"
     },
     {
         "id":  "monitors",
         "name":  "ط´ط§ط´ط§طھ ظˆطھظ„ظ‚ظٹظ† Teleprompter",
         "icon":  "fa-tv",
-        "count":  12,
+        "count":  27,
         "image":  "images/prod_feelworld_lut7.jpg"
     },
     {
         "id":  "chargers_batteries",
         "name":  "ط´ظˆط§ط­ظ† ظˆط¨ط·ط§ط±ظٹط§طھ ط³ظٹظ†ظ…ط§",
         "icon":  "fa-battery-full",
-        "count":  8,
+        "count":  11,
         "image":  "images/prod_smallrig_vb99.jpg"
     },
     {
         "id":  "bags",
         "name":  "ط´ظ†ط§طھظٹ ظˆط­ظ‚ط§ط¦ط¨ ظ…ط¹ط¯ط§طھ",
         "icon":  "fa-suitcase-rolling",
-        "count":  6,
+        "count":  8,
         "image":  "images/prod_ulanzi_bp09.jpg"
     }
 ];
@@ -4732,6 +4732,3506 @@ const INITIAL_PRODUCTS = [
                       "المنافذ":  "D-Tap + USB-C PD + DC 8V + DC 12V",
                       "التثبيت":  "مشابك متوافقة مع قضبان 15mm LWS Rods",
                       "الهيكل":  "سبائك ألومنيوم مفرغة عالية التحمل",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-CAM-003",
+        "name":  "Sony A7 V - Full-frame Mirrorless Camera Body Only",
+        "nameEn":  "Sony A7 V - Full-frame Mirrorless Camera Body Only",
+        "category":  "cameras",
+        "brand":  "Sony",
+        "price":  2100,
+        "oldPrice":  2352,
+        "rating":  4.9,
+        "reviewsCount":  37,
+        "stock":  8,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_cam_003.jpg",
+        "images":  [
+                       "images/prod_cam_003.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-CAM-007",
+        "name":  "Sony FX2 Digital Cinema Camera",
+        "nameEn":  "Sony FX2 Digital Cinema Camera",
+        "category":  "cameras",
+        "brand":  "Sony",
+        "price":  2000,
+        "oldPrice":  2240,
+        "rating":  4.9,
+        "reviewsCount":  37,
+        "stock":  3,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_cam_007.jpg",
+        "images":  [
+                       "images/prod_cam_007.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-CAM-008",
+        "name":  "Sony FX3a Full-Frame Cinema Camera",
+        "nameEn":  "Sony FX3a Full-Frame Cinema Camera",
+        "category":  "cameras",
+        "brand":  "Sony",
+        "price":  2550,
+        "oldPrice":  2856,
+        "rating":  4.9,
+        "reviewsCount":  21,
+        "stock":  6,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_cam_008.jpg",
+        "images":  [
+                       "images/prod_cam_008.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-CAM-010",
+        "name":  "Sony ZV-E10 Mirrorless Camera with 16-50mm Lens",
+        "nameEn":  "Sony ZV-E10 Mirrorless Camera with 16-50mm Lens",
+        "category":  "cameras",
+        "brand":  "Sony",
+        "price":  580,
+        "oldPrice":  650,
+        "rating":  4.9,
+        "reviewsCount":  22,
+        "stock":  4,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_cam_010.jpg",
+        "images":  [
+                       "images/prod_cam_010.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-CAM-011",
+        "name":  "Sony a6400 with 16-50 lens",
+        "nameEn":  "Sony a6400 with 16-50 lens",
+        "category":  "cameras",
+        "brand":  "Sony",
+        "price":  650,
+        "oldPrice":  728,
+        "rating":  4.9,
+        "reviewsCount":  33,
+        "stock":  11,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_cam_011.jpg",
+        "images":  [
+                       "images/prod_cam_011.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-CAM-012",
+        "name":  "Sony a6700 Body Only",
+        "nameEn":  "Sony a6700 Body Only",
+        "category":  "cameras",
+        "brand":  "Sony",
+        "price":  1050,
+        "oldPrice":  1176,
+        "rating":  4.9,
+        "reviewsCount":  47,
+        "stock":  6,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_cam_012.jpg",
+        "images":  [
+                       "images/prod_cam_012.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-CAM-013",
+        "name":  "Sony a7C II Mirrorless Body only",
+        "nameEn":  "Sony a7C II Mirrorless Body only",
+        "category":  "cameras",
+        "brand":  "Sony",
+        "price":  1350,
+        "oldPrice":  1512,
+        "rating":  4.9,
+        "reviewsCount":  39,
+        "stock":  7,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_cam_013.jpg",
+        "images":  [
+                       "images/prod_cam_013.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-096",
+        "name":  "DJI POCKET 3 STANDARD",
+        "nameEn":  "DJI POCKET 3 STANDARD",
+        "category":  "cameras",
+        "brand":  "DJI",
+        "price":  479,
+        "oldPrice":  536,
+        "rating":  4.9,
+        "reviewsCount":  42,
+        "stock":  3,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_dji_096.jpg",
+        "images":  [
+                       "images/prod_dji_096.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-097",
+        "name":  "DJI POCKET 3 CREATOR COMPO",
+        "nameEn":  "DJI POCKET 3 CREATOR COMPO",
+        "category":  "cameras",
+        "brand":  "DJI",
+        "price":  530,
+        "oldPrice":  594,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  11,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_dji_097.jpg",
+        "images":  [
+                       "images/prod_dji_097.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-098",
+        "name":  "DJI POCKET 4 STANDARD",
+        "nameEn":  "DJI POCKET 4 STANDARD",
+        "category":  "cameras",
+        "brand":  "DJI",
+        "price":  520,
+        "oldPrice":  582,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  5,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_dji_098.jpg",
+        "images":  [
+                       "images/prod_dji_098.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-099",
+        "name":  "DJI POCKET 4 CREATOR COMPO",
+        "nameEn":  "DJI POCKET 4 CREATOR COMPO",
+        "category":  "cameras",
+        "brand":  "DJI",
+        "price":  610,
+        "oldPrice":  683,
+        "rating":  4.9,
+        "reviewsCount":  40,
+        "stock":  4,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_dji_099.jpg",
+        "images":  [
+                       "images/prod_dji_099.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-100",
+        "name":  "DJI ACTION Camera 6 ADVENTURE COMPO",
+        "nameEn":  "DJI ACTION Camera 6 ADVENTURE COMPO",
+        "category":  "cameras",
+        "brand":  "DJI",
+        "price":  450,
+        "oldPrice":  504,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  8,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_dji_100.jpg",
+        "images":  [
+                       "images/prod_dji_100.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-101",
+        "name":  "DJI OSMO Camera 360 STANDARD",
+        "nameEn":  "DJI OSMO Camera 360 STANDARD",
+        "category":  "cameras",
+        "brand":  "DJI",
+        "price":  450,
+        "oldPrice":  504,
+        "rating":  4.9,
+        "reviewsCount":  49,
+        "stock":  11,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_dji_101.jpg",
+        "images":  [
+                       "images/prod_dji_101.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-102",
+        "name":  "DJI OSMO Camera 360 ADVENTURE COMPO",
+        "nameEn":  "DJI OSMO Camera 360 ADVENTURE COMPO",
+        "category":  "cameras",
+        "brand":  "DJI",
+        "price":  530,
+        "oldPrice":  594,
+        "rating":  4.9,
+        "reviewsCount":  41,
+        "stock":  7,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_dji_102.jpg",
+        "images":  [
+                       "images/prod_dji_102.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-CAM-106",
+        "name":  "Canon EOS R100 18-45mm",
+        "nameEn":  "Canon EOS R100 18-45mm",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  400,
+        "oldPrice":  448,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  11,
+        "badge":  "كاميرا سينمائية",
+        "image":  "images/prod_cam_106.jpg",
+        "images":  [
+                       "images/prod_cam_106.jpg"
+                   ],
+        "description":  "كاميرا احترافية متطورة تلبي تطلعات المصورين وصناع الأفلام بدقة تسجيل سينمائية 4K فائقة الوضوح ومستشعر عالي الحساسية للضوء مع نظام تركيز تلقائي ذكي وتثبيت بصري فعال لمنع الاهتزاز.",
+        "specs":  {
+                      "المستشعر":  "High Performance Digital Sensor",
+                      "الفيديو":  "4K Ultra HD Cinema Recording",
+                      "التركيز":  "Advanced Hybrid Phase Detection AF",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-147",
+        "name":  "Godox sl60II",
+        "nameEn":  "Godox sl60II",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  100,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  46,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_147.jpg",
+        "images":  [
+                       "images/prod_lgt_147.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-148",
+        "name":  "Godox sl60II bi",
+        "nameEn":  "Godox sl60II bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  135,
+        "oldPrice":  151,
+        "rating":  4.9,
+        "reviewsCount":  48,
+        "stock":  5,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_148.jpg",
+        "images":  [
+                       "images/prod_lgt_148.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-149",
+        "name":  "Godox SL100D",
+        "nameEn":  "Godox SL100D",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  150,
+        "oldPrice":  168,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  7,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_149.jpg",
+        "images":  [
+                       "images/prod_lgt_149.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-150",
+        "name":  "Godox SL100BI",
+        "nameEn":  "Godox SL100BI",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  170,
+        "oldPrice":  190,
+        "rating":  4.9,
+        "reviewsCount":  41,
+        "stock":  8,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_150.jpg",
+        "images":  [
+                       "images/prod_lgt_150.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-151",
+        "name":  "Godox sl 150 III",
+        "nameEn":  "Godox sl 150 III",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  250,
+        "oldPrice":  280,
+        "rating":  4.9,
+        "reviewsCount":  57,
+        "stock":  6,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_151.jpg",
+        "images":  [
+                       "images/prod_lgt_151.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-152",
+        "name":  "Godox sl 150 III bi",
+        "nameEn":  "Godox sl 150 III bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  325,
+        "oldPrice":  364,
+        "rating":  4.9,
+        "reviewsCount":  47,
+        "stock":  9,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_152.jpg",
+        "images":  [
+                       "images/prod_lgt_152.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-153",
+        "name":  "Godox sl 200 III",
+        "nameEn":  "Godox sl 200 III",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  325,
+        "oldPrice":  364,
+        "rating":  4.9,
+        "reviewsCount":  51,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_153.jpg",
+        "images":  [
+                       "images/prod_lgt_153.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-154",
+        "name":  "Godox sl 200 III bi",
+        "nameEn":  "Godox sl 200 III bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  375,
+        "oldPrice":  420,
+        "rating":  4.9,
+        "reviewsCount":  39,
+        "stock":  10,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_154.jpg",
+        "images":  [
+                       "images/prod_lgt_154.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-155",
+        "name":  "Godox sl300 III",
+        "nameEn":  "Godox sl300 III",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  400,
+        "oldPrice":  448,
+        "rating":  4.9,
+        "reviewsCount":  56,
+        "stock":  8,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_155.jpg",
+        "images":  [
+                       "images/prod_lgt_155.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-156",
+        "name":  "Godox sl300 III bi",
+        "nameEn":  "Godox sl300 III bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  525,
+        "oldPrice":  588,
+        "rating":  4.9,
+        "reviewsCount":  21,
+        "stock":  8,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_156.jpg",
+        "images":  [
+                       "images/prod_lgt_156.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-157",
+        "name":  "Godox la 150",
+        "nameEn":  "Godox la 150",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  230,
+        "oldPrice":  258,
+        "rating":  4.9,
+        "reviewsCount":  39,
+        "stock":  3,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_157.jpg",
+        "images":  [
+                       "images/prod_lgt_157.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-158",
+        "name":  "Godox la 200",
+        "nameEn":  "Godox la 200",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  250,
+        "oldPrice":  280,
+        "rating":  4.9,
+        "reviewsCount":  22,
+        "stock":  10,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_158.jpg",
+        "images":  [
+                       "images/prod_lgt_158.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-159",
+        "name":  "Godox la 200 bi",
+        "nameEn":  "Godox la 200 bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  320,
+        "oldPrice":  358,
+        "rating":  4.9,
+        "reviewsCount":  19,
+        "stock":  11,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_159.jpg",
+        "images":  [
+                       "images/prod_lgt_159.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-160",
+        "name":  "Godox la 300 bi (kit1)",
+        "nameEn":  "Godox la 300 bi (kit1)",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  425,
+        "oldPrice":  476,
+        "rating":  4.9,
+        "reviewsCount":  29,
+        "stock":  8,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_160.jpg",
+        "images":  [
+                       "images/prod_lgt_160.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-161",
+        "name":  "Godox la200 rgb (kit1)",
+        "nameEn":  "Godox la200 rgb (kit1)",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  375,
+        "oldPrice":  420,
+        "rating":  4.9,
+        "reviewsCount":  44,
+        "stock":  5,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_161.jpg",
+        "images":  [
+                       "images/prod_lgt_161.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-162",
+        "name":  "Godox la300 rgb (kit1)",
+        "nameEn":  "Godox la300 rgb (kit1)",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  500,
+        "oldPrice":  560,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  9,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_162.jpg",
+        "images":  [
+                       "images/prod_lgt_162.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-163",
+        "name":  "Godox la 600 bi (kit1)",
+        "nameEn":  "Godox la 600 bi (kit1)",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  675,
+        "oldPrice":  756,
+        "rating":  4.9,
+        "reviewsCount":  35,
+        "stock":  7,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_163.jpg",
+        "images":  [
+                       "images/prod_lgt_163.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-164",
+        "name":  "Godox la 600 rgb (kit1)",
+        "nameEn":  "Godox la 600 rgb (kit1)",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  800,
+        "oldPrice":  896,
+        "rating":  4.9,
+        "reviewsCount":  47,
+        "stock":  11,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_164.jpg",
+        "images":  [
+                       "images/prod_lgt_164.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-165",
+        "name":  "Godox le 200 bi",
+        "nameEn":  "Godox le 200 bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  275,
+        "oldPrice":  308,
+        "rating":  4.9,
+        "reviewsCount":  22,
+        "stock":  6,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_165.jpg",
+        "images":  [
+                       "images/prod_lgt_165.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-166",
+        "name":  "Godox le 300 bi",
+        "nameEn":  "Godox le 300 bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  325,
+        "oldPrice":  364,
+        "rating":  4.9,
+        "reviewsCount":  28,
+        "stock":  8,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_166.jpg",
+        "images":  [
+                       "images/prod_lgt_166.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-167",
+        "name":  "Godox Le 600 Bi",
+        "nameEn":  "Godox Le 600 Bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  550,
+        "oldPrice":  616,
+        "rating":  4.9,
+        "reviewsCount":  54,
+        "stock":  11,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_167.jpg",
+        "images":  [
+                       "images/prod_lgt_167.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-168",
+        "name":  "Godox ml 100 bi",
+        "nameEn":  "Godox ml 100 bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  200,
+        "oldPrice":  224,
+        "rating":  4.9,
+        "reviewsCount":  48,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_168.jpg",
+        "images":  [
+                       "images/prod_lgt_168.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-169",
+        "name":  "Godox ml 100 bi (kit2)",
+        "nameEn":  "Godox ml 100 bi (kit2)",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  250,
+        "oldPrice":  280,
+        "rating":  4.9,
+        "reviewsCount":  39,
+        "stock":  7,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_169.jpg",
+        "images":  [
+                       "images/prod_lgt_169.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-170",
+        "name":  "Godox ml 60 II bi",
+        "nameEn":  "Godox ml 60 II bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  160,
+        "oldPrice":  179,
+        "rating":  4.9,
+        "reviewsCount":  17,
+        "stock":  11,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_170.jpg",
+        "images":  [
+                       "images/prod_lgt_170.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-171",
+        "name":  "Godox ml 60 II bi (kit2)",
+        "nameEn":  "Godox ml 60 II bi (kit2)",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  200,
+        "oldPrice":  224,
+        "rating":  4.9,
+        "reviewsCount":  25,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_171.jpg",
+        "images":  [
+                       "images/prod_lgt_171.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-172",
+        "name":  "Godox ml 100 rgb (kit1)",
+        "nameEn":  "Godox ml 100 rgb (kit1)",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  300,
+        "oldPrice":  336,
+        "rating":  4.9,
+        "reviewsCount":  19,
+        "stock":  6,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_172.jpg",
+        "images":  [
+                       "images/prod_lgt_172.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-173",
+        "name":  "Godox ml 150",
+        "nameEn":  "Godox ml 150",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  300,
+        "oldPrice":  336,
+        "rating":  4.9,
+        "reviewsCount":  32,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_173.jpg",
+        "images":  [
+                       "images/prod_lgt_173.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-174",
+        "name":  "Godox Vl 150 II",
+        "nameEn":  "Godox Vl 150 II",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  350,
+        "oldPrice":  392,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  8,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_174.jpg",
+        "images":  [
+                       "images/prod_lgt_174.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-175",
+        "name":  "Godox vl 200 II",
+        "nameEn":  "Godox vl 200 II",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  400,
+        "oldPrice":  448,
+        "rating":  4.9,
+        "reviewsCount":  37,
+        "stock":  3,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_175.jpg",
+        "images":  [
+                       "images/prod_lgt_175.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-176",
+        "name":  "Godox VL 300 II",
+        "nameEn":  "Godox VL 300 II",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  580,
+        "oldPrice":  650,
+        "rating":  4.9,
+        "reviewsCount":  57,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_176.jpg",
+        "images":  [
+                       "images/prod_lgt_176.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-177",
+        "name":  "Godox fv 150",
+        "nameEn":  "Godox fv 150",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  325,
+        "oldPrice":  364,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  11,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_177.jpg",
+        "images":  [
+                       "images/prod_lgt_177.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-178",
+        "name":  "Godox fv 200",
+        "nameEn":  "Godox fv 200",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  425,
+        "oldPrice":  476,
+        "rating":  4.9,
+        "reviewsCount":  31,
+        "stock":  9,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_178.jpg",
+        "images":  [
+                       "images/prod_lgt_178.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-179",
+        "name":  "Godox godox lp1200bi",
+        "nameEn":  "Godox godox lp1200bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  200,
+        "oldPrice":  224,
+        "rating":  4.9,
+        "reviewsCount":  37,
+        "stock":  9,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_179.jpg",
+        "images":  [
+                       "images/prod_lgt_179.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-180",
+        "name":  "Godox LDX100R",
+        "nameEn":  "Godox LDX100R",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  330,
+        "oldPrice":  370,
+        "rating":  4.9,
+        "reviewsCount":  54,
+        "stock":  5,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_180.jpg",
+        "images":  [
+                       "images/prod_lgt_180.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LGT-181",
+        "name":  "Godox LDX50R",
+        "nameEn":  "Godox LDX50R",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  190,
+        "oldPrice":  213,
+        "rating":  4.9,
+        "reviewsCount":  33,
+        "stock":  5,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_181.jpg",
+        "images":  [
+                       "images/prod_lgt_181.jpg"
+                   ],
+        "description":  "إضاءة ليد احترافية مستمرة بتدفق ضوئي قوي ومستقر ومؤشر دقة ألوان فائق CRI 96+ لإعادة إنتاج درجات البشرة الطبيعية بواقعية تامة، تدعم التحكم اللاسلكي وحامل البوينز العالمي.",
+        "specs":  {
+                      "مؤشر الألوان":  "CRI 96+ / TLCI 97+ لألوان سينمائية طبيعية",
+                      "الحامل":  "حامل بوينز Bowens Mount القياسي لجميع المشتتات",
+                      "التحكم":  "تعديل دقيق للسطوع مع تحكم عبر التطبيق",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-078",
+        "name":  "DJI MOBILE OM SE",
+        "nameEn":  "DJI MOBILE OM SE",
+        "category":  "gimbals",
+        "brand":  "DJI",
+        "price":  75,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  22,
+        "stock":  5,
+        "badge":  "مانع اهتزاز ذكي",
+        "image":  "images/prod_dji_078.jpg",
+        "images":  [
+                       "images/prod_dji_078.jpg"
+                   ],
+        "description":  "مانع اهتزاز محوري احترافي يوفر سلاسة سينمائية فائقة لحركة الكاميرا والهواتف مع خوارزميات تثبيت متطورة ومحركات قوية وأوضاع تصوير ذكية تضمن ثبات اللقطات أثناء الحركة السريعة.",
+        "specs":  {
+                      "التثبيت":  "3-Axis Motorized Stabilization",
+                      "التحكم":  "بلوتوث مدمج مع تحكم بالغالق والتتبع التلقائي",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-079",
+        "name":  "DJI OSMO MOBILE Om 6",
+        "nameEn":  "DJI OSMO MOBILE Om 6",
+        "category":  "gimbals",
+        "brand":  "DJI",
+        "price":  89,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  11,
+        "badge":  "مانع اهتزاز ذكي",
+        "image":  "images/prod_dji_079.jpg",
+        "images":  [
+                       "images/prod_dji_079.jpg"
+                   ],
+        "description":  "مانع اهتزاز محوري احترافي يوفر سلاسة سينمائية فائقة لحركة الكاميرا والهواتف مع خوارزميات تثبيت متطورة ومحركات قوية وأوضاع تصوير ذكية تضمن ثبات اللقطات أثناء الحركة السريعة.",
+        "specs":  {
+                      "التثبيت":  "3-Axis Motorized Stabilization",
+                      "التحكم":  "بلوتوث مدمج مع تحكم بالغالق والتتبع التلقائي",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-080",
+        "name":  "DJI OSMO MOBILE 7",
+        "nameEn":  "DJI OSMO MOBILE 7",
+        "category":  "gimbals",
+        "brand":  "DJI",
+        "price":  80,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  26,
+        "stock":  10,
+        "badge":  "مانع اهتزاز ذكي",
+        "image":  "images/prod_dji_080.jpg",
+        "images":  [
+                       "images/prod_dji_080.jpg"
+                   ],
+        "description":  "مانع اهتزاز محوري احترافي يوفر سلاسة سينمائية فائقة لحركة الكاميرا والهواتف مع خوارزميات تثبيت متطورة ومحركات قوية وأوضاع تصوير ذكية تضمن ثبات اللقطات أثناء الحركة السريعة.",
+        "specs":  {
+                      "التثبيت":  "3-Axis Motorized Stabilization",
+                      "التحكم":  "بلوتوث مدمج مع تحكم بالغالق والتتبع التلقائي",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-081",
+        "name":  "DJI OSMO MOBILE 7P",
+        "nameEn":  "DJI OSMO MOBILE 7P",
+        "category":  "gimbals",
+        "brand":  "DJI",
+        "price":  110,
+        "oldPrice":  123,
+        "rating":  4.9,
+        "reviewsCount":  54,
+        "stock":  10,
+        "badge":  "مانع اهتزاز ذكي",
+        "image":  "images/prod_dji_081.jpg",
+        "images":  [
+                       "images/prod_dji_081.jpg"
+                   ],
+        "description":  "مانع اهتزاز محوري احترافي يوفر سلاسة سينمائية فائقة لحركة الكاميرا والهواتف مع خوارزميات تثبيت متطورة ومحركات قوية وأوضاع تصوير ذكية تضمن ثبات اللقطات أثناء الحركة السريعة.",
+        "specs":  {
+                      "التثبيت":  "3-Axis Motorized Stabilization",
+                      "التحكم":  "بلوتوث مدمج مع تحكم بالغالق والتتبع التلقائي",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-082",
+        "name":  "DJI OSMO MOBILE 8",
+        "nameEn":  "DJI OSMO MOBILE 8",
+        "category":  "gimbals",
+        "brand":  "DJI",
+        "price":  135,
+        "oldPrice":  151,
+        "rating":  4.9,
+        "reviewsCount":  30,
+        "stock":  9,
+        "badge":  "مانع اهتزاز ذكي",
+        "image":  "images/prod_dji_082.jpg",
+        "images":  [
+                       "images/prod_dji_082.jpg"
+                   ],
+        "description":  "مانع اهتزاز محوري احترافي يوفر سلاسة سينمائية فائقة لحركة الكاميرا والهواتف مع خوارزميات تثبيت متطورة ومحركات قوية وأوضاع تصوير ذكية تضمن ثبات اللقطات أثناء الحركة السريعة.",
+        "specs":  {
+                      "التثبيت":  "3-Axis Motorized Stabilization",
+                      "التحكم":  "بلوتوث مدمج مع تحكم بالغالق والتتبع التلقائي",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-084",
+        "name":  "DJI RS 4 MINI",
+        "nameEn":  "DJI RS 4 MINI",
+        "category":  "gimbals",
+        "brand":  "DJI",
+        "price":  310,
+        "oldPrice":  347,
+        "rating":  4.9,
+        "reviewsCount":  26,
+        "stock":  5,
+        "badge":  "مانع اهتزاز ذكي",
+        "image":  "images/prod_dji_084.jpg",
+        "images":  [
+                       "images/prod_dji_084.jpg"
+                   ],
+        "description":  "مانع اهتزاز محوري احترافي يوفر سلاسة سينمائية فائقة لحركة الكاميرا والهواتف مع خوارزميات تثبيت متطورة ومحركات قوية وأوضاع تصوير ذكية تضمن ثبات اللقطات أثناء الحركة السريعة.",
+        "specs":  {
+                      "التثبيت":  "3-Axis Motorized Stabilization",
+                      "التحكم":  "بلوتوث مدمج مع تحكم بالغالق والتتبع التلقائي",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-085",
+        "name":  "DJI RS 4  MINI COMPO",
+        "nameEn":  "DJI RS 4  MINI COMPO",
+        "category":  "gimbals",
+        "brand":  "DJI",
+        "price":  370,
+        "oldPrice":  414,
+        "rating":  4.9,
+        "reviewsCount":  46,
+        "stock":  6,
+        "badge":  "مانع اهتزاز ذكي",
+        "image":  "images/prod_dji_085.jpg",
+        "images":  [
+                       "images/prod_dji_085.jpg"
+                   ],
+        "description":  "مانع اهتزاز محوري احترافي يوفر سلاسة سينمائية فائقة لحركة الكاميرا والهواتف مع خوارزميات تثبيت متطورة ومحركات قوية وأوضاع تصوير ذكية تضمن ثبات اللقطات أثناء الحركة السريعة.",
+        "specs":  {
+                      "التثبيت":  "3-Axis Motorized Stabilization",
+                      "التحكم":  "بلوتوث مدمج مع تحكم بالغالق والتتبع التلقائي",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-DJI-087",
+        "name":  "DJI RS 4 COMPO",
+        "nameEn":  "DJI RS 4 COMPO",
+        "category":  "gimbals",
+        "brand":  "DJI",
+        "price":  480,
+        "oldPrice":  538,
+        "rating":  4.9,
+        "reviewsCount":  19,
+        "stock":  8,
+        "badge":  "مانع اهتزاز ذكي",
+        "image":  "images/prod_dji_087.jpg",
+        "images":  [
+                       "images/prod_dji_087.jpg"
+                   ],
+        "description":  "مانع اهتزاز محوري احترافي يوفر سلاسة سينمائية فائقة لحركة الكاميرا والهواتف مع خوارزميات تثبيت متطورة ومحركات قوية وأوضاع تصوير ذكية تضمن ثبات اللقطات أثناء الحركة السريعة.",
+        "specs":  {
+                      "التثبيت":  "3-Axis Motorized Stabilization",
+                      "التحكم":  "بلوتوث مدمج مع تحكم بالغالق والتتبع التلقائي",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-015",
+        "name":  "SONY FE 100mm F2.8 Macro GM OSS",
+        "nameEn":  "SONY FE 100mm F2.8 Macro GM OSS",
+        "category":  "filters",
+        "brand":  "Sony",
+        "price":  1090,
+        "oldPrice":  1221,
+        "rating":  4.9,
+        "reviewsCount":  32,
+        "stock":  5,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_015.jpg",
+        "images":  [
+                       "images/prod_len_015.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-017",
+        "name":  "SONY FE 85mm F1.4 GM",
+        "nameEn":  "SONY FE 85mm F1.4 GM",
+        "category":  "filters",
+        "brand":  "Sony",
+        "price":  890,
+        "oldPrice":  997,
+        "rating":  4.9,
+        "reviewsCount":  38,
+        "stock":  7,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_017.jpg",
+        "images":  [
+                       "images/prod_len_017.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-019",
+        "name":  "SONY FE 16-35mm F2.8 GM",
+        "nameEn":  "SONY FE 16-35mm F2.8 GM",
+        "category":  "filters",
+        "brand":  "Sony",
+        "price":  1260,
+        "oldPrice":  1411,
+        "rating":  4.9,
+        "reviewsCount":  24,
+        "stock":  9,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_019.jpg",
+        "images":  [
+                       "images/prod_len_019.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-021",
+        "name":  "SONY FE 70-200mm F2.8 GM OSS",
+        "nameEn":  "SONY FE 70-200mm F2.8 GM OSS",
+        "category":  "filters",
+        "brand":  "Sony",
+        "price":  1370,
+        "oldPrice":  1534,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  11,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_021.jpg",
+        "images":  [
+                       "images/prod_len_021.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-029",
+        "name":  "SONY E 18-135mm F3.5-5.6 OSS",
+        "nameEn":  "SONY E 18-135mm F3.5-5.6 OSS",
+        "category":  "filters",
+        "brand":  "Sony",
+        "price":  420,
+        "oldPrice":  470,
+        "rating":  4.9,
+        "reviewsCount":  29,
+        "stock":  7,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_029.jpg",
+        "images":  [
+                       "images/prod_len_029.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-030",
+        "name":  "SONY FE 24-105mm F4 G OSS Lens",
+        "nameEn":  "SONY FE 24-105mm F4 G OSS Lens",
+        "category":  "filters",
+        "brand":  "Sony",
+        "price":  650,
+        "oldPrice":  728,
+        "rating":  4.9,
+        "reviewsCount":  34,
+        "stock":  7,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_030.jpg",
+        "images":  [
+                       "images/prod_len_030.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-031",
+        "name":  "SONYFE 85mm F1.8",
+        "nameEn":  "SONYFE 85mm F1.8",
+        "category":  "filters",
+        "brand":  "Sony",
+        "price":  400,
+        "oldPrice":  448,
+        "rating":  4.9,
+        "reviewsCount":  30,
+        "stock":  7,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_031.jpg",
+        "images":  [
+                       "images/prod_len_031.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-033",
+        "name":  "SIGMA 24-70mm F2.8 DG DN II for SONY",
+        "nameEn":  "SIGMA 24-70mm F2.8 DG DN II for SONY",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  820,
+        "oldPrice":  918,
+        "rating":  4.9,
+        "reviewsCount":  54,
+        "stock":  8,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_033.jpg",
+        "images":  [
+                       "images/prod_len_033.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-034",
+        "name":  "SIGMA 24mm F/1.4 DG DN",
+        "nameEn":  "SIGMA 24mm F/1.4 DG DN",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  600,
+        "oldPrice":  672,
+        "rating":  4.9,
+        "reviewsCount":  46,
+        "stock":  11,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_034.jpg",
+        "images":  [
+                       "images/prod_len_034.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-035",
+        "name":  "SIGMA 35MM F 1.4 DG DN",
+        "nameEn":  "SIGMA 35MM F 1.4 DG DN",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  660,
+        "oldPrice":  739,
+        "rating":  4.9,
+        "reviewsCount":  28,
+        "stock":  11,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_035.jpg",
+        "images":  [
+                       "images/prod_len_035.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-036",
+        "name":  "SIGMA 50mm f/1.4 DG HSM Art",
+        "nameEn":  "SIGMA 50mm f/1.4 DG HSM Art",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  660,
+        "oldPrice":  739,
+        "rating":  4.9,
+        "reviewsCount":  30,
+        "stock":  3,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_036.jpg",
+        "images":  [
+                       "images/prod_len_036.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-037",
+        "name":  "SIGMA 14-24mm f/2.8 DG DN Art",
+        "nameEn":  "SIGMA 14-24mm f/2.8 DG DN Art",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  1040,
+        "oldPrice":  1165,
+        "rating":  4.9,
+        "reviewsCount":  40,
+        "stock":  3,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_037.jpg",
+        "images":  [
+                       "images/prod_len_037.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-038",
+        "name":  "SIGMA 16mm f/1.4 DG DN",
+        "nameEn":  "SIGMA 16mm f/1.4 DG DN",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  330,
+        "oldPrice":  370,
+        "rating":  4.9,
+        "reviewsCount":  20,
+        "stock":  9,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_038.jpg",
+        "images":  [
+                       "images/prod_len_038.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-039",
+        "name":  "SIGMA 18-50mm f/2.8 DC DN Contemporary",
+        "nameEn":  "SIGMA 18-50mm f/2.8 DC DN Contemporary",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  420,
+        "oldPrice":  470,
+        "rating":  4.9,
+        "reviewsCount":  25,
+        "stock":  3,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_039.jpg",
+        "images":  [
+                       "images/prod_len_039.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-040",
+        "name":  "SIGMA 85mm f/1.4 DG DN Art",
+        "nameEn":  "SIGMA 85mm f/1.4 DG DN Art",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  740,
+        "oldPrice":  829,
+        "rating":  4.9,
+        "reviewsCount":  24,
+        "stock":  10,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_040.jpg",
+        "images":  [
+                       "images/prod_len_040.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-041",
+        "name":  "SIGMA 28-70MM F/2.8  DG DN",
+        "nameEn":  "SIGMA 28-70MM F/2.8  DG DN",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  630,
+        "oldPrice":  706,
+        "rating":  4.9,
+        "reviewsCount":  35,
+        "stock":  10,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_041.jpg",
+        "images":  [
+                       "images/prod_len_041.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-124",
+        "name":  "Canon rf 50mm f/1.8 STM",
+        "nameEn":  "Canon rf 50mm f/1.8 STM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  170,
+        "oldPrice":  190,
+        "rating":  4.9,
+        "reviewsCount":  48,
+        "stock":  6,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_124.jpg",
+        "images":  [
+                       "images/prod_len_124.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-125",
+        "name":  "Canon rf 16mm f/2.8 STM",
+        "nameEn":  "Canon rf 16mm f/2.8 STM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  250,
+        "oldPrice":  280,
+        "rating":  4.9,
+        "reviewsCount":  17,
+        "stock":  6,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_125.jpg",
+        "images":  [
+                       "images/prod_len_125.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-126",
+        "name":  "Canon rf 35mm f/1.8 IS Macro STM",
+        "nameEn":  "Canon rf 35mm f/1.8 IS Macro STM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  410,
+        "oldPrice":  459,
+        "rating":  4.9,
+        "reviewsCount":  42,
+        "stock":  10,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_126.jpg",
+        "images":  [
+                       "images/prod_len_126.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-127",
+        "name":  "Canon rf 85mm f/2 IS Macro STM",
+        "nameEn":  "Canon rf 85mm f/2 IS Macro STM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  460,
+        "oldPrice":  515,
+        "rating":  4.9,
+        "reviewsCount":  51,
+        "stock":  11,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_127.jpg",
+        "images":  [
+                       "images/prod_len_127.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-128",
+        "name":  "Canon rf 24-105mm f/4-7.1 IS STM",
+        "nameEn":  "Canon rf 24-105mm f/4-7.1 IS STM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  370,
+        "oldPrice":  414,
+        "rating":  4.9,
+        "reviewsCount":  36,
+        "stock":  5,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_128.jpg",
+        "images":  [
+                       "images/prod_len_128.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-129",
+        "name":  "Canon rf 24-105mm f/4L IS USM",
+        "nameEn":  "Canon rf 24-105mm f/4L IS USM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  900,
+        "oldPrice":  1008,
+        "rating":  4.9,
+        "reviewsCount":  53,
+        "stock":  8,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_129.jpg",
+        "images":  [
+                       "images/prod_len_129.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-130",
+        "name":  "Canon rf 24-105mm f/2.8L IS USM",
+        "nameEn":  "Canon rf 24-105mm f/2.8L IS USM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  2420,
+        "oldPrice":  2710,
+        "rating":  4.9,
+        "reviewsCount":  42,
+        "stock":  7,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_130.jpg",
+        "images":  [
+                       "images/prod_len_130.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-131",
+        "name":  "Canon rf 24-240mm f/4-6.3 IS USM",
+        "nameEn":  "Canon rf 24-240mm f/4-6.3 IS USM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  730,
+        "oldPrice":  818,
+        "rating":  4.9,
+        "reviewsCount":  35,
+        "stock":  8,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_131.jpg",
+        "images":  [
+                       "images/prod_len_131.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-LEN-132",
+        "name":  "canon rf 15-35mm f/2.8L IS USM",
+        "nameEn":  "canon rf 15-35mm f/2.8L IS USM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  1500,
+        "oldPrice":  1680,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  7,
+        "badge":  "عدسة بصرية فائقة",
+        "image":  "images/prod_len_132.jpg",
+        "images":  [
+                       "images/prod_len_132.jpg"
+                   ],
+        "description":  "عدسة بصرية يابانية عالية الجودة تمنح حدة استثنائية من المركز للأطراف مع فتحة عدسة سريعة تتيح التصوير في الإضاءة الخافتة بعزل بصري سينمائي ناعم، ومحرك تركيز فائق السرعة والهدوء.",
+        "specs":  {
+                      "البصريات":  "عناصر زجاجية متعددة الطبقات لمنع التشتت والوهج",
+                      "التركيز":  "محرك خطي سريع وصامت للصور والفيديو",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-331",
+        "name":  "SmallRig Advanced Cage Kit with Battery Plate for Sony FX2 5590",
+        "nameEn":  "SmallRig Advanced Cage Kit with Battery Plate for Sony FX2 5590",
+        "category":  "chargers_batteries",
+        "brand":  "SmallRig",
+        "price":  200,
+        "oldPrice":  224,
+        "rating":  4.9,
+        "reviewsCount":  22,
+        "stock":  7,
+        "badge":  "طاقة سينمائية",
+        "image":  "images/prod_acc_331.jpg",
+        "images":  [
+                       "images/prod_acc_331.jpg"
+                   ],
+        "description":  "بطارية سينمائية متطورة V-Mount وشواحن احترافية تمنح طاقة مستقرة للكاميرات والشاشات ووحدات الإرسال طوال يوم التصوير، مع دعم الشحن السريع عبر USB-C PD وحماية متكاملة من زيادة الجهد.",
+        "specs":  {
+                      "المنافذ":  "D-Tap + USB-C PD + DC Outputs",
+                      "الحماية":  "شريحة BMS ذكية لمنع ارتفاع الحرارة والشحن الزائد",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-340",
+        "name":  "SmallRig V Mount Battery Plate with Adjustable Arm 2991",
+        "nameEn":  "SmallRig V Mount Battery Plate with Adjustable Arm 2991",
+        "category":  "chargers_batteries",
+        "brand":  "SmallRig",
+        "price":  65,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  17,
+        "stock":  3,
+        "badge":  "طاقة سينمائية",
+        "image":  "images/prod_acc_340.jpg",
+        "images":  [
+                       "images/prod_acc_340.jpg"
+                   ],
+        "description":  "بطارية سينمائية متطورة V-Mount وشواحن احترافية تمنح طاقة مستقرة للكاميرات والشاشات ووحدات الإرسال طوال يوم التصوير، مع دعم الشحن السريع عبر USB-C PD وحماية متكاملة من زيادة الجهد.",
+        "specs":  {
+                      "المنافذ":  "D-Tap + USB-C PD + DC Outputs",
+                      "الحماية":  "شريحة BMS ذكية لمنع ارتفاع الحرارة والشحن الزائد",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-342",
+        "name":  "SmallRig VB50 mini V Mount Battery 50Wh 3579B",
+        "nameEn":  "SmallRig VB50 mini V Mount Battery 50Wh 3579B",
+        "category":  "chargers_batteries",
+        "brand":  "SmallRig",
+        "price":  120,
+        "oldPrice":  134,
+        "rating":  4.9,
+        "reviewsCount":  17,
+        "stock":  5,
+        "badge":  "طاقة سينمائية",
+        "image":  "images/prod_acc_342.jpg",
+        "images":  [
+                       "images/prod_acc_342.jpg"
+                   ],
+        "description":  "بطارية سينمائية متطورة V-Mount وشواحن احترافية تمنح طاقة مستقرة للكاميرات والشاشات ووحدات الإرسال طوال يوم التصوير، مع دعم الشحن السريع عبر USB-C PD وحماية متكاملة من زيادة الجهد.",
+        "specs":  {
+                      "المنافذ":  "D-Tap + USB-C PD + DC Outputs",
+                      "الحماية":  "شريحة BMS ذكية لمنع ارتفاع الحرارة والشحن الزائد",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-042",
+        "name":  "RODE GO II (Double)",
+        "nameEn":  "RODE GO II (Double)",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  195,
+        "oldPrice":  218,
+        "rating":  4.9,
+        "reviewsCount":  57,
+        "stock":  10,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_042.jpg",
+        "images":  [
+                       "images/prod_aud_042.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-043",
+        "name":  "RODE INTERVIEW",
+        "nameEn":  "RODE INTERVIEW",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  40,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  43,
+        "stock":  7,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_043.jpg",
+        "images":  [
+                       "images/prod_aud_043.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-046",
+        "name":  "RODE NT1-A",
+        "nameEn":  "RODE NT1-A",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  210,
+        "oldPrice":  235,
+        "rating":  4.9,
+        "reviewsCount":  25,
+        "stock":  6,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_046.jpg",
+        "images":  [
+                       "images/prod_aud_046.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-047",
+        "name":  "RODE Mic NT-USB Plus",
+        "nameEn":  "RODE Mic NT-USB Plus",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  170,
+        "oldPrice":  190,
+        "rating":  4.9,
+        "reviewsCount":  43,
+        "stock":  7,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_047.jpg",
+        "images":  [
+                       "images/prod_aud_047.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-049",
+        "name":  "RODE POD MIC",
+        "nameEn":  "RODE POD MIC",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  100,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  55,
+        "stock":  7,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_049.jpg",
+        "images":  [
+                       "images/prod_aud_049.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-050",
+        "name":  "RODE PSA1",
+        "nameEn":  "RODE PSA1",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  110,
+        "oldPrice":  123,
+        "rating":  4.9,
+        "reviewsCount":  31,
+        "stock":  3,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_050.jpg",
+        "images":  [
+                       "images/prod_aud_050.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-051",
+        "name":  "RODE PSA1+ Black",
+        "nameEn":  "RODE PSA1+ Black",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  145,
+        "oldPrice":  162,
+        "rating":  4.9,
+        "reviewsCount":  46,
+        "stock":  9,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_051.jpg",
+        "images":  [
+                       "images/prod_aud_051.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-053",
+        "name":  "RODE Procaster Dynamic mic",
+        "nameEn":  "RODE Procaster Dynamic mic",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  200,
+        "oldPrice":  224,
+        "rating":  4.9,
+        "reviewsCount":  25,
+        "stock":  5,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_053.jpg",
+        "images":  [
+                       "images/prod_aud_053.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-054",
+        "name":  "RODE RODE Wireless Go III",
+        "nameEn":  "RODE RODE Wireless Go III",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  240,
+        "oldPrice":  269,
+        "rating":  4.9,
+        "reviewsCount":  38,
+        "stock":  3,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_054.jpg",
+        "images":  [
+                       "images/prod_aud_054.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-055",
+        "name":  "RODE RODE Wireless Micro",
+        "nameEn":  "RODE RODE Wireless Micro",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  110,
+        "oldPrice":  123,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  4,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_055.jpg",
+        "images":  [
+                       "images/prod_aud_055.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-056",
+        "name":  "RODE XCM-50",
+        "nameEn":  "RODE XCM-50",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  120,
+        "oldPrice":  134,
+        "rating":  4.9,
+        "reviewsCount":  20,
+        "stock":  6,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_056.jpg",
+        "images":  [
+                       "images/prod_aud_056.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-057",
+        "name":  "RODE XDM-100",
+        "nameEn":  "RODE XDM-100",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  170,
+        "oldPrice":  190,
+        "rating":  4.9,
+        "reviewsCount":  49,
+        "stock":  3,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_057.jpg",
+        "images":  [
+                       "images/prod_aud_057.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-058",
+        "name":  "RODE PRO 2-Person",
+        "nameEn":  "RODE PRO 2-Person",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  290,
+        "oldPrice":  325,
+        "rating":  4.9,
+        "reviewsCount":  18,
+        "stock":  8,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_058.jpg",
+        "images":  [
+                       "images/prod_aud_058.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-059",
+        "name":  "RODE Caster Pro II",
+        "nameEn":  "RODE Caster Pro II",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  540,
+        "oldPrice":  605,
+        "rating":  4.9,
+        "reviewsCount":  16,
+        "stock":  11,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_059.jpg",
+        "images":  [
+                       "images/prod_aud_059.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-060",
+        "name":  "RODE Caster Duo",
+        "nameEn":  "RODE Caster Duo",
+        "category":  "audio",
+        "brand":  "RODE",
+        "price":  450,
+        "oldPrice":  504,
+        "rating":  4.9,
+        "reviewsCount":  57,
+        "stock":  4,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_060.jpg",
+        "images":  [
+                       "images/prod_aud_060.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-061",
+        "name":  "Hollyland Lark A1 Combo",
+        "nameEn":  "Hollyland Lark A1 Combo",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  80,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  43,
+        "stock":  4,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_061.jpg",
+        "images":  [
+                       "images/prod_aud_061.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-062",
+        "name":  "Hollyland Lark A1 Type C",
+        "nameEn":  "Hollyland Lark A1 Type C",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  70,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  33,
+        "stock":  9,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_062.jpg",
+        "images":  [
+                       "images/prod_aud_062.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-063",
+        "name":  "Hollyland Lark M2S Combo",
+        "nameEn":  "Hollyland Lark M2S Combo",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  125,
+        "oldPrice":  140,
+        "rating":  4.9,
+        "reviewsCount":  48,
+        "stock":  8,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_063.jpg",
+        "images":  [
+                       "images/prod_aud_063.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-064",
+        "name":  "Hollyland Lark M2S Type-C Version",
+        "nameEn":  "Hollyland Lark M2S Type-C Version",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  110,
+        "oldPrice":  123,
+        "rating":  4.9,
+        "reviewsCount":  18,
+        "stock":  9,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_064.jpg",
+        "images":  [
+                       "images/prod_aud_064.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-065",
+        "name":  "Hollyland Hollyland Lark M2S Ultimate Combo",
+        "nameEn":  "Hollyland Hollyland Lark M2S Ultimate Combo",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  115,
+        "oldPrice":  129,
+        "rating":  4.9,
+        "reviewsCount":  33,
+        "stock":  3,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_065.jpg",
+        "images":  [
+                       "images/prod_aud_065.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-066",
+        "name":  "Hollyland LARK MAX DUO",
+        "nameEn":  "Hollyland LARK MAX DUO",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  225,
+        "oldPrice":  252,
+        "rating":  4.9,
+        "reviewsCount":  30,
+        "stock":  7,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_066.jpg",
+        "images":  [
+                       "images/prod_aud_066.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-067",
+        "name":  "Hollyland LARK MAX SOLO",
+        "nameEn":  "Hollyland LARK MAX SOLO",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  165,
+        "oldPrice":  185,
+        "rating":  4.9,
+        "reviewsCount":  29,
+        "stock":  3,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_067.jpg",
+        "images":  [
+                       "images/prod_aud_067.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-068",
+        "name":  "Hollyland Lark M2 Combo Version",
+        "nameEn":  "Hollyland Lark M2 Combo Version",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  95,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  25,
+        "stock":  10,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_068.jpg",
+        "images":  [
+                       "images/prod_aud_068.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-069",
+        "name":  "Hollyland Solidom C1 4S",
+        "nameEn":  "Hollyland Solidom C1 4S",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  1100,
+        "oldPrice":  1232,
+        "rating":  4.9,
+        "reviewsCount":  50,
+        "stock":  6,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_069.jpg",
+        "images":  [
+                       "images/prod_aud_069.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-AUD-070",
+        "name":  "Hollyland Solidom C1 6S",
+        "nameEn":  "Hollyland Solidom C1 6S",
+        "category":  "audio",
+        "brand":  "Hollyland",
+        "price":  1550,
+        "oldPrice":  1736,
+        "rating":  4.9,
+        "reviewsCount":  41,
+        "stock":  11,
+        "badge":  "صوتيات احترافية",
+        "image":  "images/prod_aud_070.jpg",
+        "images":  [
+                       "images/prod_aud_070.jpg"
+                   ],
+        "description":  "نظام صوتي وميكروفون متطور مصمم لمنح نقاء صوتي فائق واستجابة ترددية متوازنة تعزل الضوضاء المحيطة وتبرز نبرة الصوت بوضوح، مثالي للبث المباشر والبودكاست والمقابلات الميدانية.",
+        "specs":  {
+                      "الالتقاط":  "نمط قطبي دقيق عازل لصدى الغرفة والضوضاء",
+                      "الاتصال":  "توصيل سريع ومستقر مع استجابة ترددية واسعة",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-330",
+        "name":  "SmallRig HawkLock Quick Release Advanced Cage Kit for Sony a7R V",
+        "nameEn":  "SmallRig HawkLock Quick Release Advanced Cage Kit for Sony a7R V",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  230,
+        "oldPrice":  258,
+        "rating":  4.9,
+        "reviewsCount":  45,
+        "stock":  11,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_330.jpg",
+        "images":  [
+                       "images/prod_acc_330.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-332",
+        "name":  "SmallRig Sunhood for Sony a7S III/a7C/ZV-1/FX3 Camera 3206",
+        "nameEn":  "SmallRig Sunhood for Sony a7S III/a7C/ZV-1/FX3 Camera 3206",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  25,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  17,
+        "stock":  6,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_332.jpg",
+        "images":  [
+                       "images/prod_acc_332.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-333",
+        "name":  "SmallRig Arca-Type Quick Release Phone Support for DJI RS 4 Mini/RS 3 Mini 5338",
+        "nameEn":  "SmallRig Arca-Type Quick Release Phone Support for DJI RS 4 Mini/RS 3 Mini 5338",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  25,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  24,
+        "stock":  5,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_333.jpg",
+        "images":  [
+                       "images/prod_acc_333.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-334",
+        "name":  "SmallRig Monitor Mounting Support with NATO Clamp for DJI RS 2 / RSC 2 / RS 3 / RS 3 Pro /RS 3 Mini / RS 4 / RS 4 Pro / RS 4 Mini 3026B",
+        "nameEn":  "SmallRig Monitor Mounting Support with NATO Clamp for DJI RS 2 / RSC 2 / RS 3 / RS 3 Pro /RS 3 Mini / RS 4 / RS 4 Pro / RS 4 Mini 3026B",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  70,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  43,
+        "stock":  11,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_334.jpg",
+        "images":  [
+                       "images/prod_acc_334.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-335",
+        "name":  "SmallRig HawkLock H21 Quick Release Rosette Magic Arm (11) 4489",
+        "nameEn":  "SmallRig HawkLock H21 Quick Release Rosette Magic Arm (11) 4489",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  85,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  20,
+        "stock":  6,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_335.jpg",
+        "images":  [
+                       "images/prod_acc_335.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-336",
+        "name":  "SmallRig HawkLock H21 Quick Release Rosette Magic  Arm (7) 4490",
+        "nameEn":  "SmallRig HawkLock H21 Quick Release Rosette Magic  Arm (7) 4490",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  55,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  28,
+        "stock":  4,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_336.jpg",
+        "images":  [
+                       "images/prod_acc_336.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-337",
+        "name":  "SmallRig Cycling Camera Mount 5459",
+        "nameEn":  "SmallRig Cycling Camera Mount 5459",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  80,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  11,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_337.jpg",
+        "images":  [
+                       "images/prod_acc_337.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-338",
+        "name":  "SmallRig Cage for Sony FX2 5587",
+        "nameEn":  "SmallRig Cage for Sony FX2 5587",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  90,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  34,
+        "stock":  4,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_338.jpg",
+        "images":  [
+                       "images/prod_acc_338.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-347",
+        "name":  "SmallRig Camera Cage with Right-Side Handgrip for Sony ZV-E10  4293",
+        "nameEn":  "SmallRig Camera Cage with Right-Side Handgrip for Sony ZV-E10  4293",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  45,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  35,
+        "stock":  7,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_347.jpg",
+        "images":  [
+                       "images/prod_acc_347.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-349",
+        "name":  "SmallRig Black Mamba Camera Cage for Canon EOS R5 Mark II 4975",
+        "nameEn":  "SmallRig Black Mamba Camera Cage for Canon EOS R5 Mark II 4975",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  70,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  53,
+        "stock":  4,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_349.jpg",
+        "images":  [
+                       "images/prod_acc_349.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-351",
+        "name":  "SmallRig Cage for Canon EOS R Camera CCC2803",
+        "nameEn":  "SmallRig Cage for Canon EOS R Camera CCC2803",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  50,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  49,
+        "stock":  11,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_351.jpg",
+        "images":  [
+                       "images/prod_acc_351.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-353",
+        "name":  "SmallRig Camera Cage with Silicone Handgrip for Sony a6400/a6300/a6100  3164B",
+        "nameEn":  "SmallRig Camera Cage with Silicone Handgrip for Sony a6400/a6300/a6100  3164B",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  50,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  20,
+        "stock":  5,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_353.jpg",
+        "images":  [
+                       "images/prod_acc_353.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-354",
+        "name":  "SmallRig Advanced Cage Kit for Sony a7R V",
+        "nameEn":  "SmallRig Advanced Cage Kit for Sony a7R V",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  145,
+        "oldPrice":  162,
+        "rating":  4.9,
+        "reviewsCount":  40,
+        "stock":  10,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_354.jpg",
+        "images":  [
+                       "images/prod_acc_354.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-355",
+        "name":  "SmallRig Camera Cage for Canon 5D Mark III or 5D Mark IV  CCC2271",
+        "nameEn":  "SmallRig Camera Cage for Canon 5D Mark III or 5D Mark IV  CCC2271",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  60,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  28,
+        "stock":  10,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_355.jpg",
+        "images":  [
+                       "images/prod_acc_355.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-356",
+        "name":  "SmallRig Camera Cage for Sony FX30 and FX3  4183B",
+        "nameEn":  "SmallRig Camera Cage for Sony FX30 and FX3  4183B",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  80,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  26,
+        "stock":  4,
+        "badge":  "تجهيزات ريج",
+        "image":  "images/prod_acc_356.jpg",
+        "images":  [
+                       "images/prod_acc_356.jpg"
+                   ],
+        "description":  "قفص حماية وملحقات تثبيت مصنعة من سبائك الألومنيوم المقوى CNC توفر حماية متكاملة لجسم الكاميرا ونقاط تثبيت متعددة للشاشات والميكروفونات مع قاعدة سريعة التركيب المتوافقة مع الترايبود.",
+        "specs":  {
+                      "المادة":  "سبائك ألومنيوم CNC Anodized خفيفة الوزن وفائقة الصلابة",
+                      "نقاط التثبيت":  "فتحات 1/4-20 و 3/8-16 و Cold Shoe مدمج",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-STN-300",
+        "name":  "Dolly wheels VX-600",
+        "nameEn":  "Dolly wheels VX-600",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  30,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  22,
+        "stock":  6,
+        "badge":  "ستاند وترايبود",
+        "image":  "images/prod_stn_300.jpg",
+        "images":  [
+                       "images/prod_stn_300.jpg"
+                   ],
+        "description":  "منظومة تثبيت وترايبود احترافية مصممة للخدمة الشاقة توفر ثباتاً مطلقاً في الاستوديو والمواقع الخارجية، مع رأس هايدروليك ناعم للحركة البانورامية 360 درجة وأقفال سريعة.",
+        "specs":  {
+                      "المادة":  "ألومنيوم مقوى / ألياف الكربون فايبر للتحمل الشاق",
+                      "الرأس":  "رأس هايدروليك سلس للحركة الأفقية والرأسية",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-STN-301",
+        "name":  "Monopod MP208F + VT1510",
+        "nameEn":  "Monopod MP208F + VT1510",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  60,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  46,
+        "stock":  8,
+        "badge":  "ستاند وترايبود",
+        "image":  "images/prod_stn_301.jpg",
+        "images":  [
+                       "images/prod_stn_301.jpg"
+                   ],
+        "description":  "منظومة تثبيت وترايبود احترافية مصممة للخدمة الشاقة توفر ثباتاً مطلقاً في الاستوديو والمواقع الخارجية، مع رأس هايدروليك ناعم للحركة البانورامية 360 درجة وأقفال سريعة.",
+        "specs":  {
+                      "المادة":  "ألومنيوم مقوى / ألياف الكربون فايبر للتحمل الشاق",
+                      "الرأس":  "رأس هايدروليك سلس للحركة الأفقية والرأسية",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-STN-302",
+        "name":  "Monopod MP4208F Fiber +VT-3510",
+        "nameEn":  "Monopod MP4208F Fiber +VT-3510",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  110,
+        "oldPrice":  123,
+        "rating":  4.9,
+        "reviewsCount":  50,
+        "stock":  9,
+        "badge":  "ستاند وترايبود",
+        "image":  "images/prod_stn_302.jpg",
+        "images":  [
+                       "images/prod_stn_302.jpg"
+                   ],
+        "description":  "منظومة تثبيت وترايبود احترافية مصممة للخدمة الشاقة توفر ثباتاً مطلقاً في الاستوديو والمواقع الخارجية، مع رأس هايدروليك ناعم للحركة البانورامية 360 درجة وأقفال سريعة.",
+        "specs":  {
+                      "المادة":  "ألومنيوم مقوى / ألياف الكربون فايبر للتحمل الشاق",
+                      "الرأس":  "رأس هايدروليك سلس للحركة الأفقية والرأسية",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-STN-303",
+        "name":  "Monopod MP208F",
+        "nameEn":  "Monopod MP208F",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  40,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  46,
+        "stock":  3,
+        "badge":  "ستاند وترايبود",
+        "image":  "images/prod_stn_303.jpg",
+        "images":  [
+                       "images/prod_stn_303.jpg"
+                   ],
+        "description":  "منظومة تثبيت وترايبود احترافية مصممة للخدمة الشاقة توفر ثباتاً مطلقاً في الاستوديو والمواقع الخارجية، مع رأس هايدروليك ناعم للحركة البانورامية 360 درجة وأقفال سريعة.",
+        "specs":  {
+                      "المادة":  "ألومنيوم مقوى / ألياف الكربون فايبر للتحمل الشاق",
+                      "الرأس":  "رأس هايدروليك سلس للحركة الأفقية والرأسية",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-STN-304",
+        "name":  "Monopod MP308",
+        "nameEn":  "Monopod MP308",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  45,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  39,
+        "stock":  7,
+        "badge":  "ستاند وترايبود",
+        "image":  "images/prod_stn_304.jpg",
+        "images":  [
+                       "images/prod_stn_304.jpg"
+                   ],
+        "description":  "منظومة تثبيت وترايبود احترافية مصممة للخدمة الشاقة توفر ثباتاً مطلقاً في الاستوديو والمواقع الخارجية، مع رأس هايدروليك ناعم للحركة البانورامية 360 درجة وأقفال سريعة.",
+        "specs":  {
+                      "المادة":  "ألومنيوم مقوى / ألياف الكربون فايبر للتحمل الشاق",
+                      "الرأس":  "رأس هايدروليك سلس للحركة الأفقية والرأسية",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-STN-305",
+        "name":  "Monopod MP1008F",
+        "nameEn":  "Monopod MP1008F",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  35,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  44,
+        "stock":  3,
+        "badge":  "ستاند وترايبود",
+        "image":  "images/prod_stn_305.jpg",
+        "images":  [
+                       "images/prod_stn_305.jpg"
+                   ],
+        "description":  "منظومة تثبيت وترايبود احترافية مصممة للخدمة الشاقة توفر ثباتاً مطلقاً في الاستوديو والمواقع الخارجية، مع رأس هايدروليك ناعم للحركة البانورامية 360 درجة وأقفال سريعة.",
+        "specs":  {
+                      "المادة":  "ألومنيوم مقوى / ألياف الكربون فايبر للتحمل الشاق",
+                      "الرأس":  "رأس هايدروليك سلس للحركة الأفقية والرأسية",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-STN-306",
+        "name":  "Monopod MP408FL",
+        "nameEn":  "Monopod MP408FL",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  55,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  35,
+        "stock":  6,
+        "badge":  "ستاند وترايبود",
+        "image":  "images/prod_stn_306.jpg",
+        "images":  [
+                       "images/prod_stn_306.jpg"
+                   ],
+        "description":  "منظومة تثبيت وترايبود احترافية مصممة للخدمة الشاقة توفر ثباتاً مطلقاً في الاستوديو والمواقع الخارجية، مع رأس هايدروليك ناعم للحركة البانورامية 360 درجة وأقفال سريعة.",
+        "specs":  {
+                      "المادة":  "ألومنيوم مقوى / ألياف الكربون فايبر للتحمل الشاق",
+                      "الرأس":  "رأس هايدروليك سلس للحركة الأفقية والرأسية",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-449",
+        "name":  "Desview T22 Teleprompter",
+        "nameEn":  "Desview T22 Teleprompter",
+        "category":  "monitors",
+        "brand":  "Desview",
+        "price":  600,
+        "oldPrice":  672,
+        "rating":  4.9,
+        "reviewsCount":  52,
+        "stock":  4,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_449.jpg",
+        "images":  [
+                       "images/prod_mon_449.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-450",
+        "name":  "Desview T17 Teleprompter",
+        "nameEn":  "Desview T17 Teleprompter",
+        "category":  "monitors",
+        "brand":  "Desview",
+        "price":  450,
+        "oldPrice":  504,
+        "rating":  4.9,
+        "reviewsCount":  53,
+        "stock":  11,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_450.jpg",
+        "images":  [
+                       "images/prod_mon_450.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-451",
+        "name":  "Desview TP170 Teleprompter",
+        "nameEn":  "Desview TP170 Teleprompter",
+        "category":  "monitors",
+        "brand":  "Desview",
+        "price":  355,
+        "oldPrice":  398,
+        "rating":  4.9,
+        "reviewsCount":  48,
+        "stock":  9,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_451.jpg",
+        "images":  [
+                       "images/prod_mon_451.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-455",
+        "name":  "Desview T2 Teleprompter",
+        "nameEn":  "Desview T2 Teleprompter",
+        "category":  "monitors",
+        "brand":  "Desview",
+        "price":  100,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  25,
+        "stock":  11,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_455.jpg",
+        "images":  [
+                       "images/prod_mon_455.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-456",
+        "name":  "Desview t12 Teleprompter",
+        "nameEn":  "Desview t12 Teleprompter",
+        "category":  "monitors",
+        "brand":  "Desview",
+        "price":  175,
+        "oldPrice":  196,
+        "rating":  4.9,
+        "reviewsCount":  30,
+        "stock":  4,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_456.jpg",
+        "images":  [
+                       "images/prod_mon_456.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-457",
+        "name":  "Desview t22 double monitor Teleprompter",
+        "nameEn":  "Desview t22 double monitor Teleprompter",
+        "category":  "monitors",
+        "brand":  "Desview",
+        "price":  700,
+        "oldPrice":  784,
+        "rating":  4.9,
+        "reviewsCount":  53,
+        "stock":  11,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_457.jpg",
+        "images":  [
+                       "images/prod_mon_457.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-458",
+        "name":  "Desview P5II",
+        "nameEn":  "Desview P5II",
+        "category":  "monitors",
+        "brand":  "Desview",
+        "price":  120,
+        "oldPrice":  134,
+        "rating":  4.9,
+        "reviewsCount":  42,
+        "stock":  7,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_458.jpg",
+        "images":  [
+                       "images/prod_mon_458.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-459",
+        "name":  "Desview R7III",
+        "nameEn":  "Desview R7III",
+        "category":  "monitors",
+        "brand":  "Desview",
+        "price":  215,
+        "oldPrice":  241,
+        "rating":  4.9,
+        "reviewsCount":  54,
+        "stock":  5,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_459.jpg",
+        "images":  [
+                       "images/prod_mon_459.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-460",
+        "name":  "Desview R7S III",
+        "nameEn":  "Desview R7S III",
+        "category":  "monitors",
+        "brand":  "Desview",
+        "price":  245,
+        "oldPrice":  274,
+        "rating":  4.9,
+        "reviewsCount":  38,
+        "stock":  7,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_460.jpg",
+        "images":  [
+                       "images/prod_mon_460.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-461",
+        "name":  "LENSGO TC7 Teleprompter",
+        "nameEn":  "LENSGO TC7 Teleprompter",
+        "category":  "monitors",
+        "brand":  "Lensgo",
+        "price":  54,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  49,
+        "stock":  5,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_461.jpg",
+        "images":  [
+                       "images/prod_mon_461.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-462",
+        "name":  "LENSGO TC7S Teleprompter",
+        "nameEn":  "LENSGO TC7S Teleprompter",
+        "category":  "monitors",
+        "brand":  "Lensgo",
+        "price":  40,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  30,
+        "stock":  8,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_462.jpg",
+        "images":  [
+                       "images/prod_mon_462.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-463",
+        "name":  "LENSGO TC7II Teleprompter 7.9 (Camera Kit)",
+        "nameEn":  "LENSGO TC7II Teleprompter 7.9 (Camera Kit)",
+        "category":  "monitors",
+        "brand":  "Lensgo",
+        "price":  45,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  56,
+        "stock":  4,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_463.jpg",
+        "images":  [
+                       "images/prod_mon_463.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-464",
+        "name":  "LENSGO TC7II Teleprompter 7.9 (Ultimate Kit) for Phone \u0026 Canera",
+        "nameEn":  "LENSGO TC7II Teleprompter 7.9 (Ultimate Kit) for Phone \u0026 Canera",
+        "category":  "monitors",
+        "brand":  "Lensgo",
+        "price":  60,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  28,
+        "stock":  9,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_464.jpg",
+        "images":  [
+                       "images/prod_mon_464.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-465",
+        "name":  "LENSGO TC12 12.9 Teleprompter",
+        "nameEn":  "LENSGO TC12 12.9 Teleprompter",
+        "category":  "monitors",
+        "brand":  "Lensgo",
+        "price":  70,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  33,
+        "stock":  7,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_465.jpg",
+        "images":  [
+                       "images/prod_mon_465.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-MON-466",
+        "name":  "Seetec atem173s 4 sdi (17.3 inch)",
+        "nameEn":  "Seetec atem173s 4 sdi (17.3 inch)",
+        "category":  "monitors",
+        "brand":  "Seetec",
+        "price":  1350,
+        "oldPrice":  1512,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  6,
+        "badge":  "شاشة مراقبة",
+        "image":  "images/prod_mon_466.jpg",
+        "images":  [
+                       "images/prod_mon_466.jpg"
+                   ],
+        "description":  "شاشة مراقبة وتلقين احترافية عالية السطوع تمنح رؤية واضحة لأدق تفاصيل الكادر وأدوات مساعدة سينمائية متقدمة تشمل الويف فورم و 3D LUT مع زجاج مقسم للضوء فائق النفاذية في أجهزة التلقين.",
+        "specs":  {
+                      "الشاشة":  "IPS High Brightness Display مع دعم 4K HDMI",
+                      "الميزات":  "Focus Peaking و False Color و Waveform",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-406",
+        "name":  "Ulanzi OM-01 Multi function bag",
+        "nameEn":  "Ulanzi OM-01 Multi function bag",
+        "category":  "bags",
+        "brand":  "Ulanzi",
+        "price":  50,
+        "oldPrice":  null,
+        "rating":  4.9,
+        "reviewsCount":  30,
+        "stock":  10,
+        "badge":  "حقيبة مصورين",
+        "image":  "images/prod_acc_406.jpg",
+        "images":  [
+                       "images/prod_acc_406.jpg"
+                   ],
+        "description":  "حقيبة ظهر احترافية مصنوعة من خامات مقاومة للماء والتمزق مع تقسيمات داخلية مبطنة وقابلة للتعديل لحماية الكاميرات والعدسات الثمينة، وأحزمة خارجية لحمل الترايبود براحة تامة.",
+        "specs":  {
+                      "المادة":  "Waterproof Fabric مقاوم للعوامل الجوية الصعبة",
+                      "السعة":  "مساحة واسعة لكاميرتين وعدسات متعددة مع جيب لابتوب",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  }
+    },
+    {
+        "id":  "EX2-ACC-407",
+        "name":  "ulanzi backpack bp04",
+        "nameEn":  "ulanzi backpack bp04",
+        "category":  "bags",
+        "brand":  "Ulanzi",
+        "price":  130,
+        "oldPrice":  146,
+        "rating":  4.9,
+        "reviewsCount":  52,
+        "stock":  11,
+        "badge":  "حقيبة مصورين",
+        "image":  "images/prod_acc_407.jpg",
+        "images":  [
+                       "images/prod_acc_407.jpg"
+                   ],
+        "description":  "حقيبة ظهر احترافية مصنوعة من خامات مقاومة للماء والتمزق مع تقسيمات داخلية مبطنة وقابلة للتعديل لحماية الكاميرات والعدسات الثمينة، وأحزمة خارجية لحمل الترايبود براحة تامة.",
+        "specs":  {
+                      "المادة":  "Waterproof Fabric مقاوم للعوامل الجوية الصعبة",
+                      "السعة":  "مساحة واسعة لكاميرتين وعدسات متعددة مع جيب لابتوب",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد"
                   }
     }

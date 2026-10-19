@@ -2,7 +2,7 @@
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
-  PRODUCTS: 'camera_store_products_v14_100_authentic_gear',
+  PRODUCTS: 'camera_store_products_v15_332_full_catalog',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',
@@ -138,7 +138,11 @@ class StoreDB {
         });
       }
     }
-    localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(currentProds));
+    try {
+      localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(currentProds));
+    } catch (e) {
+      console.warn('localStorage setItem failed:', e);
+    }
 
     // 2. تهيئة الطلبات الأولية
     if (!localStorage.getItem(STORE_KEYS.ORDERS)) {
@@ -260,7 +264,9 @@ class StoreDB {
       const data = localStorage.getItem(STORE_KEYS.PRODUCTS);
       if (data) {
         const parsed = JSON.parse(data);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed) && typeof INITIAL_PRODUCTS !== 'undefined' && parsed.length >= INITIAL_PRODUCTS.length) {
+          return parsed;
+        }
       }
       return typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : [];
     } catch (e) {

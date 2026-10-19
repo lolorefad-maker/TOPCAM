@@ -547,11 +547,11 @@
     <!-- Section Top Bar -->
     <div class="flex items-center justify-between mb-3 sm:mb-4">
       <div>
-        <h2 id="productsSectionTitle" class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">Trending Products</h2>
-        <p id="productsSectionSubtitle" class="text-[11px] text-slate-500 mt-0.5">تشكيلة مختارة من أفضل معدات التصوير والسينما</p>
+        <h2 id="productsSectionTitle" class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">جميع المعدات والأنظمة السينمائية والتصوير</h2>
+        <p id="productsSectionSubtitle" class="text-[11px] text-slate-500 mt-0.5">تصفح الكتالوج الشامل لجميع الكاميرات والعدسات ومعدات الإضاءة والصوت (332 منتج أصلي)</p>
       </div>
       <a href="#" id="viewAllBtn" onclick="filterByCategory('all'); return false;" class="text-xs font-bold text-yellow-600 hover:text-yellow-700 hover:underline flex items-center gap-1">
-        <span>عرض كل المعدات (82 منتج)</span>
+        <span>عرض كل المعدات (332 منتج)</span>
         <i class="fa-solid fa-arrow-right text-[10px]"></i>
       </a>
     </div>
@@ -575,93 +575,794 @@
 
     <!-- 5 Diverse Products: 2 columns on mobile, 3 on tablet, 5 on desktop -->
     <div id="dynamicProductGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4">
-      
-      <!-- 1. Sony FX30 Cinema Camera -->
+      <!-- CAM-001: Sony A7 III - Full-frame Mirrorless Camera Body Only -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div onclick="openCameraSpecsBubble('CAM-006')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات والزوايا">
-          <img src="images/prod_sony_fx3_white.jpg" alt="Sony FX30 Cinema Camera" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+        <div onclick="openCameraSpecsBubble('CAM-001')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/cam_sony_a7iii.jpg" alt="Sony A7 III - Full-frame Mirrorless Camera Body Only" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
         </div>
         <div>
-          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono">Sony Cinema</span>
-          <h4 onclick="openCameraSpecsBubble('CAM-006')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FX30 Cinema Camera">Sony FX30 Cinema Camera</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$1,790</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ظˆظپط± $50</span>
+          <h4 onclick="openCameraSpecsBubble('CAM-001')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony A7 III - Full-frame Mirrorless Camera Body Only">Sony A7 III - Full-frame Mirrorless Camera Body Only</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1000.ToString('N0'))</div>
         </div>
-        <button onclick="addToCartMock('Sony FX30 Cinema Camera', 1790, 'images/prod_sony_fx3_white.jpg', 'CAM-006')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+        <button onclick="addToCartMock('Sony A7 III - Full-frame Mirrorless Camera Body Only', 1000, 'images/cam_sony_a7iii.jpg', 'CAM-001')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
 
-      <!-- 2. Sony FE 24-70mm f/2.8 GM II -->
+      <!-- CAM-002: Sony A7 IV - Full-frame Mirrorless Camera Body Only -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div onclick="openCameraSpecsBubble('LEN-024')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات والزوايا">
-          <img src="images/prod_sony_2470_gm2.png" alt="Sony FE 24-70mm f/2.8 GM II" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+        <div onclick="openCameraSpecsBubble('CAM-002')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/cam_sony_a7iv.jpg" alt="Sony A7 IV - Full-frame Mirrorless Camera Body Only" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
         </div>
         <div>
-          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono">Sony G Master</span>
-          <h4 onclick="openCameraSpecsBubble('LEN-024')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FE 24-70mm f/2.8 GM II">Sony FE 24-70mm F2.8 GM II</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$2,299</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ظˆظپط± $50</span>
+          <h4 onclick="openCameraSpecsBubble('CAM-002')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony A7 IV - Full-frame Mirrorless Camera Body Only">Sony A7 IV - Full-frame Mirrorless Camera Body Only</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1400.ToString('N0'))</div>
         </div>
-        <button onclick="addToCartMock('Sony FE 24-70mm F2.8 GM II', 2299, 'images/prod_sony_2470_gm2.png', 'LEN-024')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+        <button onclick="addToCartMock('Sony A7 IV - Full-frame Mirrorless Camera Body Only', 1400, 'images/cam_sony_a7iv.jpg', 'CAM-002')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
 
-      <!-- 3. DJI RS 4 Pro Gimbal -->
+      <!-- CAM-006: Sony FX30 Digital Cinema Camera -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div onclick="openCameraSpecsBubble('DJI-088')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات والزوايا">
-          <img src="images/prod_dji_rs4_pro.jpg" alt="DJI RS 4 Pro" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+        <div onclick="openCameraSpecsBubble('CAM-006')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_sony_fx3_white.jpg" alt="Sony FX30 Digital Cinema Camera" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
         </div>
         <div>
-          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono">DJI Ronin</span>
-          <h4 onclick="openCameraSpecsBubble('DJI-088')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="DJI RS 4 Pro">DJI RS 4 PRO Standard</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$869</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ظˆظپط± $70</span>
+          <h4 onclick="openCameraSpecsBubble('CAM-006')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FX30 Digital Cinema Camera">Sony FX30 Digital Cinema Camera</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1280.ToString('N0'))</div>
         </div>
-        <button onclick="addToCartMock('DJI RS 4 PRO Standard', 869, 'images/prod_dji_rs4_pro.jpg', 'DJI-088')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+        <button onclick="addToCartMock('Sony FX30 Digital Cinema Camera', 1280, 'images/prod_sony_fx3_white.jpg', 'CAM-006')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
 
-      <!-- 4. Godox SL100D Daylight LED -->
+      <!-- CAM-010: Sony ZV-E10 with 16-50mm Lens -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div onclick="openCameraSpecsBubble('LGT-149')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات والزوايا">
-          <img src="images/prod_godox_sl100d.jpg" alt="Godox SL100D" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+        <div onclick="openCameraSpecsBubble('CAM-010')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_cam_010.jpg" alt="Sony ZV-E10 with 16-50mm Lens" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
         </div>
         <div>
-          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono">Godox Lighting</span>
-          <h4 onclick="openCameraSpecsBubble('LGT-149')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Godox SL100D">Godox SL100D Video Light</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$175</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">الأكثر طلباً</span>
+          <h4 onclick="openCameraSpecsBubble('CAM-010')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony ZV-E10 with 16-50mm Lens">Sony ZV-E10 مع عدسة 16-50 مم لصناع المحتوى</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(580.ToString('N0'))</div>
         </div>
-        <button onclick="addToCartMock('Godox SL100D Video Light', 175, 'images/prod_godox_sl100d.jpg', 'LGT-149')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+        <button onclick="addToCartMock('Sony ZV-E10 مع عدسة 16-50 مم لصناع المحتوى', 580, 'images/prod_cam_010.jpg', 'CAM-010')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
 
-      <!-- 5. RØDE Wireless GO II Dual Kit -->
-      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group col-span-2 sm:col-span-1">
-        <button onclick="toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
+      <!-- CAM-012: Sony a6700 Body -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div onclick="openCameraSpecsBubble('AUD-042')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات والزوايا">
-          <img src="images/prod_rode_wigo2.png" alt="RODE GO II (Double)" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+        <div onclick="openCameraSpecsBubble('CAM-012')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_cam_012.jpg" alt="Sony a6700 Body" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
         </div>
         <div>
-          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono">RØDE Audio</span>
-          <h4 onclick="openCameraSpecsBubble('AUD-042')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="RODE GO II (Double)">RODE GO II (Double Wireless)</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">$299</div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">الجيل الأحدث</span>
+          <h4 onclick="openCameraSpecsBubble('CAM-012')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony a6700 Body">Sony a6700 Flagship APS-C Mirrorless Body</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1050.ToString('N0'))</div>
         </div>
-        <button onclick="addToCartMock('RODE GO II (Double Wireless)', 299, 'images/prod_rode_wigo2.png', 'AUD-042')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+        <button onclick="addToCartMock('Sony a6700 Flagship APS-C Mirrorless Body', 1050, 'images/prod_cam_012.jpg', 'CAM-012')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- CAM-013: Sony a7C II Body -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('CAM-013')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_cam_013.jpg" alt="Sony a7C II Body" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">إصدار مدمج</span>
+          <h4 onclick="openCameraSpecsBubble('CAM-013')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony a7C II Body">Sony a7C II Full-Frame Compact Mirrorless</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1350.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Sony a7C II Full-Frame Compact Mirrorless', 1350, 'images/prod_cam_013.jpg', 'CAM-013')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- DJI-096: DJI Osmo Pocket 3 -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('DJI-096')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_dji_096.jpg" alt="DJI Osmo Pocket 3" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">الأكثر شعبية</span>
+          <h4 onclick="openCameraSpecsBubble('DJI-096')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="DJI Osmo Pocket 3">DJI Osmo Pocket 3 Standard Edition</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(479.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('DJI Osmo Pocket 3 Standard Edition', 479, 'images/prod_dji_096.jpg', 'DJI-096')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- DJI-097: DJI Osmo Pocket 3 Creator Combo -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('DJI-097')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_dji_097.jpg" alt="DJI Osmo Pocket 3 Creator Combo" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">باقة الإنتاج الكاملة</span>
+          <h4 onclick="openCameraSpecsBubble('DJI-097')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="DJI Osmo Pocket 3 Creator Combo">DJI Osmo Pocket 3 Creator Combo</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(530.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('DJI Osmo Pocket 3 Creator Combo', 530, 'images/prod_dji_097.jpg', 'DJI-097')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LEN-015: Sony FE 100mm F2.8 STF GM OSS -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LEN-015')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_len_015.jpg" alt="Sony FE 100mm F2.8 STF GM OSS" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">عزل بصري أسطوري</span>
+          <h4 onclick="openCameraSpecsBubble('LEN-015')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FE 100mm F2.8 STF GM OSS">Sony FE 100mm F2.8 STF GM OSS</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1090.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Sony FE 100mm F2.8 STF GM OSS', 1090, 'images/prod_len_015.jpg', 'LEN-015')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LEN-016: Sony FE 85mm F1.4 GM II -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LEN-016')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_len_016.jpg" alt="Sony FE 85mm F1.4 GM II" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">الجيل الثاني الجديد</span>
+          <h4 onclick="openCameraSpecsBubble('LEN-016')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FE 85mm F1.4 GM II">Sony FE 85mm F1.4 GM II</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1470.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Sony FE 85mm F1.4 GM II', 1470, 'images/prod_len_016.jpg', 'LEN-016')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LEN-019: Sony FE 16-35mm F2.8 GM II -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LEN-019')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_len_019.jpg" alt="Sony FE 16-35mm F2.8 GM II" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">زاوية فائقة الاتساع</span>
+          <h4 onclick="openCameraSpecsBubble('LEN-019')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FE 16-35mm F2.8 GM II">Sony FE 16-35mm F2.8 GM II</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1260.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Sony FE 16-35mm F2.8 GM II', 1260, 'images/prod_len_019.jpg', 'LEN-019')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LEN-021: Sony FE 70-200mm F2.8 GM OSS II -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LEN-021')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_len_021.jpg" alt="Sony FE 70-200mm F2.8 GM OSS II" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">اختيار المحترفين</span>
+          <h4 onclick="openCameraSpecsBubble('LEN-021')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FE 70-200mm F2.8 GM OSS II">Sony FE 70-200mm F2.8 GM OSS II</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1370.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Sony FE 70-200mm F2.8 GM OSS II', 1370, 'images/prod_len_021.jpg', 'LEN-021')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LEN-023: Sony FE 50mm F1.2 GM -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LEN-023')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_len_023.jpg" alt="Sony FE 50mm F1.2 GM" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">فتحة F1.2 الأسطورية</span>
+          <h4 onclick="openCameraSpecsBubble('LEN-023')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sony FE 50mm F1.2 GM">Sony FE 50mm F1.2 GM</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1370.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Sony FE 50mm F1.2 GM', 1370, 'images/prod_len_023.jpg', 'LEN-023')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LEN-024: SONY FE 24-70mm F2.8 GM II -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LEN-024')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_sony_2470_gm2.png" alt="SONY FE 24-70mm F2.8 GM II" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ط§ظ„ط£ظƒط«ط± ط·ظ„ط¨ط§ظ‹</span>
+          <h4 onclick="openCameraSpecsBubble('LEN-024')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="SONY FE 24-70mm F2.8 GM II">SONY FE 24-70mm F2.8 GM II</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(1650.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('SONY FE 24-70mm F2.8 GM II', 1650, 'images/prod_sony_2470_gm2.png', 'LEN-024')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LEN-033: Sigma 24-70mm F2.8 DG DN II Sony -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LEN-033')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_len_033.jpg" alt="Sigma 24-70mm F2.8 DG DN II Sony" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">سلسلة Art الرائدة</span>
+          <h4 onclick="openCameraSpecsBubble('LEN-033')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sigma 24-70mm F2.8 DG DN II Sony">Sigma 24-70mm F2.8 DG DN II Art for Sony E</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(820.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Sigma 24-70mm F2.8 DG DN II Art for Sony E', 820, 'images/prod_len_033.jpg', 'LEN-033')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LEN-034: Sigma 85mm F1.4 DG DN Art Sony -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LEN-034')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_len_034.jpg" alt="Sigma 85mm F1.4 DG DN Art Sony" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">سحر البورتريه الياباني</span>
+          <h4 onclick="openCameraSpecsBubble('LEN-034')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Sigma 85mm F1.4 DG DN Art Sony">Sigma 85mm F1.4 DG DN Art for Sony E</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(780.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Sigma 85mm F1.4 DG DN Art for Sony E', 780, 'images/prod_len_034.jpg', 'LEN-034')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- AUD-042: RODE Wireless GO II Dual Wireless Mic -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('AUD-042')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_rode_wigo2.png" alt="RODE Wireless GO II Dual Wireless Mic" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ط§ظ„ط£ظƒط«ط± ظ…ط¨ظٹط¹ط§ظ‹ ظپظٹ ط§ظ„ط¹ط§ظ„ظ…</span>
+          <h4 onclick="openCameraSpecsBubble('AUD-042')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="RODE Wireless GO II Dual Wireless Mic">RODE Wireless GO II Dual Wireless Mic</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(220.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('RODE Wireless GO II Dual Wireless Mic', 220, 'images/prod_rode_wigo2.png', 'AUD-042')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- AUD-044: RODE Wireless Micro Ultra-Compact Mic -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('AUD-044')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_rode_wireless_micro.png" alt="RODE Wireless Micro Ultra-Compact Mic" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ظ…ط§ظٹظƒ ط§ظ„ظ‡ظˆط§طھظپ ط§ظ„ط°ظƒظٹط©</span>
+          <h4 onclick="openCameraSpecsBubble('AUD-044')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="RODE Wireless Micro Ultra-Compact Mic">RODE Wireless Micro Ultra-Compact Mic</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(115.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('RODE Wireless Micro Ultra-Compact Mic', 115, 'images/prod_rode_wireless_micro.png', 'AUD-044')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- AUD-049: RODE PodMic Dynamic Podcasting Microphone -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('AUD-049')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_rode_podmic.png" alt="RODE PodMic Dynamic Podcasting Microphone" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ظ…ط§ظٹظƒ ط¨ظˆط¯ظƒط§ط³طھ ط§ط­طھط±ط§ظپظٹ</span>
+          <h4 onclick="openCameraSpecsBubble('AUD-049')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="RODE PodMic Dynamic Podcasting Microphone">RODE PodMic Dynamic Podcasting Microphone</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(85.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('RODE PodMic Dynamic Podcasting Microphone', 85, 'images/prod_rode_podmic.png', 'AUD-049')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- AUD-058: RODE Wireless PRO -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('AUD-058')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_aud_058.jpg" alt="RODE Wireless PRO" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">32-Bit Float و Timecode</span>
+          <h4 onclick="openCameraSpecsBubble('AUD-058')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="RODE Wireless PRO">RODE Wireless PRO Dual Channel Wireless System</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(340.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('RODE Wireless PRO Dual Channel Wireless System', 340, 'images/prod_aud_058.jpg', 'AUD-058')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- AUD-057: Hollyland Lark M2 Combo -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('AUD-057')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_aud_057.jpg" alt="Hollyland Lark M2 Combo" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">بحجم زر القميص 9 جم</span>
+          <h4 onclick="openCameraSpecsBubble('AUD-057')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Hollyland Lark M2 Combo">Hollyland Lark M2 Dual Wireless Combo</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(110.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Hollyland Lark M2 Dual Wireless Combo', 110, 'images/prod_aud_057.jpg', 'AUD-057')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LGT-147: Godox SL60II-D LED Light -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LGT-147')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_lgt_147.jpg" alt="Godox SL60II-D LED Light" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">إضاءة الاستوديو الأولى</span>
+          <h4 onclick="openCameraSpecsBubble('LGT-147')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Godox SL60II-D LED Light">Godox SL60II-D Daylight LED Video Light</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(100.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Godox SL60II-D Daylight LED Video Light', 100, 'images/prod_lgt_147.jpg', 'LGT-147')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LGT-149: Godox SL100D Daylight LED Video Light -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LGT-149')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_godox_sl100d.jpg" alt="Godox SL100D Daylight LED Video Light" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ط³ط·ظˆط¹ ط¹ط§ظ„ظٹ 100W</span>
+          <h4 onclick="openCameraSpecsBubble('LGT-149')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Godox SL100D Daylight LED Video Light">Godox SL100D Daylight LED Video Light</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(140.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Godox SL100D Daylight LED Video Light', 140, 'images/prod_godox_sl100d.jpg', 'LGT-149')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LGT-155: Godox SL300III LED Light -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LGT-155')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_lgt_155.jpg" alt="Godox SL300III LED Light" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">وحش السطوع 300 واط</span>
+          <h4 onclick="openCameraSpecsBubble('LGT-155')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Godox SL300III LED Light">Godox SL300III Daylight LED Video Light</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(400.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Godox SL300III Daylight LED Video Light', 400, 'images/prod_lgt_155.jpg', 'LGT-155')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LGT-162: Godox ML60II Bi LED Light -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LGT-162')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_lgt_162.jpg" alt="Godox ML60II Bi LED Light" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">محمولة بحجم قبضة اليد</span>
+          <h4 onclick="openCameraSpecsBubble('LGT-162')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Godox ML60II Bi LED Light">Godox ML60II Bi Portable Handheld LED</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(175.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Godox ML60II Bi Portable Handheld LED', 175, 'images/prod_lgt_162.jpg', 'LGT-162')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LGT-165: Godox AD200Pro II Flash -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LGT-165')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_lgt_165.jpg" alt="Godox AD200Pro II Flash" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">الجيل الثاني الأحدث</span>
+          <h4 onclick="openCameraSpecsBubble('LGT-165')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Godox AD200Pro II Flash">Godox AD200Pro II Pocket Flash</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(290.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Godox AD200Pro II Pocket Flash', 290, 'images/prod_lgt_165.jpg', 'LGT-165')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- LGT-170: Godox V1 Flash -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('LGT-170')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_lgt_170.jpg" alt="Godox V1 Flash" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">رأس دائري بضوء ناعم</span>
+          <h4 onclick="openCameraSpecsBubble('LGT-170')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Godox V1 Flash">Godox V1 Round Head Camera Flash</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(220.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Godox V1 Round Head Camera Flash', 220, 'images/prod_lgt_170.jpg', 'LGT-170')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- DJI-084: DJI RS 4 Mini Gimbal Stabilizer -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('DJI-084')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_dji_rs4_mini.jpg" alt="DJI RS 4 Mini Gimbal Stabilizer" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ط®ظپظٹظپ ط§ظ„ظˆط²ظ† 2 ظƒط¬ظ… ط­ظ…ظˆظ„ط©</span>
+          <h4 onclick="openCameraSpecsBubble('DJI-084')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="DJI RS 4 Mini Gimbal Stabilizer">DJI RS 4 Mini Gimbal Stabilizer</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(280.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('DJI RS 4 Mini Gimbal Stabilizer', 280, 'images/prod_dji_rs4_mini.jpg', 'DJI-084')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- DJI-088: DJI RS 4 Pro Carbon Fiber Gimbal Stabilizer -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('DJI-088')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_dji_rs4_pro.jpg" alt="DJI RS 4 Pro Carbon Fiber Gimbal Stabilizer" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ط£ظ„ظٹط§ظپ ظƒط±ط¨ظˆظ†ظٹط© 4.5 ظƒط¬ظ…</span>
+          <h4 onclick="openCameraSpecsBubble('DJI-088')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="DJI RS 4 Pro Carbon Fiber Gimbal Stabilizer">DJI RS 4 Pro Carbon Fiber Gimbal Stabilizer</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(680.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('DJI RS 4 Pro Carbon Fiber Gimbal Stabilizer', 680, 'images/prod_dji_rs4_pro.jpg', 'DJI-088')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- DJI-092: DJI Focus Pro Creator Combo -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('DJI-092')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_dji_092.jpg" alt="DJI Focus Pro Creator Combo" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">فوكس ليدار LiDAR ثوري</span>
+          <h4 onclick="openCameraSpecsBubble('DJI-092')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="DJI Focus Pro Creator Combo">DJI Focus Pro Creator Combo</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(690.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('DJI Focus Pro Creator Combo', 690, 'images/prod_dji_092.jpg', 'DJI-092')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- MON-449: FeelWorld F6 Plus V2 -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('MON-449')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_mon_449.jpg" alt="FeelWorld F6 Plus V2" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">شاشة لمس 4K مع 3D LUT</span>
+          <h4 onclick="openCameraSpecsBubble('MON-449')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="FeelWorld F6 Plus V2">FeelWorld F6 Plus V2 6-inch Touchscreen Monitor</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(180.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('FeelWorld F6 Plus V2 6-inch Touchscreen Monitor', 180, 'images/prod_mon_449.jpg', 'MON-449')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- MON-450: FeelWorld F5 Pro X -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('MON-450')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_mon_450.jpg" alt="FeelWorld F5 Pro X" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">سطوع 1600 شمعة تحت الشمس</span>
+          <h4 onclick="openCameraSpecsBubble('MON-450')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="FeelWorld F5 Pro X">FeelWorld F5 Pro X 5.5-inch High Bright Monitor</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(145.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('FeelWorld F5 Pro X 5.5-inch High Bright Monitor', 145, 'images/prod_mon_450.jpg', 'MON-450')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- MON-451: FeelWorld LUT7 -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('MON-451')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_mon_451.jpg" alt="FeelWorld LUT7" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">سطوع خارق 2200 nits</span>
+          <h4 onclick="openCameraSpecsBubble('MON-451')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="FeelWorld LUT7">FeelWorld LUT7 7-inch Ultra-Bright 2200nit Monitor</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(225.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('FeelWorld LUT7 7-inch Ultra-Bright 2200nit Monitor', 225, 'images/prod_mon_451.jpg', 'MON-451')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- MON-454: Desview T3 Smartphone & Tablet Teleprompter -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('MON-454')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_desview_t3.jpg" alt="Desview T3 Smartphone & Tablet Teleprompter" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">طھظ„ظٹط¨ط±ظˆظ…ط¨طھط± ظ…ظ„ظ‚ظ† ظ†طµظˆطµ</span>
+          <h4 onclick="openCameraSpecsBubble('MON-454')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Desview T3 Smartphone & Tablet Teleprompter">Desview T3 Smartphone & Tablet Teleprompter</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(85.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Desview T3 Smartphone & Tablet Teleprompter', 85, 'images/prod_desview_t3.jpg', 'MON-454')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- ACC-329: SmallRig Cage for Sony ZV-E10 II -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('ACC-329')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_acc_329.jpg" alt="SmallRig Cage for Sony ZV-E10 II" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">مصمم خصيصاً لـ ZV-E10 II</span>
+          <h4 onclick="openCameraSpecsBubble('ACC-329')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="SmallRig Cage for Sony ZV-E10 II">SmallRig Cage Kit for Sony ZV-E10 II 4867</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(55.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('SmallRig Cage Kit for Sony ZV-E10 II 4867', 55, 'images/prod_acc_329.jpg', 'ACC-329')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- ACC-330: SmallRig HawkLock Cage Sony a7R V -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('ACC-330')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_acc_330.jpg" alt="SmallRig HawkLock Cage Sony a7R V" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">نظام HawkLock السريع</span>
+          <h4 onclick="openCameraSpecsBubble('ACC-330')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="SmallRig HawkLock Cage Sony a7R V">SmallRig HawkLock Quick Release Cage for Sony a7R V</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(85.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('SmallRig HawkLock Quick Release Cage for Sony a7R V', 85, 'images/prod_acc_330.jpg', 'ACC-330')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- ACC-338: SmallRig Cage for Sony FX3 FX30 -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('ACC-338')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_acc_338.jpg" alt="SmallRig Cage for Sony FX3 FX30" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">لسينما سوني FX3 / FX30</span>
+          <h4 onclick="openCameraSpecsBubble('ACC-338')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="SmallRig Cage for Sony FX3 FX30">SmallRig Full Cage for Sony FX3 / FX30 4183</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(90.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('SmallRig Full Cage for Sony FX3 / FX30 4183', 90, 'images/prod_acc_338.jpg', 'ACC-338')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- ACC-342: SmallRig VB50 Mini V-Mount Battery (50Wh 3579B) -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('ACC-342')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_smallrig_vb50.jpg" alt="SmallRig VB50 Mini V-Mount Battery (50Wh 3579B)" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ط­ط¬ظ… ط§ظ„ط¬ظٹط¨ 50Wh</span>
+          <h4 onclick="openCameraSpecsBubble('ACC-342')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="SmallRig VB50 Mini V-Mount Battery (50Wh 3579B)">SmallRig VB50 Mini V-Mount Battery (50Wh 3579B)</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(125.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('SmallRig VB50 Mini V-Mount Battery (50Wh 3579B)', 125, 'images/prod_smallrig_vb50.jpg', 'ACC-342')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- ACC-344: SmallRig VB99 Pro V-Mount -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('ACC-344')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_acc_344.jpg" alt="SmallRig VB99 Pro V-Mount" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">إصدار Pro مع شحن 100W PD</span>
+          <h4 onclick="openCameraSpecsBubble('ACC-344')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="SmallRig VB99 Pro V-Mount">SmallRig VB99 Pro Mini V-Mount Battery 99Wh</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(200.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('SmallRig VB99 Pro Mini V-Mount Battery 99Wh', 200, 'images/prod_acc_344.jpg', 'ACC-344')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- STN-301: Kingjoy MP208F Heavy Duty Monopod with Base -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('STN-301')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_mp208f_monopod.jpg" alt="Kingjoy MP208F Heavy Duty Monopod with Base" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ظ…ظˆظ†ظˆ ط¨ظˆط¯ ظپظٹط¯ظٹظˆ ط§ط­طھط±ط§ظپظٹ</span>
+          <h4 onclick="openCameraSpecsBubble('STN-301')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Kingjoy MP208F Heavy Duty Monopod with Base">Kingjoy MP208F Heavy Duty Monopod with Base</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(75.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Kingjoy MP208F Heavy Duty Monopod with Base', 75, 'images/prod_mp208f_monopod.jpg', 'STN-301')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- STN-302: Kingjoy VT-3510 Fluid Head Video Tripod -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('STN-302')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_vt3510_tripod.jpg" alt="Kingjoy VT-3510 Fluid Head Video Tripod" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">طھط±ط§ظٹط¨ظˆط¯ ظ‡ظٹط¯ط±ظˆظ„ظٹظƒ</span>
+          <h4 onclick="openCameraSpecsBubble('STN-302')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Kingjoy VT-3510 Fluid Head Video Tripod">Kingjoy VT-3510 Fluid Head Video Tripod</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(145.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Kingjoy VT-3510 Fluid Head Video Tripod', 145, 'images/prod_vt3510_tripod.jpg', 'STN-302')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- STN-312: Manfrotto 504X Fluid Head Carbon Twin Tripod -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('STN-312')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_manfrotto_504x.jpg" alt="Manfrotto 504X Fluid Head Carbon Twin Tripod" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">طھط±ط§ظٹط¨ظˆط¯ ط³ظٹظ†ظ…ط§ ط¥ظٹط·ط§ظ„ظٹ</span>
+          <h4 onclick="openCameraSpecsBubble('STN-312')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Manfrotto 504X Fluid Head Carbon Twin Tripod">Manfrotto 504X Fluid Head Carbon Twin Tripod</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(490.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Manfrotto 504X Fluid Head Carbon Twin Tripod', 490, 'images/prod_manfrotto_504x.jpg', 'STN-312')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- ACC-407: Lowepro ProTactic BP 450 AW II Pro Camera Backpack -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('ACC-407')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_lowepro_protactic.jpg" alt="Lowepro ProTactic BP 450 AW II Pro Camera Backpack" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ط­ظ…ط§ظٹط© ط¹ط³ظƒط±ظٹط© ظ…ط¯ط±ط¹ط©</span>
+          <h4 onclick="openCameraSpecsBubble('ACC-407')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Lowepro ProTactic BP 450 AW II Pro Camera Backpack">Lowepro ProTactic BP 450 AW II Pro Camera Backpack</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(240.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Lowepro ProTactic BP 450 AW II Pro Camera Backpack', 240, 'images/prod_lowepro_protactic.jpg', 'ACC-407')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- ACC-408: Ulanzi BP09 22L Weatherproof Camera Backpack -->
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+        <div onclick="openCameraSpecsBubble('ACC-408')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer">
+          <img src="images/prod_ulanzi_bp09.jpg" alt="Ulanzi BP09 22L Weatherproof Camera Backpack" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        </div>
+        <div>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-mono line-clamp-1">ظ…ظ‚ط§ظˆظ…ط© ظ„ظ„ظ…ط§ط، ظˆط³ط¹ط± ط§ظ‚طھطµط§ط¯ظٹ</span>
+          <h4 onclick="openCameraSpecsBubble('ACC-408')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Ulanzi BP09 22L Weatherproof Camera Backpack">Ulanzi BP09 22L Weatherproof Camera Backpack</h4>
+          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1 font-en">(85.ToString('N0'))</div>
+        </div>
+        <button onclick="addToCartMock('Ulanzi BP09 22L Weatherproof Camera Backpack', 85, 'images/prod_ulanzi_bp09.jpg', 'ACC-408')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
@@ -1800,8 +2501,8 @@
     </div>
   </div>
 
-  <script src="js/data.js?v=20261019_v14_100_authentic_gear"></script>
-  <script src="js/store.js?v=20261019_v14_100_authentic_gear"></script>
+  <script src="js/data.js?v=20261019_v15_332_full_catalog"></script>
+  <script src="js/store.js?v=20261019_v15_332_full_catalog"></script>
   <script>
     let cart = [];
 
@@ -2819,14 +3520,21 @@
 
     // تشغيل عند تحميل الصفحة فوراً
     function bootStorefront() {
-      initStorefrontDynamicFeatures();
-      renderStorefrontProducts('all');
+      try {
+        renderStorefrontProducts('all');
+      } catch (err) {
+        console.error('renderStorefrontProducts error:', err);
+      }
+      try {
+        initStorefrontDynamicFeatures();
+      } catch (err) {
+        console.warn('initStorefrontDynamicFeatures warning:', err);
+      }
     }
 
+    bootStorefront();
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', bootStorefront);
-    } else {
-      bootStorefront();
     }
 
     // مزامنة فورية عند أي تعديل بالمنتجات أو البانرات

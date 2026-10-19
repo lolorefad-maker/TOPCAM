@@ -46,6 +46,6 @@ $authHeader = "AUTHORIZATION: basic " + [Convert]::ToBase64String([System.Text.E
 
 $git = "C:\Users\publisher\AppData\Local\GitHubDesktop\app-3.6.6\resources\app\git\cmd\git.exe"
 & $git add -A
-& $git commit -m "Add 100 authentic products from Excel with rich descriptions, remove 2-year warranty, and set establishment to 2024"
+& $git commit -m "Add 150 authentic products from Excel (total 332 products) and fix initial storefront product grid"
 & $git -c "http.extraheader=$authHeader" push origin main
 Write-Host "GIT_SYNC_COMPLETE"
