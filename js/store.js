@@ -1,8 +1,8 @@
-// طبقة إدارة البيانات والطلبات والتخزين المحلي لمتجر الكاميرات
+﻿// طبقة إدارة البيانات والطلبات والتخزين المحلي لمتجر الكاميرات
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
-  PRODUCTS: 'camera_store_products_v15_332_full_catalog',
+  PRODUCTS: 'camera_store_products_v16_500_full_catalog',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',

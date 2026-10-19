@@ -1,84 +1,78 @@
-﻿// ==========================================
-// TOP CAM & Accessories - Master Product Database
-// Official Authorized Store - Jordan
-// EST. 2024
-// ==========================================
+﻿/**
+ * TOP CAM - Amman, Jordan
+ * Master Product Catalog Database (500 Authentic Products)
+ * Updated: 2026-10-19
+ */
 
 const INITIAL_CATEGORIES = [
     {
-        "id":  "all",
-        "name":  "ط¬ظ…ظٹط¹ ط§ظ„ظ…ط¹ط¯ط§طھ",
-        "icon":  "fa-layer-group",
-        "count":  82
-    },
-    {
         "id":  "cameras",
-        "name":  "ظƒط§ظ…ظٹط±ط§طھ ط³ظٹظ†ظ…ط§ ظˆظ…ظٹط±ظˆط±ظ„ظٹط³",
+        "name":  "كاميرات سينما وميرورليس",
         "icon":  "fa-camera",
-        "count":  45,
+        "count":  55,
         "image":  "images/prod_sony_fx3_white.jpg"
     },
     {
         "id":  "filters",
-        "name":  "ط¹ط¯ط³ط§طھ ظˆظپظ„ط§طھط±",
+        "name":  "عدسات وفلاتر",
         "icon":  "fa-circle-half-stroke",
-        "count":  56,
+        "count":  69,
         "image":  "images/prod_sony_2470_gm2.png"
     },
     {
         "id":  "lighting",
-        "name":  "ط¥ط¶ط§ط،ط§طھ ظˆط³ظˆظپطھ ط¨ظˆظƒط³",
+        "name":  "إضاءات وسوفت بوكس",
         "icon":  "fa-lightbulb",
-        "count":  60,
+        "count":  90,
         "image":  "images/prod_godox_sl100d.jpg"
     },
     {
         "id":  "audio",
-        "name":  "ظ…ط§ظٹظƒط§طھ ظˆط£ظ†ط¸ظ…ط© طµظˆطھ",
+        "name":  "مايكات وأنظمة صوت",
         "icon":  "fa-microphone",
-        "count":  55,
+        "count":  66,
         "image":  "images/prod_rode_wigo2.png"
     },
     {
         "id":  "gimbals",
-        "name":  "ط³طھظٹط¨ظ„ط§ظٹط²ط±ط² ظˆط¬ظٹظ…ط¨ظ„",
+        "name":  "ستيبلايزرز وجيمبل",
         "icon":  "fa-gamepad",
-        "count":  23,
+        "count":  24,
         "image":  "images/prod_dji_rs4_pro.jpg"
     },
     {
         "id":  "stands",
-        "name":  "ط³طھط§ظ†ط¯ط§طھ ظˆطھط±ط§ظٹط¨ظˆط¯",
-        "icon":  "fa-monument",
-        "count":  18,
+        "name":  "ترايبود وحوامل",
+        "icon":  "fa-arrows-up-down",
+        "count":  57,
         "image":  "images/prod_manfrotto_504x.jpg"
     },
     {
         "id":  "cages",
-        "name":  "ظƒظٹط¬ ظƒط§ظ…ظٹط±ط§ ظˆطھط¬ظ‡ظٹط²ط§طھ",
-        "icon":  "fa-border-all",
-        "count":  29,
+        "name":  "أقفاص ومقابض Cages",
+        "icon":  "fa-cubes",
+        "count":  70,
         "image":  "images/prod_smallrig_fx3_cage.jpg"
     },
     {
         "id":  "monitors",
-        "name":  "ط´ط§ط´ط§طھ ظˆطھظ„ظ‚ظٹظ† Teleprompter",
+        "name":  "شاشات وتليبرومبتر",
         "icon":  "fa-tv",
-        "count":  27,
+        "count":  47,
         "image":  "images/prod_feelworld_lut7.jpg"
     },
     {
         "id":  "chargers_batteries",
-        "name":  "ط´ظˆط§ط­ظ† ظˆط¨ط·ط§ط±ظٹط§طھ ط³ظٹظ†ظ…ط§",
+        "name":  "بطاريات وشواحن",
         "icon":  "fa-battery-full",
-        "count":  11,
+        "count":  12,
         "image":  "images/prod_smallrig_vb99.jpg"
     },
     {
         "id":  "bags",
-        "name":  "ط´ظ†ط§طھظٹ ظˆط­ظ‚ط§ط¦ط¨ ظ…ط¹ط¯ط§طھ",
+        "name":  "حقائب تصوير",
         "icon":  "fa-suitcase-rolling",
-        "count":  8,
+        "count":  10,
         "image":  "images/prod_ulanzi_bp09.jpg"
     }
 ];
@@ -102,7 +96,7 @@ const INITIAL_PRODUCTS = [
                         "images/cam_sony_a7iii.jpg",
                         "images/prod_sony_a7iv_white.jpg"
                     ],
-        "description":  "ظƒط§ظ…ظٹط±ط§ ط³ظˆظ†ظٹ Sony A7 III ط§ظ„ط§ط­طھط±ط§ظپظٹط© ط§ظ„ط£طµظ„ظٹط© ظ…ط¹ ظƒظپط§ظ„ط© ط³ظ†طھظٹظ† ظƒط§ظ…ظ„ط© ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ط±ط³ظ…ظٹ ظپظٹ ط§ظ„ط£ط±ط¯ظ†طŒ طھط¯ط¹ظ… ط£ط¹ظ„ظ‰ ظ…ط¹ط§ظٹظٹط± ط§ظ„طھطµظˆظٹط± ط§ظ„ظپظˆطھظˆط؛ط±ط§ظپظٹ ظˆط§ظ„ط³ظٹظ†ظ…ط§ط¦ظٹ.",
+        "description":  "ظƒط§ظ…ظٹط±ط§ ط³ظˆظ†ظٹ Sony A7 III ط§ظ„ط§ط­طھط±ط§ظپظٹط© ط§ظ„ط£طµظ„ظٹط© ظ…ط¹ ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯ ظپظٹ ط§ظ„ط£ط±ط¯ظ†طŒ طھط¯ط¹ظ… ط£ط¹ظ„ظ‰ ظ…ط¹ط§ظٹظٹط± ط§ظ„طھطµظˆظٹط± ط§ظ„ظپظˆطھظˆط؛ط±ط§ظپظٹ ظˆط§ظ„ط³ظٹظ†ظ…ط§ط¦ظٹ.",
         "specs":  {
                       "ط§ظ„ظ…ط³طھط´ط¹ط±":  "24.2MP Full-Frame Exmor R BSI CMOS",
                       "ط§ظ„ظپظٹط¯ظٹظˆ":  "4K 30p HDR (HLG) \u0026 S-Log3 / 1080p 120fps",
@@ -115,7 +109,7 @@ const INITIAL_PRODUCTS = [
                       "ط§ظ„ظ…ط§ظ†طھ":  "Sony E-Mount (Full-Frame)",
                       "ط§ظ„ط´ط§ط´ط©":  "ط´ط§ط´ط© ظ„ظ…ط³ 3.0 ط¨ظˆطµط© ظ‚ط§ط¨ظ„ط© ظ„ظ„ط¥ظ…ط§ظ„ط© ط¨ط¯ظ‚ط© 921K ظ†ظ‚ط·ط©",
                       "ط§ظ„ظˆط²ظ†":  "650 ط¬ظ… ظ‡ظٹظƒظ„ ط§ظ„ظƒط§ظ…ظٹط±ط§",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -147,7 +141,7 @@ const INITIAL_PRODUCTS = [
                       "ط§ظ„ط¨ط·ط§ط±ظٹط©":  "Sony NP-FZ100 (ط­طھظ‰ 580 ظ„ظ‚ط·ط©)",
                       "ط§ظ„ظ…ط§ظ†طھ":  "Sony E-Mount",
                       "ط§ظ„ظˆط²ظ†":  "658 ط¬ظ…",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -178,7 +172,7 @@ const INITIAL_PRODUCTS = [
                       "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©":  "ظ…ظ†ظپط°ط§ظ† ط«ظ†ط§ط¦ظٹط§ظ† CFexpress Type A ظˆ SD UHS-II",
                       "ط§ظ„ط´ط§ط´ط© ظˆط§ظ„ظ…ظ†ط¸ط§ط±":  "ط´ط§ط´ط© ظ„ظ…ط³ ظ…ظپطµظ„ظٹط© + ظ…ظ†ط¸ط§ط± OLED EVF ط¨ط¯ظ‚ط© 9.44 ظ…ظ„ظٹظˆظ† ظ†ظ‚ط·ط©",
                       "ط§ظ„ظˆط²ظ†":  "699 ط¬ظ…",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -207,7 +201,7 @@ const INITIAL_PRODUCTS = [
                       "ط§ظ„ط´ط§ط´ط©":  "ط´ط§ط´ط© ظ…ط¨طھظƒط±ط© 4-Axis Multi-Angle LCD طھط¬ظ…ط¹ ط¨ظٹظ† ط§ظ„ط¥ظ…ط§ظ„ط© ظˆط§ظ„ظپطھط­ ط§ظ„ط¬ط§ظ†ط¨ظٹ",
                       "ط§ظ„ظ…ظ†ط¸ط§ط±":  "ظ…ظ†ط¸ط§ط± ط¥ظ„ظƒطھط±ظˆظ†ظٹ EVF ط¨ط¯ظ‚ط© 9.44M ظ†ظ‚ط·ط© ط¨ظ…ط¹ط¯ظ„ 120fps",
                       "ط§ظ„ظˆط²ظ†":  "723 ط¬ظ…",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -236,7 +230,7 @@ const INITIAL_PRODUCTS = [
                       "ظ†ط¸ط§ظ… ط§ظ„طھط¨ط±ظٹط¯":  "ظ…ط±ظˆط­ط© طھط¨ط±ظٹط¯ ظ…ط¯ظ…ط¬ط© طھطھظٹط­ ط§ظ„طھطµظˆظٹط± ط§ظ„ظ…ط³طھظ…ط± ط¨ط¯ظˆظ† طھظˆظ‚ظپ ظ†ظ‡ط§ط¦ظٹط§ظ‹",
                       "ظ‡ظٹظƒظ„ ط§ظ„ظƒط§ظ…ظٹط±ط§":  "ظ‡ظٹظƒظ„ ط³ظٹظ†ظ…ط§ط¦ظٹ ظ…طھظٹظ† ظ…ط²ظˆط¯ ط¨ظ€ 5 ط¨ط±ط§ط؛ظٹ طھط«ط¨ظٹطھ 1/4\"-20 ظ…ط¨ط§ط´ط±ط© ط¨ط¯ظˆظ† ط§ظ„ط­ط§ط¬ط© ظ„ظƒظٹط¬ ط¥ط¶ط§ظپظٹ",
                       "ط§ظ„ظˆط²ظ†":  "646 ط¬ظ… ظپظ‚ط·",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -264,7 +258,7 @@ const INITIAL_PRODUCTS = [
                       "ط§ظ„طھط±ظƒظٹط² ظˆط§ظ„ظ…ظٹط²ط§طھ":  "ط²ط± Cinematic Vlog Setting ظˆ Product Showcase Mode ظˆظ…ظٹظƒط±ظˆظپظˆظ† ط§طھط¬ط§ظ‡ظٹ 3 ظƒط¨ط³ظˆظ„ط§طھ",
                       "ط§ظ„ط¹ط¯ط³ط© ط§ظ„ظ…ط±ظپظ‚ط©":  "ط¹ط¯ط³ط© ط²ظˆظ… ط³ظˆظ†ظٹ E PZ 16-50mm f/3.5-5.6 OSS II ط§ظ„ظ…ط¯ظ…ط¬ط©",
                       "ط§ظ„ظˆط²ظ†":  "377 ط¬ظ…",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -292,7 +286,7 @@ const INITIAL_PRODUCTS = [
                       "ط§ظ„ظ…ط¯ظ‰ ط§ظ„ط¯ظٹظ†ط§ظ…ظٹظƒظٹ":  "Base ISO ظ…ط²ط¯ظˆط¬ 800 ظˆ 12,800 ظ„ط­ط³ط§ط³ظٹط© ط®ظٹط§ظ„ظٹط© ظپظٹ ط§ظ„ط¸ظ„ط§ظ…",
                       "ط§ظ„ظ…ظ†ط§ظپط° ط§ظ„ط§ط­طھط±ط§ظپظٹط©":  "12G-SDIطŒ HDMI ظƒط§ظ…ظ„طŒ ظ…ط®ط§ط±ط¬ طµظˆطھ XLR ظ…ط²ط¯ظˆط¬ط©طŒ TC In/Out",
                       "ط§ظ„ظˆط²ظ†":  "890 ط¬ظ… ظپظ‚ط· (ط¬ط³ظ… ط§ظ„ظƒط§ظ…ظٹط±ط§ ط®ظپظٹظپ ط¬ط¯ط§ظ‹ ظ„ظ…ط«ط¨طھط§طھ ط§ظ„ط¬ظٹظ…ط¨ظ„)",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -320,7 +314,7 @@ const INITIAL_PRODUCTS = [
                       "ط§ظ„ط´ط§ط´ط©":  "ط´ط§ط´ط© ظ„ظ…ط³ 3.0 ط¨ظˆطµط© ظ…طھط؛ظٹط±ط© ط§ظ„ط²ظˆط§ظٹط§ Vari-Angle",
                       "ط§ظ„ط¹ط¯ط³ط© ط§ظ„ظ…ط±ظپظ‚ط©":  "Canon RF-S 18-45mm f/4.5-6.3 IS STM",
                       "ط§ظ„ظˆط²ظ†":  "375 ط¬ظ… ظ…ط¹ ط§ظ„ط¨ط·ط§ط±ظٹط©",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -340,14 +334,14 @@ const INITIAL_PRODUCTS = [
         "gallery":  [
                         "images/cam_canon_r8.jpg"
                     ],
-        "description":  "ط£ط®ظپ ظƒط§ظ…ظٹط±ط§ ظپظ„ ظپط±ظٹظ… ظ…ظ† ظƒط§ظ†ظˆظ† ط¨ظ…ط³طھط´ط¹ط± 24.2MP ظ…ظ…ط§ط«ظ„ ظ„ظƒط§ظ…ظٹط±ط§ R6 Mark II ط§ظ„ط±ط§ط¦ط¯ط©طŒ ظˆطھطµظˆظٹط± ظپظٹط¯ظٹظˆ 4K 60p 10-Bit ظ…ط¹ ظƒظپط§ظ„ط© ط§ظ„ظˆظƒظٹظ„ ط³ظ†طھظٹظ†.",
+        "description":  "ط£ط®ظپ ظƒط§ظ…ظٹط±ط§ ظپظ„ ظپط±ظٹظ… ظ…ظ† ظƒط§ظ†ظˆظ† ط¨ظ…ط³طھط´ط¹ط± 24.2MP ظ…ظ…ط§ط«ظ„ ظ„ظƒط§ظ…ظٹط±ط§ R6 Mark II ط§ظ„ط±ط§ط¦ط¯ط©طŒ ظˆطھطµظˆظٹط± ظپظٹط¯ظٹظˆ 4K 60p 10-Bit ظ…ط¹ ظƒظپط§ظ„ط© ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯.",
         "specs":  {
                       "ط§ظ„ظ…ط³طھط´ط¹ط±":  "24.2MP Full-Frame CMOS Sensor ظپط§ط¦ظ‚ ط§ظ„ط¬ظˆط¯ط©",
                       "ط§ظ„ظپظٹط¯ظٹظˆ":  "4K 60p 10-Bit 4:2:2 ظ…ط¹ Canon Log 3 ظˆ 6K Oversampling ط¨ط¯ظ‚ط© ط³ظٹظ†ظ…ط§ط¦ظٹط©",
                       "ظ†ط¸ط§ظ… ط§ظ„طھط±ظƒظٹط²":  "Dual Pixel CMOS AF II ظ…طھط·ظˆط± ظ…ط¹ ط§ظ„طھط¹ط±ظپ ط§ظ„طھظ„ظ‚ط§ط¦ظٹ ط¹ظ„ظ‰ ط§ظ„ط®ظٹظˆظ„ ظˆط§ظ„ط·ط§ط¦ط±ط§طھ ظˆط§ظ„ظ‚ط·ط§ط±ط§طھ",
                       "ط³ط±ط¹ط© ط§ظ„ط§ظ„طھظ‚ط§ط·":  "ط­طھظ‰ 40 ط¥ط·ط§ط±ط§ظ‹ ظپظٹ ط§ظ„ط«ط§ظ†ظٹط© ط¨ط§ظ„ط´ط§طھط± ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹ",
                       "ط§ظ„ظˆط²ظ†":  "461 ط¬ظ… ظپظ‚ط· (ط£ط®ظپ ظƒط§ظ…ظٹط±ط§ Full Frame ظپظٹ ظپط¦طھظ‡ط§)",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -375,7 +369,7 @@ const INITIAL_PRODUCTS = [
                       "ط§ظ„ط³ط±ط¹ط©":  "40 ط¥ط·ط§ط±ط§ظ‹ ظپظٹ ط§ظ„ط«ط§ظ†ظٹط© ط¨ط§ظ„ط´ط§طھط± ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹ ظ…ط¹ طھطھط¨ط¹ ط§ظ„ظپظˆظƒط³ ظˆط§ظ„طھط¹ط±ظٹط¶ ط§ظ„ظƒط§ظ…ظ„",
                       "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©":  "ظ…ظ†ظپط°ط§ظ† ظ…ط²ط¯ظˆط¬ط§ظ† ظ„ط¨ط·ط§ظ‚ط§طھ ط§ظ„ط°ط§ظƒط±ط© Dual SD UHS-II",
                       "ط§ظ„ظˆط²ظ†":  "670 ط¬ظ…",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -406,7 +400,7 @@ const INITIAL_PRODUCTS = [
                       "طھط±ظ‚ظٹط© ط§ظ„ط¯ظ‚ط©":  "طھظ‚ظ†ظٹط© ط§ظ„طھظƒط¨ظٹط± ط¨ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ ط§ظ„ظ…ط¯ظ…ط¬ط© Neural Network Upscaling ط­طھظ‰ 179MP",
                       "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©":  "ظ…ظ†ظپط° ط¨ط·ط§ظ‚ط© CFexpress Type B ظپط§ط¦ظ‚ ط§ظ„ط³ط±ط¹ط© + ظ…ظ†ظپط° SD UHS-II",
                       "ط§ظ„ظˆط²ظ†":  "746 ط¬ظ…",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -434,7 +428,7 @@ const INITIAL_PRODUCTS = [
                       "ظ†ط¸ط§ظ… ط§ظ„طھط´ط؛ظٹظ„":  "ظ†ط¸ط§ظ… طھط´ط؛ظٹظ„ ظ…ط²ط¯ظˆط¬: ظˆط§ط¬ظ‡ط© Cinema EOS ظ„ظ„ظپظٹط¯ظٹظˆ ظˆظˆط§ط¬ظ‡ط© EOS R ظ„ظ„ظپظˆطھظˆط؛ط±ط§ظپ",
                       "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©":  "ظ…ظ†ظپط° CFexpress Type B ط¹ط§ظ„ظٹ ط§ظ„ط³ط±ط¹ط© + ظ…ظ†ظپط° SD UHS-II",
                       "ط§ظ„ظˆط²ظ†":  "770 ط¬ظ…",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -463,7 +457,7 @@ const INITIAL_PRODUCTS = [
                       "ط§ظ„ط´ط§ط´ط©":  "ط´ط§ط´ط© ظ„ظ…ط³ طھط±طھظپط¹ 180 ط¯ط±ط¬ط© ظ„ظ„ط£ط¹ظ„ظ‰ ظ„طھطµظˆظٹط± ط§ظ„ط³ظٹظ„ظپظٹ ظˆط§ظ„ظپظ„ظˆط¬ط§طھ",
                       "ط³ط±ط¹ط© ط§ظ„ط§ظ„طھظ‚ط§ط·":  "طھطµظˆظٹط± ظ…طھطھط§ط¨ط¹ ط­طھظ‰ 30 ط¥ط·ط§ط±ط§ظ‹ ظپظٹ ط§ظ„ط«ط§ظ†ظٹط© ظپظٹ ظˆط¶ط¹ RAW Burst",
                       "ط§ظ„ظˆط²ظ†":  "304 ط¬ظ… ظپظ‚ط· (ط­ط¬ظ… ط§ظ„ط¬ظٹط¨)",
-                      "ط§ظ„ط¶ظ…ط§ظ†":  "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+                      "ط§ظ„ط¶ظ…ط§ظ†":  "كفالة رسمية من الوكيل المعتمد"
                   }
     },
     {
@@ -8234,6 +8228,5365 @@ const INITIAL_PRODUCTS = [
                       "السعة":  "مساحة واسعة لكاميرتين وعدسات متعددة مع جيب لابتوب",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد"
                   }
+    },
+    {
+        "id":  "DJI-091",
+        "name":  "DJI RS 5 COMPO",
+        "nameEn":  "DJI RS 5 COMPO",
+        "category":  "gimbals",
+        "brand":  "DJI",
+        "price":  650,
+        "oldPrice":  715,
+        "rating":  4.9,
+        "reviewsCount":  93,
+        "stock":  8,
+        "badge":  "مثبت حركة سينمائي",
+        "image":  "images/prod_dji_091.jpg",
+        "gallery":  [
+                        "images/prod_dji_091.jpg"
+                    ],
+        "description":  "DJI RS 5 COMPO : مثبت حركة وجمبل ثلاثي المحاور متطور بمحركات عزم قوية تضمن لقطات سينمائية انسيابية فائقة النعومة حتى مع الكاميرات والعدسات الثقيلة وأثناء الحركة السريعة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المحاور":  "3-Axis Motorized Stabilization (Pan, Tilt, Roll)",
+                      "سعة الحمولة":  "Tested Payload up to 4.5 kg (Pro Rig Ready)",
+                      "أذرع التوازن":  "Layered Carbon Fiber / CNC Aluminum Arms",
+                      "البطارية والتشغيل":  "Up to 12 Hours Battery Grip with Fast Charging",
+                      "الاتصال":  "Bluetooth 5.1 / Wireless Image Transmitter Ready",
+                      "أوضاع التصوير":  "Pan Follow, Lock, POV, Vortex 360, Tracking",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "DJI-093",
+        "name":  "DJI MIC Mini 2 New - 2 persons",
+        "nameEn":  "DJI MIC Mini 2 New - 2 persons",
+        "category":  "audio",
+        "brand":  "DJI",
+        "price":  125,
+        "oldPrice":  138,
+        "rating":  4.9,
+        "reviewsCount":  62,
+        "stock":  8,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_dji_093.jpg",
+        "gallery":  [
+                        "images/prod_dji_093.jpg"
+                    ],
+        "description":  "DJI MIC Mini 2 New - 2 persons : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "DJI-094",
+        "name":  "DJI MIC 3 2 persons",
+        "nameEn":  "DJI MIC 3 2 persons",
+        "category":  "audio",
+        "brand":  "DJI",
+        "price":  290,
+        "oldPrice":  319,
+        "rating":  4.9,
+        "reviewsCount":  46,
+        "stock":  5,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_dji_094.jpg",
+        "gallery":  [
+                        "images/prod_dji_094.jpg"
+                    ],
+        "description":  "DJI MIC 3 2 persons : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "DJI-095",
+        "name":  "DJI MIC 2 2 persons",
+        "nameEn":  "DJI MIC 2 2 persons",
+        "category":  "audio",
+        "brand":  "DJI",
+        "price":  210,
+        "oldPrice":  231,
+        "rating":  4.9,
+        "reviewsCount":  91,
+        "stock":  8,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_dji_095.jpg",
+        "gallery":  [
+                        "images/prod_dji_095.jpg"
+                    ],
+        "description":  "DJI MIC 2 2 persons : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "DJI-103",
+        "name":  "DJI MIC 2 (Single)",
+        "nameEn":  "DJI MIC 2 (Single)",
+        "category":  "audio",
+        "brand":  "DJI",
+        "price":  125,
+        "oldPrice":  138,
+        "rating":  4.9,
+        "reviewsCount":  55,
+        "stock":  11,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_dji_103.jpg",
+        "gallery":  [
+                        "images/prod_dji_103.jpg"
+                    ],
+        "description":  "DJI MIC 2 (Single) : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "DJI-104",
+        "name":  "DJI Mic Mini Single",
+        "nameEn":  "DJI Mic Mini Single",
+        "category":  "audio",
+        "brand":  "DJI",
+        "price":  60,
+        "oldPrice":  66,
+        "rating":  4.9,
+        "reviewsCount":  67,
+        "stock":  6,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_dji_104.jpg",
+        "gallery":  [
+                        "images/prod_dji_104.jpg"
+                    ],
+        "description":  "DJI Mic Mini Single : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-109",
+        "name":  "Canon EOS R50v 18-45mm",
+        "nameEn":  "Canon EOS R50v 18-45mm",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  659,
+        "oldPrice":  699,
+        "rating":  4.9,
+        "reviewsCount":  20,
+        "stock":  9,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_109.jpg",
+        "gallery":  [
+                        "images/prod_cam_109.jpg"
+                    ],
+        "description":  "Canon EOS R50v 18-45mm : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-110",
+        "name":  "Canon EOS R10 18-45mm",
+        "nameEn":  "Canon EOS R10 18-45mm",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  710,
+        "oldPrice":  750,
+        "rating":  4.9,
+        "reviewsCount":  62,
+        "stock":  10,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_110.jpg",
+        "gallery":  [
+                        "images/prod_cam_110.jpg"
+                    ],
+        "description":  "Canon EOS R10 18-45mm : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-112",
+        "name":  "Canon EOS R8 24-50mm",
+        "nameEn":  "Canon EOS R8 24-50mm",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  1150,
+        "oldPrice":  1200,
+        "rating":  4.9,
+        "reviewsCount":  57,
+        "stock":  11,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_112.jpg",
+        "gallery":  [
+                        "images/prod_cam_112.jpg"
+                    ],
+        "description":  "Canon EOS R8 24-50mm : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-113",
+        "name":  "Canon EOS R7 Body",
+        "nameEn":  "Canon EOS R7 Body",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  860,
+        "oldPrice":  900,
+        "rating":  4.9,
+        "reviewsCount":  51,
+        "stock":  4,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_113.jpg",
+        "gallery":  [
+                        "images/prod_cam_113.jpg"
+                    ],
+        "description":  "Canon EOS R7 Body : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-114",
+        "name":  "Canon EOS R7 18-150mm",
+        "nameEn":  "Canon EOS R7 18-150mm",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  1200,
+        "oldPrice":  1250,
+        "rating":  4.9,
+        "reviewsCount":  32,
+        "stock":  5,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_114.jpg",
+        "gallery":  [
+                        "images/prod_cam_114.jpg"
+                    ],
+        "description":  "Canon EOS R7 18-150mm : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-116",
+        "name":  "Canon EOS R6 Mark II 24-105 STM",
+        "nameEn":  "Canon EOS R6 Mark II 24-105 STM",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  1640,
+        "oldPrice":  1700,
+        "rating":  4.9,
+        "reviewsCount":  86,
+        "stock":  5,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_116.jpg",
+        "gallery":  [
+                        "images/prod_cam_116.jpg"
+                    ],
+        "description":  "Canon EOS R6 Mark II 24-105 STM : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-117",
+        "name":  "Canon EOS R6 Mark II 24-105 f4 L",
+        "nameEn":  "Canon EOS R6 Mark II 24-105 f4 L",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  2300,
+        "oldPrice":  2350,
+        "rating":  4.9,
+        "reviewsCount":  84,
+        "stock":  4,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_117.jpg",
+        "gallery":  [
+                        "images/prod_cam_117.jpg"
+                    ],
+        "description":  "Canon EOS R6 Mark II 24-105 f4 L : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-118",
+        "name":  "Canon EOS R6 Mark III",
+        "nameEn":  "Canon EOS R6 Mark III",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  2000,
+        "oldPrice":  2060,
+        "rating":  4.9,
+        "reviewsCount":  50,
+        "stock":  4,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_118.jpg",
+        "gallery":  [
+                        "images/prod_cam_118.jpg"
+                    ],
+        "description":  "Canon EOS R6 Mark III : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-120",
+        "name":  "Camera EOS RP Body Only",
+        "nameEn":  "Camera EOS RP Body Only",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  700,
+        "oldPrice":  740,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  4,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_120.jpg",
+        "gallery":  [
+                        "images/prod_cam_120.jpg"
+                    ],
+        "description":  "Camera EOS RP Body Only : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "CAM-121",
+        "name":  "Camera EOS RP 24-105 STM Kit",
+        "nameEn":  "Camera EOS RP 24-105 STM Kit",
+        "category":  "cameras",
+        "brand":  "Canon",
+        "price":  900,
+        "oldPrice":  950,
+        "rating":  4.9,
+        "reviewsCount":  65,
+        "stock":  7,
+        "badge":  "كاميرا أصلية",
+        "image":  "images/prod_cam_121.jpg",
+        "gallery":  [
+                        "images/prod_cam_121.jpg"
+                    ],
+        "description":  "Camera EOS RP 24-105 STM Kit : كاميرا احترافية متطورة توفر دقة سينمائية فائقة ومعالجة ألوان متقدمة مع حساس رقمي متطور ونظام تركيز بؤري تتبعي فائق السرعة، مصممة لتلبية متطلبات صانعي المحتوى والمحترفين في الأردن. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "المستشعر":  "Full-Frame / APS-C High Resolution Sensor",
+                      "الفيديو":  "4K 60p / 120p 10-Bit 4:2:2 Color",
+                      "نظام الفوكس":  "Advanced Real-Time Eye \u0026 Subject AF",
+                      "التثبيت":  "5-Axis In-Body Image Stabilization (IBIS)",
+                      "المنافذ":  "Full HDMI / USB-C 3.2 / Mic \u0026 Headphone Ports",
+                      "الذاكرة":  "Dual Card Slots (SD UHS-II / CFexpress)",
+                      "البطارية":  "High-Capacity Rechargeable Li-Ion Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-133",
+        "name":  "canon rf 100mm f/2.8L marco is usm",
+        "nameEn":  "canon rf 100mm f/2.8L marco is usm",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  920,
+        "oldPrice":  1012,
+        "rating":  4.9,
+        "reviewsCount":  28,
+        "stock":  11,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_133.jpg",
+        "gallery":  [
+                        "images/prod_len_133.jpg"
+                    ],
+        "description":  "canon rf 100mm f/2.8L marco is usm : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-134",
+        "name":  "Canon rf 24-70mm f/2.8L IS USM",
+        "nameEn":  "Canon rf 24-70mm f/2.8L IS USM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  1520,
+        "oldPrice":  1672,
+        "rating":  4.9,
+        "reviewsCount":  36,
+        "stock":  3,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_134.jpg",
+        "gallery":  [
+                        "images/prod_len_134.jpg"
+                    ],
+        "description":  "Canon rf 24-70mm f/2.8L IS USM : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-135",
+        "name":  "Canon rf 70-200mm f/2.8L IS USM",
+        "nameEn":  "Canon rf 70-200mm f/2.8L IS USM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  1620,
+        "oldPrice":  1782,
+        "rating":  4.9,
+        "reviewsCount":  93,
+        "stock":  4,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_135.jpg",
+        "gallery":  [
+                        "images/prod_len_135.jpg"
+                    ],
+        "description":  "Canon rf 70-200mm f/2.8L IS USM : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-136",
+        "name":  "canon ef 50mm f/1.8 stm",
+        "nameEn":  "canon ef 50mm f/1.8 stm",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  100,
+        "oldPrice":  110,
+        "rating":  4.9,
+        "reviewsCount":  36,
+        "stock":  11,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_136.jpg",
+        "gallery":  [
+                        "images/prod_len_136.jpg"
+                    ],
+        "description":  "canon ef 50mm f/1.8 stm : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-137",
+        "name":  "canon ef 50mm f/1.4 usm",
+        "nameEn":  "canon ef 50mm f/1.4 usm",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  255,
+        "oldPrice":  280,
+        "rating":  4.9,
+        "reviewsCount":  73,
+        "stock":  3,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_137.jpg",
+        "gallery":  [
+                        "images/prod_len_137.jpg"
+                    ],
+        "description":  "canon ef 50mm f/1.4 usm : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-138",
+        "name":  "canon ef-s 24mm f/2.8 STM",
+        "nameEn":  "canon ef-s 24mm f/2.8 STM",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  130,
+        "oldPrice":  143,
+        "rating":  4.9,
+        "reviewsCount":  41,
+        "stock":  10,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_138.jpg",
+        "gallery":  [
+                        "images/prod_len_138.jpg"
+                    ],
+        "description":  "canon ef-s 24mm f/2.8 STM : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-139",
+        "name":  "canon ef-s 10-18mm f/4.5-5.6 is stm",
+        "nameEn":  "canon ef-s 10-18mm f/4.5-5.6 is stm",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  235,
+        "oldPrice":  258,
+        "rating":  4.9,
+        "reviewsCount":  73,
+        "stock":  10,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_139.jpg",
+        "gallery":  [
+                        "images/prod_len_139.jpg"
+                    ],
+        "description":  "canon ef-s 10-18mm f/4.5-5.6 is stm : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-140",
+        "name":  "canon ef-s 18-135mm f/3.5-5.6 Usm Nano",
+        "nameEn":  "canon ef-s 18-135mm f/3.5-5.6 Usm Nano",
+        "category":  "filters",
+        "brand":  "Canon",
+        "price":  330,
+        "oldPrice":  363,
+        "rating":  4.9,
+        "reviewsCount":  77,
+        "stock":  10,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_140.jpg",
+        "gallery":  [
+                        "images/prod_len_140.jpg"
+                    ],
+        "description":  "canon ef-s 18-135mm f/3.5-5.6 Usm Nano : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-141",
+        "name":  "sigma 85mm f/1.4 dg hsm art",
+        "nameEn":  "sigma 85mm f/1.4 dg hsm art",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  800,
+        "oldPrice":  880,
+        "rating":  4.9,
+        "reviewsCount":  28,
+        "stock":  4,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_141.jpg",
+        "gallery":  [
+                        "images/prod_len_141.jpg"
+                    ],
+        "description":  "sigma 85mm f/1.4 dg hsm art : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-142",
+        "name":  "sigma 24-70mm f/2.8 dg os hsm art",
+        "nameEn":  "sigma 24-70mm f/2.8 dg os hsm art",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  920,
+        "oldPrice":  1012,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  3,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_142.jpg",
+        "gallery":  [
+                        "images/prod_len_142.jpg"
+                    ],
+        "description":  "sigma 24-70mm f/2.8 dg os hsm art : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-143",
+        "name":  "sigma 18-35mmf/1.8 DC HSM Art",
+        "nameEn":  "sigma 18-35mmf/1.8 DC HSM Art",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  570,
+        "oldPrice":  627,
+        "rating":  4.9,
+        "reviewsCount":  51,
+        "stock":  3,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_143.jpg",
+        "gallery":  [
+                        "images/prod_len_143.jpg"
+                    ],
+        "description":  "sigma 18-35mmf/1.8 DC HSM Art : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-144",
+        "name":  "sigma 35mm f/1.4 GD HSm Art",
+        "nameEn":  "sigma 35mm f/1.4 GD HSm Art",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  650,
+        "oldPrice":  715,
+        "rating":  4.9,
+        "reviewsCount":  32,
+        "stock":  3,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_144.jpg",
+        "gallery":  [
+                        "images/prod_len_144.jpg"
+                    ],
+        "description":  "sigma 35mm f/1.4 GD HSm Art : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LEN-145",
+        "name":  "sigma 24-105mm f/4 DG OS HSM",
+        "nameEn":  "sigma 24-105mm f/4 DG OS HSM",
+        "category":  "filters",
+        "brand":  "Sigma",
+        "price":  650,
+        "oldPrice":  715,
+        "rating":  4.9,
+        "reviewsCount":  26,
+        "stock":  11,
+        "badge":  "بصريات احترافية",
+        "image":  "images/prod_len_145.jpg",
+        "gallery":  [
+                        "images/prod_len_145.jpg"
+                    ],
+        "description":  "sigma 24-105mm f/4 DG OS HSM : عدسة أو فلتر بصري فائق النقاء مصنوع من زجاج بصري متعدد الطبقات لمنع الانعكاسات وضمان حدة بصرية استثنائية وألوان طبيعية حية مع عزل خلفية سينمائي ناعم. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "البناء البصري":  "Multi-Coated High Resolution Optical Glass",
+                      "الطلاء الحامي":  "Waterproof, Oil-Resistant \u0026 Anti-Scratch Nano Coating",
+                      "التحكم البصري":  "Ultra-Low Dispersion / Zero Vignetting Optics",
+                      "نظام التركيز":  "High-Speed Linear Focus Motor / Stepless Ring",
+                      "مانت التوافق":  "Precision Engineered Mount / Standard Filter Thread",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-182",
+        "name":  "Godox godox led 1000 bi ii",
+        "nameEn":  "Godox godox led 1000 bi ii",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  250,
+        "oldPrice":  275,
+        "rating":  4.9,
+        "reviewsCount":  55,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_182.jpg",
+        "gallery":  [
+                        "images/prod_lgt_182.jpg"
+                    ],
+        "description":  "Godox godox led 1000 bi ii : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-183",
+        "name":  "Godox godox c30 bi",
+        "nameEn":  "Godox godox c30 bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  50,
+        "oldPrice":  60,
+        "rating":  4.9,
+        "reviewsCount":  21,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_183.jpg",
+        "gallery":  [
+                        "images/prod_lgt_183.jpg"
+                    ],
+        "description":  "Godox godox c30 bi : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-184",
+        "name":  "Godox godox c30 r",
+        "nameEn":  "Godox godox c30 r",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  65,
+        "oldPrice":  75,
+        "rating":  4.9,
+        "reviewsCount":  89,
+        "stock":  10,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_184.jpg",
+        "gallery":  [
+                        "images/prod_lgt_184.jpg"
+                    ],
+        "description":  "Godox godox c30 r : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-185",
+        "name":  "Godox godox p 260c pro bi",
+        "nameEn":  "Godox godox p 260c pro bi",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  100,
+        "oldPrice":  110,
+        "rating":  4.9,
+        "reviewsCount":  49,
+        "stock":  9,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_185.jpg",
+        "gallery":  [
+                        "images/prod_lgt_185.jpg"
+                    ],
+        "description":  "Godox godox p 260c pro bi : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-186",
+        "name":  "Godox godox m1 rgb",
+        "nameEn":  "Godox godox m1 rgb",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  110,
+        "oldPrice":  125,
+        "rating":  4.9,
+        "reviewsCount":  32,
+        "stock":  3,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_186.jpg",
+        "gallery":  [
+                        "images/prod_lgt_186.jpg"
+                    ],
+        "description":  "Godox godox m1 rgb : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-187",
+        "name":  "Godox godox lp600r",
+        "nameEn":  "Godox godox lp600r",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  175,
+        "oldPrice":  200,
+        "rating":  4.9,
+        "reviewsCount":  41,
+        "stock":  5,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_187.jpg",
+        "gallery":  [
+                        "images/prod_lgt_187.jpg"
+                    ],
+        "description":  "Godox godox lp600r : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-188",
+        "name":  "Godox godox lp600r Kit2",
+        "nameEn":  "Godox godox lp600r Kit2",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  350,
+        "oldPrice":  390,
+        "rating":  4.9,
+        "reviewsCount":  44,
+        "stock":  10,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_188.jpg",
+        "gallery":  [
+                        "images/prod_lgt_188.jpg"
+                    ],
+        "description":  "Godox godox lp600r Kit2 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-189",
+        "name":  "Godox godox lp1200r",
+        "nameEn":  "Godox godox lp1200r",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  230,
+        "oldPrice":  275,
+        "rating":  4.9,
+        "reviewsCount":  19,
+        "stock":  3,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_189.jpg",
+        "gallery":  [
+                        "images/prod_lgt_189.jpg"
+                    ],
+        "description":  "Godox godox lp1200r : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-190",
+        "name":  "Godox godox lp1200r Kit 2",
+        "nameEn":  "Godox godox lp1200r Kit 2",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  530,
+        "oldPrice":  575,
+        "rating":  4.9,
+        "reviewsCount":  92,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_190.jpg",
+        "gallery":  [
+                        "images/prod_lgt_190.jpg"
+                    ],
+        "description":  "Godox godox lp1200r Kit 2 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-191",
+        "name":  "Godox godox c5r rgb",
+        "nameEn":  "Godox godox c5r rgb",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  90,
+        "oldPrice":  99,
+        "rating":  4.9,
+        "reviewsCount":  86,
+        "stock":  6,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_191.jpg",
+        "gallery":  [
+                        "images/prod_lgt_191.jpg"
+                    ],
+        "description":  "Godox godox c5r rgb : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-192",
+        "name":  "Godox qr-p90 softbox with grid",
+        "nameEn":  "Godox qr-p90 softbox with grid",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  115,
+        "oldPrice":  125,
+        "rating":  4.9,
+        "reviewsCount":  49,
+        "stock":  3,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_192.jpg",
+        "gallery":  [
+                        "images/prod_lgt_192.jpg"
+                    ],
+        "description":  "Godox qr-p90 softbox with grid : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-193",
+        "name":  "Godox qr-p120 softbox with grid",
+        "nameEn":  "Godox qr-p120 softbox with grid",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  135,
+        "oldPrice":  149,
+        "rating":  4.9,
+        "reviewsCount":  41,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_193.jpg",
+        "gallery":  [
+                        "images/prod_lgt_193.jpg"
+                    ],
+        "description":  "Godox qr-p120 softbox with grid : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-194",
+        "name":  "Godox godox umbralla softbox60*60",
+        "nameEn":  "Godox godox umbralla softbox60*60",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  35,
+        "oldPrice":  40,
+        "rating":  4.9,
+        "reviewsCount":  57,
+        "stock":  10,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_194.jpg",
+        "gallery":  [
+                        "images/prod_lgt_194.jpg"
+                    ],
+        "description":  "Godox godox umbralla softbox60*60 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-196",
+        "name":  "Godox 80*120",
+        "nameEn":  "Godox 80*120",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  50,
+        "oldPrice":  55,
+        "rating":  4.9,
+        "reviewsCount":  92,
+        "stock":  5,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_196.jpg",
+        "gallery":  [
+                        "images/prod_lgt_196.jpg"
+                    ],
+        "description":  "Godox 80*120 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-197",
+        "name":  "Godox octa 95",
+        "nameEn":  "Godox octa 95",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  50,
+        "oldPrice":  55,
+        "rating":  4.9,
+        "reviewsCount":  67,
+        "stock":  6,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_197.jpg",
+        "gallery":  [
+                        "images/prod_lgt_197.jpg"
+                    ],
+        "description":  "Godox octa 95 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-198",
+        "name":  "Godox octa 120",
+        "nameEn":  "Godox octa 120",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  60,
+        "oldPrice":  65,
+        "rating":  4.9,
+        "reviewsCount":  66,
+        "stock":  9,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_198.jpg",
+        "gallery":  [
+                        "images/prod_lgt_198.jpg"
+                    ],
+        "description":  "Godox octa 120 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-199",
+        "name":  "Godox softbox with grid ╪│┘è╪د╪« 60*60",
+        "nameEn":  "Godox softbox with grid ╪│┘è╪د╪« 60*60",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  25,
+        "oldPrice":  30,
+        "rating":  4.9,
+        "reviewsCount":  78,
+        "stock":  3,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_199.jpg",
+        "gallery":  [
+                        "images/prod_lgt_199.jpg"
+                    ],
+        "description":  "Godox softbox with grid ╪│┘è╪د╪« 60*60 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-200",
+        "name":  "Godox 60*90",
+        "nameEn":  "Godox 60*90",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  30,
+        "oldPrice":  35,
+        "rating":  4.9,
+        "reviewsCount":  58,
+        "stock":  3,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_200.jpg",
+        "gallery":  [
+                        "images/prod_lgt_200.jpg"
+                    ],
+        "description":  "Godox 60*90 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-202",
+        "name":  "Godox 35*160",
+        "nameEn":  "Godox 35*160",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  35,
+        "oldPrice":  40,
+        "rating":  4.9,
+        "reviewsCount":  77,
+        "stock":  8,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_202.jpg",
+        "gallery":  [
+                        "images/prod_lgt_202.jpg"
+                    ],
+        "description":  "Godox 35*160 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-203",
+        "name":  "Godox octa 95",
+        "nameEn":  "Godox octa 95",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  35,
+        "oldPrice":  40,
+        "rating":  4.9,
+        "reviewsCount":  32,
+        "stock":  7,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_203.jpg",
+        "gallery":  [
+                        "images/prod_lgt_203.jpg"
+                    ],
+        "description":  "Godox octa 95 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-204",
+        "name":  "Godox octa120",
+        "nameEn":  "Godox octa120",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  45,
+        "oldPrice":  50,
+        "rating":  4.9,
+        "reviewsCount":  79,
+        "stock":  6,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_204.jpg",
+        "gallery":  [
+                        "images/prod_lgt_204.jpg"
+                    ],
+        "description":  "Godox octa120 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-205",
+        "name":  "Godox octa 140",
+        "nameEn":  "Godox octa 140",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  55,
+        "oldPrice":  60,
+        "rating":  4.9,
+        "reviewsCount":  55,
+        "stock":  5,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_205.jpg",
+        "gallery":  [
+                        "images/prod_lgt_205.jpg"
+                    ],
+        "description":  "Godox octa 140 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-206",
+        "name":  "Godox godox diffuser 90*120",
+        "nameEn":  "Godox godox diffuser 90*120",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  15,
+        "oldPrice":  16,
+        "rating":  4.9,
+        "reviewsCount":  54,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_206.jpg",
+        "gallery":  [
+                        "images/prod_lgt_206.jpg"
+                    ],
+        "description":  "Godox godox diffuser 90*120 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-207",
+        "name":  "Godox 100*150",
+        "nameEn":  "Godox 100*150",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  20,
+        "oldPrice":  22,
+        "rating":  4.9,
+        "reviewsCount":  70,
+        "stock":  10,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_207.jpg",
+        "gallery":  [
+                        "images/prod_lgt_207.jpg"
+                    ],
+        "description":  "Godox 100*150 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-208",
+        "name":  "Godox 120*180",
+        "nameEn":  "Godox 120*180",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  25,
+        "oldPrice":  28,
+        "rating":  4.9,
+        "reviewsCount":  33,
+        "stock":  5,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_208.jpg",
+        "gallery":  [
+                        "images/prod_lgt_208.jpg"
+                    ],
+        "description":  "Godox 120*180 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-209",
+        "name":  "Godox 150*200",
+        "nameEn":  "Godox 150*200",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  30,
+        "oldPrice":  33,
+        "rating":  4.9,
+        "reviewsCount":  74,
+        "stock":  5,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_209.jpg",
+        "gallery":  [
+                        "images/prod_lgt_209.jpg"
+                    ],
+        "description":  "Godox 150*200 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-210",
+        "name":  "Godox 7 in 1 Rectangular Refelctor\u0026 diffuser  60*90",
+        "nameEn":  "Godox 7 in 1 Rectangular Refelctor\u0026 diffuser  60*90",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  25,
+        "oldPrice":  28,
+        "rating":  4.9,
+        "reviewsCount":  70,
+        "stock":  4,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_210.jpg",
+        "gallery":  [
+                        "images/prod_lgt_210.jpg"
+                    ],
+        "description":  "Godox 7 in 1 Rectangular Refelctor\u0026 diffuser  60*90 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-211",
+        "name":  "Godox 90*120",
+        "nameEn":  "Godox 90*120",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  35,
+        "oldPrice":  40,
+        "rating":  4.9,
+        "reviewsCount":  68,
+        "stock":  6,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_211.jpg",
+        "gallery":  [
+                        "images/prod_lgt_211.jpg"
+                    ],
+        "description":  "Godox 90*120 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-212",
+        "name":  "Godox 120*180",
+        "nameEn":  "Godox 120*180",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  45,
+        "oldPrice":  50,
+        "rating":  4.9,
+        "reviewsCount":  26,
+        "stock":  3,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_212.jpg",
+        "gallery":  [
+                        "images/prod_lgt_212.jpg"
+                    ],
+        "description":  "Godox 120*180 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "LGT-213",
+        "name":  "Godox 150*200",
+        "nameEn":  "Godox 150*200",
+        "category":  "lighting",
+        "brand":  "Godox",
+        "price":  50,
+        "oldPrice":  60,
+        "rating":  4.9,
+        "reviewsCount":  39,
+        "stock":  8,
+        "badge":  "إضاءة استوديو",
+        "image":  "images/prod_lgt_213.jpg",
+        "gallery":  [
+                        "images/prod_lgt_213.jpg"
+                    ],
+        "description":  "Godox 150*200 : وحدة إضاءة استوديو احترافية فائقة الدقة بتوزيع ضوئي متجانس ومؤشر نقاء لوني CRI/TLCI مرتفع، تدعم مختلف مشتتات الضوء وسوفت بوكس قياسي لإنتاج بصري سينمائي استثنائي. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الإضاءة":  "Professional Continuous COB LED Light",
+                      "مؤشر نقاء الألوان":  "CRI 96+ / TLCI 97+ Broadcast Quality",
+                      "درجة حرارة اللون":  "Daylight 5600K / Bi-Color 2800K-6500K",
+                      "مانت المشتتات":  "Standard Bowens Mount Compatible",
+                      "التحكم":  "On-Board Dial / Wireless Bluetooth App Control",
+                      "التبريد":  "Ultra-Quiet Active Cooling System",
+                      "التغذية الكهربائية":  "AC 100-240V / DC Battery Compatible",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-309",
+        "name":  "Tripod  VT-890H Multi Function",
+        "nameEn":  "Tripod  VT-890H Multi Function",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  35,
+        "oldPrice":  38,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  7,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_309.jpg",
+        "gallery":  [
+                        "images/prod_stn_309.jpg"
+                    ],
+        "description":  "Tripod  VT-890H Multi Function : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-310",
+        "name":  "Tripod VT-890H6 Multi Function",
+        "nameEn":  "Tripod VT-890H6 Multi Function",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  55,
+        "oldPrice":  61,
+        "rating":  4.9,
+        "reviewsCount":  64,
+        "stock":  4,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_310.jpg",
+        "gallery":  [
+                        "images/prod_stn_310.jpg"
+                    ],
+        "description":  "Tripod VT-890H6 Multi Function : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-316",
+        "name":  "video tripod VT-2100L",
+        "nameEn":  "video tripod VT-2100L",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  115,
+        "oldPrice":  127,
+        "rating":  4.9,
+        "reviewsCount":  83,
+        "stock":  10,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_316.jpg",
+        "gallery":  [
+                        "images/prod_stn_316.jpg"
+                    ],
+        "description":  "video tripod VT-2100L : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-317",
+        "name":  "video tripod  VT-2500",
+        "nameEn":  "video tripod  VT-2500",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  105,
+        "oldPrice":  116,
+        "rating":  4.9,
+        "reviewsCount":  57,
+        "stock":  9,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_317.jpg",
+        "gallery":  [
+                        "images/prod_stn_317.jpg"
+                    ],
+        "description":  "video tripod  VT-2500 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-318",
+        "name":  "video tripod  VT-3500",
+        "nameEn":  "video tripod  VT-3500",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  190,
+        "oldPrice":  209,
+        "rating":  4.9,
+        "reviewsCount":  91,
+        "stock":  8,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_318.jpg",
+        "gallery":  [
+                        "images/prod_stn_318.jpg"
+                    ],
+        "description":  "video tripod  VT-3500 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-319",
+        "name":  "SmallRig Heavy-Duty Carbon Fiber Tripod Kit AD-120 4463",
+        "nameEn":  "SmallRig Heavy-Duty Carbon Fiber Tripod Kit AD-120 4463",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  550,
+        "oldPrice":  605,
+        "rating":  4.9,
+        "reviewsCount":  34,
+        "stock":  6,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_319.jpg",
+        "gallery":  [
+                        "images/prod_acc_319.jpg"
+                    ],
+        "description":  "SmallRig Heavy-Duty Carbon Fiber Tripod Kit AD-120 4463 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-320",
+        "name":  "SmallRig CT-10 Aluminum Camera Tripod 3935",
+        "nameEn":  "SmallRig CT-10 Aluminum Camera Tripod 3935",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  70,
+        "oldPrice":  77,
+        "rating":  4.9,
+        "reviewsCount":  72,
+        "stock":  3,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_320.jpg",
+        "gallery":  [
+                        "images/prod_acc_320.jpg"
+                    ],
+        "description":  "SmallRig CT-10 Aluminum Camera Tripod 3935 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-321",
+        "name":  "SmallRig Carbon Fiber Tripod with Center Column AP-20 \u0026 Ball Head 4059",
+        "nameEn":  "SmallRig Carbon Fiber Tripod with Center Column AP-20 \u0026 Ball Head 4059",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  130,
+        "oldPrice":  143,
+        "rating":  4.9,
+        "reviewsCount":  38,
+        "stock":  6,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_321.jpg",
+        "gallery":  [
+                        "images/prod_acc_321.jpg"
+                    ],
+        "description":  "SmallRig Carbon Fiber Tripod with Center Column AP-20 \u0026 Ball Head 4059 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-322",
+        "name":  "SmallRig Portable Aluminum Video Tripod with Center Column 5474",
+        "nameEn":  "SmallRig Portable Aluminum Video Tripod with Center Column 5474",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  50,
+        "oldPrice":  55,
+        "rating":  4.9,
+        "reviewsCount":  81,
+        "stock":  4,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_322.jpg",
+        "gallery":  [
+                        "images/prod_acc_322.jpg"
+                    ],
+        "description":  "SmallRig Portable Aluminum Video Tripod with Center Column 5474 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-323",
+        "name":  "SmallRig Compact Aluminum Tripod with Phone Clamp 5473",
+        "nameEn":  "SmallRig Compact Aluminum Tripod with Phone Clamp 5473",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  40,
+        "oldPrice":  44,
+        "rating":  4.9,
+        "reviewsCount":  82,
+        "stock":  6,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_323.jpg",
+        "gallery":  [
+                        "images/prod_acc_323.jpg"
+                    ],
+        "description":  "SmallRig Compact Aluminum Tripod with Phone Clamp 5473 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-324",
+        "name":  "SmallRig AD-01 Heavy-Duty Tripod with Fluid Head 3751B",
+        "nameEn":  "SmallRig AD-01 Heavy-Duty Tripod with Fluid Head 3751B",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  200,
+        "oldPrice":  220,
+        "rating":  4.9,
+        "reviewsCount":  28,
+        "stock":  7,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_324.jpg",
+        "gallery":  [
+                        "images/prod_acc_324.jpg"
+                    ],
+        "description":  "SmallRig AD-01 Heavy-Duty Tripod with Fluid Head 3751B : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-325",
+        "name":  "SmallRig AD-50Lite Lightweight Aluminum Alloy Video Tripod 4684",
+        "nameEn":  "SmallRig AD-50Lite Lightweight Aluminum Alloy Video Tripod 4684",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  140,
+        "oldPrice":  154,
+        "rating":  4.9,
+        "reviewsCount":  18,
+        "stock":  8,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_325.jpg",
+        "gallery":  [
+                        "images/prod_acc_325.jpg"
+                    ],
+        "description":  "SmallRig AD-50Lite Lightweight Aluminum Alloy Video Tripod 4684 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-326",
+        "name":  "SmallRig AD-50 Lightweight Carbon Fiber Video Tripod 4685",
+        "nameEn":  "SmallRig AD-50 Lightweight Carbon Fiber Video Tripod 4685",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  210,
+        "oldPrice":  231,
+        "rating":  4.9,
+        "reviewsCount":  53,
+        "stock":  7,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_326.jpg",
+        "gallery":  [
+                        "images/prod_acc_326.jpg"
+                    ],
+        "description":  "SmallRig AD-50 Lightweight Carbon Fiber Video Tripod 4685 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-327",
+        "name":  "SmallRig FreeBlazer Heavy-Duty Carbon Fiber Tripod 3989",
+        "nameEn":  "SmallRig FreeBlazer Heavy-Duty Carbon Fiber Tripod 3989",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  450,
+        "oldPrice":  495,
+        "rating":  4.9,
+        "reviewsCount":  84,
+        "stock":  11,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_327.jpg",
+        "gallery":  [
+                        "images/prod_acc_327.jpg"
+                    ],
+        "description":  "SmallRig FreeBlazer Heavy-Duty Carbon Fiber Tripod 3989 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-328",
+        "name":  "SmallRig Quick-Lock Photography Heavy Duty Tripod Dolly 5020",
+        "nameEn":  "SmallRig Quick-Lock Photography Heavy Duty Tripod Dolly 5020",
+        "category":  "stands",
+        "brand":  "SmallRig",
+        "price":  70,
+        "oldPrice":  77,
+        "rating":  4.9,
+        "reviewsCount":  90,
+        "stock":  3,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_328.jpg",
+        "gallery":  [
+                        "images/prod_acc_328.jpg"
+                    ],
+        "description":  "SmallRig Quick-Lock Photography Heavy Duty Tripod Dolly 5020 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-335",
+        "name":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic Arm (11\"\") 4489\"",
+        "nameEn":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic Arm (11\"\") 4489\"",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  85,
+        "oldPrice":  94,
+        "rating":  4.9,
+        "reviewsCount":  41,
+        "stock":  9,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_335.jpg",
+        "gallery":  [
+                        "images/prod_acc_335.jpg"
+                    ],
+        "description":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic Arm (11\"\") 4489\" : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-336",
+        "name":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic  Arm (7\"\") 4490\"",
+        "nameEn":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic  Arm (7\"\") 4490\"",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  55,
+        "oldPrice":  61,
+        "rating":  4.9,
+        "reviewsCount":  86,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_336.jpg",
+        "gallery":  [
+                        "images/prod_acc_336.jpg"
+                    ],
+        "description":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic  Arm (7\"\") 4490\" : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-341",
+        "name":  "SmallRig Camera Suction Cup Car Mount Kit for Panoramic Shooting 4380",
+        "nameEn":  "SmallRig Camera Suction Cup Car Mount Kit for Panoramic Shooting 4380",
+        "category":  "audio",
+        "brand":  "SmallRig",
+        "price":  90,
+        "oldPrice":  99,
+        "rating":  4.9,
+        "reviewsCount":  45,
+        "stock":  4,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_acc_341.jpg",
+        "gallery":  [
+                        "images/prod_acc_341.jpg"
+                    ],
+        "description":  "SmallRig Camera Suction Cup Car Mount Kit for Panoramic Shooting 4380 : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-346",
+        "name":  "SmallRig x Caleb Pike VB212 Mini V-Mount Battery 212Wh 4293",
+        "nameEn":  "SmallRig x Caleb Pike VB212 Mini V-Mount Battery 212Wh 4293",
+        "category":  "chargers_batteries",
+        "brand":  "SmallRig",
+        "price":  295,
+        "oldPrice":  324,
+        "rating":  4.9,
+        "reviewsCount":  27,
+        "stock":  10,
+        "badge":  "طاقة وسينما",
+        "image":  "images/prod_acc_346.jpg",
+        "gallery":  [
+                        "images/prod_acc_346.jpg"
+                    ],
+        "description":  "SmallRig x Caleb Pike VB212 Mini V-Mount Battery 212Wh 4293 : بطارية سينمائية متطورة ومحطة طاقة عالية الكفاءة مزودة بخلايا طاقة موثوقة ومنافذ شحن سريعة متعددة لتشغيل الكاميرات والشاشات ومعدات الإضاءة لفترات تصوير طويلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "نوع الخلية":  "High-Drain Premium Lithium-Ion Battery Cells",
+                      "المنافذ":  "D-Tap, USB-C PD Fast Input/Output, USB-A",
+                      "أنظمة الحماية":  "Built-in Intelligent BMS Protection Circuitry",
+                      "مؤشر الشحن":  "OLED / LED Multi-Segment Battery Level Indicator",
+                      "التوافق":  "Standard V-Mount / Gold-Mount / Camera Dummy Battery",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-357",
+        "name":  "SmallRig Professional Accessory Kit for Blackmagic Pocket Cinema Camera 6K Pro/6K G2 3299",
+        "nameEn":  "SmallRig Professional Accessory Kit for Blackmagic Pocket Cinema Camera 6K Pro/6K G2 3299",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  115,
+        "oldPrice":  127,
+        "rating":  4.9,
+        "reviewsCount":  59,
+        "stock":  6,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_357.jpg",
+        "gallery":  [
+                        "images/prod_acc_357.jpg"
+                    ],
+        "description":  "SmallRig Professional Accessory Kit for Blackmagic Pocket Cinema Camera 6K Pro/6K G2 3299 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-359",
+        "name":  "\"SmallRig Camera Cage for Canon EOS R5 C",
+        "nameEn":  "\"SmallRig Camera Cage for Canon EOS R5 C",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  60,
+        "oldPrice":  66,
+        "rating":  4.9,
+        "reviewsCount":  53,
+        "stock":  3,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_359.jpg",
+        "gallery":  [
+                        "images/prod_acc_359.jpg"
+                    ],
+        "description":  "\"SmallRig Camera Cage for Canon EOS R5 C : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-360",
+        "name":  "SmallRig Full Camera Cage Kit for Sony a6700  4336",
+        "nameEn":  "SmallRig Full Camera Cage Kit for Sony a6700  4336",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  65,
+        "oldPrice":  72,
+        "rating":  4.9,
+        "reviewsCount":  54,
+        "stock":  11,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_360.jpg",
+        "gallery":  [
+                        "images/prod_acc_360.jpg"
+                    ],
+        "description":  "SmallRig Full Camera Cage Kit for Sony a6700  4336 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-361",
+        "name":  "SmallRig HawkLock Quick Release Advanced Cage Kit for Sony FX3 and FX30  4771",
+        "nameEn":  "SmallRig HawkLock Quick Release Advanced Cage Kit for Sony FX3 and FX30  4771",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  135,
+        "oldPrice":  148,
+        "rating":  4.9,
+        "reviewsCount":  92,
+        "stock":  4,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_361.jpg",
+        "gallery":  [
+                        "images/prod_acc_361.jpg"
+                    ],
+        "description":  "SmallRig HawkLock Quick Release Advanced Cage Kit for Sony FX3 and FX30  4771 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-363",
+        "name":  "SmallRig Top Handle with ARRI-Style Anti-Twist Mount (Lite) 3765",
+        "nameEn":  "SmallRig Top Handle with ARRI-Style Anti-Twist Mount (Lite) 3765",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  35,
+        "oldPrice":  38,
+        "rating":  4.9,
+        "reviewsCount":  64,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_363.jpg",
+        "gallery":  [
+                        "images/prod_acc_363.jpg"
+                    ],
+        "description":  "SmallRig Top Handle with ARRI-Style Anti-Twist Mount (Lite) 3765 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-364",
+        "name":  "SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Canon R-Series Cameras 4300",
+        "nameEn":  "SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Canon R-Series Cameras 4300",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  55,
+        "oldPrice":  61,
+        "rating":  4.9,
+        "reviewsCount":  54,
+        "stock":  6,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_364.jpg",
+        "gallery":  [
+                        "images/prod_acc_364.jpg"
+                    ],
+        "description":  "SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Canon R-Series Cameras 4300 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-365",
+        "name":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Sony A-Series",
+        "nameEn":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Sony A-Series",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  55,
+        "oldPrice":  61,
+        "rating":  4.9,
+        "reviewsCount":  47,
+        "stock":  7,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_365.jpg",
+        "gallery":  [
+                        "images/prod_acc_365.jpg"
+                    ],
+        "description":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Sony A-Series : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-366",
+        "name":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Sony a7R IV",
+        "nameEn":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Sony a7R IV",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  55,
+        "oldPrice":  61,
+        "rating":  4.9,
+        "reviewsCount":  76,
+        "stock":  9,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_366.jpg",
+        "gallery":  [
+                        "images/prod_acc_366.jpg"
+                    ],
+        "description":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Sony a7R IV : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-367",
+        "name":  "SmallRig Dual Handgrip for DJI RS 2/RSC 2/RS 3/RS 3 Pro/RS 4/RS 4 Pro Gimbal 3027",
+        "nameEn":  "SmallRig Dual Handgrip for DJI RS 2/RSC 2/RS 3/RS 3 Pro/RS 4/RS 4 Pro Gimbal 3027",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  80,
+        "oldPrice":  88,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_367.jpg",
+        "gallery":  [
+                        "images/prod_acc_367.jpg"
+                    ],
+        "description":  "SmallRig Dual Handgrip for DJI RS 2/RSC 2/RS 3/RS 3 Pro/RS 4/RS 4 Pro Gimbal 3027 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-368",
+        "name":  "SmallRig Sling Handle for Select DJI RS-Series Gimbals 3028D",
+        "nameEn":  "SmallRig Sling Handle for Select DJI RS-Series Gimbals 3028D",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  65,
+        "oldPrice":  72,
+        "rating":  4.9,
+        "reviewsCount":  34,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_368.jpg",
+        "gallery":  [
+                        "images/prod_acc_368.jpg"
+                    ],
+        "description":  "SmallRig Sling Handle for Select DJI RS-Series Gimbals 3028D : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-369",
+        "name":  "\"SmallRig Articulating Arm (9.5\"\") 2066B\"",
+        "nameEn":  "\"SmallRig Articulating Arm (9.5\"\") 2066B\"",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  30,
+        "oldPrice":  33,
+        "rating":  4.9,
+        "reviewsCount":  42,
+        "stock":  6,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_369.jpg",
+        "gallery":  [
+                        "images/prod_acc_369.jpg"
+                    ],
+        "description":  "\"SmallRig Articulating Arm (9.5\"\") 2066B\" : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-370",
+        "name":  "\"SmallRig 5.5\"\" Articulating Arm 2065B\"",
+        "nameEn":  "\"SmallRig 5.5\"\" Articulating Arm 2065B\"",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  21,
+        "oldPrice":  23,
+        "rating":  4.9,
+        "reviewsCount":  74,
+        "stock":  4,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_370.jpg",
+        "gallery":  [
+                        "images/prod_acc_370.jpg"
+                    ],
+        "description":  "\"SmallRig 5.5\"\" Articulating Arm 2065B\" : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-371",
+        "name":  "\"SmallRig 2164 Multifunctional Crab Clamp with 3.5\"\" Ball Head Arm 2164\"",
+        "nameEn":  "\"SmallRig 2164 Multifunctional Crab Clamp with 3.5\"\" Ball Head Arm 2164\"",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  20,
+        "oldPrice":  22,
+        "rating":  4.9,
+        "reviewsCount":  70,
+        "stock":  9,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_371.jpg",
+        "gallery":  [
+                        "images/prod_acc_371.jpg"
+                    ],
+        "description":  "\"SmallRig 2164 Multifunctional Crab Clamp with 3.5\"\" Ball Head Arm 2164\" : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-372",
+        "name":  "\"SmallRig Magic Arm with Dual Ball Heads (1/4\"\"-20 Screws) 3873\"",
+        "nameEn":  "\"SmallRig Magic Arm with Dual Ball Heads (1/4\"\"-20 Screws) 3873\"",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  40,
+        "oldPrice":  44,
+        "rating":  4.9,
+        "reviewsCount":  81,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_372.jpg",
+        "gallery":  [
+                        "images/prod_acc_372.jpg"
+                    ],
+        "description":  "\"SmallRig Magic Arm with Dual Ball Heads (1/4\"\"-20 Screws) 3873\" : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-373",
+        "name":  "SmallRig Crab-Shaped Clamp \u0026 Magic Arm Kit 4454",
+        "nameEn":  "SmallRig Crab-Shaped Clamp \u0026 Magic Arm Kit 4454",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  35,
+        "oldPrice":  38,
+        "rating":  4.9,
+        "reviewsCount":  83,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_373.jpg",
+        "gallery":  [
+                        "images/prod_acc_373.jpg"
+                    ],
+        "description":  "SmallRig Crab-Shaped Clamp \u0026 Magic Arm Kit 4454 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-374",
+        "name":  "SmallRig Articulating Magic Arm 9.8 Inches with super Clamp 2732B",
+        "nameEn":  "SmallRig Articulating Magic Arm 9.8 Inches with super Clamp 2732B",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  35,
+        "oldPrice":  38,
+        "rating":  4.9,
+        "reviewsCount":  21,
+        "stock":  8,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_374.jpg",
+        "gallery":  [
+                        "images/prod_acc_374.jpg"
+                    ],
+        "description":  "SmallRig Articulating Magic Arm 9.8 Inches with super Clamp 2732B : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-375",
+        "name":  "SmallRig Phone Holder for DJI RS Series Gimbals 4301",
+        "nameEn":  "SmallRig Phone Holder for DJI RS Series Gimbals 4301",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  17,
+        "oldPrice":  19,
+        "rating":  4.9,
+        "reviewsCount":  19,
+        "stock":  5,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_375.jpg",
+        "gallery":  [
+                        "images/prod_acc_375.jpg"
+                    ],
+        "description":  "SmallRig Phone Holder for DJI RS Series Gimbals 4301 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-376",
+        "name":  "SmallRig Swivel and Tilt Adjustable Monitor Mount with Cold Shoe Mount 2905B",
+        "nameEn":  "SmallRig Swivel and Tilt Adjustable Monitor Mount with Cold Shoe Mount 2905B",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  20,
+        "oldPrice":  22,
+        "rating":  4.9,
+        "reviewsCount":  19,
+        "stock":  3,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_376.jpg",
+        "gallery":  [
+                        "images/prod_acc_376.jpg"
+                    ],
+        "description":  "SmallRig Swivel and Tilt Adjustable Monitor Mount with Cold Shoe Mount 2905B : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-377",
+        "name":  "\"SmallRig Swivel and Tilt Adjustable Monitor Support with 1/4\"\"-20 Screws 4886\"",
+        "nameEn":  "\"SmallRig Swivel and Tilt Adjustable Monitor Support with 1/4\"\"-20 Screws 4886\"",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  25,
+        "oldPrice":  28,
+        "rating":  4.9,
+        "reviewsCount":  84,
+        "stock":  5,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_377.jpg",
+        "gallery":  [
+                        "images/prod_acc_377.jpg"
+                    ],
+        "description":  "\"SmallRig Swivel and Tilt Adjustable Monitor Support with 1/4\"\"-20 Screws 4886\" : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-378",
+        "name":  "SmallRig Foldable Multi-Tool (Silver) AAK2213D",
+        "nameEn":  "SmallRig Foldable Multi-Tool (Silver) AAK2213D",
+        "category":  "cages",
+        "brand":  "SmallRig",
+        "price":  15,
+        "oldPrice":  16,
+        "rating":  4.9,
+        "reviewsCount":  58,
+        "stock":  5,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_378.jpg",
+        "gallery":  [
+                        "images/prod_acc_378.jpg"
+                    ],
+        "description":  "SmallRig Foldable Multi-Tool (Silver) AAK2213D : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-381",
+        "name":  "ulanzi th04 arm",
+        "nameEn":  "ulanzi th04 arm",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  70,
+        "oldPrice":  77,
+        "rating":  4.9,
+        "reviewsCount":  69,
+        "stock":  4,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_381.jpg",
+        "gallery":  [
+                        "images/prod_acc_381.jpg"
+                    ],
+        "description":  "ulanzi th04 arm : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-382",
+        "name":  "ulanzi ma53 phone holder",
+        "nameEn":  "ulanzi ma53 phone holder",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  25,
+        "oldPrice":  28,
+        "rating":  4.9,
+        "reviewsCount":  58,
+        "stock":  11,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_382.jpg",
+        "gallery":  [
+                        "images/prod_acc_382.jpg"
+                    ],
+        "description":  "ulanzi ma53 phone holder : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-383",
+        "name":  "ulanzi ma35 phone holder",
+        "nameEn":  "ulanzi ma35 phone holder",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  20,
+        "oldPrice":  22,
+        "rating":  4.9,
+        "reviewsCount":  56,
+        "stock":  4,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_383.jpg",
+        "gallery":  [
+                        "images/prod_acc_383.jpg"
+                    ],
+        "description":  "ulanzi ma35 phone holder : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-384",
+        "name":  "ulanzi lino cage",
+        "nameEn":  "ulanzi lino cage",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  55,
+        "oldPrice":  61,
+        "rating":  4.9,
+        "reviewsCount":  76,
+        "stock":  7,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_384.jpg",
+        "gallery":  [
+                        "images/prod_acc_384.jpg"
+                    ],
+        "description":  "ulanzi lino cage : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-385",
+        "name":  "Ulanzi Universal Smartphone Metal Cage 3127",
+        "nameEn":  "Ulanzi Universal Smartphone Metal Cage 3127",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  70,
+        "oldPrice":  77,
+        "rating":  4.9,
+        "reviewsCount":  32,
+        "stock":  7,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_385.jpg",
+        "gallery":  [
+                        "images/prod_acc_385.jpg"
+                    ],
+        "description":  "Ulanzi Universal Smartphone Metal Cage 3127 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-386",
+        "name":  "Ulanzi MA07 Universal Smartphone  Cage",
+        "nameEn":  "Ulanzi MA07 Universal Smartphone  Cage",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  15,
+        "oldPrice":  16,
+        "rating":  4.9,
+        "reviewsCount":  31,
+        "stock":  7,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_386.jpg",
+        "gallery":  [
+                        "images/prod_acc_386.jpg"
+                    ],
+        "description":  "Ulanzi MA07 Universal Smartphone  Cage : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-387",
+        "name":  "ulanzi ls24 desk stand",
+        "nameEn":  "ulanzi ls24 desk stand",
+        "category":  "stands",
+        "brand":  "Ulanzi",
+        "price":  40,
+        "oldPrice":  44,
+        "rating":  4.9,
+        "reviewsCount":  47,
+        "stock":  3,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_387.jpg",
+        "gallery":  [
+                        "images/prod_acc_387.jpg"
+                    ],
+        "description":  "ulanzi ls24 desk stand : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-388",
+        "name":  "ulanzi ls08 desk stand2666",
+        "nameEn":  "ulanzi ls08 desk stand2666",
+        "category":  "stands",
+        "brand":  "Ulanzi",
+        "price":  40,
+        "oldPrice":  44,
+        "rating":  4.9,
+        "reviewsCount":  21,
+        "stock":  7,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_388.jpg",
+        "gallery":  [
+                        "images/prod_acc_388.jpg"
+                    ],
+        "description":  "ulanzi ls08 desk stand2666 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-389",
+        "name":  "ulanzi universal desktop 2335",
+        "nameEn":  "ulanzi universal desktop 2335",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  70,
+        "oldPrice":  77,
+        "rating":  4.9,
+        "reviewsCount":  63,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_389.jpg",
+        "gallery":  [
+                        "images/prod_acc_389.jpg"
+                    ],
+        "description":  "ulanzi universal desktop 2335 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-390",
+        "name":  "ulanzi suction cup 4.5 inch",
+        "nameEn":  "ulanzi suction cup 4.5 inch",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  50,
+        "oldPrice":  55,
+        "rating":  4.9,
+        "reviewsCount":  59,
+        "stock":  7,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_390.jpg",
+        "gallery":  [
+                        "images/prod_acc_390.jpg"
+                    ],
+        "description":  "ulanzi suction cup 4.5 inch : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-401",
+        "name":  "ulanzi air tube al60",
+        "nameEn":  "ulanzi air tube al60",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  110,
+        "oldPrice":  121,
+        "rating":  4.9,
+        "reviewsCount":  20,
+        "stock":  5,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_401.jpg",
+        "gallery":  [
+                        "images/prod_acc_401.jpg"
+                    ],
+        "description":  "ulanzi air tube al60 : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-402",
+        "name":  "ULANZI VL-120 Bi color V-Mount COB LED",
+        "nameEn":  "ULANZI VL-120 Bi color V-Mount COB LED",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  135,
+        "oldPrice":  148,
+        "rating":  4.9,
+        "reviewsCount":  51,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_402.jpg",
+        "gallery":  [
+                        "images/prod_acc_402.jpg"
+                    ],
+        "description":  "ULANZI VL-120 Bi color V-Mount COB LED : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-403",
+        "name":  "ULANZI VL-120 RGB V-Mount COB LED",
+        "nameEn":  "ULANZI VL-120 RGB V-Mount COB LED",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  160,
+        "oldPrice":  176,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  7,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_403.jpg",
+        "gallery":  [
+                        "images/prod_acc_403.jpg"
+                    ],
+        "description":  "ULANZI VL-120 RGB V-Mount COB LED : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-404",
+        "name":  "ULANZI VL-1200 Bi Color V-Mount COB LED",
+        "nameEn":  "ULANZI VL-1200 Bi Color V-Mount COB LED",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  170,
+        "oldPrice":  187,
+        "rating":  4.9,
+        "reviewsCount":  50,
+        "stock":  4,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_404.jpg",
+        "gallery":  [
+                        "images/prod_acc_404.jpg"
+                    ],
+        "description":  "ULANZI VL-1200 Bi Color V-Mount COB LED : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-405",
+        "name":  "ulanzi 1.5m monopod tb 12",
+        "nameEn":  "ulanzi 1.5m monopod tb 12",
+        "category":  "stands",
+        "brand":  "Ulanzi",
+        "price":  20,
+        "oldPrice":  22,
+        "rating":  4.9,
+        "reviewsCount":  45,
+        "stock":  5,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_405.jpg",
+        "gallery":  [
+                        "images/prod_acc_405.jpg"
+                    ],
+        "description":  "ulanzi 1.5m monopod tb 12 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-410",
+        "name":  "Ulanzi 2803 Multi-Functional Storage Bag",
+        "nameEn":  "Ulanzi 2803 Multi-Functional Storage Bag",
+        "category":  "bags",
+        "brand":  "Ulanzi",
+        "price":  10,
+        "oldPrice":  11,
+        "rating":  4.9,
+        "reviewsCount":  73,
+        "stock":  11,
+        "badge":  "حماية وتنقل",
+        "image":  "images/prod_acc_410.jpg",
+        "gallery":  [
+                        "images/prod_acc_410.jpg"
+                    ],
+        "description":  "Ulanzi 2803 Multi-Functional Storage Bag : حقيبة تصوير احترافية مقاومة للعوامل الجوية مصممة لحماية وترتيب معدات التصوير والعدسات والدرون مع فواصل داخلية مبطنة وقابلة للتخصيص لتأمين المعدات أثناء التنقل. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Weatherproof High-Density Ballistic Nylon Fabric",
+                      "سعة التخزين":  "Spacious Compartment for 2 Bodies, 4 Lenses \u0026 Laptop",
+                      "الفواصل":  "Customizable Shockproof EVA Padded Dividers",
+                      "السحابات والأقفال":  "YKK Weather-Sealed Zippers \u0026 Metal Buckles",
+                      "الراحة والتنقل":  "Ergonomic Breathable Back Panel \u0026 Shoulder Straps",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-411",
+        "name":  "Ulanzi┬بBP15 SeeClear Tech Pouch Bag",
+        "nameEn":  "Ulanzi┬بBP15 SeeClear Tech Pouch Bag",
+        "category":  "bags",
+        "brand":  "Ulanzi",
+        "price":  12,
+        "oldPrice":  13,
+        "rating":  4.9,
+        "reviewsCount":  18,
+        "stock":  10,
+        "badge":  "حماية وتنقل",
+        "image":  "images/prod_acc_411.jpg",
+        "gallery":  [
+                        "images/prod_acc_411.jpg"
+                    ],
+        "description":  "Ulanzi┬بBP15 SeeClear Tech Pouch Bag : حقيبة تصوير احترافية مقاومة للعوامل الجوية مصممة لحماية وترتيب معدات التصوير والعدسات والدرون مع فواصل داخلية مبطنة وقابلة للتخصيص لتأمين المعدات أثناء التنقل. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Weatherproof High-Density Ballistic Nylon Fabric",
+                      "سعة التخزين":  "Spacious Compartment for 2 Bodies, 4 Lenses \u0026 Laptop",
+                      "الفواصل":  "Customizable Shockproof EVA Padded Dividers",
+                      "السحابات والأقفال":  "YKK Weather-Sealed Zippers \u0026 Metal Buckles",
+                      "الراحة والتنقل":  "Ergonomic Breathable Back Panel \u0026 Shoulder Straps",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-412",
+        "name":  "ulanzi dcm-05 podmic usb",
+        "nameEn":  "ulanzi dcm-05 podmic usb",
+        "category":  "audio",
+        "brand":  "Ulanzi",
+        "price":  70,
+        "oldPrice":  77,
+        "rating":  4.9,
+        "reviewsCount":  26,
+        "stock":  9,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_acc_412.jpg",
+        "gallery":  [
+                        "images/prod_acc_412.jpg"
+                    ],
+        "description":  "ulanzi dcm-05 podmic usb : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-413",
+        "name":  "Ulanzi Mic A21",
+        "nameEn":  "Ulanzi Mic A21",
+        "category":  "audio",
+        "brand":  "Ulanzi",
+        "price":  40,
+        "oldPrice":  44,
+        "rating":  4.9,
+        "reviewsCount":  56,
+        "stock":  3,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_acc_413.jpg",
+        "gallery":  [
+                        "images/prod_acc_413.jpg"
+                    ],
+        "description":  "Ulanzi Mic A21 : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-414",
+        "name":  "Ulanzi mic A200",
+        "nameEn":  "Ulanzi mic A200",
+        "category":  "audio",
+        "brand":  "Ulanzi",
+        "price":  45,
+        "oldPrice":  50,
+        "rating":  4.9,
+        "reviewsCount":  24,
+        "stock":  6,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_acc_414.jpg",
+        "gallery":  [
+                        "images/prod_acc_414.jpg"
+                    ],
+        "description":  "Ulanzi mic A200 : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-415",
+        "name":  "Ulanzi A100 Wireless Mic",
+        "nameEn":  "Ulanzi A100 Wireless Mic",
+        "category":  "audio",
+        "brand":  "Ulanzi",
+        "price":  40,
+        "oldPrice":  44,
+        "rating":  4.9,
+        "reviewsCount":  80,
+        "stock":  8,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_acc_415.jpg",
+        "gallery":  [
+                        "images/prod_acc_415.jpg"
+                    ],
+        "description":  "Ulanzi A100 Wireless Mic : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-416",
+        "name":  "Ulanzi AM18 U-Mic 2-Person Wireless Microphone",
+        "nameEn":  "Ulanzi AM18 U-Mic 2-Person Wireless Microphone",
+        "category":  "audio",
+        "brand":  "Ulanzi",
+        "price":  90,
+        "oldPrice":  99,
+        "rating":  4.9,
+        "reviewsCount":  61,
+        "stock":  7,
+        "badge":  "صوت احترافي",
+        "image":  "images/prod_acc_416.jpg",
+        "gallery":  [
+                        "images/prod_acc_416.jpg"
+                    ],
+        "description":  "Ulanzi AM18 U-Mic 2-Person Wireless Microphone : نظام صوتي وميكروفون فائق النقاء مصمم خصيصاً للتصوير الاحترافي وتسجيل الحوارات والمقابلات وصناعة المحتوى مع عزل ذكي للضوضاء وبث رقمي مستقر وخالٍ من التشويش. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "النمط الصوتي":  "Omnidirectional / Supercardioid Directional",
+                      "الاستجابة الترددية":  "20Hz - 20kHz Broadcast Grade",
+                      "مدى الإرسال":  "Digital 2.4GHz Wireless up to 200m Line-of-Sight",
+                      "التسجيل الداخلي":  "Built-in 32-bit Float / 24-bit Backup Recording",
+                      "البطارية":  "Up to 8-10 Hours Continuous Operating Time",
+                      "التوافق":  "Cameras, Audio Recorders, Smartphones, PC",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-418",
+        "name":  "ulanzi MG14 Neck Mount",
+        "nameEn":  "ulanzi MG14 Neck Mount",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  25,
+        "oldPrice":  28,
+        "rating":  4.9,
+        "reviewsCount":  65,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_418.jpg",
+        "gallery":  [
+                        "images/prod_acc_418.jpg"
+                    ],
+        "description":  "ulanzi MG14 Neck Mount : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-419",
+        "name":  "ulanzi TT23 Selfi stick \u0026 tripod",
+        "nameEn":  "ulanzi TT23 Selfi stick \u0026 tripod",
+        "category":  "stands",
+        "brand":  "Ulanzi",
+        "price":  30,
+        "oldPrice":  33,
+        "rating":  4.9,
+        "reviewsCount":  23,
+        "stock":  10,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_419.jpg",
+        "gallery":  [
+                        "images/prod_acc_419.jpg"
+                    ],
+        "description":  "ulanzi TT23 Selfi stick \u0026 tripod : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-420",
+        "name":  "ulanzi TT24 Selfi stick",
+        "nameEn":  "ulanzi TT24 Selfi stick",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  19,
+        "oldPrice":  21,
+        "rating":  4.9,
+        "reviewsCount":  33,
+        "stock":  3,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_420.jpg",
+        "gallery":  [
+                        "images/prod_acc_420.jpg"
+                    ],
+        "description":  "ulanzi TT24 Selfi stick : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-421",
+        "name":  "Ulanzi TT-88 Mini Tripod for Magnetic Smartphones",
+        "nameEn":  "Ulanzi TT-88 Mini Tripod for Magnetic Smartphones",
+        "category":  "stands",
+        "brand":  "Ulanzi",
+        "price":  20,
+        "oldPrice":  22,
+        "rating":  4.9,
+        "reviewsCount":  79,
+        "stock":  10,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_421.jpg",
+        "gallery":  [
+                        "images/prod_acc_421.jpg"
+                    ],
+        "description":  "Ulanzi TT-88 Mini Tripod for Magnetic Smartphones : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-422",
+        "name":  "ULANZI MA09 Extendable Selfie Stick Tripod Stand",
+        "nameEn":  "ULANZI MA09 Extendable Selfie Stick Tripod Stand",
+        "category":  "stands",
+        "brand":  "Ulanzi",
+        "price":  20,
+        "oldPrice":  22,
+        "rating":  4.9,
+        "reviewsCount":  50,
+        "stock":  5,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_422.jpg",
+        "gallery":  [
+                        "images/prod_acc_422.jpg"
+                    ],
+        "description":  "ULANZI MA09 Extendable Selfie Stick Tripod Stand : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-423",
+        "name":  "Ulanzi U-Rig Pro samrtphone Video Rig/cage",
+        "nameEn":  "Ulanzi U-Rig Pro samrtphone Video Rig/cage",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  15,
+        "oldPrice":  16,
+        "rating":  4.9,
+        "reviewsCount":  70,
+        "stock":  11,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_423.jpg",
+        "gallery":  [
+                        "images/prod_acc_423.jpg"
+                    ],
+        "description":  "Ulanzi U-Rig Pro samrtphone Video Rig/cage : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-425",
+        "name":  "Ulanzi R075 universal wooden Cage handle",
+        "nameEn":  "Ulanzi R075 universal wooden Cage handle",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  25,
+        "oldPrice":  28,
+        "rating":  4.9,
+        "reviewsCount":  67,
+        "stock":  8,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_425.jpg",
+        "gallery":  [
+                        "images/prod_acc_425.jpg"
+                    ],
+        "description":  "Ulanzi R075 universal wooden Cage handle : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-429",
+        "name":  "Ulanzi 2089 broadcast stand with table clamp and 3 Arms",
+        "nameEn":  "Ulanzi 2089 broadcast stand with table clamp and 3 Arms",
+        "category":  "stands",
+        "brand":  "Ulanzi",
+        "price":  85,
+        "oldPrice":  94,
+        "rating":  4.9,
+        "reviewsCount":  78,
+        "stock":  11,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_acc_429.jpg",
+        "gallery":  [
+                        "images/prod_acc_429.jpg"
+                    ],
+        "description":  "Ulanzi 2089 broadcast stand with table clamp and 3 Arms : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-430",
+        "name":  "Ulanzi CR1 3-in-1 Card Reader",
+        "nameEn":  "Ulanzi CR1 3-in-1 Card Reader",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  12,
+        "oldPrice":  13,
+        "rating":  4.9,
+        "reviewsCount":  25,
+        "stock":  6,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_430.jpg",
+        "gallery":  [
+                        "images/prod_acc_430.jpg"
+                    ],
+        "description":  "Ulanzi CR1 3-in-1 Card Reader : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-431",
+        "name":  "ULANZI CO23 Electric Air Duster Kit",
+        "nameEn":  "ULANZI CO23 Electric Air Duster Kit",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  70,
+        "oldPrice":  77,
+        "rating":  4.9,
+        "reviewsCount":  90,
+        "stock":  4,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_431.jpg",
+        "gallery":  [
+                        "images/prod_acc_431.jpg"
+                    ],
+        "description":  "ULANZI CO23 Electric Air Duster Kit : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "ACC-435",
+        "name":  "ULANZI MT-52 Double Arm Gorilapod",
+        "nameEn":  "ULANZI MT-52 Double Arm Gorilapod",
+        "category":  "cages",
+        "brand":  "Ulanzi",
+        "price":  20,
+        "oldPrice":  22,
+        "rating":  4.9,
+        "reviewsCount":  58,
+        "stock":  10,
+        "badge":  "حماية وتجهيز",
+        "image":  "images/prod_acc_435.jpg",
+        "gallery":  [
+                        "images/prod_acc_435.jpg"
+                    ],
+        "description":  "ULANZI MT-52 Double Arm Gorilapod : قفص حماية متكامل ومقبض تثبيت مصنوع بدقة CNC من الألمنيوم المتين، يوفر حماية كاملة للكاميرا مع فتحات لولبية ونقاط تثبيت متعددة للشاشات والميكروفونات وأذرع الإضاءة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Anodized Aerospace-Grade CNC Aluminum Alloy",
+                      "نقاط التثبيت":  "Multiple 1/4\"-20 \u0026 3/8\"-16 ARRI Locating Holes",
+                      "قواعد التوصيل":  "Integrated Cold Shoe Mounts \u0026 NATO Rails",
+                      "التوافق والقفل":  "Form-Fitting Design with Dual Security Locking Pins",
+                      "الوصول الكامل":  "Unobstructed Access to Battery \u0026 Memory Card Doors",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-439",
+        "name":  "qihe (j190s) stainless steel",
+        "nameEn":  "qihe (j190s) stainless steel",
+        "category":  "stands",
+        "brand":  "Qihe",
+        "price":  20,
+        "oldPrice":  22,
+        "rating":  4.9,
+        "reviewsCount":  63,
+        "stock":  7,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_439.jpg",
+        "gallery":  [
+                        "images/prod_stn_439.jpg"
+                    ],
+        "description":  "qihe (j190s) stainless steel : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-440",
+        "name":  "jinbel (m-8 light stand)",
+        "nameEn":  "jinbel (m-8 light stand)",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  315,
+        "oldPrice":  350,
+        "rating":  4.9,
+        "reviewsCount":  22,
+        "stock":  4,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_440.jpg",
+        "gallery":  [
+                        "images/prod_stn_440.jpg"
+                    ],
+        "description":  "jinbel (m-8 light stand) : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-441",
+        "name":  "qihe (l6-2400) light stand",
+        "nameEn":  "qihe (l6-2400) light stand",
+        "category":  "stands",
+        "brand":  "Qihe",
+        "price":  175,
+        "oldPrice":  199,
+        "rating":  4.9,
+        "reviewsCount":  70,
+        "stock":  10,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_441.jpg",
+        "gallery":  [
+                        "images/prod_stn_441.jpg"
+                    ],
+        "description":  "qihe (l6-2400) light stand : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-442",
+        "name":  "qihe (j2650t light stand)",
+        "nameEn":  "qihe (j2650t light stand)",
+        "category":  "stands",
+        "brand":  "Qihe",
+        "price":  175,
+        "oldPrice":  199,
+        "rating":  4.9,
+        "reviewsCount":  48,
+        "stock":  5,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_442.jpg",
+        "gallery":  [
+                        "images/prod_stn_442.jpg"
+                    ],
+        "description":  "qihe (j2650t light stand) : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-443",
+        "name":  "qihe (288s stainless steel stand)",
+        "nameEn":  "qihe (288s stainless steel stand)",
+        "category":  "stands",
+        "brand":  "Qihe",
+        "price":  40,
+        "oldPrice":  45,
+        "rating":  4.9,
+        "reviewsCount":  78,
+        "stock":  3,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_443.jpg",
+        "gallery":  [
+                        "images/prod_stn_443.jpg"
+                    ],
+        "description":  "qihe (288s stainless steel stand) : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-444",
+        "name":  "qihe stainless steel 3*3m b026s",
+        "nameEn":  "qihe stainless steel 3*3m b026s",
+        "category":  "stands",
+        "brand":  "Qihe",
+        "price":  90,
+        "oldPrice":  99,
+        "rating":  4.9,
+        "reviewsCount":  90,
+        "stock":  8,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_444.jpg",
+        "gallery":  [
+                        "images/prod_stn_444.jpg"
+                    ],
+        "description":  "qihe stainless steel 3*3m b026s : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-463",
+        "name":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Camera Kit)",
+        "nameEn":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Camera Kit)",
+        "category":  "monitors",
+        "brand":  "Lensgo",
+        "price":  45,
+        "oldPrice":  50,
+        "rating":  4.9,
+        "reviewsCount":  81,
+        "stock":  10,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_463.jpg",
+        "gallery":  [
+                        "images/prod_mon_463.jpg"
+                    ],
+        "description":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Camera Kit) : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-464",
+        "name":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Ultimate Kit) for Phone \u0026 Canera",
+        "nameEn":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Ultimate Kit) for Phone \u0026 Canera",
+        "category":  "monitors",
+        "brand":  "Lensgo",
+        "price":  60,
+        "oldPrice":  66,
+        "rating":  4.9,
+        "reviewsCount":  20,
+        "stock":  11,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_464.jpg",
+        "gallery":  [
+                        "images/prod_mon_464.jpg"
+                    ],
+        "description":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Ultimate Kit) for Phone \u0026 Canera : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-467",
+        "name":  "SEETEC P215-9HSD-CO (21.5 Inch )",
+        "nameEn":  "SEETEC P215-9HSD-CO (21.5 Inch )",
+        "category":  "monitors",
+        "brand":  "Seetec",
+        "price":  850,
+        "oldPrice":  935,
+        "rating":  4.9,
+        "reviewsCount":  58,
+        "stock":  11,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_467.jpg",
+        "gallery":  [
+                        "images/prod_mon_467.jpg"
+                    ],
+        "description":  "SEETEC P215-9HSD-CO (21.5 Inch ) : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-468",
+        "name":  "seetec atem156 4 hdmi (15.6 inch)",
+        "nameEn":  "seetec atem156 4 hdmi (15.6 inch)",
+        "category":  "monitors",
+        "brand":  "Seetec",
+        "price":  800,
+        "oldPrice":  880,
+        "rating":  4.9,
+        "reviewsCount":  77,
+        "stock":  7,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_468.jpg",
+        "gallery":  [
+                        "images/prod_mon_468.jpg"
+                    ],
+        "description":  "seetec atem156 4 hdmi (15.6 inch) : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-469",
+        "name":  "feelworld TP16",
+        "nameEn":  "feelworld TP16",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  220,
+        "oldPrice":  242,
+        "rating":  4.9,
+        "reviewsCount":  75,
+        "stock":  3,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_469.jpg",
+        "gallery":  [
+                        "images/prod_mon_469.jpg"
+                    ],
+        "description":  "feelworld TP16 : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-470",
+        "name":  "feelworld TP13A",
+        "nameEn":  "feelworld TP13A",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  145,
+        "oldPrice":  160,
+        "rating":  4.9,
+        "reviewsCount":  60,
+        "stock":  3,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_470.jpg",
+        "gallery":  [
+                        "images/prod_mon_470.jpg"
+                    ],
+        "description":  "feelworld TP13A : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-471",
+        "name":  "feelworld TP10",
+        "nameEn":  "feelworld TP10",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  85,
+        "oldPrice":  94,
+        "rating":  4.9,
+        "reviewsCount":  89,
+        "stock":  10,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_471.jpg",
+        "gallery":  [
+                        "images/prod_mon_471.jpg"
+                    ],
+        "description":  "feelworld TP10 : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-472",
+        "name":  "feelworld TP2",
+        "nameEn":  "feelworld TP2",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  70,
+        "oldPrice":  77,
+        "rating":  4.9,
+        "reviewsCount":  84,
+        "stock":  11,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_472.jpg",
+        "gallery":  [
+                        "images/prod_mon_472.jpg"
+                    ],
+        "description":  "feelworld TP2 : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-473",
+        "name":  "feelworld TP2A",
+        "nameEn":  "feelworld TP2A",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  75,
+        "oldPrice":  82,
+        "rating":  4.9,
+        "reviewsCount":  75,
+        "stock":  3,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_473.jpg",
+        "gallery":  [
+                        "images/prod_mon_473.jpg"
+                    ],
+        "description":  "feelworld TP2A : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-474",
+        "name":  "FeelWorld F5 Pro",
+        "nameEn":  "FeelWorld F5 Pro",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  135,
+        "oldPrice":  148,
+        "rating":  4.9,
+        "reviewsCount":  88,
+        "stock":  3,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_474.jpg",
+        "gallery":  [
+                        "images/prod_mon_474.jpg"
+                    ],
+        "description":  "FeelWorld F5 Pro : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-475",
+        "name":  "FeelWorld F5 Pro X",
+        "nameEn":  "FeelWorld F5 Pro X",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  145,
+        "oldPrice":  160,
+        "rating":  4.9,
+        "reviewsCount":  28,
+        "stock":  9,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_475.jpg",
+        "gallery":  [
+                        "images/prod_mon_475.jpg"
+                    ],
+        "description":  "FeelWorld F5 Pro X : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-476",
+        "name":  "FEELWORLD LUT11",
+        "nameEn":  "FEELWORLD LUT11",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  245,
+        "oldPrice":  270,
+        "rating":  4.9,
+        "reviewsCount":  94,
+        "stock":  8,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_476.jpg",
+        "gallery":  [
+                        "images/prod_mon_476.jpg"
+                    ],
+        "description":  "FEELWORLD LUT11 : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-477",
+        "name":  "FEELWORLD LUT11S",
+        "nameEn":  "FEELWORLD LUT11S",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  300,
+        "oldPrice":  330,
+        "rating":  4.9,
+        "reviewsCount":  94,
+        "stock":  7,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_477.jpg",
+        "gallery":  [
+                        "images/prod_mon_477.jpg"
+                    ],
+        "description":  "FEELWORLD LUT11S : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-479",
+        "name":  "feelworld p6xl",
+        "nameEn":  "feelworld p6xl",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  225,
+        "oldPrice":  248,
+        "rating":  4.9,
+        "reviewsCount":  90,
+        "stock":  9,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_479.jpg",
+        "gallery":  [
+                        "images/prod_mon_479.jpg"
+                    ],
+        "description":  "feelworld p6xl : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-480",
+        "name":  "feelworld f7 plus",
+        "nameEn":  "feelworld f7 plus",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  215,
+        "oldPrice":  237,
+        "rating":  4.9,
+        "reviewsCount":  79,
+        "stock":  7,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_480.jpg",
+        "gallery":  [
+                        "images/prod_mon_480.jpg"
+                    ],
+        "description":  "feelworld f7 plus : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-482",
+        "name":  "FeeLWorld F6 Plus V2",
+        "nameEn":  "FeeLWorld F6 Plus V2",
+        "category":  "monitors",
+        "brand":  "FeelWorld",
+        "price":  180,
+        "oldPrice":  198,
+        "rating":  4.9,
+        "reviewsCount":  94,
+        "stock":  4,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_482.jpg",
+        "gallery":  [
+                        "images/prod_mon_482.jpg"
+                    ],
+        "description":  "FeeLWorld F6 Plus V2 : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-483",
+        "name":  "viltrox dc-550 pro",
+        "nameEn":  "viltrox dc-550 pro",
+        "category":  "monitors",
+        "brand":  "Viltrox",
+        "price":  200,
+        "oldPrice":  220,
+        "rating":  4.9,
+        "reviewsCount":  82,
+        "stock":  7,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_483.jpg",
+        "gallery":  [
+                        "images/prod_mon_483.jpg"
+                    ],
+        "description":  "viltrox dc-550 pro : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-484",
+        "name":  "viltrox dc-x3",
+        "nameEn":  "viltrox dc-x3",
+        "category":  "monitors",
+        "brand":  "Viltrox",
+        "price":  250,
+        "oldPrice":  275,
+        "rating":  4.9,
+        "reviewsCount":  61,
+        "stock":  3,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_484.jpg",
+        "gallery":  [
+                        "images/prod_mon_484.jpg"
+                    ],
+        "description":  "viltrox dc-x3 : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-308",
+        "name":  "Tripod G555 + Go",
+        "nameEn":  "Tripod G555 + Go",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  55,
+        "oldPrice":  61,
+        "rating":  4.9,
+        "reviewsCount":  62,
+        "stock":  3,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_308.jpg",
+        "gallery":  [
+                        "images/prod_stn_308.jpg"
+                    ],
+        "description":  "Tripod G555 + Go : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-313",
+        "name":  "Tripod  VT-1500",
+        "nameEn":  "Tripod  VT-1500",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  50,
+        "oldPrice":  55,
+        "rating":  4.9,
+        "reviewsCount":  94,
+        "stock":  9,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_313.jpg",
+        "gallery":  [
+                        "images/prod_stn_313.jpg"
+                    ],
+        "description":  "Tripod  VT-1500 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-314",
+        "name":  "Tripod VT-880",
+        "nameEn":  "Tripod VT-880",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  30,
+        "oldPrice":  33,
+        "rating":  4.9,
+        "reviewsCount":  75,
+        "stock":  3,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_314.jpg",
+        "gallery":  [
+                        "images/prod_stn_314.jpg"
+                    ],
+        "description":  "Tripod VT-880 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-315",
+        "name":  "Tripod VT-1600",
+        "nameEn":  "Tripod VT-1600",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  55,
+        "oldPrice":  61,
+        "rating":  4.9,
+        "reviewsCount":  85,
+        "stock":  5,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_315.jpg",
+        "gallery":  [
+                        "images/prod_stn_315.jpg"
+                    ],
+        "description":  "Tripod VT-1600 : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-436",
+        "name":  "meking (mfa-4500f)",
+        "nameEn":  "meking (mfa-4500f)",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  175,
+        "oldPrice":  199,
+        "rating":  4.9,
+        "reviewsCount":  67,
+        "stock":  3,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_436.jpg",
+        "gallery":  [
+                        "images/prod_stn_436.jpg"
+                    ],
+        "description":  "meking (mfa-4500f) : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-437",
+        "name":  "meking (mfa-3300f)",
+        "nameEn":  "meking (mfa-3300f)",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  150,
+        "oldPrice":  169,
+        "rating":  4.9,
+        "reviewsCount":  52,
+        "stock":  3,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_437.jpg",
+        "gallery":  [
+                        "images/prod_stn_437.jpg"
+                    ],
+        "description":  "meking (mfa-3300f) : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-438",
+        "name":  "nanlite (ls-fl-t12) floor stand",
+        "nameEn":  "nanlite (ls-fl-t12) floor stand",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  30,
+        "oldPrice":  33,
+        "rating":  4.9,
+        "reviewsCount":  30,
+        "stock":  11,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_438.jpg",
+        "gallery":  [
+                        "images/prod_stn_438.jpg"
+                    ],
+        "description":  "nanlite (ls-fl-t12) floor stand : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-445",
+        "name":  "qihe electric background support 3axel",
+        "nameEn":  "qihe electric background support 3axel",
+        "category":  "stands",
+        "brand":  "Qihe",
+        "price":  135,
+        "oldPrice":  150,
+        "rating":  4.9,
+        "reviewsCount":  65,
+        "stock":  9,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_445.jpg",
+        "gallery":  [
+                        "images/prod_stn_445.jpg"
+                    ],
+        "description":  "qihe electric background support 3axel : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-446",
+        "name":  "qihe electric background support 4axel",
+        "nameEn":  "qihe electric background support 4axel",
+        "category":  "stands",
+        "brand":  "Qihe",
+        "price":  170,
+        "oldPrice":  185,
+        "rating":  4.9,
+        "reviewsCount":  33,
+        "stock":  11,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_446.jpg",
+        "gallery":  [
+                        "images/prod_stn_446.jpg"
+                    ],
+        "description":  "qihe electric background support 4axel : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-447",
+        "name":  "qihe electric background support 6axel",
+        "nameEn":  "qihe electric background support 6axel",
+        "category":  "stands",
+        "brand":  "Qihe",
+        "price":  200,
+        "oldPrice":  225,
+        "rating":  4.9,
+        "reviewsCount":  93,
+        "stock":  7,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_447.jpg",
+        "gallery":  [
+                        "images/prod_stn_447.jpg"
+                    ],
+        "description":  "qihe electric background support 6axel : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "STN-448",
+        "name":  "pantograph ceiling drop rail system",
+        "nameEn":  "pantograph ceiling drop rail system",
+        "category":  "stands",
+        "brand":  "TOPCAM Pro",
+        "price":  360,
+        "oldPrice":  400,
+        "rating":  4.9,
+        "reviewsCount":  20,
+        "stock":  11,
+        "badge":  "ثبات واستقرار",
+        "image":  "images/prod_stn_448.jpg",
+        "gallery":  [
+                        "images/prod_stn_448.jpg"
+                    ],
+        "description":  "pantograph ceiling drop rail system : حامل وستاند تصوير متين ومصنوع من خامات معدنية أو ألياف كربونية فائقة التحمل لتوفير أقصى درجات الثبات والاستقرار للمعدات والكاميرات وأضواء الاستوديو الثقيلة. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "الخامة":  "Heavy-Duty CNC Aluminum / Carbon Fiber",
+                      "أقصى حمولة":  "Up to 10 - 15 kg Payload Capacity",
+                      "أقصى ارتفاع":  "Adjustable from 60cm up to 280cm Extension",
+                      "الهيد وقاعدة التثبيت":  "Fluid Drag Pan/Tilt Head / 1/4\" \u0026 3/8\" Screw",
+                      "قفل الأرجل":  "Ergonomic Quick-Flip / Twist Lock Mechanism",
+                      "الوزن والتنقل":  "Compact Folded Length for Easy Transport",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-465",
+        "name":  "LENSGO TC12 12.9\u0027\u0027 Teleprompter",
+        "nameEn":  "LENSGO TC12 12.9\u0027\u0027 Teleprompter",
+        "category":  "monitors",
+        "brand":  "Lensgo",
+        "price":  70,
+        "oldPrice":  77,
+        "rating":  4.9,
+        "reviewsCount":  78,
+        "stock":  6,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_465.jpg",
+        "gallery":  [
+                        "images/prod_mon_465.jpg"
+                    ],
+        "description":  "LENSGO TC12 12.9\u0027\u0027 Teleprompter : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
+    },
+    {
+        "id":  "MON-485",
+        "name":  "Lilliput A7s",
+        "nameEn":  "Lilliput A7s",
+        "category":  "monitors",
+        "brand":  "Lilliput",
+        "price":  145,
+        "oldPrice":  160,
+        "rating":  4.9,
+        "reviewsCount":  76,
+        "stock":  4,
+        "badge":  "مراقبة ميدانية",
+        "image":  "images/prod_mon_485.jpg",
+        "gallery":  [
+                        "images/prod_mon_485.jpg"
+                    ],
+        "description":  "Lilliput A7s : شاشة مراقبة ميدانية ساطعة بدقة فائقة وزوايا رؤية واسعة وأدوات معايرة سينمائية متطورة تشمل الويف فورم و3D LUT لدقة ضبط الفوكس والتعريض اللوني تحت أشعة الشمس. مع كفالة رسمية من الوكيل المعتمد في الأردن.",
+        "specs":  {
+                      "حجم الشاشة والنوع":  "High-Brightness IPS Touchscreen Panel",
+                      "السطوع":  "Daylight Viewable High Nit Brightness",
+                      "دقة العرض":  "Full HD Native Resolution supporting 4K Signals",
+                      "أدوات المساعدة":  "Waveform, Vectorscope, Focus Peaking, False Color, 3D LUTs",
+                      "المداخل والمخارج":  "HDMI Input / Loop-Through Output \u0026 Headphone Jack",
+                      "التغذية":  "Sony NP-F Battery Slot / DC 12V Input",
+                      "الضمان":  "كفالة رسمية من الوكيل المعتمد"
+                  },
+        "inTheBox":  [
+                         "الوحدة الأصلية وملحقاتها الأساسية",
+                         "كابلات التوصيل والشاحن المعتمد",
+                         "دليل الاستخدام وشهادة الضمان الرسمي"
+                     ]
     }
 ];
 

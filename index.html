@@ -81,6 +81,16 @@
     .touch-scroll {
       -webkit-overflow-scrolling: touch;
     }
+    /* Center 5th product card on mobile/tablet */
+    @media (max-width: 1023px) {
+      .card-5-center {
+        grid-column: span 2 / span 2 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: calc(50% - 5px) !important;
+      }
+    }
   </style>
 </head>
 <body class="antialiased pb-16 md:pb-0">
@@ -551,7 +561,7 @@
         <p id="productsSectionSubtitle" class="text-[11px] text-slate-500 mt-0.5">تشكيلة مختارة من أفضل معدات التصوير والسينما</p>
       </div>
       <a href="#" id="viewAllBtn" onclick="showAllCatalogProducts(); return false;" class="text-xs font-bold text-yellow-600 hover:text-yellow-700 hover:underline flex items-center gap-1">
-        <span>عرض كل المعدات (332 منتج)</span>
+        <span>عرض كل المعدات (500 منتج)</span>
         <i class="fa-solid fa-arrow-right text-[10px]"></i>
       </a>
     </div>
@@ -573,8 +583,8 @@
       </div>
     </div>
 
-    <!-- 5 Diverse Products: 2 columns on mobile, 3 on tablet, 5 on desktop -->
-    <div id="dynamicProductGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4">
+    <!-- 5 Diverse Products: 2 columns on mobile/tablet, 5 on desktop -->
+    <div id="dynamicProductGrid" class="grid grid-cols-2 lg:grid-cols-5 gap-2.5 sm:gap-4">
       
       <!-- 1. CAM-006: Sony FX30 Digital Cinema Camera -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
@@ -661,7 +671,7 @@
       </div>
 
       <!-- 5. DJI-088: DJI RS 4 Pro Carbon Fiber Gimbal Stabilizer -->
-      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+      <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group card-5-center">
         <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
           <i class="fa-regular fa-heart"></i>
         </button>
@@ -1818,8 +1828,8 @@
     </div>
   </div>
 
-  <script src="js/data.js?v=20261019_v15_332_full_catalog"></script>
-  <script src="js/store.js?v=20261019_v15_332_full_catalog"></script>
+  <script src="js/data.js?v=20261019_v15_500_full_catalog"></script>
+  <script src="js/store.js?v=20261019_v15_500_full_catalog"></script>
   <script>
     let cart = [];
 
@@ -2217,13 +2227,13 @@
       }
     ];
 
-    function renderStorefrontProductCard(product) {
+    function renderStorefrontProductCard(product, extraClasses = '') {
       const safeName = (product.name || '').replace(/'/g, "\\'");
       const safeImg = product.image || 'images/camera_body.jpg';
       const categoryBadge = product.badge || product.brand || '';
 
       return `
-        <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
+        <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group ${extraClasses}">
           <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
             <i class="fa-regular fa-heart"></i>
           </button>
@@ -2358,7 +2368,8 @@
         });
 
         if (brandContainer) brandContainer.innerHTML = brandPillsHtml;
-        grid.innerHTML = FEATURED_5_PRODUCTS.map(renderStorefrontProductCard).join('');
+        grid.className = 'grid grid-cols-2 lg:grid-cols-5 gap-2.5 sm:gap-4';
+        grid.innerHTML = FEATURED_5_PRODUCTS.map((p, idx) => renderStorefrontProductCard(p, idx === 4 ? 'card-5-center' : '')).join('');
         return;
       }
 
@@ -2488,7 +2499,8 @@
         return;
       }
 
-      grid.innerHTML = finalProducts.map(renderStorefrontProductCard).join('');
+      grid.className = 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4';
+      grid.innerHTML = finalProducts.map(p => renderStorefrontProductCard(p)).join('');
     }
 
     function filterByBrand(brand) {
