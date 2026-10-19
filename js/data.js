@@ -3,74 +3,80 @@
 
 const INITIAL_CATEGORIES = [
   {
-    $1458
+    "id": "all",
+    "name": "جميع المعدات",
+    "icon": "fa-layer-group",
+    "count": 458
   },
   {
-    $113,
-    "image": "images/camera_body.jpg"
+    "id": "cameras",
+    "name": "كاميرات سينما وميرورليس",
+    "icon": "fa-camera",
+    "count": 13,
+    "image": "images/prod_sony_fx3_white.jpg"
   },
   {
     "id": "filters",
     "name": "عدسات وفلاتر",
     "icon": "fa-circle-half-stroke",
     "count": 50,
-    "image": "images/filter_lens.jpg"
+    "image": "images/prod_sony_2470_gm2.png"
   },
   {
     "id": "audio",
     "name": "مايكات وأنظمة صوت",
     "icon": "fa-microphone",
     "count": 48,
-    "image": "images/camera_dials.jpg"
+    "image": "images/prod_rode_wigo2.png"
   },
   {
     "id": "lighting",
     "name": "إضاءات وسوفت بوكس",
     "icon": "fa-lightbulb",
     "count": 174,
-    "image": "images/flash_light.jpg"
+    "image": "images/prod_godox_sl100d.jpg"
   },
   {
     "id": "gimbals",
     "name": "ستيبلايزرز وجيمبل",
     "icon": "fa-gamepad",
     "count": 14,
-    "image": "images/gimbal_stab.jpg"
+    "image": "images/prod_dji_rs4_pro.jpg"
   },
   {
     "id": "stands",
     "name": "ستاندات وترايبود",
     "icon": "fa-monument",
     "count": 49,
-    "image": "images/tripod_stand.jpg"
+    "image": "images/prod_vt3510_tripod.jpg"
   },
   {
     "id": "cages",
     "name": "كيج كاميرا وتجهيزات",
     "icon": "fa-border-all",
     "count": 59,
-    "image": "images/camera_cage.jpg"
+    "image": "images/prod_smallrig_fx3_cage.jpg"
   },
   {
     "id": "monitors",
     "name": "شاشات وتلقين Teleprompter",
     "icon": "fa-tv",
     "count": 37,
-    "image": "images/camera_dials.jpg"
+    "image": "images/prod_feelworld_lut7.jpg"
   },
   {
     "id": "chargers_batteries",
     "name": "شواحن وبطاريات V-Mount",
     "icon": "fa-battery-full",
     "count": 8,
-    "image": "images/vmount_battery.jpg"
+    "image": "images/prod_smallrig_vb99.jpg"
   },
   {
     "id": "bags",
     "name": "شناتي وحقائب معدات",
     "icon": "fa-suitcase-rolling",
     "count": 6,
-    "image": "images/camera_bag.jpg"
+    "image": "images/prod_ulanzi_bp09.jpg"
   }
 ];
 
@@ -88,7 +94,8 @@ const INITIAL_PRODUCTS = [
         "stock":  4,
         "badge":  "وفر $50",
         "section":  "trending",
-        "image":  "images/cam_sony_a7iii.jpg",
+        "image": "images/cam_sony_a7iii.jpg",
+        "gallery": ["images/cam_sony_a7iii.jpg", "images/camera_body.jpg", "images/prod_sony_a7iv_white.jpg"]
         "description":  "كاميرا سوني Sony A7 III - Full-frame Mirrorless Camera Body Only الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
         "specs":  {
                       "المستشعر":  "24.2MP Full-Frame Exmor R BSI CMOS",
@@ -118,7 +125,8 @@ const INITIAL_PRODUCTS = [
         "stock":  3,
         "badge":  "وفر $50",
         "section":  "trending",
-        "image":  "images/cam_sony_a7iv.jpg",
+        "image": "images/cam_sony_a7iv.jpg",
+        "gallery": ["images/cam_sony_a7iv.jpg", "images/prod_sony_a7iv_white.jpg", "images/camera_body.jpg"]
         "description":  "كاميرا سوني Sony A7 IV - Full-frame Mirrorless Camera Body Only الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
         "specs":  {
                       "المستشعر":  "33MP Full-Frame Exmor R BSI CMOS",
@@ -146,7 +154,8 @@ const INITIAL_PRODUCTS = [
         "stock":  10,
         "badge":  "وفر $100",
         "section":  "trending",
-        "image":  "images/cam_sony_a7siii.jpg",
+        "image": "images/cam_sony_a7siii.jpg",
+        "gallery": ["images/cam_sony_a7siii.jpg", "images/prod_sony_fx3_white.jpg"]
         "description":  "كاميرا سوني Sony A7s iii Full-frame Mirrorless Camera Body Only الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
         "specs":  {
                       "المستشعر":  "12.1MP Full-Frame Exmor R BSI CMOS مخصص للإضاءة المنخفضة والفيديو",
@@ -173,7 +182,8 @@ const INITIAL_PRODUCTS = [
         "stock":  4,
         "badge":  "وفر $90",
         "section":  "trending",
-        "image":  "images/cam_sony_a7rv.jpg",
+        "image": "images/cam_sony_a7rv.jpg",
+        "gallery": ["images/cam_sony_a7rv.jpg", "images/cam_sony_a7iv.jpg"]
         "description":  "كاميرا سوني Sony A7r V Full-frame Mirrorless Camera Body Only الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
         "specs":  {
                       "المستشعر":  "61MP Full-Frame Exmor R BSI CMOS بأعلى دقة تفاصيل",
@@ -199,7 +209,8 @@ const INITIAL_PRODUCTS = [
         "stock":  3,
         "badge":  "وفر $50",
         "section":  "trending",
-        "image":  "images/prod_sony_fx3_white.jpg",
+        "image": "images/prod_sony_fx3_white.jpg",
+        "gallery": ["images/prod_sony_fx3_white.jpg", "images/prod_smallrig_fx3_cage.jpg"]
         "description":  "كاميرا سوني Sony FX30 Digital Cinema Camera الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
         "specs":  {
                       "المستشعر":  "26MP APS-C / Super 35mm Exmor R BSI CMOS فئة السينما",
@@ -226,7 +237,8 @@ const INITIAL_PRODUCTS = [
         "stock":  10,
         "badge":  "وفر $30",
         "section":  "trending",
-        "image":  "images/cam_sony_zve10.jpg",
+        "image": "images/cam_sony_zve10.jpg",
+        "gallery": ["images/cam_sony_zve10.jpg", "images/camera_body.jpg"]
         "description":  "كاميرا سوني Sony ZV-E10 II Mirrorless Camera with 16-50mm Lens الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
         "specs":  {
                       "المستشعر":  "26MP APS-C Exmor R BSI CMOS لصناع المحتوى والفلوج",
@@ -253,7 +265,8 @@ const INITIAL_PRODUCTS = [
         "stock":  5,
         "badge":  "وفر $200",
         "section":  "trending",
-        "image":  "images/cam_sony_fx6.jpg",
+        "image": "images/cam_sony_fx6.jpg",
+        "gallery": ["images/cam_sony_fx6.jpg", "images/prod_sony_fx3_white.jpg"]
         "description":  "كاميرا سوني Sony FX6 Full-Frame Cinema Camera (Body Only) الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
         "specs":  {
                       "المستشعر":  "10.2MP Full-Frame Back-Illuminated Exmor R CMOS سينمائي احترافي",
@@ -339,7 +352,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  61,
         "stock":  15,
         "badge":  "عدسات أصلية",
-        "image":  "images/filter_lens.jpg",
+        "image": "images/prod_sony_1635_gm2.jpg",
+        "gallery": ["images/prod_sony_1635_gm2.jpg", "images/prod_sony_1635_gm2_angle2.jpg", "images/prod_sony_1635_gm2_angle3.jpg"]
         "description":  "عدسة SONY FE 16-35mm F2.8 GM II الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
         "specs":  {
                       "النوع":  "عدسة تصوير احترافية",
@@ -379,7 +393,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  27,
         "stock":  6,
         "badge":  "عدسات أصلية",
-        "image":  "images/filter_lens.jpg",
+        "image": "images/prod_sony_70200_gm2.jpg",
+        "gallery": ["images/prod_sony_70200_gm2.jpg", "images/prod_sony_70200_gm2_angle2.jpg"]
         "description":  "عدسة SONY FE 70-200mm F2.8 GM OSS II الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
         "specs":  {
                       "النوع":  "عدسة تصوير احترافية",
@@ -459,7 +474,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  23,
         "stock":  6,
         "badge":  "عدسات أصلية",
-        "image":  "images/filter_lens.jpg",
+        "image": "images/prod_sony_2470_gm2.png",
+        "gallery": ["images/prod_sony_2470_gm2.png", "images/filter_lens.jpg"]
         "description":  "عدسة SONY FE 24-70mm F2.8 GM II الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
         "specs":  {
                       "النوع":  "عدسة تصوير احترافية",
@@ -559,7 +575,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  23,
         "stock":  14,
         "badge":  "عدسات أصلية",
-        "image":  "images/filter_lens.jpg",
+        "image": "images/prod_sony_35_14gm.jpg",
+        "gallery": ["images/prod_sony_35_14gm.jpg", "images/prod_sony_35_14gm_angle2.jpg"]
         "description":  "عدسة SONY E 18-135mm F3.5-5.6 OSS الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
         "specs":  {
                       "النوع":  "عدسة تصوير احترافية",
@@ -579,7 +596,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  53,
         "stock":  11,
         "badge":  "عدسات أصلية",
-        "image":  "images/filter_lens.jpg",
+        "image": "images/prod_sigma_2470_art.jpg",
+        "gallery": ["images/prod_sigma_2470_art.jpg", "images/prod_sigma_2470_art_angle2.jpg", "images/prod_sigma_2470_art_angle3.jpg", "images/prod_sigma_2470_art_angle4.jpg"]
         "description":  "عدسة SONY FE 24-105mm F4 G OSS Lens الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
         "specs":  {
                       "النوع":  "عدسة تصوير احترافية",
@@ -679,7 +697,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  50,
         "stock":  10,
         "badge":  "عدسات أصلية",
-        "image":  "images/filter_lens.jpg",
+        "image": "images/prod_polarpro_vnd.jpg",
+        "gallery": ["images/prod_polarpro_vnd.jpg"]
         "description":  "عدسة SIGMA 35MM F 1.4 DG DN الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
         "specs":  {
                       "النوع":  "عدسة تصوير احترافية",
@@ -819,7 +838,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  52,
         "stock":  16,
         "badge":  "صوت سينمائي",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_rode_wigo2.png",
+        "gallery": ["images/prod_rode_wigo2.png", "images/prod_rode_wireless_pro.png"]
         "description":  "نظام تسجيل الصوت الاحترافي RODE GO II (Double) بنقاء استوديو وبث لاسلكي مشفر مستقر.",
         "specs":  {
                       "الشركة المصنعة":  "RODE",
@@ -859,7 +879,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  44,
         "stock":  10,
         "badge":  "صوت سينمائي",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_rode_nt1_5th.png",
+        "gallery": ["images/prod_rode_nt1_5th.png"]
         "description":  "نظام تسجيل الصوت الاحترافي RODE NT1 5th Gen بنقاء استوديو وبث لاسلكي مشفر مستقر.",
         "specs":  {
                       "الشركة المصنعة":  "RODE",
@@ -959,7 +980,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  41,
         "stock":  12,
         "badge":  "صوت سينمائي",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_rode_podmic.png",
+        "gallery": ["images/prod_rode_podmic.png"]
         "description":  "نظام تسجيل الصوت الاحترافي RODE POD MIC بنقاء استوديو وبث لاسلكي مشفر مستقر.",
         "specs":  {
                       "الشركة المصنعة":  "RODE",
@@ -1019,7 +1041,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  84,
         "stock":  5,
         "badge":  "صوت سينمائي",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_rode_wireless_pro.png",
+        "gallery": ["images/prod_rode_wireless_pro.png"]
         "description":  "نظام تسجيل الصوت الاحترافي RODE PodMic USB بنقاء استوديو وبث لاسلكي مشفر مستقر.",
         "specs":  {
                       "الشركة المصنعة":  "RODE",
@@ -1039,7 +1062,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  43,
         "stock":  16,
         "badge":  "صوت سينمائي",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_rode_wireless_micro.png",
+        "gallery": ["images/prod_rode_wireless_micro.png"]
         "description":  "نظام تسجيل الصوت الاحترافي RODE Procaster Dynamic mic بنقاء استوديو وبث لاسلكي مشفر مستقر.",
         "specs":  {
                       "الشركة المصنعة":  "RODE",
@@ -1199,7 +1223,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  35,
         "stock":  5,
         "badge":  "صوت سينمائي",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_dji_mic2.jpg",
+        "gallery": ["images/prod_dji_mic2.jpg"]
         "description":  "نظام تسجيل الصوت الاحترافي Hollyland Lark A1 Combo بنقاء استوديو وبث لاسلكي مشفر مستقر.",
         "specs":  {
                       "الشركة المصنعة":  "Hollyland",
@@ -1539,7 +1564,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  62,
         "stock":  9,
         "badge":  "DJI Original",
-        "image":  "images/gimbal_stab.jpg",
+        "image": "images/prod_dji_osmo_mobile.jpg",
+        "gallery": ["images/prod_dji_osmo_mobile.jpg", "images/prod_dji_osmo_mobile_angle2.jpg"]
         "description":  "منتج دي جي آي DJI MOBILE OM SE الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -1558,7 +1584,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  122,
         "stock":  7,
         "badge":  "DJI Original",
-        "image":  "images/gimbal_stab.jpg",
+        "image": "images/prod_dji_osmo_mobile.jpg",
+        "gallery": ["images/prod_dji_osmo_mobile.jpg", "images/prod_dji_osmo_mobile_angle2.jpg", "images/prod_dji_osmo_mobile_angle3.jpg", "images/prod_dji_osmo_mobile_angle4.jpg"]
         "description":  "منتج دي جي آي DJI OSMO MOBILE Om 6 الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -1634,7 +1661,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  125,
         "stock":  5,
         "badge":  "DJI Original",
-        "image":  "images/gimbal_stab.jpg",
+        "image": "images/prod_dji_rs4_mini.jpg",
+        "gallery": ["images/prod_dji_rs4_mini.jpg", "images/prod_dji_rs4_mini_angle2.jpg"]
         "description":  "منتج دي جي آي DJI RS 3 MINI الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -1653,7 +1681,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  147,
         "stock":  7,
         "badge":  "DJI Original",
-        "image":  "images/gimbal_stab.jpg",
+        "image": "images/prod_dji_rs4_mini.jpg",
+        "gallery": ["images/prod_dji_rs4_mini.jpg", "images/prod_dji_rs4_mini_angle2.jpg", "images/prod_dji_rs4_mini_angle3.jpg", "images/prod_dji_rs4_mini_angle4.jpg"]
         "description":  "منتج دي جي آي DJI RS 4 MINI الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -1691,7 +1720,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  71,
         "stock":  12,
         "badge":  "DJI Original",
-        "image":  "images/gimbal_stab.jpg",
+        "image": "images/prod_dji_rs4.jpg",
+        "gallery": ["images/prod_dji_rs4.jpg", "images/prod_dji_rs4_angle2.jpg", "images/prod_dji_rs4_angle3.jpg", "images/prod_dji_rs4_angle4.jpg"]
         "description":  "منتج دي جي آي DJI RS 4 STANDARD الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -1729,7 +1759,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  140,
         "stock":  6,
         "badge":  "DJI Original",
-        "image":  "images/gimbal_stab.jpg",
+        "image": "images/prod_dji_rs4_pro.jpg",
+        "gallery": ["images/prod_dji_rs4_pro.jpg", "images/prod_dji_rs4_pro_angle2.jpg", "images/prod_dji_rs4_pro_angle3.jpg", "images/prod_dji_rs4_pro_angle4.jpg"]
         "description":  "منتج دي جي آي DJI RS 4 PRO الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -1748,7 +1779,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  83,
         "stock":  13,
         "badge":  "DJI Original",
-        "image":  "images/gimbal_stab.jpg",
+        "image": "images/prod_dji_rs4_pro.jpg",
+        "gallery": ["images/prod_dji_rs4_pro.jpg", "images/prod_dji_rs4_pro_angle2.jpg", "images/prod_dji_rs4_pro_angle3.jpg"]
         "description":  "منتج دي جي آي DJI RS 4 PRO COMPO الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -1767,7 +1799,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  101,
         "stock":  10,
         "badge":  "DJI Original",
-        "image":  "images/gimbal_stab.jpg",
+        "image": "images/prod_dji_rs3_pro.png",
+        "gallery": ["images/prod_dji_rs3_pro.png"]
         "description":  "منتج دي جي آي DJI RS 5 STANDARD الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -1920,7 +1953,8 @@ const INITIAL_PRODUCTS = [
         "stock":  3,
         "badge":  "وفر $30",
         "section":  "trending",
-        "image":  "images/cam_canon_r50.jpg",
+        "image": "images/cam_canon_r50.jpg",
+        "gallery": ["images/cam_canon_r50.jpg", "images/cam_canon_r8.jpg"]
         "description":  "كاميرا كانون Canon EOS R50 18-45mm الاحترافية مع ضمان الوكيل المعتمد لمدة سنتين، بأداء استثنائي وألوان كانون السينمائية الشهيرة.",
         "specs":  {
                       "المستشعر":  "24.2MP APS-C CMOS Sensor",
@@ -1945,7 +1979,8 @@ const INITIAL_PRODUCTS = [
         "stock":  5,
         "badge":  "وفر $50",
         "section":  "trending",
-        "image":  "images/cam_canon_r8.jpg",
+        "image": "images/cam_canon_r8.jpg",
+        "gallery": ["images/cam_canon_r8.jpg", "images/cam_canon_r50.jpg"]
         "description":  "كاميرا كانون Canon EOS R8 Body الاحترافية مع ضمان الوكيل المعتمد لمدة سنتين، بأداء استثنائي وألوان كانون السينمائية الشهيرة.",
         "specs":  {
                       "المستشعر":  "24.2MP Full-Frame CMOS Sensor (نفس مستشعر R6 Mark II الرائدة)",
@@ -1970,7 +2005,8 @@ const INITIAL_PRODUCTS = [
         "stock":  4,
         "badge":  "وفر $60",
         "section":  "trending",
-        "image":  "images/cam_canon_r6ii.jpg",
+        "image": "images/cam_canon_r6ii.jpg",
+        "gallery": ["images/cam_canon_r6ii.jpg", "images/prod_canon_r5_white.jpg"]
         "description":  "كاميرا كانون Canon EOS R6 Mark II Body الاحترافية مع ضمان الوكيل المعتمد لمدة سنتين، بأداء استثنائي وألوان كانون السينمائية الشهيرة.",
         "specs":  {
                       "المستشعر":  "24.2MP Full-Frame CMOS Sensor عالي السرعة من الجيل الجديد",
@@ -2534,7 +2570,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  31,
         "stock":  20,
         "badge":  "إضاءة استوديو",
-        "image":  "images/flash_light.jpg",
+        "image": "images/prod_godox_sl60iibi.jpg",
+        "gallery": ["images/prod_godox_sl60iibi.jpg", "images/prod_godox_sl60iibi_angle2.jpg", "images/prod_godox_sl60iibi_angle3.jpg", "images/prod_godox_sl60iibi_angle4.jpg"]
         "description":  "معدات إضاءة استوديو احترافية Godox sl60II بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
         "specs":  {
                       "الشركة":  "Godox",
@@ -2554,7 +2591,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  64,
         "stock":  9,
         "badge":  "إضاءة استوديو",
-        "image":  "images/flash_light.jpg",
+        "image": "images/prod_godox_sl60iibi.jpg",
+        "gallery": ["images/prod_godox_sl60iibi.jpg", "images/prod_godox_sl60iibi_angle2.jpg", "images/prod_godox_sl60iibi_angle3.jpg"]
         "description":  "معدات إضاءة استوديو احترافية Godox sl60II bi بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
         "specs":  {
                       "الشركة":  "Godox",
@@ -2574,7 +2612,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  67,
         "stock":  7,
         "badge":  "إضاءة استوديو",
-        "image":  "images/flash_light.jpg",
+        "image": "images/prod_godox_sl100d.jpg",
+        "gallery": ["images/prod_godox_sl100d.jpg"]
         "description":  "معدات إضاءة استوديو احترافية Godox Godox SL100D بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
         "specs":  {
                       "الشركة":  "Godox",
@@ -2594,7 +2633,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  61,
         "stock":  11,
         "badge":  "إضاءة استوديو",
-        "image":  "images/flash_light.jpg",
+        "image": "images/prod_godox_sl100d.jpg",
+        "gallery": ["images/prod_godox_sl100d.jpg"]
         "description":  "معدات إضاءة استوديو احترافية Godox Godox SL100BI بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
         "specs":  {
                       "الشركة":  "Godox",
@@ -3494,7 +3534,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  33,
         "stock":  20,
         "badge":  "إضاءة استوديو",
-        "image":  "images/flash_light.jpg",
+        "image": "images/prod_godox_v1.jpg",
+        "gallery": ["images/prod_godox_v1.jpg"]
         "description":  "معدات إضاءة استوديو احترافية Godox 60*90 بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
         "specs":  {
                       "الشركة":  "Godox",
@@ -3614,7 +3655,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  45,
         "stock":  8,
         "badge":  "إضاءة استوديو",
-        "image":  "images/flash_light.jpg",
+        "image": "images/prod_godox_cstand.jpg",
+        "gallery": ["images/prod_godox_cstand.jpg"]
         "description":  "معدات إضاءة استوديو احترافية Godox 80*120 بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
         "specs":  {
                       "الشركة":  "Godox",
@@ -5613,7 +5655,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  40,
         "stock":  19,
         "badge":  "تحمل عالي",
-        "image":  "images/tripod_stand.jpg",
+        "image": "images/prod_mp208f_monopod.jpg",
+        "gallery": ["images/prod_mp208f_monopod.jpg"]
         "description":  "ستاند وترايبود تصوير احترافي Monopod MP208F + VT1510 بهيكل معدني متين لتحمل الكاميرات والمعدات الثقيلة بأقصى ثبات.",
         "specs":  {
                       "المادة":  "ألومنيوم مقوى أو ألياف كربون",
@@ -5632,7 +5675,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  56,
         "stock":  18,
         "badge":  "تحمل عالي",
-        "image":  "images/tripod_stand.jpg",
+        "image": "images/prod_vt3510_tripod.jpg",
+        "gallery": ["images/prod_vt3510_tripod.jpg", "images/prod_vt3510_tripod_angle2.jpg", "images/prod_vt3510_tripod_angle3.jpg"]
         "description":  "ستاند وترايبود تصوير احترافي Monopod MP4208F Fiber +VT-3510 بهيكل معدني متين لتحمل الكاميرات والمعدات الثقيلة بأقصى ثبات.",
         "specs":  {
                       "المادة":  "ألومنيوم مقوى أو ألياف كربون",
@@ -5765,7 +5809,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  28,
         "stock":  7,
         "badge":  "تحمل عالي",
-        "image":  "images/tripod_stand.jpg",
+        "image": "images/prod_vt3510_tripod.jpg",
+        "gallery": ["images/prod_vt3510_tripod.jpg", "images/prod_vt3510_tripod_angle2.jpg"]
         "description":  "ستاند وترايبود تصوير احترافي Tripod  VT-890H Multi Function بهيكل معدني متين لتحمل الكاميرات والمعدات الثقيلة بأقصى ثبات.",
         "specs":  {
                       "المادة":  "ألومنيوم مقوى أو ألياف كربون",
@@ -5822,7 +5867,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  28,
         "stock":  10,
         "badge":  "تحمل عالي",
-        "image":  "images/tripod_stand.jpg",
+        "image": "images/prod_manfrotto_504x.jpg",
+        "gallery": ["images/prod_manfrotto_504x.jpg", "images/prod_manfrotto_504x_angle2.jpg", "images/prod_manfrotto_504x_angle3.jpg", "images/prod_manfrotto_504x_angle4.jpg"]
         "description":  "ستاند وترايبود تصوير احترافي Tripod VT-866 بهيكل معدني متين لتحمل الكاميرات والمعدات الثقيلة بأقصى ثبات.",
         "specs":  {
                       "المادة":  "ألومنيوم مقوى أو ألياف كربون",
@@ -6392,7 +6438,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  76,
         "stock":  14,
         "badge":  "SmallRig",
-        "image":  "images/vmount_battery.jpg",
+        "image": "images/prod_smallrig_vb50.jpg",
+        "gallery": ["images/prod_smallrig_vb50.jpg"]
         "description":  "منتج SmallRig الأصلي SmallRig VB50 mini V Mount Battery 50Wh 3579B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "SmallRig",
@@ -6411,7 +6458,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  31,
         "stock":  7,
         "badge":  "SmallRig",
-        "image":  "images/vmount_battery.jpg",
+        "image": "images/prod_smallrig_vb99.jpg",
+        "gallery": ["images/prod_smallrig_vb99.jpg"]
         "description":  "منتج SmallRig الأصلي SmallRig VB99 Mini V-Mount Battery 99Wh 3580B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "SmallRig",
@@ -6430,7 +6478,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  31,
         "stock":  5,
         "badge":  "SmallRig",
-        "image":  "images/vmount_battery.jpg",
+        "image": "images/prod_smallrig_vb99.jpg",
+        "gallery": ["images/prod_smallrig_vb99.jpg"]
         "description":  "منتج SmallRig الأصلي SmallRig VB99 Pro V-Mount Battery 99Wh 4292 بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "SmallRig",
@@ -6449,7 +6498,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  65,
         "stock":  13,
         "badge":  "SmallRig",
-        "image":  "images/vmount_battery.jpg",
+        "image": "images/prod_smallrig_vb99.jpg",
+        "gallery": ["images/prod_smallrig_vb99.jpg"]
         "description":  "منتج SmallRig الأصلي SmallRig VB155 Mini V-Mount Battery 155Wh 3581B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "SmallRig",
@@ -6468,7 +6518,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  39,
         "stock":  17,
         "badge":  "SmallRig",
-        "image":  "images/vmount_battery.jpg",
+        "image": "images/prod_smallrig_vb99.jpg",
+        "gallery": ["images/prod_smallrig_vb99.jpg"]
         "description":  "منتج SmallRig الأصلي SmallRig x Caleb Pike VB212 Mini V-Mount Battery 212Wh 4293 بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "SmallRig",
@@ -6658,7 +6709,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  31,
         "stock":  6,
         "badge":  "SmallRig",
-        "image":  "images/camera_cage.jpg",
+        "image": "images/prod_smallrig_fx3_cage.jpg",
+        "gallery": ["images/prod_smallrig_fx3_cage.jpg", "images/prod_smallrig_fx3_cage_angle2.jpg", "images/prod_smallrig_fx3_cage_angle3.jpg"]
         "description":  "منتج SmallRig الأصلي SmallRig Camera Cage for Sony FX30 and FX3  4183B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "SmallRig",
@@ -6696,7 +6748,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  79,
         "stock":  19,
         "badge":  "SmallRig",
-        "image":  "images/camera_cage.jpg",
+        "image": "images/prod_smallrig_a7iv_cage.jpg",
+        "gallery": ["images/prod_smallrig_a7iv_cage.jpg", "images/prod_smallrig_a7iv_cage_angle2.jpg", "images/prod_smallrig_a7iv_cage_angle3.jpg", "images/prod_smallrig_a7iv_cage_angle4.jpg"]
         "description":  "منتج SmallRig الأصلي SmallRig Camera Cage for Sony a7 IV / a7R V / a7S III 3667B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "SmallRig",
@@ -6772,7 +6825,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  53,
         "stock":  12,
         "badge":  "SmallRig",
-        "image":  "images/camera_cage.jpg",
+        "image": "images/prod_smallrig_top_handle.jpg",
+        "gallery": ["images/prod_smallrig_top_handle.jpg", "images/prod_smallrig_top_handle_angle2.jpg", "images/prod_smallrig_top_handle_angle3.jpg", "images/prod_smallrig_top_handle_angle4.jpg"]
         "description":  "منتج SmallRig الأصلي SmallRig Top Handle with Shoe Mount (Lite) 3764 بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "SmallRig",
@@ -7608,7 +7662,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  47,
         "stock":  10,
         "badge":  "Ulanzi",
-        "image":  "images/camera_bag.jpg",
+        "image": "images/prod_peakdesign_everyday.jpg",
+        "gallery": ["images/prod_peakdesign_everyday.jpg", "images/prod_peakdesign_everyday_angle2.jpg", "images/prod_peakdesign_everyday_angle3.jpg", "images/prod_peakdesign_everyday_angle4.jpg"]
         "description":  "منتج Ulanzi الأصلي Ulanzi OM-01 Multi function bag بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
@@ -7627,7 +7682,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  30,
         "stock":  13,
         "badge":  "Ulanzi",
-        "image":  "images/camera_bag.jpg",
+        "image": "images/prod_lowepro_protactic.jpg",
+        "gallery": ["images/prod_lowepro_protactic.jpg", "images/prod_lowepro_protactic_angle2.jpg", "images/prod_lowepro_protactic_angle3.jpg", "images/prod_lowepro_protactic_angle4.jpg"]
         "description":  "منتج Ulanzi الأصلي ulanzi backpack bp04 بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
@@ -7646,7 +7702,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  40,
         "stock":  11,
         "badge":  "Ulanzi",
-        "image":  "images/camera_bag.jpg",
+        "image": "images/prod_ulanzi_bp09.jpg",
+        "gallery": ["images/prod_ulanzi_bp09.jpg", "images/prod_ulanzi_bp09_angle2.jpg", "images/prod_ulanzi_bp09_angle3.jpg", "images/prod_ulanzi_bp09_angle4.jpg"]
         "description":  "منتج Ulanzi الأصلي ulanzi backpack bp09 22L بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
@@ -7665,7 +7722,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  37,
         "stock":  12,
         "badge":  "Ulanzi",
-        "image":  "images/camera_bag.jpg",
+        "image": "images/prod_ulanzi_ab01.jpg",
+        "gallery": ["images/prod_ulanzi_ab01.jpg"]
         "description":  "منتج Ulanzi الأصلي ulanzi backpack AB01 TAI 38L بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
@@ -8425,7 +8483,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  49,
         "stock":  10,
         "badge":  "ملقن نصوص",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_desview_t3.jpg",
+        "gallery": ["images/prod_desview_t3.jpg", "images/prod_desview_t3_angle2.jpg"]
         "description":  "Desview T22 Teleprompter عالي الدقة والسطوع لاستوديوهات التلفزيون وصناع المحتوى والتصوير السينمائي.",
         "specs":  {
                       "العلامة التجارية":  "Desview",
@@ -8525,7 +8584,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  49,
         "stock":  9,
         "badge":  "ملقن نصوص",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_desview_t3.jpg",
+        "gallery": ["images/prod_desview_t3.jpg", "images/prod_desview_t3_angle2.jpg", "images/prod_desview_t3_angle3.jpg"]
         "description":  "Desview T3 Teleprompter عالي الدقة والسطوع لاستوديوهات التلفزيون وصناع المحتوى والتصوير السينمائي.",
         "specs":  {
                       "العلامة التجارية":  "Desview",
@@ -9005,7 +9065,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  17,
         "stock":  7,
         "badge":  "شاشة مونيتر",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_feelworld_lut7.jpg",
+        "gallery": ["images/prod_feelworld_lut7.jpg", "images/prod_feelworld_lut7_angle2.jpg", "images/prod_feelworld_lut7_angle3.jpg", "images/prod_feelworld_lut7_angle4.jpg"]
         "description":  "feelworld lut7s pro عالي الدقة والسطوع لاستوديوهات التلفزيون وصناع المحتوى والتصوير السينمائي.",
         "specs":  {
                       "العلامة التجارية":  "FeelWorld",
@@ -9065,7 +9126,8 @@ const INITIAL_PRODUCTS = [
         "reviewsCount":  39,
         "stock":  12,
         "badge":  "شاشة مونيتر",
-        "image":  "images/camera_dials.jpg",
+        "image": "images/prod_feelworld_f6_plus.jpg",
+        "gallery": ["images/prod_feelworld_f6_plus.jpg", "images/prod_feelworld_f6_plus_angle2.jpg", "images/prod_feelworld_f6_plus_angle3.jpg", "images/prod_feelworld_f6_plus_angle4.jpg"]
         "description":  "feelworld f6 plus عالي الدقة والسطوع لاستوديوهات التلفزيون وصناع المحتوى والتصوير السينمائي.",
         "specs":  {
                       "العلامة التجارية":  "FeelWorld",

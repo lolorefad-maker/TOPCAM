@@ -46,6 +46,6 @@ $authHeader = "AUTHORIZATION: basic " + [Convert]::ToBase64String([System.Text.E
 
 $git = "C:\Users\publisher\AppData\Local\GitHubDesktop\app-3.6.6\resources\app\git\cmd\git.exe"
 & $git add -A
-& $git commit -m "Keep only 13 cameras with real generated studio images and remove ungenerated cameras"
+& $git commit -m "Add 50+ authentic manufacturer product photos with multi-angle galleries and upgrade details modal to luxury showroom design"
 & $git -c "http.extraheader=$authHeader" push origin main
 Write-Host "GIT_SYNC_COMPLETE"
