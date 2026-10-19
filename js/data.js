@@ -155,12 +155,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Sony A7 V - Full-frame Mirrorless Camera Body Only",
         "reviewsCount":  107,
         "oldPrice":  2200,
-        "image":  "images/cam_sony_a7iv.jpg",
+        "image":  "images/cam_sony_a7cii.jpg",
         "nameEn":  "Sony A7 V - Full-frame Mirrorless Camera Body Only",
         "badge":  "وفر $100",
         "gallery":  [
-                        "images/cam_sony_a7iv.jpg",
-                        "images/cam_sony_a7iv.jpg"
+                        "images/cam_sony_a7cii.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "36MP Full-Frame Exmor R BSI CMOS مع وحدة الذكاء الاصطناعي AI Unit",
@@ -247,13 +246,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Sony FX30 Digital Cinema Camera",
         "reviewsCount":  81,
         "oldPrice":  1250,
-        "image":  "images/prod_cam_007.jpg",
+        "image":  "images/prod_cam_fx30.jpg",
         "nameEn":  "Sony FX30 Digital Cinema Camera",
         "badge":  "وفر $50",
         "gallery":  [
-                        "images/prod_cam_007.jpg",
-                        "images/prod_sony_fx3_a_mirrorless_body_angle2.jpg",
-                        "images/prod_sony_fx3_a_mirrorless_body_angle3.jpg"
+                        "images/prod_cam_fx30.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "26MP APS-C / Super 35mm Exmor R BSI CMOS فئة السينما",
@@ -279,13 +276,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Sony FX2 Digital Cinema Camera",
         "reviewsCount":  69,
         "oldPrice":  2100,
-        "image":  "images/prod_cam_007.jpg",
+        "image":  "images/prod_cam_fx3.jpg",
         "nameEn":  "Sony FX2 Digital Cinema Camera",
         "badge":  "وفر $100",
         "gallery":  [
-                        "images/prod_cam_007.jpg",
-                        "images/prod_sony_fx3_a_mirrorless_body_angle4.jpg",
-                        "images/prod_sony_fx3_a_mirrorless_body_angle5.jpg"
+                        "images/prod_cam_fx3.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "Full-Frame Exmor R CMOS بتصميم سينمائي متقدم",
@@ -339,12 +334,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Sony ZV-E10 II Mirrorless Camera with 16-50mm Lens",
         "reviewsCount":  56,
         "oldPrice":  860,
-        "image":  "images/prod_cam_010.jpg",
+        "image":  "images/prod_cam_zve10ii.jpg",
         "nameEn":  "Sony ZV-E10 II Mirrorless Camera with 16-50mm Lens",
         "badge":  "وفر $30",
         "gallery":  [
-                        "images/prod_cam_010.jpg",
-                        "images/cam_sony_zve10.jpg"
+                        "images/prod_cam_zve10ii.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "26MP APS-C Exmor R BSI CMOS لصناع المحتوى والفلوج",
@@ -374,8 +368,7 @@ const INITIAL_PRODUCTS = [
         "nameEn":  "Sony ZV-E10 Mirrorless Camera with 16-50mm Lens",
         "badge":  "وفر $20",
         "gallery":  [
-                        "images/prod_cam_010.jpg",
-                        "images/cam_sony_zve10.jpg"
+                        "images/prod_cam_010.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "24.2MP APS-C Exmor CMOS",
@@ -2309,13 +2302,11 @@ const INITIAL_PRODUCTS = [
         "name":  "DJI POCKET 3 STANDARD",
         "reviewsCount":  76,
         "oldPrice":  null,
-        "image":  "images/prod_dji_osmo_pocket_4_creator_comb_angle3.jpg",
+        "image":  "images/prod_dji_pocket3_std.jpg",
         "nameEn":  "DJI POCKET 3 STANDARD",
         "badge":  "DJI Original",
         "gallery":  [
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle3.jpg",
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle2.jpg",
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle4.jpg"
+                        "images/prod_dji_pocket3_std.jpg"
                     ],
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -2337,9 +2328,7 @@ const INITIAL_PRODUCTS = [
         "nameEn":  "DJI POCKET 3 CREATOR COMPO",
         "badge":  "DJI Original",
         "gallery":  [
-                        "images/prod_dji_osmo_pocket_4_creator_comb.jpg",
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle2.jpg",
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle8.jpg"
+                        "images/prod_dji_osmo_pocket_4_creator_comb.jpg"
                     ],
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -2357,13 +2346,11 @@ const INITIAL_PRODUCTS = [
         "name":  "DJI POCKET 4 STANDARD",
         "reviewsCount":  83,
         "oldPrice":  null,
-        "image":  "images/prod_dji_osmo_pocket_4_creator_comb_angle3.jpg",
+        "image":  "images/prod_dji_action4_std.jpg",
         "nameEn":  "DJI POCKET 4 STANDARD",
         "badge":  "DJI Original",
         "gallery":  [
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle3.jpg",
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle6.jpg",
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle7.jpg"
+                        "images/prod_dji_action4_std.jpg"
                     ],
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -2381,13 +2368,11 @@ const INITIAL_PRODUCTS = [
         "name":  "DJI POCKET 4 CREATOR COMPO",
         "reviewsCount":  126,
         "oldPrice":  null,
-        "image":  "images/prod_dji_osmo_pocket_4_creator_comb.jpg",
+        "image":  "images/prod_dji_action4_adv.jpg",
         "nameEn":  "DJI POCKET 4 CREATOR COMPO",
         "badge":  "DJI Original",
         "gallery":  [
-                        "images/prod_dji_osmo_pocket_4_creator_comb.jpg",
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle2.jpg",
-                        "images/prod_dji_osmo_pocket_4_creator_comb_angle8.jpg"
+                        "images/prod_dji_action4_adv.jpg"
                     ],
         "specs":  {
                       "العلامة التجارية":  "DJI Official",
@@ -2625,11 +2610,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Canon EOS R50v 18-45mm",
         "reviewsCount":  66,
         "oldPrice":  699,
-        "image":  "images/cam_canon_r50.jpg",
+        "image":  "images/prod_cam_r50_creator.jpg",
         "nameEn":  "Canon EOS R50v 18-45mm",
         "badge":  "وفر $40",
         "gallery":  [
-                        "images/cam_canon_r50.jpg"
+                        "images/prod_cam_r50_creator.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "24.2MP APS-C CMOS Sensor",
@@ -2743,10 +2728,7 @@ const INITIAL_PRODUCTS = [
         "nameEn":  "Canon EOS R7 Body",
         "badge":  "وفر $40",
         "gallery":  [
-                        "images/prod_canon_eos_r7_body.jpg",
-                        "images/prod_canon_eos_r7_body_angle2.jpg",
-                        "images/prod_canon_eos_r7_body_angle3.jpg",
-                        "images/prod_canon_eos_r7_body_angle4.jpg"
+                        "images/prod_canon_eos_r7_body.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "32.5MP APS-C CMOS Sensor (الأعلى دقة في كاميرات كانون APS-C)",
@@ -2772,12 +2754,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Canon EOS R7 18-150mm",
         "reviewsCount":  91,
         "oldPrice":  1250,
-        "image":  "images/prod_canon_eos_r7_body.jpg",
+        "image":  "images/prod_canon_eos_r7_18150.jpg",
         "nameEn":  "Canon EOS R7 18-150mm",
         "badge":  "وفر $50",
         "gallery":  [
-                        "images/prod_canon_eos_r7_body.jpg",
-                        "images/prod_len_canon_rfs_18150.jpg"
+                        "images/prod_canon_eos_r7_18150.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "32.5MP APS-C CMOS Sensor (الأعلى دقة في كاميرات كانون APS-C)",
@@ -2865,12 +2846,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Canon EOS R6 Mark II 24-105 f4 L",
         "reviewsCount":  111,
         "oldPrice":  2350,
-        "image":  "images/prod_cam_116.jpg",
+        "image":  "images/prod_cam_r6ii_24105l.jpg",
         "nameEn":  "Canon EOS R6 Mark II 24-105 f4 L",
         "badge":  "وفر $50",
         "gallery":  [
-                        "images/prod_cam_116.jpg",
-                        "images/prod_len_129.jpg"
+                        "images/prod_cam_r6ii_24105l.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "24.2MP Full-Frame CMOS Sensor عالي السرعة من الجيل الجديد",
@@ -2896,11 +2876,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Canon EOS R6 Mark III",
         "reviewsCount":  69,
         "oldPrice":  2060,
-        "image":  "images/cam_canon_r6ii.jpg",
+        "image":  "images/prod_cam_r6_body.jpg",
         "nameEn":  "Canon EOS R6 Mark III",
         "badge":  "وفر $60",
         "gallery":  [
-                        "images/cam_canon_r6ii.jpg"
+                        "images/prod_cam_r6_body.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "24.2MP Full-Frame CMOS Sensor عالي السرعة من الجيل الجديد",
@@ -2984,12 +2964,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Camera EOS RP 24-105 STM Kit",
         "reviewsCount":  49,
         "oldPrice":  950,
-        "image":  "images/prod_cam_120.jpg",
+        "image":  "images/prod_cam_rp_24105.jpg",
         "nameEn":  "Camera EOS RP 24-105 STM Kit",
         "badge":  "وفر $50",
         "gallery":  [
-                        "images/prod_cam_120.jpg",
-                        "images/prod_len_128.jpg"
+                        "images/prod_cam_rp_24105.jpg"
                     ],
         "specs":  {
                       "المستشعر":  "26.2MP Full-Frame CMOS Sensor",
@@ -3576,11 +3555,11 @@ const INITIAL_PRODUCTS = [
         "name":  "sigma 16mm f/1.4 DG DN",
         "reviewsCount":  45,
         "oldPrice":  null,
-        "image":  "images/prod_len_038.jpg",
+        "image":  "images/prod_len_146.jpg",
         "nameEn":  "sigma 16mm f/1.4 DG DN",
         "badge":  "عدسات أصلية",
         "gallery":  [
-                        "images/prod_len_038.jpg"
+                        "images/prod_len_146.jpg"
                     ],
         "specs":  {
                       "النوع":  "عدسة تصوير احترافية",
@@ -3644,7 +3623,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_149.jpg",
         "nameEn":  "Godox SL100D",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_149.jpg",
+        "gallery":  [
+                        "images/prod_lgt_149.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -3875,7 +3856,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_160.jpg",
         "nameEn":  "Godox la 300 bi (kit1)",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_160.jpg",
+        "gallery":  [
+                        "images/prod_lgt_160.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -3896,7 +3879,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_161.jpg",
         "nameEn":  "Godox la200 rgb (kit1)",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_161.jpg",
+        "gallery":  [
+                        "images/prod_lgt_161.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -4169,7 +4154,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_174.jpg",
         "nameEn":  "Godox Vl 150 II",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_174.jpg",
+        "gallery":  [
+                        "images/prod_lgt_174.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -4295,7 +4282,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_180.jpg",
         "nameEn":  "Godox LDX100R",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_180.jpg",
+        "gallery":  [
+                        "images/prod_lgt_180.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -4607,10 +4596,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox 60*90",
         "reviewsCount":  33,
         "oldPrice":  45,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_195.jpg",
         "nameEn":  "Godox 60*90",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  "images/prod_lgt_195.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -4631,7 +4620,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_196.jpg",
         "nameEn":  "Godox 80*120",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_196.jpg",
+        "gallery":  [
+                        "images/prod_lgt_196.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -4673,7 +4664,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_198.jpg",
         "nameEn":  "Godox octa 120",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_198.jpg",
+        "gallery":  [
+                        "images/prod_lgt_198.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -4841,7 +4834,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_206.jpg",
         "nameEn":  "Godox godox diffuser 90*120",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_206.jpg",
+        "gallery":  [
+                        "images/prod_lgt_206.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -4883,7 +4878,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_208.jpg",
         "nameEn":  "Godox 120*180",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_208.jpg",
+        "gallery":  [
+                        "images/prod_lgt_208.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -4904,7 +4901,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_209.jpg",
         "nameEn":  "Godox 150*200",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_209.jpg",
+        "gallery":  [
+                        "images/prod_lgt_209.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5009,11 +5008,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_214.jpg",
         "nameEn":  "Godox 7 in 1 Circle Refelctor\u0026 diffuser  80cm",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_214.jpg",
-                        "images/prod_lgt_214_angle2.jpg",
-                        "images/prod_lgt_214_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_214.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5031,14 +5026,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox 7 in 1 Circle Refelctor\u0026 diffuser  110cm",
         "reviewsCount":  25,
         "oldPrice":  null,
-        "image":  "images/prod_lgt_214.jpg",
+        "image":  "images/prod_lgt_215.jpg",
         "nameEn":  "Godox 7 in 1 Circle Refelctor\u0026 diffuser  110cm",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_214.jpg",
-                        "images/prod_lgt_214_angle2.jpg",
-                        "images/prod_lgt_214_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_215.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5056,14 +5047,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox SF4560 Flodable Scrim Flag kit",
         "reviewsCount":  25,
         "oldPrice":  149,
-        "image":  "images/prod_lgt_214.jpg",
+        "image":  "images/prod_lgt_216.jpg",
         "nameEn":  "Godox SF4560 Flodable Scrim Flag kit",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_214.jpg",
-                        "images/prod_lgt_214_angle2.jpg",
-                        "images/prod_lgt_214_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_216.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5081,14 +5068,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox SF6090 Flodable Scrim Flag kit",
         "reviewsCount":  47,
         "oldPrice":  189,
-        "image":  "images/prod_lgt_214.jpg",
+        "image":  "images/prod_lgt_217.jpg",
         "nameEn":  "Godox SF6090 Flodable Scrim Flag kit",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_214.jpg",
-                        "images/prod_lgt_214_angle2.jpg",
-                        "images/prod_lgt_214_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_217.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5106,10 +5089,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox godox ml bowens adapter",
         "reviewsCount":  70,
         "oldPrice":  null,
-        "image":  "images/prod_lgt_273.jpg",
+        "image":  "images/prod_lgt_218.jpg",
         "nameEn":  "Godox godox ml bowens adapter",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_273.jpg",
+        "gallery":  "images/prod_lgt_218.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5127,14 +5110,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox godox lantern cs-65t",
         "reviewsCount":  57,
         "oldPrice":  55,
-        "image":  "images/prod_lgt_214.jpg",
+        "image":  "images/prod_lgt_219.jpg",
         "nameEn":  "Godox godox lantern cs-65t",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_214.jpg",
-                        "images/prod_lgt_214_angle2.jpg",
-                        "images/prod_lgt_214_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_219.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5152,14 +5131,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox godox lantern cs-85t",
         "reviewsCount":  76,
         "oldPrice":  65,
-        "image":  "images/prod_lgt_214.jpg",
+        "image":  "images/prod_lgt_220.jpg",
         "nameEn":  "Godox godox lantern cs-85t",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_214.jpg",
-                        "images/prod_lgt_214_angle2.jpg",
-                        "images/prod_lgt_214_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_220.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5177,14 +5152,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox godox lantern cs-65t with cover",
         "reviewsCount":  51,
         "oldPrice":  70,
-        "image":  "images/prod_lgt_214.jpg",
+        "image":  "images/prod_lgt_221.jpg",
         "nameEn":  "Godox godox lantern cs-65t with cover",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_214.jpg",
-                        "images/prod_lgt_214_angle2.jpg",
-                        "images/prod_lgt_214_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_221.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5202,14 +5173,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox godox lantern cs-85t with cover",
         "reviewsCount":  26,
         "oldPrice":  85,
-        "image":  "images/prod_lgt_214.jpg",
+        "image":  "images/prod_lgt_222.jpg",
         "nameEn":  "Godox godox lantern cs-85t with cover",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_214.jpg",
-                        "images/prod_lgt_214_angle2.jpg",
-                        "images/prod_lgt_214_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_222.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5227,14 +5194,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox godox qr-p60t with grid",
         "reviewsCount":  76,
         "oldPrice":  99,
-        "image":  "images/prod_lgt_214.jpg",
+        "image":  "images/prod_lgt_223.jpg",
         "nameEn":  "Godox godox qr-p60t with grid",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_214.jpg",
-                        "images/prod_lgt_214_angle2.jpg",
-                        "images/prod_lgt_214_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_223.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5252,13 +5215,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox GODOX LSD40 Shooting Tent",
         "reviewsCount":  73,
         "oldPrice":  55,
-        "image":  "images/prod_lgt_225.jpg",
+        "image":  "images/prod_lgt_224.jpg",
         "nameEn":  "Godox GODOX LSD40 Shooting Tent",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_225.jpg",
-                        "images/prod_lgt_225_angle2.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_224.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5279,10 +5239,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_225.jpg",
         "nameEn":  "Godox GODOX LSD60 Shooting Tent",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_225.jpg",
-                        "images/prod_lgt_225_angle2.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_225.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5300,13 +5257,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox GODOX LSD80 Shooting Tent",
         "reviewsCount":  66,
         "oldPrice":  85,
-        "image":  "images/prod_lgt_225.jpg",
+        "image":  "images/prod_lgt_226.jpg",
         "nameEn":  "Godox GODOX LSD80 Shooting Tent",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_225.jpg",
-                        "images/prod_lgt_225_angle2.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_226.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5324,13 +5278,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox godox vb26a/vb26 for v1",
         "reviewsCount":  65,
         "oldPrice":  49,
-        "image":  "images/prod_lgt_232.jpg",
+        "image":  "images/prod_lgt_227.jpg",
         "nameEn":  "Godox godox vb26a/vb26 for v1",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_232.jpg",
-                        "images/prod_lgt_232_angle2.jpg",
-                        "images/prod_lgt_232_angle3.jpg"
+                        "images/prod_lgt_227.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -5349,13 +5301,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox godox x3 trigger",
         "reviewsCount":  53,
         "oldPrice":  99,
-        "image":  "images/prod_lgt_232.jpg",
+        "image":  "images/prod_lgt_228.jpg",
         "nameEn":  "Godox godox x3 trigger",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_232.jpg",
-                        "images/prod_lgt_232_angle2.jpg",
-                        "images/prod_lgt_232_angle3.jpg"
+                        "images/prod_lgt_228.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -5374,14 +5324,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox x-pro",
         "reviewsCount":  45,
         "oldPrice":  69,
-        "image":  "images/prod_lgt_232.jpg",
+        "image":  "images/prod_lgt_229.jpg",
         "nameEn":  "Godox x-pro",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_232.jpg",
-                        "images/prod_lgt_232_angle2.jpg",
-                        "images/prod_lgt_232_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_229.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5399,13 +5345,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox x-pro ii",
         "reviewsCount":  28,
         "oldPrice":  85,
-        "image":  "images/prod_lgt_232.jpg",
+        "image":  "images/prod_lgt_230.jpg",
         "nameEn":  "Godox x-pro ii",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_232.jpg",
-                        "images/prod_lgt_232_angle2.jpg",
-                        "images/prod_lgt_232_angle3.jpg"
+                        "images/prod_lgt_230.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -5424,14 +5368,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox x2t",
         "reviewsCount":  58,
         "oldPrice":  55,
-        "image":  "images/prod_lgt_232.jpg",
+        "image":  "images/prod_lgt_231.jpg",
         "nameEn":  "Godox x2t",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_232.jpg",
-                        "images/prod_lgt_232_angle2.jpg",
-                        "images/prod_lgt_232_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_231.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5452,11 +5392,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_232.jpg",
         "nameEn":  "Godox at-04",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_232.jpg",
-                        "images/prod_lgt_232_angle2.jpg",
-                        "images/prod_lgt_232_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_232.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5474,13 +5410,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox Ad 200 pro ii",
         "reviewsCount":  34,
         "oldPrice":  375,
-        "image":  "images/prod_lgt_232.jpg",
+        "image":  "images/prod_lgt_233.jpg",
         "nameEn":  "Godox Ad 200 pro ii",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_232.jpg",
-                        "images/prod_lgt_232_angle2.jpg",
-                        "images/prod_lgt_232_angle3.jpg"
+                        "images/prod_lgt_233.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -5499,13 +5433,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox Ad 300 pro",
         "reviewsCount":  51,
         "oldPrice":  375,
-        "image":  "images/prod_lgt_232.jpg",
+        "image":  "images/prod_lgt_234.jpg",
         "nameEn":  "Godox Ad 300 pro",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_232.jpg",
-                        "images/prod_lgt_232_angle2.jpg",
-                        "images/prod_lgt_232_angle3.jpg"
+                        "images/prod_lgt_234.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -5524,13 +5456,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox Ad 400 pro",
         "reviewsCount":  61,
         "oldPrice":  500,
-        "image":  "images/prod_lgt_238.jpg",
+        "image":  "images/prod_lgt_235.jpg",
         "nameEn":  "Godox Ad 400 pro",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_238.jpg",
-                        "images/prod_lgt_238_angle2.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_235.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5548,13 +5477,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox Ad 400 pro ii",
         "reviewsCount":  37,
         "oldPrice":  550,
-        "image":  "images/prod_lgt_238.jpg",
+        "image":  "images/prod_lgt_236.jpg",
         "nameEn":  "Godox Ad 400 pro ii",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_238.jpg",
-                        "images/prod_lgt_238_angle2.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_236.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5572,13 +5498,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox ad 600 bm ii",
         "reviewsCount":  35,
         "oldPrice":  550,
-        "image":  "images/prod_lgt_238.jpg",
+        "image":  "images/prod_lgt_237.jpg",
         "nameEn":  "Godox ad 600 bm ii",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_238.jpg",
-                        "images/prod_lgt_238_angle2.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_237.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5599,10 +5522,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_238.jpg",
         "nameEn":  "Godox ad600 pro ii",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_238.jpg",
-                        "images/prod_lgt_238_angle2.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_238.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5620,10 +5540,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox v850 ii",
         "reviewsCount":  63,
         "oldPrice":  140,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_239.jpg",
         "nameEn":  "Godox v850 ii",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  "images/prod_lgt_239.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5641,10 +5561,12 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox v860 iii",
         "reviewsCount":  63,
         "oldPrice":  179,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_240.jpg",
         "nameEn":  "Godox v860 iii",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  [
+                        "images/prod_lgt_240.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5662,10 +5584,12 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox v1 pro",
         "reviewsCount":  77,
         "oldPrice":  250,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_241.jpg",
         "nameEn":  "Godox v1 pro",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  [
+                        "images/prod_lgt_241.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5683,14 +5607,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox qt 400 iii m",
         "reviewsCount":  70,
         "oldPrice":  375,
-        "image":  "images/prod_lgt_246.jpg",
+        "image":  "images/prod_lgt_242.jpg",
         "nameEn":  "Godox qt 400 iii m",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_246.jpg",
-                        "images/prod_lgt_246_angle2.jpg",
-                        "images/prod_lgt_246_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_242.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5708,14 +5628,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox qt 600 iii m",
         "reviewsCount":  36,
         "oldPrice":  475,
-        "image":  "images/prod_lgt_246.jpg",
+        "image":  "images/prod_lgt_243.jpg",
         "nameEn":  "Godox qt 600 iii m",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_246.jpg",
-                        "images/prod_lgt_246_angle2.jpg",
-                        "images/prod_lgt_246_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_243.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5733,14 +5649,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox DP 400 IIIV",
         "reviewsCount":  64,
         "oldPrice":  190,
-        "image":  "images/prod_lgt_246.jpg",
+        "image":  "images/prod_lgt_244.jpg",
         "nameEn":  "Godox DP 400 IIIV",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_246.jpg",
-                        "images/prod_lgt_246_angle2.jpg",
-                        "images/prod_lgt_246_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_244.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5758,14 +5670,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox DP 600 IIIV",
         "reviewsCount":  34,
         "oldPrice":  220,
-        "image":  "images/prod_lgt_246.jpg",
+        "image":  "images/prod_lgt_245.jpg",
         "nameEn":  "Godox DP 600 IIIV",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_246.jpg",
-                        "images/prod_lgt_246_angle2.jpg",
-                        "images/prod_lgt_246_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_245.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5786,11 +5694,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_246.jpg",
         "nameEn":  "Godox DP 800 IIIV",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_246.jpg",
-                        "images/prod_lgt_246_angle2.jpg",
-                        "images/prod_lgt_246_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_246.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5808,14 +5712,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox DP 1000 IIIV",
         "reviewsCount":  53,
         "oldPrice":  330,
-        "image":  "images/prod_lgt_246.jpg",
+        "image":  "images/prod_lgt_247.jpg",
         "nameEn":  "Godox DP 1000 IIIV",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_246.jpg",
-                        "images/prod_lgt_246_angle2.jpg",
-                        "images/prod_lgt_246_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_247.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5833,14 +5733,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox SK300 II-V",
         "reviewsCount":  52,
         "oldPrice":  129,
-        "image":  "images/prod_lgt_251.jpg",
+        "image":  "images/prod_lgt_248.jpg",
         "nameEn":  "Godox SK300 II-V",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_251.jpg",
-                        "images/prod_lgt_251_angle2.jpg",
-                        "images/prod_lgt_251_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_248.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5858,14 +5754,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox SK400 II-V",
         "reviewsCount":  32,
         "oldPrice":  159,
-        "image":  "images/prod_lgt_251.jpg",
+        "image":  "images/prod_lgt_249.jpg",
         "nameEn":  "Godox SK400 II-V",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_251.jpg",
-                        "images/prod_lgt_251_angle2.jpg",
-                        "images/prod_lgt_251_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_249.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5883,14 +5775,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox SK300 III-V",
         "reviewsCount":  83,
         "oldPrice":  139,
-        "image":  "images/prod_lgt_251.jpg",
+        "image":  "images/prod_lgt_250.jpg",
         "nameEn":  "Godox SK300 III-V",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_251.jpg",
-                        "images/prod_lgt_251_angle2.jpg",
-                        "images/prod_lgt_251_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_250.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5911,11 +5799,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_251.jpg",
         "nameEn":  "Godox SK400 III-V",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_251.jpg",
-                        "images/prod_lgt_251_angle2.jpg",
-                        "images/prod_lgt_251_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_251.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5936,11 +5820,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_252.jpg",
         "nameEn":  "Godox im30/im22/im20 mini flash",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_252.jpg",
-                        "images/prod_lgt_252_angle2.jpg",
-                        "images/prod_lgt_252_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_252.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5958,14 +5838,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox ia 32 mini flash",
         "reviewsCount":  39,
         "oldPrice":  60,
-        "image":  "images/prod_lgt_252.jpg",
+        "image":  "images/prod_lgt_253.jpg",
         "nameEn":  "Godox ia 32 mini flash",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_252.jpg",
-                        "images/prod_lgt_252_angle2.jpg",
-                        "images/prod_lgt_252_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_253.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -5983,10 +5859,12 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox tt85 ii flash",
         "reviewsCount":  67,
         "oldPrice":  125,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_254.jpg",
         "nameEn":  "Godox tt85 ii flash",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  [
+                        "images/prod_lgt_254.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6004,10 +5882,12 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox tt 600",
         "reviewsCount":  43,
         "oldPrice":  85,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_255.jpg",
         "nameEn":  "Godox tt 600",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  [
+                        "images/prod_lgt_255.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6050,10 +5930,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox tt520 iii",
         "reviewsCount":  66,
         "oldPrice":  50,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_257.jpg",
         "nameEn":  "Godox tt520 iii",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  "images/prod_lgt_257.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6071,10 +5951,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox tt560 ii",
         "reviewsCount":  83,
         "oldPrice":  65,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_258.jpg",
         "nameEn":  "Godox tt560 ii",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  "images/prod_lgt_258.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6092,10 +5972,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox V480",
         "reviewsCount":  68,
         "oldPrice":  149,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_259.jpg",
         "nameEn":  "Godox V480",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  "images/prod_lgt_259.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6113,10 +5993,12 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox ML-150 II Macro ring Flash",
         "reviewsCount":  25,
         "oldPrice":  85,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_260.jpg",
         "nameEn":  "Godox ML-150 II Macro ring Flash",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  [
+                        "images/prod_lgt_260.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6134,10 +6016,12 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox MF-R76 Macro Ring Flash",
         "reviewsCount":  47,
         "oldPrice":  150,
-        "image":  "images/prod_godox_v1.jpg",
+        "image":  "images/prod_lgt_261.jpg",
         "nameEn":  "Godox MF-R76 Macro Ring Flash",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_godox_v1.jpg",
+        "gallery":  [
+                        "images/prod_lgt_261.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6155,14 +6039,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox MF12 Dental Macro Flash Kit with Trigger Xpro",
         "reviewsCount":  49,
         "oldPrice":  330,
-        "image":  "images/prod_lgt_252.jpg",
+        "image":  "images/prod_lgt_262.jpg",
         "nameEn":  "Godox MF12 Dental Macro Flash Kit with Trigger Xpro",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_252.jpg",
-                        "images/prod_lgt_252_angle2.jpg",
-                        "images/prod_lgt_252_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_262.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6183,11 +6063,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_263.jpg",
         "nameEn":  "Godox Flash Tube for AD600 pro",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_263.jpg",
-                        "images/prod_lgt_263_angle2.jpg",
-                        "images/prod_lgt_263_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_263.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6205,14 +6081,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox Flash Tube for AD400 pro",
         "reviewsCount":  68,
         "oldPrice":  125,
-        "image":  "images/prod_lgt_263.jpg",
+        "image":  "images/prod_lgt_264.jpg",
         "nameEn":  "Godox Flash Tube for AD400 pro",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_263.jpg",
-                        "images/prod_lgt_263_angle2.jpg",
-                        "images/prod_lgt_263_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_264.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6230,14 +6102,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox Ad400 Pro charger",
         "reviewsCount":  38,
         "oldPrice":  45,
-        "image":  "images/prod_lgt_266.jpg",
+        "image":  "images/prod_lgt_265.jpg",
         "nameEn":  "Godox Ad400 Pro charger",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_266.jpg",
-                        "images/prod_lgt_266_angle2.jpg",
-                        "images/prod_lgt_266_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_265.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6258,11 +6126,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_266.jpg",
         "nameEn":  "Godox AD600 pro Charger",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_266.jpg",
-                        "images/prod_lgt_266_angle2.jpg",
-                        "images/prod_lgt_266_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_266.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6280,13 +6144,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox VB18 Battery for Godox V850 V860 V860II",
         "reviewsCount":  42,
         "oldPrice":  35,
-        "image":  "images/prod_lgt_271.jpg",
+        "image":  "images/prod_lgt_267.jpg",
         "nameEn":  "Godox VB18 Battery for Godox V850 V860 V860II",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_271.jpg",
-                        "images/prod_lgt_271_angle2.jpg",
-                        "images/prod_lgt_271_angle3.jpg"
+                        "images/prod_lgt_267.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -6305,13 +6167,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox WB29 Battery For Godox Ad200 pro",
         "reviewsCount":  78,
         "oldPrice":  65,
-        "image":  "images/prod_lgt_271.jpg",
+        "image":  "images/prod_lgt_268.jpg",
         "nameEn":  "Godox WB29 Battery For Godox Ad200 pro",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_271.jpg",
-                        "images/prod_lgt_271_angle2.jpg",
-                        "images/prod_lgt_271_angle3.jpg"
+                        "images/prod_lgt_268.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -6330,13 +6190,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox WB400P Battery For Godox Ad400 pro",
         "reviewsCount":  63,
         "oldPrice":  160,
-        "image":  "images/prod_lgt_271.jpg",
+        "image":  "images/prod_lgt_269.jpg",
         "nameEn":  "Godox WB400P Battery For Godox Ad400 pro",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_271.jpg",
-                        "images/prod_lgt_271_angle2.jpg",
-                        "images/prod_lgt_271_angle3.jpg"
+                        "images/prod_lgt_269.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -6355,14 +6213,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox AD-FT200 Bare Bulb for ad200 pro",
         "reviewsCount":  42,
         "oldPrice":  50,
-        "image":  "images/prod_lgt_263.jpg",
+        "image":  "images/prod_lgt_270.jpg",
         "nameEn":  "Godox AD-FT200 Bare Bulb for ad200 pro",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_263.jpg",
-                        "images/prod_lgt_263_angle2.jpg",
-                        "images/prod_lgt_263_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_270.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6384,9 +6238,7 @@ const INITIAL_PRODUCTS = [
         "nameEn":  "Godox WB26 battery for Godox AD600 pro",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_271.jpg",
-                        "images/prod_lgt_271_angle2.jpg",
-                        "images/prod_lgt_271_angle3.jpg"
+                        "images/prod_lgt_271.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -6405,13 +6257,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox AK-R1 Round Flash Accessories Kit",
         "reviewsCount":  49,
         "oldPrice":  65,
-        "image":  "images/prod_lgt_273.jpg",
+        "image":  "images/prod_lgt_272.jpg",
         "nameEn":  "Godox AK-R1 Round Flash Accessories Kit",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_273.jpg",
-                        "images/prod_lgt_273_angle2.jpg",
-                        "images/prod_lgt_273_angle3.jpg"
+                        "images/prod_lgt_272.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -6433,11 +6283,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_273.jpg",
         "nameEn":  "Godox AK-R21 Projection Attachment",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_273.jpg",
-                        "images/prod_lgt_273_angle2.jpg",
-                        "images/prod_lgt_273_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_273.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6455,14 +6301,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox SA-17 Bownes Mount Adapter with SA-P+SA-06+SA-001-09+SA-10",
         "reviewsCount":  32,
         "oldPrice":  190,
-        "image":  "images/prod_lgt_273.jpg",
+        "image":  "images/prod_lgt_274.jpg",
         "nameEn":  "Godox SA-17 Bownes Mount Adapter with SA-P+SA-06+SA-001-09+SA-10",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_273.jpg",
-                        "images/prod_lgt_273_angle2.jpg",
-                        "images/prod_lgt_273_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_274.jpg",
         "specs":  {
                       "الشركة":  "Godox",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6480,13 +6322,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox ML-CD15 diffuser Dome",
         "reviewsCount":  71,
         "oldPrice":  null,
-        "image":  "images/prod_lgt_273.jpg",
+        "image":  "images/prod_lgt_275.jpg",
         "nameEn":  "Godox ML-CD15 diffuser Dome",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_273.jpg",
-                        "images/prod_lgt_273_angle2.jpg",
-                        "images/prod_lgt_273_angle3.jpg"
+                        "images/prod_lgt_275.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -6505,13 +6345,11 @@ const INITIAL_PRODUCTS = [
         "name":  "Godox Barndoor BD-04 kit with Grid \u0026 color Gel",
         "reviewsCount":  49,
         "oldPrice":  null,
-        "image":  "images/prod_lgt_273.jpg",
+        "image":  "images/prod_lgt_276.jpg",
         "nameEn":  "Godox Barndoor BD-04 kit with Grid \u0026 color Gel",
         "badge":  "إضاءة استوديو",
         "gallery":  [
-                        "images/prod_lgt_273.jpg",
-                        "images/prod_lgt_273_angle2.jpg",
-                        "images/prod_lgt_273_angle3.jpg"
+                        "images/prod_lgt_276.jpg"
                     ],
         "specs":  {
                       "الشركة":  "Godox",
@@ -6556,10 +6394,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Colbor CL60 Bi",
         "reviewsCount":  73,
         "oldPrice":  140,
-        "image":  "images/prod_lgt_284.jpg",
+        "image":  "images/prod_lgt_278.jpg",
         "nameEn":  "Colbor CL60 Bi",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_284.jpg",
+        "gallery":  "images/prod_lgt_278.jpg",
         "specs":  {
                       "الشركة":  "Colbor",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6577,10 +6415,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Colbor CL60R RGB",
         "reviewsCount":  50,
         "oldPrice":  180,
-        "image":  "images/prod_lgt_284.jpg",
+        "image":  "images/prod_lgt_279.jpg",
         "nameEn":  "Colbor CL60R RGB",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_284.jpg",
+        "gallery":  "images/prod_lgt_279.jpg",
         "specs":  {
                       "الشركة":  "Colbor",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6601,7 +6439,9 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_280.jpg",
         "nameEn":  "Nanlite forza720 bi",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_280.jpg",
+        "gallery":  [
+                        "images/prod_lgt_280.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Nanlite",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6619,10 +6459,12 @@ const INITIAL_PRODUCTS = [
         "name":  "Nanlite forza500 bi ii",
         "reviewsCount":  79,
         "oldPrice":  1150,
-        "image":  "images/prod_lgt_280.jpg",
+        "image":  "images/prod_lgt_281.jpg",
         "nameEn":  "Nanlite forza500 bi ii",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_280.jpg",
+        "gallery":  [
+                        "images/prod_lgt_281.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Nanlite",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6640,10 +6482,12 @@ const INITIAL_PRODUCTS = [
         "name":  "Nanlite forza 300 bi ii",
         "reviewsCount":  35,
         "oldPrice":  925,
-        "image":  "images/prod_lgt_280.jpg",
+        "image":  "images/prod_lgt_282.jpg",
         "nameEn":  "Nanlite forza 300 bi ii",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_280.jpg",
+        "gallery":  [
+                        "images/prod_lgt_282.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Nanlite",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6661,10 +6505,12 @@ const INITIAL_PRODUCTS = [
         "name":  "Nanlite forza 150 bi",
         "reviewsCount":  56,
         "oldPrice":  440,
-        "image":  "images/prod_lgt_280.jpg",
+        "image":  "images/prod_lgt_283.jpg",
         "nameEn":  "Nanlite forza 150 bi",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_280.jpg",
+        "gallery":  [
+                        "images/prod_lgt_283.jpg"
+                    ],
         "specs":  {
                       "الشركة":  "Nanlite",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6703,10 +6549,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Nanlite fc 300 bi",
         "reviewsCount":  50,
         "oldPrice":  450,
-        "image":  "images/prod_lgt_284.jpg",
+        "image":  "images/prod_lgt_285.jpg",
         "nameEn":  "Nanlite fc 300 bi",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_284.jpg",
+        "gallery":  "images/prod_lgt_285.jpg",
         "specs":  {
                       "الشركة":  "Nanlite",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6724,10 +6570,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Nanlite fc 120 bi",
         "reviewsCount":  75,
         "oldPrice":  260,
-        "image":  "images/prod_lgt_284.jpg",
+        "image":  "images/prod_lgt_286.jpg",
         "nameEn":  "Nanlite fc 120 bi",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_284.jpg",
+        "gallery":  "images/prod_lgt_286.jpg",
         "specs":  {
                       "الشركة":  "Nanlite",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6745,10 +6591,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Nanlite fc 60 bi",
         "reviewsCount":  60,
         "oldPrice":  170,
-        "image":  "images/prod_lgt_284.jpg",
+        "image":  "images/prod_lgt_287.jpg",
         "nameEn":  "Nanlite fc 60 bi",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_284.jpg",
+        "gallery":  "images/prod_lgt_287.jpg",
         "specs":  {
                       "الشركة":  "Nanlite",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6766,10 +6612,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Nanlite fc500c",
         "reviewsCount":  44,
         "oldPrice":  749,
-        "image":  "images/prod_lgt_284.jpg",
+        "image":  "images/prod_lgt_288.jpg",
         "nameEn":  "Nanlite fc500c",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_284.jpg",
+        "gallery":  "images/prod_lgt_288.jpg",
         "specs":  {
                       "الشركة":  "Nanlite",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6787,10 +6633,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Nanlite fc power controller/fc500/300",
         "reviewsCount":  42,
         "oldPrice":  349,
-        "image":  "images/prod_lgt_284.jpg",
+        "image":  "images/prod_lgt_289.jpg",
         "nameEn":  "Nanlite fc power controller/fc500/300",
         "badge":  "إضاءة استوديو",
-        "gallery":  "images/prod_lgt_284.jpg",
+        "gallery":  "images/prod_lgt_289.jpg",
         "specs":  {
                       "الشركة":  "Nanlite",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6811,11 +6657,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_lgt_290.jpg",
         "nameEn":  "Aputure amaran200ds",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_290.jpg",
-                        "images/prod_lgt_290_angle2.jpg",
-                        "images/prod_lgt_290_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_290.jpg",
         "specs":  {
                       "الشركة":  "Aputure",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6833,14 +6675,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Aputure amaran200xs bi",
         "reviewsCount":  39,
         "oldPrice":  400,
-        "image":  "images/prod_lgt_290.jpg",
+        "image":  "images/prod_lgt_291.jpg",
         "nameEn":  "Aputure amaran200xs bi",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_290.jpg",
-                        "images/prod_lgt_290_angle2.jpg",
-                        "images/prod_lgt_290_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_291.jpg",
         "specs":  {
                       "الشركة":  "Aputure",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6858,14 +6696,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Aputure amaran100ds",
         "reviewsCount":  26,
         "oldPrice":  200,
-        "image":  "images/prod_lgt_290.jpg",
+        "image":  "images/prod_lgt_292.jpg",
         "nameEn":  "Aputure amaran100ds",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_290.jpg",
-                        "images/prod_lgt_290_angle2.jpg",
-                        "images/prod_lgt_290_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_292.jpg",
         "specs":  {
                       "الشركة":  "Aputure",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6883,14 +6717,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Aputure amaran 100xs bi",
         "reviewsCount":  31,
         "oldPrice":  250,
-        "image":  "images/prod_lgt_290.jpg",
+        "image":  "images/prod_lgt_293.jpg",
         "nameEn":  "Aputure amaran 100xs bi",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_290.jpg",
-                        "images/prod_lgt_290_angle2.jpg",
-                        "images/prod_lgt_290_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_293.jpg",
         "specs":  {
                       "الشركة":  "Aputure",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6908,14 +6738,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Aputure amaran 150 c",
         "reviewsCount":  60,
         "oldPrice":  375,
-        "image":  "images/prod_lgt_290.jpg",
+        "image":  "images/prod_lgt_294.jpg",
         "nameEn":  "Aputure amaran 150 c",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_290.jpg",
-                        "images/prod_lgt_290_angle2.jpg",
-                        "images/prod_lgt_290_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_294.jpg",
         "specs":  {
                       "الشركة":  "Aputure",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6933,14 +6759,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Aputure amaran 300 c",
         "reviewsCount":  27,
         "oldPrice":  550,
-        "image":  "images/prod_lgt_290.jpg",
+        "image":  "images/prod_lgt_295.jpg",
         "nameEn":  "Aputure amaran 300 c",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_290.jpg",
-                        "images/prod_lgt_290_angle2.jpg",
-                        "images/prod_lgt_290_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_295.jpg",
         "specs":  {
                       "الشركة":  "Aputure",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6958,14 +6780,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Aputure amaran Ray 360c",
         "reviewsCount":  51,
         "oldPrice":  580,
-        "image":  "images/prod_lgt_290.jpg",
+        "image":  "images/prod_lgt_296.jpg",
         "nameEn":  "Aputure amaran Ray 360c",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_290.jpg",
-                        "images/prod_lgt_290_angle2.jpg",
-                        "images/prod_lgt_290_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_296.jpg",
         "specs":  {
                       "الشركة":  "Aputure",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -6983,14 +6801,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Aputure amaran Ray 660c",
         "reviewsCount":  51,
         "oldPrice":  899,
-        "image":  "images/prod_lgt_290.jpg",
+        "image":  "images/prod_lgt_297.jpg",
         "nameEn":  "Aputure amaran Ray 660c",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_290.jpg",
-                        "images/prod_lgt_290_angle2.jpg",
-                        "images/prod_lgt_290_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_297.jpg",
         "specs":  {
                       "الشركة":  "Aputure",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -7008,14 +6822,10 @@ const INITIAL_PRODUCTS = [
         "name":  "K\u0026F Concept Pl-60b bi",
         "reviewsCount":  60,
         "oldPrice":  140,
-        "image":  "images/prod_lgt_298.jpg",
+        "image":  "images/prod_lgt_298.png",
         "nameEn":  "K\u0026F Concept Pl-60b bi",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_298.jpg",
-                        "images/prod_lgt_298_angle2.jpg",
-                        "images/prod_lgt_298_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_298.png",
         "specs":  {
                       "الشركة":  "K\u0026F Concept",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -7033,14 +6843,10 @@ const INITIAL_PRODUCTS = [
         "name":  "K\u0026F Concept pl-60b bi with",
         "reviewsCount":  82,
         "oldPrice":  175,
-        "image":  "images/prod_lgt_298.jpg",
+        "image":  "images/prod_lgt_299.png",
         "nameEn":  "K\u0026F Concept pl-60b bi with",
         "badge":  "إضاءة استوديو",
-        "gallery":  [
-                        "images/prod_lgt_298.jpg",
-                        "images/prod_lgt_298_angle2.jpg",
-                        "images/prod_lgt_298_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_lgt_299.png",
         "specs":  {
                       "الشركة":  "K\u0026F Concept",
                       "التصنيف":  "إضاءات واستوديو احترافي",
@@ -7660,11 +7466,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-330",
         "stock":  18,
-        "name":  "\"SmallRig HawkLock Quick Release Advanced Cage Kit for Sony a7R V",
+        "name":  "SmallRig HawkLock Quick Release Advanced Cage Kit for Sony a7R V",
         "reviewsCount":  70,
         "oldPrice":  null,
         "image":  "images/prod_acc_330.jpg",
-        "nameEn":  "\"SmallRig HawkLock Quick Release Advanced Cage Kit for Sony a7R V",
+        "nameEn":  "SmallRig HawkLock Quick Release Advanced Cage Kit for Sony a7R V",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_330.jpg",
         "specs":  {
@@ -7760,11 +7566,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-335",
         "stock":  23,
-        "name":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic Arm (11\"\") 4489\"",
+        "name":  "SmallRig HawkLock H21 Quick Release Rosette Magic Arm (11) 4489",
         "reviewsCount":  53,
         "oldPrice":  null,
         "image":  "images/prod_acc_335.jpg",
-        "nameEn":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic Arm (11\"\") 4489\"",
+        "nameEn":  "SmallRig HawkLock H21 Quick Release Rosette Magic Arm (11) 4489",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_335.jpg",
         "specs":  {
@@ -7780,11 +7586,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-336",
         "stock":  24,
-        "name":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic  Arm (7\"\") 4490\"",
+        "name":  "SmallRig HawkLock H21 Quick Release Rosette Magic  Arm (7) 4490",
         "reviewsCount":  33,
         "oldPrice":  null,
         "image":  "images/prod_acc_336.jpg",
-        "nameEn":  "\"SmallRig HawkLock H21 Quick Release Rosette Magic  Arm (7\"\") 4490\"",
+        "nameEn":  "SmallRig HawkLock H21 Quick Release Rosette Magic  Arm (7) 4490",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_336.jpg",
         "specs":  {
@@ -8040,11 +7846,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-349",
         "stock":  9,
-        "name":  "\"SmallRig \"\"Black Mamba\"\" Camera Cage for Canon EOS R5 Mark II 4975\"",
+        "name":  "SmallRig Black Mamba Camera Cage for Canon EOS R5 Mark II 4975",
         "reviewsCount":  61,
         "oldPrice":  null,
         "image":  "images/prod_acc_349.jpg",
-        "nameEn":  "\"SmallRig \"\"Black Mamba\"\" Camera Cage for Canon EOS R5 Mark II 4975\"",
+        "nameEn":  "SmallRig Black Mamba Camera Cage for Canon EOS R5 Mark II 4975",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_349.jpg",
         "specs":  {
@@ -8140,11 +7946,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-354",
         "stock":  8,
-        "name":  "\"SmallRig Advanced Cage Kit for Sony a7R V",
+        "name":  "SmallRig Advanced Cage Kit for Sony a7R V",
         "reviewsCount":  70,
         "oldPrice":  null,
         "image":  "images/prod_acc_354.jpg",
-        "nameEn":  "\"SmallRig Advanced Cage Kit for Sony a7R V",
+        "nameEn":  "SmallRig Advanced Cage Kit for Sony a7R V",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_354.jpg",
         "specs":  {
@@ -8245,11 +8051,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-359",
         "stock":  15,
-        "name":  "\"SmallRig Camera Cage for Canon EOS R5 C",
+        "name":  "SmallRig Camera Cage for Canon EOS R5 C",
         "reviewsCount":  55,
         "oldPrice":  null,
         "image":  "images/prod_acc_359.jpg",
-        "nameEn":  "\"SmallRig Camera Cage for Canon EOS R5 C",
+        "nameEn":  "SmallRig Camera Cage for Canon EOS R5 C",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_359.jpg",
         "specs":  {
@@ -8370,11 +8176,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-365",
         "stock":  16,
-        "name":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Sony A-Series",
+        "name":  "SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Sony A-Series",
         "reviewsCount":  38,
         "oldPrice":  null,
         "image":  "images/prod_acc_365.jpg",
-        "nameEn":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Sony A-Series",
+        "nameEn":  "SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Select Sony A-Series",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_365.jpg",
         "specs":  {
@@ -8390,11 +8196,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-366",
         "stock":  11,
-        "name":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Sony a7R IV",
+        "name":  "SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Sony a7R IV",
         "reviewsCount":  37,
         "oldPrice":  null,
         "image":  "images/prod_acc_366.jpg",
-        "nameEn":  "\"SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Sony a7R IV",
+        "nameEn":  "SmallRig Rotatable Horizontal-to-Vertical Mount Plate Kit for Sony a7R IV",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_366.jpg",
         "specs":  {
@@ -8450,11 +8256,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-369",
         "stock":  8,
-        "name":  "\"SmallRig Articulating Arm (9.5\"\") 2066B\"",
+        "name":  "SmallRig Articulating Arm (9.5) 2066B",
         "reviewsCount":  49,
         "oldPrice":  null,
         "image":  "images/prod_acc_369.jpg",
-        "nameEn":  "\"SmallRig Articulating Arm (9.5\"\") 2066B\"",
+        "nameEn":  "SmallRig Articulating Arm (9.5) 2066B",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_369.jpg",
         "specs":  {
@@ -8470,11 +8276,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-370",
         "stock":  14,
-        "name":  "\"SmallRig 5.5\"\" Articulating Arm 2065B\"",
+        "name":  "SmallRig 5.5 Articulating Arm 2065B",
         "reviewsCount":  59,
         "oldPrice":  null,
         "image":  "images/prod_acc_370.jpg",
-        "nameEn":  "\"SmallRig 5.5\"\" Articulating Arm 2065B\"",
+        "nameEn":  "SmallRig 5.5 Articulating Arm 2065B",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_370.jpg",
         "specs":  {
@@ -8490,11 +8296,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-371",
         "stock":  7,
-        "name":  "\"SmallRig 2164 Multifunctional Crab Clamp with 3.5\"\" Ball Head Arm 2164\"",
+        "name":  "SmallRig 2164 Multifunctional Crab Clamp with 3.5 Ball Head Arm 2164",
         "reviewsCount":  36,
         "oldPrice":  null,
         "image":  "images/prod_acc_371.jpg",
-        "nameEn":  "\"SmallRig 2164 Multifunctional Crab Clamp with 3.5\"\" Ball Head Arm 2164\"",
+        "nameEn":  "SmallRig 2164 Multifunctional Crab Clamp with 3.5 Ball Head Arm 2164",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_371.jpg",
         "specs":  {
@@ -8510,11 +8316,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-372",
         "stock":  24,
-        "name":  "\"SmallRig Magic Arm with Dual Ball Heads (1/4\"\"-20 Screws) 3873\"",
+        "name":  "SmallRig Magic Arm with Dual Ball Heads (1/4-20 Screws) 3873",
         "reviewsCount":  74,
         "oldPrice":  null,
         "image":  "images/prod_acc_372.jpg",
-        "nameEn":  "\"SmallRig Magic Arm with Dual Ball Heads (1/4\"\"-20 Screws) 3873\"",
+        "nameEn":  "SmallRig Magic Arm with Dual Ball Heads (1/4-20 Screws) 3873",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_372.jpg",
         "specs":  {
@@ -8610,11 +8416,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "ACC-377",
         "stock":  22,
-        "name":  "\"SmallRig Swivel and Tilt Adjustable Monitor Support with 1/4\"\"-20 Screws 4886\"",
+        "name":  "SmallRig Swivel and Tilt Adjustable Monitor Support with 1/4-20 Screws 4886",
         "reviewsCount":  36,
         "oldPrice":  null,
         "image":  "images/prod_acc_377.jpg",
-        "nameEn":  "\"SmallRig Swivel and Tilt Adjustable Monitor Support with 1/4\"\"-20 Screws 4886\"",
+        "nameEn":  "SmallRig Swivel and Tilt Adjustable Monitor Support with 1/4-20 Screws 4886",
         "badge":  "SmallRig",
         "gallery":  "images/prod_acc_377.jpg",
         "specs":  {
@@ -8653,14 +8459,10 @@ const INITIAL_PRODUCTS = [
         "name":  "SmallRig RF 10C Portable Focusable LED Video Light 4634",
         "reviewsCount":  58,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_379.jpg",
         "nameEn":  "SmallRig RF 10C Portable Focusable LED Video Light 4634",
         "badge":  "SmallRig",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_379.jpg",
         "specs":  {
                       "العلامة التجارية":  "SmallRig",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -8901,14 +8703,10 @@ const INITIAL_PRODUCTS = [
         "name":  "ULANZI LM07 LED Photography Flashlight",
         "reviewsCount":  46,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_391.jpg",
         "nameEn":  "ULANZI LM07 LED Photography Flashlight",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_391.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -8928,11 +8726,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_acc_392.jpg",
         "nameEn":  "Ulanzi VL49 Mini RGB video light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_392.jpg",
-                        "images/prod_acc_392_angle2.jpg",
-                        "images/prod_acc_392_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_392.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -8949,14 +8743,10 @@ const INITIAL_PRODUCTS = [
         "name":  "ulanzi Vl120 LED Pocket rgb video light",
         "reviewsCount":  35,
         "oldPrice":  null,
-        "image":  "images/prod_acc_392.jpg",
+        "image":  "images/prod_acc_393.jpg",
         "nameEn":  "ulanzi Vl120 LED Pocket rgb video light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_392.jpg",
-                        "images/prod_acc_392_angle2.jpg",
-                        "images/prod_acc_392_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_393.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -8973,14 +8763,10 @@ const INITIAL_PRODUCTS = [
         "name":  "ulanzi Vl120 LED Pocket bi color video light",
         "reviewsCount":  63,
         "oldPrice":  null,
-        "image":  "images/prod_acc_392.jpg",
+        "image":  "images/prod_acc_394.jpg",
         "nameEn":  "ulanzi Vl120 LED Pocket bi color video light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_392.jpg",
-                        "images/prod_acc_392_angle2.jpg",
-                        "images/prod_acc_392_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_394.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9000,11 +8786,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_acc_395.jpg",
         "nameEn":  "ulanzi LM-P40 RGB Video light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_395.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9021,14 +8803,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Ulanzi LT002  7inch Pocket Fill Light",
         "reviewsCount":  58,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_396.jpg",
         "nameEn":  "Ulanzi LT002  7inch Pocket Fill Light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_396.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9045,14 +8823,10 @@ const INITIAL_PRODUCTS = [
         "name":  "ulanzi LT003 RGB Video light",
         "reviewsCount":  79,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_397.jpg",
         "nameEn":  "ulanzi LT003 RGB Video light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_397.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9069,14 +8843,10 @@ const INITIAL_PRODUCTS = [
         "name":  "ulanzi Pl25 Bi color video light",
         "reviewsCount":  69,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_398.jpg",
         "nameEn":  "ulanzi Pl25 Bi color video light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_398.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9096,11 +8866,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_acc_399.jpg",
         "nameEn":  "ulanzi air tube light 20w90*12cm",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_399.jpg",
-                        "images/prod_acc_399_angle2.jpg",
-                        "images/prod_acc_399_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_399.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9117,14 +8883,10 @@ const INITIAL_PRODUCTS = [
         "name":  "ulanzi air tube light 12w60*12cm",
         "reviewsCount":  67,
         "oldPrice":  null,
-        "image":  "images/prod_acc_399.jpg",
+        "image":  "images/prod_acc_400.jpg",
         "nameEn":  "ulanzi air tube light 12w60*12cm",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_399.jpg",
-                        "images/prod_acc_399_angle2.jpg",
-                        "images/prod_acc_399_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_400.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9461,14 +9223,10 @@ const INITIAL_PRODUCTS = [
         "name":  "ulanzi LM01 Flash Light spot",
         "reviewsCount":  46,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_417.jpg",
         "nameEn":  "ulanzi LM01 Flash Light spot",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_417.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9605,14 +9363,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Ulanzi U200 Mobile Ring light",
         "reviewsCount":  65,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_424.jpg",
         "nameEn":  "Ulanzi U200 Mobile Ring light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_424.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9649,14 +9403,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Ulanzi VL110 RGB Tube Light",
         "reviewsCount":  30,
         "oldPrice":  null,
-        "image":  "images/prod_acc_427.jpg",
+        "image":  "images/prod_acc_426.jpg",
         "nameEn":  "Ulanzi VL110 RGB Tube Light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_427.jpg",
-                        "images/prod_acc_427_angle2.jpg",
-                        "images/prod_acc_427_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_426.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9676,11 +9426,7 @@ const INITIAL_PRODUCTS = [
         "image":  "images/prod_acc_427.jpg",
         "nameEn":  "ULANZI VL119 Handheld RGB LED Video Light Stick",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_427.jpg",
-                        "images/prod_acc_427_angle2.jpg",
-                        "images/prod_acc_427_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_427.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9697,14 +9443,10 @@ const INITIAL_PRODUCTS = [
         "name":  "ULANZI VL360 RGB Light Handheld LED Video Light",
         "reviewsCount":  74,
         "oldPrice":  null,
-        "image":  "images/prod_acc_427.jpg",
+        "image":  "images/prod_acc_428.jpg",
         "nameEn":  "ULANZI VL360 RGB Light Handheld LED Video Light",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_427.jpg",
-                        "images/prod_acc_427_angle2.jpg",
-                        "images/prod_acc_427_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_428.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9781,14 +9523,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Ulanzi Falcam Move LightGo",
         "reviewsCount":  37,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_432.jpg",
         "nameEn":  "Ulanzi Falcam Move LightGo",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_432.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9805,14 +9543,10 @@ const INITIAL_PRODUCTS = [
         "name":  "ULANZI FM01 FILMOG Ace Portable Fog Machine R001",
         "reviewsCount":  38,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_433.jpg",
         "nameEn":  "ULANZI FM01 FILMOG Ace Portable Fog Machine R001",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_433.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -9829,14 +9563,10 @@ const INITIAL_PRODUCTS = [
         "name":  "Ulanzi FM02 FILMOG X Portable Fog Machine",
         "reviewsCount":  76,
         "oldPrice":  null,
-        "image":  "images/prod_acc_395.jpg",
+        "image":  "images/prod_acc_434.jpg",
         "nameEn":  "Ulanzi FM02 FILMOG X Portable Fog Machine",
         "badge":  "Ulanzi",
-        "gallery":  [
-                        "images/prod_acc_395.jpg",
-                        "images/prod_acc_395_angle2.jpg",
-                        "images/prod_acc_395_angle3.jpg"
-                    ],
+        "gallery":  "images/prod_acc_434.jpg",
         "specs":  {
                       "العلامة التجارية":  "Ulanzi",
                       "الضمان":  "كفالة رسمية من الوكيل المعتمد في الأردن"
@@ -10424,11 +10154,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "MON-463",
         "stock":  9,
-        "name":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Camera Kit)",
+        "name":  "LENSGO TC7II Teleprompter 7.9 inch (Camera Kit)",
         "reviewsCount":  47,
         "oldPrice":  null,
         "image":  "images/prod_mon_463.jpg",
-        "nameEn":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Camera Kit)",
+        "nameEn":  "LENSGO TC7II Teleprompter 7.9 inch (Camera Kit)",
         "badge":  "ملقن نصوص",
         "gallery":  "images/prod_mon_463.jpg",
         "specs":  {
@@ -10445,11 +10175,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "MON-464",
         "stock":  8,
-        "name":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Ultimate Kit) for Phone \u0026 Canera",
+        "name":  "LENSGO TC7II Teleprompter 7.9 inch (Ultimate Kit) for Phone \u0026 Canera",
         "reviewsCount":  25,
         "oldPrice":  null,
         "image":  "images/prod_mon_464.jpg",
-        "nameEn":  "LENSGO TC7II Teleprompter 7.9\u0027\u0027 (Ultimate Kit) for Phone \u0026 Canera",
+        "nameEn":  "LENSGO TC7II Teleprompter 7.9 inch (Ultimate Kit) for Phone \u0026 Canera",
         "badge":  "ملقن نصوص",
         "gallery":  "images/prod_mon_464.jpg",
         "specs":  {
@@ -10466,11 +10196,11 @@ const INITIAL_PRODUCTS = [
     {
         "id":  "MON-465",
         "stock":  8,
-        "name":  "LENSGO TC12 12.9\u0027\u0027 Teleprompter",
+        "name":  "LENSGO TC12 12.9 inch Teleprompter",
         "reviewsCount":  52,
         "oldPrice":  null,
         "image":  "images/prod_mon_465.jpg",
-        "nameEn":  "LENSGO TC12 12.9\u0027\u0027 Teleprompter",
+        "nameEn":  "LENSGO TC12 12.9 inch Teleprompter",
         "badge":  "ملقن نصوص",
         "gallery":  "images/prod_mon_465.jpg",
         "specs":  {
@@ -10914,7 +10644,7 @@ const INITIAL_PRODUCTS = [
         "rating":  4.8,
         "category":  "monitors"
     }
-];
+];;;;;;;
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { INITIAL_CATEGORIES, INITIAL_PRODUCTS };

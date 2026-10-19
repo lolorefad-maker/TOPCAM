@@ -877,14 +877,6 @@
           Add to Cart
         </button>
       </div>
-        <div>
-          <h4 class="text-xs font-bold text-slate-900 line-clamp-1">Wandrd PRVKE 31L Bag</h4>
-          <div class="text-xs sm:text-sm font-bold text-slate-900 mt-1">$299</div>
-        </div>
-        <button onclick="addToCartMock('Wandrd PRVKE 31L Backpack', 299)" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs">
-          Add to Cart
-        </button>
-      </div>
 
     </div>
   </section>
@@ -1811,7 +1803,7 @@
   </div>
 
   <!-- ═══════════════ ULTRA-LUXURY PRODUCT SHOWROOM MODAL ═══════════════ -->
-  <div id="cameraSpecsBubbleModal" onclick="if(event.target === this) closeCameraSpecsBubble()" class="fixed inset-0 bg-slate-950/85 backdrop-blur-xl z-50 hidden items-center justify-center p-3 sm:p-6 transition-all duration-300">
+  <div id="cameraSpecsBubbleModal" onclick="if(event.target === this) closeCameraSpecsBubble()" style="z-index: 9999;" class="fixed inset-0 bg-slate-950/85 backdrop-blur-xl z-[9999] hidden items-center justify-center p-3 sm:p-6 transition-all duration-300">
     <div id="cameraSpecsBubbleBox" class="bg-white rounded-[2rem] max-w-4xl w-full border border-slate-200/90 shadow-[0_25px_70px_-15px_rgba(0,0,0,0.4)] overflow-hidden transform scale-95 opacity-0 transition-all duration-300 max-h-[92vh] flex flex-col text-right">
       
       <!-- Modal Luxury Header Bar -->
@@ -2366,28 +2358,29 @@
     ];
 
     function renderStorefrontProductCard(product, extraClasses = '') {
-      const safeName = (product.name || '').replace(/'/g, "\\'");
+      const safeId = (product.id || '').replace(/'/g, "\\'");
+      const rawName = product.name || '';
+      const safeNameForJs = rawName.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+      const safeNameForAttr = rawName.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
       const safeImg = product.image || 'images/camera_body.jpg';
       const categoryBadge = product.badge || product.brand || '';
 
       return `
-        <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group ${extraClasses}">
+        <div onclick="openCameraSpecsBubble('${safeId}')" class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group cursor-pointer ${extraClasses}">
           <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
             <i class="fa-regular fa-heart"></i>
           </button>
           <div 
-            onclick="openCameraSpecsBubble('${product.id}')"
-            class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" 
+            class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden" 
             title="انقر لعرض المواصفات"
           >
-            <img src="${safeImg}" alt="${product.name}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            <img src="${safeImg}" alt="${safeNameForAttr}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
           </div>
           <div>
             ${categoryBadge ? `<span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 line-clamp-1">${categoryBadge}</span>` : ''}
             <h4 
-              onclick="openCameraSpecsBubble('${product.id}')"
-              class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" 
-              title="${product.name}"
+              class="text-xs font-bold text-slate-900 line-clamp-1 hover:text-yellow-600 transition" 
+              title="${safeNameForAttr}"
             >
               ${product.name}
             </h4>
@@ -2396,7 +2389,7 @@
               ${product.oldPrice ? `<span class="text-[10px] text-slate-400 line-through">$${product.oldPrice.toLocaleString()}</span>` : ''}
             </div>
           </div>
-          <button onclick="addToCartMock('${safeName}', ${product.price}, '${safeImg}', '${product.id}')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+          <button onclick="event.stopPropagation(); addToCartMock('${safeNameForJs}', ${product.price}, '${safeImg}', '${safeId}')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
             Add to Cart
           </button>
         </div>
@@ -2663,8 +2656,12 @@
     let currentActiveAngleUrl = null;
 
     function openCameraSpecsBubble(productId) {
-      const product = storeDB.getProductById(productId) || (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS.find(p => p.id === productId) : null);
-      if (!product) return;
+      const product = (typeof storeDB !== 'undefined' && storeDB.getProductById ? storeDB.getProductById(productId) : null) || 
+                      (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS.find(p => p.id === productId) : null);
+      if (!product) {
+        console.warn('Product not found for modal:', productId);
+        return;
+      }
       currentBubbleProduct = product;
 
       const modal = document.getElementById('cameraSpecsBubbleModal');
@@ -2803,9 +2800,12 @@
       // Display Modal with Smooth Scale Animation
       modal.classList.remove('hidden');
       modal.classList.add('flex');
+      modal.style.display = 'flex';
       setTimeout(() => {
         box.classList.remove('scale-95', 'opacity-0');
         box.classList.add('scale-100', 'opacity-100');
+        box.style.opacity = '1';
+        box.style.transform = 'scale(1)';
       }, 10);
     }
 
@@ -2838,9 +2838,12 @@
 
       box.classList.remove('scale-100', 'opacity-100');
       box.classList.add('scale-95', 'opacity-0');
+      box.style.opacity = '0';
+      box.style.transform = 'scale(0.95)';
       setTimeout(() => {
         modal.classList.remove('flex');
         modal.classList.add('hidden');
+        modal.style.display = 'none';
         currentBubbleProduct = null;
         currentActiveAngleUrl = null;
       }, 200);

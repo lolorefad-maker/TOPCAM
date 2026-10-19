@@ -1,0 +1,10 @@
+﻿
+ Size Count IDs                       Names                                                                            
+ ---- ----- ---                       -----                                                                            
+43553     3 LGT-224, LGT-225, LGT-226 LGT-224: Godox GODOX LSD40 Shooting Tent; LGT-225: Godox GODOX LSD60 Shooting    
+                                      Tent; LGT-226: Godox GODOX LSD80 Shooting Tent                                   
+32489     2 ACC-395, ACC-396          ACC-395: ulanzi LM-P40 RGB Video light; ACC-396: Ulanzi LT002  7inch Pocket Fill 
+                                      Light                                                                            
+19352     2 LGT-263, LGT-264          LGT-263: Godox Flash Tube for AD600 pro; LGT-264: Godox Flash Tube for AD400 pro 
+
+
