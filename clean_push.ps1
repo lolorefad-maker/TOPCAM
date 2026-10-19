@@ -40,54 +40,15 @@ public class CredManager3 {
 }
 "@
 
-# Clean temporary json and helper ps1 files
+# Clean temporary files
 $tempFiles = @(
+    "location_section.html",
+    "insert_location.ps1",
+    "add_location_links.ps1",
     "replace_rules.json",
     "run_replace.ps1",
     "apply_storefront_fix.ps1",
-    "check_cats.ps1",
-    "fix_final_details.ps1",
-    "extract_485.ps1",
-    "check_remaining.ps1",
-    "count_unadded.ps1",
-    "inspect_unadded_catalog.ps1",
-    "sample_descriptions.ps1",
-    "analyze_desc.ps1",
-    "check_dup_images.ps1",
-    "check_current_images.ps1",
-    "select_168.ps1",
-    "match_168.ps1",
-    "inspect_unmatched.ps1",
-    "fetch_brand_pools.ps1",
-    "match_all_pools_168.ps1",
-    "print_13_unmatched.ps1",
-    "assign_13.ps1",
-    "combine_168.ps1",
-    "download_168_images.ps1",
-    "build_and_merge_500_catalog.ps1",
-    "audit_project.ps1",
-    "find_warranty_lines.ps1",
-    "online_catalog_indexed.json",
-    "ulanzi_products.json",
-    "feelworld_products.json",
-    "selected_168.json",
-    "matched_168.json",
-    "unmatched_168.json",
-    "final_matched_168.json",
-    "final_unmatched_168.json",
-    "assigned_13.json",
-    "all_168_matched.json",
-    "all_168_downloaded.json",
-    "category_templates_168.json",
-    "arabic_helpers.json",
-    "unadded_to_process.json",
-    "catalog_485_raw.json",
-    "audit_desc.ps1",
-    "breakdown_unadded.ps1",
-    "export_unadded.ps1",
-    "fetch_online_index.ps1",
-    "find_excel_step.ps1",
-    "test_online_pool.ps1"
+    "check_cats.ps1"
 )
 
 foreach ($file in $tempFiles) {
@@ -95,7 +56,6 @@ foreach ($file in $tempFiles) {
         Remove-Item $file -Force -ErrorAction SilentlyContinue
     }
 }
-Get-ChildItem -Path . -Filter "online_page_*.json" | Remove-Item -Force -ErrorAction SilentlyContinue
 
 $raw = [CredManager3]::GetRawBytes("GitHub - https://api.github.com/lolorefad-maker")
 $utf8 = [System.Text.Encoding]::UTF8.GetString($raw)
@@ -103,6 +63,6 @@ $authHeader = "AUTHORIZATION: basic " + [Convert]::ToBase64String([System.Text.E
 
 $git = "C:\Users\publisher\AppData\Local\GitHubDesktop\app-3.6.6\resources\app\git\cmd\git.exe"
 & $git add -A
-& $git commit -m "Fix storefront filtering, declare isShowingAllProducts and showAllCatalogProducts, add All Gear button"
+& $git commit -m "Add showroom location section for Irbid University Street with interactive map and matching typography"
 & $git -c "http.extraheader=$authHeader" push origin main
 Write-Host "GIT_SYNC_COMPLETE"
