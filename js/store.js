@@ -7,7 +7,7 @@ const STORE_KEYS = {
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',
   BANNERS: 'camera_store_banners_v1',
-  PROMO_POPUP: 'camera_store_promo_popup_v1',
+  PROMO_POPUP: 'camera_store_promo_popup_v2_free_delivery',
   GEAR_UP: 'camera_store_gear_up_v1'
 };
 
@@ -57,13 +57,13 @@ const DEFAULT_BANNERS = {
 
 const DEFAULT_PROMO_POPUP = {
   enabled: true,
-  title: '🔥 عرض خاص: خصم 25% على جميع الستاندات ومعدات الاستوديو!',
-  subtitle: 'استخدم كود الخصم (TOP25) عند إتمام أي طلب، العرض متاح لفترة محدودة لكافة صناع المحتوى والمصورين في الأردن.',
-  badge: 'خصم 25% لفترة محدودة',
-  targetCategory: 'stands',
-  promoCode: 'TOP25',
-  buttonText: 'تصفح عروض الستاندات الآن 🛍️',
-  image: 'images/gear_frame_matters.jpg'
+  title: '🚚 عرض خاص: توصيل مجاني وسريع لكافة أنحاء المملكة!',
+  subtitle: 'اطلب أي كاميرا أو معدات تصوير الآن بدون أي رسوم شحن، مع تغليف احترافي مؤمن وتوصيل فوري لباب بيتك أو موقع التصوير.',
+  badge: 'توصيل مجاني 100%',
+  targetCategory: 'all',
+  promoCode: 'FREESHIP',
+  buttonText: 'تسوق الآن مع التوصيل المجاني 📦',
+  image: 'images/promo_free_delivery.jpg'
 };
 
 const DEFAULT_GEAR_UP = {
@@ -99,7 +99,8 @@ class StoreDB {
       'camera_store_products_v9',
       'camera_store_products_v10_real_images',
       'camera_store_products_v11_pure_authentic',
-      'camera_store_products_v12_flawless_authentic'
+      'camera_store_products_v12_flawless_authentic',
+      'camera_store_promo_popup_v1'
     ];
     legacyKeys.forEach(k => {
       try { localStorage.removeItem(k); } catch(e){}

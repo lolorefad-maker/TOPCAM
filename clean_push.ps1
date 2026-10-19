@@ -42,10 +42,25 @@ public class CredManager3 {
 
 # Clean temporary files
 $tempFiles = @(
-    "test_filter.ps1",
-    "inspect_card3.ps1",
-    "test_remove.ps1",
-    "do_remove_services.ps1"
+    "apply_promo_rules.ps1",
+    "fetch_delivery_images.ps1",
+    "fetch_pexels.ps1",
+    "fetch_pexels2.ps1",
+    "fetch_real_delivery.ps1",
+    "promo_rules.json",
+    "images/delivery_box_gear.jpg",
+    "images/delivery_courier.jpg",
+    "images/delivery_courier_smile.jpg",
+    "images/delivery_doorstep.jpg",
+    "images/delivery_hand_box.jpg",
+    "images/delivery_man_cap.jpg",
+    "images/delivery_package_door.jpg",
+    "images/delivery_person_parcel.jpg",
+    "images/delivery_van_packages.jpg",
+    "images/delivery_van_trunk.jpg",
+    "images/pexels_courier_hand.jpg",
+    "images/pexels_delivery_box.jpg",
+    "images/pexels_delivery_van.jpg"
 )
 
 foreach ($file in $tempFiles) {
@@ -60,6 +75,6 @@ $authHeader = "AUTHORIZATION: basic " + [Convert]::ToBase64String([System.Text.E
 
 $git = "C:\Users\publisher\AppData\Local\GitHubDesktop\app-3.6.6\resources\app\git\cmd\git.exe"
 & $git add -A
-& $git commit -m "Remove in-store services card from Irbid location section as requested"
+& $git commit -m "Update first promo ad to 100% Free Fast Delivery across Jordan with dedicated delivery visual"
 & $git -c "http.extraheader=$authHeader" push origin main
 Write-Host "GIT_SYNC_COMPLETE"
