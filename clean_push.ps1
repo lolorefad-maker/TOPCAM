@@ -75,6 +75,6 @@ $authHeader = "AUTHORIZATION: basic " + [Convert]::ToBase64String([System.Text.E
 
 $git = "C:\Users\publisher\AppData\Local\GitHubDesktop\app-3.6.6\resources\app\git\cmd\git.exe"
 & $git add -A
-& $git commit -m "Update first promo ad to 100% Free Fast Delivery across Jordan with dedicated delivery visual"
+& $git commit -m "Use store logo in promo modal and restore banner next to New Arrivals as requested"
 & $git -c "http.extraheader=$authHeader" push origin main
 Write-Host "GIT_SYNC_COMPLETE"

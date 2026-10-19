@@ -1,4 +1,4 @@
-﻿// طبقة إدارة البيانات والطلبات والتخزين المحلي لمتجر الكاميرات
+// طبقة إدارة البيانات والطلبات والتخزين المحلي لمتجر الكاميرات
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
@@ -7,7 +7,7 @@ const STORE_KEYS = {
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',
   BANNERS: 'camera_store_banners_v1',
-  PROMO_POPUP: 'camera_store_promo_popup_v2_free_delivery',
+  PROMO_POPUP: 'camera_store_promo_popup_v3_logo',
   GEAR_UP: 'camera_store_gear_up_v1'
 };
 
@@ -63,7 +63,7 @@ const DEFAULT_PROMO_POPUP = {
   targetCategory: 'all',
   promoCode: 'FREESHIP',
   buttonText: 'تسوق الآن مع التوصيل المجاني 📦',
-  image: 'images/promo_free_delivery.jpg'
+  image: 'images/logo.jpg'
 };
 
 const DEFAULT_GEAR_UP = {
@@ -100,7 +100,8 @@ class StoreDB {
       'camera_store_products_v10_real_images',
       'camera_store_products_v11_pure_authentic',
       'camera_store_products_v12_flawless_authentic',
-      'camera_store_promo_popup_v1'
+      'camera_store_promo_popup_v1',
+      'camera_store_promo_popup_v2_free_delivery'
     ];
     legacyKeys.forEach(k => {
       try { localStorage.removeItem(k); } catch(e){}
