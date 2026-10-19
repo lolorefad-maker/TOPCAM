@@ -2,7 +2,7 @@
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
-  PRODUCTS: 'camera_store_products_v11_pure_authentic',
+  PRODUCTS: 'camera_store_products_v12_flawless_authentic',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',
@@ -97,7 +97,8 @@ class StoreDB {
       'camera_store_products_v7',
       'camera_store_products_v8',
       'camera_store_products_v9',
-      'camera_store_products_v10_real_images'
+      'camera_store_products_v10_real_images',
+      'camera_store_products_v11_pure_authentic'
     ];
     legacyKeys.forEach(k => {
       try { localStorage.removeItem(k); } catch(e){}

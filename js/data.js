@@ -1,79 +1,79 @@
-// بيانات المنتجات الأصلية لمتجر TOP CAM لمعدات التصوير والسينما
-// تم تحديث الكتالوج الكامل وفق ملف الإكسل المحدث (كاميرات، عدسات، صوتيات، إضاءة، ستاندات، كيج، شاشات)
+﻿// ط¨ظٹط§ظ†ط§طھ ط§ظ„ظ…ظ†طھط¬ط§طھ ط§ظ„ط£طµظ„ظٹط© ظ„ظ…طھط¬ط± TOP CAM ظ„ظ…ط¹ط¯ط§طھ ط§ظ„طھطµظˆظٹط± ظˆط§ظ„ط³ظٹظ†ظ…ط§
+// طھظ… ط§ظ„طھط­ط¯ظٹط« ط§ظ„ظƒط§ظ…ظ„ ظ„ط­ط°ظپ ط£ظٹ طµظˆط± ظ…ظƒط±ط±ط© ط£ظˆ ظ‚ط¯ظٹظ…ط© ظˆط¥ط¨ظ‚ط§ط، ظپظ‚ط· ط§ظ„ظ…ظ†طھط¬ط§طھ ط°ط§طھ ط§ظ„طµظˆط± ط§ظ„ط­ظ‚ظٹظ‚ظٹط© ظˆط§ظ„ط±ط³ظ…ظٹط© 100%
 
 const INITIAL_CATEGORIES = [
   {
     "id": "all",
-    "name": "جميع المعدات",
+    "name": "ط¬ظ…ظٹط¹ ط§ظ„ظ…ط¹ط¯ط§طھ",
     "icon": "fa-layer-group",
-    "count": 59
+    "count": 52
   },
   {
     "id": "cameras",
-    "name": "كاميرات سينما وميرورليس",
+    "name": "ظƒط§ظ…ظٹط±ط§طھ ط³ظٹظ†ظ…ط§ ظˆظ…ظٹط±ظˆط±ظ„ظٹط³",
     "icon": "fa-camera",
     "count": 13,
     "image": "images/prod_sony_fx3_white.jpg"
   },
   {
     "id": "filters",
-    "name": "عدسات وفلاتر",
+    "name": "ط¹ط¯ط³ط§طھ ظˆظپظ„ط§طھط±",
     "icon": "fa-circle-half-stroke",
     "count": 6,
     "image": "images/prod_sony_2470_gm2.png"
   },
   {
+    "id": "lighting",
+    "name": "ط¥ط¶ط§ط،ط§طھ ظˆط³ظˆظپطھ ط¨ظˆظƒط³",
+    "icon": "fa-lightbulb",
+    "count": 4,
+    "image": "images/prod_godox_sl100d.jpg"
+  },
+  {
     "id": "audio",
-    "name": "مايكات وأنظمة صوت",
+    "name": "ظ…ط§ظٹظƒط§طھ ظˆط£ظ†ط¸ظ…ط© طµظˆطھ",
     "icon": "fa-microphone",
     "count": 6,
     "image": "images/prod_rode_wigo2.png"
   },
   {
-    "id": "lighting",
-    "name": "إضاءات وسوفت بوكس",
-    "icon": "fa-lightbulb",
-    "count": 6,
-    "image": "images/prod_godox_sl100d.jpg"
-  },
-  {
     "id": "gimbals",
-    "name": "ستيبلايزرز وجيمبل",
+    "name": "ط³طھظٹط¨ظ„ط§ظٹط²ط±ط² ظˆط¬ظٹظ…ط¨ظ„",
     "icon": "fa-gamepad",
-    "count": 8,
+    "count": 5,
     "image": "images/prod_dji_rs4_pro.jpg"
   },
   {
     "id": "stands",
-    "name": "ستاندات وترايبود",
+    "name": "ط³طھط§ظ†ط¯ط§طھ ظˆطھط±ط§ظٹط¨ظˆط¯",
     "icon": "fa-monument",
     "count": 4,
-    "image": "images/prod_vt3510_tripod.jpg"
+    "image": "images/prod_manfrotto_504x.jpg"
   },
   {
     "id": "cages",
-    "name": "كيج كاميرا وتجهيزات",
+    "name": "ظƒظٹط¬ ظƒط§ظ…ظٹط±ط§ ظˆطھط¬ظ‡ظٹط²ط§طھ",
     "icon": "fa-border-all",
     "count": 3,
     "image": "images/prod_smallrig_fx3_cage.jpg"
   },
   {
     "id": "monitors",
-    "name": "شاشات وتلقين Teleprompter",
+    "name": "ط´ط§ط´ط§طھ ظˆطھظ„ظ‚ظٹظ† Teleprompter",
     "icon": "fa-tv",
-    "count": 4,
+    "count": 3,
     "image": "images/prod_feelworld_lut7.jpg"
   },
   {
     "id": "chargers_batteries",
-    "name": "شواحن وبطاريات V-Mount",
+    "name": "ط´ظˆط§ط­ظ† ظˆط¨ط·ط§ط±ظٹط§طھ ط³ظٹظ†ظ…ط§",
     "icon": "fa-battery-full",
-    "count": 5,
+    "count": 4,
     "image": "images/prod_smallrig_vb99.jpg"
   },
   {
     "id": "bags",
-    "name": "شناتي وحقائب معدات",
+    "name": "ط´ظ†ط§طھظٹ ظˆط­ظ‚ط§ط¦ط¨ ظ…ط¹ط¯ط§طھ",
     "icon": "fa-suitcase-rolling",
     "count": 4,
     "image": "images/prod_ulanzi_bp09.jpg"
@@ -81,1500 +81,1244 @@ const INITIAL_CATEGORIES = [
 ];
 
 const INITIAL_PRODUCTS = [
-    {
-        "id":  "CAM-001",
-        "name":  "Sony A7 III - Full-frame Mirrorless Camera Body Only",
-        "nameEn":  "Sony A7 III - Full-frame Mirrorless Camera Body Only",
-        "category":  "cameras",
-        "brand":  "Sony",
-        "price":  1000,
-        "oldPrice":  1050,
-        "rating":  4.9,
-        "reviewsCount":  104,
-        "stock":  4,
-        "badge":  "وفر $50",
-        "section":  "trending",
-        "image":  "images/cam_sony_a7iii.jpg",
-        "gallery":  [
-                        "images/cam_sony_a7iii.jpg",
-                        "images/prod_sony_a7iv_white.jpg"
-                    ],
-        "description":  "كاميرا سوني Sony A7 III - Full-frame Mirrorless Camera Body Only الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
-        "specs":  {
-                      "المستشعر":  "24.2MP Full-Frame Exmor R BSI CMOS",
-                      "الفيديو":  "4K 30p HDR (HLG) \u0026 S-Log3 / 1080p 120fps",
-                      "نظام التركيز":  "693 نقاط فوكس مع Real-Time Eye AF للبشر والحيوانات",
-                      "مانع الاهتزاز":  "5-Axis In-Body Image Stabilization (5.0 وقفات)",
-                      "حساسية الضوء":  "ISO 100-51,200 (يتوسع حتى 204,800)",
-                      "سرعة الالتقاط":  "10 إطارات بالثانية مع تتبع AF/AE كامل",
-                      "المنافذ والذاكرة":  "منفذان مزدوجان Dual SD Slots (UHS-II/UHS-I)",
-                      "البطارية":  "Sony NP-FZ100 (حتى 710 لقطات)",
-                      "المانت":  "Sony E-Mount (Full-Frame)",
-                      "الشاشة":  "شاشة لمس 3.0 بوصة قابلة للإمالة بدقة 921K نقطة",
-                      "الوزن":  "650 جم هيكل الكاميرا",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-002",
-        "name":  "Sony A7 IV - Full-frame Mirrorless Camera Body Only",
-        "nameEn":  "Sony A7 IV - Full-frame Mirrorless Camera Body Only",
-        "category":  "cameras",
-        "brand":  "Sony",
-        "price":  1400,
-        "oldPrice":  1450,
-        "rating":  4.9,
-        "reviewsCount":  53,
-        "stock":  3,
-        "badge":  "وفر $50",
-        "section":  "trending",
-        "image":  "images/cam_sony_a7iv.jpg",
-        "gallery":  [
-                        "images/cam_sony_a7iv.jpg",
-                        "images/prod_sony_a7iv_white.jpg"
-                    ],
-        "description":  "كاميرا سوني Sony A7 IV - Full-frame Mirrorless Camera Body Only الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
-        "specs":  {
-                      "المستشعر":  "33MP Full-Frame Exmor R BSI CMOS",
-                      "الفيديو":  "4K 60p 10-Bit 4:2:2 All-Intra / 7K Oversampling مع S-Cinetone",
-                      "نظام التركيز":  "759 نقطة تركيز بؤري ذكي مع تتبع عيون البشر والحيوانات والطيور",
-                      "مانع الاهتزاز":  "5-Axis In-Body Stabilization حتى 5.5 وقفات",
-                      "المنافذ والذاكرة":  "منفذان مزدوجان: CFexpress Type A و SD UHS-II",
-                      "الشاشة":  "شاشة لمسية متغيرة الزوايا Vari-Angle LCD بدقة 1.03M",
-                      "البطارية":  "Sony NP-FZ100 (حتى 580 لقطة)",
-                      "المانت":  "Sony E-Mount",
-                      "الوزن":  "658 جم",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-004",
-        "name":  "Sony A7s iii Full-frame Mirrorless Camera Body Only",
-        "nameEn":  "Sony A7s iii Full-frame Mirrorless Camera Body Only",
-        "category":  "cameras",
-        "brand":  "Sony",
-        "price":  2100,
-        "oldPrice":  2200,
-        "rating":  4.9,
-        "reviewsCount":  98,
-        "stock":  10,
-        "badge":  "وفر $100",
-        "section":  "trending",
-        "image":  "images/cam_sony_a7siii.jpg",
-        "gallery":  [
-                        "images/cam_sony_a7siii.jpg",
-                        "images/prod_sony_fx3_white.jpg"
-                    ],
-        "description":  "كاميرا سوني Sony A7s iii Full-frame Mirrorless Camera Body Only الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
-        "specs":  {
-                      "المستشعر":  "12.1MP Full-Frame Exmor R BSI CMOS مخصص للإضاءة المنخفضة والفيديو",
-                      "الفيديو":  "4K 120p 10-Bit 4:2:2 All-Intra بدون كروب وبدون ارتفاع حرارة / 16-Bit RAW",
-                      "نظام التركيز":  "759 نقطة فوكس مع حساسية فائقة حتى EV -6 في الظلام الدامس",
-                      "مانع الاهتزاز":  "5-Axis IBIS مع وضع Active Mode الرقمي المتقدم",
-                      "حساسية الضوء":  "نطاق هائل ISO 80-102,400 (يتوسع حتى 409,600)",
-                      "المنافذ والذاكرة":  "منفذان ثنائيان CFexpress Type A و SD UHS-II",
-                      "الشاشة والمنظار":  "شاشة لمس مفصلية + منظار OLED EVF بدقة 9.44 مليون نقطة",
-                      "الوزن":  "699 جم",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-005",
-        "name":  "Sony A7r V Full-frame Mirrorless Camera Body Only",
-        "nameEn":  "Sony A7r V Full-frame Mirrorless Camera Body Only",
-        "category":  "cameras",
-        "brand":  "Sony",
-        "price":  2160,
-        "oldPrice":  2250,
-        "rating":  4.9,
-        "reviewsCount":  121,
-        "stock":  4,
-        "badge":  "وفر $90",
-        "section":  "trending",
-        "image":  "images/cam_sony_a7rv.jpg",
-        "gallery":  [
-                        "images/cam_sony_a7rv.jpg",
-                        "images/cam_sony_a7iv.jpg"
-                    ],
-        "description":  "كاميرا سوني Sony A7r V Full-frame Mirrorless Camera Body Only الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
-        "specs":  {
-                      "المستشعر":  "61MP Full-Frame Exmor R BSI CMOS بأعلى دقة تفاصيل",
-                      "الفيديو":  "8K 24/25p 10-Bit / 4K 60p 10-Bit / 4K 30p مسحوب من 6.2K",
-                      "نظام التركيز":  "وحدة معالجة ذكاء اصطناعي مخصصة AI Processing Unit",
-                      "مانع الاهتزاز":  "أقوى مانع اهتزاز من سوني يصل حتى 8.0 وقفات تثبيت",
-                      "المنافذ والذاكرة":  "منفذان ثنائيان يدعمان CFexpress Type A و SD UHS-II",
-                      "الشاشة":  "شاشة 4-Axis Multi-Angle مبتكرة تجمع بين الإمالة والدوران الكامل",
-                      "الوزن":  "723 جم",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-006",
-        "name":  "Sony FX30 Digital Cinema Camera",
-        "nameEn":  "Sony FX30 Digital Cinema Camera",
-        "category":  "cameras",
-        "brand":  "Sony",
-        "price":  1200,
-        "oldPrice":  1250,
-        "rating":  4.9,
-        "reviewsCount":  81,
-        "stock":  3,
-        "badge":  "وفر $50",
-        "section":  "trending",
-        "image":  "images/prod_sony_fx3_white.jpg",
-        "gallery":  [
-                        "images/prod_sony_fx3_white.jpg",
-                        "images/prod_smallrig_fx3_cage.jpg"
-                    ],
-        "description":  "كاميرا سوني Sony FX30 Digital Cinema Camera الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
-        "specs":  {
-                      "المستشعر":  "26MP APS-C / Super 35mm Exmor R BSI CMOS فئة السينما",
-                      "الفيديو":  "4K Super 35 مع 6K Oversampling حتى 120fps 10-Bit 4:2:2 مع S-Cinetone",
-                      "نظام التركيز":  "495 نقطة فوكس Phase Detection مع تتبع فوري للعيون والوجه",
-                      "مانع الاهتزاز":  "5-Axis In-Body Stabilization مع وضع Active Mode",
-                      "نظام التبريد":  "مروحة تبريد داخلية مدمجة للتصوير المستمر لساعات دون انقطاع",
-                      "الهيكل":  "هيكل سينمائي متين بفتحات مسامير 1/4\"-20 لتثبيت الملحقات مباشرة",
-                      "المنافذ والذاكرة":  "منفذان مزدوجان CFexpress Type A / SD UHS-II",
-                      "الوزن":  "646 جم",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-009",
-        "name":  "Sony ZV-E10 II Mirrorless Camera with 16-50mm Lens",
-        "nameEn":  "Sony ZV-E10 II Mirrorless Camera with 16-50mm Lens",
-        "category":  "cameras",
-        "brand":  "Sony",
-        "price":  830,
-        "oldPrice":  860,
-        "rating":  4.9,
-        "reviewsCount":  56,
-        "stock":  10,
-        "badge":  "وفر $30",
-        "section":  "trending",
-        "image":  "images/cam_sony_zve10.jpg",
-        "gallery":  [
-                        "images/cam_sony_zve10.jpg"
-                    ],
-        "description":  "كاميرا سوني Sony ZV-E10 II Mirrorless Camera with 16-50mm Lens الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
-        "specs":  {
-                      "المستشعر":  "26MP APS-C Exmor R BSI CMOS لصناع المحتوى والفلوج",
-                      "الفيديو":  "4K 60p 10-Bit 4:2:2 مسحوب من دقة 5.6K بدون دمج بكسلات",
-                      "نظام التركيز":  "759 نقطة تركيز مع أوضاع Product Showcase و Background Defocus",
-                      "الصوت":  "مايكروفون استوديو ثلاثي الكبسولات مدمج مع حاجب رياح احترافي Windscreen",
-                      "العدسة المرفقة":  "مرفق عدسة سوني الأصلية القابلة للتقريب 16-50mm OSS",
-                      "الشاشة":  "شاشة لمسية تدور 180 درجة مخصصة لصناع المحتوى",
-                      "البطارية":  "بطارية سوني الكبيرة NP-FZ100 لمضاعفة وقت التصوير",
-                      "الوزن":  "377 جم فقط",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-014",
-        "name":  "Sony FX6 Full-Frame Cinema Camera (Body Only)",
-        "nameEn":  "Sony FX6 Full-Frame Cinema Camera (Body Only)",
-        "category":  "cameras",
-        "brand":  "Sony",
-        "price":  4000,
-        "oldPrice":  4200,
-        "rating":  4.9,
-        "reviewsCount":  116,
-        "stock":  5,
-        "badge":  "وفر $200",
-        "section":  "trending",
-        "image":  "images/cam_sony_fx6.jpg",
-        "gallery":  [
-                        "images/cam_sony_fx6.jpg",
-                        "images/prod_sony_fx3_white.jpg"
-                    ],
-        "description":  "كاميرا سوني Sony FX6 Full-Frame Cinema Camera (Body Only) الاحترافية الأصلية مع كفالة سنتين كاملة من الوكيل الرسمي في الأردن، تدعم أعلى معايير التصوير الفوتوغرافي والسينمائي.",
-        "specs":  {
-                      "المستشعر":  "10.2MP Full-Frame Back-Illuminated Exmor R CMOS سينمائي احترافي",
-                      "الفيديو":  "DCI 4K حتى 60p / UHD 4K حتى 120p مع 16-Bit RAW خارجي",
-                      "المدى الديناميكي":  "مدى ديناميكي مذهل 15+ وقفة مع ألوان S-Cinetone الرسمية",
-                      "فلتر ND مدمج":  "فلتر كثافة حيادية إلكتروني متغير مدمج Electronic Variable ND",
-                      "حساسية الضوء":  "Dual Base ISO 800 و 12,800 مع حساسية قصوى 409,600",
-                      "الصوت":  "مقبض علوي بمنافذ صوت احترافية 2x XLR Inputs مع تحكم كامل",
-                      "نظام التبريد":  "نظام تهوية نشط متطور للتصوير المستمر في أصعب الظروف",
-                      "الوزن":  "890 جم (هيكل الكاميرا الأساسي)",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "LEN-018",
-        "name":  "SONY FE 16-35mm F2.8 GM II",
-        "nameEn":  "SONY FE 16-35mm F2.8 GM II",
-        "category":  "filters",
-        "brand":  "Sony",
-        "price":  1550,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  61,
-        "stock":  15,
-        "badge":  "عدسات أصلية",
-        "image":  "images/prod_sony_1635_gm2.jpg",
-        "gallery":  [
-                        "images/prod_sony_1635_gm2.jpg",
-                        "images/prod_sony_1635_gm2_angle2.jpg",
-                        "images/prod_sony_1635_gm2_angle3.jpg"
-                    ],
-        "description":  "عدسة SONY FE 16-35mm F2.8 GM II الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
-        "specs":  {
-                      "النوع":  "عدسة تصوير احترافية",
-                      "التوافق":  "Sony E-Mount",
-                      "الكفالة":  "كفالة الوكيل الرسمية سنتين"
-                  }
-    },
-    {
-        "id":  "LEN-020",
-        "name":  "SONY FE 70-200mm F2.8 GM OSS II",
-        "nameEn":  "SONY FE 70-200mm F2.8 GM OSS II",
-        "category":  "filters",
-        "brand":  "Sony",
-        "price":  1700,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  27,
-        "stock":  6,
-        "badge":  "عدسات أصلية",
-        "image":  "images/prod_sony_70200_gm2.jpg",
-        "gallery":  [
-                        "images/prod_sony_70200_gm2.jpg",
-                        "images/prod_sony_70200_gm2_angle2.jpg"
-                    ],
-        "description":  "عدسة SONY FE 70-200mm F2.8 GM OSS II الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
-        "specs":  {
-                      "النوع":  "عدسة تصوير احترافية",
-                      "التوافق":  "Sony E-Mount",
-                      "الكفالة":  "كفالة الوكيل الرسمية سنتين"
-                  }
-    },
-    {
-        "id":  "LEN-024",
-        "name":  "SONY FE 24-70mm F2.8 GM II",
-        "nameEn":  "SONY FE 24-70mm F2.8 GM II",
-        "category":  "filters",
-        "brand":  "Sony",
-        "price":  1420,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  23,
-        "stock":  6,
-        "badge":  "عدسات أصلية",
-        "image":  "images/prod_sony_2470_gm2.png",
-        "gallery":  [
-                        "images/prod_sony_2470_gm2.png"
-                    ],
-        "description":  "عدسة SONY FE 24-70mm F2.8 GM II الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
-        "specs":  {
-                      "النوع":  "عدسة تصوير احترافية",
-                      "التوافق":  "Sony E-Mount",
-                      "الكفالة":  "كفالة الوكيل الرسمية سنتين"
-                  }
-    },
-    {
-        "id":  "LEN-029",
-        "name":  "SONY E 18-135mm F3.5-5.6 OSS",
-        "nameEn":  "SONY E 18-135mm F3.5-5.6 OSS",
-        "category":  "filters",
-        "brand":  "Sony",
-        "price":  420,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  23,
-        "stock":  14,
-        "badge":  "عدسات أصلية",
-        "image":  "images/prod_sony_35_14gm.jpg",
-        "gallery":  [
-                        "images/prod_sony_35_14gm.jpg",
-                        "images/prod_sony_35_14gm_angle2.jpg"
-                    ],
-        "description":  "عدسة SONY E 18-135mm F3.5-5.6 OSS الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
-        "specs":  {
-                      "النوع":  "عدسة تصوير احترافية",
-                      "التوافق":  "Sony E-Mount",
-                      "الكفالة":  "كفالة الوكيل الرسمية سنتين"
-                  }
-    },
-    {
-        "id":  "LEN-030",
-        "name":  "SONY FE 24-105mm F4 G OSS Lens",
-        "nameEn":  "SONY FE 24-105mm F4 G OSS Lens",
-        "category":  "filters",
-        "brand":  "Sony",
-        "price":  650,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  53,
-        "stock":  11,
-        "badge":  "عدسات أصلية",
-        "image":  "images/prod_sigma_2470_art.jpg",
-        "gallery":  [
-                        "images/prod_sigma_2470_art.jpg",
-                        "images/prod_sigma_2470_art_angle2.jpg",
-                        "images/prod_sigma_2470_art_angle3.jpg",
-                        "images/prod_sigma_2470_art_angle4.jpg"
-                    ],
-        "description":  "عدسة SONY FE 24-105mm F4 G OSS Lens الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
-        "specs":  {
-                      "النوع":  "عدسة تصوير احترافية",
-                      "التوافق":  "Sony E-Mount",
-                      "الكفالة":  "كفالة الوكيل الرسمية سنتين"
-                  }
-    },
-    {
-        "id":  "LEN-035",
-        "name":  "SIGMA 35MM F 1.4 DG DN",
-        "nameEn":  "SIGMA 35MM F 1.4 DG DN",
-        "category":  "filters",
-        "brand":  "Sigma",
-        "price":  660,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  50,
-        "stock":  10,
-        "badge":  "عدسات أصلية",
-        "image":  "images/prod_polarpro_vnd.jpg",
-        "gallery":  [
-                        "images/prod_polarpro_vnd.jpg"
-                    ],
-        "description":  "عدسة SIGMA 35MM F 1.4 DG DN الاحترافية بحدة بصرية فائقة وطلاء نانو لمنع التوهج مع محرك تركيز فائق الهدوء والسرعة.",
-        "specs":  {
-                      "النوع":  "عدسة تصوير احترافية",
-                      "التوافق":  "متوافقة مع كاميرات الفل فريم",
-                      "الكفالة":  "كفالة الوكيل الرسمية سنتين"
-                  }
-    },
-    {
-        "id":  "AUD-042",
-        "name":  "RODE GO II (Double)",
-        "nameEn":  "RODE GO II (Double)",
-        "category":  "audio",
-        "brand":  "RODE",
-        "price":  195,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  52,
-        "stock":  16,
-        "badge":  "صوت سينمائي",
-        "image":  "images/prod_rode_wigo2.png",
-        "gallery":  [
-                        "images/prod_rode_wigo2.png",
-                        "images/prod_rode_wireless_pro.png"
-                    ],
-        "description":  "نظام تسجيل الصوت الاحترافي RODE GO II (Double) بنقاء استوديو وبث لاسلكي مشفر مستقر.",
-        "specs":  {
-                      "الشركة المصنعة":  "RODE",
-                      "الاستخدام":  "صوت استوديو وصناع محتوى وبث مباشر",
-                      "الكفالة":  "كفالة الوكيل المعتمد سنتين"
-                  }
-    },
-    {
-        "id":  "AUD-044",
-        "name":  "RODE NT1 5th Gen",
-        "nameEn":  "RODE NT1 5th Gen",
-        "category":  "audio",
-        "brand":  "RODE",
-        "price":  270,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  44,
-        "stock":  10,
-        "badge":  "صوت سينمائي",
-        "image":  "images/prod_rode_nt1_5th.png",
-        "gallery":  [
-                        "images/prod_rode_nt1_5th.png"
-                    ],
-        "description":  "نظام تسجيل الصوت الاحترافي RODE NT1 5th Gen بنقاء استوديو وبث لاسلكي مشفر مستقر.",
-        "specs":  {
-                      "الشركة المصنعة":  "RODE",
-                      "الاستخدام":  "صوت استوديو وصناع محتوى وبث مباشر",
-                      "الكفالة":  "كفالة الوكيل المعتمد سنتين"
-                  }
-    },
-    {
-        "id":  "AUD-049",
-        "name":  "RODE POD MIC",
-        "nameEn":  "RODE POD MIC",
-        "category":  "audio",
-        "brand":  "RODE",
-        "price":  100,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  41,
-        "stock":  12,
-        "badge":  "صوت سينمائي",
-        "image":  "images/prod_rode_podmic.png",
-        "gallery":  [
-                        "images/prod_rode_podmic.png"
-                    ],
-        "description":  "نظام تسجيل الصوت الاحترافي RODE POD MIC بنقاء استوديو وبث لاسلكي مشفر مستقر.",
-        "specs":  {
-                      "الشركة المصنعة":  "RODE",
-                      "الاستخدام":  "صوت استوديو وصناع محتوى وبث مباشر",
-                      "الكفالة":  "كفالة الوكيل المعتمد سنتين"
-                  }
-    },
-    {
-        "id":  "AUD-052",
-        "name":  "RODE PodMic USB",
-        "nameEn":  "RODE PodMic USB",
-        "category":  "audio",
-        "brand":  "RODE",
-        "price":  165,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  84,
-        "stock":  5,
-        "badge":  "صوت سينمائي",
-        "image":  "images/prod_rode_wireless_pro.png",
-        "gallery":  [
-                        "images/prod_rode_wireless_pro.png"
-                    ],
-        "description":  "نظام تسجيل الصوت الاحترافي RODE PodMic USB بنقاء استوديو وبث لاسلكي مشفر مستقر.",
-        "specs":  {
-                      "الشركة المصنعة":  "RODE",
-                      "الاستخدام":  "صوت استوديو وصناع محتوى وبث مباشر",
-                      "الكفالة":  "كفالة الوكيل المعتمد سنتين"
-                  }
-    },
-    {
-        "id":  "AUD-053",
-        "name":  "RODE Procaster Dynamic mic",
-        "nameEn":  "RODE Procaster Dynamic mic",
-        "category":  "audio",
-        "brand":  "RODE",
-        "price":  200,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  43,
-        "stock":  16,
-        "badge":  "صوت سينمائي",
-        "image":  "images/prod_rode_wireless_micro.png",
-        "gallery":  [
-                        "images/prod_rode_wireless_micro.png"
-                    ],
-        "description":  "نظام تسجيل الصوت الاحترافي RODE Procaster Dynamic mic بنقاء استوديو وبث لاسلكي مشفر مستقر.",
-        "specs":  {
-                      "الشركة المصنعة":  "RODE",
-                      "الاستخدام":  "صوت استوديو وصناع محتوى وبث مباشر",
-                      "الكفالة":  "كفالة الوكيل المعتمد سنتين"
-                  }
-    },
-    {
-        "id":  "AUD-061",
-        "name":  "Hollyland Lark A1 Combo",
-        "nameEn":  "Hollyland Lark A1 Combo",
-        "category":  "audio",
-        "brand":  "Hollyland",
-        "price":  80,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  35,
-        "stock":  5,
-        "badge":  "صوت سينمائي",
-        "image":  "images/prod_dji_mic2.jpg",
-        "gallery":  [
-                        "images/prod_dji_mic2.jpg"
-                    ],
-        "description":  "نظام تسجيل الصوت الاحترافي Hollyland Lark A1 Combo بنقاء استوديو وبث لاسلكي مشفر مستقر.",
-        "specs":  {
-                      "الشركة المصنعة":  "Hollyland",
-                      "الاستخدام":  "صوت استوديو وصناع محتوى وبث مباشر",
-                      "الكفالة":  "كفالة الوكيل المعتمد سنتين"
-                  }
-    },
-    {
-        "id":  "DJI-078",
-        "name":  "DJI MOBILE OM SE",
-        "nameEn":  "DJI MOBILE OM SE",
-        "category":  "gimbals",
-        "brand":  "DJI",
-        "price":  75,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  62,
-        "stock":  9,
-        "badge":  "DJI Original",
-        "image":  "images/prod_dji_osmo_mobile.jpg",
-        "gallery":  [
-                        "images/prod_dji_osmo_mobile.jpg",
-                        "images/prod_dji_osmo_mobile_angle2.jpg"
-                    ],
-        "description":  "منتج دي جي آي DJI MOBILE OM SE الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
-        "specs":  {
-                      "العلامة التجارية":  "DJI Official",
-                      "الكفالة":  "كفالة رسمية سنة من الوكيل"
-                  }
-    },
-    {
-        "id":  "DJI-079",
-        "name":  "DJI OSMO MOBILE Om 6",
-        "nameEn":  "DJI OSMO MOBILE Om 6",
-        "category":  "gimbals",
-        "brand":  "DJI",
-        "price":  89,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  122,
-        "stock":  7,
-        "badge":  "DJI Original",
-        "image":  "images/prod_dji_osmo_mobile.jpg",
-        "gallery":  [
-                        "images/prod_dji_osmo_mobile.jpg",
-                        "images/prod_dji_osmo_mobile_angle2.jpg",
-                        "images/prod_dji_osmo_mobile_angle3.jpg",
-                        "images/prod_dji_osmo_mobile_angle4.jpg"
-                    ],
-        "description":  "منتج دي جي آي DJI OSMO MOBILE Om 6 الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
-        "specs":  {
-                      "العلامة التجارية":  "DJI Official",
-                      "الكفالة":  "كفالة رسمية سنة من الوكيل"
-                  }
-    },
-    {
-        "id":  "DJI-083",
-        "name":  "DJI RS 3 MINI",
-        "nameEn":  "DJI RS 3 MINI",
-        "category":  "gimbals",
-        "brand":  "DJI",
-        "price":  239,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  125,
-        "stock":  5,
-        "badge":  "DJI Original",
-        "image":  "images/prod_dji_rs4_mini.jpg",
-        "gallery":  [
-                        "images/prod_dji_rs4_mini.jpg",
-                        "images/prod_dji_rs4_mini_angle2.jpg"
-                    ],
-        "description":  "منتج دي جي آي DJI RS 3 MINI الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
-        "specs":  {
-                      "العلامة التجارية":  "DJI Official",
-                      "الكفالة":  "كفالة رسمية سنة من الوكيل"
-                  }
-    },
-    {
-        "id":  "DJI-084",
-        "name":  "DJI RS 4 MINI",
-        "nameEn":  "DJI RS 4 MINI",
-        "category":  "gimbals",
-        "brand":  "DJI",
-        "price":  310,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  147,
-        "stock":  7,
-        "badge":  "DJI Original",
-        "image":  "images/prod_dji_rs4_mini.jpg",
-        "gallery":  [
-                        "images/prod_dji_rs4_mini.jpg",
-                        "images/prod_dji_rs4_mini_angle2.jpg",
-                        "images/prod_dji_rs4_mini_angle3.jpg",
-                        "images/prod_dji_rs4_mini_angle4.jpg"
-                    ],
-        "description":  "منتج دي جي آي DJI RS 4 MINI الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
-        "specs":  {
-                      "العلامة التجارية":  "DJI Official",
-                      "الكفالة":  "كفالة رسمية سنة من الوكيل"
-                  }
-    },
-    {
-        "id":  "DJI-086",
-        "name":  "DJI RS 4 STANDARD",
-        "nameEn":  "DJI RS 4 STANDARD",
-        "category":  "gimbals",
-        "brand":  "DJI",
-        "price":  390,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  71,
-        "stock":  12,
-        "badge":  "DJI Original",
-        "image":  "images/prod_dji_rs4.jpg",
-        "gallery":  [
-                        "images/prod_dji_rs4.jpg",
-                        "images/prod_dji_rs4_angle2.jpg",
-                        "images/prod_dji_rs4_angle3.jpg",
-                        "images/prod_dji_rs4_angle4.jpg"
-                    ],
-        "description":  "منتج دي جي آي DJI RS 4 STANDARD الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
-        "specs":  {
-                      "العلامة التجارية":  "DJI Official",
-                      "الكفالة":  "كفالة رسمية سنة من الوكيل"
-                  }
-    },
-    {
-        "id":  "DJI-088",
-        "name":  "DJI RS 4 PRO",
-        "nameEn":  "DJI RS 4 PRO",
-        "category":  "gimbals",
-        "brand":  "DJI",
-        "price":  640,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  140,
-        "stock":  6,
-        "badge":  "DJI Original",
-        "image":  "images/prod_dji_rs4_pro.jpg",
-        "gallery":  [
-                        "images/prod_dji_rs4_pro.jpg",
-                        "images/prod_dji_rs4_pro_angle2.jpg",
-                        "images/prod_dji_rs4_pro_angle3.jpg",
-                        "images/prod_dji_rs4_pro_angle4.jpg"
-                    ],
-        "description":  "منتج دي جي آي DJI RS 4 PRO الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
-        "specs":  {
-                      "العلامة التجارية":  "DJI Official",
-                      "الكفالة":  "كفالة رسمية سنة من الوكيل"
-                  }
-    },
-    {
-        "id":  "DJI-089",
-        "name":  "DJI RS 4 PRO COMPO",
-        "nameEn":  "DJI RS 4 PRO COMPO",
-        "category":  "gimbals",
-        "brand":  "DJI",
-        "price":  780,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  83,
-        "stock":  13,
-        "badge":  "DJI Original",
-        "image":  "images/prod_dji_rs4_pro.jpg",
-        "gallery":  [
-                        "images/prod_dji_rs4_pro.jpg",
-                        "images/prod_dji_rs4_pro_angle2.jpg",
-                        "images/prod_dji_rs4_pro_angle3.jpg"
-                    ],
-        "description":  "منتج دي جي آي DJI RS 4 PRO COMPO الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
-        "specs":  {
-                      "العلامة التجارية":  "DJI Official",
-                      "الكفالة":  "كفالة رسمية سنة من الوكيل"
-                  }
-    },
-    {
-        "id":  "DJI-090",
-        "name":  "DJI RS 5 STANDARD",
-        "nameEn":  "DJI RS 5 STANDARD",
-        "category":  "gimbals",
-        "brand":  "DJI",
-        "price":  550,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  101,
-        "stock":  10,
-        "badge":  "DJI Original",
-        "image":  "images/prod_dji_rs3_pro.png",
-        "gallery":  [
-                        "images/prod_dji_rs3_pro.png"
-                    ],
-        "description":  "منتج دي جي آي DJI RS 5 STANDARD الأصلي بأحدث تقنيات التثبيت والبث والتصوير الذكي.",
-        "specs":  {
-                      "العلامة التجارية":  "DJI Official",
-                      "الكفالة":  "كفالة رسمية سنة من الوكيل"
-                  }
-    },
-    {
-        "id":  "CAM-108",
-        "name":  "Canon EOS R50 18-45mm",
-        "nameEn":  "Canon EOS R50 18-45mm",
-        "category":  "cameras",
-        "brand":  "Canon",
-        "price":  550,
-        "oldPrice":  580,
-        "rating":  4.9,
-        "reviewsCount":  114,
-        "stock":  3,
-        "badge":  "وفر $30",
-        "section":  "trending",
-        "image":  "images/cam_canon_r50.jpg",
-        "gallery":  [
-                        "images/cam_canon_r50.jpg",
-                        "images/cam_canon_r8.jpg"
-                    ],
-        "description":  "كاميرا كانون Canon EOS R50 18-45mm الاحترافية مع ضمان الوكيل المعتمد لمدة سنتين، بأداء استثنائي وألوان كانون السينمائية الشهيرة.",
-        "specs":  {
-                      "المستشعر":  "24.2MP APS-C CMOS Sensor",
-                      "الفيديو":  "4K 30p مسحوب من 6K بدون اقتطاع / Full HD 120p للحركة البطيئة",
-                      "نظام التركيز":  "Dual Pixel CMOS AF II مع معالج DIGIC X والتعرف التلقائي على الأجسام",
-                      "الشاشة":  "شاشة لمس متغيرة الزوايا 3.0 بوصة تدور بالكامل",
-                      "العدسة المرفقة":  "مرفق عدسة كانون RF-S 18-45mm IS STM",
-                      "الوزن":  "375 جم",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-111",
-        "name":  "Canon EOS R8 Body",
-        "nameEn":  "Canon EOS R8 Body",
-        "category":  "cameras",
-        "brand":  "Canon",
-        "price":  1000,
-        "oldPrice":  1050,
-        "rating":  4.9,
-        "reviewsCount":  64,
-        "stock":  5,
-        "badge":  "وفر $50",
-        "section":  "trending",
-        "image":  "images/cam_canon_r8.jpg",
-        "gallery":  [
-                        "images/cam_canon_r8.jpg",
-                        "images/cam_canon_r50.jpg"
-                    ],
-        "description":  "كاميرا كانون Canon EOS R8 Body الاحترافية مع ضمان الوكيل المعتمد لمدة سنتين، بأداء استثنائي وألوان كانون السينمائية الشهيرة.",
-        "specs":  {
-                      "المستشعر":  "24.2MP Full-Frame CMOS Sensor (نفس مستشعر R6 Mark II الرائدة)",
-                      "الفيديو":  "4K 60p مسحوب من 6K بدون اقتطاع 10-Bit 4:2:2 مع Canon Log 3 / Full HD 180fps",
-                      "نظام التركيز":  "Dual Pixel CMOS AF II مدعوم بخوارزميات الذكاء الاصطناعي",
-                      "سرعة الالتقاط":  "حتى 40 إطاراً في الثانية مع الشاتر الإلكتروني",
-                      "الوزن":  "461 جم فقط (أخف كاميرا فل فريم أنتجتها كانون على الإطلاق)",
-                      "المانت":  "Canon RF Mount",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-115",
-        "name":  "Canon EOS R6 Mark II Body",
-        "nameEn":  "Canon EOS R6 Mark II Body",
-        "category":  "cameras",
-        "brand":  "Canon",
-        "price":  1390,
-        "oldPrice":  1450,
-        "rating":  4.9,
-        "reviewsCount":  68,
-        "stock":  4,
-        "badge":  "وفر $60",
-        "section":  "trending",
-        "image":  "images/cam_canon_r6ii.jpg",
-        "gallery":  [
-                        "images/cam_canon_r6ii.jpg",
-                        "images/prod_canon_r5_white.jpg"
-                    ],
-        "description":  "كاميرا كانون Canon EOS R6 Mark II Body الاحترافية مع ضمان الوكيل المعتمد لمدة سنتين، بأداء استثنائي وألوان كانون السينمائية الشهيرة.",
-        "specs":  {
-                      "المستشعر":  "24.2MP Full-Frame CMOS Sensor عالي السرعة من الجيل الجديد",
-                      "الفيديو":  "4K 60p مسحوب بالكامل من 6K بدون اقتطاع 10-Bit 4:2:2 Canon Log 3 / Full HD 180p",
-                      "نظام التركيز":  "Dual Pixel CMOS AF II يتعرف على الطيور والقطارات والطائرات والسيارات",
-                      "مانع الاهتزاز":  "مانع اهتزاز داخلي قوي 5-Axis IBIS يصل حتى 8.0 وقفات تثبيت",
-                      "سرعة الالتقاط":  "التقاط فائق السرعة 40 إطاراً في الثانية بالشاتر الإلكتروني",
-                      "المنافذ والذاكرة":  "منفذان لبطاقات الذاكرة Dual SD UHS-II",
-                      "البطارية":  "بطارية LP-E6NH",
-                      "الوزن":  "670 جم",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-119",
-        "name":  "Canon EOS R5 Mark II Body",
-        "nameEn":  "Canon EOS R5 Mark II Body",
-        "category":  "cameras",
-        "brand":  "Canon",
-        "price":  2770,
-        "oldPrice":  2850,
-        "rating":  4.9,
-        "reviewsCount":  58,
-        "stock":  3,
-        "badge":  "وفر $80",
-        "section":  "trending",
-        "image":  "images/cam_canon_r5ii.jpg",
-        "gallery":  [
-                        "images/cam_canon_r5ii.jpg",
-                        "images/prod_canon_r5_white.jpg"
-                    ],
-        "description":  "كاميرا كانون Canon EOS R5 Mark II Body الاحترافية مع ضمان الوكيل المعتمد لمدة سنتين، بأداء استثنائي وألوان كانون السينمائية الشهيرة.",
-        "specs":  {
-                      "المستشعر":  "45MP Full-Frame Back-Illuminated Stacked CMOS Sensor ثوري",
-                      "الفيديو":  "8K 60p RAW داخلي / 4K 120p 10-Bit 4:2:2 / 4K 60p S-RAW مع Canon Log 2 و 3",
-                      "نظام التركيز":  "Eye Control AF (التحكم بنقطة الفوكس بنظرة العين) مع معالج Accelerated Capture",
-                      "مانع الاهتزاز":  "تثبيت بصري داخلي IBIS متطور يصل حتى 8.5 وقفات",
-                      "سرعة الالتقاط":  "30 إطاراً في الثانية بالشاتر الإلكتروني بدون أي تعتيم Blackout-free",
-                      "ترقية الدقة":  "تقنية التكبير بالذكاء الاصطناعي المدمجة Neural Network Upscaling حتى 179MP",
-                      "المنافذ والذاكرة":  "منفذ بطاقة CFexpress Type B فائق السرعة + منفذ SD UHS-II",
-                      "الوزن":  "746 جم",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-122",
-        "name":  "Canon EOS R5 C Cinema",
-        "nameEn":  "Canon EOS R5 C Cinema",
-        "category":  "cameras",
-        "brand":  "Canon",
-        "price":  2300,
-        "oldPrice":  2380,
-        "rating":  4.9,
-        "reviewsCount":  48,
-        "stock":  4,
-        "badge":  "وفر $80",
-        "section":  "trending",
-        "image":  "images/cam_canon_r5c.jpg",
-        "gallery":  [
-                        "images/cam_canon_r5c.jpg"
-                    ],
-        "description":  "كاميرا كانون Canon EOS R5 C Cinema الاحترافية مع ضمان الوكيل المعتمد لمدة سنتين، بأداء استثنائي وألوان كانون السينمائية الشهيرة.",
-        "specs":  {
-                      "المستشعر":  "45MP Full-Frame CMOS Sensor هجين فوتوغرافي وسينمائي رسمي Cinema EOS",
-                      "الفيديو":  "8K 60p 12-Bit Cinema RAW Light داخلي / 4K 120p 10-Bit 4:2:2 بدون اقتطاع",
-                      "نظام التبريد":  "مروحة تبريد مدمجة Active Cooling للتسجيل المستمر بدون توقف",
-                      "نظام التشغيل":  "نظام تشغيل مزدوج: واجهة Cinema EOS للفيديو وواجهة EOS R للفوتوغراف",
-                      "المنافذ والذاكرة":  "منفذ CFexpress Type B عالي السرعة + منفذ SD UHS-II",
-                      "الوزن":  "770 جم",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "CAM-123",
-        "name":  "Canon PowerShot G7X III",
-        "nameEn":  "Canon PowerShot G7X III",
-        "category":  "cameras",
-        "brand":  "Canon",
-        "price":  1100,
-        "oldPrice":  1150,
-        "rating":  4.9,
-        "reviewsCount":  68,
-        "stock":  10,
-        "badge":  "وفر $50",
-        "section":  "trending",
-        "image":  "images/cam_canon_g7xiii.jpg",
-        "gallery":  [
-                        "images/cam_canon_g7xiii.jpg"
-                    ],
-        "description":  "كاميرا كانون Canon PowerShot G7X III الاحترافية مع ضمان الوكيل المعتمد لمدة سنتين، بأداء استثنائي وألوان كانون السينمائية الشهيرة.",
-        "specs":  {
-                      "المستشعر":  "20.1MP 1.0-inch Stacked CMOS Sensor المفضل لصناع المحتوى واليوتيوب",
-                      "العدسة":  "عدسة كانون سريعة 24-100mm f/1.8-2.8 مع تقريب بصري 4.2x ومثبت بصري",
-                      "الفيديو":  "4K 30p بدون كروب / Full HD 120p / دعم البث المباشر المباشر على YouTube Live",
-                      "الصوت":  "مدخل مايكروفون خارجي 3.5 ملم لتسجيل صوت احترافي",
-                      "الشاشة":  "شاشة لمس ترتفع 180 درجة للأعلى لتصوير السيلفي والفلوجات",
-                      "سرعة الالتقاط":  "تصوير متتابع حتى 30 إطاراً في الثانية في وضع RAW Burst",
-                      "الوزن":  "304 جم فقط (حجم الجيب)",
-                      "الضمان":  "كفالة رسمية سنتين من الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "LGT-147",
-        "name":  "Godox sl60II",
-        "nameEn":  "Godox sl60II",
-        "category":  "lighting",
-        "brand":  "Godox",
-        "price":  100,
-        "oldPrice":  110,
-        "rating":  4.8,
-        "reviewsCount":  31,
-        "stock":  20,
-        "badge":  "إضاءة استوديو",
-        "image":  "images/prod_godox_sl60iibi.jpg",
-        "gallery":  [
-                        "images/prod_godox_sl60iibi.jpg",
-                        "images/prod_godox_sl60iibi_angle2.jpg",
-                        "images/prod_godox_sl60iibi_angle3.jpg",
-                        "images/prod_godox_sl60iibi_angle4.jpg"
-                    ],
-        "description":  "معدات إضاءة استوديو احترافية Godox sl60II بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
-        "specs":  {
-                      "الشركة":  "Godox",
-                      "التصنيف":  "إضاءات واستوديو احترافي",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
-    },
-    {
-        "id":  "LGT-148",
-        "name":  "Godox sl60II bi",
-        "nameEn":  "Godox sl60II bi",
-        "category":  "lighting",
-        "brand":  "Godox",
-        "price":  135,
-        "oldPrice":  150,
-        "rating":  4.8,
-        "reviewsCount":  64,
-        "stock":  9,
-        "badge":  "إضاءة استوديو",
-        "image":  "images/prod_godox_sl60iibi.jpg",
-        "gallery":  [
-                        "images/prod_godox_sl60iibi.jpg",
-                        "images/prod_godox_sl60iibi_angle2.jpg",
-                        "images/prod_godox_sl60iibi_angle3.jpg"
-                    ],
-        "description":  "معدات إضاءة استوديو احترافية Godox sl60II bi بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
-        "specs":  {
-                      "الشركة":  "Godox",
-                      "التصنيف":  "إضاءات واستوديو احترافي",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
-    },
-    {
-        "id":  "LGT-149",
-        "name":  "Godox SL100D",
-        "nameEn":  "Godox SL100D",
-        "category":  "lighting",
-        "brand":  "Godox",
-        "price":  150,
-        "oldPrice":  160,
-        "rating":  4.8,
-        "reviewsCount":  67,
-        "stock":  7,
-        "badge":  "إضاءة استوديو",
-        "image":  "images/prod_godox_sl100d.jpg",
-        "gallery":  [
-                        "images/prod_godox_sl100d.jpg"
-                    ],
-        "description":  "معدات إضاءة استوديو احترافية Godox Godox SL100D بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
-        "specs":  {
-                      "الشركة":  "Godox",
-                      "التصنيف":  "إضاءات واستوديو احترافي",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
-    },
-    {
-        "id":  "LGT-150",
-        "name":  "Godox SL100BI",
-        "nameEn":  "Godox SL100BI",
-        "category":  "lighting",
-        "brand":  "Godox",
-        "price":  170,
-        "oldPrice":  180,
-        "rating":  4.8,
-        "reviewsCount":  61,
-        "stock":  11,
-        "badge":  "إضاءة استوديو",
-        "image":  "images/prod_godox_sl100d.jpg",
-        "gallery":  [
-                        "images/prod_godox_sl100d.jpg"
-                    ],
-        "description":  "معدات إضاءة استوديو احترافية Godox Godox SL100BI بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
-        "specs":  {
-                      "الشركة":  "Godox",
-                      "التصنيف":  "إضاءات واستوديو احترافي",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
-    },
-    {
-        "id":  "LGT-195",
-        "name":  "Godox 60*90",
-        "nameEn":  "Godox 60*90",
-        "category":  "lighting",
-        "brand":  "Godox",
-        "price":  40,
-        "oldPrice":  45,
-        "rating":  4.8,
-        "reviewsCount":  33,
-        "stock":  20,
-        "badge":  "إضاءة استوديو",
-        "image":  "images/prod_godox_v1.jpg",
-        "gallery":  [
-                        "images/prod_godox_v1.jpg"
-                    ],
-        "description":  "معدات إضاءة استوديو احترافية Godox 60*90 بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
-        "specs":  {
-                      "الشركة":  "Godox",
-                      "التصنيف":  "إضاءات واستوديو احترافي",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
-    },
-    {
-        "id":  "LGT-201",
-        "name":  "Godox 80*120",
-        "nameEn":  "Godox 80*120",
-        "category":  "lighting",
-        "brand":  "Godox",
-        "price":  35,
-        "oldPrice":  40,
-        "rating":  4.8,
-        "reviewsCount":  45,
-        "stock":  8,
-        "badge":  "إضاءة استوديو",
-        "image":  "images/prod_godox_cstand.jpg",
-        "gallery":  [
-                        "images/prod_godox_cstand.jpg"
-                    ],
-        "description":  "معدات إضاءة استوديو احترافية Godox 80*120 بدقة لونية فائقة CRI/TLCI 96+ وتحكم لاسلكي كامل.",
-        "specs":  {
-                      "الشركة":  "Godox",
-                      "التصنيف":  "إضاءات واستوديو احترافي",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
-    },
-    {
-        "id":  "STN-301",
-        "name":  "Monopod MP208F + VT1510",
-        "nameEn":  "Monopod MP208F + VT1510",
-        "category":  "stands",
-        "brand":  "TOPCAM Pro",
-        "price":  60,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  40,
-        "stock":  19,
-        "badge":  "تحمل عالي",
-        "image":  "images/prod_mp208f_monopod.jpg",
-        "gallery":  [
-                        "images/prod_mp208f_monopod.jpg"
-                    ],
-        "description":  "ستاند وترايبود تصوير احترافي Monopod MP208F + VT1510 بهيكل معدني متين لتحمل الكاميرات والمعدات الثقيلة بأقصى ثبات.",
-        "specs":  {
-                      "المادة":  "ألومنيوم مقوى أو ألياف كربون",
-                      "الاستخدام":  "تثبيت الكاميرات والإضاءات في الاستوديو والميدان"
-                  }
-    },
-    {
-        "id":  "STN-302",
-        "name":  "Monopod MP4208F Fiber +VT-3510",
-        "nameEn":  "Monopod MP4208F Fiber +VT-3510",
-        "category":  "stands",
-        "brand":  "TOPCAM Pro",
-        "price":  110,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  56,
-        "stock":  18,
-        "badge":  "تحمل عالي",
-        "image":  "images/prod_vt3510_tripod.jpg",
-        "gallery":  [
-                        "images/prod_vt3510_tripod.jpg",
-                        "images/prod_vt3510_tripod_angle2.jpg",
-                        "images/prod_vt3510_tripod_angle3.jpg"
-                    ],
-        "description":  "ستاند وترايبود تصوير احترافي Monopod MP4208F Fiber +VT-3510 بهيكل معدني متين لتحمل الكاميرات والمعدات الثقيلة بأقصى ثبات.",
-        "specs":  {
-                      "المادة":  "ألومنيوم مقوى أو ألياف كربون",
-                      "الاستخدام":  "تثبيت الكاميرات والإضاءات في الاستوديو والميدان"
-                  }
-    },
-    {
-        "id":  "STN-309",
-        "name":  "Tripod  VT-890H Multi Function",
-        "nameEn":  "Tripod  VT-890H Multi Function",
-        "category":  "stands",
-        "brand":  "TOPCAM Pro",
-        "price":  35,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  28,
-        "stock":  7,
-        "badge":  "تحمل عالي",
-        "image":  "images/prod_vt3510_tripod.jpg",
-        "gallery":  [
-                        "images/prod_vt3510_tripod.jpg",
-                        "images/prod_vt3510_tripod_angle2.jpg"
-                    ],
-        "description":  "ستاند وترايبود تصوير احترافي Tripod  VT-890H Multi Function بهيكل معدني متين لتحمل الكاميرات والمعدات الثقيلة بأقصى ثبات.",
-        "specs":  {
-                      "المادة":  "ألومنيوم مقوى أو ألياف كربون",
-                      "الاستخدام":  "تثبيت الكاميرات والإضاءات في الاستوديو والميدان"
-                  }
-    },
-    {
-        "id":  "STN-312",
-        "name":  "Tripod VT-866",
-        "nameEn":  "Tripod VT-866",
-        "category":  "stands",
-        "brand":  "TOPCAM Pro",
-        "price":  40,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  28,
-        "stock":  10,
-        "badge":  "تحمل عالي",
-        "image":  "images/prod_manfrotto_504x.jpg",
-        "gallery":  [
-                        "images/prod_manfrotto_504x.jpg",
-                        "images/prod_manfrotto_504x_angle2.jpg",
-                        "images/prod_manfrotto_504x_angle3.jpg",
-                        "images/prod_manfrotto_504x_angle4.jpg"
-                    ],
-        "description":  "ستاند وترايبود تصوير احترافي Tripod VT-866 بهيكل معدني متين لتحمل الكاميرات والمعدات الثقيلة بأقصى ثبات.",
-        "specs":  {
-                      "المادة":  "ألومنيوم مقوى أو ألياف كربون",
-                      "الاستخدام":  "تثبيت الكاميرات والإضاءات في الاستوديو والميدان"
-                  }
-    },
-    {
-        "id":  "ACC-342",
-        "name":  "SmallRig VB50 mini V Mount Battery 50Wh 3579B",
-        "nameEn":  "SmallRig VB50 mini V Mount Battery 50Wh 3579B",
-        "category":  "chargers_batteries",
-        "brand":  "SmallRig",
-        "price":  120,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  76,
-        "stock":  14,
-        "badge":  "SmallRig",
-        "image":  "images/prod_smallrig_vb50.jpg",
-        "gallery":  [
-                        "images/prod_smallrig_vb50.jpg"
-                    ],
-        "description":  "منتج SmallRig الأصلي SmallRig VB50 mini V Mount Battery 50Wh 3579B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "SmallRig",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-343",
-        "name":  "SmallRig VB99 Mini V-Mount Battery 99Wh 3580B",
-        "nameEn":  "SmallRig VB99 Mini V-Mount Battery 99Wh 3580B",
-        "category":  "chargers_batteries",
-        "brand":  "SmallRig",
-        "price":  145,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  31,
-        "stock":  7,
-        "badge":  "SmallRig",
-        "image":  "images/prod_smallrig_vb99.jpg",
-        "gallery":  [
-                        "images/prod_smallrig_vb99.jpg"
-                    ],
-        "description":  "منتج SmallRig الأصلي SmallRig VB99 Mini V-Mount Battery 99Wh 3580B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "SmallRig",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-344",
-        "name":  "SmallRig VB99 Pro V-Mount Battery 99Wh 4292",
-        "nameEn":  "SmallRig VB99 Pro V-Mount Battery 99Wh 4292",
-        "category":  "chargers_batteries",
-        "brand":  "SmallRig",
-        "price":  200,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  31,
-        "stock":  5,
-        "badge":  "SmallRig",
-        "image":  "images/prod_smallrig_vb99.jpg",
-        "gallery":  [
-                        "images/prod_smallrig_vb99.jpg"
-                    ],
-        "description":  "منتج SmallRig الأصلي SmallRig VB99 Pro V-Mount Battery 99Wh 4292 بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "SmallRig",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-345",
-        "name":  "SmallRig VB155 Mini V-Mount Battery 155Wh 3581B",
-        "nameEn":  "SmallRig VB155 Mini V-Mount Battery 155Wh 3581B",
-        "category":  "chargers_batteries",
-        "brand":  "SmallRig",
-        "price":  240,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  65,
-        "stock":  13,
-        "badge":  "SmallRig",
-        "image":  "images/prod_smallrig_vb99.jpg",
-        "gallery":  [
-                        "images/prod_smallrig_vb99.jpg"
-                    ],
-        "description":  "منتج SmallRig الأصلي SmallRig VB155 Mini V-Mount Battery 155Wh 3581B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "SmallRig",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-346",
-        "name":  "SmallRig x Caleb Pike VB212 Mini V-Mount Battery 212Wh 4293",
-        "nameEn":  "SmallRig x Caleb Pike VB212 Mini V-Mount Battery 212Wh 4293",
-        "category":  "chargers_batteries",
-        "brand":  "SmallRig",
-        "price":  295,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  39,
-        "stock":  17,
-        "badge":  "SmallRig",
-        "image":  "images/prod_smallrig_vb99.jpg",
-        "gallery":  [
-                        "images/prod_smallrig_vb99.jpg"
-                    ],
-        "description":  "منتج SmallRig الأصلي SmallRig x Caleb Pike VB212 Mini V-Mount Battery 212Wh 4293 بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "SmallRig",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-356",
-        "name":  "SmallRig Camera Cage for Sony FX30 and FX3  4183B",
-        "nameEn":  "SmallRig Camera Cage for Sony FX30 and FX3  4183B",
-        "category":  "cages",
-        "brand":  "SmallRig",
-        "price":  80,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  31,
-        "stock":  6,
-        "badge":  "SmallRig",
-        "image":  "images/prod_smallrig_fx3_cage.jpg",
-        "gallery":  [
-                        "images/prod_smallrig_fx3_cage.jpg",
-                        "images/prod_smallrig_fx3_cage_angle2.jpg",
-                        "images/prod_smallrig_fx3_cage_angle3.jpg"
-                    ],
-        "description":  "منتج SmallRig الأصلي SmallRig Camera Cage for Sony FX30 and FX3  4183B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "SmallRig",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-358",
-        "name":  "SmallRig Camera Cage for Sony a7 IV / a7R V / a7S III 3667B",
-        "nameEn":  "SmallRig Camera Cage for Sony a7 IV / a7R V / a7S III 3667B",
-        "category":  "cages",
-        "brand":  "SmallRig",
-        "price":  65,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  79,
-        "stock":  19,
-        "badge":  "SmallRig",
-        "image":  "images/prod_smallrig_a7iv_cage.jpg",
-        "gallery":  [
-                        "images/prod_smallrig_a7iv_cage.jpg",
-                        "images/prod_smallrig_a7iv_cage_angle2.jpg",
-                        "images/prod_smallrig_a7iv_cage_angle3.jpg",
-                        "images/prod_smallrig_a7iv_cage_angle4.jpg"
-                    ],
-        "description":  "منتج SmallRig الأصلي SmallRig Camera Cage for Sony a7 IV / a7R V / a7S III 3667B بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "SmallRig",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-362",
-        "name":  "SmallRig Top Handle with Shoe Mount (Lite) 3764",
-        "nameEn":  "SmallRig Top Handle with Shoe Mount (Lite) 3764",
-        "category":  "cages",
-        "brand":  "SmallRig",
-        "price":  30,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  53,
-        "stock":  12,
-        "badge":  "SmallRig",
-        "image":  "images/prod_smallrig_top_handle.jpg",
-        "gallery":  [
-                        "images/prod_smallrig_top_handle.jpg",
-                        "images/prod_smallrig_top_handle_angle2.jpg",
-                        "images/prod_smallrig_top_handle_angle3.jpg",
-                        "images/prod_smallrig_top_handle_angle4.jpg"
-                    ],
-        "description":  "منتج SmallRig الأصلي SmallRig Top Handle with Shoe Mount (Lite) 3764 بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "SmallRig",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-406",
-        "name":  "Ulanzi OM-01 Multi function bag",
-        "nameEn":  "Ulanzi OM-01 Multi function bag",
-        "category":  "bags",
-        "brand":  "Ulanzi",
-        "price":  50,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  47,
-        "stock":  10,
-        "badge":  "Ulanzi",
-        "image":  "images/prod_peakdesign_everyday.jpg",
-        "gallery":  [
-                        "images/prod_peakdesign_everyday.jpg",
-                        "images/prod_peakdesign_everyday_angle2.jpg",
-                        "images/prod_peakdesign_everyday_angle3.jpg",
-                        "images/prod_peakdesign_everyday_angle4.jpg"
-                    ],
-        "description":  "منتج Ulanzi الأصلي Ulanzi OM-01 Multi function bag بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "Ulanzi",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-407",
-        "name":  "ulanzi backpack bp04",
-        "nameEn":  "ulanzi backpack bp04",
-        "category":  "bags",
-        "brand":  "Ulanzi",
-        "price":  130,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  30,
-        "stock":  13,
-        "badge":  "Ulanzi",
-        "image":  "images/prod_lowepro_protactic.jpg",
-        "gallery":  [
-                        "images/prod_lowepro_protactic.jpg",
-                        "images/prod_lowepro_protactic_angle2.jpg",
-                        "images/prod_lowepro_protactic_angle3.jpg",
-                        "images/prod_lowepro_protactic_angle4.jpg"
-                    ],
-        "description":  "منتج Ulanzi الأصلي ulanzi backpack bp04 بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "Ulanzi",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-408",
-        "name":  "ulanzi backpack bp09 22L",
-        "nameEn":  "ulanzi backpack bp09 22L",
-        "category":  "bags",
-        "brand":  "Ulanzi",
-        "price":  100,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  40,
-        "stock":  11,
-        "badge":  "Ulanzi",
-        "image":  "images/prod_ulanzi_bp09.jpg",
-        "gallery":  [
-                        "images/prod_ulanzi_bp09.jpg",
-                        "images/prod_ulanzi_bp09_angle2.jpg",
-                        "images/prod_ulanzi_bp09_angle3.jpg",
-                        "images/prod_ulanzi_bp09_angle4.jpg"
-                    ],
-        "description":  "منتج Ulanzi الأصلي ulanzi backpack bp09 22L بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "Ulanzi",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "ACC-409",
-        "name":  "ulanzi backpack AB01 TAI 38L",
-        "nameEn":  "ulanzi backpack AB01 TAI 38L",
-        "category":  "bags",
-        "brand":  "Ulanzi",
-        "price":  250,
-        "oldPrice":  null,
-        "rating":  4.9,
-        "reviewsCount":  37,
-        "stock":  12,
-        "badge":  "Ulanzi",
-        "image":  "images/prod_ulanzi_ab01.jpg",
-        "gallery":  [
-                        "images/prod_ulanzi_ab01.jpg"
-                    ],
-        "description":  "منتج Ulanzi الأصلي ulanzi backpack AB01 TAI 38L بتصنيع دقيق من خامات عالية الجودة لبيئات التصوير الاحترافية.",
-        "specs":  {
-                      "العلامة التجارية":  "Ulanzi",
-                      "الضمان":  "كفالة الوكيل المعتمد"
-                  }
-    },
-    {
-        "id":  "MON-449",
-        "name":  "Desview T22 Teleprompter",
-        "nameEn":  "Desview T22 Teleprompter",
-        "category":  "monitors",
-        "brand":  "Desview",
-        "price":  600,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  49,
-        "stock":  10,
-        "badge":  "ملقن نصوص",
-        "image":  "images/prod_desview_t3.jpg",
-        "gallery":  [
-                        "images/prod_desview_t3.jpg",
-                        "images/prod_desview_t3_angle2.jpg"
-                    ],
-        "description":  "Desview T22 Teleprompter عالي الدقة والسطوع لاستوديوهات التلفزيون وصناع المحتوى والتصوير السينمائي.",
-        "specs":  {
-                      "العلامة التجارية":  "Desview",
-                      "التطبيق":  "شاشات عرض وتلقين احترافية",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
-    },
-    {
-        "id":  "MON-454",
-        "name":  "Desview T3 Teleprompter",
-        "nameEn":  "Desview T3 Teleprompter",
-        "category":  "monitors",
-        "brand":  "Desview",
-        "price":  115,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  49,
-        "stock":  9,
-        "badge":  "ملقن نصوص",
-        "image":  "images/prod_desview_t3.jpg",
-        "gallery":  [
-                        "images/prod_desview_t3.jpg",
-                        "images/prod_desview_t3_angle2.jpg",
-                        "images/prod_desview_t3_angle3.jpg"
-                    ],
-        "description":  "Desview T3 Teleprompter عالي الدقة والسطوع لاستوديوهات التلفزيون وصناع المحتوى والتصوير السينمائي.",
-        "specs":  {
-                      "العلامة التجارية":  "Desview",
-                      "التطبيق":  "شاشات عرض وتلقين احترافية",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
-    },
-    {
-        "id":  "MON-478",
-        "name":  "feelworld lut7s pro",
-        "nameEn":  "feelworld lut7s pro",
-        "category":  "monitors",
-        "brand":  "FeelWorld",
-        "price":  375,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  17,
-        "stock":  7,
-        "badge":  "شاشة مونيتر",
-        "image":  "images/prod_feelworld_lut7.jpg",
-        "gallery":  [
-                        "images/prod_feelworld_lut7.jpg",
-                        "images/prod_feelworld_lut7_angle2.jpg",
-                        "images/prod_feelworld_lut7_angle3.jpg",
-                        "images/prod_feelworld_lut7_angle4.jpg"
-                    ],
-        "description":  "feelworld lut7s pro عالي الدقة والسطوع لاستوديوهات التلفزيون وصناع المحتوى والتصوير السينمائي.",
-        "specs":  {
-                      "العلامة التجارية":  "FeelWorld",
-                      "التطبيق":  "شاشات عرض وتلقين احترافية",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
-    },
-    {
-        "id":  "MON-481",
-        "name":  "feelworld f6 plus",
-        "nameEn":  "feelworld f6 plus",
-        "category":  "monitors",
-        "brand":  "FeelWorld",
-        "price":  170,
-        "oldPrice":  null,
-        "rating":  4.8,
-        "reviewsCount":  39,
-        "stock":  12,
-        "badge":  "شاشة مونيتر",
-        "image":  "images/prod_feelworld_f6_plus.jpg",
-        "gallery":  [
-                        "images/prod_feelworld_f6_plus.jpg",
-                        "images/prod_feelworld_f6_plus_angle2.jpg",
-                        "images/prod_feelworld_f6_plus_angle3.jpg",
-                        "images/prod_feelworld_f6_plus_angle4.jpg"
-                    ],
-        "description":  "feelworld f6 plus عالي الدقة والسطوع لاستوديوهات التلفزيون وصناع المحتوى والتصوير السينمائي.",
-        "specs":  {
-                      "العلامة التجارية":  "FeelWorld",
-                      "التطبيق":  "شاشات عرض وتلقين احترافية",
-                      "الكفالة":  "كفالة رسمية سنة"
-                  }
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 1. CAMERAS (13 Authentic Cameras) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "CAM-001",
+    "name": "Sony A7 III - Full-frame Mirrorless Camera Body Only",
+    "nameEn": "Sony A7 III - Full-frame Mirrorless Camera Body Only",
+    "category": "cameras",
+    "brand": "Sony",
+    "price": 1000,
+    "oldPrice": 1050,
+    "rating": 4.9,
+    "reviewsCount": 104,
+    "stock": 4,
+    "badge": "ظˆظپط± $50",
+    "section": "trending",
+    "image": "images/cam_sony_a7iii.jpg",
+    "gallery": ["images/cam_sony_a7iii.jpg", "images/prod_sony_a7iv_white.jpg"],
+    "description": "ظƒط§ظ…ظٹط±ط§ ط³ظˆظ†ظٹ Sony A7 III ط§ظ„ط§ط­طھط±ط§ظپظٹط© ط§ظ„ط£طµظ„ظٹط© ظ…ط¹ ظƒظپط§ظ„ط© ط³ظ†طھظٹظ† ظƒط§ظ…ظ„ط© ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ط±ط³ظ…ظٹ ظپظٹ ط§ظ„ط£ط±ط¯ظ†طŒ طھط¯ط¹ظ… ط£ط¹ظ„ظ‰ ظ…ط¹ط§ظٹظٹط± ط§ظ„طھطµظˆظٹط± ط§ظ„ظپظˆطھظˆط؛ط±ط§ظپظٹ ظˆط§ظ„ط³ظٹظ†ظ…ط§ط¦ظٹ.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "24.2MP Full-Frame Exmor R BSI CMOS",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "4K 30p HDR (HLG) & S-Log3 / 1080p 120fps",
+      "ظ†ط¸ط§ظ… ط§ظ„طھط±ظƒظٹط²": "693 ظ†ظ‚ط§ط· ظپظˆظƒط³ ظ…ط¹ Real-Time Eye AF ظ„ظ„ط¨ط´ط± ظˆط§ظ„ط­ظٹظˆط§ظ†ط§طھ",
+      "ظ…ط§ظ†ط¹ ط§ظ„ط§ظ‡طھط²ط§ط²": "5-Axis In-Body Image Stabilization (5.0 ظˆظ‚ظپط§طھ)",
+      "ط­ط³ط§ط³ظٹط© ط§ظ„ط¶ظˆط،": "ISO 100-51,200 (ظٹطھظˆط³ط¹ ط­طھظ‰ 204,800)",
+      "ط³ط±ط¹ط© ط§ظ„ط§ظ„طھظ‚ط§ط·": "10 ط¥ط·ط§ط±ط§طھ ط¨ط§ظ„ط«ط§ظ†ظٹط© ظ…ط¹ طھطھط¨ط¹ AF/AE ظƒط§ظ…ظ„",
+      "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©": "ظ…ظ†ظپط°ط§ظ† ظ…ط²ط¯ظˆط¬ط§ظ† Dual SD Slots (UHS-II/UHS-I)",
+      "ط§ظ„ط¨ط·ط§ط±ظٹط©": "Sony NP-FZ100 (ط­طھظ‰ 710 ظ„ظ‚ط·ط§طھ)",
+      "ط§ظ„ظ…ط§ظ†طھ": "Sony E-Mount (Full-Frame)",
+      "ط§ظ„ط´ط§ط´ط©": "ط´ط§ط´ط© ظ„ظ…ط³ 3.0 ط¨ظˆطµط© ظ‚ط§ط¨ظ„ط© ظ„ظ„ط¥ظ…ط§ظ„ط© ط¨ط¯ظ‚ط© 921K ظ†ظ‚ط·ط©",
+      "ط§ظ„ظˆط²ظ†": "650 ط¬ظ… ظ‡ظٹظƒظ„ ط§ظ„ظƒط§ظ…ظٹط±ط§",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
     }
+  },
+  {
+    "id": "CAM-002",
+    "name": "Sony A7 IV - Full-frame Mirrorless Camera Body Only",
+    "nameEn": "Sony A7 IV - Full-frame Mirrorless Camera Body Only",
+    "category": "cameras",
+    "brand": "Sony",
+    "price": 1400,
+    "oldPrice": 1450,
+    "rating": 4.9,
+    "reviewsCount": 53,
+    "stock": 3,
+    "badge": "ظˆظپط± $50",
+    "section": "trending",
+    "image": "images/cam_sony_a7iv.jpg",
+    "gallery": ["images/cam_sony_a7iv.jpg", "images/prod_sony_a7iv_white.jpg"],
+    "description": "ظƒط§ظ…ظٹط±ط§ ط³ظˆظ†ظٹ Sony A7 IV ط§ظ„ط§ط­طھط±ط§ظپظٹط© ط¨ظ…ط³طھط´ط¹ط± 33 ظ…ظٹط¬ط§ط¨ظƒط³ظ„ ظˆط£ظ„ظˆط§ظ† S-Cinetone ط§ظ„ط³ظٹظ†ظ…ط§ط¦ظٹط© ط§ظ„ظ…ط°ظ‡ظ„ط© ظ…ط¹ ظƒظپط§ظ„ط© ط§ظ„ظˆظƒظٹظ„ ظپظٹ ط§ظ„ط£ط±ط¯ظ†.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "33MP Full-Frame Exmor R BSI CMOS",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "4K 60p 10-Bit 4:2:2 All-Intra / 7K Oversampling ظ…ط¹ S-Cinetone",
+      "ظ†ط¸ط§ظ… ط§ظ„طھط±ظƒظٹط²": "759 ظ†ظ‚ط·ط© طھط±ظƒظٹط² ط¨ط¤ط±ظٹ ط°ظƒظٹ ظ…ط¹ طھطھط¨ط¹ ط¹ظٹظˆظ† ط§ظ„ط¨ط´ط± ظˆط§ظ„ط­ظٹظˆط§ظ†ط§طھ ظˆط§ظ„ط·ظٹظˆط±",
+      "ظ…ط§ظ†ط¹ ط§ظ„ط§ظ‡طھط²ط§ط²": "5-Axis In-Body Stabilization ط­طھظ‰ 5.5 ظˆظ‚ظپط§طھ",
+      "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©": "ظ…ظ†ظپط°ط§ظ† ظ…ط²ط¯ظˆط¬ط§ظ†: CFexpress Type A ظˆ SD UHS-II",
+      "ط§ظ„ط´ط§ط´ط©": "ط´ط§ط´ط© ظ„ظ…ط³ظٹط© ظ…طھط؛ظٹط±ط© ط§ظ„ط²ظˆط§ظٹط§ Vari-Angle LCD ط¨ط¯ظ‚ط© 1.03M",
+      "ط§ظ„ط¨ط·ط§ط±ظٹط©": "Sony NP-FZ100 (ط­طھظ‰ 580 ظ„ظ‚ط·ط©)",
+      "ط§ظ„ظ…ط§ظ†طھ": "Sony E-Mount",
+      "ط§ظ„ظˆط²ظ†": "658 ط¬ظ…",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-004",
+    "name": "Sony A7s iii Full-frame Mirrorless Camera Body Only",
+    "nameEn": "Sony A7s iii Full-frame Mirrorless Camera Body Only",
+    "category": "cameras",
+    "brand": "Sony",
+    "price": 2100,
+    "oldPrice": 2200,
+    "rating": 4.9,
+    "reviewsCount": 98,
+    "stock": 10,
+    "badge": "ظˆظپط± $100",
+    "section": "trending",
+    "image": "images/cam_sony_a7siii.jpg",
+    "gallery": ["images/cam_sony_a7siii.jpg", "images/prod_sony_fx3_white.jpg"],
+    "description": "ظ…ظ„ظƒ ط§ظ„ط¥ط¶ط§ط،ط© ط§ظ„ظ…ظ†ط®ظپط¶ط© ظˆط§ظ„ظپظٹط¯ظٹظˆ ط¨ظ„ط§ ظ…ظ†ط§ط²ط¹: 4K 120p 10-Bit 4:2:2 ط¨ط¯ظˆظ† ط£ظٹ ط§ط±طھظپط§ط¹ ط­ط±ط§ط±ط© ظ…ط¹ ظ…ط¹ط§ظ„ط¬ BIONZ XR ط§ظ„ظ…ط²ط¯ظˆط¬.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "12.1MP Full-Frame Exmor R BSI CMOS ظ…ط®طµطµ ظ„ظ„ط¥ط¶ط§ط،ط© ط§ظ„ظ…ظ†ط®ظپط¶ط© ظˆط§ظ„ظپظٹط¯ظٹظˆ",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "4K 120p 10-Bit 4:2:2 All-Intra ط¨ط¯ظˆظ† ظƒط±ظˆط¨ ظˆط¨ط¯ظˆظ† ط§ط±طھظپط§ط¹ ط­ط±ط§ط±ط© / 16-Bit RAW",
+      "ظ†ط¸ط§ظ… ط§ظ„طھط±ظƒظٹط²": "759 ظ†ظ‚ط·ط© ظپظˆظƒط³ ظ…ط¹ ط­ط³ط§ط³ظٹط© ظپط§ط¦ظ‚ط© ط­طھظ‰ EV -6 ظپظٹ ط§ظ„ط¸ظ„ط§ظ… ط§ظ„ط¯ط§ظ…ط³",
+      "ظ…ط§ظ†ط¹ ط§ظ„ط§ظ‡طھط²ط§ط²": "5-Axis IBIS ظ…ط¹ ظˆط¶ط¹ Active Mode ط§ظ„ط±ظ‚ظ…ظٹ ط§ظ„ظ…طھظ‚ط¯ظ…",
+      "ط­ط³ط§ط³ظٹط© ط§ظ„ط¶ظˆط،": "ظ†ط·ط§ظ‚ ظ‡ط§ط¦ظ„ ISO 80-102,400 (ظٹطھظˆط³ط¹ ط­طھظ‰ 409,600)",
+      "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©": "ظ…ظ†ظپط°ط§ظ† ط«ظ†ط§ط¦ظٹط§ظ† CFexpress Type A ظˆ SD UHS-II",
+      "ط§ظ„ط´ط§ط´ط© ظˆط§ظ„ظ…ظ†ط¸ط§ط±": "ط´ط§ط´ط© ظ„ظ…ط³ ظ…ظپطµظ„ظٹط© + ظ…ظ†ط¸ط§ط± OLED EVF ط¨ط¯ظ‚ط© 9.44 ظ…ظ„ظٹظˆظ† ظ†ظ‚ط·ط©",
+      "ط§ظ„ظˆط²ظ†": "699 ط¬ظ…",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-005",
+    "name": "Sony A7r V Full-frame Mirrorless Camera Body Only",
+    "nameEn": "Sony A7r V Full-frame Mirrorless Camera Body Only",
+    "category": "cameras",
+    "brand": "Sony",
+    "price": 2160,
+    "oldPrice": 2250,
+    "rating": 4.9,
+    "reviewsCount": 64,
+    "stock": 2,
+    "badge": "ظˆظپط± $90",
+    "section": "trending",
+    "image": "images/cam_sony_a7rv.jpg",
+    "gallery": ["images/cam_sony_a7rv.jpg"],
+    "description": "ظˆط­ط´ ط§ظ„ط¯ظ‚ط© ط§ظ„ظپط§ط¦ظ‚ط© ظˆط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ ط¨ط¯ظ‚ط© 61 ظ…ظٹط¬ط§ط¨ظƒط³ظ„ ظˆظ…ط¹ط§ظ„ط¬ AI ظ…ط®طµطµ ظ„ظ„طھط±ظƒظٹط² ظˆط§ظ„طھطھط¨ط¹طŒ ظ…ط¹ طھط³ط¬ظٹظ„ ظپظٹط¯ظٹظˆ 8K 24p.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "61MP Full-Frame Exmor R BSI CMOS Sensor ظپط§ط¦ظ‚ ط§ظ„طھظپط§طµظٹظ„",
+      "ط§ظ„ظ…ط¹ط§ظ„ط¬ ط§ظ„ط°ظƒظٹ": "ظˆط­ط¯ط© ظ…ط¹ط§ظ„ط¬ط© AI Processing Unit ظ…ط®طµطµط© ظ„ظ„طھط¹ط±ظپ ط¹ظ„ظ‰ ط§ظ„ط£ط´ط®ط§طµ ظˆط§ظ„ط³ظٹط§ط±ط§طھ ظˆط§ظ„ظ‚ط·ط§ط±ط§طھ ظˆط§ظ„ط·ط§ط¦ط±ط§طھ",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "8K 24p / 4K 60p 10-Bit 4:2:2 ظ…ط¹ S-Cinetone ظˆ S-Log3",
+      "ظ…ط§ظ†ط¹ ط§ظ„ط§ظ‡طھط²ط§ط²": "طھط«ط¨ظٹطھ ط®ظ…ط§ط³ظٹ ط§ظ„ظ…ط­ط§ظˆط± ظپظٹ ط§ظ„ظ‡ظٹظƒظ„ ط­طھظ‰ 8.0 ظˆظ‚ظپط§طھ ظƒط§ظ…ظ„ط©",
+      "ط§ظ„ط´ط§ط´ط©": "ط´ط§ط´ط© ظ…ط¨طھظƒط±ط© 4-Axis Multi-Angle LCD طھط¬ظ…ط¹ ط¨ظٹظ† ط§ظ„ط¥ظ…ط§ظ„ط© ظˆط§ظ„ظپطھط­ ط§ظ„ط¬ط§ظ†ط¨ظٹ",
+      "ط§ظ„ظ…ظ†ط¸ط§ط±": "ظ…ظ†ط¸ط§ط± ط¥ظ„ظƒطھط±ظˆظ†ظٹ EVF ط¨ط¯ظ‚ط© 9.44M ظ†ظ‚ط·ط© ط¨ظ…ط¹ط¯ظ„ 120fps",
+      "ط§ظ„ظˆط²ظ†": "723 ط¬ظ…",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-006",
+    "name": "Sony FX30 Digital Cinema Camera",
+    "nameEn": "Sony FX30 Digital Cinema Camera",
+    "category": "cameras",
+    "brand": "Sony",
+    "price": 1280,
+    "oldPrice": 1350,
+    "rating": 4.9,
+    "reviewsCount": 42,
+    "stock": 5,
+    "badge": "ظˆظپط± $70",
+    "section": "trending",
+    "image": "images/prod_sony_fx3_white.jpg",
+    "gallery": ["images/prod_sony_fx3_white.jpg", "images/prod_smallrig_fx3_cage.jpg"],
+    "description": "ط¨ظˆط§ط¨طھظƒ ط§ظ„ط§ط­طھط±ط§ظپظٹط© ظ„ط¹ط§ظ„ظ… ط®ط· ط§ظ„ط³ظٹظ†ظ…ط§ ط§ظ„ط±ط³ظ…ظٹ Sony Cinema Line ظ…ط¹ ظ…ط³طھط´ط¹ط± Super 35 ط¨ط¯ظ‚ط© 6K Oversampling ظˆطھط¨ط±ظٹط¯ ظ†ط´ط·.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "26MP APS-C / Super 35 Exmor R BSI CMOS Sensor",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "4K ط­طھظ‰ 120p / 6K Oversampling ط¨ط¯ظ‚ط© 10-Bit 4:2:2 All-Intra",
+      "ط£ظ†ط¸ظ…ط© ط§ظ„ط£ظ„ظˆط§ظ†": "S-CinetoneطŒ S-Log3 ظˆط¯ط¹ظ… طھط­ظ…ظٹظ„ User LUTs ظ…ط®طµطµط© ط¯ط§ط®ظ„ ط§ظ„ظƒط§ظ…ظٹط±ط§",
+      "ظ†ط¸ط§ظ… ط§ظ„طھط¨ط±ظٹط¯": "ظ…ط±ظˆط­ط© طھط¨ط±ظٹط¯ ظ…ط¯ظ…ط¬ط© طھطھظٹط­ ط§ظ„طھطµظˆظٹط± ط§ظ„ظ…ط³طھظ…ط± ط¨ط¯ظˆظ† طھظˆظ‚ظپ ظ†ظ‡ط§ط¦ظٹط§ظ‹",
+      "ظ‡ظٹظƒظ„ ط§ظ„ظƒط§ظ…ظٹط±ط§": "ظ‡ظٹظƒظ„ ط³ظٹظ†ظ…ط§ط¦ظٹ ظ…طھظٹظ† ظ…ط²ظˆط¯ ط¨ظ€ 5 ط¨ط±ط§ط؛ظٹ طھط«ط¨ظٹطھ 1/4\"-20 ظ…ط¨ط§ط´ط±ط© ط¨ط¯ظˆظ† ط§ظ„ط­ط§ط¬ط© ظ„ظƒظٹط¬ ط¥ط¶ط§ظپظٹ",
+      "ط§ظ„ظˆط²ظ†": "646 ط¬ظ… ظپظ‚ط·",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-009",
+    "name": "Sony ZV-E10 II Mirrorless Camera with 16-50mm Lens",
+    "nameEn": "Sony ZV-E10 II Mirrorless Camera with 16-50mm Lens",
+    "category": "cameras",
+    "brand": "Sony",
+    "price": 750,
+    "oldPrice": 800,
+    "rating": 4.8,
+    "reviewsCount": 86,
+    "stock": 7,
+    "badge": "ظˆظپط± $50",
+    "section": "trending",
+    "image": "images/cam_sony_zve10.jpg",
+    "gallery": ["images/cam_sony_zve10.jpg"],
+    "description": "ط§ظ„ط¬ظٹظ„ ط§ظ„ط«ط§ظ†ظٹ ط§ظ„ط£ط­ط¯ط« ظ…ظ† ظƒط§ظ…ظٹط±ط§ طµظ†ط§ط¹ ط§ظ„ظ…ط­طھظˆظ‰ ط§ظ„ط£ظƒط«ط± ظ…ط¨ظٹط¹ط§ظ‹ ظ…ط¹ ظ…ط³طھط´ط¹ط± 26MP ظˆط¨ط·ط§ط±ظٹط© NP-FZ100 ط§ظ„ظƒط¨ظٹط±ط© ظˆظپظٹط¯ظٹظˆ 4K 60p.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "26MP APS-C Exmor R CMOS Sensor ط§ظ„ط£ط­ط¯ط«",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "4K 60p 10-Bit 4:2:2 ظ…ط¹ طھظ‚ظ†ظٹط© 5.6K Oversampling ط§ظ„ظپط§ط¦ظ‚ط©",
+      "ط§ظ„ط¨ط·ط§ط±ظٹط©": "طھط±ظ‚ظٹط© ط¶ط®ظ…ط© ظ„ط¨ط·ط§ط±ظٹط© NP-FZ100 ط§ظ„ظƒط¨ظٹط±ط© ظ„طھط¯ظˆظ… ط³ط§ط¹ط§طھ ط·ظˆظٹظ„ط©",
+      "ط§ظ„طھط±ظƒظٹط² ظˆط§ظ„ظ…ظٹط²ط§طھ": "ط²ط± Cinematic Vlog Setting ظˆ Product Showcase Mode ظˆظ…ظٹظƒط±ظˆظپظˆظ† ط§طھط¬ط§ظ‡ظٹ 3 ظƒط¨ط³ظˆظ„ط§طھ",
+      "ط§ظ„ط¹ط¯ط³ط© ط§ظ„ظ…ط±ظپظ‚ط©": "ط¹ط¯ط³ط© ط²ظˆظ… ط³ظˆظ†ظٹ E PZ 16-50mm f/3.5-5.6 OSS II ط§ظ„ظ…ط¯ظ…ط¬ط©",
+      "ط§ظ„ظˆط²ظ†": "377 ط¬ظ…",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-014",
+    "name": "Sony FX6 Full-Frame Cinema Camera (Body Only)",
+    "nameEn": "Sony FX6 Full-Frame Cinema Camera (Body Only)",
+    "category": "cameras",
+    "brand": "Sony",
+    "price": 4200,
+    "oldPrice": 4350,
+    "rating": 5.0,
+    "reviewsCount": 29,
+    "stock": 2,
+    "badge": "ظˆظپط± $150",
+    "section": "trending",
+    "image": "images/cam_sony_fx6.jpg",
+    "gallery": ["images/cam_sony_fx6.jpg"],
+    "description": "ظƒط§ظ…ظٹط±ط§ ط§ظ„ط³ظٹظ†ظ…ط§ ط§ظ„ط§ط­طھط±ط§ظپظٹط© ط§ظ„ظ…طھظƒط§ظ…ظ„ط© ط¨ظ…ط³طھط´ط¹ط± ظپظ„ ظپط±ظٹظ… 4K 120p ظˆظپظ„طھط± ND ط¥ظ„ظƒطھط±ظˆظ†ظٹ ظ…طھط؛ظٹط± ظ…ط¯ظ…ط¬ ظˆظ…ط®ط§ط±ط¬ 12G-SDI ظ„ظ„ط¨ط« ط§ظ„طھظ„ظپط²ظٹظˆظ†ظٹ ظˆط§ظ„ط¥ظ†طھط§ط¬ ط§ظ„ط¶ط®ظ….",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "4K Full-Frame 10.2MP Back-Illuminated Exmor R CMOS Sensor",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "DCI 4K 120p / 4K 60p / FHD 240p ظ…ط¹ 15+ ظˆظ‚ظپط© ط¯ظٹظ†ط§ظ…ظٹظƒظٹط© Dynamic Range",
+      "ظپظ„طھط± ND ط§ظ„ط¯ط§ط®ظ„ظٹ": "ظپظ„طھط± ND ط¥ظ„ظƒطھط±ظˆظ†ظٹ ظ…طھط؛ظٹط± ط«ظˆط±ظٹ ظ…ط¯ظ…ط¬ ظ…ظ† 1/4 ط­طھظ‰ 1/128 ND ط¨ظ„ظ…ط³ط© ط²ط±",
+      "ط§ظ„ظ…ط¯ظ‰ ط§ظ„ط¯ظٹظ†ط§ظ…ظٹظƒظٹ": "Base ISO ظ…ط²ط¯ظˆط¬ 800 ظˆ 12,800 ظ„ط­ط³ط§ط³ظٹط© ط®ظٹط§ظ„ظٹط© ظپظٹ ط§ظ„ط¸ظ„ط§ظ…",
+      "ط§ظ„ظ…ظ†ط§ظپط° ط§ظ„ط§ط­طھط±ط§ظپظٹط©": "12G-SDIطŒ HDMI ظƒط§ظ…ظ„طŒ ظ…ط®ط§ط±ط¬ طµظˆطھ XLR ظ…ط²ط¯ظˆط¬ط©طŒ TC In/Out",
+      "ط§ظ„ظˆط²ظ†": "890 ط¬ظ… ظپظ‚ط· (ط¬ط³ظ… ط§ظ„ظƒط§ظ…ظٹط±ط§ ط®ظپظٹظپ ط¬ط¯ط§ظ‹ ظ„ظ…ط«ط¨طھط§طھ ط§ظ„ط¬ظٹظ…ط¨ظ„)",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-108",
+    "name": "Canon EOS R50 18-45mm",
+    "nameEn": "Canon EOS R50 18-45mm",
+    "category": "cameras",
+    "brand": "Canon",
+    "price": 540,
+    "oldPrice": 580,
+    "rating": 4.8,
+    "reviewsCount": 73,
+    "stock": 6,
+    "badge": "ظˆظپط± $40",
+    "section": "trending",
+    "image": "images/cam_canon_r50.jpg",
+    "gallery": ["images/cam_canon_r50.jpg"],
+    "description": "ظƒط§ظ…ظٹط±ط§ ظƒط§ظ†ظˆظ† ط§ظ„ظ…ظٹط±ظˆط±ظ„ظٹط³ ط®ظپظٹظپط© ط§ظ„ظˆط²ظ† ظ„ظ„ظ…ط¨طھط¯ط¦ظٹظ† ظˆطµظ†ط§ط¹ ط§ظ„ظ…ط­طھظˆظ‰طŒ ظ…ط¹ ط¹ط¯ط³ط© RF-S 18-45mm ظˆطھط±ظƒظٹط² Dual Pixel CMOS AF II ظپط§ط¦ظ‚ ط§ظ„ط³ط±ط¹ط©.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "24.2MP APS-C CMOS Sensor",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "4K 30p ط¨ط¯ظ‚ط© 6K Oversampling ط¨ط¯ظˆظ† ط§ظ‚طھط·ط§ط¹ / FHD 120p",
+      "ظ†ط¸ط§ظ… ط§ظ„طھط±ظƒظٹط²": "Dual Pixel CMOS AF II ظٹط؛ط·ظٹ 100% ظ…ظ† ط§ظ„ظƒط§ط¯ط± ظ…ط¹ طھطھط¨ط¹ ط°ظƒظٹ",
+      "ط§ظ„ط´ط§ط´ط©": "ط´ط§ط´ط© ظ„ظ…ط³ 3.0 ط¨ظˆطµط© ظ…طھط؛ظٹط±ط© ط§ظ„ط²ظˆط§ظٹط§ Vari-Angle",
+      "ط§ظ„ط¹ط¯ط³ط© ط§ظ„ظ…ط±ظپظ‚ط©": "Canon RF-S 18-45mm f/4.5-6.3 IS STM",
+      "ط§ظ„ظˆط²ظ†": "375 ط¬ظ… ظ…ط¹ ط§ظ„ط¨ط·ط§ط±ظٹط©",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-111",
+    "name": "Canon EOS R8 Body",
+    "nameEn": "Canon EOS R8 Body",
+    "category": "cameras",
+    "brand": "Canon",
+    "price": 1050,
+    "oldPrice": 1100,
+    "rating": 4.9,
+    "reviewsCount": 54,
+    "stock": 5,
+    "badge": "ظˆظپط± $50",
+    "section": "trending",
+    "image": "images/cam_canon_r8.jpg",
+    "gallery": ["images/cam_canon_r8.jpg"],
+    "description": "ط£ط®ظپ ظƒط§ظ…ظٹط±ط§ ظپظ„ ظپط±ظٹظ… ظ…ظ† ظƒط§ظ†ظˆظ† ط¨ظ…ط³طھط´ط¹ط± 24.2MP ظ…ظ…ط§ط«ظ„ ظ„ظƒط§ظ…ظٹط±ط§ R6 Mark II ط§ظ„ط±ط§ط¦ط¯ط©طŒ ظˆطھطµظˆظٹط± ظپظٹط¯ظٹظˆ 4K 60p 10-Bit ظ…ط¹ ظƒظپط§ظ„ط© ط§ظ„ظˆظƒظٹظ„ ط³ظ†طھظٹظ†.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "24.2MP Full-Frame CMOS Sensor ظپط§ط¦ظ‚ ط§ظ„ط¬ظˆط¯ط©",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "4K 60p 10-Bit 4:2:2 ظ…ط¹ Canon Log 3 ظˆ 6K Oversampling ط¨ط¯ظ‚ط© ط³ظٹظ†ظ…ط§ط¦ظٹط©",
+      "ظ†ط¸ط§ظ… ط§ظ„طھط±ظƒظٹط²": "Dual Pixel CMOS AF II ظ…طھط·ظˆط± ظ…ط¹ ط§ظ„طھط¹ط±ظپ ط§ظ„طھظ„ظ‚ط§ط¦ظٹ ط¹ظ„ظ‰ ط§ظ„ط®ظٹظˆظ„ ظˆط§ظ„ط·ط§ط¦ط±ط§طھ ظˆط§ظ„ظ‚ط·ط§ط±ط§طھ",
+      "ط³ط±ط¹ط© ط§ظ„ط§ظ„طھظ‚ط§ط·": "ط­طھظ‰ 40 ط¥ط·ط§ط±ط§ظ‹ ظپظٹ ط§ظ„ط«ط§ظ†ظٹط© ط¨ط§ظ„ط´ط§طھط± ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹ",
+      "ط§ظ„ظˆط²ظ†": "461 ط¬ظ… ظپظ‚ط· (ط£ط®ظپ ظƒط§ظ…ظٹط±ط§ Full Frame ظپظٹ ظپط¦طھظ‡ط§)",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-115",
+    "name": "Canon EOS R6 Mark II Body",
+    "nameEn": "Canon EOS R6 Mark II Body",
+    "category": "cameras",
+    "brand": "Canon",
+    "price": 1600,
+    "oldPrice": 1680,
+    "rating": 4.9,
+    "reviewsCount": 81,
+    "stock": 4,
+    "badge": "ظˆظپط± $80",
+    "section": "trending",
+    "image": "images/cam_canon_r6ii.jpg",
+    "gallery": ["images/cam_canon_r6ii.jpg"],
+    "description": "ط§ظ„ظƒط§ظ…ظٹط±ط§ ط§ظ„ظ‡ط¬ظٹظ†ط© ط§ظ„ط´ط§ظ…ظ„ط© ط§ظ„ط£ظƒط«ط± ط·ظ„ط¨ط§ظ‹ ظ„ظ„ظ…ط­طھط±ظپظٹظ†: طھط«ط¨ظٹطھ ط¨طµط±ظٹ IBIS ط­طھظ‰ 8 ظˆظ‚ظپط§طھطŒ طھطµظˆظٹط± ظ…طھطھط§ط¨ط¹ 40fps ظˆظپظٹط¯ظٹظˆ 4K 60p ط¨ط¯ظˆظ† ط£ظٹ ط§ظ‚طھط·ط§ط¹.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "24.2MP Full-Frame CMOS Sensor ظ…ط·ظˆط±",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "4K 60p 10-Bit ط¨ط¯ظˆظ† ظƒط±ظˆط¨ ط¨طھط¬ظ…ظٹط¹ 6K / طھط³ط¬ظٹظ„ ط®ط§ط±ط¬ظٹ 6K RAW ط¹ط¨ط± HDMI",
+      "ظ…ط§ظ†ط¹ ط§ظ„ط§ظ‡طھط²ط§ط²": "طھط«ط¨ظٹطھ ط¨طµط±ظٹ ط¯ط§ط®ظ„ظٹ IBIS ظ…طھط·ظˆط± ظٹطµظ„ ط­طھظ‰ 8.0 ظˆظ‚ظپط§طھ ظ…ط¹ ط¹ط¯ط³ط§طھ RF ط§ظ„ظ…ط¹طھظ…ط¯ط©",
+      "ط§ظ„ط³ط±ط¹ط©": "40 ط¥ط·ط§ط±ط§ظ‹ ظپظٹ ط§ظ„ط«ط§ظ†ظٹط© ط¨ط§ظ„ط´ط§طھط± ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹ ظ…ط¹ طھطھط¨ط¹ ط§ظ„ظپظˆظƒط³ ظˆط§ظ„طھط¹ط±ظٹط¶ ط§ظ„ظƒط§ظ…ظ„",
+      "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©": "ظ…ظ†ظپط°ط§ظ† ظ…ط²ط¯ظˆط¬ط§ظ† ظ„ط¨ط·ط§ظ‚ط§طھ ط§ظ„ط°ط§ظƒط±ط© Dual SD UHS-II",
+      "ط§ظ„ظˆط²ظ†": "670 ط¬ظ…",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-119",
+    "name": "Canon EOS R5 Mark II Body",
+    "nameEn": "Canon EOS R5 Mark II Body",
+    "category": "cameras",
+    "brand": "Canon",
+    "price": 2770,
+    "oldPrice": 2850,
+    "rating": 4.9,
+    "reviewsCount": 58,
+    "stock": 3,
+    "badge": "ظˆظپط± $80",
+    "section": "trending",
+    "image": "images/cam_canon_r5ii.jpg",
+    "gallery": ["images/cam_canon_r5ii.jpg", "images/prod_canon_r5_white.jpg"],
+    "description": "ط§ظ„ط¹ظ…ظ„ط§ظ‚ ط§ظ„ط«ظˆط±ظٹ ط§ظ„ط¬ط¯ظٹط¯ ظ…ظ† ظƒط§ظ†ظˆظ† ط¨ظ…ط³طھط´ط¹ط± ظ…ظƒط¯ط³ 45MP ظˆظپظٹط¯ظٹظˆ 8K 60p RAW ط¯ط§ط®ظ„ظٹ ظˆظ†ط¸ط§ظ… طھط­ظƒظ… ط¨ظ†ظ‚ط·ط© ط§ظ„ظپظˆظƒط³ ط¨ظ†ط¸ط±ط© ط§ظ„ط¹ظٹظ† Eye Control AF.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "45MP Full-Frame Back-Illuminated Stacked CMOS Sensor ط«ظˆط±ظٹ",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "8K 60p RAW ط¯ط§ط®ظ„ظٹ / 4K 120p 10-Bit 4:2:2 / 4K 60p S-RAW ظ…ط¹ Canon Log 2 ظˆ 3",
+      "ظ†ط¸ط§ظ… ط§ظ„طھط±ظƒظٹط²": "Eye Control AF (ط§ظ„طھط­ظƒظ… ط¨ظ†ظ‚ط·ط© ط§ظ„ظپظˆظƒط³ ط¨ظ†ط¸ط±ط© ط§ظ„ط¹ظٹظ†) ظ…ط¹ ظ…ط¹ط§ظ„ط¬ Accelerated Capture",
+      "ظ…ط§ظ†ط¹ ط§ظ„ط§ظ‡طھط²ط§ط²": "طھط«ط¨ظٹطھ ط¨طµط±ظٹ ط¯ط§ط®ظ„ظٹ IBIS ظ…طھط·ظˆط± ظٹطµظ„ ط­طھظ‰ 8.5 ظˆظ‚ظپط§طھ",
+      "ط³ط±ط¹ط© ط§ظ„ط§ظ„طھظ‚ط§ط·": "30 ط¥ط·ط§ط±ط§ظ‹ ظپظٹ ط§ظ„ط«ط§ظ†ظٹط© ط¨ط§ظ„ط´ط§طھط± ط§ظ„ط¥ظ„ظƒطھط±ظˆظ†ظٹ ط¨ط¯ظˆظ† ط£ظٹ طھط¹طھظٹظ… Blackout-free",
+      "طھط±ظ‚ظٹط© ط§ظ„ط¯ظ‚ط©": "طھظ‚ظ†ظٹط© ط§ظ„طھظƒط¨ظٹط± ط¨ط§ظ„ط°ظƒط§ط، ط§ظ„ط§طµط·ظ†ط§ط¹ظٹ ط§ظ„ظ…ط¯ظ…ط¬ط© Neural Network Upscaling ط­طھظ‰ 179MP",
+      "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©": "ظ…ظ†ظپط° ط¨ط·ط§ظ‚ط© CFexpress Type B ظپط§ط¦ظ‚ ط§ظ„ط³ط±ط¹ط© + ظ…ظ†ظپط° SD UHS-II",
+      "ط§ظ„ظˆط²ظ†": "746 ط¬ظ…",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-122",
+    "name": "Canon EOS R5 C Cinema",
+    "nameEn": "Canon EOS R5 C Cinema",
+    "category": "cameras",
+    "brand": "Canon",
+    "price": 2300,
+    "oldPrice": 2380,
+    "rating": 4.9,
+    "reviewsCount": 48,
+    "stock": 4,
+    "badge": "ظˆظپط± $80",
+    "section": "trending",
+    "image": "images/cam_canon_r5c.jpg",
+    "gallery": ["images/cam_canon_r5c.jpg"],
+    "description": "ظƒط§ظ…ظٹط±ط§ ظƒط§ظ†ظˆظ† ط§ظ„ظ‡ط¬ظٹظ†ط© ط§ظ„ظ…ط¹طھظ…ط¯ط© ظ…ظ† Netflix: طھط¬ظ…ط¹ ط¨ظٹظ† ظƒط§ظ…ظٹط±ط§ طھطµظˆظٹط± ظپظˆطھظˆط؛ط±ط§ظپظٹ 45MP ظˆظƒط§ظ…ظٹط±ط§ ط³ظٹظ†ظ…ط§ ط±ط³ظ…ظٹط© Cinema EOS ظ…ط¹ طھط¨ط±ظٹط¯ ظ†ط´ط· ظˆظپظٹط¯ظٹظˆ 8K 60p.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "45MP Full-Frame CMOS Sensor ظ‡ط¬ظٹظ† ظپظˆطھظˆط؛ط±ط§ظپظٹ ظˆط³ظٹظ†ظ…ط§ط¦ظٹ ط±ط³ظ…ظٹ Cinema EOS",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "8K 60p 12-Bit Cinema RAW Light ط¯ط§ط®ظ„ظٹ / 4K 120p 10-Bit 4:2:2 ط¨ط¯ظˆظ† ط§ظ‚طھط·ط§ط¹",
+      "ظ†ط¸ط§ظ… ط§ظ„طھط¨ط±ظٹط¯": "ظ…ط±ظˆط­ط© طھط¨ط±ظٹط¯ ظ…ط¯ظ…ط¬ط© Active Cooling ظ„ظ„طھط³ط¬ظٹظ„ ط§ظ„ظ…ط³طھظ…ط± ط¨ط¯ظˆظ† طھظˆظ‚ظپ",
+      "ظ†ط¸ط§ظ… ط§ظ„طھط´ط؛ظٹظ„": "ظ†ط¸ط§ظ… طھط´ط؛ظٹظ„ ظ…ط²ط¯ظˆط¬: ظˆط§ط¬ظ‡ط© Cinema EOS ظ„ظ„ظپظٹط¯ظٹظˆ ظˆظˆط§ط¬ظ‡ط© EOS R ظ„ظ„ظپظˆطھظˆط؛ط±ط§ظپ",
+      "ط§ظ„ظ…ظ†ط§ظپط° ظˆط§ظ„ط°ط§ظƒط±ط©": "ظ…ظ†ظپط° CFexpress Type B ط¹ط§ظ„ظٹ ط§ظ„ط³ط±ط¹ط© + ظ…ظ†ظپط° SD UHS-II",
+      "ط§ظ„ظˆط²ظ†": "770 ط¬ظ…",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+  {
+    "id": "CAM-123",
+    "name": "Canon PowerShot G7X III",
+    "nameEn": "Canon PowerShot G7X III",
+    "category": "cameras",
+    "brand": "Canon",
+    "price": 1100,
+    "oldPrice": 1150,
+    "rating": 4.9,
+    "reviewsCount": 68,
+    "stock": 10,
+    "badge": "ظˆظپط± $50",
+    "section": "trending",
+    "image": "images/cam_canon_g7xiii.jpg",
+    "gallery": ["images/cam_canon_g7xiii.jpg"],
+    "description": "ظƒط§ظ…ظٹط±ط§ ط§ظ„ط¬ظٹط¨ ط§ظ„ط£ط³ط·ظˆط±ظٹط© ظ„طµظ†ط§ط¹ ط§ظ„ظپظ„ظˆط¬ط§طھ ظˆظ…ظ‚ط§ط·ط¹ طھظٹظƒ طھظˆظƒ ظˆظٹظˆطھظٹظˆط¨طŒ ط¨ط¹ط¯ط³ط© f/1.8-2.8 ط³ط±ظٹط¹ط© ظˆط¨ط« ظ…ط¨ط§ط´ط± ظ…ط¯ظ…ط¬ ظˆظ…ط¯ط®ظ„ ظ…ط§ظٹظƒ ط®ط§ط±ط¬ظٹ.",
+    "specs": {
+      "ط§ظ„ظ…ط³طھط´ط¹ط±": "20.1MP 1.0-inch Stacked CMOS Sensor ط§ظ„ظ…ظپط¶ظ„ ظ„طµظ†ط§ط¹ ط§ظ„ظ…ط­طھظˆظ‰ ظˆط§ظ„ظٹظˆطھظٹظˆط¨",
+      "ط§ظ„ط¹ط¯ط³ط©": "ط¹ط¯ط³ط© ظƒط§ظ†ظˆظ† ط³ط±ظٹط¹ط© 24-100mm f/1.8-2.8 ظ…ط¹ طھظ‚ط±ظٹط¨ ط¨طµط±ظٹ 4.2x ظˆظ…ط«ط¨طھ ط¨طµط±ظٹ",
+      "ط§ظ„ظپظٹط¯ظٹظˆ": "4K 30p ط¨ط¯ظˆظ† ظƒط±ظˆط¨ / Full HD 120p / ط¯ط¹ظ… ط§ظ„ط¨ط« ط§ظ„ظ…ط¨ط§ط´ط± ط¹ظ„ظ‰ YouTube Live",
+      "ط§ظ„طµظˆطھ": "ظ…ط¯ط®ظ„ ظ…ط§ظٹظƒط±ظˆظپظˆظ† ط®ط§ط±ط¬ظٹ 3.5 ظ…ظ„ظ… ظ„طھط³ط¬ظٹظ„ طµظˆطھ ط§ط­طھط±ط§ظپظٹ",
+      "ط§ظ„ط´ط§ط´ط©": "ط´ط§ط´ط© ظ„ظ…ط³ طھط±طھظپط¹ 180 ط¯ط±ط¬ط© ظ„ظ„ط£ط¹ظ„ظ‰ ظ„طھطµظˆظٹط± ط§ظ„ط³ظٹظ„ظپظٹ ظˆط§ظ„ظپظ„ظˆط¬ط§طھ",
+      "ط³ط±ط¹ط© ط§ظ„ط§ظ„طھظ‚ط§ط·": "طھطµظˆظٹط± ظ…طھطھط§ط¨ط¹ ط­طھظ‰ 30 ط¥ط·ط§ط±ط§ظ‹ ظپظٹ ط§ظ„ط«ط§ظ†ظٹط© ظپظٹ ظˆط¶ط¹ RAW Burst",
+      "ط§ظ„ظˆط²ظ†": "304 ط¬ظ… ظپظ‚ط· (ط­ط¬ظ… ط§ظ„ط¬ظٹط¨)",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ط±ط³ظ…ظٹط© ط³ظ†طھظٹظ† ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ظ…ط¹طھظ…ط¯"
+    }
+  },
+
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 2. LENSES & FILTERS (6 Authentic Lenses & Filters) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "LEN-018",
+    "name": "SONY FE 16-35mm F2.8 GM II",
+    "nameEn": "SONY FE 16-35mm F2.8 GM II",
+    "category": "filters",
+    "brand": "Sony",
+    "price": 1780,
+    "oldPrice": 1850,
+    "rating": 5.0,
+    "reviewsCount": 38,
+    "stock": 4,
+    "badge": "G Master II",
+    "image": "images/prod_sony_1635_gm2.jpg",
+    "gallery": ["images/prod_sony_1635_gm2.jpg", "images/prod_sony_1635_gm2_angle2.jpg", "images/prod_sony_1635_gm2_angle3.jpg"],
+    "description": "ط¹ط¯ط³ط© ط²ط§ظˆظٹط© ط¹ط±ظٹط¶ط© ط§ط­طھط±ط§ظپظٹط© ط®ظپظٹظپط© ط§ظ„ظˆط²ظ† ظ…ظ† ط³ظˆظ†ظٹ ظ…ط¹ ط­ظ„ظ‚ط© ظپطھط­ط© ظ…ظٹظƒط§ظ†ظٹظƒظٹط© ظˆظپظˆظƒط³ ط®ط·ظٹ XD ظ…طھط·ظˆط± ظ„ظ„ط³ظٹظ†ظ…ط§ ظˆط§ظ„ظپظˆطھظˆط؛ط±ط§ظپ.",
+    "specs": {
+      "ط§ظ„ط¨ط¹ط¯ ط§ظ„ط¨ط¤ط±ظٹ": "16-35mm Full-Frame",
+      "ظپطھط­ط© ط§ظ„ط¹ط¯ط³ط©": "F2.8 ط«ط§ط¨طھط© ظ…ط¹ 11 ط´ظپط±ط© ط¯ط§ط¦ط±ظٹط©",
+      "ط§ظ„ظ…ط­ط±ظƒ": "4 ظ…ط­ط±ظƒط§طھ ط®ط·ظٹط© XD Linear Motors ظپط§ط¦ظ‚ط© ط§ظ„ظ‡ط¯ظˆط،",
+      "ط§ظ„ظˆط²ظ†": "547 ط¬ظ… (ط£ط®ظپ ط¨ظ†ط³ط¨ط© 20% ظ…ظ† ط§ظ„ط¬ظٹظ„ ط§ظ„ط£ظˆظ„)",
+      "ظ‚ط·ط± ط§ظ„ظپظ„طھط±": "82mm"
+    }
+  },
+  {
+    "id": "LEN-020",
+    "name": "SONY FE 70-200mm F2.8 GM OSS II",
+    "nameEn": "SONY FE 70-200mm F2.8 GM OSS II",
+    "category": "filters",
+    "brand": "Sony",
+    "price": 2040,
+    "oldPrice": 2100,
+    "rating": 5.0,
+    "reviewsCount": 62,
+    "stock": 3,
+    "badge": "طھظ„ظٹ ظپظˆطھظˆ ظپط§ط¦ظ‚",
+    "image": "images/prod_sony_70200_gm2.jpg",
+    "gallery": ["images/prod_sony_70200_gm2.jpg", "images/prod_sony_70200_gm2_angle2.jpg"],
+    "description": "ط£ط®ظپ ظˆط£ط¯ظ‚ ط¹ط¯ط³ط© 70-200mm F2.8 ظپظٹ ط§ظ„ط¹ط§ظ„ظ…طŒ طھظ…ظ†ط­ظƒ ط­ط¯ط© ط¨طµط±ظٹط© ط®ظٹط§ظ„ظٹط© ظˆط¹ط²ظ„ ط¨ظˆظƒظٹظ‡ ظ…ط°ظ‡ظ„ ظˆطھط«ط¨ظٹطھ ط¨طµط±ظٹ ظ…طھظ‚ط¯ظ… OSS.",
+    "specs": {
+      "ط§ظ„ط¨ط¹ط¯ ط§ظ„ط¨ط¤ط±ظٹ": "70-200mm Telephoto Zoom",
+      "ظپطھط­ط© ط§ظ„ط¹ط¯ط³ط©": "F2.8 ط«ط§ط¨طھط© ط¹ظ„ظ‰ ظƒط§ظ…ظ„ ط§ظ„ظ…ط¯ظ‰",
+      "ط§ظ„ظ…ط«ط¨طھ ط§ظ„ط¨طµط±ظٹ": "Optical SteadyShot ط¨ط«ظ„ط§ط«ط© ط£ظˆط¶ط§ط¹ ظ…ط®طھظ„ظپط©",
+      "ط§ظ„ظˆط²ظ†": "1,045 ط¬ظ… (ط£ط®ظپ ط¨ظ†ط³ط¨ط© 29% ظ…ظ† ط§ظ„ط¬ظٹظ„ ط§ظ„ط³ط§ط¨ظ‚)",
+      "ظ‚ط·ط± ط§ظ„ظپظ„طھط±": "77mm"
+    }
+  },
+  {
+    "id": "LEN-024",
+    "name": "SONY FE 24-70mm F2.8 GM II",
+    "nameEn": "SONY FE 24-70mm F2.8 GM II",
+    "category": "filters",
+    "brand": "Sony",
+    "price": 1650,
+    "oldPrice": 1720,
+    "rating": 5.0,
+    "reviewsCount": 110,
+    "stock": 6,
+    "badge": "ط§ظ„ط£ظƒط«ط± ط·ظ„ط¨ط§ظ‹",
+    "image": "images/prod_sony_2470_gm2.png",
+    "gallery": ["images/prod_sony_2470_gm2.png"],
+    "description": "ط§ظ„ط¹ط¯ط³ط© ط§ظ„ظ‚ظٹط§ط³ظٹط© ط§ظ„ط±ط§ط¦ط¯ط© ظ„ط³ظˆظ†ظٹ G Master IIطŒ ط­ط§ط¯ط© ظƒط§ظ„ط³ظƒظٹظ† ظ…ط¹ ط£طµط؛ط± ط­ط¬ظ… ظ…ظ…ظƒظ† ظˆطھطµظ…ظٹظ… ظ…ظ‚ط§ظˆظ… ظ„ط¬ظ…ظٹط¹ ط§ظ„ط¸ط±ظˆظپ ط§ظ„ط¬ظˆظٹط©.",
+    "specs": {
+      "ط§ظ„ط¨ط¹ط¯ ط§ظ„ط¨ط¤ط±ظٹ": "24-70mm Standard Zoom",
+      "ظپطھط­ط© ط§ظ„ط¹ط¯ط³ط©": "F2.8 ط«ط§ط¨طھط©",
+      "ط­ظ„ظ‚ط© ط§ظ„ظپطھط­ط©": "ط­ظ„ظ‚ط© ظپطھط­ط© ظ…ط³طھظ‚ظ„ط© ظ…ط¹ ظ…ظپطھط§ط­ De-click ظ„طھطµظˆظٹط± ط§ظ„ظپظٹط¯ظٹظˆ ط§ظ„ط³ظ„ط³",
+      "ط§ظ„ظˆط²ظ†": "695 ط¬ظ… ظپظ‚ط·",
+      "ظ‚ط·ط± ط§ظ„ظپظ„طھط±": "82mm"
+    }
+  },
+  {
+    "id": "LEN-035",
+    "name": "SONY FE 35mm F1.4 GM",
+    "nameEn": "SONY FE 35mm F1.4 GM",
+    "category": "filters",
+    "brand": "Sony",
+    "price": 1150,
+    "oldPrice": 1200,
+    "rating": 4.9,
+    "reviewsCount": 45,
+    "stock": 3,
+    "badge": "ط¹ط¯ط³ط© ط¨ط±ط§ظٹظ… ط³ظٹظ†ظ…ط§",
+    "image": "images/prod_sony_35_14gm.jpg",
+    "gallery": ["images/prod_sony_35_14gm.jpg", "images/prod_sony_35_14gm_angle2.jpg"],
+    "description": "ط¹ط¯ط³ط© ط¨ط±ط§ظٹظ… ط³ظٹظ†ظ…ط§ط¦ظٹط© 35mm ظ…ظ† ظپط¦ط© G Master ط¨ظپطھط­ط© F1.4 ظ‡ط§ط¦ظ„ط© ظˆط¹ط²ظ„ ظ…ط°ظ‡ظ„ ظپظٹ ط§ظ„ط¥ط¶ط§ط،ط© ط§ظ„ط®ط§ظپطھط© ظ…ط¹ ط­ط¯ط© ط§ط³طھط«ظ†ط§ط¦ظٹط©.",
+    "specs": {
+      "ط§ظ„ط¨ط¹ط¯ ط§ظ„ط¨ط¤ط±ظٹ": "35mm Prime Lens",
+      "ظپطھط­ط© ط§ظ„ط¹ط¯ط³ط©": "F1.4 ط³ط±ظٹط¹ط© ط¬ط¯ط§ظ‹",
+      "ط§ظ„ط¹ظ†ط§طµط± ط§ظ„ط¨طµط±ظٹط©": "ط¹ظ†طµط±ط§ظ† XA ظپط§ط¦ظ‚ط§ظ† ظ„ظ„ط¯ظ‚ط© ظˆط§ظ„ط­ط¯ط©",
+      "ط§ظ„ظˆط²ظ†": "524 ط¬ظ…",
+      "ظ‚ط·ط± ط§ظ„ظپظ„طھط±": "67mm"
+    }
+  },
+  {
+    "id": "LEN-036",
+    "name": "SIGMA 24-70mm F2.8 DG DN Art (Sony E)",
+    "nameEn": "SIGMA 24-70mm F2.8 DG DN Art (Sony E)",
+    "category": "filters",
+    "brand": "Sigma",
+    "price": 880,
+    "oldPrice": 940,
+    "rating": 4.9,
+    "reviewsCount": 78,
+    "stock": 5,
+    "badge": "ط³ظ„ط³ظ„ط© Art ط§ظ„ط´ظ‡ظٹط±ط©",
+    "image": "images/prod_sigma_2470_art.jpg",
+    "gallery": ["images/prod_sigma_2470_art.jpg", "images/prod_sigma_2470_art_angle2.jpg", "images/prod_sigma_2470_art_angle3.jpg", "images/prod_sigma_2470_art_angle4.jpg"],
+    "description": "ط£ط³ط·ظˆط±ط© ط³ظٹط¬ظ…ط§ ظپظٹ ظپط¦ط© ط§ظ„ظ€ 24-70mm Art ط¨ظƒظپط§ط،ط© ط¨طµط±ظٹط© ط®ط§ط±ظ‚ط© ظˆط£ظ„ظˆط§ظ† ظˆط§ظ‚ط¹ظٹط© ظ…ط¹ ظ…ط§ظ†طھ ط³ظˆظ†ظٹ E-Mount ط§ظ„ط£طµظ„ظٹ.",
+    "specs": {
+      "ط§ظ„ط¨ط¹ط¯ ط§ظ„ط¨ط¤ط±ظٹ": "24-70mm",
+      "ظپطھط­ط© ط§ظ„ط¹ط¯ط³ط©": "F2.8 ط«ط§ط¨طھط©",
+      "ط§ظ„ظ…ط§ظ†طھ": "Sony E-Mount Full-Frame",
+      "ط§ظ„ظˆط²ظ†": "835 ط¬ظ…",
+      "ظ‚ط·ط± ط§ظ„ظپظ„طھط±": "82mm"
+    }
+  },
+  {
+    "id": "FLT-001",
+    "name": "PolarPro Peter McKinnon VND II (82mm)",
+    "nameEn": "PolarPro Peter McKinnon VND II (82mm)",
+    "category": "filters",
+    "brand": "PolarPro",
+    "price": 249,
+    "oldPrice": 279,
+    "rating": 5.0,
+    "reviewsCount": 92,
+    "stock": 8,
+    "badge": "ظپظ„طھط± ND ظ…طھط؛ظٹط±",
+    "image": "images/prod_polarpro_vnd.jpg",
+    "gallery": ["images/prod_polarpro_vnd.jpg"],
+    "description": "ط£ظپط¶ظ„ ظپظ„طھط± ND ظ…طھط؛ظٹط± ظپظٹ ط§ظ„ط¹ط§ظ„ظ… ط¨طھظˆظ‚ظٹط¹ ط¨ظٹطھط± ظ…ط§ظƒظٹظ†ظˆظ† ظˆط²ط¬ط§ط¬ ط£ظ„ظ…ط§ظ†ظٹ ظ…ط·ظ„ظٹ ظٹظ…ظ†ط¹ ط¸ظ‡ظˆط± ط¹ظ„ط§ظ…ط© X ط§ظ„ط§ط³طھظ‚ط·ط§ط¨ظٹط© طھظ…ط§ظ…ط§ظ‹.",
+    "specs": {
+      "ط§ظ„ظ‚ط·ط±": "82mm ظ…ط¹ ط¥ظ…ظƒط§ظ†ظٹط© ط§ط³طھط®ط¯ط§ظ… ط­ظ„ظ‚ط§طھ طھط­ظˆظٹظ„ Step-up",
+      "ظ…ط¯ظ‰ ط§ظ„طھط¹طھظٹظ…": "2-5 Stops (ND4 ط¥ظ„ظ‰ ND32)",
+      "ط§ظ„ظ…ط§ط¯ط©": "ط¥ط·ط§ط± ظ…ظ† ط§ظ„ط£ظ„ظˆظ…ظ†ظٹظˆظ… ط§ظ„ظ…ط³طھط®ط¯ظ… ظپظٹ طµظ†ط§ط¹ط© ط§ظ„ط·ط§ط¦ط±ط§طھ ظ…ط¹ ط²ط¬ط§ط¬ ظƒظˆط§ط±طھط² ط¨طµط±ظٹ",
+      "ط§ظ„طھط­ظƒظ…": "ظ†ظ‚ط§ط· طھظˆظ‚ظپ ظ„ظ…ط³ظٹط© Haptic Feedback ط¹ظ†ط¯ ظƒظ„ ظˆظ‚ظپط©"
+    }
+  },
+
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 3. LIGHTING (4 Authentic Studio Lights & Flashes) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "LGT-148",
+    "name": "Godox SL60II-Bi Bi-Color LED Video Light",
+    "nameEn": "Godox SL60II-Bi Bi-Color LED Video Light",
+    "category": "lighting",
+    "brand": "Godox",
+    "price": 120,
+    "oldPrice": 135,
+    "rating": 4.9,
+    "reviewsCount": 49,
+    "stock": 12,
+    "badge": "ط¥ط¶ط§ط،ط© ط§ط³طھظˆط¯ظٹظˆ ظ…طھط؛ظٹط±ط©",
+    "image": "images/prod_godox_sl60iibi.jpg",
+    "gallery": ["images/prod_godox_sl60iibi.jpg", "images/prod_godox_sl60iibi_angle2.jpg", "images/prod_godox_sl60iibi_angle3.jpg", "images/prod_godox_sl60iibi_angle4.jpg"],
+    "description": "ط¥ط¶ط§ط،ط© ط§ط³طھظˆط¯ظٹظˆ ظ…ط³طھظ…ط±ط© ظ…طھط؛ظٹط±ط© ط­ط±ط§ط±ط© ط§ظ„ظ„ظˆظ† 2800K-6500K ظ…ط¹ طھط­ظƒظ… ظƒط§ظ…ظ„ ط¨ط§ظ„ط¨ظ„ظˆطھظˆط« ظˆطھط·ط¨ظٹظ‚ Godox Light ظˆظ…ط´طھطھ ط¨ظˆظٹظ†ط² ظ‚ظٹط§ط³ظٹ.",
+    "specs": {
+      "ط§ظ„ظ‚ط¯ط±ط©": "70W ط¥ط¶ط§ط،ط© LED ظ…ط³طھظ…ط±ط© ظپط§ط¦ظ‚ط© ط§ظ„ظ‡ط¯ظˆط،",
+      "ط­ط±ط§ط±ط© ط§ظ„ظ„ظˆظ†": "2800K - 6500K Bi-Color",
+      "ط¯ظ‚ط© ط§ظ„ط£ظ„ظˆط§ظ†": "CRI 96+ / TLCI 97+",
+      "ط§ظ„ظ…ط§ظ†طھ": "Bowens Mount ط§ظ„ظ‚ظٹط§ط³ظٹ ظ„طھط±ظƒظٹط¨ ط¬ظ…ظٹط¹ ط£ظ†ظˆط§ط¹ ط§ظ„ط³ظˆظپطھ ط¨ظˆظƒط³",
+      "ط§ظ„طھط­ظƒظ…": "طھط·ط¨ظٹظ‚ Godox Light ط¹ط¨ط± Bluetooth"
+    }
+  },
+  {
+    "id": "LGT-149",
+    "name": "Godox SL100D Daylight LED Video Light",
+    "nameEn": "Godox SL100D Daylight LED Video Light",
+    "category": "lighting",
+    "brand": "Godox",
+    "price": 140,
+    "oldPrice": 155,
+    "rating": 4.9,
+    "reviewsCount": 35,
+    "stock": 10,
+    "badge": "ط³ط·ظˆط¹ ط¹ط§ظ„ظٹ 100W",
+    "image": "images/prod_godox_sl100d.jpg",
+    "gallery": ["images/prod_godox_sl100d.jpg"],
+    "description": "ط¥ط¶ط§ط،ط© COB ظ‚ظˆظٹط© 100 ظˆط§ط· ط¨ط¶ظˆط، ظ†ظ‡ط§ط±ظٹ ظ†ظ‚ظٹ 5600KطŒ ظ…ظ…طھط§ط²ط© ظ„طھطµظˆظٹط± ظ…ظ‚ط§ط¨ظ„ط§طھ ط§ظ„ظٹظˆطھظٹظˆط¨ ظˆط§ظ„ظ…ظ†طھط¬ط§طھ ظˆط¥ط¶ط§ط،ط© ط§ظ„ط§ط³طھظˆط¯ظٹظˆ ط§ظ„ط±ط¦ظٹط³ظٹط©.",
+    "specs": {
+      "ط§ظ„ظ‚ط¯ط±ط©": "100W ظ…ط¹ ط¥ط¶ط§ط،ط© ط­طھظ‰ 32,100 Lux ط¹ظ„ظ‰ ظ…ط³ط§ظپط© 1 ظ…طھط±",
+      "ط­ط±ط§ط±ط© ط§ظ„ظ„ظˆظ†": "5600K Daylight ط¯ظ‚ظٹظ‚ط© ظˆط«ط§ط¨طھط©",
+      "ظ…ط¤ط´ط± ظ†ظ‚ط§ط، ط§ظ„ظ„ظˆظ†": "CRI 96 / TLCI 97",
+      "ط§ظ„ظ…ط¤ط«ط±ط§طھ": "8 طھط£ط«ظٹط±ط§طھ ط¥ط¶ط§ط،ط© ط³ظٹظ†ظ…ط§ط¦ظٹط© ظ…ط¯ظ…ط¬ط© (ط¨ط±ظ‚طŒ ظپظ„ط§ط´طŒ ط´ط§ط´ط©طŒ ط¥ظ„ط®)",
+      "ط§ظ„ظ…ط§ظ†طھ": "Bowens Mount ط¹ط§ظ„ظ…ظٹ"
+    }
+  },
+  {
+    "id": "LGT-195",
+    "name": "Godox V1 Round Head Camera Flash",
+    "nameEn": "Godox V1 Round Head Camera Flash",
+    "category": "lighting",
+    "brand": "Godox",
+    "price": 195,
+    "oldPrice": 220,
+    "rating": 4.9,
+    "reviewsCount": 61,
+    "stock": 8,
+    "badge": "ظپظ„ط§ط´ ط±ط£ط³ ط¯ط§ط¦ط±ظٹ",
+    "image": "images/prod_godox_v1.jpg",
+    "gallery": ["images/prod_godox_v1.jpg"],
+    "description": "ط§ظ„ظپظ„ط§ط´ ط§ظ„ط§ط­طھط±ط§ظپظٹ ط¨ط±ط£ط³ ط¯ط§ط¦ط±ظٹ ظٹظ…ظ†ط­ طھظˆط²ظٹط¹ ط¶ظˆط، ظ†ط§ط¹ظ… ظˆطھط¯ط±ظٹط¬ظٹ ظƒط¥ط¶ط§ط،ط© ط§ظ„ط§ط³طھظˆط¯ظٹظˆ ظ…ط¹ ط¨ط·ط§ط±ظٹط© ظ„ظٹط«ظٹظˆظ… 2600mAh طھط¯ظˆظ… 480 ظˆظ…ط¶ط© ط¨ظ‚ظˆط© ظƒط§ظ…ظ„ط©.",
+    "specs": {
+      "ط§ظ„ظ‚ط¯ط±ط©": "76Ws ظ…ط¹ ط±ط£ط³ ط¯ط§ط¦ط±ظٹ ظˆظ…ظˆط²ط¹ ظ…ط؛ظ†ط§ط·ظٹط³ظٹ",
+      "ط§ظ„ط¨ط·ط§ط±ظٹط©": "ط¨ط·ط§ط±ظٹط© ظ„ظٹط«ظٹظˆظ… ظ‚ط§ط¨ظ„ط© ظ„ظ„ط´ط­ظ† 7.2V / 2600mAh",
+      "ط³ط±ط¹ط© ط§ظ„ط´ط­ظ†": "1.5 ط«ط§ظ†ظٹط© ظ„ط¥ط¹ط§ط¯ط© ط§ظ„ط´ط­ظ† ط¹ظ†ط¯ ط§ظ„ظ‚ظˆط© ط§ظ„ظƒط§ظ…ظ„ط©",
+      "ط§ظ„ظ„ط§ط³ظ„ظƒظٹ": "ظ†ط¸ط§ظ… Godox 2.4G X System ط§ظ„ظ…ط¯ظ…ط¬ ظ„ظ„ط¥ط±ط³ط§ظ„ ظˆط§ظ„ط§ط³طھظ‚ط¨ط§ظ„",
+      "ط§ظ„ظ…ظٹط²ط§طھ": "ط¯ط¹ظ… TTL ظˆ HSS ط­طھظ‰ 1/8000 ط«ط§ظ†ظٹط©"
+    }
+  },
+  {
+    "id": "LGT-201",
+    "name": "Godox Litemons LA150D Daylight LED Light",
+    "nameEn": "Godox Litemons LA150D Daylight LED Light",
+    "category": "lighting",
+    "brand": "Godox",
+    "price": 175,
+    "oldPrice": 195,
+    "rating": 4.8,
+    "reviewsCount": 27,
+    "stock": 6,
+    "badge": "ط¥ط¶ط§ط،ط© ظ‚ظˆظٹط© 150W",
+    "image": "images/godox_la150d_extracted.jpg",
+    "gallery": ["images/godox_la150d_extracted.jpg"],
+    "description": "ظˆط­ط¯ط© ط¥ط¶ط§ط،ط© ظ…ط¯ظ…ط¬ط© ظˆط®ظپظٹظپط© ط§ظ„ظˆط²ظ† ط¨ظ‚ط¯ط±ط© 150 ظˆط§ط· ط¨ط³ط·ظˆط¹ ظ‡ط§ط¦ظ„ ظٹطµظ„ ط¥ظ„ظ‰ 84,800 Lux ظ…ط¹ ط¹ط§ظƒط³طŒ ظ…ط«ط§ظ„ظٹط© ظ„ظ„طھطµظˆظٹط± ط§ظ„ط§ط­طھط±ط§ظپظٹ ط§ظ„ظ…ظٹط¯ط§ظ†ظٹ.",
+    "specs": {
+      "ط§ظ„ظ‚ط¯ط±ط©": "150W Daylight 5600K",
+      "ط§ظ„ط³ط·ظˆط¹": "84,800 Lux @ 1m ظ…ط¹ ط§ظ„ط¹ط§ظƒط³ ط§ظ„ظ…ط±ظپظ‚",
+      "ط¯ظ‚ط© ط§ظ„ط£ظ„ظˆط§ظ†": "CRI 96+ / TLCI 97+",
+      "ط§ظ„طھط­ظƒظ…": "طھط·ط¨ظٹظ‚ Godox Light ط¹ط¨ط± ط§ظ„ظ‡ط§طھظپ",
+      "ط§ظ„ظ…ط§ظ†طھ": "Bowens Mount ط§ظ„ظ‚ظٹط§ط³ظٹ"
+    }
+  },
+
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 4. AUDIO (6 Authentic Microphones) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "AUD-042",
+    "name": "RODE Wireless GO II Dual Wireless Mic",
+    "nameEn": "RODE Wireless GO II Dual Wireless Mic",
+    "category": "audio",
+    "brand": "RODE",
+    "price": 220,
+    "oldPrice": 240,
+    "rating": 4.9,
+    "reviewsCount": 140,
+    "stock": 9,
+    "badge": "ط§ظ„ط£ظƒط«ط± ظ…ط¨ظٹط¹ط§ظ‹ ظپظٹ ط§ظ„ط¹ط§ظ„ظ…",
+    "image": "images/prod_rode_wigo2.png",
+    "gallery": ["images/prod_rode_wigo2.png"],
+    "description": "ط§ظ„ظ†ط¸ط§ظ… ط§ظ„ظ„ط§ط³ظ„ظƒظٹ ط§ظ„ظ…ط²ط¯ظˆط¬ ط§ظ„ط£ط´ظ‡ط± ظ„طµظ†ط§ط¹ ط§ظ„ظ…ط­طھظˆظ‰ ظ…ط¹ ظ…ظٹظƒط±ظˆظپظˆظ†ط§طھ ظ…ط¯ظ…ط¬ط© ظˆطھط³ط¬ظٹظ„ ط¯ط§ط®ظ„ظٹ ظ…ط¯ظ…ط¬ On-Board Recording ط­طھظ‰ 40 ط³ط§ط¹ط©.",
+    "specs": {
+      "ط§ظ„ظ‚ظ†ظˆط§طھ": "ط¬ظ‡ط§ط² ط§ط³طھظ‚ط¨ط§ظ„ ظ…ط²ط¯ظˆط¬ ط§ظ„ظ‚ظ†ط§ط© + 2 ط£ط¬ظ‡ط²ط© ط¥ط±ط³ط§ظ„ ط¨ظ…ظٹظƒط±ظˆظپظˆظ† ظ…ط¯ظ…ط¬",
+      "ط§ظ„ظ…ط¯ظ‰": "ط­طھظ‰ 200 ظ…طھط± ظپظٹ ط®ط· ط§ظ„ط±ط¤ظٹط© ظ…ط¹ ظ†ظ‚ظ„ ط±ظ‚ظ…ظٹ Series IV 2.4GHz ظ…ط´ظپط±",
+      "ط§ظ„طھط³ط¬ظٹظ„ ط§ظ„ط¯ط§ط®ظ„ظٹ": "ط£ظƒط«ط± ظ…ظ† 40 ط³ط§ط¹ط© طھط³ط¬ظٹظ„ ط¯ط§ط®ظ„ظٹ ط¹ظ„ظ‰ ظƒظ„ ظ…ط±ط³ظ„ ظ„ظ„ط­ظ…ط§ظٹط© ظ…ظ† ط§ظ†ظ‚ط·ط§ط¹ ط§ظ„ط¥ط´ط§ط±ط©",
+      "ط§ظ„طھظˆطµظٹظ„": "ظ…ط®ط±ط¬ 3.5mm TRS ظˆظ…ط®ط±ط¬ USB-C ظ…ط¨ط§ط´ط± ظ„ظ„ظ‡ظˆط§طھظپ ظˆط£ط¬ظ‡ط²ط© ط§ظ„ظƒظ…ط¨ظٹظˆطھط±"
+    }
+  },
+  {
+    "id": "AUD-043",
+    "name": "RODE Wireless PRO Dual Channel 32-Bit Float",
+    "nameEn": "RODE Wireless PRO Dual Channel 32-Bit Float",
+    "category": "audio",
+    "brand": "RODE",
+    "price": 320,
+    "oldPrice": 350,
+    "rating": 5.0,
+    "reviewsCount": 78,
+    "stock": 6,
+    "badge": "طھط³ط¬ظٹظ„ 32-Bit ط¨ط¯ظˆظ† طھط´ظˆظٹط´",
+    "image": "images/prod_rode_wireless_pro.png",
+    "gallery": ["images/prod_rode_wireless_pro.png"],
+    "description": "ط£ظ‚ظˆظ‰ ظ†ط¸ط§ظ… طµظˆطھ ظ„ط§ط³ظ„ظƒظٹ ط³ظٹظ†ظ…ط§ط¦ظٹ ط¨طھظ‚ظ†ظٹط© 32-bit Float On-Board ط§ظ„طھظٹ طھط³طھط­ظٹظ„ ظپظٹظ‡ط§ ط²ظٹط§ط¯ط© ط§ظ„طµظˆطھ ظˆط§ظ„طھط´ظˆظٹط´طŒ ظ…ط¹ Timecode ظˆظ…ط²ط§ظ…ظ†ط© ظƒط§ظ…ظ„ط©.",
+    "specs": {
+      "طھظ‚ظ†ظٹط© ط§ظ„طھط³ط¬ظٹظ„": "32-Bit Float On-Board Recording ظ„ط§ ظٹظ…ظƒظ† ط£ظ† ظٹط­طµظ„ ط¨ظ‡ط§ Clipping طµظˆطھظٹ",
+      "ط§ظ„طھط²ط§ظ…ظ†": "ظ…ظˆظ„ط¯ Timecode ظ…ط¯ظ…ط¬ ظ„ظ…ط²ط§ظ…ظ†ط© ط§ظ„طµظˆطھ ظ…ط¹ ط§ظ„ظپظٹط¯ظٹظˆ ط¨ط¯ظ‚ط© ط§ظ„ظپط±ظٹظ… ط§ظ„ظˆط§ط­ط¯",
+      "ط§ظ„ظ…ظ„ط­ظ‚ط§طھ ط§ظ„ظ…ط±ظپظ‚ط©": "ط­ط§ظپط¸ط© ط´ط­ظ† ط°ظƒظٹط© + 2 ظ…ط§ظٹظƒ ظ„ط§ظپط§ظ„ظٹط± ط§ط­طھط±ط§ظپظٹ Lavalier II ظ…ط¹ ظ…ظˆطµظ„ط§طھ ظ‚ظپظ„",
+      "ط§ظ„ظ…ط¯ظ‰": "ط­طھظ‰ 260 ظ…طھط±ط§ظ‹"
+    }
+  },
+  {
+    "id": "AUD-044",
+    "name": "RODE Wireless Micro Ultra-Compact Mic",
+    "nameEn": "RODE Wireless Micro Ultra-Compact Mic",
+    "category": "audio",
+    "brand": "RODE",
+    "price": 115,
+    "oldPrice": 130,
+    "rating": 4.8,
+    "reviewsCount": 51,
+    "stock": 11,
+    "badge": "ظ…ط§ظٹظƒ ط§ظ„ظ‡ظˆط§طھظپ ط§ظ„ط°ظƒظٹط©",
+    "image": "images/prod_rode_wireless_micro.png",
+    "gallery": ["images/prod_rode_wireless_micro.png"],
+    "description": "ط£طµط؛ط± ظ…ظٹظƒط±ظˆظپظˆظ† ظ„ط§ط³ظ„ظƒظٹ ظ„ظ„ظ‡ظˆط§طھظپ ط§ظ„ط°ظƒظٹط© ظ…ظ† ط±ظˆط¯طŒ ظٹط´ط¨ظƒ ظ…ط¨ط§ط´ط±ط© ط¨ظ…ظ†ظپط° USB-C ط£ظˆ Lightning ظ…ط¹ ط¹ظ„ط¨ط© ط´ط­ظ† ط¨ط­ط¬ظ… ط§ظ„ط¬ظٹط¨ ظˆطھظ‚ظ†ظٹط© GainAssist ط§ظ„ط°ظƒظٹط©.",
+    "specs": {
+      "ط§ظ„طھطµظ…ظٹظ…": "ط­ط¬ظ… ظپط§ط¦ظ‚ ط§ظ„طµط؛ط± ظˆط®ظپظٹظپ ط¬ط¯ط§ظ‹ ظٹط«ط¨طھ ط¹ظ„ظ‰ ط§ظ„ظ…ظ„ط§ط¨ط³ ط¨ط¯ظˆظ† ط³ط­ط¨ ط§ظ„ظ‚ظ…ط§ط´",
+      "ط§ظ„ط¨ط·ط§ط±ظٹط©": "ط­طھظ‰ 21 ط³ط§ط¹ط© ط¹ظ…ظ„ ط¥ط¬ظ…ط§ظ„ظٹط© ظ…ط¹ ط¹ظ„ط¨ط© ط§ظ„ط´ط­ظ† ط§ظ„ظ…ط­ظ…ظˆظ„ط©",
+      "ط§ظ„طھظ‚ظ†ظٹط© ط§ظ„طµظˆطھظٹط©": "GainAssist ط§ظ„ط°ظƒظٹط© ظ„ط¶ط¨ط· ظ…ط³طھظˆظ‰ ط§ظ„طµظˆطھ طھظ„ظ‚ط§ط¦ظٹط§ظ‹ ط¨ط¯ظˆظ† طھط¹ط¨",
+      "ط§ظ„طھظˆط§ظپظ‚": "ظ…طھظˆط§ظپظ‚ ظ…ط¹ ط¢ظٹظپظˆظ† ظˆط£ظ†ط¯ط±ظˆظٹط¯ ظ…ط¨ط§ط´ط±ط© ط¨ط¯ظˆظ† ظ…ط­ظˆظ„ط§طھ"
+    }
+  },
+  {
+    "id": "AUD-045",
+    "name": "RODE NT1 5th Generation Studio Condenser Mic",
+    "nameEn": "RODE NT1 5th Generation Studio Condenser Mic",
+    "category": "audio",
+    "brand": "RODE",
+    "price": 195,
+    "oldPrice": 215,
+    "rating": 5.0,
+    "reviewsCount": 63,
+    "stock": 5,
+    "badge": "ظ…ط§ظٹظƒ ط§ط³طھظˆط¯ظٹظˆ ظ‡ط¬ظٹظ† XLR/USB",
+    "image": "images/prod_rode_nt1_5th.png",
+    "gallery": ["images/prod_rode_nt1_5th.png"],
+    "description": "ط£ظ‡ط¯ط£ ظ…ظٹظƒط±ظˆظپظˆظ† ظƒظˆظ†ط¯ظ†ط³ط± ط§ط³طھظˆط¯ظٹظˆ ظپظٹ ط§ظ„ط¹ط§ظ„ظ…طŒ ظٹط¬ظ…ط¹ ظ„ط£ظˆظ„ ظ…ط±ط© ط¨ظٹظ† ظ…ط®ط±ط¬ XLR ط§ظ„طھظ†ط§ط¸ط±ظٹ ظˆظ…ط®ط±ط¬ USB-C ط§ظ„ط±ظ‚ظ…ظٹ ظ…ط¹ طھط³ط¬ظٹظ„ 32-bit Float ط¯ط§ط®ظ„ظٹ.",
+    "specs": {
+      "ط§ظ„ظƒط¨ط³ظˆظ„ط©": "ظƒط¨ط³ظˆظ„ط© ظƒظˆظ†ط¯ظ†ط³ط± ظƒط¨ظٹط±ط© 1 ط¨ظˆطµط© ظ…ط·ظ„ظٹط© ط¨ط§ظ„ط°ظ‡ط¨ HF6",
+      "ط§ظ„ظ…ط®ط§ط±ط¬ ط§ظ„ظ…ط²ط¯ظˆط¬ط©": "XLR طھظ‚ظ„ظٹط¯ظٹ + USB-C ط±ظ‚ظ…ظٹ ظ…ط¹ ط¨ط·ط§ظ‚ط© طµظˆطھ ط¯ط§ط®ظ„ظٹط© ظˆظ…ط¹ط§ظ„ط¬ DSP ظ…ط¯ظ…ط¬",
+      "ط§ظ„ط¶ظˆط¶ط§ط، ط§ظ„ط°ط§طھظٹط©": "4dBA ظپظ‚ط· (ط£ظ‡ط¯ط£ ظ…ط§ظٹظƒط±ظˆظپظˆظ† ظپظٹ ط§ظ„ط¹ط§ظ„ظ…)",
+      "ط§ظ„ظ…ظ„ط­ظ‚ط§طھ": "ط­ط§ظ…ظ„ طµط¯ظ…ط§طھ SM6 ظ…ط§ظ†ط¹ ظ„ظ„ط§ظ‡طھط²ط§ط² ظ…ط¹ ظپظ„طھط± ظ‡ظˆط§ط، Pop Filter ظ…ط¯ظ…ط¬"
+    }
+  },
+  {
+    "id": "AUD-049",
+    "name": "RODE PodMic Dynamic Podcasting Microphone",
+    "nameEn": "RODE PodMic Dynamic Podcasting Microphone",
+    "category": "audio",
+    "brand": "RODE",
+    "price": 85,
+    "oldPrice": 95,
+    "rating": 4.9,
+    "reviewsCount": 97,
+    "stock": 14,
+    "badge": "ظ…ط§ظٹظƒ ط¨ظˆط¯ظƒط§ط³طھ ط§ط­طھط±ط§ظپظٹ",
+    "image": "images/prod_rode_podmic.png",
+    "gallery": ["images/prod_rode_podmic.png"],
+    "description": "ط§ظ„ظ…ظٹظƒط±ظˆظپظˆظ† ط§ظ„ط¯ظٹظ†ط§ظ…ظٹظƒظٹ ط§ظ„ظ…ظپط¶ظ„ ظ„طµظ†ط§ط¹ ط§ظ„ط¨ظˆط¯ظƒط§ط³طھ ظˆط§ظ„ط¨ط« ط§ظ„طµظˆطھظٹ ط¨طµظˆطھ ط¥ط°ط§ط¹ظٹ ط¯ط§ظپط¦ ظˆط¨ظ†ظٹط© ظ…ط¹ط¯ظ†ظٹط© طµظ„ط¨ط© ظˆظ…ط«ط¨طھ ط¯ط§ط®ظ„ظٹ ظ…ط§ظ†ط¹ ظ„ظ„طµط¯ظ…ط§طھ.",
+    "specs": {
+      "ط§ظ„ظ†ظˆط¹": "ط¯ط§ظٹظ†ط§ظ…ظٹظƒ Dynamic ظ…ظˆط¬ظ‡ ظ…ط¹ ظ†ظ…ط· ط§ظ„طھظ‚ط§ط· ظƒط§ط±ط¯ظٹظˆظٹط¯ ط¹ط§ط²ظ„ ظ„ظ„ط؛ط±ظپط©",
+      "ط§ظ„ط¨ظ†ظٹط©": "ظ‡ظٹظƒظ„ ظ…ط¹ط¯ظ†ظٹ طµظ„ط¨ ط¨ط§ظ„ظƒط§ظ…ظ„ ظˆظ…ط«ط¨طھ ظ…ط¯ظ…ط¬ ظ…طھط£ط±ط¬ط­",
+      "ط§ظ„ظ…ط®ط±ط¬": "XLR ظ‚ظٹط§ط³ظٹ ظ…طھظˆط§ظپظ‚ ظ…ط¹ ظƒط§ظپط© ظƒط±ظˆطھ ط§ظ„طµظˆطھ ظˆط§ظ„ظ…ظƒط³ط±ط§طھ",
+      "ط§ظ„ظپظ„طھط±": "ظپظ„طھط± ط¯ط§ط®ظ„ظٹ ظ…ط²ط¯ظˆط¬ ظ„ظƒطھظ… ط£طµظˆط§طھ ط§ظ„ط¨ظˆط¨ ظˆط­ط±ظˆظپ ط§ظ„ط§ظ†ظپط¬ط§ط±"
+    }
+  },
+  {
+    "id": "AUD-061",
+    "name": "DJI Mic 2 (2 TX + 1 RX + Charging Case)",
+    "nameEn": "DJI Mic 2 (2 TX + 1 RX + Charging Case)",
+    "category": "audio",
+    "brand": "DJI",
+    "price": 280,
+    "oldPrice": 310,
+    "rating": 5.0,
+    "reviewsCount": 89,
+    "stock": 7,
+    "badge": "ط¥ظ„ط؛ط§ط، ط¶ظˆط¶ط§ط، ط°ظƒظٹ",
+    "image": "images/prod_dji_mic2.jpg",
+    "gallery": ["images/prod_dji_mic2.jpg"],
+    "description": "ظ†ط¸ط§ظ… ط§ظ„طµظˆطھ ط§ظ„ظ„ط§ط³ظ„ظƒظٹ ط§ظ„ظ…طھط·ظˆط± ظ…ظ† ط¯ظٹ ط¬ظٹ ط¢ظٹ ظ…ط¹ ط¹ظ„ط¨ط© ظ…ط¹ط¯ظ†ظٹط© ظپط§ط®ط±ط©طŒ ط¥ظ„ط؛ط§ط، ط¶ظˆط¶ط§ط، ط°ظƒظٹ ظپط¹ط§ظ„ ظˆطھط³ط¬ظٹظ„ ط¯ط§ط®ظ„ظٹ 32-bit Float.",
+    "specs": {
+      "ط§ظ„طھط³ط¬ظٹظ„": "طھط³ط¬ظٹظ„ ط¯ط§ط®ظ„ظٹ 32-bit Float ط¨ط¹ظ…ظ‚ ظ‡ط§ط¦ظ„ ظ„ظ…ظ†ط¹ طھط´ظˆظٹط´ ط§ظ„طµظˆطھ",
+      "ط¥ظ„ط؛ط§ط، ط§ظ„ط¶ظˆط¶ط§ط،": "ظ…ظٹط²ط© Intelligent Noise Cancelling ط§ظ„ط°ظƒظٹط© ظ„طھظ†ظ‚ظٹط© طµظˆطھ ط§ظ„ظ…طھط­ط¯ط« ظپظٹ ط§ظ„ط£ظ…ط§ظƒظ† ط§ظ„ظ…ط²ط¯ط­ظ…ط©",
+      "ط§ظ„ط¨ط·ط§ط±ظٹط©": "18 ط³ط§ط¹ط© ط¹ظ…ظ„ ظƒط§ظ…ظ„ط© ظ…ط¹ ط¹ظ„ط¨ط© ط§ظ„ط´ط­ظ† ط§ظ„ظ…ط¹ط¯ظ†ظٹط© ط§ظ„ط£ظ†ظٹظ‚ط©",
+      "ط§ظ„ط§طھطµط§ظ„": "ط§طھطµط§ظ„ ظ…ط¨ط§ط´ط± ط¨ط§ظ„ط¨ظ„ظˆطھظˆط« ظ…ط¹ ط§ظ„ظ‡ظˆط§طھظپ ط§ظ„ط°ظƒظٹط© ظˆظƒط§ظ…ظٹط±ط§طھ Osmo Pocket 3 ظˆ Action 4"
+    }
+  },
+
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 5. GIMBALS (5 Authentic DJI Gimbals) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "DJI-079",
+    "name": "DJI Osmo Mobile 6 Smartphone Gimbal",
+    "nameEn": "DJI Osmo Mobile 6 Smartphone Gimbal",
+    "category": "gimbals",
+    "brand": "DJI",
+    "price": 115,
+    "oldPrice": 130,
+    "rating": 4.9,
+    "reviewsCount": 112,
+    "stock": 10,
+    "badge": "ظ…ط«ط¨طھ ظ…ظˆط¨ط§ظٹظ„ ط°ظƒظٹ",
+    "image": "images/prod_dji_osmo_mobile.jpg",
+    "gallery": ["images/prod_dji_osmo_mobile.jpg", "images/prod_dji_osmo_mobile_angle2.jpg", "images/prod_dji_osmo_mobile_angle3.jpg", "images/prod_dji_osmo_mobile_angle4.jpg"],
+    "description": "ظ…ط«ط¨طھ ط§ظ„ظ…ظˆط¨ط§ظٹظ„ ط§ظ„ط°ظƒظٹ ط«ظ„ط§ط«ظٹ ط§ظ„ظ…ط­ط§ظˆط± ظ…ظ† DJI ظ…ط¹ ط¹طµط§ طھظ…ط¯ظٹط¯ ظ…ط¯ظ…ط¬ط© ظˆطھطھط¨ط¹ ActiveTrack 6.0 ظˆط¹ط¬ظ„ط© طھط­ظƒظ… ط¬ط§ظ†ط¨ظٹط© ظپظٹ ط§ظ„ط²ظˆظ… ظˆط§ظ„ظپظˆظƒط³.",
+    "specs": {
+      "ط§ظ„ظ…ط­ط§ظˆط±": "طھط«ط¨ظٹطھ ط«ظ„ط§ط«ظٹ ط§ظ„ظ…ط­ط§ظˆط± 3-Axis ظپط§ط¦ظ‚ ط§ظ„ظ†ط¹ظˆظ…ط©",
+      "ط¹طµط§ ط§ظ„طھظ…ط¯ظٹط¯": "ط¹طµط§ طھظ…ط¯ظٹط¯ طھظ„ط³ظƒظˆط¨ظٹط© ظ…ط¯ظ…ط¬ط© ط¨ط·ظˆظ„ 215 ظ…ظ„ظ… ظ„ط²ظˆط§ظٹط§ ط§ظ„ط³ظٹظ„ظپظٹ ط§ظ„ظˆط§ط³ط¹ط©",
+      "ط§ظ„طھطھط¨ط¹": "ActiveTrack 6.0 ظ„ظ…ظ„ط§ط­ظ‚ط© ط§ظ„ط£ط´ط®ط§طµ ط­طھظ‰ ط¹ظ†ط¯ ط§ظ„ط¯ظˆط±ط§ظ†",
+      "ط§ظ„طھط­ظƒظ…": "ط¹ط¬ظ„ط© ط¬ط§ظ†ط¨ظٹط© ظ…ظٹظƒط§ظ†ظٹظƒظٹط© ظ„ظ„طھط­ظƒظ… ط¨ط§ظ„ظپظˆظƒط³ ظˆط§ظ„طھظ‚ط±ظٹط¨ ط¨ط¯ظ‚ط©"
+    }
+  },
+  {
+    "id": "DJI-084",
+    "name": "DJI RS 4 Mini Gimbal Stabilizer",
+    "nameEn": "DJI RS 4 Mini Gimbal Stabilizer",
+    "category": "gimbals",
+    "brand": "DJI",
+    "price": 280,
+    "oldPrice": 310,
+    "rating": 4.8,
+    "reviewsCount": 43,
+    "stock": 5,
+    "badge": "ط®ظپظٹظپ ط§ظ„ظˆط²ظ† 2 ظƒط¬ظ… ط­ظ…ظˆظ„ط©",
+    "image": "images/prod_dji_rs4_mini.jpg",
+    "gallery": ["images/prod_dji_rs4_mini.jpg", "images/prod_dji_rs4_mini_angle2.jpg", "images/prod_dji_rs4_mini_angle3.jpg", "images/prod_dji_rs4_mini_angle4.jpg"],
+    "description": "ط¬ظٹظ…ط¨ظ„ ط§ط­طھط±ط§ظپظٹ طµط؛ظٹط± ط§ظ„ط­ط¬ظ… ظ„ظ…ظٹط±ظˆط±ظ„ظٹط³ ط³ظˆظ†ظٹ ظˆظƒط§ظ†ظˆظ†طŒ ظٹط¯ط¹ظ… ط§ظ„طھطµظˆظٹط± ط§ظ„ط¹ظ…ظˆط¯ظٹ ط§ظ„ظ…ط¨ط§ط´ط± Native Vertical ط¨ط¯ظˆظ† ط£ظٹ ظ‚ط·ط¹ ط¥ط¶ط§ظپظٹط©.",
+    "specs": {
+      "ط³ط¹ط© ط§ظ„ط­ظ…ظˆظ„ط©": "ظٹطھط­ظ…ظ„ ط­طھظ‰ 2.0 ظƒط¬ظ… (ظ…ظ†ط§ط³ط¨ ظ„ظƒط§ظ…ظٹط±ط§ ط³ظˆظ†ظٹ A7 IV ظ…ط¹ ط¹ط¯ط³ط© 24-70mm)",
+      "ط§ظ„طھطµظˆظٹط± ط§ظ„ط±ط£ط³ظٹ": "ط§ظ„طھط¨ط¯ظٹظ„ ط§ظ„ط³ط±ظٹط¹ ظ„ظ„ظˆط¶ط¹ ط§ظ„ط¹ظ…ظˆط¯ظٹ ط§ظ„ظ…ط®طµطµ ظ„ظ„ط±ظٹظ„ط² ظˆط§ظ„طھظٹظƒ طھظˆظƒ",
+      "ط§ظ„ظ‚ظپظ„ ط§ظ„ط¢ظ„ظٹ": "ط£ظ‚ظپط§ظ„ ظ…ط­ط§ظˆط± ط¢ظ„ظٹط© ظ…ظ† ط§ظ„ط¬ظٹظ„ ط§ظ„ط«ط§ظ†ظٹ ط¨ظ…ط¬ط±ط¯ ط§ظ„ط¶ط؛ط· ط¹ظ„ظ‰ ط²ط± ط§ظ„طھط´ط؛ظٹظ„",
+      "ط§ظ„ظˆط²ظ†": "795 ط¬ظ… ظپظ‚ط·"
+    }
+  },
+  {
+    "id": "DJI-086",
+    "name": "DJI RS 4 3-Axis Gimbal Stabilizer",
+    "nameEn": "DJI RS 4 3-Axis Gimbal Stabilizer",
+    "category": "gimbals",
+    "brand": "DJI",
+    "price": 420,
+    "oldPrice": 460,
+    "rating": 4.9,
+    "reviewsCount": 56,
+    "stock": 6,
+    "badge": "ط­ظ…ظˆظ„ط© 3 ظƒط¬ظ…",
+    "image": "images/prod_dji_rs4.jpg",
+    "gallery": ["images/prod_dji_rs4.jpg", "images/prod_dji_rs4_angle2.jpg", "images/prod_dji_rs4_angle3.jpg", "images/prod_dji_rs4_angle4.jpg"],
+    "description": "ط§ظ„ط¬ظٹظ„ ط§ظ„ط±ط§ط¨ط¹ ط§ظ„ط±ط§ط¦ط¯ ظ…ط¹ ط®ظˆط§ط±ط²ظ…ظٹط© طھط«ط¨ظٹطھ RS ط§ظ„ط¬ظٹظ„ ط§ظ„ط±ط§ط¨ط¹طŒ ط·ظ„ط§ط، طھظپظ„ظˆظ† ظ„طھظˆط§ط²ظ† ظپط§ط¦ظ‚ ط§ظ„ط³ظ„ط§ط³ط© ظˆط¯ط¹ظ… ظ…ظˆطھظˆط± Focus Pro.",
+    "specs": {
+      "ط³ط¹ط© ط§ظ„ط­ظ…ظˆظ„ط©": "3.0 ظƒط¬ظ… ظ„ظ…ط¬ظ…ظˆط¹ط§طھ ط§ظ„ظƒط§ظ…ظٹط±ط§طھ ظˆط§ظ„ط¹ط¯ط³ط§طھ ط§ظ„ط§ط­طھط±ط§ظپظٹط©",
+      "ط§ظ„ط£ط°ط±ط¹": "ظ…ط­ط§ظˆط± ظ…ط؛ط·ط§ط© ط¨ط·ط¨ظ‚ط© طھظپظ„ظˆظ† Teflon ظ„طھظ‚ظ„ظٹظ„ ط§ظ„ط§ط­طھظƒط§ظƒ ظˆطھط³ظ‡ظٹظ„ ط§ظ„ظˆط²ظ† ط¨ط¯ظ‚ط© ط§ظ„ظ…ظ„ظٹظ…طھط±",
+      "ط§ظ„ط´ط§ط´ط©": "ط´ط§ط´ط© ظ„ظ…ط³ ظ…ظ„ظˆظ†ط© OLED ظ…ط¹ ظ‚ظپظ„ طھظ„ظ‚ط§ط¦ظٹ ظ„ط­ظپط¸ ط§ظ„ط·ط§ظ‚ط©",
+      "ط§ظ„ط¨ط·ط§ط±ظٹط©": "ط­طھظ‰ 12 ط³ط§ط¹ط© طھط´ط؛ظٹظ„ ظ…ط¹ ظ…ظ‚ط¨ط¶ ط¨ط·ط§ط±ظٹط© BG21"
+    }
+  },
+  {
+    "id": "DJI-088",
+    "name": "DJI RS 4 Pro Carbon Fiber Gimbal Stabilizer",
+    "nameEn": "DJI RS 4 Pro Carbon Fiber Gimbal Stabilizer",
+    "category": "gimbals",
+    "brand": "DJI",
+    "price": 680,
+    "oldPrice": 750,
+    "rating": 5.0,
+    "reviewsCount": 65,
+    "stock": 4,
+    "badge": "ط£ظ„ظٹط§ظپ ظƒط±ط¨ظˆظ†ظٹط© 4.5 ظƒط¬ظ…",
+    "image": "images/prod_dji_rs4_pro.jpg",
+    "gallery": ["images/prod_dji_rs4_pro.jpg", "images/prod_dji_rs4_pro_angle2.jpg", "images/prod_dji_rs4_pro_angle3.jpg", "images/prod_dji_rs4_pro_angle4.jpg"],
+    "description": "ظˆط­ط´ ط§ظ„ط³ظٹظ†ظ…ط§ ظ…ظ† ط£ظ„ظٹط§ظپ ط§ظ„ظƒط±ط¨ظˆظ† ط¨ط£ط°ط±ط¹ ظƒط±ط¨ظˆظ† ظ…ظ…طھط¯ط© طھطھط­ظ…ظ„ ظƒط§ظ…ظٹط±ط§طھ Sony FX6 ظˆ RED Komodo ط­طھظ‰ 4.5 ظƒط¬ظ… ظ…ط¹ ط¹ط²ظ… ظ…ط­ط±ظƒط§طھ ط£ظ‚ظˆظ‰ ط¨ظ†ط³ط¨ط© 20%.",
+    "specs": {
+      "ط§ظ„ط¨ظ†ظٹط©": "ط£ط°ط±ط¹ ط£ظ„ظٹط§ظپ ظƒط±ط¨ظˆظ†ظٹط© Carbon Fiber ط®ظپظٹظپط© ظˆط´ط¯ظٹط¯ط© ط§ظ„طµظ„ط§ط¨ط©",
+      "ط³ط¹ط© ط§ظ„ط­ظ…ظˆظ„ط©": "4.5 ظƒط¬ظ… ط­ظ…ظˆظ„ط© ط³ظٹظ†ظ…ط§ط¦ظٹط© ط¶ط®ظ…ط©",
+      "ط¹ط²ظ… ط§ظ„ظ…ط­ط±ظƒط§طھ": "ط²ظٹط§ط¯ط© ط¹ط²ظ… ط§ظ„ط¯ظˆط±ط§ظ† ط¨ظ†ط³ط¨ط© 20% ظ„ظƒط§ظپط© ط§ظ„ظ…ط­ط§ظˆط± ظ„طھط¬ط§ظˆط¨ ظپظˆط±ظٹ ط¨ط¯ظˆظ† ط§ظ‡طھط²ط§ط²",
+      "ط§ظ„طھظˆط§ظپظ‚": "ط¯ط¹ظ… ظƒط§ظ…ظ„ ظ„ظ…ظ†ط¸ظˆظ…ط© ظپظˆظƒط³ DJI Focus Pro LiDAR ظˆ Transmission ط§ظ„ظ„ط§ط³ظ„ظƒظٹ"
+    }
+  },
+  {
+    "id": "DJI-090",
+    "name": "DJI RS 3 Pro Gimbal Stabilizer",
+    "nameEn": "DJI RS 3 Pro Gimbal Stabilizer",
+    "category": "gimbals",
+    "brand": "DJI",
+    "price": 590,
+    "oldPrice": 650,
+    "rating": 4.9,
+    "reviewsCount": 82,
+    "stock": 3,
+    "badge": "ظƒط±ط¨ظˆظ† ظپط§ظٹط¨ط± ط£طµظ„ظٹ",
+    "image": "images/prod_dji_rs3_pro.png",
+    "gallery": ["images/prod_dji_rs3_pro.png"],
+    "description": "ظ…ط«ط¨طھ ط§ظ„ظƒط§ظ…ظٹط±ط§ ط§ظ„ط³ظٹظ†ظ…ط§ط¦ظٹ ط¨ط£ط°ط±ط¹ ظƒط±ط¨ظˆظ†ظٹط© ظ…ظ…طھط¯ط© ظˆط³ط¹ط© ط­ظ…ظˆظ„ط© 4.5 ظƒط¬ظ… ظˆط´ط§ط´ط© ظ„ظ…ط³ OLED 1.8 ط¨ظˆطµط© ظ…طھظˆط§ظپظ‚ ظ…ط¹ ظƒط§ظ…ظٹط±ط§طھ FX3 ظˆ R5C.",
+    "specs": {
+      "ط§ظ„ط­ظ…ظˆظ„ط©": "4.5 ظƒط¬ظ…",
+      "ط§ظ„ط£ط°ط±ط¹": "ط£ظ„ظٹط§ظپ ظƒط±ط¨ظˆظ†ظٹط© ظ…طھطµظ„ط© ظ…ظ† ظ‚ط·ط¹ط© ظˆط§ط­ط¯ط© ط؛ظٹط± ظ…ظ„ط­ظˆظ…ط©",
+      "ط§ظ„ط´ط§ط´ط©": "1.8 ط¨ظˆطµط© OLED ظ…ظ„ظˆظ†ط©",
+      "ط§ظ„ط£ظ‚ظپط§ظ„": "ط£ظ‚ظپط§ظ„ ظ…ط­ط§ظˆط± ط£ظˆطھظˆظ…ط§طھظٹظƒظٹط© ط³ط±ظٹط¹ط©"
+    }
+  },
+
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 6. STANDS & TRIPODS (4 Authentic Stands & Tripods) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "STN-301",
+    "name": "Kingjoy MP208F Heavy Duty Monopod with Base",
+    "nameEn": "Kingjoy MP208F Heavy Duty Monopod with Base",
+    "category": "stands",
+    "brand": "TOP CAM",
+    "price": 75,
+    "oldPrice": 85,
+    "rating": 4.8,
+    "reviewsCount": 24,
+    "stock": 8,
+    "badge": "ظ…ظˆظ†ظˆ ط¨ظˆط¯ ظپظٹط¯ظٹظˆ ط§ط­طھط±ط§ظپظٹ",
+    "image": "images/prod_mp208f_monopod.jpg",
+    "gallery": ["images/prod_mp208f_monopod.jpg"],
+    "description": "ظ…ظˆظ†ظˆط¨ظˆط¯ ط§ط­طھط±ط§ظپظٹ ظ‡ظٹط¯ط±ظˆظ„ظٹظƒظٹ ط¨ط£ط±ط¬ظ„ ط«ظ„ط§ط«ظٹط© ظ‚ط§ط¨ظ„ط© ظ„ظ„ط·ظٹ ظˆظ‚ط§ط¹ط¯ط© ظ…ط§ط¦ظ„ط© 360 ط¯ط±ط¬ط©طŒ ظ…ط«ط§ظ„ظٹ ظ„ظ…طµظˆط±ظٹ ط§ظ„ط£ط¹ط±ط§ط³ ظˆط§ظ„ظپط¹ط§ظ„ظٹط§طھ ط§ظ„ط±ظٹط§ط¶ظٹط©.",
+    "specs": {
+      "ط§ظ„ظ…ط§ط¯ط©": "ط£ظ„ظˆظ…ظ†ظٹظˆظ… ظ…ظ‚ظˆظ‰ ط®ظپظٹظپ ظˆظ…طھظٹظ†",
+      "ط§ظ„ط§ط±طھظپط§ط¹ ط§ظ„ط£ظ‚طµظ‰": "180 ط³ظ…",
+      "ط§ظ„ط­ظ…ظˆظ„ط© ط§ظ„ظ‚طµظˆظ‰": "8 ظƒط¬ظ…",
+      "ط§ظ„ظ‚ط§ط¹ط¯ط©": "ظ‚ط§ط¹ط¯ط© ط«ظ„ط§ط«ظٹط© ظ‡ظٹط¯ط±ظˆظ„ظٹظƒظٹط© ظ„ط­ط±ظƒط© ط¨ط§ظ† ط³ظ„ط³ط©"
+    }
+  },
+  {
+    "id": "STN-302",
+    "name": "Kingjoy VT-3510 Fluid Head Video Tripod",
+    "nameEn": "Kingjoy VT-3510 Fluid Head Video Tripod",
+    "category": "stands",
+    "brand": "TOP CAM",
+    "price": 145,
+    "oldPrice": 165,
+    "rating": 4.9,
+    "reviewsCount": 42,
+    "stock": 7,
+    "badge": "طھط±ط§ظٹط¨ظˆط¯ ظ‡ظٹط¯ط±ظˆظ„ظٹظƒ",
+    "image": "images/prod_vt3510_tripod.jpg",
+    "gallery": ["images/prod_vt3510_tripod.jpg", "images/prod_vt3510_tripod_angle2.jpg", "images/prod_vt3510_tripod_angle3.jpg"],
+    "description": "ط­ط§ظ…ظ„ ظپظٹط¯ظٹظˆ ط«ظ„ط§ط«ظٹ ظ‚ظˆظٹ ط¨ط±ط£ط³ ظ‡ظٹط¯ط±ظˆظ„ظٹظƒظٹ ط§ط­طھط±ط§ظپظٹ VT-3510 ط¨ط­ط±ظƒط© ط¨ط§ظ† ظˆطھظٹظ„طھ ظ†ط§ط¹ظ…ط© ظƒط§ظ„ط­ط±ظٹط± ظˆظ…ظˆط²ط¹ ط£ظˆط³ط· ظ„ط«ط¨ط§طھ ظƒط§ظ…ظ„.",
+    "specs": {
+      "ط±ط£ط³ ط§ظ„ظپظٹط¯ظٹظˆ": "ط±ط£ط³ ظ‡ظٹط¯ط±ظˆظ„ظٹظƒظٹ Fluid Damping Head ظ…ط¹ ط°ط±ط§ط¹ طھط­ظƒظ… ط·ظˆظٹظ„",
+      "ط§ظ„ط§ط±طھظپط§ط¹": "ظ…ظ† 80 ط³ظ… ط­طھظ‰ 190 ط³ظ…",
+      "ط³ط¹ط© ط§ظ„ط­ظ…ظˆظ„ط©": "10 ظƒط¬ظ…",
+      "ط§ظ„ط£ط±ط¬ظ„": "ط£ط±ط¬ظ„ ط£ظ„ظˆظ…ظ†ظٹظˆظ… ظ…ط²ط¯ظˆط¬ط© ط§ظ„ط£ظ†ط§ط¨ظٹط¨ ظ…ط¹ ظ…ظˆط²ط¹ ظˆط³ط·ظٹ Mid-level spreader"
+    }
+  },
+  {
+    "id": "STN-312",
+    "name": "Manfrotto 504X Fluid Head Carbon Twin Tripod",
+    "nameEn": "Manfrotto 504X Fluid Head Carbon Twin Tripod",
+    "category": "stands",
+    "brand": "Manfrotto",
+    "price": 490,
+    "oldPrice": 540,
+    "rating": 5.0,
+    "reviewsCount": 36,
+    "stock": 3,
+    "badge": "طھط±ط§ظٹط¨ظˆط¯ ط³ظٹظ†ظ…ط§ ط¥ظٹط·ط§ظ„ظٹ",
+    "image": "images/prod_manfrotto_504x.jpg",
+    "gallery": ["images/prod_manfrotto_504x.jpg", "images/prod_manfrotto_504x_angle2.jpg", "images/prod_manfrotto_504x_angle3.jpg", "images/prod_manfrotto_504x_angle4.jpg"],
+    "description": "ط§ظ„طھط±ط§ظٹط¨ظˆط¯ ط§ظ„ط³ظٹظ†ظ…ط§ط¦ظٹ ط§ظ„ط¥ظٹط·ط§ظ„ظٹ ط§ظ„ط±ط§ط¦ط¯ ط¨ط£ظ„ظٹط§ظپ ط§ظ„ظƒط±ط¨ظˆظ† ط®ظپظٹظپط© ط§ظ„ظˆط²ظ† ظˆط±ط£ط³ ظ‡ظٹط¯ط±ظˆظ„ظٹظƒظٹ 504X ط¨ظ†ط¸ط§ظ… ظ…ظˆط§ط²ظ†ط© ظ…طھط؛ظٹط± ظˆظ†طµظپ ظƒط±ط© 75 ظ…ظ„ظ….",
+    "specs": {
+      "ط±ط£ط³ ط§ظ„ظپظٹط¯ظٹظˆ": "Manfrotto 504X Fluid Video Head ظ…ط¹ ظ†ط¸ط§ظ… Counterbalance ط°ظƒظٹ ط¨ظ€ 4 ط®ط·ظˆط§طھ",
+      "ط§ظ„ط£ط±ط¬ظ„": "ط£ظ„ظٹط§ظپ ظƒط±ط¨ظˆظ†ظٹط© Fast Twin Carbon Legs ط¨ظ†ط¸ط§ظ… ظ‚ظپظ„ ط±ط§ظپط¹ط© ظˆط§ط­ط¯ ظپط§ط¦ظ‚ ط§ظ„ط³ط±ط¹ط©",
+      "ط§ظ„ط­ظ…ظˆظ„ط©": "12 ظƒط¬ظ…",
+      "ط§ظ„ظˆط²ظ† ط§ظ„ط¥ط¬ظ…ط§ظ„ظٹ": "3.9 ظƒط¬ظ… ظپظ‚ط·",
+      "ط§ظ„طµظ†ط§ط¹ط©": "طµظ†ط§ط¹ط© ط¥ظٹط·ط§ظ„ظٹط© ظپط§ط®ط±ط© 100%"
+    }
+  },
+  {
+    "id": "STN-320",
+    "name": "Godox Heavy Duty Studio C-Stand with Boom Arm",
+    "nameEn": "Godox Heavy Duty Studio C-Stand with Boom Arm",
+    "category": "stands",
+    "brand": "Godox",
+    "price": 110,
+    "oldPrice": 125,
+    "rating": 4.9,
+    "reviewsCount": 58,
+    "stock": 9,
+    "badge": "ط³ظٹ ط³طھط§ظ†ط¯ ط§ط³طھظˆط¯ظٹظˆ ط§ط­طھط±ط§ظپظٹ",
+    "image": "images/prod_godox_cstand.jpg",
+    "gallery": ["images/prod_godox_cstand.jpg"],
+    "description": "ط³طھط§ظ†ط¯ ط¥ط¶ط§ط،ط© C-Stand ظپظˆظ„ط§ط°ظٹ طµظ„ط¨ ط؛ظٹط± ظ‚ط§ط¨ظ„ ظ„ظ„ظƒط³ط± ظ…ط¹ ط°ط±ط§ط¹ ط¨ظˆظ… ط¬ط±ظٹط¨ ظˆظ‚ط¨ط¶ط§طھ ط£ظ„ظ…ظ†ظٹظˆظ… ظ„ط­ظ…ظ„ ط§ظ„ط¥ط¶ط§ط،ط§طھ ط§ظ„ط«ظ‚ظٹظ„ط© ظˆط§ظ„ط³ظˆظپطھ ط¨ظˆظƒط³ ط¨ط£ظ…ط§ظ† طھط§ظ….",
+    "specs": {
+      "ط§ظ„ظ…ط§ط¯ط©": "ط³طھط§ظ†ظ„ط³ ط³طھظٹظ„ ظ…ط¬ظ„ظپظ† ظ…ظ‚ط§ظˆظ… ظ„ظ„طµط¯ط£ ط¨ظ†ط³ط¨ط© 100%",
+      "ط§ظ„ط§ط±طھظپط§ط¹ ط§ظ„ط£ظ‚طµظ‰": "3.3 ظ…طھط± (330 ط³ظ…)",
+      "ط°ط±ط§ط¹ ط§ظ„ط¨ظˆظ…": "ط°ط±ط§ط¹ ط¨ظˆظ… ظ‡ظٹظپظٹ ط¯ظٹظˆطھظٹ ط¨ط·ظˆظ„ 127 ط³ظ… ظ…ط¹ ط±ط£ط³ظٹ ظ‚ط¨ط¶ط© Grip Heads ط¨ظ€ 4 ظپطھط­ط§طھ ظ…ط®طھظ„ظپط©",
+      "ط³ط¹ط© ط§ظ„ط­ظ…ظˆظ„ط©": "ظٹطھط­ظ…ظ„ ط­طھظ‰ 20 ظƒط¬ظ… ط¨ط«ط¨ط§طھ ظ…ط·ظ„ظ‚",
+      "ط§ظ„ظ‚ط§ط¹ط¯ط©": "ظ‚ط§ط¹ط¯ط© ط³ظ„ط­ظپط§ط© Turtle Base ظ‚ط§ط¨ظ„ط© ظ„ظ„ط¥ط²ط§ظ„ط© ظ…ط¹ ظپطھط­ط§طھ ظ„ط£ظƒظٹط§ط³ ط§ظ„ط±ظ…ظ„"
+    }
+  },
+
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 7. CAGES & RIGS (3 Authentic SmallRig Cages) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "ACC-356",
+    "name": "SmallRig Full Camera Cage for Sony FX3 & FX30 (4183B)",
+    "nameEn": "SmallRig Full Camera Cage for Sony FX3 & FX30 (4183B)",
+    "category": "cages",
+    "brand": "SmallRig",
+    "price": 89,
+    "oldPrice": 99,
+    "rating": 4.9,
+    "reviewsCount": 67,
+    "stock": 8,
+    "badge": "ظƒظٹط¬ ط£ظ„ظˆظ…ظ†ظٹظˆظ… CNC",
+    "image": "images/prod_smallrig_fx3_cage.jpg",
+    "gallery": ["images/prod_smallrig_fx3_cage.jpg", "images/prod_smallrig_fx3_cage_angle2.jpg", "images/prod_smallrig_fx3_cage_angle3.jpg"],
+    "description": "ظ‚ظپطµ ظƒط§ظ…ظ„ ظ…ط®طµطµ ظ„ظƒط§ظ…ظٹط±ط§طھ ط³ظˆظ†ظٹ FX3 ظˆ FX30 ظ…طھظˆط§ظپظ‚ ظ…ط¹ ظ…ظ‚ط¨ط¶ ط§ظ„طµظˆطھ ط§ظ„ط£طµظ„ظٹ XLR Handle ظˆظٹظˆظپط± ط­ظ…ط§ظٹط© ظƒط§ظ…ظ„ط© ظˆظ…ظ†ط§ظپط° طھط«ط¨ظٹطھ ظ…طھط¹ط¯ط¯ط©.",
+    "specs": {
+      "ط§ظ„ظ…ط§ط¯ط©": "ط£ظ„ظˆظ…ظ†ظٹظˆظ… CNC ط£ط³ظˆط¯ ظ…ط¤ظƒط³ط¯",
+      "ط§ظ„ظ…ظ†ط§ظپط°": "ظپطھط­ط§طھ 1/4\"-20 ظˆ 3/8\"-16 ظ…ط¹ ظ†ظ‚ط§ط· طھظ…ظˆط¶ط¹ ARRI ظˆظ…ط¬ط±ظ‰ NATO ظˆط³ظƒط© ط­ط°ط§ط، ط¨ط§ط±ط¯",
+      "ط§ظ„طھظˆط§ظپظ‚ ظ…ط¹ ط§ظ„ظ…ظ‚ط¨ط¶": "ظٹطھط¶ظ…ظ† ظ‚ط·ط¹ط© ط¹ظ„ظˆظٹط© ظ‚ط§ط¨ظ„ط© ظ„ظ„ط¥ط²ط§ظ„ط© ظ„طھط±ظƒظٹط¨ ظ…ظ‚ط¨ط¶ ط³ظˆظ†ظٹ XLR ط§ظ„ط£طµظ„ظٹ ط¨ط³ظ„ط§ط³ط©",
+      "ظ‚ط§ط¹ط¯ط© ط§ظ„طھط«ط¨ظٹطھ": "ظ‚ط§ط¹ط¯ط© Arca-Swiss ط³ط±ظٹط¹ط© ظ…ط¯ظ…ط¬ط© ظ„ظ„طھط±ظƒظٹط¨ ط§ظ„ظ…ط¨ط§ط´ط± ط¹ظ„ظ‰ ظ…ط«ط¨طھط§طھ DJI RS"
+    }
+  },
+  {
+    "id": "ACC-358",
+    "name": "SmallRig Full Cage for Sony A7 IV / A7R V / A7S III (3667B)",
+    "nameEn": "SmallRig Full Cage for Sony A7 IV / A7R V / A7S III (3667B)",
+    "category": "cages",
+    "brand": "SmallRig",
+    "price": 65,
+    "oldPrice": 75,
+    "rating": 4.9,
+    "reviewsCount": 94,
+    "stock": 10,
+    "badge": "ط§ظ„ط£ظƒط«ط± ظ…ط¨ظٹط¹ط§ظ‹ ظ„ظƒط§ظ…ظٹط±ط§طھ ط³ظˆظ†ظٹ",
+    "image": "images/prod_smallrig_a7iv_cage.jpg",
+    "gallery": ["images/prod_smallrig_a7iv_cage.jpg", "images/prod_smallrig_a7iv_cage_angle2.jpg", "images/prod_smallrig_a7iv_cage_angle3.jpg", "images/prod_smallrig_a7iv_cage_angle4.jpg"],
+    "description": "ط§ظ„ظ‚ظپطµ ط§ظ„ظ…طھظƒط§ظ…ظ„ ظ„ظƒط§ظ…ظٹط±ط§طھ ط³ظˆظ†ظٹ ط£ظ„ظپط§ Full-Frame ط¨ظ‚ظپظ„ ط«ظ†ط§ط¦ظٹ ط§ظ„ظ†ظ‚ط§ط· ظٹظ…ظ†ط¹ ط§ظ„ط§ظ„طھظˆط§ط، ظˆظ…ظپطھط§ط­ ظ…ط؛ظ†ط§ط·ظٹط³ظٹ ظ…ط¯ظ…ط¬ ظ„ط³ظ‡ظˆظ„ط© ط§ظ„ظپظƒ ظˆط§ظ„طھط±ظƒظٹط¨.",
+    "specs": {
+      "ط§ظ„طھظˆط§ظپظ‚": "Sony Alpha 7 IVطŒ Alpha 7R VطŒ Alpha 7S IIIطŒ Alpha 1",
+      "ظ†ط¸ط§ظ… ط§ظ„ظ‚ظپظ„": "ظ‚ظپظ„ ط¨ظ…ط³ظ…ط§ط± ط³ظپظ„ظٹ 1/4\" ظˆظ‚ظپظ„ ط¬ط§ظ†ط¨ظٹ ظپظٹ ط­ظ„ظ‚ط© ط§ظ„ط­ط²ط§ظ… ظ„ظ…ظ†ط¹ ط£ظٹ ط­ط±ظƒط© ظ†ظ‡ط§ط¦ظٹط§ظ‹",
+      "ط§ظ„ظ…ظ†ط§ظپط°": "Arca Quick Release Plate ظ…ط¯ظ…ط¬ط© + ط³ظƒط© NATO ظˆظ…ظ†ط§ظپط° ARRI Locating",
+      "ط§ظ„ظˆط²ظ†": "170 ط¬ظ…"
+    }
+  },
+  {
+    "id": "ACC-362",
+    "name": "SmallRig Ergonomic Top Handle with Shoe Mount (3764)",
+    "nameEn": "SmallRig Ergonomic Top Handle with Shoe Mount (3764)",
+    "category": "cages",
+    "brand": "SmallRig",
+    "price": 35,
+    "oldPrice": 42,
+    "rating": 4.8,
+    "reviewsCount": 51,
+    "stock": 15,
+    "badge": "ظ…ظ‚ط¨ط¶ ط¹ظ„ظˆظٹ ظ…ط±ظٹط­",
+    "image": "images/prod_smallrig_top_handle.jpg",
+    "gallery": ["images/prod_smallrig_top_handle.jpg", "images/prod_smallrig_top_handle_angle2.jpg", "images/prod_smallrig_top_handle_angle3.jpg", "images/prod_smallrig_top_handle_angle4.jpg"],
+    "description": "ظ…ظ‚ط¨ط¶ ط¹ظ„ظˆظٹ ط®ظپظٹظپ ط§ظ„ظˆط²ظ† ظˆظ…ط±ظٹط­ ظ„ظ‚ط¨ط¶ط© ط§ظ„ظٹط¯ ظ…ط¹ ظ‚ط§ط¹ط¯ط© Cold Shoe ظ…ط¯ظ…ط¬ط© ظ„طھط±ظƒظٹط¨ ط´ط§ط´ط§طھ ط§ظ„ظ…ط±ط§ظ‚ط¨ط© ظˆط§ظ„ظ…ط§ظٹظƒط±ظˆظپظˆظ†ط§طھ ظˆط£ط¶ظˆط§ط، LED ط§ظ„طµط؛ظٹط±ط©.",
+    "specs": {
+      "ط§ظ„طھط«ط¨ظٹطھ": "ظٹط«ط¨طھ ظ…ط¨ط§ط´ط±ط© ط¹ظ„ظ‰ ط£ظٹ ظ‚ط§ط¹ط¯ط© Cold Shoe ظ‚ظٹط§ط³ظٹط© ظ…ط¹ ظ…ط³ظ…ط§ط± ظ‚ظپظ„ ظ…ط±ظٹط­",
+      "ط§ظ„ظ…ظ†ط§ظپط°": "ظ…ظ†ط§ظپط° 1/4\"-20 ظˆ 3/8\"-16 ظ…ط¹ ظ‚ط§ط¹ط¯ط© ط­ط°ط§ط، ط¨ط§ط±ط¯ ط¥ط¶ط§ظپظٹط© ظپظٹ ط§ظ„ظ…ظ‚ط¯ظ…ط©",
+      "ط§ظ„ظˆط²ظ†": "129 ط¬ظ… ظپظ‚ط·"
+    }
+  },
+
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 8. MONITORS & TELEPROMPTERS (3 Authentic Monitors) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "MON-454",
+    "name": "Desview T3 Smartphone & Tablet Teleprompter",
+    "nameEn": "Desview T3 Smartphone & Tablet Teleprompter",
+    "category": "monitors",
+    "brand": "Desview",
+    "price": 85,
+    "oldPrice": 99,
+    "rating": 4.8,
+    "reviewsCount": 46,
+    "stock": 6,
+    "badge": "طھظ„ظٹط¨ط±ظˆظ…ط¨طھط± ظ…ظ„ظ‚ظ† ظ†طµظˆطµ",
+    "image": "images/prod_desview_t3.jpg",
+    "gallery": ["images/prod_desview_t3.jpg", "images/prod_desview_t3_angle2.jpg", "images/prod_desview_t3_angle3.jpg"],
+    "description": "ظ…ظ„ظ‚ظ† ظ†طµظˆطµ ط§ط­طھط±ط§ظپظٹ ظ…ط­ظ…ظˆظ„ ظٹط¯ط¹ظ… ط§ظ„ظ‡ظˆط§طھظپ ظˆط§ظ„ط£ط¬ظ‡ط²ط© ط§ظ„ظ„ظˆط­ظٹط© ط­طھظ‰ 11 ط¨ظˆطµط©طŒ ظ…ط¹ ط²ط¬ط§ط¬ ظ…ظ‚ط³ظ… ظ„ظ„ط­ط²ظ…ط© 70/30 ظپط§ط¦ظ‚ ط§ظ„ط´ظپط§ظپظٹط© ظˆط±ظٹظ…ظˆطھ ظƒظ†طھط±ظˆظ„ ط¨ظ„ظˆطھظˆط«.",
+    "specs": {
+      "ط§ظ„ط²ط¬ط§ط¬": "Beam Splitter Glass ط¹ط§ظ„ظٹ ط§ظ„ط¬ظˆط¯ط© ط¨ظ†ط³ط¨ط© 70/30 ط¨ط¯ظˆظ† ط£ظٹ طھط£ط«ظٹط± ط¹ظ„ظ‰ ط¬ظˆط¯ط© ط§ظ„طµظˆط±ط©",
+      "ط§ظ„ط£ط¬ظ‡ط²ط© ط§ظ„ظ…ط¯ط¹ظˆظ…ط©": "ط§ظ„ظ‡ظˆط§طھظپ ط§ظ„ط°ظƒظٹط© ظˆط£ط¬ظ‡ط²ط© ط§ظ„طھط§ط¨ظ„طھ ط­طھظ‰ ط­ط¬ظ… 11 ط¨ظˆطµط© (ط¨ظ…ط§ ظپظٹ ط°ظ„ظƒ iPad)",
+      "ط­ظ„ظ‚ط§طھ ط§ظ„ط¹ط¯ط³ط§طھ": "ظٹطھط¶ظ…ظ† 9 ط­ظ„ظ‚ط§طھ طھط­ظˆظٹظ„ ظ„ظ…ظ‚ط§ط³ط§طھ ط§ظ„ط¹ط¯ط³ط§طھ: 49, 52, 55, 58, 62, 67, 72, 77, 82 ظ…ظ…",
+      "ط§ظ„طھط­ظƒظ…": "ط±ظٹظ…ظˆطھ ظƒظ†طھط±ظˆظ„ Bluetooth ظ…ط¯ظ…ط¬ ظ„ظ„طھط­ظƒظ… ط¨ط³ط±ط¹ط© ط§ظ„ظ†طµ ظˆط¥ظٹظ‚ط§ظپظ‡ ط¹ط¨ط± طھط·ط¨ظٹظ‚ Desview"
+    }
+  },
+  {
+    "id": "MON-478",
+    "name": "FeelWorld LUT7 7-Inch 2200nits 4K Field Monitor",
+    "nameEn": "FeelWorld LUT7 7-Inch 2200nits 4K Field Monitor",
+    "category": "monitors",
+    "brand": "FeelWorld",
+    "price": 220,
+    "oldPrice": 250,
+    "rating": 4.9,
+    "reviewsCount": 58,
+    "stock": 5,
+    "badge": "ط³ط·ظˆط¹ ط®ط§ط±ظ‚ 2200nits طھط­طھ ط§ظ„ط´ظ…ط³",
+    "image": "images/prod_feelworld_lut7.jpg",
+    "gallery": ["images/prod_feelworld_lut7.jpg", "images/prod_feelworld_lut7_angle2.jpg", "images/prod_feelworld_lut7_angle3.jpg", "images/prod_feelworld_lut7_angle4.jpg"],
+    "description": "ط´ط§ط´ط© ظ…ط±ط§ظ‚ط¨ط© ظ…ظٹط¯ط§ظ†ظٹط© ط³ط§ط·ط¹ط© ظƒط§ظ„ظ†ظ‡ط§ط± 2200nits ظˆط§ط¶ط­ط© طھظ…ط§ظ…ط§ظ‹ طھط­طھ ط£ط´ط¹ط© ط§ظ„ط´ظ…ط³ ط§ظ„ظ…ط¨ط§ط´ط±ط© ط¨ط¯ظˆظ† ط´ظ…ط³ظٹط©طŒ ظ…ط¹ ط¯ط¹ظ… 3D LUT ط¨ط¯ظ‚ط© 4K HDMI.",
+    "specs": {
+      "ط§ظ„ط´ط§ط´ط©": "7 ط¨ظˆطµط© IPS ط¨ط¯ظ‚ط© Full HD 1920x1200",
+      "ط§ظ„ط³ط·ظˆط¹": "2200nits ظپط§ط¦ظ‚ط© ط§ظ„ط³ط·ظˆط¹ ظ„ظ„ط§ط³طھط®ط¯ط§ظ… ط§ظ„ط®ط§ط±ط¬ظٹ ط§ظ„ظ…ط¨ط§ط´ط±",
+      "ط§ظ„ظ…ظ†ط§ظپط°": "ط¯ط®ظˆظ„ ظˆط®ط±ظˆط¬ 4K HDMI Loop-out",
+      "ط£ط¯ظˆط§طھ ط§ظ„طھطµظˆظٹط±": "WaveformطŒ VectorscopeطŒ HistogramطŒ Peaking FocusطŒ False Colors",
+      "ط¯ط¹ظ… LUT": "طھط­ظ…ظٹظ„ ط­طھظ‰ 50 ظ…ظ„ظپ 3D LUT ط¹ط¨ط± ط¨ط·ط§ظ‚ط© SD"
+    }
+  },
+  {
+    "id": "MON-481",
+    "name": "FeelWorld F6 Plus V2 5.5-Inch 3D LUT Touch Monitor",
+    "nameEn": "FeelWorld F6 Plus V2 5.5-Inch 3D LUT Touch Monitor",
+    "category": "monitors",
+    "brand": "FeelWorld",
+    "price": 140,
+    "oldPrice": 160,
+    "rating": 4.8,
+    "reviewsCount": 73,
+    "stock": 7,
+    "badge": "ط´ط§ط´ط© ظ„ظ…ط³ ط®ظپظٹظپط© ظ„ظ„ط³طھظٹط¨ظ„ط§ظٹط²ط±",
+    "image": "images/prod_feelworld_f6_plus.jpg",
+    "gallery": ["images/prod_feelworld_f6_plus.jpg", "images/prod_feelworld_f6_plus_angle2.jpg", "images/prod_feelworld_f6_plus_angle3.jpg", "images/prod_feelworld_f6_plus_angle4.jpg"],
+    "description": "ط´ط§ط´ط© ظ…ظˆظ†ظٹطھط± ظ„ظ…ط³ظٹط© ط®ظپظٹظپط© ط§ظ„ظˆط²ظ† ظˆظ…ط¯ظ…ط¬ط© ظ…ط«ط§ظ„ظٹط© ظ„ظ…ط«ط¨طھط§طھ ط§ظ„ط¬ظٹظ…ط¨ظ„ ظˆط§ظ„ظƒط§ظ…ظٹط±ط§طھ ط§ظ„طµط؛ظٹط±ط©طŒ ظ…ط¹ ط¯ط¹ظ… 3D LUT ظˆظ…ط®ط±ط¬ ط·ط§ظ‚ط© DC ظ„طھط´ط؛ظٹظ„ ط§ظ„ظƒط§ظ…ظٹط±ط§.",
+    "specs": {
+      "ط§ظ„ط´ط§ط´ط©": "5.5 ط¨ظˆطµط© ط´ط§ط´ط© ظ„ظ…ط³ طھط¹ظ…ظ„ ط¨ط§ظ„ظƒط§ظ…ظ„ ظ…ط¹ ظ‚ط§ط¦ظ…ط© OCR ط³ط±ظٹط¹ط©",
+      "ط§ظ„ظˆط²ظ†": "235 ط¬ظ… ظپظ‚ط· (ط®ظپظٹظپط© ط¬ط¯ط§ظ‹ ظ„ظ…ط«ط¨طھط§طھ ط§ظ„ط¬ظٹظ…ط¨ظ„)",
+      "ط§ظ„ظ…ظ†ط§ظپط°": "4K HDMI In & Out ظ…ط¹ ظ…ط¯ط®ظ„ ط¨ط·ط§ظ‚ط© SD ظ„طھط­ظ…ظٹظ„ ط§ظ„ظ€ LUTs",
+      "ط®ظٹط§ط±ط§طھ ط§ظ„ط·ط§ظ‚ط©": "طھط¹ظ…ظ„ ط¨ط¨ط·ط§ط±ظٹط§طھ Sony NP-F ط£ظˆ ط¨ط·ط§ط±ظٹط§طھ Canon LP-E6 ط£ظˆ ط¹ط¨ط± ظ…ظ†ظپط° USB-C"
+    }
+  },
+
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 9. BATTERIES & POWER (4 Authentic Batteries & Power) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "ACC-342",
+    "name": "SmallRig VB50 Mini V-Mount Battery (50Wh 3579B)",
+    "nameEn": "SmallRig VB50 Mini V-Mount Battery (50Wh 3579B)",
+    "category": "chargers_batteries",
+    "brand": "SmallRig",
+    "price": 125,
+    "oldPrice": 140,
+    "rating": 4.9,
+    "reviewsCount": 44,
+    "stock": 8,
+    "badge": "ط­ط¬ظ… ط§ظ„ط¬ظٹط¨ 50Wh",
+    "image": "images/prod_smallrig_vb50.jpg",
+    "gallery": ["images/prod_smallrig_vb50.jpg"],
+    "description": "ط¨ط·ط§ط±ظٹط© V-Mount طµط؛ظٹط±ط© ط¬ط¯ط§ظ‹ ط¨ط­ط¬ظ… ط¨ط·ط§ظ‚ط© ط§ظ„ط¹ظ…ظ„ ظ…ط¹ ط´ط§ط´ط© OLED ط°ظƒظٹط© ظˆظ…ظ†ط§ظپط° ط´ط­ظ† ط³ط±ظٹط¹ USB-C PD ط¨ظ‚ظˆط© 45 ظˆط§ط· ظ„ط´ط­ظ† ط§ظ„ظƒط§ظ…ظٹط±ط§طھ ظˆط§ظ„ظ„ط§ط¨طھظˆط¨.",
+    "specs": {
+      "ط§ظ„ط³ط¹ط©": "50Wh (14.8V 3400mAh) ظ…ط³ظ…ظˆط­ ط¨ط­ظ…ظ„ظ‡ط§ ط¹ظ„ظ‰ ظ…طھظ† ط§ظ„ط·ط§ط¦ط±ط§طھ",
+      "ط§ظ„ظ…ظ†ط§ظپط°": "USB-C PD ط¨ظ‚ظˆط© 45WطŒ USB-AطŒ D-TapطŒ ظˆظ…ط®ط±ط¬ 8V DC ظˆظ…ط®ط±ط¬ 12V DC",
+      "ط§ظ„ط´ط§ط´ط©": "ط´ط§ط´ط© OLED طھط¹ط±ط¶ ظ†ط³ط¨ط© ط§ظ„ط´ط­ظ† ط§ظ„ظ…طھط¨ظ‚ظٹط© ظˆط§ظ„ط¬ظ‡ط¯ ط¨ط¯ظ‚ط©",
+      "ط§ظ„ظˆط²ظ†": "330 ط¬ظ… ظپظ‚ط·"
+    }
+  },
+  {
+    "id": "ACC-343",
+    "name": "SmallRig VB99 Mini V-Mount Battery (99Wh 3580B)",
+    "nameEn": "SmallRig VB99 Mini V-Mount Battery (99Wh 3580B)",
+    "category": "chargers_batteries",
+    "brand": "SmallRig",
+    "price": 175,
+    "oldPrice": 195,
+    "rating": 5.0,
+    "reviewsCount": 88,
+    "stock": 10,
+    "badge": "ط§ظ„ط£ظƒط«ط± ط·ظ„ط¨ط§ظ‹ ظ„ظ„ط³ظٹظ†ظ…ط§ 99Wh",
+    "image": "images/prod_smallrig_vb99.jpg",
+    "gallery": ["images/prod_smallrig_vb99.jpg"],
+    "description": "ط§ظ„ط¨ط·ط§ط±ظٹط© ط§ظ„ط³ظٹظ†ظ…ط§ط¦ظٹط© ط§ظ„ط£ظƒط«ط± ط´ظ‡ط±ط© ط¨ط³ط¹ط© 99 ظˆط§ط·/ط³ط§ط¹ط© ط§ظ„ظ…ط³ظ…ظˆط­ ط¨ظ‡ط§ ظپظٹ ط§ظ„ط³ظپط± ط§ظ„ط¬ظˆظٹطŒ ظ…ط¹ ط´ط­ظ† ط³ط±ظٹط¹ 65W PD ط¹ط¨ط± USB-C ظ„طھط´ط؛ظٹظ„ ط§ظ„ظƒط§ظ…ظٹط±ط§ ظˆط§ظ„ظ…ظˆظ†ظٹطھط± ظ…ط¹ط§ظ‹.",
+    "specs": {
+      "ط§ظ„ط³ط¹ط©": "99Wh (14.8V 6700mAh) Airline-Friendly",
+      "ط§ظ„ط´ط­ظ† ط§ظ„ط³ط±ظٹط¹": "USB-C Bi-directional PD ط¨ظ‚ط¯ط±ط© 65W ظٹط´ط­ظ† ط§ظ„ط¨ط·ط§ط±ظٹط© ط¨ط§ظ„ظƒط§ظ…ظ„ ظپظٹ 2.5 ط³ط§ط¹ط©",
+      "ط§ظ„ظ…ظ†ط§ظپط°": "D-TapطŒ USB-AطŒ USB-CطŒ DC 8VطŒ DC 12V ظ„طھط´ط؛ظٹظ„ ظ†ط¸ط§ظ… ط§ظ„ظƒط§ظ…ظٹط±ط§ ط¨ط§ظ„ظƒط§ظ…ظ„",
+      "ط§ظ„ط´ط§ط´ط©": "ط´ط§ط´ط© OLED ط±ظ‚ظ…ظٹط© ظ„ط­ط§ظ„ط© ط§ظ„ط·ط§ظ‚ط© ط§ظ„ظپظˆط±ظٹط©",
+      "ط§ظ„ظˆط²ظ†": "550 ط¬ظ…"
+    }
+  },
+  {
+    "id": "ACC-350",
+    "name": "Sony NP-FZ100 Original Rechargeable Battery",
+    "nameEn": "Sony NP-FZ100 Original Rechargeable Battery",
+    "category": "chargers_batteries",
+    "brand": "Sony",
+    "price": 75,
+    "oldPrice": 85,
+    "rating": 5.0,
+    "reviewsCount": 115,
+    "stock": 20,
+    "badge": "ط£طµظ„ظٹط© 100% ظ…ط¹ ظƒظپط§ظ„ط© ط³ظˆظ†ظٹ",
+    "image": "images/prod_sony_npfz100.jpg",
+    "gallery": ["images/prod_sony_npfz100.jpg"],
+    "description": "ط¨ط·ط§ط±ظٹط© ط³ظˆظ†ظٹ ط§ظ„ط£طµظ„ظٹط© NP-FZ100 ظ„ظƒط§ظ…ظٹط±ط§طھ A7 III ظˆ A7 IV ظˆ FX3 ظˆ FX30 ظˆ A7R V ظ…ط¹ ط±ظ‚ط§ظ‚ط© ط³ظˆظ†ظٹ ط§ظ„ط£طµظ„ظٹط© ظˆط³ط¹ط© 2280mAh.",
+    "specs": {
+      "ط§ظ„ط¬ظ‡ط¯ ظˆط§ظ„ط³ط¹ط©": "7.2V / 2280mAh (16.4Wh)",
+      "ط§ظ„طھظˆط§ظپظ‚": "ط¬ظ…ظٹط¹ ظƒط§ظ…ظٹط±ط§طھ ط³ظˆظ†ظٹ ظپط¦ط© ط£ظ„ظپط§ ظˆط³ظٹظ†ظ…ط§ ظ„ط§ظٹظ† ط§ظ„ط­ط¯ظٹط«ط©",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ط£طµظ„ظٹط© 100% ظ…ظ† ط§ظ„ظˆظƒظٹظ„ ط§ظ„ط±ط³ظ…ظٹ ظ…ط¹ ط±ظ…ط² ط§ظ„طھط­ظ‚ظ‚"
+    }
+  },
+  {
+    "id": "ACC-351",
+    "name": "Canon LP-E6NH Original Rechargeable Battery",
+    "nameEn": "Canon LP-E6NH Original Rechargeable Battery",
+    "category": "chargers_batteries",
+    "brand": "Canon",
+    "price": 75,
+    "oldPrice": 85,
+    "rating": 5.0,
+    "reviewsCount": 84,
+    "stock": 16,
+    "badge": "ط£طµظ„ظٹط© 100% ظ…ط¹ ظƒظپط§ظ„ط© ظƒط§ظ†ظˆظ†",
+    "image": "images/prod_canon_lpe6nh.jpg",
+    "gallery": ["images/prod_canon_lpe6nh.jpg"],
+    "description": "ط¨ط·ط§ط±ظٹط© ظƒط§ظ†ظˆظ† ط§ظ„ط£طµظ„ظٹط© ط¹ط§ظ„ظٹط© ط§ظ„ط³ط¹ط© 2130mAh ظ„ظƒط§ظ…ظٹط±ط§طھ EOS R5 Mark II ظˆ R6 Mark II ظˆ R5 ظˆ R6 ظ…ط¹ ط¯ط¹ظ… ط§ظ„ط´ط­ظ† ط§ظ„ط¯ط§ط®ظ„ظٹ ط¹ط¨ط± USB.",
+    "specs": {
+      "ط§ظ„ط¬ظ‡ط¯ ظˆط§ظ„ط³ط¹ط©": "7.2V / 2130mAh",
+      "ط§ظ„طھظˆط§ظپظ‚": "ظƒط§ظ…ظٹط±ط§طھ Canon EOS R5طŒ R5 Mark IIطŒ R6طŒ R6 Mark IIطŒ R7طŒ 5D Mark IV",
+      "ط§ظ„ط´ط­ظ†": "طھط¯ط¹ظ… ط§ظ„ط´ط­ظ† ط¯ط§ط®ظ„ ط§ظ„ظƒط§ظ…ظٹط±ط§ ط¹ط¨ط± ظ…ظ†ظپط° USB-C"
+    }
+  },
+
+  // â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ 10. BAGS & BACKPACKS (4 Authentic Pro Backpacks) â•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گâ•گ
+  {
+    "id": "ACC-406",
+    "name": "Peak Design Everyday Backpack 20L V2 (Black)",
+    "nameEn": "Peak Design Everyday Backpack 20L V2 (Black)",
+    "category": "bags",
+    "brand": "Peak Design",
+    "price": 279,
+    "oldPrice": 299,
+    "rating": 5.0,
+    "reviewsCount": 76,
+    "stock": 4,
+    "badge": "ط­ظ‚ظٹط¨ط© ط§ظ„ظ…طµظˆط±ظٹظ† ط§ظ„ط£ظˆظ„ظ‰",
+    "image": "images/prod_peakdesign_everyday.jpg",
+    "gallery": ["images/prod_peakdesign_everyday.jpg", "images/prod_peakdesign_everyday_angle2.jpg", "images/prod_peakdesign_everyday_angle3.jpg", "images/prod_peakdesign_everyday_angle4.jpg"],
+    "description": "ط§ظ„ط­ظ‚ظٹط¨ط© ط§ظ„ط­ط§ط¦ط²ط© ط¹ظ„ظ‰ ط¬ظˆط§ط¦ط² ط§ظ„طھطµظ…ظٹظ… ط§ظ„ط¹ط§ظ„ظ…ظٹط© ط¨ظ†ط¸ط§ظ… ط§ظ„ظپظˆط§طµظ„ ط§ظ„ظ…ط±ظ†ط© FlexFold ظˆظ‚ظپظ„ MagLatch ط§ظ„ظ…ط؛ظ†ط§ط·ظٹط³ظٹ ظˆظ‚ظ…ط§ط´ ظ†ط§ظٹظ„ظˆظ† 400D ظ…ظ‚ط§ظˆظ… ظ„ظ„ط£ظ…ط·ط§ط± ط¨ظ†ط³ط¨ط© 100%.",
+    "specs": {
+      "ط§ظ„ط³ط¹ط©": "20 ظ„طھط± ظ‚ط§ط¨ظ„ط© ظ„ظ„طھظˆط³ط¹ ط­طھظ‰ 23 ظ„طھط±",
+      "ط§ظ„ظˆطµظˆظ„ ط§ظ„ط³ط±ظٹط¹": "ط³ط­ط§ط¨ط§طھ ط¬ط§ظ†ط¨ظٹط© ظ…ط²ط¯ظˆط¬ط© ظ…ط§ظ†ط¹ط© ظ„طھط³ط±ط¨ ط§ظ„ظ…ظٹط§ظ‡ UltraZips ظ„ظ„ظˆطµظˆظ„ ظ„ظ„ظƒط§ظ…ظٹط±ط§ ظپظٹ ط«ظˆط§ظ†ظچ",
+      "ط¬ظٹط¨ ط§ظ„ظ„ط§ط¨طھظˆط¨": "ظٹطھط³ط¹ ظ„ط£ط¬ظ‡ط²ط© ظ„ط§ط¨طھظˆط¨ ط­طھظ‰ 15 ط¨ظˆطµط© ظ…ط¹ ط¬ظٹط¨ طھط§ط¨ظ„طھ ظ…ظ†ظپطµظ„",
+      "ط§ظ„ط¶ظ…ط§ظ†": "ظƒظپط§ظ„ط© ظ…ط¯ظ‰ ط§ظ„ط­ظٹط§ط© ظ…ظ† ط§ظ„ط´ط±ظƒط© ط§ظ„ظ…طµظ†ط¹ط©"
+    }
+  },
+  {
+    "id": "ACC-407",
+    "name": "Lowepro ProTactic BP 450 AW II Pro Camera Backpack",
+    "nameEn": "Lowepro ProTactic BP 450 AW II Pro Camera Backpack",
+    "category": "bags",
+    "brand": "Lowepro",
+    "price": 240,
+    "oldPrice": 265,
+    "rating": 5.0,
+    "reviewsCount": 92,
+    "stock": 5,
+    "badge": "ط­ظ…ط§ظٹط© ط¹ط³ظƒط±ظٹط© ظ…ط¯ط±ط¹ط©",
+    "image": "images/prod_lowepro_protactic.jpg",
+    "gallery": ["images/prod_lowepro_protactic.jpg", "images/prod_lowepro_protactic_angle2.jpg", "images/prod_lowepro_protactic_angle3.jpg", "images/prod_lowepro_protactic_angle4.jpg"],
+    "description": "ط­ظ‚ظٹط¨ط© ط§ظ„ط¸ظ‡ط± ط§ظ„ظ…ط¯ط±ط¹ط© ط§ظ„ط§ط­طھط±ط§ظپظٹط© ط¨ظ†ط¸ط§ظ… FormShell ط§ظ„طµظ„ط¨ ظ„ظ„ط­ظ…ط§ظٹط© ظ…ظ† ط§ظ„طµط¯ظ…ط§طھ ظˆ4 ظ†ظ‚ط§ط· ظˆطµظˆظ„ ظ„ظ„ظƒط§ظ…ظٹط±ط§ ظˆط§ظ„ط¹ط¯ط³ط§طھ ظ…ط¹ ط­ط²ط§ظ… ط®طµط± ظ…ط¯ط¹ظ….",
+    "specs": {
+      "ظ†ظ‚ط§ط· ط§ظ„ظˆطµظˆظ„": "4 ظ†ظ‚ط§ط· ظˆطµظˆظ„ ط³ط±ظٹط¹ط© (ظ…ظ† ط§ظ„ط£ط¹ظ„ظ‰طŒ ظˆط§ظ„ط¬ط§ظ†ط¨ظٹظ†طŒ ظˆط§ظ„ط¸ظ‡ط± ط¨ط§ظ„ظƒط§ظ…ظ„)",
+      "ط§ظ„ط³ط¹ط©": "طھطھط³ط¹ ظ„ظ€ 2 ظƒط§ظ…ظٹط±ط§ ط§ط­طھط±ط§ظپظٹط© ظ…ط¹ ط¹ط¯ط³ط© 70-200mm ظ…ط±ظƒط¨ط© ظˆ 6 ط¹ط¯ط³ط§طھ ط¥ط¶ط§ظپظٹط© ظˆط·ط§ط¦ط±ط© ط¯ط±ظˆظ†",
+      "ظ†ط¸ط§ظ… ط§ظ„ظ…ظ„ط­ظ‚ط§طھ": "ظ†ط¸ط§ظ… ط£ط´ط±ط·ط© SlipLock ط§ظ„ظ…طھظˆط§ظپظ‚ ط¹ط³ظƒط±ظٹط§ظ‹ ظ„طھط¹ظ„ظٹظ‚ ط­ظˆط§ظ…ظ„ ط§ظ„طھط±ط§ظٹط¨ظˆط¯ ظˆظ…ط·ط±ط§طھ ط§ظ„ظ…ط§ط،",
+      "ط؛ط·ط§ط، ط§ظ„ظ…ط·ط±": "ط؛ط·ط§ط، All Weather AW Cover ظ…ط¯ظ…ط¬ ظ„ظ„ط­ظ…ط§ظٹط© ظ…ظ† ط§ظ„ط¹ظˆط§طµظپ ظˆط§ظ„ط£ظ…ط·ط§ط± ط§ظ„ط؛ط²ظٹط±ط©"
+    }
+  },
+  {
+    "id": "ACC-408",
+    "name": "Ulanzi BP09 22L Weatherproof Camera Backpack",
+    "nameEn": "Ulanzi BP09 22L Weatherproof Camera Backpack",
+    "category": "bags",
+    "brand": "Ulanzi",
+    "price": 85,
+    "oldPrice": 99,
+    "rating": 4.8,
+    "reviewsCount": 49,
+    "stock": 8,
+    "badge": "ظ…ظ‚ط§ظˆظ…ط© ظ„ظ„ظ…ط§ط، ظˆط³ط¹ط± ط§ظ‚طھطµط§ط¯ظٹ",
+    "image": "images/prod_ulanzi_bp09.jpg",
+    "gallery": ["images/prod_ulanzi_bp09.jpg", "images/prod_ulanzi_bp09_angle2.jpg", "images/prod_ulanzi_bp09_angle3.jpg", "images/prod_ulanzi_bp09_angle4.jpg"],
+    "description": "ط­ظ‚ظٹط¨ط© ط¸ظ‡ط± ط¹طµط±ظٹط© ظˆط£ظ†ظٹظ‚ط© ط¨ط³ط¹ط© 22 ظ„طھط± ظˆظ…ظ‚ط§ظˆظ…ط© ظ„ظ„ظ…ط§ط،طŒ ظ…ط¹ ط¨ط§ط¨ ط¬ط§ظ†ط¨ظٹ ط³ط±ظٹط¹ ظ„ط³ط­ط¨ ط§ظ„ظƒط§ظ…ظٹط±ط§ ظˆظپظˆط§طµظ„ ظ‚ط§ط¨ظ„ط© ظ„ظ„طھط®طµظٹطµ ظˆظ…ظƒط§ظ† ظ„ط­ظ…ظ„ ط§ظ„طھط±ط§ظٹط¨ظˆط¯.",
+    "specs": {
+      "ط§ظ„ط³ط¹ط©": "22 ظ„طھط± طھطھط³ط¹ ظ„ظƒط§ظ…ظٹط±ط§ ظ…ط¹ ط¹ط¯ط³طھظٹظ† ظˆظ„ط§ط¨طھظˆط¨ 15.6 ط¨ظˆطµط©",
+      "ط§ظ„ظ…ط§ط¯ط©": "ظ‚ظ…ط§ط´ ط¨ظˆظ„ظٹط³طھط± ظ…ظ‚ط§ظˆظ… ظ„ظ„ظ…ط§ط، ظˆط§ظ„طھظ…ط²ظ‚ ظ…ط¹ ط³ط­ط§ط¨ط§طھ ظ…ط­ظƒظ…ط© ط¶ط¯ ط§ظ„ظ…ط·ط±",
+      "ط§ظ„ظˆط²ظ†": "1.7 ظƒط¬ظ… ظپظ‚ط· ظ…ط¹ ظˆط³ط§ط¦ط¯ ط¸ظ‡ط± ظ…ط±ظٹط­ط© ظˆط¬ظٹط¯ط© ط§ظ„طھظ‡ظˆظٹط©"
+    }
+  },
+  {
+    "id": "ACC-409",
+    "name": "Ulanzi AB01 TAI 38L Large Travel Camera Backpack",
+    "nameEn": "Ulanzi AB01 TAI 38L Large Travel Camera Backpack",
+    "category": "bags",
+    "brand": "Ulanzi",
+    "price": 125,
+    "oldPrice": 145,
+    "rating": 4.9,
+    "reviewsCount": 33,
+    "stock": 6,
+    "badge": "ط³ط¹ط© ط³ظپط± ط¶ط®ظ…ط© 38L",
+    "image": "images/prod_ulanzi_ab01.jpg",
+    "gallery": ["images/prod_ulanzi_ab01.jpg"],
+    "description": "ط­ظ‚ظٹط¨ط© ط§ظ„ط³ظپط± ط§ظ„ط¶ط®ظ…ط© ظ„ظ„ظ…طµظˆط±ظٹظ† ظˆط§ظ„ط³ظٹظ†ظ…ط§ط¦ظٹظٹظ† ط¨ط³ط¹ط© 38 ظ„طھط±طŒ طھط³طھظˆط¹ط¨ ظ…ط¹ط¯ط§طھ ط¥ظ†طھط§ط¬ ظƒط§ظ…ظ„ط© ظ…ط¹ ظ…ظ„ط§ط¨ط³ ظ„ظ„ط³ظپط± ظ„ط¹ط¯ط© ط£ظٹط§ظ… ظˆظ†ط¸ط§ظ… طھط¹ظ„ظٹظ‚ ظ…ط±ظٹط­ ظ„ظ„ط±ط­ظ„ط§طھ ط§ظ„ط·ظˆظٹظ„ط©.",
+    "specs": {
+      "ط§ظ„ط³ط¹ط©": "38 ظ„طھط± ط³ط¹ط© طھط®ط²ظٹظ† ظ‡ط§ط¦ظ„ط© ظ…ظ‚ط³ظ…ط© ط¥ظ„ظ‰ ظ‚ط³ظ…ظٹظ† ظ…ظ†ظپطµظ„ظٹظ† ظ„ظ„ظ…ط¹ط¯ط§طھ ظˆط§ظ„ظ…ظ„ط§ط¨ط³",
+      "ط§ظ„ط­ظ…ط§ظٹط©": "ط­ط´ظˆط© ط³ظ…ظٹظƒط© ظ…ظ‚ط§ظˆظ…ط© ظ„ظ„طµط¯ظ…ط§طھ ظˆظ‚ظ…ط§ط´ ظ…طھظٹظ† ظ…ط§ظ†ط¹ ظ„ظ„ط®ط¯ط´ ظˆط§ظ„ط¨ظ„ظ„",
+      "ط£ط­ط²ظ…ط© ط§ظ„طھط«ط¨ظٹطھ": "ط£ط­ط²ظ…ط© طµط¯ط± ظˆط®طµط± ظ…ط±ظٹط­ط© ظ„طھظˆط²ظٹط¹ ط§ظ„ظˆط²ظ† ظˆطھط®ظپظٹظپ ط§ظ„ط­ظ…ظ„ ط¹ظ† ط§ظ„ط£ظƒطھط§ظپ"
+    }
+  }
 ];
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { INITIAL_CATEGORIES, INITIAL_PRODUCTS };
 }
-
