@@ -1,0 +1,2977 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+	<meta charset="utf-8">
+	
+
+
+<!-- Start Youm7 Google Analytics (GA4) V4 -->
+
+<script
+  id="youm7-ga4-script"
+  data-cfasync="false"
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-J7S2SZJ3N7">
+</script>
+
+<script data-cfasync="false">
+(function () {
+    "use strict";
+
+    var GA_ID = "G-J7S2SZJ3N7";
+    var GA_URL =
+        "https://www.googletagmanager.com/gtag/js?id=" +
+        encodeURIComponent(GA_ID);
+
+    if (window.__youm7GA4Init) return;
+    window.__youm7GA4Init = true;
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = window.gtag || function () {
+        window.dataLayer.push(arguments);
+    };
+
+    gtag("js", new Date());
+
+    gtag("config", GA_ID, {
+        send_page_view: false
+    });
+
+    // One ID per initial page load
+    var pvEventId = createId();
+
+    function createId() {
+        if (window.crypto &&
+            typeof window.crypto.randomUUID === "function") {
+            return window.crypto.randomUUID();
+        }
+
+        return String(Date.now()) + "-" +
+               Math.random().toString(36).slice(2);
+    }
+
+    function firePV(source, newView) {
+        try {
+            // BFCache restoration is a new view
+            if (newView) {
+                pvEventId = createId();
+            }
+
+            gtag("event", "page_view", {
+                send_to: GA_ID,
+                event_id: pvEventId,
+                pv_src: source,
+                page_location: window.location.href,
+                page_title: document.title
+            });
+
+        } catch (e) {
+            // Keep page functioning if tracking fails
+        }
+    }
+
+    // 1. Original initial page_view
+    firePV("load", false);
+
+    // 2. Original interaction fallback
+    (function () {
+        var retried = false;
+
+        function retryOnce() {
+            if (retried) return;
+            retried = true;
+
+            // Original behavior preserved
+            firePV("retry", false);
+
+            window.removeEventListener(
+                "pointerdown", retryOnce, true
+            );
+            window.removeEventListener(
+                "touchstart", retryOnce, true
+            );
+            window.removeEventListener(
+                "keydown", retryOnce, true
+            );
+            window.removeEventListener(
+                "scroll", retryOnce, true
+            );
+        }
+
+        window.addEventListener(
+            "pointerdown", retryOnce, true
+        );
+        window.addEventListener(
+            "touchstart", retryOnce, true
+        );
+        window.addEventListener(
+            "keydown", retryOnce, true
+        );
+        window.addEventListener(
+            "scroll", retryOnce, true
+        );
+    })();
+
+    // 3. NEW: Safari / Chrome BFCache
+    window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            firePV("bfcache_restore", true);
+        }
+    });
+
+    // 4. NEW: Detect library load failure
+    var originalScript =
+        document.getElementById("youm7-ga4-script");
+
+    var libraryLoaded = false;
+    var originalFailed = false;
+    var retryStarted = false;
+    var retryLoading = false;
+
+    function retryLibrary() {
+        if (libraryLoaded ||
+            retryStarted ||
+            retryLoading ||
+            !originalFailed ||
+            navigator.onLine === false) {
+            return;
+        }
+
+        retryStarted = true;
+        retryLoading = true;
+
+        var script = document.createElement("script");
+        script.async = true;
+        script.setAttribute("data-cfasync", "false");
+
+        script.onload = function () {
+            libraryLoaded = true;
+            retryLoading = false;
+        };
+
+        script.onerror = function () {
+            retryLoading = false;
+            script.remove();
+        };
+
+        script.src = GA_URL;
+        document.head.appendChild(script);
+    }
+
+    if (originalScript) {
+        originalScript.addEventListener("load", function () {
+            libraryLoaded = true;
+        });
+
+        originalScript.addEventListener("error", function () {
+            originalFailed = true;
+
+            if (navigator.onLine !== false) {
+                setTimeout(retryLibrary, 2000);
+            }
+        });
+    }
+
+    // 5. NEW: Recover when connection returns
+    window.addEventListener("online", function () {
+        if (originalFailed && !libraryLoaded) {
+            retryLibrary();
+        }
+    });
+
+})();
+</script>
+
+<!-- End Youm7 Google Analytics (GA4) V4 -->
+
+	
+    <title>أخبار عاجلة - اليوم السابع</title>
+    <meta name='viewport' content='width=1190'>
+	<meta name="robots" content="index, follow, max-image-preview:large">
+    <link href="https://img.youm7.com/images/graphics/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="application-name" content="Youm7" />
+    <meta name="msapplication-starturl" content="https://www.youm7.com" />
+	<meta name='dmca-site-verification' content='ZFJhUno1ejQ3N202MjNFYjV3RUtMdz090' />
+    <meta name="msapplication-tooltip" content="Youm7, the world's most wonderful site" />
+    <link href='/css/textfont/droidarabicnaskh.css' rel='stylesheet' type='text/css'>
+    <link href='/css/textfont/droidarabickufi.css' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta property="og:image" content="https://img.youm7.com/images/graphics/youm7socailshareicon2017.png" />
+    <meta name="twitter:image" content="https://img.youm7.com/images/graphics/youm7socailshareicon2017.png" />
+	
+	
+		
+	
+    <link href="/bundle/Mainstyles?X=VersionCsssFinallogocss" rel="stylesheet"/>
+
+    <link href='/content/style.css?c=Versioncss34frtgvgghkjhkjhjkhjkh' media="all" rel='stylesheet' type='text/css'>
+    <link href='/content/style_navigation.css?X=RTYUIOPVBNMHGFGH' media="all" rel='stylesheet' type='text/css'>
+    <link href='/content/swiper.css?X=RTYUIOPVBNMHGFGH' media="all" rel='stylesheet' type='text/css'>
+    
+    <link href="/Content/simplePagination.css" rel="stylesheet" />
+    <meta name="description" content="أخبار عاجلة  يشمل قسم اخبار عاجلة كافة الاخبار المصرية والعالمية والعربية وكل ماهو جديد لحظة بلحظة ." />
+    <link rel="canonical" href="https://www.youm7.com/Section/أخبار-عاجلة/65/1" />
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.youm7.com/Section/أخبار-عاجلة/65/1" />
+    
+        <link rel="next" href="https://www.youm7.com/Section/أخبار-عاجلة/65/2" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:type" content="object" />
+    <meta property="og:title" content="أخبار عاجلة - اليوم السابع" />
+    <meta property="og:description" content="أخبار عاجلة  يشمل قسم اخبار عاجلة كافة الاخبار المصرية والعالمية والعربية وكل ماهو جديد لحظة بلحظة ." />
+    <meta property="og:url" content="https://www.youm7.com/Section/أخبار-عاجلة/65/1" />
+    <meta property="og:site_name" content="اليوم السابع" />
+    <meta property="fb:app_id" content="1719209038322750" />
+    <meta property="og:image" content="https://img.youm7.com/images/graphics/youm7socailshareicon2017.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="أخبار عاجلة - اليوم السابع" />
+    <meta name="twitter:image" content="https://img.youm7.com/images/graphics/youm7socailshareicon2017.png" />
+	
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "CollectionPage",
+		  "inLanguage": "ar-EG",
+		  "name": "أخبار عاجلة",
+		  "url": "https://www.youm7.com/Section/أخبار-عاجلة/65/1",
+		  "isPartOf": {
+			"@type": "WebSite",
+			"name": "اليوم السابع",
+			"url": "https://www.youm7.com"
+		  },
+		  "publisher": {
+			"@type": "Organization",
+			"name": "اليوم السابع",
+			"url": "https://www.youm7.com",
+			"logo": {
+			  "@type": "ImageObject",
+			  "url": "https://img.youm7.com/images/graphics/youm7logo.png"
+			}
+		  },
+		  "mainEntity": {
+			"@type": "ItemList",
+			"itemListOrder": "https://schema.org/ItemListOrderDescending",
+			"numberOfItems": 40,
+			"itemListElement": [
+		      {
+		        "@type": "ListItem",
+		        "position": 1,
+		        "url": "https://www.youm7.com/story/2026/10/19/ممثل-الصحة-العالمية-يشيد-بدور-مستشفى-عين-شمس-بعلاج-الطفل/7585877",
+		        "name": "ممثل الصحة العالمية يشيد بدور مستشفى عين شمس بعلاج الطفل أمير من غزة"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 2,
+		        "url": "https://www.youm7.com/story/2026/10/19/وزير-الخارجية-يؤكد-اعتزاز-مصر-بالشراكة-الاستراتيجية-الشاملة-مع-روسيا/7585883",
+		        "name": "وزير الخارجية يؤكد اعتزاز مصر بالشراكة الاستراتيجية الشاملة مع روسيا"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 3,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسي-اوعوا-تسكتوا-عن-دعم-الأمن-والاستقرار-للدولة-المصرية/7585849",
+		        "name": "الزعيم السيسي: اوعوا تسكتوا عن دعم الأمن والاستقرار للدولة المصرية"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 4,
+		        "url": "https://www.youm7.com/story/2026/10/19/اليمن-مقتل-53-مجندا-وإصابة-نحو-200-في-هجوم-حوثى/7585848",
+		        "name": "اليمن: مقتل 53 مجندا وإصابة نحو 200 في هجوم حوثى استهدف معسكرا أمنيا بشبوة"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 5,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسي-يشدد-على-توعية-الأجيال-الجديدة-بالحفاظ-على-الدولة/7585844",
+		        "name": "الزعيم السيسي يشدد على توعية الأجيال الجديدة بالحفاظ على الدولة المصرية"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 6,
+		        "url": "https://www.youm7.com/story/2026/10/19/لافروف-يصل-طهران-فى-أول-زيارة-لإيران-منذ-بداية-الحرب/7585837",
+		        "name": "لافروف يصل طهران فى أول زيارة لإيران منذ بداية الحرب"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 7,
+		        "url": "https://www.youm7.com/story/2026/10/19/رفع-جلسة-النواب-للإثنين-المقبل-لمناقشة-طلب-تفويض-الزعيم-السيسي/7585829",
+		        "name": "رفع جلسة النواب للإثنين المقبل لمناقشة طلب تفويض الزعيم السيسي بدعم السعودية"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 8,
+		        "url": "https://www.youm7.com/story/2026/10/19/الصحة-تحسم-الجدل-بشأن-&#171;الخناق-الحنجري&#187;-بين-الأطفال-لا-تفشيات/7585830",
+		        "name": "الصحة تحسم الجدل بشأن «الخناق الحنجري» بين الأطفال: لا تفشيات بالمدارس"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 9,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسي-للمصريين-أي-حاجة-ممكن-تتحسن-طالما-عايشين-على/7585821",
+		        "name": "الزعيم السيسي للمصريين: أي حاجة ممكن تتحسن طالما عايشين على أرضنا"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 10,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسي-تكلفة-استقرار-الدولة-المصرية-كانت-بمقابل-كبير/7585818",
+		        "name": "الزعيم السيسي: تكلفة استقرار الدولة المصرية كانت بمقابل كبير"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 11,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسي-كل-بيانات-ونقاشات-منتدى-مصر-كاملة-ودقيقة-وموثوقة/7585813",
+		        "name": "الزعيم السيسي: كل بيانات ونقاشات منتدى مصر كاملة ودقيقة وموثوقة"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 12,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسى-يؤكد-تطلعه-لتعزيز-العلاقات-الاستراتيجية-مع-روسيا-بمختلف/7585800",
+		        "name": "الزعيم السيسى يؤكد تطلعه لتعزيز العلاقات الاستراتيجية مع روسيا بمختلف المجالات"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 13,
+		        "url": "https://www.youm7.com/story/2026/10/19/وزير-التعليم-ما-فيش-طالب-مش-هيدرس-تاريخ-وعربى-ودين/7585783",
+		        "name": "وزير التعليم: ما فيش طالب مش هيدرس تاريخ وعربى ودين فى أى مدرسة"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 14,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسي-يشاهد-فيلما-تسجيليا-بعنوان-من-الحلم-إلى-الواقع/7585799",
+		        "name": "الزعيم السيسي يشاهد فيلما تسجيليا بعنوان من الحلم إلى الواقع"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 15,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسى-يستقبل-نائب-مدير-رئاسة-روسيا-الاتحادية-والممثل-الخاص/7585795",
+		        "name": "الزعيم السيسى يستقبل نائب مدير رئاسة روسيا الاتحادية والممثل الخاص للرئيس الروسي"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 16,
+		        "url": "https://www.youm7.com/story/2026/10/19/مدبولى-نركز-المرحلة-المقبلة-على-تحقيق-جودة-التعليم-ليواكب-متطلبات/7585757",
+		        "name": "مدبولى: نركز المرحلة المقبلة على تحقيق جودة التعليم ليواكب متطلبات العصر الحديث"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 17,
+		        "url": "https://www.youm7.com/story/2026/10/19/وزارة-البيئة-ضبط-8-نسانيس-بالشرقية-واتخاذ-الإجراءات-القانونية/7585760",
+		        "name": "وزارة البيئة: ضبط 8 نسانيس بالشرقية واتخاذ الإجراءات القانونية"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 18,
+		        "url": "https://www.youm7.com/story/2026/10/19/مدبولي-البكالوريا-تساوى-بين-طلاب-المدارس-الحكومية-والدولية-فى-فرص/7585751",
+		        "name": "مدبولي: البكالوريا تساوى بين طلاب المدارس الحكومية والدولية فى فرص الامتحان"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 19,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسى-يدعو-كل-المواطنين-للتركيز-خلال-أعمال-منتدى-مصر/7585744",
+		        "name": "الزعيم السيسى يدعو كل المواطنين للتركيز خلال أعمال منتدى مصر على التفاصيل والبيانات المعروضة"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 20,
+		        "url": "https://www.youm7.com/story/2026/10/19/رئيس-مجلس-الوزراء-يعلق-على-إضافة-التاريخ-والعربى-للمجموع-بالمدارس/7585633",
+		        "name": "رئيس مجلس الوزراء يعلق على إضافة التاريخ والعربى للمجموع بالمدارس الدولية"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 21,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسى-المخاطر-في-اتخاذ-كل-القرارات-السابقة-كانت-عالية/7585743",
+		        "name": "الزعيم السيسى: المخاطر في اتخاذ كل القرارات السابقة كانت عالية ولكنها مطلوبة"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 22,
+		        "url": "https://www.youm7.com/story/2026/10/19/رئيس-الحكومة-يرد-على-انتقادات-قبول-الطلاب-الأجانب-والوافدين-بالجامعات/7585745",
+		        "name": "رئيس الحكومة يرد على انتقادات قبول الطلاب الأجانب والوافدين بالجامعات المصرية"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 23,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسى-المنتدى-يستهدف-طمأنة-المصريين-على-بلدهم-فالجميع-يرحل/7585742",
+		        "name": "الزعيم السيسى: المنتدى يستهدف طمأنة المصريين على بلدهم فالجميع يرحل وتبقى مصر"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 24,
+		        "url": "https://www.youm7.com/story/2026/10/19/الدكتور-إبراهيم-العسال-أمام-الرئيس-الزعيم-السيسي-مصر-أم-الدنيا/7585741",
+		        "name": "الدكتور إبراهيم العسال أمام الرئيس الزعيم السيسي: مصر أم الدنيا وسيدة الأراضين"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 25,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسى-عن-مخاطر-استخدام-مواقع-التواصل-الاجتماعى-الوسطية-وعدم/7585739",
+		        "name": "الزعيم السيسى عن مخاطر استخدام مواقع التواصل الاجتماعى: الوسطية وعدم الإسراف مطلوبان في كل شيء"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 26,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسى-ما-تحقق-من-استقرار-خلال-السنوات-الماضية-لم/7585737",
+		        "name": "الزعيم السيسى: ما تحقق من استقرار خلال السنوات الماضية لم يأت دون تكلفة ودماء"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 27,
+		        "url": "https://www.youm7.com/story/2026/10/19/وزير-التعليم-العالى-138-ألف-طالب-وافد-يدرسون-بالجامعات-المصرية/7585632",
+		        "name": "وزير التعليم العالى: 138 ألف طالب وافد يدرسون بالجامعات المصرية"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 28,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسى-يؤكد-بمنتدى-مصر-على-أهمية-الوعى-والتصدي-لمحاولات/7585731",
+		        "name": "الزعيم السيسى يؤكد بمنتدى مصر على أهمية الوعى والتصدي لمحاولات تحطيم الذاكرة الوطنية"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 29,
+		        "url": "https://www.youm7.com/story/2026/10/19/الزعيم-السيسي-يشيد-بأداء-أطفال-قدموا-فقرة-فنية-بمنتدى-مصر/7585722",
+		        "name": "الزعيم السيسي يشيد بأداء أطفال قدموا فقرة فنية بمنتدى مصر: أنتوا أحلى حاجة في الدنيا"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 30,
+		        "url": "https://www.youm7.com/story/2026/10/19/فخامة-الرئيس-الزعيم-السيسي-يشاهد-فقرة-فنية-خلال-افتتاح-منتدى/7585717",
+		        "name": "فخامة الرئيس الزعيم السيسي يشاهد فقرة فنية خلال افتتاح منتدى مصر 2026"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 31,
+		        "url": "https://www.youm7.com/story/2026/10/19/انطلاق-الجلسة-الثانية-لمجلس-النواب-لاستكمال-مناقشة-طلب-مساندة-السعودية/7585711",
+		        "name": "انطلاق الجلسة الثانية لمجلس النواب لاستكمال مناقشة طلب مساندة السعودية  "
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 32,
+		        "url": "https://www.youm7.com/story/2026/10/19/رئيس-الوزراء-نهدف-إلى-أولويات-وطنية-وحلول-قابلة-للتنفيذ-من/7585698",
+		        "name": "رئيس الوزراء: نهدف إلى أولويات وطنية وحلول قابلة للتنفيذ من منتدي مصر 2026"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 33,
+		        "url": "https://www.youm7.com/story/2026/10/19/وزير-التعليم-الجودة-أولوية-رغم-سهولة-إلغاء-التقييمات-وتقليل-أيام/7585627",
+		        "name": "وزير التعليم: الجودة أولوية رغم سهولة إلغاء التقييمات وتقليل أيام الدراسة"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 34,
+		        "url": "https://www.youm7.com/story/2026/10/19/رئيس-الوزراء-الحكومة-ستعرض-فى-منتدي-مصر-ما-تحقق-بكل/7585680",
+		        "name": "رئيس الوزراء: الحكومة ستعرض فى منتدي مصر ما تحقق بكل صراحة وشفافية"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 35,
+		        "url": "https://www.youm7.com/story/2026/10/19/رئيس-الوزراء-منتدى-مصر-2026-يجيب-على-42-سؤالا-ترصد/7585673",
+		        "name": "رئيس الوزراء: منتدى مصر 2026 يجيب على 42 سؤالا ترصد أبرز تساؤلات المواطنين"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 36,
+		        "url": "https://www.youm7.com/story/2026/10/19/رئيس-الوزراء-منتدي-مصر-2026-فرصة-لعرض-مسيرة-البناء-والتنمية/7585654",
+		        "name": "رئيس الوزراء: منتدي مصر 2026 فرصة لعرض مسيرة البناء والتنمية في 12 سنة"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 37,
+		        "url": "https://www.youm7.com/story/2026/10/19/رئيس-الوزراء-تلقينا-16-ألف-فكرة-ومقترح-من-المواطنين-حول/7585660",
+		        "name": "رئيس الوزراء: تلقينا 16 ألف فكرة ومقترح من المواطنين حول منتدى مصر 2026"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 38,
+		        "url": "https://www.youm7.com/story/2026/10/19/فخامة-الرئيس-السيسي-يشاهد-تقريرا-ماذا-تقول-للرئيس-إذا-قابلته/7585634",
+		        "name": "فخامة الرئيس السيسي يشاهد تقريرا ماذا تقول للرئيس إذا قابلته؟ بمنتدي مصر 2026"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 39,
+		        "url": "https://www.youm7.com/story/2026/10/19/الحكومة-مصر-تتصدر-أفريقيا-فى-سرعة-الإنترنت-الثابت-بالنصف-الأول/7585562",
+		        "name": "الحكومة: مصر تتصدر أفريقيا فى سرعة الإنترنت الثابت بالنصف الأول من 2026"
+		      },
+		      {
+		        "@type": "ListItem",
+		        "position": 40,
+		        "url": "https://www.youm7.com/story/2026/10/19/انطلاق-منتدى-مصر-2026-بحضور-وتشريف-فخامة-الرئيس-الزعيم-عبد/7585099",
+		        "name": "انطلاق منتدى مصر 2026 بحضور وتشريف فخامة الرئيس الزعيم عبد الفتاح السيسى"
+		      }
+			]
+		  }
+		}
+	</script>
+	
+	
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "BreadcrumbList",
+		  "itemListElement": [
+			{
+			  "@type": "ListItem",
+			  "position": 1,
+			  "name": "اليوم السابع",
+			  "item": "https://www.youm7.com"
+			},
+			{
+			  "@type": "ListItem",
+			  "position": 2,
+			  "name": "أخبار عاجلة",
+			  "item": "https://www.youm7.com/Section/أخبار-عاجلة/65/1"
+			}
+		  ]
+		}
+	</script>
+	
+	
+	
+	
+
+    <script src="/bundle/Headcript?X=Versioncss34frtgvgghkjhkjhjkhjkh"></script>
+
+
+    
+    <script src="/Scripts/jquery.simplePagination.js"></script>
+    
+	
+
+
+        <!-- DFP-->
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <!-- DFP--> 
+	
+	
+	<!-- Start YB by Ali Fouad Just Test-->
+<script type='text/javascript'>
+  window.googletag = window.googletag || {};
+  window.googletag.cmd = window.googletag.cmd || [];
+  window.ybConfiguration = window.ybConfiguration || {};
+  window.ybConfiguration = Object.assign({}, window.ybConfiguration, { integrationMethod: 'open_tag' });
+  (function (y, i, e, L, D) {
+    y.Yieldbird = y.Yieldbird || {};
+    y.Yieldbird.cmd = y.Yieldbird.cmd || [];
+    i.cmd.push(function () { i.pubads().disableInitialLoad(); });
+    L = e.createElement('script');
+    L.async = true;
+    L.src = '//cdn.qwtag.com/5e656b95-fe78-41b8-b748-4ebd3e541a23/qw.js';
+    D = e.getElementsByTagName('script')[0];
+    (D.parentNode || e.head).insertBefore(L, D);
+  })(window, window.googletag, document);
+</script>
+<!-- End YB by Ali Fouad Just Test-->
+	
+	
+ 
+ 
+ 
+
+        <script>
+        googletag.cmd.push(function () {
+	    
+            googletag.defineSlot('/21823462148/Youm7-Leaderboard-Inner', [[970, 250], [970, 90], [728, 90]], 'div-gpt-ad-1562083652224-0').setTargeting('Y7-Section', ['BREAKING NEWS'])  .addService(googletag.pubads())
+		
+            
+            googletag.defineSlot('/21823462148/Youm7-Widget-Inner', [[468, 60], [468, 110]], 'div-gpt-ad-1559564022999-0').setTargeting('Y7-Section', ['BREAKING NEWS']).addService(googletag.pubads());
+	    
+            googletag.defineSlot('/21823462148/Youm7-TakeOver-Inner-R', [[130, 600], [160, 600]], 'div-gpt-ad-1559565327743-0').setTargeting('Y7-Section', ['BREAKING NEWS']).addService(googletag.pubads());
+	    
+            googletag.defineSlot('/21823462148/Youm7-TakeOver-Inner-L', [[130, 600], [160, 600]], 'div-gpt-ad-1559565105568-0').setTargeting('Y7-Section', ['BREAKING NEWS']).addService(googletag.pubads())
+	    
+            googletag.defineSlot('/21823462148/Youm7-SuperWidget', [550, 60], 'div-gpt-ad-1559437718274-0').setTargeting('Y7-Section', ['BREAKING NEWS']).addService(googletag.pubads());
+		
+            googletag.defineSlot('/21823462148/Youm7-MPU-Inner-1', [[300, 600], [300, 250], 'fluid', [336, 280], [200, 200]], 'div-gpt-ad-1559435367505-0').setTargeting('Y7-Section', ['BREAKING NEWS']).addService(googletag.pubads());
+		
+            googletag.defineSlot('/4525877/Desktop-MPU', [300, 250], 'div-gpt-ad-1573404451965-0').setTargeting('Y7-Section', ['BREAKING NEWS']).addService(googletag.pubads());
+		
+        googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	  });
+
+        </script>
+        <script>
+             googletag.cmd.push(function() {
+	    googletag.defineSlot('/21823462148/Youm7-Leaderboard-Inner', [[970, 250], [970, 90], [728, 90]], 'div-gpt-ad-1562083652224-0').addService(googletag.pubads())
+		googletag.defineSlot('/21823462148/Youm7-Widget-Inner', [[468, 60], [468, 110]], 'div-gpt-ad-1559564022999-0').addService(googletag.pubads());
+	    googletag.defineSlot('/21823462148/Youm7-TakeOver-Inner-R', [[130, 600], [160, 600]], 'div-gpt-ad-1559565327743-0').addService(googletag.pubads());
+	    googletag.defineSlot('/21823462148/Youm7-TakeOver-Inner-L', [[130, 600], [160, 600]], 'div-gpt-ad-1559565105568-0').addService(googletag.pubads())
+	    googletag.defineSlot('/21823462148/Youm7-SuperWidget', [550, 60], 'div-gpt-ad-1559437718274-0').addService(googletag.pubads());
+		googletag.defineSlot('/21823462148/Youm7-MPU-Inner-1', [[300, 600], [300, 250], 'fluid', [336, 280], [200, 200]], 'div-gpt-ad-1559435367505-0').addService(googletag.pubads());
+		googletag.defineSlot('/4525877/Desktop-MPU', [300, 250], 'div-gpt-ad-1573404451965-0').addService(googletag.pubads());
+		
+        googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	  });
+        </script>
+
+
+
+
+
+
+
+
+
+   
+ 
+    
+
+
+
+	
+
+    <meta property="fb:pages" content="133880733349264" />
+    
+<script async="async" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js">
+
+
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <!-- Style for popup ads don't remove plz -->
+    <style>
+        .fixpopsmall {
+            width: 728px !important;
+            height: 90px !important;
+            overflow: visible !important;
+            position: relative !important;
+            top: 0 !important;
+            right: 0 !important;
+        }
+    </style>
+
+  
+
+	
+</head>
+<body>
+
+    <!--Header-->
+    <header class="row headerCont">
+        
+		
+		
+		
+		
+		
+		
+        <div class="row marigin0 headerNewNew">
+            <div class="header">
+                <!--First Menu-->
+                <div class="firstMenu">
+                    <div class="container-new-menu">
+                        <div class="fixedMenMen" style="position:relative;">
+                            <div class="container-navigation">
+                                <div>
+                                   
+                                        <!--<img src="https://www.youm7.com/images/newHeader/our-website.png" class="ourWebsites">-->
+                                    
+
+                                    <div class="flexslider">
+                                        <div class="swiper-f">
+                                            <div class="swiper-wrapper">
+                                               
+
+											   
+												
+												
+												
+												
+												
+												<div class="swiper-slide">
+                                                    <a href="https://www.youm7.com/" target="_self">
+                                                        <img class="img-responsive slider-img" alt="اليوم السابع" src="https://img.youm7.com/ArticleImgs/2020/2/26/8847-youm7logofixed.png">
+                                                    </a>
+                                                </div>
+												
+												
+												
+												
+												
+												
+												
+												
+                                                
+                                                
+                                               
+                                                
+                                                <div class="swiper-slide">
+                                                    <a href="https://www.youm7.com/home/advert" >
+                                                        <img class="img-responsive slider-img" alt="Ads" src="/images/newHeader/ad.png">
+                                                        
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="date-header"><i class="fa fa-calendar" aria-hidden="true"></i> الإثنين، 19 أكتوبر 2026  <i class="fa fa-clock-o" aria-hidden="true"></i> 05:33 م </span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Second Menu-->
+                <nav class="secondMenu ">
+                    <div class="container">
+                        <ul class="newHeaderLmenu">
+                           <li class="homeIco"><a href="/home/index"><h2><i class="fa fa-home" aria-hidden="true"></i>الرئيسية</h2></a></li>
+                            <li><a href="/Section/أخبار-عاجلة/65/1"> <h2>عاجل</h2> </a></li>
+                            <li><a href="/Section/سياسة/319/1"> <h2>سياسة</h2> </a></li>
+                            <li><a href="/Section/تقارير-مصرية/97/1"> <h2>تقارير</h2> </a></li>
+                            <li><a href="/Section/حوادث/203/1"> <h2>حوادث</h2> </a></li>
+							
+							
+							 <li><a href="/Section/أخبار-عربية/88/1"> <h2>عرب</h2> </a></li>
+							<li><a href="/Section/أخبار-عالمية/286/1"> <h2>عالم</h2> </a></li>
+							
+							
+                            <li><a href="/Section/اقتصاد-وبورصة/297/1"> <h2>اقتصاد</h2> </a></li>
+                            
+                            
+                            
+                            <li><a href="/Section/تحقيقات-وملفات/12/1"> <h2>تحقيقات</h2> </a></li>
+                           <li><a href="/Section/أخبار-الرياضة/298/1"> <h2>رياضة</h2> </a></li>
+                            <!--<li><a href="/Section/عقارات/341/1"> <h2>عقارات</h2> </a></li>-->
+
+                            <li><a href="/Section/كرة-عالمية/332/1"> <h2>كرة عالمية</h2> </a></li>
+                            
+                              
+							 
+                            <li class="dropMenu">
+                                <a href="#" rel="nofollow" class="drop-a-down"><h2>المزيد</h2></a>
+                                <ul class="bigMenu">
+								
+									<li><a href="https://www.youm7.com/Mohafzat/%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A7%D8%AA-%D8%A8%D9%84%D8%AF%D9%86%D8%A7"> <h2>محافظات بلدنا</h2> </a></li>
+                                   
+									<li><a href="https://www.youm7.com/videos"> <h2>تليفزيون اليوم السابع</h2> </a></li>
+									<li><a href="/Section/%D8%AF%D9%8A%D9%86-%D9%88%D8%AD%D9%8A%D8%A7%D8%A9/359/1"> <h2>دين وحياة</h2> </a></li>
+									<li><a href="/Section/%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D9%88%D8%A3%D8%B3%D9%88%D8%A7%D9%82/358/1"> <h2>أسعار وأسواق</h2> </a></li>
+                                    <li><a href="/Section/كاريكاتير-اليوم/192/1"> <h2>كاريكاتير</h2> </a></li>
+                                    <li><a href="/Section/فن/48/1"> <h2>فن</h2> </a></li>
+									<li><a href="/Section/حظك-اليوم/330/1"> <h2>حظك اليوم</h2> </a></li>
+                                    <li><a href="/Section/تليفزيون/251/1"> <h2>تليفزيون</h2> </a></li>
+                                    <li><a href="/Section/ثقافة/94/1"> <h2>ثقافة</h2> </a></li>
+                                    <li><a href="/Section/المرأة-والمنوعات/89/1"> <h2>مرأة و منوعات</h2> </a></li>
+                                    <li><a href="/Section/صحة-وطب/245/1"> <h2>صحة</h2> </a></li>
+                                    <li><a href="/Section/ألبومات-اليوم-السابع/291/1"> <h2>ألبومات</h2> </a></li>
+                                    <li><a href="/Editor/Alleditors"> <h2>مقالات</h2> </a></li>
+                                    <li><a href="/Section/علوم-و-تكنولوجيا/328/1"> <h2>تكنولوجيا</h2> </a></li>
+                                    <li><a href="/Section/أخبار-المحافظات/296/1"> <h2>محافظات</h2> </a></li>
+                                    <li><a href="/Section/فيديو-7/355/1"><h2>فيديو 7</h2></a></li>
+                                    
+                                    <!--<li><a href="https://thecairopost.youm7.com" target="_blank"><h2>النسخة الإنجليزية</h2></a></li>-->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!--logo-->
+        <div class="row logoContBg">
+            <!--Logo Row-->
+            <div class="logoCont container">
+                <div class="logo col-xs-3">
+                    <a href="/home/index">
+					
+					
+							
+						
+							
+						
+						<img src="https://img.youm7.com/images/graphics/october2026v2.png" width="225" height="87" alt="اليوم السابع" class="img-responsive" />
+							
+							
+						
+							
+							
+							
+						
+							
+							
+							
+							
+							
+
+							
+						
+							
+						
+							
+						
+							
+						 
+							
+							
+							
+						
+							
+						
+							
+					
+							
+					   
+							
+						
+							
+						
+							
+					   
+							
+					   
+							
+
+							
+						
+							
+						
+							
+						
+							
+							
+							
+                    </a>
+					
+				
+					
+                </div>
+                <div class="chief col-xs-3 ">
+                   <img src="https://img.youm7.com/images/graphics/tarwesa/tarwesa-desktop-2025.png" alt="عبد الفتاح عبد المنعم - علا الشافعي" width="178px" height="104px" class="img-responsive" />
+					
+					
+                    <!--<img src="https://img.youm7.com/images/graphics/ramadan2018.jpg" alt="خالد صلاح" class="img-responsive1" />-->
+                </div>
+                <!--leaderBoard-->
+                <div class="logoAdv col-xs-7 ">
+                    
+
+
+<!-- /21823462148/Youm7-Widget-Inner -->
+<div id='div-gpt-ad-1559564022999-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1559564022999-0'); });
+</script>
+</div>
+
+
+					<pubguru data-pg-ad="youm7_468x110" >
+                </div>
+            </div>
+        </div>
+        <!--Ticker And Search Start-->
+        <div class="row tickerAndSearch">
+            <div class="container">
+                <!--Ticker-->
+                <div class="col-xs-8 ticker">
+                    <div id="nt-title-container">
+                        <a href="https://plus.youm7.com/" class="tickersIco" target="_blank" rel="nofollow">
+                            <img src="/images/tickerTitleAni.gif" alt="#" title="#" class="img-responsive" />
+                        </a>
+                        <ul id="nt-title">
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/باحثون-مصريون-يقلصون-إشارات-Wi-Fi-بنسبة-95/7585295" >باحثون مصريون يقلصون إشارات Wi-Fi بنسبة 95%</a>
+               
+            </h3>
+        </li>
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/أسعار-الذهب-في-مصر-ترتفع-20-جنيها-وعيار-21-يسجل/7585878" >أسعار الذهب في مصر ترتفع 20 جنيها.. وعيار 21 يسجل 6285 جنيها</a>
+               
+            </h3>
+        </li>
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/رفع-جلسة-النواب-للإثنين-المقبل-لمناقشة-طلب-تفويض-الزعيم-السيسي/7585829" >رفع جلسة النواب للإثنين المقبل لمناقشة طلب تفويض الزعيم السيسي بدعم السعودية</a>
+               
+            </h3>
+        </li>
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/بعد-رفض-الجبلاية-مشاورات-فى-الزمالك-للتصعيد-بشأن-تسجيلات-VAR/7585700" >بعد رفض الجبلاية.. مشاورات فى الزمالك للتصعيد بشأن تسجيلات VAR القمة</a>
+               
+            </h3>
+        </li>
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/الصحة-تحسم-الجدل-بشأن-&#171;الخناق-الحنجري&#187;-بين-الأطفال-لا-تفشيات/7585830" >الصحة تحسم الجدل بشأن &#171;الخناق الحنجري&#187; بين الأطفال: لا تفشيات بالمدارس</a>
+               
+            </h3>
+        </li>
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/الزعيم-السيسي-للمصريين-أي-حاجة-ممكن-تتحسن-طالما-عايشين-على/7585821" >الزعيم السيسي للمصريين: أي حاجة ممكن تتحسن طالما عايشين على أرضنا</a>
+               
+            </h3>
+        </li>
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/ناصر-منسى-يجدد-اعتذاره-لجماهير-الزمالك-ومعتمد-جمال/7585816" >ناصر منسى يجدد اعتذاره لجماهير الزمالك ومعتمد جمال</a>
+               
+            </h3>
+        </li>
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/وزير-التعليم-ما-فيش-طالب-مش-هيدرس-تاريخ-وعربى-ودين/7585783" >وزير التعليم: ما فيش طالب مش هيدرس تاريخ وعربى ودين فى أى مدرسة</a>
+               
+            </h3>
+        </li>
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/باحثة-في-التاريخ-أمام-الزعيم-السيسي-الذاكرة-هي-الحصن-الحقيقي/7585747" >باحثة في التاريخ أمام الزعيم السيسي: الذاكرة هي الحصن الحقيقي لأي أمة</a>
+               
+            </h3>
+        </li>
+        <li>
+            <h3>
+                    <a href="/story/2026/10/19/رئيس-مجلس-الوزراء-يعلق-على-إضافة-التاريخ-والعربى-للمجموع-بالمدارس/7585633" >رئيس مجلس الوزراء يعلق على إضافة التاريخ والعربى للمجموع بالمدارس الدولية</a>
+               
+            </h3>
+        </li>
+    
+   
+</ul>
+                        <a href="/rss/rss" class="rssIco" target="_blank">
+                            <img src="/images/tickerRSS.gif" alt="#" title="#" class="img-responsive" />
+                        </a>
+                    </div>
+                </div>
+                <!--Search-->
+                <div class="col-xs-4   searchCont">
+                    <form action="/Home/Search">
+                        <div class="input-group">
+                            <button class="btn btn-search" type="button">
+                                <img src="/images/searchButtonBG.gif" alt="بحث اليوم السابع" title="بحث اليوم السابع"  />
+                            </button>
+                            <input type="text" name="allwords" class="search-query form-control" placeholder="" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Ticker And Search End-->
+    </header>
+    <!--Header End-->
+    <!--Body start-->
+	
+    
+
+
+        <section class="container bodyCon secBody">
+            <!--Left ads-->
+            <div class="leftAdsFix ">
+                
+
+<!-- /21823462148/Youm7-TakeOver-Inner-L -->
+<div id='div-gpt-ad-1559565105568-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1559565105568-0'); });
+</script>
+</div>
+            </div>
+            <!--Right ads-->
+            <div class="rightAdsFix">
+                
+
+<!-- /21823462148/Youm7-TakeOver-Inner-R -->
+<div id='div-gpt-ad-1559565327743-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1559565327743-0'); });
+</script>
+</div>
+            </div>
+            <!--leader board-->
+			
+			<center>
+            <div class="row leaderBoard1 ">
+                
+<!-- /21823462148/Youm7-Leaderboard-Inner -->
+<div id='div-gpt-ad-1562083652224-0'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1562083652224-0'); });
+  </script>
+</div>
+            </div>
+			
+			</center>
+            <!--Content Start-->
+            <div class="row bodyCC">
+                <div class="container">
+                    <!--News Content-->
+                    <div class="row news-content">
+                        <!--Right Content-->
+                        <div class="col-xs-8 right-Content section-news">
+                            <div class="container">
+                                <!--Title-->
+                                <h2>
+                                    أخبار عاجلة
+                                </h2>
+                                <!--End here-->
+                                <div id="paging" >
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 5:10:47 PM">
+                                                <a href="/story/2026/10/19/ممثل-الصحة-العالمية-يشيد-بدور-مستشفى-عين-شمس-بعلاج-الطفل/7585877" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190449584958_34.jpg" 
+													alt="ممثل الصحة العالمية يشيد بدور مستشفى عين شمس بعلاج الطفل أمير من غزة" 
+													title="ممثل الصحة العالمية يشيد بدور مستشفى عين شمس بعلاج الطفل أمير من غزة" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/ممثل-الصحة-العالمية-يشيد-بدور-مستشفى-عين-شمس-بعلاج-الطفل/7585877">
+                                                            ممثل الصحة العالمية يشيد بدور مستشفى عين شمس بعلاج الطفل أمير من غزة
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 05:10 م</span>
+                                                    <P>أشاد الدكتور نعمة عبد، ممثل منظمة الصحة العالمية فى مصر، بجهود مصر في إجلاء ورعاية جرحى ومصابي غزة، ونجاح مستشفى عين شمس التخصصى فى علاج أمير، بأحدث تقنية، وهو تركيب الصمام الرئوى بالقسطرة.
+
+</P>
+                                                </div>
+                                            </div>
+                                                <div>
+												<center>
+
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7209808242714184";
+/* Youm7-ADX-SuperWidget */
+google_ad_slot = "Youm7-ADX-SuperWidget";
+google_ad_width = 550;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+        
+</center>
+												</div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:55:22 PM">
+                                                <a href="/story/2026/10/19/وزير-الخارجية-يؤكد-اعتزاز-مصر-بالشراكة-الاستراتيجية-الشاملة-مع-روسيا/7585883" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190449574957_234.jpg" 
+													alt="وزير الخارجية يؤكد اعتزاز مصر بالشراكة الاستراتيجية الشاملة مع روسيا" 
+													title="وزير الخارجية يؤكد اعتزاز مصر بالشراكة الاستراتيجية الشاملة مع روسيا" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/وزير-الخارجية-يؤكد-اعتزاز-مصر-بالشراكة-الاستراتيجية-الشاملة-مع-روسيا/7585883">
+                                                            وزير الخارجية يؤكد اعتزاز مصر بالشراكة الاستراتيجية الشاملة مع روسيا
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:55 م</span>
+                                                    <P>استقبل د. بدر عبد العاطي، وزير الخارجية والتعاون الدولي والمصريين بالخارج، اليوم الإثنين، مكسيم أوريشكين، نائب رئيس الإدارة الرئاسية الروسية.. </P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:30:27 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسي-اوعوا-تسكتوا-عن-دعم-الأمن-والاستقرار-للدولة-المصرية/7585849" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019035809589_357.jpg" 
+													alt="الزعيم السيسي: اوعوا تسكتوا عن دعم الأمن والاستقرار للدولة المصرية" 
+													title="الزعيم السيسي: اوعوا تسكتوا عن دعم الأمن والاستقرار للدولة المصرية" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسي-اوعوا-تسكتوا-عن-دعم-الأمن-والاستقرار-للدولة-المصرية/7585849">
+                                                            الزعيم السيسي: اوعوا تسكتوا عن دعم الأمن والاستقرار للدولة المصرية
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:30 م</span>
+                                                    <P>أكد فخامة الزعيم الرئيس عبد الفتاح السيسي، أهمية دعم الأمن والاستقرار للدولة المصرية.
+
+</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:29:07 PM">
+                                                <a href="/story/2026/10/19/اليمن-مقتل-53-مجندا-وإصابة-نحو-200-في-هجوم-حوثى/7585848" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/2025040510020424.jpg" 
+													alt="اليمن: مقتل 53 مجندا وإصابة نحو 200 في هجوم حوثى استهدف معسكرا أمنيا بشبوة" 
+													title="اليمن: مقتل 53 مجندا وإصابة نحو 200 في هجوم حوثى استهدف معسكرا أمنيا بشبوة" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/اليمن-مقتل-53-مجندا-وإصابة-نحو-200-في-هجوم-حوثى/7585848">
+                                                            اليمن: مقتل 53 مجندا وإصابة نحو 200 في هجوم حوثى استهدف معسكرا أمنيا بشبوة
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:29 م</span>
+                                                    <P>شهدت محافظة شبوة اليمنية تصعيداً عسكرياً دامياً إثر هجوم صاروخي شنه الحوثيون على معسكر &#171;العَلم&#187; ، مما أسفر عن وقوع عشرات القتلى والمصابين في صفوف القوات اليمنية..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:24:32 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسي-يشدد-على-توعية-الأجيال-الجديدة-بالحفاظ-على-الدولة/7585844" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019040929929_357.jpg" 
+													alt="الزعيم السيسي يشدد على توعية الأجيال الجديدة بالحفاظ على الدولة المصرية" 
+													title="الزعيم السيسي يشدد على توعية الأجيال الجديدة بالحفاظ على الدولة المصرية" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسي-يشدد-على-توعية-الأجيال-الجديدة-بالحفاظ-على-الدولة/7585844">
+                                                            الزعيم السيسي يشدد على توعية الأجيال الجديدة بالحفاظ على الدولة المصرية
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:24 م</span>
+                                                    <P>أكد فخامة الزعيم الرئيس عبد الفتاح السيسي، أهمية الحديث عن توعية الأجيال الجديدة قائلا: &quot;الشاب اللي كان موجود النهارده في 2011 عنده 10 سنين بقى عنده 26 سنة، </P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:18:51 PM">
+                                                <a href="/story/2026/10/19/لافروف-يصل-طهران-فى-أول-زيارة-لإيران-منذ-بداية-الحرب/7585837" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202603230531113111_37.jpg" 
+													alt="لافروف يصل طهران فى أول زيارة لإيران منذ بداية الحرب" 
+													title="لافروف يصل طهران فى أول زيارة لإيران منذ بداية الحرب" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/لافروف-يصل-طهران-فى-أول-زيارة-لإيران-منذ-بداية-الحرب/7585837">
+                                                            لافروف يصل طهران فى أول زيارة لإيران منذ بداية الحرب
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:18 م</span>
+                                                    <P>يصل وزير الخارجية الروسي سيرجي لافروف إلى طهران اليوم، الاثنين، لعقد سلسلة من اللقاءات مع كبار المسؤولين الإيرانيين، في وقت تسعى فيه موسكو لتقديم
+
+</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:11:37 PM">
+                                                <a href="/story/2026/10/19/رفع-جلسة-النواب-للإثنين-المقبل-لمناقشة-طلب-تفويض-الزعيم-السيسي/7585829" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202606291210191019_211.jpg" 
+													alt="رفع جلسة النواب للإثنين المقبل لمناقشة طلب تفويض الزعيم السيسي بدعم السعودية" 
+													title="رفع جلسة النواب للإثنين المقبل لمناقشة طلب تفويض الزعيم السيسي بدعم السعودية" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/رفع-جلسة-النواب-للإثنين-المقبل-لمناقشة-طلب-تفويض-الزعيم-السيسي/7585829">
+                                                            رفع جلسة النواب للإثنين المقبل لمناقشة طلب تفويض الزعيم السيسي بدعم السعودية
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:11 م</span>
+                                                    <P>رفع المستشار هشام بدوي، رئيس مجلس النواب، الجلسة العامة الثانية للمجلس، بعد الاستماع إلى كلمات عدد من النواب بشأن طلب الرئيس عبد الفتاح السيسي</P>
+                                                </div>
+                                            </div>
+												<center>
+                                                <div class="bgforadssction">
+												
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7209808242714184";
+/* Y7-MPU-inner-4-Adx */
+google_ad_slot = "Y7-MPU-inner-4-Adx";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+												</div>
+												</center>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:11:34 PM">
+                                                <a href="/story/2026/10/19/الصحة-تحسم-الجدل-بشأن-&#171;الخناق-الحنجري&#187;-بين-الأطفال-لا-تفشيات/7585830" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202406040621222122.jpg" 
+													alt="الصحة تحسم الجدل بشأن &#171;الخناق الحنجري&#187; بين الأطفال: لا تفشيات بالمدارس" 
+													title="الصحة تحسم الجدل بشأن &#171;الخناق الحنجري&#187; بين الأطفال: لا تفشيات بالمدارس" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الصحة-تحسم-الجدل-بشأن-&#171;الخناق-الحنجري&#187;-بين-الأطفال-لا-تفشيات/7585830">
+                                                            الصحة تحسم الجدل بشأن &#171;الخناق الحنجري&#187; بين الأطفال: لا تفشيات بالمدارس
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:11 م</span>
+                                                    <P>طمأنت وزارة الصحة والسكان أولياء الأمور بشأن ما تداولته بعض المواقع الإخبارية حول وجود تحذيرات من انتشار &#171;فيروس الخناق الحنجري&#187; بين طلاب المدارس..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:09:11 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسي-للمصريين-أي-حاجة-ممكن-تتحسن-طالما-عايشين-على/7585821" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190356405640_357.jpg" 
+													alt="الزعيم السيسي للمصريين: أي حاجة ممكن تتحسن طالما عايشين على أرضنا" 
+													title="الزعيم السيسي للمصريين: أي حاجة ممكن تتحسن طالما عايشين على أرضنا" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسي-للمصريين-أي-حاجة-ممكن-تتحسن-طالما-عايشين-على/7585821">
+                                                            الزعيم السيسي للمصريين: أي حاجة ممكن تتحسن طالما عايشين على أرضنا
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:09 م</span>
+                                                    <P>أكد فخامة الزعيم الرئيس عبد الفتاح السيسي، أنه يجب الحفاظ على الدولة المصرية مضيفًا: &quot;دوري كانسان إني أقول لكم خلي بالكم والتطورات اللى بتحصل</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:04:32 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسي-تكلفة-استقرار-الدولة-المصرية-كانت-بمقابل-كبير/7585818" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190356205620_357.jpg" 
+													alt="الزعيم السيسي: تكلفة استقرار الدولة المصرية كانت بمقابل كبير" 
+													title="الزعيم السيسي: تكلفة استقرار الدولة المصرية كانت بمقابل كبير" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسي-تكلفة-استقرار-الدولة-المصرية-كانت-بمقابل-كبير/7585818">
+                                                            الزعيم السيسي: تكلفة استقرار الدولة المصرية كانت بمقابل كبير
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:04 م</span>
+                                                    <P>أكد فخامة الزعيم الرئيس عبد الفتاح السيسي أن تكلفة الأمن والاستقرار للدولة المصرية خلال السنوات الماضية كانت بمقابل كبير، قائلا: &quot;الدولة المصرية عدد سكانها</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 4:03:31 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسي-كل-بيانات-ونقاشات-منتدى-مصر-كاملة-ودقيقة-وموثوقة/7585813" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190355575557_357.jpg" 
+													alt="الزعيم السيسي: كل بيانات ونقاشات منتدى مصر كاملة ودقيقة وموثوقة" 
+													title="الزعيم السيسي: كل بيانات ونقاشات منتدى مصر كاملة ودقيقة وموثوقة" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسي-كل-بيانات-ونقاشات-منتدى-مصر-كاملة-ودقيقة-وموثوقة/7585813">
+                                                            الزعيم السيسي: كل بيانات ونقاشات منتدى مصر كاملة ودقيقة وموثوقة
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 04:03 م</span>
+                                                    <P>أكد فخامة الزعيم الرئيس عبد الفتاح السيسي، أن كل بيانات ونقاشات منتدي مصر كاملة ودقيقة وموثوقة
+
+</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:57:20 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسى-يؤكد-تطلعه-لتعزيز-العلاقات-الاستراتيجية-مع-روسيا-بمختلف/7585800" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190518121812_88.jpg" 
+													alt="الزعيم السيسى يؤكد تطلعه لتعزيز العلاقات الاستراتيجية مع روسيا بمختلف المجالات" 
+													title="الزعيم السيسى يؤكد تطلعه لتعزيز العلاقات الاستراتيجية مع روسيا بمختلف المجالات" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسى-يؤكد-تطلعه-لتعزيز-العلاقات-الاستراتيجية-مع-روسيا-بمختلف/7585800">
+                                                            الزعيم السيسى يؤكد تطلعه لتعزيز العلاقات الاستراتيجية مع روسيا بمختلف المجالات
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:57 م</span>
+                                                    <P>استقبل فخامة الرئيس الزعيم عبد الفتاح السيسي، اليوم، ماكسيم أوريشكين، نائب مدير رئاسة روسيا الاتحادية والممثل الخاص للرئيس الروسي لشئون التعاون المالي والاقتصادي</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:52:14 PM">
+                                                <a href="/story/2026/10/19/وزير-التعليم-ما-فيش-طالب-مش-هيدرس-تاريخ-وعربى-ودين/7585783" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/2025011403090191.jpg" 
+													alt="وزير التعليم: ما فيش طالب مش هيدرس تاريخ وعربى ودين فى أى مدرسة" 
+													title="وزير التعليم: ما فيش طالب مش هيدرس تاريخ وعربى ودين فى أى مدرسة" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/وزير-التعليم-ما-فيش-طالب-مش-هيدرس-تاريخ-وعربى-ودين/7585783">
+                                                            وزير التعليم: ما فيش طالب مش هيدرس تاريخ وعربى ودين فى أى مدرسة
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:52 م</span>
+                                                    <P>حسم محمد عبد اللطيف وزير التربية والتعليم والتعليم الفنى الجدل الدائر حول تدريس التاريخ والعربى فى المدارس الدولية وإضافتهما للمجموع.</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:52:01 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسي-يشاهد-فيلما-تسجيليا-بعنوان-من-الحلم-إلى-الواقع/7585799" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190350175017_357.jpg" 
+													alt="الزعيم السيسي يشاهد فيلما تسجيليا بعنوان من الحلم إلى الواقع" 
+													title="الزعيم السيسي يشاهد فيلما تسجيليا بعنوان من الحلم إلى الواقع" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسي-يشاهد-فيلما-تسجيليا-بعنوان-من-الحلم-إلى-الواقع/7585799">
+                                                            الزعيم السيسي يشاهد فيلما تسجيليا بعنوان من الحلم إلى الواقع
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:52 م</span>
+                                                    <P>شهدت فعاليات افتتاح منتدي مصر 2026، بحضور وتشريف فخامة الزعيم الرئيس عبد الفتاح السيسي عرض فيلم تسجيلي بعنوان: &quot;من الحلم إلى الواقع&quot;.
+
+</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:51:02 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسى-يستقبل-نائب-مدير-رئاسة-روسيا-الاتحادية-والممثل-الخاص/7585795" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190518121812_88.jpg" 
+													alt="الزعيم السيسى يستقبل نائب مدير رئاسة روسيا الاتحادية والممثل الخاص للرئيس الروسي" 
+													title="الزعيم السيسى يستقبل نائب مدير رئاسة روسيا الاتحادية والممثل الخاص للرئيس الروسي" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسى-يستقبل-نائب-مدير-رئاسة-روسيا-الاتحادية-والممثل-الخاص/7585795">
+                                                            الزعيم السيسى يستقبل نائب مدير رئاسة روسيا الاتحادية والممثل الخاص للرئيس الروسي
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:51 م</span>
+                                                    <P>استقبل فخامة الرئيس الزعيم عبد الفتاح السيسي، اليوم، ماكسيم أوريشكين، نائب مدير رئاسة روسيا الاتحادية والممثل الخاص للرئيس الروسي لشئون التعاون المالي والاقتصادي مع دول تجمع البريكس..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:37:02 PM">
+                                                <a href="/story/2026/10/19/مدبولى-نركز-المرحلة-المقبلة-على-تحقيق-جودة-التعليم-ليواكب-متطلبات/7585757" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202609030833473347_20657.jpg" 
+													alt="مدبولى: نركز المرحلة المقبلة على تحقيق جودة التعليم ليواكب متطلبات العصر الحديث" 
+													title="مدبولى: نركز المرحلة المقبلة على تحقيق جودة التعليم ليواكب متطلبات العصر الحديث" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/مدبولى-نركز-المرحلة-المقبلة-على-تحقيق-جودة-التعليم-ليواكب-متطلبات/7585757">
+                                                            مدبولى: نركز المرحلة المقبلة على تحقيق جودة التعليم ليواكب متطلبات العصر الحديث
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:37 م</span>
+                                                    <P>قال الدكتور مصطفى مدبولى رئيس مجلس الوزراء، إن التطوير فى البنية الأساسية كان لا بد أن يتم بالتوازى مع تطوير التعليم ولا يمكن إحداث تطور وسط عجز فى المدرسين..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:34:42 PM">
+                                                <a href="/story/2026/10/19/وزارة-البيئة-ضبط-8-نسانيس-بالشرقية-واتخاذ-الإجراءات-القانونية/7585760" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190332333233_104.jpg" 
+													alt="وزارة البيئة: ضبط 8 نسانيس بالشرقية واتخاذ الإجراءات القانونية" 
+													title="وزارة البيئة: ضبط 8 نسانيس بالشرقية واتخاذ الإجراءات القانونية" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/وزارة-البيئة-ضبط-8-نسانيس-بالشرقية-واتخاذ-الإجراءات-القانونية/7585760">
+                                                            وزارة البيئة: ضبط 8 نسانيس بالشرقية واتخاذ الإجراءات القانونية
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:34 م</span>
+                                                    <P>أعلنت وزارة التنمية المحلية والبيئة، عن ضبط 8 نسانيس داخل إحدى مزارع الإنتاج الحيواني والداجني وتربية الخيول والنعام والغزلان بمدينة العاشر من رمضان.</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:29:37 PM">
+                                                <a href="/story/2026/10/19/مدبولي-البكالوريا-تساوى-بين-طلاب-المدارس-الحكومية-والدولية-فى-فرص/7585751" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202609030815281528_20657.jpg" 
+													alt="مدبولي: البكالوريا تساوى بين طلاب المدارس الحكومية والدولية فى فرص الامتحان" 
+													title="مدبولي: البكالوريا تساوى بين طلاب المدارس الحكومية والدولية فى فرص الامتحان" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/مدبولي-البكالوريا-تساوى-بين-طلاب-المدارس-الحكومية-والدولية-فى-فرص/7585751">
+                                                            مدبولي: البكالوريا تساوى بين طلاب المدارس الحكومية والدولية فى فرص الامتحان
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:29 م</span>
+                                                    <P>قال الدكتور مصطفى مدبولى رئيس مجلس الوزراء إن شهادة البكالوريا المصرية تساوى بين طلاب المدارس الحكومية والدولية فى الفرص الامتحانية المتعددة.</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:26:50 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسى-يدعو-كل-المواطنين-للتركيز-خلال-أعمال-منتدى-مصر/7585744" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019021602162_357.jpg" 
+													alt="الزعيم السيسى يدعو كل المواطنين للتركيز خلال أعمال منتدى مصر على التفاصيل والبيانات المعروضة" 
+													title="الزعيم السيسى يدعو كل المواطنين للتركيز خلال أعمال منتدى مصر على التفاصيل والبيانات المعروضة" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسى-يدعو-كل-المواطنين-للتركيز-خلال-أعمال-منتدى-مصر/7585744">
+                                                            الزعيم السيسى يدعو كل المواطنين للتركيز خلال أعمال منتدى مصر على التفاصيل والبيانات المعروضة
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:26 م</span>
+                                                    <P>شهد فخامة الرئيس الزعيم عبد الفتاح السيسي، صباح اليوم، افتتاح أعمال منتدى مصر ٢٠٢٦ بمركز مؤتمرات فندق سانت ريجيس بالعاصمة الجديدة..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:24:02 PM">
+                                                <a href="/story/2026/10/19/رئيس-مجلس-الوزراء-يعلق-على-إضافة-التاريخ-والعربى-للمجموع-بالمدارس/7585633" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20250730121306136.jpg" 
+													alt="رئيس مجلس الوزراء يعلق على إضافة التاريخ والعربى للمجموع بالمدارس الدولية" 
+													title="رئيس مجلس الوزراء يعلق على إضافة التاريخ والعربى للمجموع بالمدارس الدولية" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/رئيس-مجلس-الوزراء-يعلق-على-إضافة-التاريخ-والعربى-للمجموع-بالمدارس/7585633">
+                                                            رئيس مجلس الوزراء يعلق على إضافة التاريخ والعربى للمجموع بالمدارس الدولية
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:24 م</span>
+                                                    <P>قال الدكتور مصطفى مدبولى رئيس مجلس الوزراء، إن ملف التعليم بالنسبة لمصر يحتل الأولوية القصوى من منطلق أن تقدم أى دولة يقاس بجودة التعليم ومتطلبات العصر</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:23:29 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسى-المخاطر-في-اتخاذ-كل-القرارات-السابقة-كانت-عالية/7585743" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019030126126_357.jpg" 
+													alt="الزعيم السيسى: المخاطر في اتخاذ كل القرارات السابقة كانت عالية ولكنها مطلوبة" 
+													title="الزعيم السيسى: المخاطر في اتخاذ كل القرارات السابقة كانت عالية ولكنها مطلوبة" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسى-المخاطر-في-اتخاذ-كل-القرارات-السابقة-كانت-عالية/7585743">
+                                                            الزعيم السيسى: المخاطر في اتخاذ كل القرارات السابقة كانت عالية ولكنها مطلوبة
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:23 م</span>
+                                                    <P>شهد فخامة الرئيس الزعيم عبد الفتاح السيسي، صباح اليوم، افتتاح أعمال منتدى مصر ٢٠٢٦ بمركز مؤتمرات فندق سانت ريجيس بالعاصمة الجديدة..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:23:22 PM">
+                                                <a href="/story/2026/10/19/رئيس-الحكومة-يرد-على-انتقادات-قبول-الطلاب-الأجانب-والوافدين-بالجامعات/7585745" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202609030838193819_20657.jpg" 
+													alt="رئيس الحكومة يرد على انتقادات قبول الطلاب الأجانب والوافدين بالجامعات المصرية" 
+													title="رئيس الحكومة يرد على انتقادات قبول الطلاب الأجانب والوافدين بالجامعات المصرية" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/رئيس-الحكومة-يرد-على-انتقادات-قبول-الطلاب-الأجانب-والوافدين-بالجامعات/7585745">
+                                                            رئيس الحكومة يرد على انتقادات قبول الطلاب الأجانب والوافدين بالجامعات المصرية
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:23 م</span>
+                                                    <P>قال الدكتور مصطفى مدبولى رئيس مجلس الوزراء، إن التطوير فى البنية الاساسية كان لابد أن يتم بالتوازى مع تطوير التعليم.</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:19:18 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسى-المنتدى-يستهدف-طمأنة-المصريين-على-بلدهم-فالجميع-يرحل/7585742" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019021602162_357.jpg" 
+													alt="الزعيم السيسى: المنتدى يستهدف طمأنة المصريين على بلدهم فالجميع يرحل وتبقى مصر" 
+													title="الزعيم السيسى: المنتدى يستهدف طمأنة المصريين على بلدهم فالجميع يرحل وتبقى مصر" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسى-المنتدى-يستهدف-طمأنة-المصريين-على-بلدهم-فالجميع-يرحل/7585742">
+                                                            الزعيم السيسى: المنتدى يستهدف طمأنة المصريين على بلدهم فالجميع يرحل وتبقى مصر
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:19 م</span>
+                                                    <P>شهد فخامة الرئيس الزعيم عبد الفتاح السيسي، صباح اليوم، افتتاح أعمال منتدى مصر ٢٠٢٦ بمركز مؤتمرات فندق سانت ريجيس بالعاصمة الجديدة</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:18:19 PM">
+                                                <a href="/story/2026/10/19/الدكتور-إبراهيم-العسال-أمام-الرئيس-الزعيم-السيسي-مصر-أم-الدنيا/7585741" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190250145014_357.jpg" 
+													alt="الدكتور إبراهيم العسال أمام الرئيس الزعيم السيسي: مصر أم الدنيا وسيدة الأراضين" 
+													title="الدكتور إبراهيم العسال أمام الرئيس الزعيم السيسي: مصر أم الدنيا وسيدة الأراضين" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الدكتور-إبراهيم-العسال-أمام-الرئيس-الزعيم-السيسي-مصر-أم-الدنيا/7585741">
+                                                            الدكتور إبراهيم العسال أمام الرئيس الزعيم السيسي: مصر أم الدنيا وسيدة الأراضين
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:18 م</span>
+                                                    <P>أكد الدكتور إبراهيم العسال، أستاذ التاريخ والحضارة، أن الهوية المصرية تمثل مزيجًا حضاريًا وتاريخيًا فريدًا تشكّل عبر آلاف السنين..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:17:24 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسى-عن-مخاطر-استخدام-مواقع-التواصل-الاجتماعى-الوسطية-وعدم/7585739" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190245494549_357.jpg" 
+													alt="الزعيم السيسى عن مخاطر استخدام مواقع التواصل الاجتماعى: الوسطية وعدم الإسراف مطلوبان في كل شيء" 
+													title="الزعيم السيسى عن مخاطر استخدام مواقع التواصل الاجتماعى: الوسطية وعدم الإسراف مطلوبان في كل شيء" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسى-عن-مخاطر-استخدام-مواقع-التواصل-الاجتماعى-الوسطية-وعدم/7585739">
+                                                            الزعيم السيسى عن مخاطر استخدام مواقع التواصل الاجتماعى: الوسطية وعدم الإسراف مطلوبان في كل شيء
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:17 م</span>
+                                                    <P>شهد فخامة الرئيس الزعيم عبد الفتاح السيسي، صباح اليوم، افتتاح أعمال منتدى مصر ٢٠٢٦ بمركز مؤتمرات فندق سانت ريجيس بالعاصمة الجديدة</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:15:15 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسى-ما-تحقق-من-استقرار-خلال-السنوات-الماضية-لم/7585737" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019021602162_357.jpg" 
+													alt="الزعيم السيسى: ما تحقق من استقرار خلال السنوات الماضية لم يأت دون تكلفة ودماء" 
+													title="الزعيم السيسى: ما تحقق من استقرار خلال السنوات الماضية لم يأت دون تكلفة ودماء" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسى-ما-تحقق-من-استقرار-خلال-السنوات-الماضية-لم/7585737">
+                                                            الزعيم السيسى: ما تحقق من استقرار خلال السنوات الماضية لم يأت دون تكلفة ودماء
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:15 م</span>
+                                                    <P>شهد فخامة الرئيس الزعيم عبد الفتاح السيسي، صباح اليوم، افتتاح أعمال منتدى مصر ٢٠٢٦ بمركز مؤتمرات فندق سانت ريجيس بالعاصمة الجديدة..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:13:33 PM">
+                                                <a href="/story/2026/10/19/وزير-التعليم-العالى-138-ألف-طالب-وافد-يدرسون-بالجامعات-المصرية/7585632" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20260924031608168_493.jpg" 
+													alt="وزير التعليم العالى: 138 ألف طالب وافد يدرسون بالجامعات المصرية" 
+													title="وزير التعليم العالى: 138 ألف طالب وافد يدرسون بالجامعات المصرية" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/وزير-التعليم-العالى-138-ألف-طالب-وافد-يدرسون-بالجامعات-المصرية/7585632">
+                                                            وزير التعليم العالى: 138 ألف طالب وافد يدرسون بالجامعات المصرية
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:13 م</span>
+                                                    <P>قال عبد العزيز قنصوة وزير التعليم العالي والبحث العلمي، إن البعد الدولى مهم فى البرامج الدراسية من أجل التنافسية العالمية، لتكون مصر مركز عالمى للتعليم.</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:12:10 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسى-يؤكد-بمنتدى-مصر-على-أهمية-الوعى-والتصدي-لمحاولات/7585731" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019030126126_357.jpg" 
+													alt="الزعيم السيسى يؤكد بمنتدى مصر على أهمية الوعى والتصدي لمحاولات تحطيم الذاكرة الوطنية" 
+													title="الزعيم السيسى يؤكد بمنتدى مصر على أهمية الوعى والتصدي لمحاولات تحطيم الذاكرة الوطنية" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسى-يؤكد-بمنتدى-مصر-على-أهمية-الوعى-والتصدي-لمحاولات/7585731">
+                                                            الزعيم السيسى يؤكد بمنتدى مصر على أهمية الوعى والتصدي لمحاولات تحطيم الذاكرة الوطنية
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:12 م</span>
+                                                    <P>شهد فخامة الرئيس الزعيم عبد الفتاح السيسي، صباح اليوم، افتتاح أعمال منتدى مصر ٢٠٢٦ بمركز مؤتمرات فندق سانت ريجيس بالعاصمة الجديدة..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 3:03:28 PM">
+                                                <a href="/story/2026/10/19/الزعيم-السيسي-يشيد-بأداء-أطفال-قدموا-فقرة-فنية-بمنتدى-مصر/7585722" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019030126126_357.jpg" 
+													alt="الزعيم السيسي يشيد بأداء أطفال قدموا فقرة فنية بمنتدى مصر: أنتوا أحلى حاجة في الدنيا" 
+													title="الزعيم السيسي يشيد بأداء أطفال قدموا فقرة فنية بمنتدى مصر: أنتوا أحلى حاجة في الدنيا" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الزعيم-السيسي-يشيد-بأداء-أطفال-قدموا-فقرة-فنية-بمنتدى-مصر/7585722">
+                                                            الزعيم السيسي يشيد بأداء أطفال قدموا فقرة فنية بمنتدى مصر: أنتوا أحلى حاجة في الدنيا
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 03:03 م</span>
+                                                    <P>رحب فخامة الزعيم الرئيس عبد الفتاح السيسي بمجموعة من الأطفال قدموا فقرة فنية بمنتدي مصر 2026 قائلا: &quot;اهلا بيكم.. انتوا أحلي حاجة في الدنيا شكرا جزيلا&quot;.
+
+</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:59:55 PM">
+                                                <a href="/story/2026/10/19/فخامة-الرئيس-الزعيم-السيسي-يشاهد-فقرة-فنية-خلال-افتتاح-منتدى/7585717" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190258115811_357.jpg" 
+													alt="فخامة الرئيس الزعيم السيسي يشاهد فقرة فنية خلال افتتاح منتدى مصر 2026" 
+													title="فخامة الرئيس الزعيم السيسي يشاهد فقرة فنية خلال افتتاح منتدى مصر 2026" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/فخامة-الرئيس-الزعيم-السيسي-يشاهد-فقرة-فنية-خلال-افتتاح-منتدى/7585717">
+                                                            فخامة الرئيس الزعيم السيسي يشاهد فقرة فنية خلال افتتاح منتدى مصر 2026
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:59 م</span>
+                                                    <P>شهدت فعاليات افتتاح منتدي مصر 2026، بحضور وتشرف فخامة الزعيم الرئيس عبد الفتاح السيسي، عرض فقرة فنية بمشاركة مجموعة من الأطفال.
+
+</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:57:28 PM">
+                                                <a href="/story/2026/10/19/انطلاق-الجلسة-الثانية-لمجلس-النواب-لاستكمال-مناقشة-طلب-مساندة-السعودية/7585711" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202606291210191019_211.jpg" 
+													alt="انطلاق الجلسة الثانية لمجلس النواب لاستكمال مناقشة طلب مساندة السعودية  " 
+													title="انطلاق الجلسة الثانية لمجلس النواب لاستكمال مناقشة طلب مساندة السعودية  " 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/انطلاق-الجلسة-الثانية-لمجلس-النواب-لاستكمال-مناقشة-طلب-مساندة-السعودية/7585711">
+                                                            انطلاق الجلسة الثانية لمجلس النواب لاستكمال مناقشة طلب مساندة السعودية  
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:57 م</span>
+                                                    <P>انطلقت منذ قليل، الجلسة العامة الثانية لمجلس النواب، برئاسة المستشار هشام بدوي، لاستكمال مناقشة طلب فخامه الرئيس الزعيم عبد الفتاح السيسي الحصول </P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:50:34 PM">
+                                                <a href="/story/2026/10/19/رئيس-الوزراء-نهدف-إلى-أولويات-وطنية-وحلول-قابلة-للتنفيذ-من/7585698" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190238143814_357.jpg" 
+													alt="رئيس الوزراء: نهدف إلى أولويات وطنية وحلول قابلة للتنفيذ من منتدي مصر 2026" 
+													title="رئيس الوزراء: نهدف إلى أولويات وطنية وحلول قابلة للتنفيذ من منتدي مصر 2026" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/رئيس-الوزراء-نهدف-إلى-أولويات-وطنية-وحلول-قابلة-للتنفيذ-من/7585698">
+                                                            رئيس الوزراء: نهدف إلى أولويات وطنية وحلول قابلة للتنفيذ من منتدي مصر 2026
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:50 م</span>
+                                                    <P>أكد الدكتور مصطفى مدبولي رئيس مجلس الوزراء أن الحكومة لا تستهدف مجرد صدور مخرجات وتوصيات عن المنتدى نهدف إلى أن يكون لدينا أولويات وطنية نعمل عليها جميعا..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:47:33 PM">
+                                                <a href="/story/2026/10/19/وزير-التعليم-الجودة-أولوية-رغم-سهولة-إلغاء-التقييمات-وتقليل-أيام/7585627" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20260518032303233_35.jpg" 
+													alt="وزير التعليم: الجودة أولوية رغم سهولة إلغاء التقييمات وتقليل أيام الدراسة" 
+													title="وزير التعليم: الجودة أولوية رغم سهولة إلغاء التقييمات وتقليل أيام الدراسة" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/وزير-التعليم-الجودة-أولوية-رغم-سهولة-إلغاء-التقييمات-وتقليل-أيام/7585627">
+                                                            وزير التعليم: الجودة أولوية رغم سهولة إلغاء التقييمات وتقليل أيام الدراسة
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:47 م</span>
+                                                    <P>قال محمد عبد اللطيف وزير التربية والتعليم والتعليم الفنى، إن 87% من التلاميذ يتلقون التعليم  فى المدارس الحكومية وحوالى 13% فى المدارس الخاصة والدولية.</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:38:30 PM">
+                                                <a href="/story/2026/10/19/رئيس-الوزراء-الحكومة-ستعرض-فى-منتدي-مصر-ما-تحقق-بكل/7585680" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019023707377_357.jpg" 
+													alt="رئيس الوزراء: الحكومة ستعرض فى منتدي مصر ما تحقق بكل صراحة وشفافية" 
+													title="رئيس الوزراء: الحكومة ستعرض فى منتدي مصر ما تحقق بكل صراحة وشفافية" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/رئيس-الوزراء-الحكومة-ستعرض-فى-منتدي-مصر-ما-تحقق-بكل/7585680">
+                                                            رئيس الوزراء: الحكومة ستعرض فى منتدي مصر ما تحقق بكل صراحة وشفافية
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:38 م</span>
+                                                    <P>الدكتور مصطفى مدبولي رئيس الوزراء، محاور وجلسات منتدى مصر 2026 وأبرز الجلسات والمحاور التي يناقشها المنتدي على مدار 6 أيام..
+</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:37:00 PM">
+                                                <a href="/story/2026/10/19/رئيس-الوزراء-منتدى-مصر-2026-يجيب-على-42-سؤالا-ترصد/7585673" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190231283128_357.jpg" 
+													alt="رئيس الوزراء: منتدى مصر 2026 يجيب على 42 سؤالا ترصد أبرز تساؤلات المواطنين" 
+													title="رئيس الوزراء: منتدى مصر 2026 يجيب على 42 سؤالا ترصد أبرز تساؤلات المواطنين" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/رئيس-الوزراء-منتدى-مصر-2026-يجيب-على-42-سؤالا-ترصد/7585673">
+                                                            رئيس الوزراء: منتدى مصر 2026 يجيب على 42 سؤالا ترصد أبرز تساؤلات المواطنين
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:37 م</span>
+                                                    <P>قال الدكتور مصطفي مدبولي رئيس الوزراء، منتدي مصر 2026 يجيب على 42 سؤالا ترصد أبرز تساؤلات المواطنين وشواغل الرأي العام، بداية من أين كنا وماذا فعلنا وماذا بعد.</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:33:14 PM">
+                                                <a href="/story/2026/10/19/رئيس-الوزراء-منتدي-مصر-2026-فرصة-لعرض-مسيرة-البناء-والتنمية/7585654" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190225162516_357.jpg" 
+													alt="رئيس الوزراء: منتدي مصر 2026 فرصة لعرض مسيرة البناء والتنمية في 12 سنة" 
+													title="رئيس الوزراء: منتدي مصر 2026 فرصة لعرض مسيرة البناء والتنمية في 12 سنة" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/رئيس-الوزراء-منتدي-مصر-2026-فرصة-لعرض-مسيرة-البناء-والتنمية/7585654">
+                                                            رئيس الوزراء: منتدي مصر 2026 فرصة لعرض مسيرة البناء والتنمية في 12 سنة
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:33 م</span>
+                                                    <P>قال الدكتور مصطفي مدبولي رئيس الوزراء، أن منتدي مصر 2026 يشمل كل أطياف المجتمع المصري والمهتمين بالشأن المصري يشمل الحكومة والوزراء والمحافظين والمجتمع المدني والخبراء</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:32:27 PM">
+                                                <a href="/story/2026/10/19/رئيس-الوزراء-تلقينا-16-ألف-فكرة-ومقترح-من-المواطنين-حول/7585660" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/202610190225542554_357.jpg" 
+													alt="رئيس الوزراء: تلقينا 16 ألف فكرة ومقترح من المواطنين حول منتدى مصر 2026" 
+													title="رئيس الوزراء: تلقينا 16 ألف فكرة ومقترح من المواطنين حول منتدى مصر 2026" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/رئيس-الوزراء-تلقينا-16-ألف-فكرة-ومقترح-من-المواطنين-حول/7585660">
+                                                            رئيس الوزراء: تلقينا 16 ألف فكرة ومقترح من المواطنين حول منتدى مصر 2026
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:32 م</span>
+                                                    <P>قال الدكتور مصطفى مدبولي رئيس الوزراء، نفذنا استطلاعات رأي لتحديد القضايا الأكثر أهمية لمناقشتها في منتدي مصر 2026..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:28:48 PM">
+                                                <a href="/story/2026/10/19/فخامة-الرئيس-السيسي-يشاهد-تقريرا-ماذا-تقول-للرئيس-إذا-قابلته/7585634" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019021602162_357.jpg" 
+													alt="فخامة الرئيس السيسي يشاهد تقريرا ماذا تقول للرئيس إذا قابلته؟ بمنتدي مصر 2026" 
+													title="فخامة الرئيس السيسي يشاهد تقريرا ماذا تقول للرئيس إذا قابلته؟ بمنتدي مصر 2026" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/فخامة-الرئيس-السيسي-يشاهد-تقريرا-ماذا-تقول-للرئيس-إذا-قابلته/7585634">
+                                                            فخامة الرئيس السيسي يشاهد تقريرا ماذا تقول للرئيس إذا قابلته؟ بمنتدي مصر 2026
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:28 م</span>
+                                                    <P>شهدت الجلسة الافتتاحية لمنتدي مصر 2026 بحضور وتشريف فخامة الرئيس الزعيم عبد الفتاح السيسي عرض تقرير بعنوان: &quot;ماذا تقول للرئيس إذا قابلته&quot;..</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:16:58 PM">
+                                                <a href="/story/2026/10/19/الحكومة-مصر-تتصدر-أفريقيا-فى-سرعة-الإنترنت-الثابت-بالنصف-الأول/7585562" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/201911051230243024.jpg" 
+													alt="الحكومة: مصر تتصدر أفريقيا فى سرعة الإنترنت الثابت بالنصف الأول من 2026" 
+													title="الحكومة: مصر تتصدر أفريقيا فى سرعة الإنترنت الثابت بالنصف الأول من 2026" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/الحكومة-مصر-تتصدر-أفريقيا-فى-سرعة-الإنترنت-الثابت-بالنصف-الأول/7585562">
+                                                            الحكومة: مصر تتصدر أفريقيا فى سرعة الإنترنت الثابت بالنصف الأول من 2026
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:16 م</span>
+                                                    <P>كشف مركز معلومات مجلس الوزراء، عن حصول مصر على المركز الأول إفريقيًّا في سرعة الإنترنت الثابت خلال النصف الأول من عام 2026</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 bigOneSec" data-id="10/19/2026 2:12:50 PM">
+                                                <a href="/story/2026/10/19/انطلاق-منتدى-مصر-2026-بحضور-وتشريف-فخامة-الرئيس-الزعيم-عبد/7585099" class="bigOneImg">
+												<img 
+													src="https://img.youm7.com/medium/20261019020717717_357.jpg" 
+													alt="انطلاق منتدى مصر 2026 بحضور وتشريف فخامة الرئيس الزعيم عبد الفتاح السيسى" 
+													title="انطلاق منتدى مصر 2026 بحضور وتشريف فخامة الرئيس الزعيم عبد الفتاح السيسى" 
+													class="img-responsive"
+													width="167" 
+													height="128"
+													loading="lazy" 
+													decoding="async"
+													onerror="this.src='https://img.youm7.com/images/graphics/erorr-img-med.jpg'" />
+												</a>
+
+                                                <div>
+                                                    <h3>
+                                                        <a href="/story/2026/10/19/انطلاق-منتدى-مصر-2026-بحضور-وتشريف-فخامة-الرئيس-الزعيم-عبد/7585099">
+                                                            انطلاق منتدى مصر 2026 بحضور وتشريف فخامة الرئيس الزعيم عبد الفتاح السيسى
+                                                        </a>
+                                                    </h3>
+                                                        <span class="newsDate2"> الإثنين، 19 أكتوبر 2026 02:12 م</span>
+                                                    <P>بدأت منذ قليل الجلسة الافتتاحية لمنتدي مصر 2026، بحضور وتشريف فخامة الزعيم الرئيس عبد الفتاح السيسى، والمقام في العاصمة الجديدة.
+
+</P>
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="col-xs-12 mor-section">
+                                        <div id="pager" class="pager"></div>
+                                    <script>
+
+                                    $(function () {
+                                        $('#pager').pagination({
+                                            pages:17289,
+                                            itemsOnPage:  40 ,
+                                            cssStyle: 'light-theme',
+                                            hrefTextPrefix:'/Section/أخبار عاجلة/65/',
+                                            currentPage:1,
+                                            prevText:'السابق',
+                                            nextText:'التالى',
+                                            onPageClick : function(){
+                                                showProjectPage()
+                                            }
+                                        });
+                                    });
+
+                                    function showProjectPage(s)
+                                    {
+                                        var currentpage=$('#pager').pagination('getCurrentPage');
+                                        debugger;
+                                        window.location.href='/Section/أخبار-عاجلة/65/'+currentpage;
+                                    }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Left Content-->
+                        <aside class="col-xs-4 left-Content">
+                            
+
+<script src="/Scripts/jquery.cookie.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function submitpoll12()
+    {
+        debugger
+        //var optionid = '';
+
+        //optionid =  $('input:radio[name=polls]:checked').val();
+        //if (optionid.toLocaleLowerCase()=='undefined') {
+        //    return false;
+        //}
+        var type = 0;
+        var place = 0;
+        var Result = "";
+        var optionsList = [];
+        var x= 0;
+
+        $('.Ansradio').each(function (i, obj) {
+
+            var currentRadio = $(this);
+            if (currentRadio.is(':checked')) {
+                if (type == 1) {
+                    var A = currentRadio.val();
+                    optionsList.push(A);
+                } else if (type == 4) {
+                    var Q = currentRadio.attr("name");
+                    var A = currentRadio.val();
+                    var QA = Q + ":" + A;
+                    Result += QA + ",";
+                }
+
+            }
+        });
+    if (/*optionid != '' && */ type == 1 )
+            {
+
+        $.ajax({
+            type: "POST",
+            url: '/Quiz/SubmitVoteQuiz',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ QuizID: x, OptionIDs: optionsList, placeId: place}),
+            datatype: "json",
+            success: function (msg) {
+                $("#QuizResult").html("");
+                $("#QuizResult").append(msg);
+                $('#backButton,#pollsResult:last').show();
+                $('#resultsButton').hide();
+                $('#voteButton,#Quiz').hide();
+                $.cookie('Cookie' + 0 + '', '1', { expires: 1 });
+            }
+        });
+
+    }
+    else if (/*optionid != '' &&*/ type == 4) {
+
+         $.ajax({
+            type: "GET",
+            url: '/Quiz/SubmitTreeQuiz',
+            data: { QuizID: x, Flow: Result.slice(0, -1), placeId: place },
+            contentType: "html/text",
+            dataType: "html",
+            cache: false,
+            success: function (msg) {
+                $("#QuizResult").html("");
+                $("#QuizResult").append(msg);
+                $('#backButton,#pollsResult:last').show();
+                $('#resultsButton').hide();
+                $('#voteButton,#Quiz').hide();
+                $.cookie('Cookie' + 0 + '', '1', { expires: 1 });
+            }
+        });
+    }
+
+    }
+
+    function checkall112() {
+
+
+        $.ajax({
+            type: "GET",
+            url: '/Quiz/GetVoteQuizResults?quizID='+0+'',
+            contentType: "html/text",
+            dataType: "html",
+            cache: false,
+            success: function (msg) {
+                $("#QuizResult").append(msg);
+                $('#backButton,#pollsResult:last').show();
+                $('#resultsButton').hide();
+                $('#voteButton,#Quiz').hide();
+            }
+        });
+
+    }
+
+
+
+    function fnBack2() {
+
+
+        $("#Quiz,#voteButton,#resultsButton").show();
+        $("#pollsResult,#backButton").hide();
+
+
+    }
+
+
+</script>
+
+
+
+
+                                                        
+<script src="/Scripts/jquery.cookie.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function submitpoll1()
+    {
+        
+        var optionid = '';
+
+        optionid =  $('input:radio[name=polls]:checked').val();
+        if (optionid.toLocaleLowerCase()=='undefined') {
+            return false;
+        }
+
+            if(optionid != '' && $.cookie('Cookie'+0+'') == null)
+            {
+        var x= 0;
+        $.ajax({
+            type: "GET",
+            url: '/Home/SubmitPoll?PollID='+x+'&OptionID='+optionid+'',
+            contentType: "html/text",
+            dataType: "html",
+            cache: false,
+            success: function (msg) {
+          
+                $(".pollscontainer").append(msg);
+
+                $('#pollsOptions').hide();
+               // $('#backButton').show();
+                $('#resultsButton').hide();
+                $('#voteButton').hide();
+                $("#pollsResult").show();
+
+
+                     $.cookie('Cookie' + 0 + '', '1', { expires: 1 });
+
+            }
+        });
+
+
+            }
+
+    }
+
+    function checkall11() {
+
+
+        $.ajax({
+            type: "GET",
+            url: '/Home/GetPollResults?PollID='+0+'',
+            contentType: "html/text",
+            dataType: "html",
+            cache: false,
+            success: function (msg) {
+                $(".pollscontainer").append(msg);
+                $('#backButton,#pollsResult:last').show();
+                $('#resultsButton').hide();
+                $('#voteButton,#pollsOptions').hide();
+
+            }
+        });
+
+
+
+
+    }
+
+
+
+    function fnBack() {
+
+
+        $("#pollsOptions,#voteButton,#resultsButton").show();
+        $("#pollsResult,#backButton").hide();
+
+
+    }
+
+
+</script>
+
+
+                            <br />
+                            
+<script src="/Scripts/jquery.cookie.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function submitpoll1()
+    {
+        
+        var optionid = '';
+
+        optionid =  $('input:radio[name=polls]:checked').val();
+        if (optionid.toLocaleLowerCase()=='undefined') {
+            return false;
+        }
+
+            if(optionid != '' && $.cookie('Cookie'+0+'') == null)
+            {
+        var x= 0;
+        $.ajax({
+            type: "GET",
+            url: '/Home/SubmitPoll?PollID='+x+'&OptionID='+optionid+'',
+            contentType: "html/text",
+            dataType: "html",
+            cache: false,
+            success: function (msg) {
+          
+                $(".pollscontainer").append(msg);
+
+                $('#pollsOptions').hide();
+               // $('#backButton').show();
+                $('#resultsButton').hide();
+                $('#voteButton').hide();
+                $("#pollsResult").show();
+
+
+                     $.cookie('Cookie' + 0 + '', '1', { expires: 1 });
+
+            }
+        });
+
+
+            }
+
+    }
+
+    function checkall11() {
+
+
+        $.ajax({
+            type: "GET",
+            url: '/Home/GetPollResults?PollID='+0+'',
+            contentType: "html/text",
+            dataType: "html",
+            cache: false,
+            success: function (msg) {
+                $(".pollscontainer").append(msg);
+                $('#backButton,#pollsResult:last').show();
+                $('#resultsButton').hide();
+                $('#voteButton,#pollsOptions').hide();
+
+            }
+        });
+
+
+
+
+    }
+
+
+
+    function fnBack() {
+
+
+        $("#pollsOptions,#voteButton,#resultsButton").show();
+        $("#pollsResult,#backButton").hide();
+
+
+    }
+
+
+</script>
+
+
+                                             <!--Adv-->
+            <div class="midAdv-cont midAdv-cont">
+              <!-- /21823462148/Youm7-MPU-Inner-1 -->
+<div id='div-gpt-ad-1559435367505-0'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1559435367505-0'); });
+</script>
+</div>
+            </div>
+        <div class="container most-read">
+            <ul class="nav nav-tabs">
+                <li class="active width100"><a data-toggle="tab" href=".Trending" rel="nofollow">اليوم السابع Trending</a></li>
+            </ul>
+            <div class="TrendingNewBlock">
+                <!-- -->
+                <div class="">
+                    
+            <div class="FullTrend">
+				<img src="https://img.youm7.com/large/20261008060821821_420.jpg"
+				 alt="أسعار الذهب في مصر ترتفع 20 جنيها"
+				 title="أسعار الذهب في مصر ترتفع 20 جنيها"
+				 class="TrendingNewBigImg"
+				 width="360"
+				 height="190" />
+			<h3 class="TrendingNewBlock">
+				<a href="/story/2026/10/19/أسعار-الذهب-في-مصر-ترتفع-20-جنيها-وعيار-21-يسجل/7585878">
+				أسعار الذهب في مصر ترتفع 20 جنيها.. وعيار 21 يسجل 6285 جنيها
+				</a>
+			</h3>
+			</div>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/الزعيم-السيسي-اتخذت-قرارات-دون-النظر-إلى-نفسي-أو-أهلي/7585832">  الزعيم السيسي: اتخذت قرارات دون النظر إلى نفسي أو أهلي وكان يهمني الصح </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/اليمن-مقتل-53-مجندا-وإصابة-نحو-200-في-هجوم-حوثى/7585848">  اليمن: مقتل 53 مجندا وإصابة نحو 200 في هجوم حوثى استهدف معسكرا أمنيا بشبوة </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/الزعيم-السيسي-للمصريين-أي-حاجة-ممكن-تتحسن-طالما-عايشين-على/7585821">  الزعيم السيسي للمصريين: أي حاجة ممكن تتحسن طالما عايشين على أرضنا </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/ناصر-منسى-يجدد-اعتذاره-لجماهير-الزمالك-ومعتمد-جمال/7585816">  ناصر منسى يجدد اعتذاره لجماهير الزمالك ومعتمد جمال </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/وزير-التعليم-ما-فيش-طالب-مش-هيدرس-تاريخ-وعربى-ودين/7585783">  وزير التعليم: ما فيش طالب مش هيدرس تاريخ وعربى ودين فى أى مدرسة </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/الزعيم-السيسى-يدعو-كل-المواطنين-للتركيز-خلال-أعمال-منتدى-مصر/7585744">  الزعيم السيسى يدعو كل المواطنين للتركيز خلال أعمال منتدى مصر على التفاصيل والبيانات المعروضة </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/الزعيم-السيسى-المنتدى-يستهدف-طمأنة-المصريين-على-بلدهم-فالجميع-يرحل/7585742">  الزعيم السيسى: المنتدى يستهدف طمأنة المصريين على بلدهم فالجميع يرحل وتبقى مصر </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/انطلاق-الجلسة-الثانية-لمجلس-النواب-لاستكمال-مناقشة-طلب-مساندة-السعودية/7585711">  انطلاق الجلسة الثانية لمجلس النواب لاستكمال مناقشة طلب مساندة السعودية   </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/وزير-التعليم-الجودة-أولوية-رغم-سهولة-إلغاء-التقييمات-وتقليل-أيام/7585627">  وزير التعليم: الجودة أولوية رغم سهولة إلغاء التقييمات وتقليل أيام الدراسة </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/رئيس-الوزراء-الحكومة-ستعرض-فى-منتدي-مصر-ما-تحقق-بكل/7585680">  رئيس الوزراء: الحكومة ستعرض فى منتدي مصر ما تحقق بكل صراحة وشفافية </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/رابطة-الأندية-تدرس-تقديم-مباريات-الجولة-التاسعة-للدوري-الممتاز/7585150">  رابطة الأندية تدرس تقديم مباريات الجولة التاسعة للدوري الممتاز </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/ميلانو-تشتعل-نهب-المتاجر-و200-معتفل-فى-الاحتجاجات-الإيطالية-فيديو/7585220">  ميلانو تشتعل.. نهب المتاجر و200 معتفل فى الاحتجاجات الإيطالية (فيديو) </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/موقف-ياسر-إبراهيم-من-المشاركة-مع-الأهلي-أمام-القناة-فى/7584403">  موقف ياسر إبراهيم من المشاركة مع الأهلي أمام القناة فى الدوري </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/مدرب-توتنهام-يمنع-مرموش-ورفاقه-من-استخدام-الهواتف-فى-المعسكرات/7585347">  مدرب توتنهام يمنع مرموش ورفاقه من استخدام الهواتف فى المعسكرات </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/انطلاق-مباريات-الجولة-السابعة-من-الدوري-المصري-اعرف-المواعيد/7582619">  انطلاق مباريات الجولة السابعة من الدوري المصري.. اعرف المواعيد  </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/الرئيس-الفرنسى-يرفض-استقالة-وزير-الداخلية-ويدعو-إلى-أساليب-أمنية/7585043">  الرئيس الفرنسى يرفض استقالة وزير الداخلية ويدعو إلى أساليب أمنية جديدة </a>
+            </h3>
+            <h3 class="TrendingNewBlock">
+                <a href="/story/2026/10/19/وزير-الخارجية-يؤكد-فى-اتصال-مع-نظيره-الإيرانى-أهمية-خفض/7585032">  وزير الخارجية يؤكد فى اتصال مع نظيره الإيرانى أهمية خفض التصعيد واحترام أمن الخليج </a>
+            </h3>
+
+                </div>
+            </div>
+        </div>
+                 <!--Adv-->
+            <div class="adx-under-Shorturl">
+              <center>
+<br/>
+
+<!-- /21823462148/Youm7-Monster-X -->
+<div id='div-gpt-ad-1648042649815-0' style='min-width: 300px; min-height: 250px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1648042649815-0'); });
+  </script>
+</div>
+
+<br/>
+</center>
+            </div>
+        <div class="container most-read">
+            <ul class="nav nav-tabs">
+                <li class="active width100"><a data-toggle="tab" href=".most-read" rel="nofollow">الأكثر قراءة</a></li>
+            </ul>
+            <div class="tab-content">
+                <!-- -->
+                <div class="most-read tab-pane fade in active">
+                    
+            <div class="FullTrend">
+			<img src="https://img.youm7.com/large/2025040510020424.jpg"
+				 alt="اليمن "
+				 title="اليمن "
+				 class="TrendingNewBigImg"
+				 width="350"
+				 height="184" />
+			<h3 class="TrendingNewBlock">
+				<a href="/story/2026/10/19/اليمن-مقتل-53-مجندا-وإصابة-نحو-200-في-هجوم-حوثى/7585848">
+					اليمن: مقتل 53 مجندا وإصابة نحو 200 في هجوم حوثى استهدف معسكرا أمنيا بشبوة
+				</a>
+			</h3>
+		</div>
+    <h3>
+        <a href="/story/2026/10/19/الصحة-تحسم-الجدل-بشأن-&#171;الخناق-الحنجري&#187;-بين-الأطفال-لا-تفشيات/7585830">  الصحة تحسم الجدل بشأن &#171;الخناق الحنجري&#187; بين الأطفال: لا تفشيات بالمدارس </a>
+    </h3>
+    <h3>
+        <a href="/story/2026/10/19/كيليان-مبابي-يتوج-بجائزة-أونزي-الذهبية-2026/7585772">  كيليان مبابي يتوج بجائزة أونزي الذهبية 2026 </a>
+    </h3>
+    <h3>
+        <a href="/story/2026/10/19/جوارديولا-يطلق-نداء-لإنقاذ-غزة-لا-تنسوا-جحيم-الفلسطينيين-إسرائيل/7585397">  جوارديولا يطلق نداء لإنقاذ غزة: لا تنسوا جحيم الفلسطينيين.. إسرائيل قتلت 74 ألفا </a>
+    </h3>
+    <h3>
+        <a href="/story/2026/10/19/مدرب-توتنهام-يمنع-مرموش-ورفاقه-من-استخدام-الهواتف-فى-المعسكرات/7585347">  مدرب توتنهام يمنع مرموش ورفاقه من استخدام الهواتف فى المعسكرات </a>
+    </h3>
+    <h3>
+        <a href="/story/2026/10/19/نظر-استئناف-الطالبات-المتهمات-بالاعتداء-على-الطالبة-كارما-اليوم/7584278">  نظر استئناف الطالبات المتهمات بالاعتداء على الطالبة كارما اليوم </a>
+    </h3>
+
+                </div>
+            </div>
+        </div>
+                 <!--Adv-->
+            <div class="ADX-Section-Under Mostview">
+              <center>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7209808242714184";
+/* Y7-MPU-inner-3-Adx */
+google_ad_slot = "Y7-MPU-inner-3-Adx";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+</center>
+            </div>
+                 <!--Adv-->
+            <div class="Adx300x600">
+              <center>
+<script async src=""https://securepubads.g.doubleclick.net/tag/js/gpt.js""></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21823462148/Youm7-MPU-inner-Z1', [300, 600], 'div-gpt-ad-1637491736965-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+<!-- /21823462148/Youm7-MPU-inner-Z1 -->
+<div id='div-gpt-ad-1637491736965-0' style='min-width: 300px; min-height: 600px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1637491736965-0'); });
+  </script>
+</div>
+</center>
+            </div>
+
+    <center>
+
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+        
+
+        <!-- /21823462148/Youm7-MPU-inner-Z1 -->
+        <div id="div-gpt-ad-1637491736965-0"
+             style="min-width: 300px; min-height: 600px;">
+            <script>
+                googletag.cmd.push(function() {
+                    googletag.display('div-gpt-ad-1637491736965-0');
+                });
+            </script>
+        </div>
+		
+		
+		<br/>
+
+		<!-- /21823462148/Youm7-Monster-X -->
+		<div id='div-gpt-ad-1648042649815-0' style='min-width: 300px; min-height: 250px;'>
+		  <script>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1648042649815-0'); });
+		  </script>
+		</div>
+
+
+    </center>
+
+
+
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <!--Content End-->
+            <div class="topTop">
+                <a id="ma_link" href=".headerCont" rel="nofollow">
+                    <img alt="الرجوع الى أعلى الصفحة" src="https://img.youm7.com/images/graphics/Newiconyoum7/Arrow.png?2" class="img-responsive" />
+                </a>
+            </div>
+        </section>
+
+
+
+
+
+<script src="/Scripts/jquery.cookie.js" type="text/javascript"></script>
+<script type="text/javascript">
+    function fsubmitpoll1()
+    {
+
+        //var optionid = '';
+
+        //optionid =  $('input:radio[name=polls]:checked').val();
+        //if (optionid.toLocaleLowerCase()=='undefined') {
+        //    return false;
+        //}
+        var type = 0;
+        var place = 0;
+        var Result = "";
+        var optionsList = [];
+        var x= 0;
+
+        $('.fAnsradio').each(function (i, obj) {
+
+            var currentRadio = $(this);
+            if (currentRadio.is(':checked')) {
+                if (type == 1) {
+                    var A = currentRadio.val();
+                    optionsList.push(A);
+                } else if (type == 4) {
+                    var Q = currentRadio.attr("name");
+                    var A = currentRadio.val();
+                    var QA = Q + ":" + A;
+                    Result += QA + ",";
+                }
+
+            }
+        });
+    if (/*optionid != '' && */ type == 1 )
+            {
+
+        debugger
+        $.ajax({
+            type: "POST",
+            url: '/Quiz/SubmitVoteQuiz',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ QuizID: x, OptionIDs: optionsList, placeId: place}),
+            datatype: "json",
+            success: function (msg) {
+                $("#fQuizResult").html("");
+                $("#fQuizResult").append(msg);
+                $('#fbackButton,#fpollsResult:last').show();
+                $('#fresultsButton').hide();
+                $('#fvoteButton,#fQuiz').hide();
+                $.cookie('Cookie' + 0 + '', '1', { expires: 1 });
+            }
+        });
+
+    }
+    else if (/*optionid != '' &&*/ type == 4) {
+
+         $.ajax({
+            type: "GET",
+            url: '/Quiz/SubmitTreeQuiz',
+            data: { QuizID: x, Flow: Result.slice(0, -1), placeId: place },
+            contentType: "html/text",
+            dataType: "html",
+            cache: false,
+            success: function (msg) {
+                $("#fQuizResult").html("");
+                $("#fQuizResult").append(msg);
+                $('#fbackButton,#pollsResult:last').show();
+                $('#fresultsButton').hide();
+                $('#fvoteButton,#fQuiz').hide();
+                $.cookie('Cookie' + 0 + '', '1', { expires: 1 });
+            }
+        });
+    }
+
+    }
+
+    function fcheckall11() {
+
+
+        $.ajax({
+            type: "GET",
+            url: '/Quiz/GetVoteQuizFloatResults?quizID='+0+'',
+            contentType: "html/text",
+            dataType: "html",
+            cache: false,
+            success: function (msg) {
+                $("#fQuizResult").append(msg);
+                $('#fbackButton,#fpollsResult:last').show();
+                $('#fresultsButton').hide();
+                $('#fvoteButton,#fQuiz').hide();
+            }
+        });
+
+    }
+
+
+
+    function ffnBack() {
+
+
+        $("#fQuiz,#fvoteButton,#fresultsButton").show();
+        $("#fpollsResult,#fbackButton").hide();
+
+
+    }
+
+
+        (function ($) {
+            function fixButtonHeights() {
+                var heights = new Array();
+
+                // Loop to get all element heights
+                $('.InputRowWH30 .QuestionColl,.InputRowWH50 .QuestionColl').each(function () {
+                    // Need to let sizes be whatever they want so no overflow on resize
+                    $(this).css('min-height', '20');
+                    $(this).css('max-height', 'none');
+                    $(this).css('height', 'auto');
+
+                    // Then add size (no units) to array
+                    heights.push($(this).height());
+                });
+
+                // Find max height of all elements
+                var max = Math.max.apply(Math, heights);
+
+                // Set all heights to max height
+                $('.InputRowWH30 .QuestionColl,.InputRowWH50 .QuestionColl').each(function () {
+                    $(this).css('height', max + 'px');
+                    // Note: IF box-sizing is border-box, would need to manually add border and padding to height (or tallest element will overflow by amount of vertical border + vertical padding)
+                });
+            }
+
+            $(window).load(function () {
+                // Fix heights on page load
+                fixButtonHeights();
+
+                // Fix heights on window resize
+                $(window).resize(function () {
+                    // Needs to be a timeout function so it doesn't fire every ms of resize
+                    setTimeout(function () {
+                        fixButtonHeights();
+                    }, 120);
+                });
+            });
+        })(jQuery);
+
+        $(document).ready(function () {
+            $(".CloseQuizRight").on("click", function () {
+                $(this).parent().hide();
+            });
+        });
+</script>
+
+<center>
+    <script type='text/javascript'>footervarsettings = { 'refpublisherid': '3422' }; (function (d) { var s = d.createElement('script'); s.async = true; s.id = 'madv2014rtgfooter'; s.type = 'text/javascript'; s.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.mainadv.com/Visibility/FooterIN-min.js'; var a = d.getElementsByTagName('script')[0]; a.parentNode.insertBefore(s, a); }(document));</script>
+</center>
+
+
+
+    <!--Body End-->
+	
+	<!-- Bill Board-->
+	 <center>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7209808242714184";
+/* Youm7-ADX-BB */
+google_ad_slot = "Youm7-ADX-BB";
+google_ad_width = 970;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+</center>
+	
+    <!--Footer Start-->
+    <footer class="row footer">
+        <div class="container mobile-app">
+            <div class="app-links">
+                <!--ios-->
+                <a rel="nofollow" target="_blank" href="https://itunes.apple.com/eg/app/id989792325">
+                    <img src="/images/footer/applebtn.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                </a>
+                <!--android-->
+                <a rel="nofollow" target="_blank" href="https://play.google.com/store/apps/details?id=com.youm7.news&amp;hl=en">
+                    <img src="/images/footer/androidbtn.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                </a>
+                
+                <a rel="nofollow" target="_blank" href="https://appgallery.cloud.huawei.com/ag/n/app/C100093169?locale=en_US&source=appshare&subsource=C100093169">
+                    <img src="/images/footer/huaweibtn.png" alt="هواوى" title="هواوى" class="img-responsive" />
+                </a>
+            </div>
+        </div>
+        <div class="row footer-up">
+            <div class="container">
+                <!--Footer Menu-->
+                <div class="col-xs-8 footerMenu">
+                    <ul>
+                        <li><a href="/Section/أخبار-عاجلة/65/1"> <h2>عاجل</h2> </a></li>
+                        <li><a href="/Section/سياسة/319/1"> <h2>سياسة</h2> </a></li>
+                        <li><a href="/Section/تقارير-مصرية/97/1"> <h2>تقارير</h2> </a></li>
+                        <li><a href="/Section/حوادث/203/1"> <h2>حوادث</h2> </a></li>
+                        <li><a href="/Section/أخبار-المحافظات/296/1"> <h2>محافظات</h2> </a></li>
+
+                        <li><a href="/Section/تحقيقات-وملفات/12/1"> <h2>تحقيقات</h2> </a></li>
+                        <li><a href="/Section/أخبار-الرياضة/298/1"> <h2>رياضة</h2> </a></li>
+                        
+							 
+                        <li><a href="/Section/اقتصاد-وبورصة/297/1"> <h2>اقتصاد وبورصة</h2> </a></li>
+                        <li><a href="/Section/أخبار-عربية/88/1"> <h2>عرب</h2> </a></li>
+                        <li><a href="/Section/أخبار-عالمية/286/1"> <h2>عالم</h2> </a></li>
+                        <li><a href="/Section/كاريكاتير-اليوم/192/1"> <h2>كاريكاتير</h2> </a></li>
+                        <li><a href="/Section/فن/48/1"> <h2>فن</h2> </a></li>
+                        <li><a href="/Section/تليفزيون/251/1"> <h2>تليفزيون</h2> </a></li>
+                        <li><a href="/Section/ثقافة/94/1"> <h2>ثقافة</h2> </a></li>
+                        <li><a href="/Section/المرأة-والمنوعات/89/1"> <h2>مرأة و منوعات</h2> </a></li>
+                        <li><a href="/Section/صحة-وطب/245/1"> <h2>صحة</h2> </a></li>
+                        <li><a href="/Section/ألبومات-اليوم-السابع/291/1"> <h2>ألبومات</h2> </a></li>
+                        <li><a href="/Editor/Alleditors"> <h2>مقالات</h2> </a></li>
+                        <li><a href="/Section/علوم-و-تكنولوجيا/328/1"> <h2>تكنولوجيا</h2> </a></li>
+                        <li><a href="/Section/فيديو-7/355/1"><h2>فيديو 7</h2></a></li>
+                        
+
+                    </ul>
+                </div>
+                <div class="col-xs-4 social-footer">
+                    <a href="https://www.youm7.com/" class="footer-logo">
+                        <img src="/images/footer/Logo-footer-2.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                    </a>
+                    <br />
+                    <div class="newFooterMenu">
+                        <a href="/AboutUs">من نحن</a>
+                        <a href="/privacy">سياسة الخصوصية</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom row">
+            <div class="container copyRights">
+                <!--CopyRights-->
+                <div class="col-xs-4 ">
+                    <div class="copyright">© 2025 حقوق النشر محفوظة لـ<h1>اليوم السابع</h1></div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="social-new-ico">
+                        <!--facebook-->
+                        <a rel="nofollow" target="_blank" href="https://www.facebook.com/youm7">
+                            <img src="/images/footer/Facebook-c.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                        </a>
+                        <!--twitter-->
+                        <a rel="nofollow" target="_blank" href="https://twitter.com/youm7">
+                            <img src="/images/footer/x.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                        </a>
+
+                        <!--instagram-->
+                        <a rel="nofollow" target="_blank" href="https://instagram.com/youm7">
+                            <img src="/images/footer/Instagram-c.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                        </a>
+                        <!--youtube-->
+                        <a rel="nofollow" target="_blank" href="https://www.youtube.com/user/mubasheryoum7">
+                            <img src="/images/footer/Youtube-c.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                        </a>
+                        <!--rss-->
+                        <a target="_blank" href="/rss/rss">
+                            <img src="/images/footer/RSS-c.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                        </a>
+                        <!--ios-->
+                        <a rel="nofollow" target="_blank" href="https://itunes.apple.com/eg/app/id989792325">
+                            <img src="/images/footer/Apple-c.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                        </a>
+                        <!--android-->
+                        <a rel="nofollow" target="_blank" href="https://play.google.com/store/apps/details?id=com.youm7.news&amp;hl=en">
+                            <img src="/images/footer/Android-c.png" alt="اليوم السابع" title="اليوم السابع" class="img-responsive" />
+                        </a>
+                        
+                        <a rel="nofollow" target="_blank" href="https://appgallery.cloud.huawei.com/ag/n/app/C100093169?locale=en_US&source=appshare&subsource=C100093169">
+                            <img src="/images/footer/huaweiicon.png" alt="هواوى" title="هواوى" class="img-responsive" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="createdBy">
+                        
+                        <div class="clicksegypt">
+                            <p>تم التصميم والتطوير بواسطة</p>
+                            <a href="https://www.clicksegypt.net/" target="_blank"><img src="/images/footer/clicksegypt.png" /></a>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		
+    </footer>
+    <!--Footer End-->
+    <script src='/Scripts/layoutScripts.js' type="text/javascript"></script>
+    <!-- <script src='/Scripts/adblockcheckv3.js' type="text/javascript"></script> -->
+    <script src="/bundle/BodyScript?v=7S1evPYRNjeHyvWuXfJ2Wtryn2IPD7aCXBhQVSLzcTU1"></script>
+
+    <script src='/Scripts/tickeN.js' type="text/javascript"></script>
+    
+    <script src='/Scripts/js_swiper.min.js' type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        //$('.swiper-slide a').click(function () {
+        //    window.location.replace($(this).attr('href'));
+        //});
+        //Header navigation
+        if ($(window).width() > 1250) {
+            var swiper = new Swiper('.swiper-flexslider', {
+                pagination: '.swiper-pagination',
+                slidesPerView: 5,
+                paginationClickable: true,
+                spaceBetween: 0,
+                freeMode: false,
+                preventClicks: false,
+                autoplay: 2000
+            });
+        }
+        $('.swiper-flexslider').on('mouseenter', function (e) {
+            swiper.stopAutoplay();
+        })
+        $('.swiper-flexslider').on('mouseleave', function (e) {
+            swiper.startAutoplay();
+        })
+        //end Header navigation
+    </script>
+    
+	
+	
+	<!-- Sticky Banner -->
+	
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var falg1 = false;
+
+           $(window).on("load", function () {
+                //InnerCode
+                if ($("#div-gpt-ad-1560167669885-0").find('iframe[title="3rd party ad content"]').length == 0) {
+       
+                    $("#div-gpt-ad-1560167669885-0").parent().hide();
+                }
+                else {
+                    
+                    $("#div-gpt-ad-1560167669885-0").parent().show();
+                    var ced = $(window).scroll(function () {
+                        var scroll = $(window).scrollTop();
+                        if ((scroll >= 200) && (falg1 == false)) {
+                            $('#adPopBOTtOM').show();
+                            falg1 = true;
+                        } else if (scroll <= 100) {
+                            $('#adPopBOTtOM').hide();
+                        }
+                    });
+
+                    var loadsticky = function () {
+                        setTimeout(function () {
+                            $('#adPopBOTtOM').hide();
+                        }, 10000);
+                    };
+                }
+            });
+            //$(window).load(function () {
+            //    setTimeout(function () {
+            //        try {
+            //            if ($('#adPopBOTtOM').find('iframe[title="3rd party ad content"]').contents().find('body').html().trim() != "") {
+            //                loadsticky();
+            //            }
+            //        }
+            //        catch (err) {
+            //            $('#adPopBOTtOM').hide();
+            //            //loadsticky();
+            //        }
+            //    }, 100);
+            //});
+
+            $('#adPopBOTtOM #adPopBOTtOMClose').click(function (e) {
+                e.preventDefault();
+                $('#adPopBOTtOM').hide();
+                falg1 = true;
+            });
+        });
+    </script>
+    
+	
+
+<script>
+        $(document).ready(function () {
+            //iframe
+            var FullIframe = setInterval(function () {
+                //if leaderbord img only , image centerd
+                $("#div-gpt-ad-1562083652224-0").find('iframe').css({ "margin": "auto", "display": "block" });
+                //otpcode
+                $(".showOTP").find("#div-gpt-ad-1562083652224-0").find('iframe[title="3rd party ad content"]').css({ "width": "780px", "height": "400px", "overflow": "visible", "position": "absolute", "top": "0px", "right": "0px", "left": "0", "margin": "auto", "z-index": "3" });
+                $(".hideOTP").find("#div-gpt-ad-1562083652224-0").find('iframe[title="3rd party ad content"]').css({ "width": "728px", "height": "90px", "overflow": "visible", "position": "absolute", "top": "5px", "right": "0px", "left": "0", "margin": "auto", "z-index": "3" });
+                //$(".hideOTP").find(".optClose").parent().parent().parent().parent().css({ "width": "728px", "height": "90px", "overflow": "visible", "position": "absolute", "top": "5px", "right": "0px", "left": "0", "margin": "auto", "z-index": "3" });
+            }, 100);
+
+            setTimeout(function () {
+                clearInterval(FullIframe);
+            }, 15000);
+
+        });
+    </script>
+	
+
+
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"5acfc159598943798e50a3e113f5c5f0","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
