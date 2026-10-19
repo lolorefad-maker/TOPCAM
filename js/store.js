@@ -2,7 +2,7 @@
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
-  PRODUCTS: 'camera_store_products_v16_500_full_catalog',
+  PRODUCTS: 'camera_store_products_v17_pure_excel_catalog',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',
@@ -100,6 +100,8 @@ class StoreDB {
       'camera_store_products_v10_real_images',
       'camera_store_products_v11_pure_authentic',
       'camera_store_products_v12_flawless_authentic',
+      'camera_store_products_v15_332_full_catalog',
+      'camera_store_products_v16_500_full_catalog',
       'camera_store_promo_popup_v1',
       'camera_store_promo_popup_v2_free_delivery'
     ];
