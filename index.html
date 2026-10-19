@@ -469,6 +469,14 @@
   <section class="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-4">
     <div class="flex items-center justify-between gap-3 sm:gap-4 overflow-x-auto no-scrollbar touch-scroll py-2 -mx-3 px-3 sm:mx-0 sm:px-0">
       
+      <!-- 0. All Equipment (كل المعدات 500) -->
+      <div onclick="showAllCatalogProducts()" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-yellow-400 to-amber-300 flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm text-slate-950 font-black">
+          <i class="fa-solid fa-boxes-stacked text-xl text-slate-950"></i>
+        </div>
+        <span class="text-[11px] sm:text-xs font-bold text-slate-900 text-center">كل المعدات</span>
+      </div>
+
       <!-- 1. Cameras -->
       <div onclick="filterByCategory('cameras')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#e0f2fe] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
@@ -2162,9 +2170,14 @@
     // ═══════════════ DYNAMIC PRODUCTS RENDERING & SYNC ═══════════════
     let currentCategory = 'all';
     let currentBrand = 'all';
+    let isShowingAllProducts = false;
 
     const CATEGORY_META = {
-      all: { ar: 'Trending Products', sub: 'تشكيلة مختارة من أفضل معدات التصوير والسينما' },
+      all: { ar: 'جميع المعدات وأنظمة التصوير (500 منتج أصلي)', sub: 'تصفح كافة المعدات السينمائية والفوتوغرافية المتوفرة' },
+      tripods: { ar: 'الستاندات والحوامل الثلاثية', sub: 'اختر الماركة لتصفح ستاندات الإضاءة وترايبود الكاميرا' },
+      lenses: { ar: 'العدسات وفلاتر التصوير', sub: 'اختر الماركة لتصفح العدسات الاحترافية وفلاتر ND' },
+      stabilizers: { ar: 'مانعات الاهتزاز والجمبل', sub: 'اختر الماركة لتصفح مثبتات الحركة والـ Gimbals' },
+      batteries: { ar: 'البطاريات والشواحن ومحطات الطاقة', sub: 'اختر الماركة لتصفح بطاريات V-Mount والشواحن' },
       cameras: { ar: 'الكاميرات وأنظمة السينما', sub: 'اختر الماركة لتصفح كاميرات السينما والميرورليس' },
       filters: { ar: 'العدسات وفلاتر التصوير', sub: 'اختر الماركة لتصفح العدسات الاحترافية وفلاتر ND' },
       lighting: { ar: 'إضاءات وسوفت بوكس الاستوديو', sub: 'اختر الماركة لتصفح أضواء الاستوديو المستمرة والإضاءة المحمولة' },
@@ -2378,8 +2391,14 @@
 
       if (cat === 'deals') {
         catProducts = allProducts.filter(p => p.oldPrice || (p.badge && (p.badge.includes('خصم') || p.badge.includes('وفر') || p.badge.includes('الأكثر') || p.badge.includes('عرض'))));
-      } else if (cat === 'gimbals') {
+      } else if (cat === 'gimbals' || cat === 'stabilizers') {
         catProducts = allProducts.filter(p => p.category === 'gimbals' || p.category === 'stabilizers');
+      } else if (cat === 'stands' || cat === 'tripods') {
+        catProducts = allProducts.filter(p => p.category === 'stands' || p.category === 'tripods');
+      } else if (cat === 'filters' || cat === 'lenses') {
+        catProducts = allProducts.filter(p => p.category === 'filters' || p.category === 'lenses');
+      } else if (cat === 'batteries' || cat === 'chargers_batteries') {
+        catProducts = allProducts.filter(p => p.category === 'chargers_batteries' || p.category === 'batteries');
       } else if (cat !== 'all') {
         catProducts = allProducts.filter(p => p.category === cat);
       } else {
@@ -2416,7 +2435,13 @@
 
       const viewAllBtn = document.getElementById('viewAllBtn');
       if (viewAllBtn) {
-        viewAllBtn.innerHTML = `<span>عرض كل المعدات (${allProducts.length} منتج)</span><i class="fa-solid fa-arrow-right text-[10px]"></i>`;
+        if (isShowingAllProducts && cat === 'all' && currentBrand === 'all') {
+          viewAllBtn.innerHTML = `<span>عرض التشكيلة المختارة (5 منتجات)</span><i class="fa-solid fa-arrow-left text-[10px]"></i>`;
+          viewAllBtn.onclick = function(e) { if(e) e.preventDefault(); showFeaturedStorefrontProducts(); return false; };
+        } else {
+          viewAllBtn.innerHTML = `<span>عرض كل المعدات (${allProducts.length} منتج)</span><i class="fa-solid fa-arrow-right text-[10px]"></i>`;
+          viewAllBtn.onclick = function(e) { if(e) e.preventDefault(); showAllCatalogProducts(); return false; };
+        }
       }
 
       // توليد أزرار البراندات باللوقو الحقيقي وبخلفية شفافة في المنتصف
@@ -2725,7 +2750,24 @@
     function filterByCategory(cat) {
       currentCategory = cat || 'all';
       currentBrand = 'all';
+      isShowingAllProducts = true;
       renderStorefrontProducts(currentCategory, 'all');
+      scrollToProducts();
+    }
+
+    function showAllCatalogProducts() {
+      isShowingAllProducts = true;
+      currentCategory = 'all';
+      currentBrand = 'all';
+      renderStorefrontProducts('all', 'all');
+      scrollToProducts();
+    }
+
+    function showFeaturedStorefrontProducts() {
+      isShowingAllProducts = false;
+      currentCategory = 'all';
+      currentBrand = 'all';
+      renderStorefrontProducts('all', 'all');
       scrollToProducts();
     }
 

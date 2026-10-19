@@ -42,6 +42,10 @@ public class CredManager3 {
 
 # Clean temporary json and helper ps1 files
 $tempFiles = @(
+    "replace_rules.json",
+    "run_replace.ps1",
+    "apply_storefront_fix.ps1",
+    "check_cats.ps1",
     "fix_final_details.ps1",
     "extract_485.ps1",
     "check_remaining.ps1",
@@ -77,7 +81,13 @@ $tempFiles = @(
     "category_templates_168.json",
     "arabic_helpers.json",
     "unadded_to_process.json",
-    "catalog_485_raw.json"
+    "catalog_485_raw.json",
+    "audit_desc.ps1",
+    "breakdown_unadded.ps1",
+    "export_unadded.ps1",
+    "fetch_online_index.ps1",
+    "find_excel_step.ps1",
+    "test_online_pool.ps1"
 )
 
 foreach ($file in $tempFiles) {
@@ -93,6 +103,6 @@ $authHeader = "AUTHORIZATION: basic " + [Convert]::ToBase64String([System.Text.E
 
 $git = "C:\Users\publisher\AppData\Local\GitHubDesktop\app-3.6.6\resources\app\git\cmd\git.exe"
 & $git add -A
-& $git commit -m "Center 5th product card on mobile and expand catalog to 500 authentic products with tailored descriptions"
+& $git commit -m "Fix storefront filtering, declare isShowingAllProducts and showAllCatalogProducts, add All Gear button"
 & $git -c "http.extraheader=$authHeader" push origin main
 Write-Host "GIT_SYNC_COMPLETE"
