@@ -2,7 +2,7 @@
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
-  PRODUCTS: 'camera_store_products_v3',
+  PRODUCTS: 'camera_store_products_v10_real_images',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',
@@ -86,59 +86,50 @@ class StoreDB {
   }
 
   init() {
-    // 1. تهيئة وتحديث صور المنتجات المحلية الأساسية لضمان بقاء صور الكاميرات والستاندات والعدسات الحقيقية
-    const localImageMap = {
-      'CAM-001': 'images/camera_body.jpg',
-      'CAM-002': 'images/new_camera.jpg',
-      'CAM-003': 'images/hero_camera.jpg',
-      'GMB-001': 'images/gimbal_stab.jpg',
-      'GMB-002': 'images/gimbal_stab.jpg',
-      'LGT-001': 'images/flash_light.jpg',
-      'LGT-002': 'images/flash_light.jpg',
-      'STD-001': 'images/tripod_stand.jpg',
-      'STD-002': 'images/tripod_stand.jpg',
-      'FLT-001': 'images/filter_lens.jpg',
-      'FLT-002': 'images/filter_lens.jpg',
-      'MEM-001': 'images/camera_dials.jpg',
-      'BAT-001': 'images/vmount_battery.jpg',
-      'BAT-002': 'images/vmount_battery.jpg',
-      'BAG-001': 'images/camera_bag.jpg',
-      'CAG-001': 'images/camera_cage.jpg',
-      'STP-001': 'images/camera_bag.jpg',
-      'COV-001': 'images/camera_body.jpg',
-      'STU-001': 'images/godox_la150d_extracted.jpg',
-      'STU-002': 'images/flash_light.jpg',
-      'STU-003': 'images/cat_cage_white.jpg',
-      'STU-004': 'images/cat_tripod_white.jpg',
-      'STU-005': 'images/about_store_showroom.jpg',
-      'STU-006': 'images/about_filmmaker_set.jpg',
-      'STU-007': 'images/gear_cinema_studio.jpg',
-      'STU-008': 'images/flash_light.jpg',
-      'STU-009': 'images/tripod_stand.jpg',
-      'STU-010': 'images/slide_aputure_spotlight.jpg'
-    };
+    // 1. تنظيف الإصدارات القديمة المخبأة في متصفح الزوار لضمان تحميل الصور الرسمية الحقيقية فوراً
+    const legacyKeys = [
+      'camera_store_products_v1',
+      'camera_store_products_v2',
+      'camera_store_products_v3',
+      'camera_store_products_v4',
+      'camera_store_products_v5',
+      'camera_store_products_v6',
+      'camera_store_products_v7',
+      'camera_store_products_v8',
+      'camera_store_products_v9'
+    ];
+    legacyKeys.forEach(k => {
+      try { localStorage.removeItem(k); } catch(e){}
+    });
+
     let currentProds = [];
     try {
       const stored = localStorage.getItem(STORE_KEYS.PRODUCTS);
-      currentProds = stored ? JSON.parse(stored) : (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : []);
+      currentProds = stored ? JSON.parse(stored) : (typeof INITIAL_PRODUCTS !== 'undefined' ? JSON.parse(JSON.stringify(INITIAL_PRODUCTS)) : []);
     } catch(e) {
-      currentProds = typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : [];
+      currentProds = typeof INITIAL_PRODUCTS !== 'undefined' ? JSON.parse(JSON.stringify(INITIAL_PRODUCTS)) : [];
     }
-    // مسح وتحديث أي صور خارجية قديمة (كصور السيارات أو الأشخاص) فوراً
-    const hasExternalImages = currentProds.some(p => p.image && (p.image.startsWith('http') || p.image.includes('unsplash')));
-    if (hasExternalImages || currentProds.length === 0) {
-      currentProds = (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : []);
-    } else {
-      currentProds.forEach(p => {
-        if (localImageMap[p.id]) {
-          p.image = localImageMap[p.id];
-        }
-      });
-      // دمج أي منتجات جديدة أضيفت لـ INITIAL_PRODUCTS ولم تكن موجودة بعد في التخزين
-      if (typeof INITIAL_PRODUCTS !== 'undefined') {
+
+    // مزامنة الصور ومعارض الزوايا الحقيقية من INITIAL_PRODUCTS دائماً
+    if (typeof INITIAL_PRODUCTS !== 'undefined' && INITIAL_PRODUCTS.length > 0) {
+      const initMap = new Map(INITIAL_PRODUCTS.map(p => [p.id, p]));
+      if (!currentProds || currentProds.length === 0) {
+        currentProds = JSON.parse(JSON.stringify(INITIAL_PRODUCTS));
+      } else {
+        currentProds.forEach(p => {
+          const fresh = initMap.get(p.id);
+          if (fresh) {
+            p.image = fresh.image;
+            p.gallery = fresh.gallery || [fresh.image];
+            p.name = fresh.name;
+            p.category = fresh.category;
+            p.brand = fresh.brand;
+            if (fresh.specs) p.specs = fresh.specs;
+          }
+        });
         INITIAL_PRODUCTS.forEach(initP => {
           if (!currentProds.some(cp => cp.id === initP.id)) {
-            currentProds.push(initP);
+            currentProds.push(JSON.parse(JSON.stringify(initP)));
           }
         });
       }
