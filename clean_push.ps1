@@ -46,6 +46,6 @@ $authHeader = "AUTHORIZATION: basic " + [Convert]::ToBase64String([System.Text.E
 
 $git = "C:\Users\publisher\AppData\Local\GitHubDesktop\app-3.6.6\resources\app\git\cmd\git.exe"
 & $git add -A
-& $git commit -m "Unlock full 82-product grid on homepage and add no-cache headers to server.js"
+& $git commit -m "Unify typography in video showcase section to match rest of storefront"
 & $git -c "http.extraheader=$authHeader" push origin main
 Write-Host "GIT_SYNC_COMPLETE"
