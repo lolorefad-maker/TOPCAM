@@ -551,7 +551,7 @@
         <p id="productsSectionSubtitle" class="text-[11px] text-slate-500 mt-0.5">تشكيلة مختارة من أفضل معدات التصوير والسينما</p>
       </div>
       <a href="#" id="viewAllBtn" onclick="filterByCategory('all'); return false;" class="text-xs font-bold text-yellow-600 hover:text-yellow-700 hover:underline flex items-center gap-1">
-        <span>التشكيلة المختارة (5 قطع)</span>
+        <span>عرض كل المعدات (82 منتج)</span>
         <i class="fa-solid fa-arrow-right text-[10px]"></i>
       </a>
     </div>
@@ -2282,60 +2282,7 @@
         'Hasselblad': 'images/brands/hasselblad.svg'
       };
 
-      // 1. الوضع الافتراضي عند فتح الموقع (5 قطع مميزة مع فلاتر البراندات العالمية الشفافة)
-      if (cat === 'all' && (!searchTerm || searchTerm.trim() === '') && currentBrand === 'all') {
-        if (headerBox) headerBox.classList.remove('hidden');
-        if (titleEl) titleEl.textContent = 'Trending Products';
-        if (subEl) subEl.textContent = 'تشكيلة مختارة من أفضل معدات التصوير والسينما';
-        if (catTitleEl) catTitleEl.textContent = 'تصفح حسب البراند الرسمي';
-        if (catCountEl) catCountEl.textContent = 'أصلية 100%';
-
-        const topBrands = ['Canon', 'Sony', 'DJI', 'Aputure', 'Godox', 'RODE', 'SmallRig'];
-        let brandPillsHtml = `
-          <button 
-            onclick="filterByBrand('all')" 
-            class="group relative flex flex-col items-center justify-center px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 cursor-pointer bg-transparent border border-yellow-400 bg-yellow-400/10 shadow-xs scale-105 ring-2 ring-yellow-400/30"
-            title="كل التشكيلة"
-          >
-            <div class="h-6 sm:h-7 w-20 sm:w-24 flex items-center justify-center gap-1.5">
-              <i class="fa-solid fa-shapes text-yellow-500 text-xs sm:text-sm"></i>
-              <span class="text-xs sm:text-sm font-black text-slate-900">المميزة</span>
-            </div>
-            <div class="flex items-center justify-center gap-1 mt-1 text-[10px] sm:text-[11px] font-bold text-slate-950">
-              <span class="text-[9px] px-1.5 py-0.2 rounded-full bg-yellow-400 text-slate-950 font-black">5 قطع</span>
-            </div>
-          </button>
-        `;
-
-        topBrands.forEach(b => {
-          const logoSrc = BRAND_LOGOS[b];
-          const safeB = b.replace(/'/g, "\\'");
-          brandPillsHtml += `
-            <button 
-              onclick="filterByBrand('${safeB}')" 
-              class="group relative flex flex-col items-center justify-center px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-2xl transition-all duration-300 cursor-pointer bg-transparent border border-transparent hover:border-slate-200 hover:bg-white/50 opacity-70 hover:opacity-100 hover:scale-105"
-              title="${b}"
-            >
-              <div class="h-6 sm:h-7 w-20 sm:w-24 flex items-center justify-center px-1">
-                ${logoSrc ? `
-                  <img src="${logoSrc}" alt="${b}" class="max-h-5 sm:max-h-6 max-w-full object-contain transition duration-200 group-hover:scale-105" loading="lazy">
-                ` : `
-                  <span class="text-xs font-black tracking-wider text-slate-800">${b}</span>
-                `}
-              </div>
-              <div class="flex items-center justify-center gap-1 mt-1 text-[10px] sm:text-[11px] font-bold text-slate-500 group-hover:text-slate-800 transition">
-                <span>${b}</span>
-              </div>
-            </button>
-          `;
-        });
-
-        if (brandContainer) brandContainer.innerHTML = brandPillsHtml;
-        grid.innerHTML = FEATURED_5_PRODUCTS.map(renderStorefrontProductCard).join('');
-        return;
-      }
-
-      // 2. عند اختيار قسم أو البحث أو اختيار براند محدد
+      // تحميل جميع المنتجات من قاعدة البيانات المحلية
       let allProducts = storeDB.getProducts();
       let catProducts = [];
 
@@ -2370,10 +2317,16 @@
       // إظهار شريط البراندات في المنتصف بخلفية شفافة
       if (headerBox) {
         headerBox.classList.remove('hidden');
-        const meta = CATEGORY_META[cat] || { ar: cat, sub: 'تصفح المعدات حسب البراند' };
-        if (catTitleEl) catTitleEl.textContent = meta.ar;
-        if (catCountEl) catCountEl.textContent = `${catProducts.length} منتج`;
+        const meta = CATEGORY_META[cat] || { ar: 'جميع المعدات الأصلية', sub: 'تصفح المعدات حسب البراند' };
+        if (catTitleEl) catTitleEl.textContent = cat === 'all' ? 'جميع المعدات والأنظمة الأصلية' : meta.ar;
+        if (catCountEl) catCountEl.textContent = `${catProducts.length} منتج أصلي`;
         if (subEl) subEl.textContent = meta.sub;
+        if (titleEl) titleEl.textContent = cat === 'all' ? 'جميع المعدات الأصلية' : meta.ar;
+      }
+
+      const viewAllBtn = document.getElementById('viewAllBtn');
+      if (viewAllBtn) {
+        viewAllBtn.innerHTML = `<span>عرض كل المعدات (${allProducts.length} منتج)</span><i class="fa-solid fa-arrow-right text-[10px]"></i>`;
       }
 
       // توليد أزرار البراندات باللوقو الحقيقي وبخلفية شفافة في المنتصف
@@ -2864,18 +2817,24 @@
       scrollToProducts();
     }
 
-    // تشغيل عند تحميل الصفحة
-    document.addEventListener('DOMContentLoaded', () => {
+    // تشغيل عند تحميل الصفحة فوراً
+    function bootStorefront() {
       initStorefrontDynamicFeatures();
       renderStorefrontProducts('all');
+    }
 
-      // مزامنة فورية عند أي تعديل بالمنتجات أو البانرات
-      window.addEventListener('products_updated', () => {
-        renderStorefrontProducts(currentCategory, currentBrand);
-      });
-      window.addEventListener('banners_updated', () => initStorefrontDynamicFeatures());
-      window.addEventListener('promo_popup_updated', () => initStorefrontDynamicFeatures());
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bootStorefront);
+    } else {
+      bootStorefront();
+    }
+
+    // مزامنة فورية عند أي تعديل بالمنتجات أو البانرات
+    window.addEventListener('products_updated', () => {
+      renderStorefrontProducts(currentCategory, currentBrand);
     });
+    window.addEventListener('banners_updated', () => initStorefrontDynamicFeatures());
+    window.addEventListener('promo_popup_updated', () => initStorefrontDynamicFeatures());
 
   </script>
 </body>

@@ -117,8 +117,7 @@ class StoreDB {
     if (typeof INITIAL_PRODUCTS !== 'undefined' && INITIAL_PRODUCTS.length > 0) {
       const initMap = new Map(INITIAL_PRODUCTS.map(p => [p.id, p]));
       // استبعاد أي منتجات قديمة محذوفة لا توجد في الكتالوج الأصلي المصفى
-      currentProds = currentProds.filter(p => initMap.has(p.id));
-      if (!currentProds || currentProds.length === 0) {
+      if (!currentProds || currentProds.length < INITIAL_PRODUCTS.length) {
         currentProds = JSON.parse(JSON.stringify(INITIAL_PRODUCTS));
       } else {
         currentProds.forEach(p => {
