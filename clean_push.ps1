@@ -42,13 +42,10 @@ public class CredManager3 {
 
 # Clean temporary files
 $tempFiles = @(
-    "location_section.html",
-    "insert_location.ps1",
-    "add_location_links.ps1",
-    "replace_rules.json",
-    "run_replace.ps1",
-    "apply_storefront_fix.ps1",
-    "check_cats.ps1"
+    "test_filter.ps1",
+    "inspect_card3.ps1",
+    "test_remove.ps1",
+    "do_remove_services.ps1"
 )
 
 foreach ($file in $tempFiles) {
@@ -63,6 +60,6 @@ $authHeader = "AUTHORIZATION: basic " + [Convert]::ToBase64String([System.Text.E
 
 $git = "C:\Users\publisher\AppData\Local\GitHubDesktop\app-3.6.6\resources\app\git\cmd\git.exe"
 & $git add -A
-& $git commit -m "Add showroom location section for Irbid University Street with interactive map and matching typography"
+& $git commit -m "Remove in-store services card from Irbid location section as requested"
 & $git -c "http.extraheader=$authHeader" push origin main
 Write-Host "GIT_SYNC_COMPLETE"
