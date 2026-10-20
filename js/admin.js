@@ -1198,6 +1198,39 @@ function saveStoreSettings(e) {
   showAdminToast('تم حفظ الإعدادات ورقم الواتساب بنجاح!', 'success');
 }
 
+async function forceSyncLaptopToPhone() {
+  const btn = document.getElementById('btnForceSync');
+  if (btn) btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري النقل والمزامنة...';
+  try {
+    const prods = storeDB.getProducts();
+    const deletedIds = storeDB.getDeletedProductIds();
+
+    // 1. إرسال المحذوفات
+    await fetch('/api/sync-deleted', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ deletedIds: deletedIds })
+    }).catch(() => {});
+
+    // 2. إرسال الكتالوج الدقيق للابتوب إلى السيرفر ليتم اعتماده للتلفون
+    const res = await fetch('/api/save-catalog', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ products: prods })
+    });
+
+    if (res.ok) {
+      showAdminToast(`تم بنجاح! تم نقل واعتماد ${prods.length} منتج على السيرفر. افتح التلفون واعمل ريفريش ستجدها مطابقة 100%!`, 'success');
+    } else {
+      showAdminToast('تمت مزامنة المحذوفات بنجاح.', 'success');
+    }
+  } catch(e) {
+    showAdminToast('تعذر الاتصال بالسيرفر. يرجى التأكد من اتصال الإنترنت.', 'error');
+  } finally {
+    if (btn) btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up text-amber-400 text-sm"></i> <span>نقل كل المحذوفات للتلفون الآن 📲</span>';
+  }
+}
+
 async function triggerServerSyncAdmin() {
   const btn = document.getElementById('btnAdminServerSync');
   if (btn) btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-amber-600"></i> <span class="hidden sm:inline">جاري المزامنة...</span>';

@@ -267,7 +267,32 @@ class StoreDB {
         }).catch(() => {});
       }
 
-      // 2. سحب قائمة المحذوفات الموحدة من السيرفر (لتحديث الهاتف بأي حذف تم على اللابتوب)
+      // 2. إذا كنا على اللابتوب ويوجد كتالوج منتجات معدل، نرفعه فوراً للسيرفر ليكون هو الأساس
+      const stored = localStorage.getItem(STORE_KEYS.PRODUCTS);
+      if (stored) {
+        try {
+          const prods = JSON.parse(stored);
+          if (Array.isArray(prods) && prods.length > 0) {
+            fetch('/api/save-catalog', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ products: prods })
+            }).catch(() => {});
+          }
+        } catch(e) {}
+      } else {
+        // 3. إذا كنا على الهاتف ولا يوجد تخزين بعد، نسحب كتالوج اللابتوب المعتمد من السيرفر فوراً
+        const catRes = await fetch('/api/catalog');
+        if (catRes.ok) {
+          const serverCatalog = await catRes.json();
+          if (Array.isArray(serverCatalog) && serverCatalog.length > 0) {
+            localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(serverCatalog));
+            this.dispatchChange('products_updated');
+          }
+        }
+      }
+
+      // 4. سحب قائمة المحذوفات الموحدة من السيرفر (لتحديث الهاتف بأي حذف تم على اللابتوب)
       const res = await fetch('/api/deleted-ids');
       if (res.ok) {
         const serverDeleted = await res.json();

@@ -56,6 +56,7 @@ const server = http.createServer((req, res) => {
       try { fs.mkdirSync(DATA_DIR, { recursive: true }); } catch (e) {}
     }
     const DELETED_FILE = path.join(DATA_DIR, 'deleted_ids.json');
+    const CATALOG_FILE = path.join(DATA_DIR, 'catalog.json');
 
     const getDeletedIds = () => {
       try {
@@ -76,6 +77,46 @@ const server = http.createServer((req, res) => {
         return ids;
       }
     };
+
+    if (reqPath === '/api/catalog' && req.method === 'GET') {
+      try {
+        if (fs.existsSync(CATALOG_FILE)) {
+          const content = fs.readFileSync(CATALOG_FILE, 'utf8');
+          res.writeHead(200, {
+            'Content-Type': 'application/json; charset=UTF-8',
+            'Cache-Control': 'no-cache, no-store, must-revalidate'
+          });
+          res.end(content);
+          return;
+        }
+      } catch (e) {}
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=UTF-8' });
+      res.end(JSON.stringify([]));
+      return;
+    }
+
+    if (reqPath === '/api/save-catalog' && req.method === 'POST') {
+      let body = '';
+      req.on('data', chunk => { body += chunk; });
+      req.on('end', () => {
+        try {
+          const parsed = JSON.parse(body || '{}');
+          const prods = Array.isArray(parsed.products) ? parsed.products : [];
+          if (prods.length > 0) {
+            fs.writeFileSync(CATALOG_FILE, JSON.stringify(prods, null, 2), 'utf8');
+            res.writeHead(200, { 'Content-Type': 'application/json; charset=UTF-8' });
+            res.end(JSON.stringify({ success: true, count: prods.length }));
+            return;
+          }
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Empty products list' }));
+        } catch (e) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Invalid JSON' }));
+        }
+      });
+      return;
+    }
 
     if (reqPath === '/api/deleted-ids' && req.method === 'GET') {
       const ids = getDeletedIds();
