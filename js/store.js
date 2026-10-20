@@ -1,8 +1,9 @@
-// طبقة إدارة البيانات والطلبات والتخزين المحلي لمتجر الكاميرات
+﻿// طبقة إدارة البيانات والطلبات والتخزين المحلي لمتجر الكاميرات
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
   PRODUCTS: 'camera_store_products_v22_unique_bh_complete_catalog',
+  DELETED_IDS: 'camera_store_deleted_ids_v1',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',
@@ -86,7 +87,7 @@ class StoreDB {
   }
 
   init() {
-    // 1. تنظيف الإصدارات القديمة المخبأة في متصفح الزوار لضمان تحميل الصور الرسمية الحقيقية فوراً
+    // 1. Permanently track in deleted IDs list so it never resurrects
     const legacyKeys = [
       'camera_store_products_v1',
       'camera_store_products_v2',
@@ -118,28 +119,16 @@ class StoreDB {
     }
 
     // تصفية وحصر الكتالوج بالكامل على المنتجات الأصلية الحقيقية فقط
-    if (typeof INITIAL_PRODUCTS !== 'undefined' && INITIAL_PRODUCTS.length > 0) {
-      const initMap = new Map(INITIAL_PRODUCTS.map(p => [p.id, p]));
-      // استبعاد أي منتجات قديمة محذوفة لا توجد في الكتالوج الأصلي المصفى
-      if (!currentProds || currentProds.length < INITIAL_PRODUCTS.length) {
-        currentProds = JSON.parse(JSON.stringify(INITIAL_PRODUCTS));
-      } else {
-        currentProds.forEach(p => {
-          const fresh = initMap.get(p.id);
-          if (fresh) {
-            p.image = fresh.image;
-            p.gallery = fresh.gallery || [fresh.image];
-            p.name = fresh.name;
-            p.category = fresh.category;
-            p.brand = fresh.brand;
-            if (fresh.specs) p.specs = fresh.specs;
-          }
-        });
-        INITIAL_PRODUCTS.forEach(initP => {
-          if (!currentProds.some(cp => cp.id === initP.id)) {
-            currentProds.push(JSON.parse(JSON.stringify(initP)));
-          }
-        });
+    const deletedIds = new Set(this.getDeletedProductIds());
+    const stored = localStorage.getItem(STORE_KEYS.PRODUCTS);
+
+    if (!stored) {
+      if (typeof INITIAL_PRODUCTS !== 'undefined' && INITIAL_PRODUCTS.length > 0) {
+        currentProds = JSON.parse(JSON.stringify(INITIAL_PRODUCTS)).filter(p => !deletedIds.has(p.id));
+      }
+    } else {
+      if (Array.isArray(currentProds)) {
+        currentProds = currentProds.filter(p => !deletedIds.has(p.id));
       }
     }
     try {
@@ -148,7 +137,7 @@ class StoreDB {
       console.warn('localStorage setItem failed:', e);
     }
 
-    // 2. تهيئة الطلبات الأولية
+    // 2. Remove product from current list and persist
     if (!localStorage.getItem(STORE_KEYS.ORDERS)) {
       const sampleOrders = [
         {
@@ -263,28 +252,50 @@ class StoreDB {
   }
 
   // ================= المنتجات =================
+  getDeletedProductIds() {
+    try {
+      const data = localStorage.getItem(STORE_KEYS.DELETED_IDS);
+      return data ? JSON.parse(data) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  isProductDeleted(id) {
+    if (!id) return false;
+    const deleted = this.getDeletedProductIds();
+    return deleted.includes(id);
+  }
+
   getProducts() {
     try {
+      const deleted = new Set(this.getDeletedProductIds());
       const data = localStorage.getItem(STORE_KEYS.PRODUCTS);
       if (data) {
         const parsed = JSON.parse(data);
-        if (Array.isArray(parsed) && typeof INITIAL_PRODUCTS !== 'undefined' && parsed.length >= INITIAL_PRODUCTS.length) {
-          return parsed;
+        if (Array.isArray(parsed)) {
+          return deleted.size > 0 ? parsed.filter(p => !deleted.has(p.id)) : parsed;
         }
       }
-      return typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : [];
+      const base = typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : [];
+      return deleted.size > 0 ? base.filter(p => !deleted.has(p.id)) : base;
     } catch (e) {
-      return typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : [];
+      const deleted = new Set(this.getDeletedProductIds());
+      const base = typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : [];
+      return deleted.size > 0 ? base.filter(p => !deleted.has(p.id)) : base;
     }
   }
 
   getProductById(id) {
+    if (this.isProductDeleted(id)) return null;
     const products = this.getProducts();
     return products.find(p => p.id === id) || null;
   }
 
   saveProducts(products) {
-    localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(products));
+    const deleted = new Set(this.getDeletedProductIds());
+    const cleanList = Array.isArray(products) ? products.filter(p => !deleted.has(p.id)) : [];
+    localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(cleanList));
     this.dispatchChange('products_updated');
   }
 
@@ -336,6 +347,17 @@ class StoreDB {
   }
 
   deleteProduct(id) {
+    if (!id) return false;
+    // 1. Permanently track in deleted IDs list so it never resurrects
+    const deleted = this.getDeletedProductIds();
+    if (!deleted.includes(id)) {
+      deleted.push(id);
+      try {
+        localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(deleted));
+      } catch (e) {}
+    }
+
+    // 2. Remove product from current list and persist
     const products = this.getProducts();
     const filtered = products.filter(p => p.id !== id);
     this.saveProducts(filtered);

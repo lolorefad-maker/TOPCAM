@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -2656,6 +2656,10 @@
     let currentActiveAngleUrl = null;
 
     function openCameraSpecsBubble(productId) {
+      if (typeof storeDB !== 'undefined' && storeDB.isProductDeleted && storeDB.isProductDeleted(productId)) {
+        console.warn('Product is deleted:', productId);
+        return;
+      }
       const product = (typeof storeDB !== 'undefined' && storeDB.getProductById ? storeDB.getProductById(productId) : null) || 
                       (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS.find(p => p.id === productId) : null);
       if (!product) {

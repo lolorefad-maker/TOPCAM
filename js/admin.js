@@ -1057,6 +1057,8 @@ function openProductEditModal(productId = null) {
 
   const preview = document.getElementById('prodImagePreview');
 
+  const deleteBtn = document.getElementById('btnDeleteCurrentProduct');
+
   if (productId) {
     const product = storeDB.getProductById(productId);
     if (!product) return;
@@ -1074,11 +1076,21 @@ function openProductEditModal(productId = null) {
     document.getElementById('prodImage').value = product.image || 'images/camera_body.jpg';
     if (preview) preview.src = product.image || 'images/camera_body.jpg';
     document.getElementById('prodDescription').value = product.description || '';
+
+    if (deleteBtn) {
+      deleteBtn.classList.remove('hidden');
+      deleteBtn.classList.add('flex');
+    }
   } else {
     title.textContent = 'إضافة بضاعة جديدة للمخزن';
     document.getElementById('prodStock').value = 10;
     document.getElementById('prodImage').value = 'images/camera_body.jpg';
     if (preview) preview.src = 'images/camera_body.jpg';
+
+    if (deleteBtn) {
+      deleteBtn.classList.add('hidden');
+      deleteBtn.classList.remove('flex');
+    }
   }
 
   modal.classList.remove('hidden');
@@ -1115,6 +1127,23 @@ function handleProductFormSubmit(e) {
   renderAdminDashboardCharts();
   renderAdminInventory();
   renderAdminBrands();
+}
+
+function deleteCurrentEditingProduct() {
+  const id = document.getElementById('editProductId').value;
+  if (!id) return;
+  const product = storeDB.getProductById(id);
+  const name = product ? product.name : id;
+
+  if (confirm(`هل أنت متأكد من حذف هذا الصنف نهائياً من المتجر والمخزن؟\n"${name}"`)) {
+    storeDB.deleteProduct(id);
+    closeModal('productFormModal');
+    showAdminToast('تم حذف الصنف بنجاح من المتجر والمخزن.', 'info');
+    renderAdminStats();
+    renderAdminDashboardCharts();
+    renderAdminInventory();
+    renderAdminBrands();
+  }
 }
 
 function confirmDeleteProduct(id) {
@@ -1161,6 +1190,9 @@ function saveStoreSettings(e) {
 
 function resetStoreData() {
   if (confirm('هل أنت متأكد من استعادة بيانات المنتجات الافتراضية؟')) {
+    try {
+      localStorage.removeItem(STORE_KEYS.DELETED_IDS);
+    } catch (e) {}
     storeDB.saveProducts(typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : []);
     showAdminToast('تم استعادة البيانات الافتراضية بنجاح!', 'success');
     renderAdminStats();

@@ -1082,10 +1082,16 @@
           <textarea id="prodDescription" rows="3" placeholder="مواصفات السنسور، الكفالة، ومزايا التصوير..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 leading-relaxed"></textarea>
         </div>
 
-        <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 active:scale-98 text-slate-950 font-black text-xs py-3 rounded-xl shadow-xs transition flex items-center justify-center gap-2">
-          <i class="fa-solid fa-floppy-disk"></i>
-          <span>حفظ البضاعة ونشرها في المتجر فورا</span>
-        </button>
+        <div class="flex items-center gap-2 pt-2">
+          <button type="submit" class="flex-1 bg-yellow-400 hover:bg-yellow-500 active:scale-98 text-slate-950 font-black text-xs py-3 rounded-xl shadow-xs transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-floppy-disk"></i>
+            <span>حفظ البضاعة ونشرها في المتجر فورا</span>
+          </button>
+          <button type="button" id="btnDeleteCurrentProduct" onclick="deleteCurrentEditingProduct()" class="hidden px-4 py-3 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 rounded-xl font-bold text-xs transition flex items-center justify-center gap-1.5 shrink-0" title="حذف هذا الصنف نهائياً">
+            <i class="fa-solid fa-trash-can"></i>
+            <span>حذف المنتج</span>
+          </button>
+        </div>
       </form>
     </div>
   </div>
