@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -120,16 +120,29 @@
         >
       </a>
 
-      <!-- Right: Official Shopping Cart Icon with Orange Badge '2' -->
-      <button 
-        onclick="toggleCartDrawer(true)" 
-        class="relative w-10 h-10 -mr-2 flex items-center justify-center text-white hover:text-amber-400 active:scale-90 transition"
-        title="عربة التسوق (Cart)"
-        id="mainCartBtn"
-      >
-        <i class="fa-solid fa-bag-shopping text-xl"></i>
-        <span class="absolute top-1.5 right-1.5 bg-[#e5a93b] text-slate-950 font-black font-mono text-[10px] w-4 h-4 rounded-full flex items-center justify-center shadow-xs" id="cartBadge">2</span>
-      </button>
+      <!-- Right: Smooth Language Switcher & Official Shopping Cart Icon -->
+      <div class="flex items-center gap-2 sm:gap-3 -mr-2">
+        <!-- Smooth Language Switcher Button -->
+        <button 
+          onclick="toggleLanguage()" 
+          id="langSwitchBtn" 
+          class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold transition-all duration-300 flex items-center gap-1.5 border border-white/20 bg-white/10 hover:bg-amber-400 hover:text-slate-950 text-white shadow-2xs cursor-pointer active:scale-95 group"
+          title="تغيير اللغة / Switch Language"
+        >
+          <i class="fa-solid fa-globe text-amber-400 group-hover:text-slate-950 transition-colors text-xs"></i>
+          <span id="langSwitchLabel" class="font-bold tracking-wide">English</span>
+        </button>
+
+        <button 
+          onclick="toggleCartDrawer(true)" 
+          class="relative w-10 h-10 flex items-center justify-center text-white hover:text-amber-400 active:scale-90 transition cursor-pointer"
+          title="عربة التسوق (Cart)"
+          id="mainCartBtn"
+        >
+          <i class="fa-solid fa-bag-shopping text-xl"></i>
+          <span class="absolute top-1.5 right-1.5 bg-[#e5a93b] text-slate-950 font-black font-mono text-[10px] w-4 h-4 rounded-full flex items-center justify-center shadow-xs" id="cartBadge">0</span>
+        </button>
+      </div>
 
     </div>
 
@@ -192,9 +205,23 @@
         </div>
 
         <!-- Verified Store Badge -->
-        <div class="mt-3.5 px-3 py-2 rounded-xl bg-amber-50 border border-amber-200/90 flex items-center gap-2 text-[11px] text-amber-900 font-bold" dir="rtl">
+        <div class="mt-3.5 px-3 py-2 rounded-xl bg-amber-50 border border-amber-200/90 flex items-center gap-2 text-[11px] text-amber-900 font-bold" id="drawerVerifiedBadge" dir="rtl">
           <i class="fa-solid fa-circle-check text-amber-600 text-xs"></i>
           <span>الوجهة الرسمية الأولى لمعدات التصوير والسينما - الأردن</span>
+        </div>
+
+        <!-- Mobile Drawer Language Switcher Button -->
+        <div class="mt-3">
+          <button 
+            onclick="toggleLanguage()" 
+            class="w-full py-2.5 px-3.5 rounded-xl bg-slate-100 hover:bg-amber-100 border border-slate-200 text-slate-800 text-xs font-bold transition flex items-center justify-between group cursor-pointer active:scale-98"
+          >
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-globe text-amber-500 text-sm"></i>
+              <span id="drawerLangLabel">تغيير اللغة إلى English</span>
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-wider bg-amber-400 text-slate-950 px-2 py-0.5 rounded-md" id="drawerLangBadge">EN</span>
+          </button>
         </div>
 
         <!-- Categorized & Organized Links -->
@@ -1611,7 +1638,7 @@
       <div class="border-t border-slate-100 pt-3 sm:pt-4 space-y-2.5 pb-6 sm:pb-0">
         <div class="flex justify-between text-xs sm:text-sm font-bold">
           <span>Total:</span>
-          <span id="cartTotal" class="text-yellow-600 font-extrabold text-base">$0</span>
+          <span id="cartTotal" class="text-yellow-600 font-extrabold text-base">0 د.أ</span>
         </div>
 
         <button onclick="openCheckoutModal()" class="w-full bg-yellow-400 hover:bg-yellow-500 active:scale-98 text-slate-950 font-black py-3 rounded-xl text-xs flex items-center justify-center gap-2 transition shadow-md">
@@ -1642,7 +1669,7 @@
         <span class="text-slate-900 font-bold flex items-center gap-1.5">
           <i class="fa-solid fa-bag-shopping text-yellow-600"></i> إجمالي الطلب:
         </span>
-        <span id="checkoutModalTotal" class="text-yellow-700 font-black text-sm">$0</span>
+        <span id="checkoutModalTotal" class="text-yellow-700 font-black text-sm">0 د.أ</span>
       </div>
 
       <!-- Customer Details Form -->
@@ -1876,13 +1903,13 @@
             <div class="bg-gradient-to-r from-slate-50 via-slate-50/80 to-amber-50/40 rounded-2xl p-4 sm:p-5 border border-slate-200/90 flex items-center justify-between shadow-2xs">
               <div>
                 <span class="text-[11px] text-slate-400 font-bold block mb-1">السعر الرسمي الشامل للضريبة</span>
-                <div class="flex items-baseline gap-2.5 font-en">
-                  <span id="bubbleFinalPrice" class="text-2xl sm:text-3xl font-black text-slate-900">$1,400</span>
-                  <span id="bubbleOldPrice" class="text-sm text-slate-400 line-through">$1,450</span>
+                <div class="flex items-baseline gap-2.5 font-sans">
+                  <span id="bubbleFinalPrice" class="text-2xl sm:text-3xl font-black text-slate-900">1,400 د.أ</span>
+                  <span id="bubbleOldPrice" class="text-sm text-slate-400 line-through">1,450 د.أ</span>
                 </div>
               </div>
               <div class="text-left flex flex-col items-end gap-1">
-                <span id="bubbleDiscountPill" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-xs font-en">وفر $50</span>
+                <span id="bubbleDiscountPill" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-xs font-sans">وفر 50 د.أ</span>
                 <span class="text-[10px] text-slate-400 font-bold">شامل فاتورة ضريبية رسمية</span>
               </div>
             </div>
@@ -1958,6 +1985,197 @@
   <script>
     let cart = [];
 
+    // ═══════════════ MULTI-LANGUAGE (ARABIC / ENGLISH) ENGINE ═══════════════
+    let currentLang = localStorage.getItem('topcam_lang') || 'ar';
+
+    const I18N = {
+      ar: {
+        langBtnLabel: 'English',
+        drawerLangLabel: 'تغيير اللغة إلى English',
+        drawerLangBadge: 'EN',
+        currency: 'د.أ',
+        searchPlaceholder: 'ابحث عن الكاميرات، العدسات، الإضاءة ومعدات التصوير...',
+        hotOffers: 'عروض حصرية',
+        trendingTitle: 'المنتجات الأكثر طلباً وموصى بها',
+        trendingSubtitle: 'تشكيلة مختارة من أفضل معدات التصوير والسينما الأصلية مع كفالة رسمية',
+        viewAllGear: 'عرض كل المعدات (الكتالوج الكامل)',
+        browseByBrand: 'تصفح حسب البراند الرسمي',
+        selectBrandSubtitle: 'اختر البراند لعرض الموديلات المتوفرة:',
+        allBrands: 'الكل',
+        addToCart: 'أضف للسلة',
+        cartTitle: 'حقيبة التسوق',
+        cartEmpty: 'حقيبة التسوق فارغة حالياً.',
+        cartTotal: 'المجموع الإجمالي:',
+        checkoutBtn: 'متابعة إتمام الطلب والدفع',
+        catAll: 'كل المعدات',
+        catCameras: 'الكاميرات',
+        catFilters: 'العدسات',
+        catAudio: 'الصوتيات',
+        catLighting: 'الإضاءة',
+        catGimbals: 'الجيمبل',
+        catStands: 'الترايبود',
+        catCages: 'الكيج',
+        catMonitors: 'الشاشات',
+        catBatteries: 'البطاريات',
+        catBags: 'الحقائب',
+        modalOrderWhatsApp: 'طلب فوري عبر واتساب',
+        modalAddToCart: 'إضافة إلى السلة'
+      },
+      en: {
+        langBtnLabel: 'العربية',
+        drawerLangLabel: 'Switch to العربية (Arabic)',
+        drawerLangBadge: 'AR',
+        currency: 'JOD',
+        searchPlaceholder: 'Search cameras, lenses, lighting, audio & gear...',
+        hotOffers: 'Hot Offers',
+        trendingTitle: 'Trending & Recommended Gear',
+        trendingSubtitle: 'Hand-picked professional cinema and photography gear with official Jordan warranty',
+        viewAllGear: 'View All Gear (Complete Catalog)',
+        browseByBrand: 'Browse by Official Brand',
+        selectBrandSubtitle: 'Select a brand to view authentic available models:',
+        allBrands: 'All',
+        addToCart: 'Add to Cart',
+        cartTitle: 'Shopping Cart',
+        cartEmpty: 'Your shopping cart is currently empty.',
+        cartTotal: 'Grand Total:',
+        checkoutBtn: 'Proceed to Checkout',
+        catAll: 'All Gear',
+        catCameras: 'Cameras',
+        catFilters: 'Lenses',
+        catAudio: 'Audio',
+        catLighting: 'Lighting',
+        catGimbals: 'Gimbals',
+        catStands: 'Tripods',
+        catCages: 'Cages',
+        catMonitors: 'Monitors',
+        catBatteries: 'Batteries',
+        catBags: 'Bags',
+        modalOrderWhatsApp: 'Instant WhatsApp Order',
+        modalAddToCart: 'Add to Cart'
+      }
+    };
+
+    function formatCurrency(amount) {
+      const isEn = (currentLang === 'en');
+      const num = Math.round(amount || 0);
+      return isEn ? `${num.toLocaleString()} JOD` : `${num.toLocaleString()} د.أ`;
+    }
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('topcam_lang', lang);
+
+      const dict = I18N[lang] || I18N.ar;
+      const isEn = (lang === 'en');
+
+      // 1. Root language & direction
+      document.documentElement.lang = lang;
+      document.documentElement.dir = isEn ? 'ltr' : 'rtl';
+
+      // 2. Header and Drawer Language Buttons
+      const switchBtnLabel = document.getElementById('langSwitchLabel');
+      if (switchBtnLabel) switchBtnLabel.textContent = dict.langBtnLabel;
+
+      const drawerLangLabel = document.getElementById('drawerLangLabel');
+      if (drawerLangLabel) drawerLangLabel.textContent = dict.drawerLangLabel;
+      const drawerLangBadge = document.getElementById('drawerLangBadge');
+      if (drawerLangBadge) drawerLangBadge.textContent = dict.drawerLangBadge;
+
+      // 3. Search Bar
+      const searchInputs = document.querySelectorAll('header input[type="text"]');
+      searchInputs.forEach(inp => {
+        inp.placeholder = dict.searchPlaceholder;
+        inp.dir = isEn ? 'ltr' : 'rtl';
+      });
+
+      // 4. Section titles & buttons
+      const secTitle = document.getElementById('productsSectionTitle');
+      if (secTitle) secTitle.textContent = dict.trendingTitle;
+      const secSub = document.getElementById('productsSectionSubtitle');
+      if (secSub) secSub.textContent = dict.trendingSubtitle;
+
+      const viewAllBtn = document.getElementById('viewAllBtn');
+      if (viewAllBtn) {
+        const span = viewAllBtn.querySelector('span');
+        if (span) span.textContent = dict.viewAllGear;
+      }
+
+      const catTitle = document.getElementById('categoryDisplayTitle');
+      if (catTitle) catTitle.textContent = dict.browseByBrand;
+      const catSub = document.getElementById('categoryFilterSubtitle');
+      if (catSub) catSub.textContent = dict.selectBrandSubtitle;
+
+      // 5. Category Icons horizontal list
+      const catMap = {
+        'cameras': dict.catCameras,
+        'filters': dict.catFilters,
+        'audio': dict.catAudio,
+        'lighting': dict.catLighting,
+        'gimbals': dict.catGimbals,
+        'stands': dict.catStands,
+        'cages': dict.catCages,
+        'monitors': dict.catMonitors,
+        'chargers_batteries': dict.catBatteries,
+        'bags': dict.catBags
+      };
+      document.querySelectorAll('#categoryScrollContainer > div').forEach(div => {
+        const span = div.querySelector('span');
+        const clickAttr = div.getAttribute('onclick') || '';
+        for (const [k, v] of Object.entries(catMap)) {
+          if (clickAttr.includes(`'${k}'`)) {
+            if (span) span.textContent = v;
+            break;
+          }
+        }
+        if (clickAttr.includes("'all'")) {
+          if (span) span.textContent = dict.catAll;
+        }
+      });
+
+      // 6. Cart Drawer text
+      const cartCountEl = document.getElementById('cartCount');
+      const cartHeading = document.querySelector('#cartBox h3 span');
+      if (cartHeading && cartCountEl) {
+        cartHeading.innerHTML = `${dict.cartTitle} (<span id="cartCount">${cartCountEl.textContent}</span>)`;
+      }
+      const cartTotalLabel = document.querySelector('#cartBox .flex.justify-between span:first-child');
+      if (cartTotalLabel) cartTotalLabel.textContent = dict.cartTotal;
+
+      const checkoutBtnSpan = document.querySelector('#cartBox button[onclick="openCheckoutModal()"] span');
+      if (checkoutBtnSpan) checkoutBtnSpan.textContent = dict.checkoutBtn;
+
+      // 7. Modal Buttons
+      const bubbleAddToCart = document.getElementById('bubbleAddToCartBtn');
+      if (bubbleAddToCart) {
+        bubbleAddToCart.innerHTML = `<i class="fa-solid fa-cart-plus"></i> <span>${dict.modalAddToCart}</span>`;
+      }
+      const bubbleWhatsApp = document.getElementById('bubbleWhatsAppBtn');
+      if (bubbleWhatsApp) {
+        bubbleWhatsApp.innerHTML = `<i class="fa-brands fa-whatsapp text-base"></i> <span>${dict.modalOrderWhatsApp}</span>`;
+      }
+
+      // 8. Re-render products & update cart
+      if (typeof renderStorefrontProducts === 'function') {
+        renderStorefrontProducts(currentCategory, currentBrand);
+      }
+      if (typeof updateCartUI === 'function') {
+        updateCartUI();
+      }
+    }
+
+    function toggleLanguage() {
+      // Smooth fade transition
+      const body = document.body;
+      body.style.opacity = '0.7';
+      body.style.transition = 'opacity 0.15s ease-in-out';
+      
+      setTimeout(() => {
+        const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+        applyLanguage(nextLang);
+        body.style.opacity = '1';
+      }, 150);
+    }
+
     function toggleVideoMute() {
       const vid = document.getElementById('heroCameraVideo');
       const icon = document.getElementById('muteIcon');
@@ -1993,12 +2211,12 @@
       if (badge) badge.textContent = totalQty;
       if (mobileBadge) mobileBadge.textContent = totalQty;
       if (count) count.textContent = totalQty;
-      if (totalEl) totalEl.textContent = '$' + totalPrice.toLocaleString();
+      if (totalEl) totalEl.textContent = formatCurrency(totalPrice);
 
       if (!list) return;
 
       if (cart.length === 0) {
-        list.innerHTML = '<div class="text-center py-12 text-slate-400 text-xs">Your cart is empty.</div>';
+        list.innerHTML = `<div class="text-center py-12 text-slate-400 text-xs">${currentLang === 'en' ? 'Your cart is empty.' : 'حقيبة التسوق فارغة حالياً.'}</div>`;
         return;
       }
 
@@ -2006,9 +2224,9 @@
         <div class="flex items-center justify-between p-2 sm:p-2.5 bg-slate-50 rounded-lg text-xs">
           <div>
             <div class="font-bold text-slate-900">${item.name}</div>
-            <div class="text-slate-500 font-semibold">$${item.price.toLocaleString()} × ${item.qty}</div>
+            <div class="text-slate-500 font-semibold font-sans">${formatCurrency(item.price)} × ${item.qty}</div>
           </div>
-          <button onclick="removeFromCart(${index})" class="text-slate-400 hover:text-yellow-600 p-1">
+          <button onclick="removeFromCart(${index})" class="text-slate-400 hover:text-yellow-600 p-1 cursor-pointer">
             <i class="fa-solid fa-trash-can"></i>
           </button>
         </div>
@@ -2060,9 +2278,9 @@
     }
 
     function openCheckoutModal() {
-      if (cart.length === 0) return alert('سلتك فارغة حالياً! أضف معدات إلى السلة أولاً.');
+      if (cart.length === 0) return alert(currentLang === 'en' ? 'Your cart is empty! Add products first.' : 'سلتك فارغة حالياً! أضف معدات إلى السلة أولاً.');
       const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
-      document.getElementById('checkoutModalTotal').textContent = '$' + total.toLocaleString();
+      document.getElementById('checkoutModalTotal').textContent = formatCurrency(total);
       toggleCartDrawer(false);
       
       const modal = document.getElementById('checkoutModal');
@@ -2148,9 +2366,9 @@
 
       waMessage += `\n*📦 تفاصيل المعدات المطلوبة:*\n`;
       cart.forEach(item => {
-        waMessage += `• ${item.name} (${item.qty}×) - $${(item.price * item.qty).toLocaleString()}\n`;
+        waMessage += `• ${item.name} (${item.qty}×) - ${formatCurrency(item.price * item.qty)}\n`;
       });
-      waMessage += `\n*💵 الإجمالي الكلي:* $${total.toLocaleString()}`;
+      waMessage += `\n*💵 الإجمالي الكلي:* ${formatCurrency(total)}`;
 
       const waUrl = orderResult.whatsappUrl || `https://wa.me/962790000000?text=${encodeURIComponent(waMessage)}`;
 
@@ -2358,12 +2576,14 @@
     ];
 
     function renderStorefrontProductCard(product, extraClasses = '') {
+      const isEn = (currentLang === 'en');
       const safeId = (product.id || '').replace(/'/g, "\\'");
-      const rawName = product.name || '';
+      const rawName = isEn ? (product.nameEn || product.name || '') : (product.name || '');
       const safeNameForJs = rawName.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
       const safeNameForAttr = rawName.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
       const safeImg = product.image || 'images/camera_body.jpg';
       const categoryBadge = product.badge || product.brand || '';
+      const addToCartText = isEn ? 'Add to Cart' : 'أضف للسلة';
 
       return `
         <div onclick="openCameraSpecsBubble('${safeId}')" class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group cursor-pointer ${extraClasses}">
@@ -2382,15 +2602,16 @@
               class="text-xs font-bold text-slate-900 line-clamp-1 hover:text-yellow-600 transition" 
               title="${safeNameForAttr}"
             >
-              ${product.name}
+              ${rawName}
             </h4>
-            <div class="flex items-baseline gap-1.5 mt-1 font-en">
-              <span class="text-xs sm:text-sm font-bold text-slate-900">$${(product.price || 0).toLocaleString()}</span>
-              ${product.oldPrice ? `<span class="text-[10px] text-slate-400 line-through">$${product.oldPrice.toLocaleString()}</span>` : ''}
+            <div class="flex items-baseline gap-1.5 mt-1 font-sans">
+              <span class="text-xs sm:text-sm font-bold text-slate-900">${formatCurrency(product.price)}</span>
+              ${product.oldPrice ? `<span class="text-[10px] text-slate-400 line-through">${formatCurrency(product.oldPrice)}</span>` : ''}
             </div>
           </div>
-          <button onclick="event.stopPropagation(); addToCartMock('${safeNameForJs}', ${product.price}, '${safeImg}', '${safeId}')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
-            Add to Cart
+          <button onclick="event.stopPropagation(); addToCartMock('${safeNameForJs}', ${product.price}, '${safeImg}', '${safeId}')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-cart-plus text-[10px]"></i>
+            <span>${addToCartText}</span>
           </button>
         </div>
       `;
@@ -2702,19 +2923,20 @@
       }
 
       // Populate Main Product Elements
+      const isEn = (currentLang === 'en');
       document.getElementById('bubbleCategoryBadge').textContent = product.category || 'Gear';
       document.getElementById('bubbleSkuBadge').textContent = 'SKU: ' + (product.id || 'TOPCAM');
-      document.getElementById('bubbleCameraTitle').textContent = product.name;
-      document.getElementById('bubbleCameraSub').textContent = product.description || product.nameEn || '';
-      document.getElementById('bubbleFinalPrice').textContent = '$' + (product.price || 0).toLocaleString();
+      document.getElementById('bubbleCameraTitle').textContent = isEn ? (product.nameEn || product.name) : product.name;
+      document.getElementById('bubbleCameraSub').textContent = isEn ? (product.nameEn || product.description || '') : (product.description || product.nameEn || '');
+      document.getElementById('bubbleFinalPrice').textContent = formatCurrency(product.price);
 
       const oldPriceEl = document.getElementById('bubbleOldPrice');
       const discountPill = document.getElementById('bubbleDiscountPill');
       if (product.oldPrice && product.oldPrice > product.price) {
-        oldPriceEl.textContent = '$' + product.oldPrice.toLocaleString();
+        oldPriceEl.textContent = formatCurrency(product.oldPrice);
         oldPriceEl.classList.remove('hidden');
         const diff = Math.round(product.oldPrice - product.price);
-        discountPill.textContent = 'وفر $' + diff.toLocaleString();
+        discountPill.textContent = (isEn ? 'Save ' : 'وفر ') + formatCurrency(diff);
         discountPill.classList.remove('hidden');
       } else {
         oldPriceEl.classList.add('hidden');
@@ -3084,8 +3306,22 @@
 
     // تشغيل عند تحميل الصفحة فوراً
     function bootStorefront() {
+      // 1. تطبيق لغة المتجر والاتجاه فوراً
       try {
-        renderStorefrontProducts('all');
+        applyLanguage(currentLang);
+      } catch (err) {
+        console.warn('applyLanguage error:', err);
+      }
+
+      // 2. مزامنة فورية للمحذوفات من السيرفر لتوحيد حذف المنتجات بين اللابتوب والهواتف
+      if (window.storeDB && storeDB.syncWithServer) {
+        storeDB.syncWithServer().then(() => {
+          renderStorefrontProducts(currentCategory, currentBrand);
+        }).catch(() => {});
+      }
+
+      try {
+        renderStorefrontProducts(currentCategory || 'all');
       } catch (err) {
         console.error('renderStorefrontProducts error:', err);
       }

@@ -1,4 +1,4 @@
-﻿// طبقة إدارة البيانات والطلبات والتخزين المحلي لمتجر الكاميرات
+// طبقة إدارة البيانات والطلبات والتخزين المحلي لمتجر الكاميرات
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
@@ -15,18 +15,16 @@ const STORE_KEYS = {
 const DEFAULT_SETTINGS = {
   storeName: 'TOP CAM | شركة مخزن الكاميرات',
   whatsappNumber: '962790000000', // رقم الواتساب الافتراضي للمتجر
-  currency: '$',
-  currencyName: 'دولار أمريكي',
-  currencyRate: 1, // مقابل الدولار
+  currency: 'د.أ',
+  currencyName: 'دينار أردني',
+  currencyRate: 1, // مقابل الدينار الأردني
   currencies: {
-    USD: { symbol: '$', name: 'دولار أمريكي', rate: 1 },
-    SAR: { symbol: 'ر.س', name: 'ريال سعودي', rate: 3.75 },
-    AED: { symbol: 'د.إ', name: 'درهم إماراتي', rate: 3.67 },
-    JOD: { symbol: 'د.أ', name: 'دينار أردني', rate: 0.71 }
+    JOD: { symbol: 'د.أ', name: 'دينار أردني', rate: 1 },
+    USD: { symbol: '$', name: 'دولار أمريكي', rate: 1.41 }
   },
-  activeCurrency: 'USD',
-  taxRate: 0.05,
-  freeShippingThreshold: 500
+  activeCurrency: 'JOD',
+  taxRate: 0.0,
+  freeShippingThreshold: 50
 };
 
 const DEFAULT_BANNERS = {
@@ -249,6 +247,45 @@ class StoreDB {
     if (!localStorage.getItem(STORE_KEYS.PROMO_POPUP)) {
       localStorage.setItem(STORE_KEYS.PROMO_POPUP, JSON.stringify(DEFAULT_PROMO_POPUP));
     }
+
+    // مزامنة فورية مع السيرفر لتوحيد المنتجات المحذوفة بين اللابتوب والهواتف
+    try {
+      this.syncWithServer().catch(() => {});
+    } catch(e) {}
+  }
+
+  // ================= مزامنة السيرفر عبر الأجهزة =================
+  async syncWithServer() {
+    try {
+      const localDeleted = this.getDeletedProductIds();
+      // 1. إرسال أي محذوفات محلية مسجلة على هذا الجهاز إلى السيرفر
+      if (localDeleted.length > 0) {
+        await fetch('/api/sync-deleted', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ deletedIds: localDeleted })
+        }).catch(() => {});
+      }
+
+      // 2. سحب قائمة المحذوفات الموحدة من السيرفر (لتحديث الهاتف بأي حذف تم على اللابتوب)
+      const res = await fetch('/api/deleted-ids');
+      if (res.ok) {
+        const serverDeleted = await res.json();
+        if (Array.isArray(serverDeleted) && serverDeleted.length > 0) {
+          const merged = Array.from(new Set([...localDeleted, ...serverDeleted]));
+          localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(merged));
+
+          // إعادة تصفية المنتجات الحالية إذا وجد أي عنصر محذوف
+          const current = this.getProducts();
+          const clean = current.filter(p => !merged.includes(p.id));
+          if (clean.length !== current.length) {
+            this.saveProducts(clean);
+          }
+        }
+      }
+    } catch (e) {
+      // وضع غير متصل أو تشغيل بدون خادم محلي
+    }
   }
 
   // ================= المنتجات =================
@@ -357,7 +394,16 @@ class StoreDB {
       } catch (e) {}
     }
 
-    // 2. Remove product from current list and persist
+    // 2. إرسال فوري إلى السيرفر ليتزامن الحذف على الهواتف وكافة الأجهزة الأخرى
+    try {
+      fetch('/api/deleted-ids', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id })
+      }).catch(() => {});
+    } catch (e) {}
+
+    // 3. Remove product from current list and persist
     const products = this.getProducts();
     const filtered = products.filter(p => p.id !== id);
     this.saveProducts(filtered);
@@ -661,7 +707,8 @@ class StoreDB {
   }
 
   generateWhatsAppMessage(order, settings) {
-    const currency = settings.currency || '$';
+    const isEn = (typeof localStorage !== 'undefined' && localStorage.getItem('topcam_lang') === 'en');
+    const currency = isEn ? 'JOD' : (settings.currency || 'د.أ');
     const storeNumber = (settings.whatsappNumber || '962790000000').replace(/[^0-9]/g, '');
 
     const paymentMap = {
@@ -749,7 +796,18 @@ class StoreDB {
   getSettings() {
     try {
       const data = localStorage.getItem(STORE_KEYS.SETTINGS);
-      return data ? { ...DEFAULT_SETTINGS, ...JSON.parse(data) } : DEFAULT_SETTINGS;
+      if (data) {
+        const parsed = JSON.parse(data);
+        // ترقية العملة تلقائياً إلى الدينار الأردني إذا كانت دولار أو غير محددة
+        if (parsed.currency === '$' || !parsed.currency || parsed.activeCurrency === 'USD') {
+          parsed.currency = 'د.أ';
+          parsed.currencyName = 'دينار أردني';
+          parsed.activeCurrency = 'JOD';
+          this.saveSettings(parsed);
+        }
+        return { ...DEFAULT_SETTINGS, ...parsed };
+      }
+      return DEFAULT_SETTINGS;
     } catch (e) {
       return DEFAULT_SETTINGS;
     }
@@ -763,10 +821,10 @@ class StoreDB {
     return updated;
   }
 
-  formatPrice(priceInUSD) {
-    const settings = this.getSettings();
-    const symbol = settings.currency || '$';
-    const num = Math.round(priceInUSD);
+  formatPrice(price) {
+    const isEn = (typeof localStorage !== 'undefined' && localStorage.getItem('topcam_lang') === 'en');
+    const symbol = isEn ? 'JOD' : 'د.أ';
+    const num = Math.round(price || 0);
     return `${num.toLocaleString()} ${symbol}`;
   }
 

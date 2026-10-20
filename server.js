@@ -1,6 +1,7 @@
 /**
  * سيرفر محلي خفيف لمتجر الكاميرات (Node.js Built-in HTTP Server)
  * يعمل بدون الحاجة لتثبيت أي حزم خارجية (Zero Dependencies)!
+ * يدعم مزامنة البيانات عبر الأجهزة وحذف المنتجات فورياً بين اللابتوب والهاتف.
  */
 
 const http = require('http');
@@ -37,6 +38,107 @@ const server = http.createServer((req, res) => {
   } catch (e) {
     reqPath = rawPath;
   }
+
+  // API Endpoints for Cross-Device Data Synchronization (Laptop <-> Phone)
+  if (reqPath.startsWith('/api/')) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    if (req.method === 'OPTIONS') {
+      res.writeHead(204);
+      res.end();
+      return;
+    }
+
+    const DATA_DIR = path.join(__dirname, 'data');
+    if (!fs.existsSync(DATA_DIR)) {
+      try { fs.mkdirSync(DATA_DIR, { recursive: true }); } catch (e) {}
+    }
+    const DELETED_FILE = path.join(DATA_DIR, 'deleted_ids.json');
+
+    const getDeletedIds = () => {
+      try {
+        if (fs.existsSync(DELETED_FILE)) {
+          const content = fs.readFileSync(DELETED_FILE, 'utf8');
+          return JSON.parse(content || '[]');
+        }
+      } catch (e) {}
+      return [];
+    };
+
+    const saveDeletedIds = (ids) => {
+      try {
+        const unique = Array.from(new Set(ids));
+        fs.writeFileSync(DELETED_FILE, JSON.stringify(unique, null, 2), 'utf8');
+        return unique;
+      } catch (e) {
+        return ids;
+      }
+    };
+
+    if (reqPath === '/api/deleted-ids' && req.method === 'GET') {
+      const ids = getDeletedIds();
+      res.writeHead(200, {
+        'Content-Type': 'application/json; charset=UTF-8',
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
+      });
+      res.end(JSON.stringify(ids));
+      return;
+    }
+
+    if (reqPath === '/api/deleted-ids' && req.method === 'POST') {
+      let body = '';
+      req.on('data', chunk => { body += chunk; });
+      req.on('end', () => {
+        try {
+          const parsed = JSON.parse(body || '{}');
+          const current = getDeletedIds();
+          if (parsed.id && !current.includes(parsed.id)) {
+            current.push(parsed.id);
+          } else if (Array.isArray(parsed.ids)) {
+            parsed.ids.forEach(id => {
+              if (id && !current.includes(id)) current.push(id);
+            });
+          }
+          const saved = saveDeletedIds(current);
+          res.writeHead(200, { 'Content-Type': 'application/json; charset=UTF-8' });
+          res.end(JSON.stringify({ success: true, count: saved.length, deletedIds: saved }));
+        } catch (e) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Invalid JSON' }));
+        }
+      });
+      return;
+    }
+
+    if (reqPath === '/api/sync-deleted' && req.method === 'POST') {
+      let body = '';
+      req.on('data', chunk => { body += chunk; });
+      req.on('end', () => {
+        try {
+          const parsed = JSON.parse(body || '{}');
+          const incoming = Array.isArray(parsed.deletedIds) ? parsed.deletedIds : [];
+          const current = getDeletedIds();
+          const merged = saveDeletedIds([...current, ...incoming]);
+          res.writeHead(200, { 'Content-Type': 'application/json; charset=UTF-8' });
+          res.end(JSON.stringify({ success: true, count: merged.length, deletedIds: merged }));
+        } catch (e) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Invalid JSON' }));
+        }
+      });
+      return;
+    }
+
+    if (reqPath === '/api/reset-deleted' && req.method === 'POST') {
+      saveDeletedIds([]);
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=UTF-8' });
+      res.end(JSON.stringify({ success: true, count: 0, deletedIds: [] }));
+      return;
+    }
+  }
+
   if (reqPath === '/' || reqPath === '') {
     reqPath = '/index.html';
   }
@@ -72,7 +174,7 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   console.log(`=======================================================`);
-  console.log(`📸 متجر العدسة والضوء لمعدات التصوير والسينما يعمل الآن!`);
+  console.log(`📸 متجر TOP CAM الأردن لمعدات التصوير والسينما يعمل الآن!`);
   console.log(`🌐 المتجر الرئيسي: http://localhost:${PORT}`);
   console.log(`⚙️  لوحة تحكم الإدارة: http://localhost:${PORT}/admin.html`);
   console.log(`=======================================================`);

@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
   loadPromoPopupSettings();
   loadAdminSettings();
 
+  // مزامنة تلقائية مع السيرفر لتوحيد الأصناف المحذوفة فورياً
+  if (window.storeDB && storeDB.syncWithServer) {
+    storeDB.syncWithServer().then(() => {
+      renderAdminStats();
+      renderAdminDashboardCharts();
+      renderAdminInventory();
+      renderAdminBrands();
+    }).catch(() => {});
+  }
+
   // الاستماع للتحديثات اللحظية عبر المتجر
   window.addEventListener('orders_updated', () => {
     renderAdminStats();
@@ -1188,10 +1198,28 @@ function saveStoreSettings(e) {
   showAdminToast('تم حفظ الإعدادات ورقم الواتساب بنجاح!', 'success');
 }
 
+async function triggerServerSyncAdmin() {
+  const btn = document.getElementById('btnAdminServerSync');
+  if (btn) btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-amber-600"></i> <span class="hidden sm:inline">جاري المزامنة...</span>';
+  try {
+    await storeDB.syncWithServer();
+    renderAdminStats();
+    renderAdminDashboardCharts();
+    renderAdminInventory();
+    renderAdminBrands();
+    showAdminToast('تمت مزامنة كافة المحذوفات والبيانات مع السيرفر وكافة أجهزة الهواتف بنجاح!', 'success');
+  } catch(e) {
+    showAdminToast('تعذر الاتصال بالسيرفر للمزامنة.', 'error');
+  } finally {
+    if (btn) btn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up text-amber-600"></i> <span class="hidden sm:inline">مزامنة السيرفر والهاتف</span>';
+  }
+}
+
 function resetStoreData() {
   if (confirm('هل أنت متأكد من استعادة بيانات المنتجات الافتراضية؟')) {
     try {
       localStorage.removeItem(STORE_KEYS.DELETED_IDS);
+      fetch('/api/reset-deleted', { method: 'POST' }).catch(() => {});
     } catch (e) {}
     storeDB.saveProducts(typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : []);
     showAdminToast('تم استعادة البيانات الافتراضية بنجاح!', 'success');

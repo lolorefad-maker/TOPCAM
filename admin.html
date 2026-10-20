@@ -225,6 +225,11 @@
       </div>
 
       <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="triggerServerSyncAdmin()" id="btnAdminServerSync" class="bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 font-bold text-xs px-3 py-2 rounded-xl transition flex items-center gap-1.5 shadow-2xs cursor-pointer" title="مزامنة التعديلات والمحذوفات مع السيرفر والهواتف فوراً">
+          <i class="fa-solid fa-cloud-arrow-up text-amber-600"></i>
+          <span class="hidden sm:inline">مزامنة السيرفر والهاتف</span>
+        </button>
+
         <button onclick="renderAdminStats(); renderAdminOrders(); renderAdminInventory(); showAdminToast('تم تحديث البيانات!', 'info');" class="w-8 h-8 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition text-xs" title="تحديث البيانات">
           <i class="fa-solid fa-arrows-rotate"></i>
         </button>
@@ -255,7 +260,7 @@
                 <i class="fa-solid fa-sack-dollar"></i>
               </div>
             </div>
-            <div class="text-2xl sm:text-3xl font-black text-slate-900 font-en mb-2" id="dashTotalSales">$0</div>
+            <div class="text-2xl sm:text-3xl font-black text-slate-900 font-en mb-2" id="dashTotalSales">0 د.أ</div>
             <div class="flex items-center justify-between text-[11px] pt-2 border-t border-slate-100">
               <span class="inline-flex items-center gap-1 text-emerald-600 font-bold font-en">
                 <i class="fa-solid fa-arrow-trend-up"></i>
@@ -301,7 +306,7 @@
             </div>
           </div>
 
-          <!-- Card 4: Inventory Valuation ($) -->
+          <!-- Card 4: Inventory Valuation (د.أ) -->
           <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs flex flex-col justify-between hover:shadow-md transition">
             <div class="flex items-center justify-between mb-3">
               <span class="text-xs font-bold text-slate-400">القيمة المالية للمستودع</span>
@@ -309,7 +314,7 @@
                 <i class="fa-solid fa-coins"></i>
               </div>
             </div>
-            <div class="text-xl sm:text-2xl font-black text-slate-900 font-en mb-2" id="dashTotalValuation">$0</div>
+            <div class="text-xl sm:text-2xl font-black text-slate-900 font-en mb-2" id="dashTotalValuation">0 د.أ</div>
             <div class="flex items-center justify-between text-[11px] pt-2 border-t border-slate-100">
               <span class="inline-flex items-center gap-1 text-purple-600 font-bold">
                 <i class="fa-solid fa-gem text-xs"></i>
@@ -427,7 +432,7 @@
                   <th class="py-3 px-3.5">التاريخ والوقت</th>
                   <th class="py-3 px-3.5">بيانات العميل والعنوان</th>
                   <th class="py-3 px-3.5">المعدات المطلوبة</th>
-                  <th class="py-3 px-3.5">الإجمالي ($)</th>
+                  <th class="py-3 px-3.5">الإجمالي (د.أ)</th>
                   <th class="py-3 px-3.5">الحالة الحالية</th>
                   <th class="py-3 px-3.5 text-center">التحكم والإجراء الفوري</th>
                 </tr>
@@ -499,7 +504,7 @@
                   <th class="py-3 px-3">اسم الصنف والموديل</th>
                   <th class="py-3 px-3">الوكالة</th>
                   <th class="py-3 px-3">القسم</th>
-                  <th class="py-3 px-3">السعر ($)</th>
+                  <th class="py-3 px-3">السعر (د.أ)</th>
                   <th class="py-3 px-3">السعر القديم</th>
                   <th class="py-3 px-3">المخزون (القطع)</th>
                   <th class="py-3 px-3">قيمة المخزون</th>
@@ -890,7 +895,7 @@
             </div>
 
             <div>
-              <label class="block text-xs font-bold text-slate-700 mb-1">الحد الأدنى للشحن المجاني ($)</label>
+              <label class="block text-xs font-bold text-slate-700 mb-1">الحد الأدنى للشحن المجاني (د.أ)</label>
               <input type="number" id="settingFreeShipping" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en">
             </div>
 
@@ -978,11 +983,11 @@
 
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <label class="block text-xs font-bold text-slate-700 mb-1">السعر ($) *</label>
+            <label class="block text-xs font-bold text-slate-700 mb-1">السعر (د.أ) *</label>
             <input type="number" step="1" id="prodPrice" required placeholder="3899" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en">
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 mb-1">السعر قبل الخصم ($)</label>
+            <label class="block text-xs font-bold text-slate-700 mb-1">السعر قبل الخصم (د.أ)</label>
             <input type="number" step="1" id="prodOldPrice" placeholder="4200" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en">
           </div>
         </div>
