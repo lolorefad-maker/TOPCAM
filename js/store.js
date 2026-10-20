@@ -291,8 +291,34 @@ class StoreDB {
   // ================= المنتجات =================
   getDeletedProductIds() {
     try {
+      let deleted = [];
       const data = localStorage.getItem(STORE_KEYS.DELETED_IDS);
-      return data ? JSON.parse(data) : [];
+      if (data) {
+        try { deleted = JSON.parse(data) || []; } catch(e) { deleted = []; }
+      }
+
+      // كشف تلقائي ذكي: أي صنف غير موجود في قائمة المنتجات المخزنة على هذا الجهاز يتم احتسابه كمحذوف تلقائياً
+      const storedProds = localStorage.getItem(STORE_KEYS.PRODUCTS);
+      if (storedProds && typeof INITIAL_PRODUCTS !== 'undefined') {
+        try {
+          const prods = JSON.parse(storedProds);
+          if (Array.isArray(prods) && prods.length > 0 && prods.length < INITIAL_PRODUCTS.length) {
+            const currentIds = new Set(prods.map(p => p.id));
+            let addedNew = false;
+            INITIAL_PRODUCTS.forEach(ip => {
+              if (!currentIds.has(ip.id) && !deleted.includes(ip.id)) {
+                deleted.push(ip.id);
+                addedNew = true;
+              }
+            });
+            if (addedNew) {
+              try { localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(deleted)); } catch(e) {}
+            }
+          }
+        } catch(e) {}
+      }
+
+      return deleted;
     } catch (e) {
       return [];
     }
