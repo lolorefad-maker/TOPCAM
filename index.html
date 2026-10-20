@@ -3344,6 +3344,15 @@
     window.addEventListener('banners_updated', () => initStorefrontDynamicFeatures());
     window.addEventListener('promo_popup_updated', () => initStorefrontDynamicFeatures());
 
+    // مزامنة تلقائية فورية عند الرجوع إلى صفحة المتجر على الهاتف
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && window.storeDB && storeDB.syncWithServer) {
+        storeDB.syncWithServer().then(() => {
+          renderStorefrontProducts(currentCategory, currentBrand);
+        }).catch(() => {});
+      }
+    });
+
   </script>
 </body>
 </html>
