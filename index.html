@@ -544,28 +544,12 @@
         <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Gimbals</span>
       </div>
 
-      <!-- 6. Tripods & Stands -->
-      <div onclick="filterByCategory('stands')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
-        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#dcfce7] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
-          <img src="images/prod_manfrotto_504x.jpg" alt="Tripods" class="w-full h-full object-contain rounded-full">
-        </div>
-        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Tripods</span>
-      </div>
-
       <!-- 7. Cages & Rigs -->
       <div onclick="filterByCategory('cages')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#ccfbf1] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
           <img src="images/prod_smallrig_fx3_cage.jpg" alt="Cages" class="w-full h-full object-contain rounded-full">
         </div>
         <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Cages</span>
-      </div>
-
-      <!-- 8. Monitors & Teleprompters -->
-      <div onclick="filterByCategory('monitors')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
-        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#f1f5f9] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
-          <img src="images/prod_feelworld_lut7.jpg" alt="Monitors" class="w-full h-full object-contain rounded-full">
-        </div>
-        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Monitors</span>
       </div>
 
       <!-- 9. Batteries & Power -->
@@ -2516,11 +2500,9 @@
       cameras: { ar: 'الكاميرات وأنظمة السينما', sub: 'اختر الماركة لتصفح كاميرات السينما والميرورليس' },
       filters: { ar: 'العدسات وفلاتر التصوير', sub: 'اختر الماركة لتصفح العدسات الاحترافية وفلاتر ND' },
       lighting: { ar: 'إضاءات وسوفت بوكس الاستوديو', sub: 'اختر الماركة لتصفح أضواء الاستوديو المستمرة والإضاءة المحمولة' },
-      stands: { ar: 'الستاندات والحوامل الثلاثية', sub: 'اختر الماركة لتصفح ستاندات الإضاءة وترايبود الكاميرا' },
       gimbals: { ar: 'مانعات الاهتزاز والجمبل', sub: 'اختر الماركة لتصفح مثبتات الحركة والـ Gimbals' },
       cages: { ar: 'أقفاص الكاميرا والمقابض (Cages & Rigs)', sub: 'اختر الماركة لتصفح أقفاص الحماية وإكسسوارات التثبيت' },
       audio: { ar: 'مايكات وأنظمة الصوت اللاسلكية', sub: 'اختر الماركة لتصفح مايكات الشوت جن والميكروفونات اللاسلكية' },
-      monitors: { ar: 'شاشات المراقبة والتليبرومبتر', sub: 'اختر الماركة لتصفح شاشات الاستوديو الميدانية' },
       chargers_batteries: { ar: 'البطاريات والشواحن ومحطات الطاقة', sub: 'اختر الماركة لتصفح بطاريات V-Mount والشواحن' },
       bags: { ar: 'حقائب الكاميرات ومعدات الحماية', sub: 'اختر الماركة لتصفح حقائب الظهر وحقائب النقل الصلبة' },
       deals: { ar: 'عروض وتخفيضات حصرية', sub: 'معدات مميزة بأسعار وتخفيضات خاصة' }
@@ -2547,13 +2529,13 @@
         image: 'images/prod_sony_2470_gm2.png'
       },
       {
-        id: 'STN-312',
-        name: 'Manfrotto 504X Fluid Head Carbon Twin Tripod',
-        category: 'stands',
-        brand: 'Manfrotto',
-        badge: 'ستاند وترايبود',
-        price: 490,
-        image: 'images/prod_manfrotto_504x.jpg'
+        id: 'AUD-042',
+        name: 'RODE GO II (Double)',
+        category: 'audio',
+        brand: 'RODE',
+        badge: 'الأكثر طلباً',
+        price: 195,
+        image: 'images/prod_aud_042.jpg'
       },
       {
         id: 'LGT-149',
@@ -3219,7 +3201,7 @@
 
     function acceptStorefrontPromo() {
       const promo = storeDB.getPromoPopup();
-      const targetCategory = promo.targetCategory || 'stands';
+      const targetCategory = promo.targetCategory || 'lighting';
       closeStorefrontPromo();
       filterByCategory(targetCategory);
       scrollToProducts();
