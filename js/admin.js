@@ -491,6 +491,7 @@ function renderAdminInventory() {
   const searchTerm = (document.getElementById('inventorySearchInput')?.value || '').toLowerCase().trim();
   const stockFilter = document.getElementById('inventoryStockFilter')?.value || 'all';
   const categoryFilter = document.getElementById('inventoryCategoryFilter')?.value || 'all';
+  const availabilityFilter = document.getElementById('inventoryAvailabilityFilter')?.value || 'all';
 
   let products = storeDB.getProducts();
 
@@ -513,6 +514,26 @@ function renderAdminInventory() {
 
   if (categoryFilter !== 'all') {
     products = products.filter(p => p.category === categoryFilter);
+  }
+
+  if (availabilityFilter !== 'all') {
+    products = products.filter(p => {
+      const a = (p.availability || '').toLowerCase();
+      const b = (p.badge || '').toLowerCase();
+      if (availabilityFilter === 'sold_out') {
+        return a === 'sold_out' || b.includes('سولد') || b.includes('sold out') || b.includes('نفدت');
+      }
+      if (availabilityFilter === 'pre_order') {
+        return a === 'pre_order' || b.includes('بري') || b.includes('pre-order') || b.includes('طلب مسبق');
+      }
+      if (availabilityFilter === 'available') {
+        return a === 'available' || b.includes('متوفر') || b.includes('available');
+      }
+      if (availabilityFilter === 'none') {
+        return (!a || a === 'none') && (!b || ['none', 'off'].includes(b));
+      }
+      return true;
+    });
   }
 
   if (products.length === 0) {
@@ -559,10 +580,27 @@ function renderAdminInventory() {
         <td class="py-2.5 px-3 w-14">
           <img src="${product.image}" alt="${product.name}" class="w-12 h-12 object-contain bg-slate-50 rounded-lg p-1 border border-slate-200">
         </td>
-        <td class="py-2.5 px-3 max-w-[200px]">
+        <td class="py-2.5 px-3 max-w-[220px]">
           <div class="font-bold text-slate-900 truncate" title="${product.name}">${product.name}</div>
           <div class="text-[10px] text-slate-400 font-en font-mono">ID: ${product.id}</div>
-          ${product.badge ? `<span class="bg-slate-900 text-yellow-400 text-[8.5px] font-black px-1.5 py-0.2 rounded mt-0.5 inline-block">${product.badge}</span>` : ''}
+          <div class="mt-1 flex items-center gap-1.5 flex-wrap">
+            <select 
+              onchange="handleInlineAvailabilityChange('${product.id}', this.value)" 
+              class="text-[10px] font-bold rounded-md px-1.5 py-0.5 border outline-none cursor-pointer transition shadow-2xs ${
+                (product.availability === 'sold_out' || (!product.availability && (product.badge || '').includes('سولد'))) ? 'bg-rose-50 border-rose-300 text-rose-700' :
+                (product.availability === 'pre_order' || (!product.availability && (product.badge || '').includes('بري'))) ? 'bg-amber-50 border-amber-300 text-amber-800' :
+                (product.availability === 'available' || (!product.availability && (product.badge || '').includes('متوفر'))) ? 'bg-emerald-50 border-emerald-300 text-emerald-700' :
+                'bg-slate-100 border-slate-200 text-slate-500'
+              }"
+              title="تغيير شارة البطاقة وحالة التوفر"
+            >
+              <option value="none" ${(!product.availability || product.availability === 'none') && !(product.badge || '').match(/سولد|بري|متوفر/) ? 'selected' : ''}>⚪ بدون علامة (إيقاف)</option>
+              <option value="available" ${product.availability === 'available' || (product.badge || '').includes('متوفر') ? 'selected' : ''}>🟢 متوفر (Available)</option>
+              <option value="sold_out" ${product.availability === 'sold_out' || (product.badge || '').includes('سولد') ? 'selected' : ''}>🔴 سولد اوت (Sold Out)</option>
+              <option value="pre_order" ${product.availability === 'pre_order' || (product.badge || '').includes('بري') ? 'selected' : ''}>🟠 بري اوردر (Pre-Order)</option>
+            </select>
+            ${(product.badge && !['سولد اوت', 'بري اوردر', 'متوفر', 'none', 'available', 'sold_out', 'pre_order'].includes(product.badge.toLowerCase().trim())) ? `<span class="bg-slate-900 text-yellow-400 text-[8.5px] font-black px-1.5 py-0.2 rounded">${product.badge}</span>` : ''}
+          </div>
         </td>
         <td class="py-2.5 px-3 font-bold text-slate-700 font-en">${product.brand || 'TOP CAM'}</td>
         <td class="py-2.5 px-3 text-slate-500 font-medium text-[11px]">${categoryNames[product.category] || product.category}</td>
@@ -1079,6 +1117,17 @@ function openProductEditModal(productId = null) {
     document.getElementById('prodNameEn').value = product.nameEn || '';
     document.getElementById('prodBrand').value = product.brand || 'Sony';
     document.getElementById('prodCategory').value = product.category || 'cameras';
+    const currentAvail = product.availability || (
+      (product.badge || '').includes('سولد') ? 'sold_out' :
+      (product.badge || '').includes('بري') ? 'pre_order' :
+      (product.badge || '').includes('متوفر') ? 'available' :
+      (product.badge ? 'custom' : 'none')
+    );
+    const availSelect = document.getElementById('prodAvailability');
+    if (availSelect) {
+      availSelect.value = currentAvail;
+      toggleCustomBadgeInput(currentAvail);
+    }
     document.getElementById('prodBadge').value = product.badge || '';
     document.getElementById('prodPrice').value = product.price || '';
     document.getElementById('prodOldPrice').value = product.oldPrice || '';
@@ -1094,6 +1143,11 @@ function openProductEditModal(productId = null) {
   } else {
     title.textContent = 'إضافة بضاعة جديدة للمخزن';
     document.getElementById('prodStock').value = 10;
+    const availSelectNew = document.getElementById('prodAvailability');
+    if (availSelectNew) {
+      availSelectNew.value = 'none';
+      toggleCustomBadgeInput('none');
+    }
     document.getElementById('prodImage').value = 'images/camera_body.jpg';
     if (preview) preview.src = 'images/camera_body.jpg';
 
@@ -1116,7 +1170,16 @@ function handleProductFormSubmit(e) {
     nameEn: document.getElementById('prodNameEn').value.trim(),
     brand: document.getElementById('prodBrand').value,
     category: document.getElementById('prodCategory').value,
-    badge: document.getElementById('prodBadge').value.trim(),
+    ...(() => {
+      const availVal = document.getElementById('prodAvailability')?.value || 'none';
+      let badgeVal = '';
+      if (availVal === 'sold_out') badgeVal = 'سولد اوت';
+      else if (availVal === 'pre_order') badgeVal = 'بري اوردر';
+      else if (availVal === 'available') badgeVal = 'متوفر';
+      else if (availVal === 'custom') badgeVal = document.getElementById('prodBadge')?.value.trim() || '';
+      else badgeVal = ''; // none
+      return { availability: availVal === 'custom' ? 'none' : availVal, badge: badgeVal };
+    })(),
     price: parseFloat(document.getElementById('prodPrice').value),
     oldPrice: document.getElementById('prodOldPrice').value ? parseFloat(document.getElementById('prodOldPrice').value) : null,
     stock: parseInt(document.getElementById('prodStock').value) || 0,
@@ -1288,4 +1351,41 @@ function showAdminToast(msg, type = 'info') {
     t.style.transition = 'opacity 0.4s ease';
     setTimeout(() => t.remove(), 400);
   }, 4000);
+}
+
+
+function handleInlineAvailabilityChange(productId, newStatus) {
+  const prod = storeDB.getProductById(productId);
+  if (!prod) return;
+  
+  let newBadge = '';
+  if (newStatus === 'sold_out') newBadge = 'سولد اوت';
+  else if (newStatus === 'pre_order') newBadge = 'بري اوردر';
+  else if (newStatus === 'available') newBadge = 'متوفر';
+  else newBadge = ''; // none
+
+  storeDB.updateProduct(productId, { 
+    availability: newStatus,
+    badge: newBadge 
+  });
+
+  const labels = {
+    none: 'بدون علامة (إيقاف الشارة)',
+    available: 'متوفر (Available)',
+    sold_out: 'سولد اوت (Sold Out)',
+    pre_order: 'بري اوردر (Pre-Order)'
+  };
+
+  showAdminToast(`تم تحديث شارة المنتج إلى: ${labels[newStatus] || newStatus}`, 'success');
+  renderAdminInventory();
+}
+
+function toggleCustomBadgeInput(val) {
+  const box = document.getElementById('customBadgeContainer');
+  if (!box) return;
+  if (val === 'custom') {
+    box.classList.remove('hidden');
+  } else {
+    box.classList.add('hidden');
+  }
 }

@@ -2,7 +2,7 @@
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
-  PRODUCTS: 'camera_store_products_v23_no_stands_monitors',
+  PRODUCTS: 'camera_store_products_v24_availability_badges',
   DELETED_IDS: 'camera_store_deleted_ids_v1',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
@@ -400,7 +400,8 @@ class StoreDB {
       oldPrice: productData.oldPrice ? parseFloat(productData.oldPrice) : null,
       rating: 5.0,
       stock: parseInt(productData.stock) || 1,
-      badge: productData.badge || 'جديد',
+      badge: productData.badge || '',
+      availability: productData.availability || 'none',
       image: productData.image || 'images/camera_body.jpg',
       description: productData.description || '',
       specs: productData.specs || {}
@@ -782,7 +783,8 @@ class StoreDB {
     msg += `📦 *المعدات المطلوبة:*\n`;
 
     order.items.forEach((item, index) => {
-      msg += `${index + 1}. ${item.name}\n`;
+      const preTag = item.isPreOrder ? (isEn ? ' [PRE-ORDER]' : ' [طلب مسبق]') : '';
+      msg += `${index + 1}. ${item.name}${preTag}\n`;
       msg += `   └ الكمية: ${item.quantity} × ${item.price} ${currency} = ${item.quantity * item.price} ${currency}\n`;
     });
 

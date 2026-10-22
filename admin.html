@@ -496,11 +496,19 @@
                 <option value="out_of_stock">نفذت الكمية (0)</option>
               </select>
 
+              <!-- Availability / Badge Filter -->
+              <select id="inventoryAvailabilityFilter" onchange="renderAdminInventory()" class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 text-xs outline-none focus:border-yellow-400 cursor-pointer font-bold">
+                <option value="all">كل شارات البطاقات</option>
+                <option value="sold_out">🔴 سولد اوت (Sold Out)</option>
+                <option value="pre_order">🟠 بري اوردر (Pre-Order)</option>
+                <option value="available">🟢 متوفر (Available)</option>
+                <option value="none">⚪ بدون علامة (إيقاف)</option>
+              </select>
+
               <!-- Category Filter -->
               <select id="inventoryCategoryFilter" onchange="renderAdminInventory()" class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 text-xs outline-none focus:border-yellow-400 cursor-pointer">
                 <option value="all">كل الأقسام</option>
                 <option value="cameras">كاميرات</option>
-                <option value="stands">ستاندات وترايبود</option>
                 <option value="lighting">إضاءات واستوديو</option>
                 <option value="filters">فلاتر وعدسات</option>
                 <option value="memory">ميموريات وذاكرة</option>
@@ -836,7 +844,6 @@
               <div>
                 <label class="block text-xs font-bold text-slate-700 mb-1">القسم المستهدف عند ضغط الزر</label>
                 <select id="promoCategory" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs outline-none focus:border-yellow-400 cursor-pointer">
-                  <option value="stands">ستاندات وترايبود (Stands & Tripods)</option>
                   <option value="lighting">إضاءات واستوديو (Studio Lighting)</option>
                   <option value="cameras">كاميرات احترافية (Cameras)</option>
                   <option value="stabilizers">جيمبل وستيبلايزر (Gimbals)</option>
@@ -984,7 +991,6 @@
             <label class="block text-xs font-bold text-slate-700 mb-1">القسم والتصنيف *</label>
             <select id="prodCategory" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs outline-none focus:border-yellow-400 cursor-pointer">
               <option value="cameras">كاميرات سينما وميرورليس</option>
-              <option value="stands">ستاندات وترايبود</option>
               <option value="lighting">إضاءات واستوديو</option>
               <option value="filters">فلاتر وعدسات</option>
               <option value="memory">ميموريات وذاكرة</option>
@@ -1009,15 +1015,29 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">الكمية في المخزن (الأسهم) *</label>
             <input type="number" id="prodStock" value="10" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400 font-en font-bold">
           </div>
           <div>
-            <label class="block text-xs font-bold text-slate-700 mb-1">الشارة الترويجية (Badge)</label>
-            <input type="text" id="prodBadge" placeholder="الأكثر طلباً / جديد / خصم 15%" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400">
+            <label class="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
+              <span>علامة وشارة البطاقة *</span>
+              <span class="text-[10px] text-amber-600 font-semibold">تحكم كامل بالشارة</span>
+            </label>
+            <select id="prodAvailability" onchange="toggleCustomBadgeInput(this.value)" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs outline-none focus:border-yellow-400 font-bold cursor-pointer">
+              <option value="none">⚪ بدون علامة (إيقاف الشارة - بطاقة نظيفة)</option>
+              <option value="available">🟢 متوفر (Available)</option>
+              <option value="sold_out">🔴 سولد اوت (Sold Out)</option>
+              <option value="pre_order">🟠 بري اوردر (Pre-Order)</option>
+              <option value="custom">✏️ شارة مخصصة نصية...</option>
+            </select>
           </div>
+        </div>
+
+        <div id="customBadgeContainer" class="hidden">
+          <label class="block text-xs font-bold text-slate-700 mb-1">نص الشارة المخصصة (Badge)</label>
+          <input type="text" id="prodBadge" placeholder="مثال: الأكثر طلباً / جديد / خصم 15%" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-xs outline-none focus:border-yellow-400">
         </div>
 
         <div>

@@ -647,23 +647,23 @@
         </button>
       </div>
 
-      <!-- 3. STN-312: Manfrotto 504X Fluid Head Carbon Twin Tripod -->
+      <!-- 3. AUD-042: RODE GO II (Double) -->
       <div class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group">
         <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
           <i class="fa-regular fa-heart"></i>
         </button>
-        <div onclick="openCameraSpecsBubble('STN-312')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات">
-          <img src="images/prod_manfrotto_504x.jpg" alt="Manfrotto 504X Fluid Head Carbon Twin Tripod" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
+        <div onclick="openCameraSpecsBubble('AUD-042')" class="w-full h-28 sm:h-36 flex items-center justify-center p-1 sm:p-2 mb-1.5 sm:mb-2 bg-slate-50/50 rounded-lg overflow-hidden cursor-pointer" title="انقر لعرض المواصفات">
+          <img src="images/prod_aud_042.jpg" alt="RODE GO II (Double)" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
         </div>
         <div>
-          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 line-clamp-1">ستاند وترايبود</span>
-          <h4 onclick="openCameraSpecsBubble('STN-312')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="Manfrotto 504X Fluid Head Carbon Twin Tripod">Manfrotto 504X Fluid Head Carbon Twin Tripod</h4>
-          <div class="flex items-baseline gap-1.5 mt-1 font-en">
-            <span class="text-xs sm:text-sm font-bold text-slate-900">$490</span>
-            <span class="text-[10px] text-slate-400 line-through">$540</span>
+          <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 line-clamp-1 font-en">RODE</span>
+          <h4 onclick="openCameraSpecsBubble('AUD-042')" class="text-xs font-bold text-slate-900 line-clamp-1 cursor-pointer hover:text-yellow-600 transition" title="RODE GO II (Double)">RODE GO II (Double)</h4>
+          <div class="flex items-baseline gap-1.5 mt-1 font-sans">
+            <span class="text-xs sm:text-sm font-bold text-slate-900">195 د.أ</span>
+            <span class="text-[10px] text-slate-400 line-through">220 د.أ</span>
           </div>
         </div>
-        <button onclick="addToCartMock('Manfrotto 504X Fluid Head Carbon Twin Tripod', 490, 'images/prod_manfrotto_504x.jpg', 'STN-312')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
+        <button onclick="addToCartMock('RODE GO II (Double)', 195, 'images/prod_aud_042.jpg', 'AUD-042')" class="mt-2.5 w-full bg-slate-100 hover:bg-yellow-400 hover:text-slate-950 active:scale-95 text-slate-800 text-[10px] sm:text-[11px] font-bold py-1.5 rounded-lg transition shadow-2xs cursor-pointer">
           Add to Cart
         </button>
       </div>
@@ -2171,12 +2171,22 @@
       }
     }
 
-    function addToCartMock(name, price, image = 'images/camera_body.jpg', id = null) {
+    function addToCartMock(name, price, image = 'images/camera_body.jpg', id = null, isPreOrder = false) {
+      if (id && typeof storeDB !== 'undefined' && storeDB.getProductById) {
+        const prod = storeDB.getProductById(id);
+        if (prod) {
+          const avail = getProductAvailability(prod);
+          if (avail === 'sold_out') {
+            alert(currentLang === 'en' ? 'Sorry, this product is currently Sold Out.' : 'عذراً، هذا المنتج غير متوفر حالياً (سولد اوت).');
+            return;
+          }
+        }
+      }
       const existing = cart.find(i => i.name === name);
       if (existing) {
         existing.qty += 1;
       } else {
-        cart.push({ id: id || ('PRD-' + Math.floor(1000 + Math.random() * 9000)), name, price, qty: 1, image });
+        cart.push({ id: id || ('PRD-' + Math.floor(1000 + Math.random() * 9000)), name, price, qty: 1, image, isPreOrder: !!isPreOrder });
       }
       updateCartUI();
       toggleCartDrawer(true);
@@ -2207,7 +2217,7 @@
       list.innerHTML = cart.map((item, index) => `
         <div class="flex items-center justify-between p-2 sm:p-2.5 bg-slate-50 rounded-lg text-xs">
           <div>
-            <div class="font-bold text-slate-900">${item.name}</div>
+            <div class="font-bold text-slate-900 flex items-center gap-1.5 flex-wrap"><span>${item.name}</span>${item.isPreOrder ? `<span class="text-[9px] font-black bg-amber-100 text-amber-800 px-1.5 py-0.2 rounded font-sans">${currentLang === 'en' ? 'Pre-Order' : 'طلب مسبق'}</span>` : ''}</div>
             <div class="text-slate-500 font-semibold font-sans">${formatCurrency(item.price)} × ${item.qty}</div>
           </div>
           <button onclick="removeFromCart(${index})" class="text-slate-400 hover:text-yellow-600 p-1 cursor-pointer">
@@ -2908,6 +2918,46 @@
       const isEn = (currentLang === 'en');
       document.getElementById('bubbleCategoryBadge').textContent = product.category || 'Gear';
       document.getElementById('bubbleSkuBadge').textContent = 'SKU: ' + (product.id || 'TOPCAM');
+
+      // Availability badge and action buttons in showroom modal
+      const bubbleAddBtn = document.getElementById('bubbleAddToCartBtn');
+      const bubbleStockBadge = document.getElementById('bubbleStockBadge');
+      const avail = getProductAvailability(product);
+
+      if (avail === 'sold_out') {
+        bubbleStockBadge.className = 'text-[10px] font-bold text-rose-700 bg-rose-50 px-2.5 py-0.5 rounded-full border border-rose-200 flex items-center gap-1';
+        bubbleStockBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span><span>' + (isEn ? 'Sold Out - Out of Stock' : 'سولد اوت - غير متوفر حالياً') + '</span>';
+        if (bubbleAddBtn) {
+          bubbleAddBtn.disabled = true;
+          bubbleAddBtn.className = 'flex-1 sm:flex-none bg-slate-200 text-slate-400 font-black text-xs sm:text-sm px-6 py-3 rounded-xl cursor-not-allowed flex items-center justify-center gap-2 shadow-none';
+          bubbleAddBtn.innerHTML = '<i class="fa-solid fa-ban"></i><span>' + (isEn ? 'Sold Out' : 'غير متوفر (سولد اوت)') + '</span>';
+        }
+      } else if (avail === 'pre_order') {
+        bubbleStockBadge.className = 'text-[10px] font-bold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200 flex items-center gap-1';
+        bubbleStockBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span><span>' + (isEn ? 'Pre-Order Available' : 'متاح للطلب المسبق (بري اوردر)') + '</span>';
+        if (bubbleAddBtn) {
+          bubbleAddBtn.disabled = false;
+          bubbleAddBtn.className = 'flex-1 sm:flex-none bg-amber-400 hover:bg-amber-500 text-slate-950 font-black text-xs sm:text-sm px-6 py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm active:scale-95 cursor-pointer';
+          bubbleAddBtn.innerHTML = '<i class="fa-solid fa-clock"></i><span>' + (isEn ? 'Pre-Order Now' : 'طلب مسبق الآن (Pre-Order)') + '</span>';
+        }
+      } else if (avail === 'available') {
+        bubbleStockBadge.className = 'text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1';
+        bubbleStockBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span><span>' + (isEn ? 'In Stock - Ready to Ship' : 'متوفر في المستودع - جاهز للشحن الفوري') + '</span>';
+        if (bubbleAddBtn) {
+          bubbleAddBtn.disabled = false;
+          bubbleAddBtn.className = 'flex-1 sm:flex-none bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-black text-xs sm:text-sm px-6 py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm active:scale-95 cursor-pointer';
+          bubbleAddBtn.innerHTML = '<i class="fa-solid fa-cart-plus"></i><span>' + (isEn ? 'Add to Cart' : 'إضافة إلى السلة') + '</span>';
+        }
+      } else {
+        // none
+        bubbleStockBadge.className = 'text-[10px] font-bold text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200 flex items-center gap-1';
+        bubbleStockBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span><span>' + (isEn ? 'Available to Order' : 'جاهز للطلب المباشر') + '</span>';
+        if (bubbleAddBtn) {
+          bubbleAddBtn.disabled = false;
+          bubbleAddBtn.className = 'flex-1 sm:flex-none bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-black text-xs sm:text-sm px-6 py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-sm active:scale-95 cursor-pointer';
+          bubbleAddBtn.innerHTML = '<i class="fa-solid fa-cart-plus"></i><span>' + (isEn ? 'Add to Cart' : 'إضافة إلى السلة') + '</span>';
+        }
+      }
       document.getElementById('bubbleCameraTitle').textContent = isEn ? (product.nameEn || product.name) : product.name;
       document.getElementById('bubbleCameraSub').textContent = isEn ? (product.nameEn || product.description || '') : (product.description || product.nameEn || '');
       document.getElementById('bubbleFinalPrice').textContent = formatCurrency(product.price);
@@ -3059,8 +3109,13 @@
 
     function addCurrentFromBubbleToCart() {
       if (currentBubbleProduct) {
+        const avail = getProductAvailability(currentBubbleProduct);
+        if (avail === 'sold_out') {
+          alert(currentLang === 'en' ? 'This item is currently sold out.' : 'عذراً، هذا المنتج غير متوفر حالياً (سولد اوت).');
+          return;
+        }
         const imgToUse = currentActiveAngleUrl || currentBubbleProduct.image;
-        addToCartMock(currentBubbleProduct.name, currentBubbleProduct.price, imgToUse, currentBubbleProduct.id);
+        addToCartMock(currentBubbleProduct.name, currentBubbleProduct.price, imgToUse, currentBubbleProduct.id, avail === 'pre_order');
         closeCameraSpecsBubble();
       }
     }
