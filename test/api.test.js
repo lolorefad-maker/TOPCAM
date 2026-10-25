@@ -46,6 +46,16 @@ const call = (p, o) => fetch(base + p, o);
       assert.equal(r.status, 404, p + ' => ' + r.status);
     }
   });
+  await t('الكتالوج موحّد من السيرفر قبل أي حفظ (نفس القائمة لكل الأجهزة)', async () => {
+    const a = await (await call('/api/catalog')).json();
+    const b = await (await call('/api/catalog')).json();
+    assert.ok(a.length > 300, 'length ' + a.length);
+    assert.equal(a.length, b.length);
+    await call('/api/deleted-ids', { method: 'POST', headers: A, body: JSON.stringify({ id: a[0].id }) });
+    const c = await (await call('/api/catalog')).json();
+    assert.equal(c.length, a.length - 1, 'المحذوف يُستبعد من الكتالوج الموحّد');
+    await call('/api/reset-deleted', { method: 'POST', headers: A });
+  });
   await t('الأدمن مرفوض بدون كلمة سر', async () => {
     assert.equal((await call('/api/orders')).status, 401);
     assert.equal((await call('/api/admin/check')).status, 401);

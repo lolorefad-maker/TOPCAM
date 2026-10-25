@@ -84,9 +84,13 @@ try {
 } catch (e) {
   console.warn('تعذر قراءة js/data.js:', e.message);
 }
+function seededCatalog() {
+  const deleted = new Set(readJson(FILES.deleted, []));
+  return BASE_PRODUCTS.filter(p => !deleted.has(p.id));
+}
 function currentProducts() {
   const cat = readJson(FILES.catalog, null);
-  return Array.isArray(cat) && cat.length ? cat : BASE_PRODUCTS;
+  return Array.isArray(cat) && cat.length ? cat : seededCatalog();
 }
 
 // ---------- أدوات HTTP ----------
@@ -198,8 +202,9 @@ function buildOrder(input) {
 }
 
 function decrementStock(items) {
-  const cat = readJson(FILES.catalog, null);
-  if (!Array.isArray(cat) || !cat.length) return;
+  let cat = readJson(FILES.catalog, null);
+  if (!Array.isArray(cat) || !cat.length) cat = JSON.parse(JSON.stringify(seededCatalog()));
+  if (!cat.length) return;
   let changed = false;
   for (const it of items) {
     const p = cat.find(x => x.id === it.id);
@@ -227,7 +232,7 @@ async function handleApi(req, res, reqPath) {
   try {
     // --- عامة (للزبائن) ---
     if (reqPath === '/api/catalog' && req.method === 'GET') {
-      return send(res, 200, readJson(FILES.catalog, []));
+      return send(res, 200, currentProducts());
     }
     if (reqPath === '/api/deleted-ids' && req.method === 'GET') {
       return send(res, 200, readJson(FILES.deleted, []));
