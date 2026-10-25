@@ -300,6 +300,16 @@
                 <i class="fa-solid fa-arrows-to-dot text-slate-600 w-5 text-center"></i>
                 <span>مثبتات الحركة والـ Rigs (DJI / Tilta)</span>
               </a>
+
+              <a href="#productsSection" onclick="filterByCategory('monitors'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
+                <i class="fa-solid fa-tv text-slate-600 w-5 text-center"></i>
+                <span>الشاشات (Monitors)</span>
+              </a>
+
+              <a href="#productsSection" onclick="filterByCategory('tripods'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
+                <i class="fa-solid fa-camera-retro text-slate-600 w-5 text-center"></i>
+                <span>الترايبودز (Tripods)</span>
+              </a>
             </div>
           </div>
 
@@ -566,6 +576,22 @@
           <img src="images/prod_ulanzi_bp09.jpg" alt="Bags" class="w-full h-full object-contain rounded-full">
         </div>
         <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Bags</span>
+      </div>
+
+      <!-- Monitors -->
+      <div onclick="filterByCategory('monitors')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#e0e7ff] flex items-center justify-center transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <i class="fa-solid fa-tv text-xl sm:text-2xl text-slate-700"></i>
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Monitors</span>
+      </div>
+
+      <!-- Tripods -->
+      <div onclick="filterByCategory('tripods')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#dcfce7] flex items-center justify-center transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <i class="fa-solid fa-camera-retro text-xl sm:text-2xl text-slate-700"></i>
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Tripods</span>
       </div>
 
     </div>
@@ -2011,6 +2037,7 @@
         catStands: 'الترايبود',
         catCages: 'الكيج',
         catMonitors: 'الشاشات',
+        catTripods: 'الترايبودز',
         catBatteries: 'البطاريات',
         catBags: 'الحقائب',
         modalOrderWhatsApp: 'طلب فوري عبر واتساب',
@@ -2043,6 +2070,7 @@
         catStands: 'Tripods',
         catCages: 'Cages',
         catMonitors: 'Monitors',
+        catTripods: 'Tripods',
         catBatteries: 'Batteries',
         catBags: 'Bags',
         modalOrderWhatsApp: 'Instant WhatsApp Order',
@@ -2110,6 +2138,7 @@
         'stands': dict.catStands,
         'cages': dict.catCages,
         'monitors': dict.catMonitors,
+        'tripods': dict.catTripods,
         'chargers_batteries': dict.catBatteries,
         'bags': dict.catBags
       };
@@ -2514,7 +2543,9 @@
 
     const CATEGORY_META = {
       all: { ar: 'جميع المعدات وأنظمة التصوير (500 منتج أصلي)', sub: 'تصفح كافة المعدات السينمائية والفوتوغرافية المتوفرة' },
-      tripods: { ar: 'الستاندات والحوامل الثلاثية', sub: 'اختر الماركة لتصفح ستاندات الإضاءة وترايبود الكاميرا' },
+      tripods: { ar: 'الترايبودز والحوامل الثلاثية', sub: 'ترايبودز الكاميرا والفيديو' },
+      stands: { ar: 'الستاندات وحوامل الإضاءة', sub: 'ستاندات الإضاءة والحوامل' },
+      monitors: { ar: 'شاشات المونيتور', sub: 'شاشات المونيتور للتصوير والسينما' },
       lenses: { ar: 'العدسات وفلاتر التصوير', sub: 'اختر الماركة لتصفح العدسات الاحترافية وفلاتر ND' },
       stabilizers: { ar: 'مانعات الاهتزاز والجمبل', sub: 'اختر الماركة لتصفح مثبتات الحركة والـ Gimbals' },
       batteries: { ar: 'البطاريات والشواحن ومحطات الطاقة', sub: 'اختر الماركة لتصفح بطاريات V-Mount والشواحن' },
@@ -2735,8 +2766,8 @@
         catProducts = allProducts.filter(p => p.oldPrice || (p.badge && (p.badge.includes('خصم') || p.badge.includes('وفر') || p.badge.includes('الأكثر') || p.badge.includes('عرض'))));
       } else if (cat === 'gimbals' || cat === 'stabilizers') {
         catProducts = allProducts.filter(p => p.category === 'gimbals' || p.category === 'stabilizers');
-      } else if (cat === 'stands' || cat === 'tripods') {
-        catProducts = allProducts.filter(p => p.category === 'stands' || p.category === 'tripods');
+      } else if (cat === 'stands') {
+        catProducts = allProducts.filter(p => p.category === 'stands');
       } else if (cat === 'filters' || cat === 'lenses') {
         catProducts = allProducts.filter(p => p.category === 'filters' || p.category === 'lenses');
       } else if (cat === 'batteries' || cat === 'chargers_batteries') {
@@ -2857,7 +2888,7 @@
         grid.innerHTML = `
           <div class="col-span-full py-16 text-center text-slate-400 bg-white rounded-2xl border border-dashed border-slate-200 p-8">
             <i class="fa-solid fa-camera-rotate text-3xl mb-2 text-slate-300"></i>
-            <p class="text-xs font-bold text-slate-700">لا توجد معدات في هذا البراند حالياً.</p>
+            <p class="text-xs font-bold text-slate-700">${(cat !== 'all' && catProducts.length === 0) ? (currentLang === 'en' ? 'Products for this section are coming soon.' : 'ستتوفر المنتجات في هذا القسم قريباً.') : 'لا توجد معدات في هذا البراند حالياً.'}</p>
             <button onclick="filterByBrand('all')" class="mt-3 bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl transition cursor-pointer">
               عرض كل براندات القسم
             </button>

@@ -551,6 +551,8 @@ function renderAdminInventory() {
   const categoryNames = {
     cameras: 'كاميرات سينما وميرورليس',
     stands: 'ستاندات وترايبود',
+    monitors: 'شاشات',
+    tripods: 'ترايبودز',
     lighting: 'إضاءات واستوديو',
     filters: 'فلاتر وعدسات',
     memory: 'ميموريات وذاكرة',
