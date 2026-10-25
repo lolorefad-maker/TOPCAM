@@ -175,6 +175,14 @@ function renderAdminDashboardCharts() {
   if (unitsEl) unitsEl.textContent = audit.totalUnits.toLocaleString();
   if (productsEl) productsEl.textContent = `${audit.totalProducts} صنف مسجل`;
   if (pendingEl) pendingEl.textContent = pendingOrders.length;
+  const ordersCountEl = document.getElementById('dashOrdersCount');
+  if (ordersCountEl) ordersCountEl.textContent = orders.filter(o => o.status !== 'cancelled').length + ' طلب';
+  const healthEl = document.getElementById('dashStockHealth');
+  if (healthEl) {
+    const all = storeDB.getProducts();
+    const inStock = all.filter(p => (parseInt(p.stock) || 0) > 0).length;
+    healthEl.textContent = (all.length ? Math.round((inStock / all.length) * 100) : 0) + '% من الأصناف متوفرة';
+  }
   if (valEl) valEl.textContent = storeDB.formatPrice(audit.totalValuation);
   if (alertsEl) alertsEl.textContent = `يوجد ${audit.lowStock} صنف في مستوى حرج (< 5) و ${audit.outOfStock} صنف نفذت كميته تماماً.`;
 
@@ -609,7 +617,7 @@ function renderAdminInventory() {
         
         <td class="py-2.5 px-3">
           <div class="flex items-center gap-1 font-en">
-            <span class="font-black text-slate-900 text-xs">$</span>
+            <span class="font-black text-slate-500 text-[10px]">د.أ</span>
             <input 
               type="number" 
               value="${price}" 
@@ -621,7 +629,7 @@ function renderAdminInventory() {
         </td>
 
         <td class="py-2.5 px-3 text-slate-400 font-en text-[11px]">
-          ${oldPrice ? `$${oldPrice}` : '—'}
+          ${oldPrice ? `${oldPrice} د.أ` : '—'}
         </td>
 
         <td class="py-2.5 px-3">
@@ -747,7 +755,7 @@ function renderAdminBestSellers() {
         </td>
         <td class="py-3 px-3.5">
           <div class="font-bold text-slate-900 max-w-[240px] truncate">${item.name}</div>
-          <div class="text-[10px] text-slate-400 font-en">سعر القطعة: $${item.price}</div>
+          <div class="text-[10px] text-slate-400 font-en">سعر القطعة: ${item.price} د.أ</div>
         </td>
         <td class="py-3 px-3.5 font-black text-amber-600 font-en text-sm">
           ${item.unitsSold} قطع
@@ -1237,30 +1245,106 @@ function confirmDeleteProduct(id) {
 
 // ================= 10. إعدادات المتجر العامة =================
 function loadAdminSettings() {
-  const settings = storeDB.getSettings();
-  const nameInput = document.getElementById('settingStoreName');
-  const waInput = document.getElementById('settingWhatsapp');
-  const shipInput = document.getElementById('settingFreeShipping');
+  const s = storeDB.getSettings();
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.value = (v === undefined || v === null) ? '' : v; };
+  set('settingStoreName', s.storeName);
+  set('settingWhatsapp', s.whatsappNumber);
+  set('settingFreeShipping', s.freeShippingThreshold || 500);
+  set('settingAddress', s.storeAddress);
+  set('settingAddressDetails', s.storeAddressDetails);
+  set('settingMapLink', s.mapsLink);
+  set('settingLat', s.mapLat);
+  set('settingLng', s.mapLng);
+  set('settingOpenWeek', s.openWeek);
+  set('settingCloseWeek', s.closeWeek);
+  set('settingOpenFri', s.openFri);
+  set('settingCloseFri', s.closeFri);
+  updateMapPreview();
+}
 
-  if (nameInput) nameInput.value = settings.storeName || '';
-  if (waInput) waInput.value = settings.whatsappNumber || '';
-  if (shipInput) shipInput.value = settings.freeShippingThreshold || 500;
+// استخراج الإحداثيات من رابط خرائط جوجل أو من نص "lat,lng"
+function parseMapsLocation(text) {
+  const t = decodeURIComponent(String(text || '').trim());
+  if (!t) return null;
+  const patterns = [
+    /@(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/,
+    /!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+)?)/,
+    /[?&](?:q|ll|query|destination)=(-?\d+(?:\.\d+)?)[, ]\s*(-?\d+(?:\.\d+)?)/,
+    /^\s*(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)\s*$/
+  ];
+  for (const re of patterns) {
+    const m = t.match(re);
+    if (m) {
+      const lat = parseFloat(m[1]), lng = parseFloat(m[2]);
+      if (lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180) return { lat, lng };
+    }
+  }
+  return null;
+}
+
+function applyMapLinkToCoords() {
+  const link = document.getElementById('settingMapLink').value;
+  const pos = parseMapsLocation(link);
+  if (pos) {
+    document.getElementById('settingLat').value = pos.lat;
+    document.getElementById('settingLng').value = pos.lng;
+    updateMapPreview();
+    showAdminToast('تم التقاط إحداثيات الموقع من الرابط.', 'success');
+  } else if (link.trim()) {
+    showAdminToast('تعذر قراءة الإحداثيات من الرابط. افتح الموقع في خرائط جوجل وانسخ الرابط الكامل من شريط العنوان، أو اكتب الإحداثيات يدوياً.', 'error');
+  }
+}
+
+function updateMapPreview() {
+  const frame = document.getElementById('settingMapPreview');
+  if (!frame) return;
+  const lat = parseFloat(document.getElementById('settingLat').value);
+  const lng = parseFloat(document.getElementById('settingLng').value);
+  if (isNaN(lat) || isNaN(lng)) { frame.removeAttribute('src'); return; }
+  frame.src = 'https://www.google.com/maps?q=' + lat + ',' + lng + '&z=16&hl=ar&output=embed';
 }
 
 function saveStoreSettings(e) {
   e.preventDefault();
+  const val = (id) => (document.getElementById(id) ? document.getElementById(id).value.trim() : '');
 
-  const storeName = document.getElementById('settingStoreName').value.trim();
-  const whatsappNumber = document.getElementById('settingWhatsapp').value.trim().replace(/[^0-9]/g, '');
-  const freeShippingThreshold = parseFloat(document.getElementById('settingFreeShipping').value) || 500;
+  const storeName = val('settingStoreName');
+  const whatsappNumber = val('settingWhatsapp').replace(/[^0-9]/g, '');
+  const freeShippingThreshold = parseFloat(val('settingFreeShipping')) || 500;
+
+  let mapLat = parseFloat(val('settingLat'));
+  let mapLng = parseFloat(val('settingLng'));
+  const mapsLink = val('settingMapLink');
+  if (mapsLink) {
+    const pos = parseMapsLocation(mapsLink);
+    if (pos) { mapLat = pos.lat; mapLng = pos.lng; }
+  }
+  if (isNaN(mapLat) || isNaN(mapLng) || mapLat < -90 || mapLat > 90 || mapLng < -180 || mapLng > 180) {
+    showAdminToast('إحداثيات الموقع غير صحيحة. الصق رابط خرائط جوجل أو اكتب خط العرض والطول.', 'error');
+    return;
+  }
+  if (whatsappNumber.length < 8) {
+    showAdminToast('رقم الواتساب غير صحيح.', 'error');
+    return;
+  }
 
   storeDB.saveSettings({
     storeName,
     whatsappNumber,
-    freeShippingThreshold
+    freeShippingThreshold,
+    storeAddress: val('settingAddress'),
+    storeAddressDetails: val('settingAddressDetails'),
+    mapsLink,
+    mapLat,
+    mapLng,
+    openWeek: val('settingOpenWeek') || '10:00',
+    closeWeek: val('settingCloseWeek') || '22:00',
+    openFri: val('settingOpenFri') || '14:00',
+    closeFri: val('settingCloseFri') || '22:00'
   });
 
-  showAdminToast('تم حفظ الإعدادات ورقم الواتساب بنجاح!', 'success');
+  loadAdminSettings();
+  showAdminToast('تم حفظ الإعدادات وبيانات الموقع بنجاح!', 'success');
 }
 
 async function forceSyncLaptopToPhone() {
@@ -1342,7 +1426,7 @@ function showAdminToast(msg, type = 'info') {
   const t = document.createElement('div');
   t.className = `bg-slate-950 text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2.5 border border-slate-700 animate-slideIn`;
   t.innerHTML = `
-    <i class="fa-solid ${type === 'success' ? 'fa-circle-check text-emerald-400' : 'fa-circle-info text-yellow-400'}"></i>
+    <i class="fa-solid ${type === 'success' ? 'fa-circle-check text-emerald-400' : (type === 'error' ? 'fa-circle-exclamation text-rose-400' : 'fa-circle-info text-yellow-400')}"></i>
     <span>${msg}</span>
   `;
   c.appendChild(t);

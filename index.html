@@ -1308,130 +1308,66 @@
     </div>
   </div>
 
-    <!-- ═══════════════ SHOWROOM LOCATION SECTION (Irbid - University Street) ═══════════════ -->
-  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-6 sm:py-8 font-sans" id="locationSection" dir="rtl">
-    <div class="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm p-4 sm:p-7 overflow-hidden">
-      
-      <!-- Section Header -->
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 pb-5 sm:pb-6 border-b border-slate-100">
-        <div>
-          <div class="inline-flex items-center gap-2 bg-yellow-400/15 border border-yellow-400/30 text-slate-900 text-[11px] sm:text-xs font-black px-3 py-1 rounded-full mb-2">
-            <i class="fa-solid fa-location-dot text-yellow-600 text-xs"></i>
-            <span>معرض TOP CAM الرئيسي • إربد</span>
-          </div>
-          <h2 class="text-lg sm:text-2xl font-black text-slate-900 tracking-tight font-sans">
-            موقعنا في إربد - شارع الجامعة
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-500 mt-1 font-sans">
-            تفضل بزيارة معرضنا وتجربة أحدث كاميرات السينما والمعدات والعدسات الاحترافية مع فريقنا المختص.
-          </p>
-        </div>
+  <!-- ═══════════════ SHOWROOM LOCATION SECTION (قابل للتعديل من لوحة الإدارة ← الإعدادات) ═══════════════ -->
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-8 sm:py-12" id="locationSection">
+    <div class="rounded-[28px] overflow-hidden bg-slate-950 text-white shadow-2xl ring-1 ring-black/5">
+      <div class="grid lg:grid-cols-12">
 
-        <div class="flex items-center gap-2 shrink-0">
-          <a 
-            href="https://maps.google.com/?q=32.5376,35.8567" 
-            target="_blank" 
-            class="bg-yellow-400 hover:bg-yellow-500 active:scale-95 text-slate-950 text-xs sm:text-sm font-black px-4 py-2.5 rounded-xl transition shadow-xs flex items-center gap-2 cursor-pointer font-sans"
-          >
-            <i class="fa-solid fa-diamond-turn-right text-sm"></i>
-            <span>اتجاهات الخريطة (GPS)</span>
-          </a>
-          <a 
-            href="https://wa.me/962790000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20TOP%20CAM%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9%20%D9%85%D8%B9%D8%B1%D8%B6%D9%83%D9%85%20%D9%81%D9%8A%20%D8%A5%D8%B1%D8%A8%D8%AF%20%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9." 
-            target="_blank" 
-            class="bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition shadow-xs flex items-center gap-2 cursor-pointer font-sans"
-          >
-            <i class="fa-brands fa-whatsapp text-sm"></i>
-            <span>تواصل مع الفرع</span>
-          </a>
-        </div>
-      </div>
+        <!-- معلومات -->
+        <div class="lg:col-span-5 p-6 sm:p-9 flex flex-col justify-between gap-8 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+          <div>
+            <div class="inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-yellow-400/90">
+              <span class="w-6 h-px bg-yellow-400/70"></span>
+              <span id="locEyebrow">Visit the showroom</span>
+            </div>
+            <h2 id="locTitle" class="mt-3 text-2xl sm:text-3xl font-black leading-tight"></h2>
+            <p id="locIntro" class="mt-2 text-sm text-slate-400 leading-relaxed"></p>
 
-      <!-- Main Grid: Info Cards + Map Frame -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 mt-5 sm:mt-6">
-        
-        <!-- Store Information Cards (5 cols) -->
-        <div class="lg:col-span-5 space-y-3.5 sm:space-y-4">
-          
-          <!-- Card 1: Exact Address -->
-          <div class="bg-slate-50 hover:bg-slate-100/70 transition rounded-2xl p-4 border border-slate-200/70 flex items-start gap-3.5">
-            <div class="w-10 h-10 rounded-xl bg-yellow-400 text-slate-950 flex items-center justify-center shrink-0 shadow-xs">
-              <i class="fa-solid fa-map-pin text-base"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-sans">العنوان الدقيق</span>
-              <h4 class="text-xs sm:text-sm font-black text-slate-900 leading-snug font-sans">
-                إربد - شارع الجامعة الرئيسي
-              </h4>
-              <p class="text-[11px] sm:text-xs text-slate-600 mt-1 leading-relaxed font-sans">
-                قرب إشارة الإسكان ومجمع الدوار، مقابل البوابة الشمالية لجامعة اليرموك - مجمع الأندلس التجاري، الطابق الأرضي.
-              </p>
-            </div>
-          </div>
+            <div id="locOpenBadge" class="mt-5 inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-bold border"></div>
 
-          <!-- Card 2: Hours of Operation -->
-          <div class="bg-slate-50 hover:bg-slate-100/70 transition rounded-2xl p-4 border border-slate-200/70 flex items-start gap-3.5">
-            <div class="w-10 h-10 rounded-xl bg-slate-900 text-yellow-400 flex items-center justify-center shrink-0 shadow-xs">
-              <i class="fa-solid fa-clock text-base"></i>
-            </div>
-            <div class="w-full">
-              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 font-sans">أوقات العمل واستقبال الزوار</span>
-              <div class="space-y-1.5 mt-1 font-sans">
-                <div class="flex items-center justify-between text-[11px] sm:text-xs">
-                  <span class="font-bold text-slate-800">السبت – الخميس:</span>
-                  <span class="font-semibold text-slate-900 font-sans" dir="ltr">10:00 AM – 10:00 PM</span>
-                </div>
-                <div class="flex items-center justify-between text-[11px] sm:text-xs">
-                  <span class="font-bold text-slate-800">الجمعة:</span>
-                  <span class="font-semibold text-slate-900 font-sans" dir="ltr">02:00 PM – 10:00 PM</span>
+            <dl class="mt-7 space-y-5">
+              <div class="flex gap-4">
+                <div class="w-10 h-10 shrink-0 rounded-xl bg-white/5 ring-1 ring-white/10 flex items-center justify-center text-yellow-400"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <dt id="locAddrLabel" class="text-[11px] uppercase tracking-wider text-slate-500 font-bold"></dt>
+                  <dd id="locAddr" class="text-sm font-bold text-white mt-0.5"></dd>
+                  <dd id="locAddrDetails" class="text-xs text-slate-400 mt-1 leading-relaxed"></dd>
                 </div>
               </div>
-            </div>
+              <div class="flex gap-4">
+                <div class="w-10 h-10 shrink-0 rounded-xl bg-white/5 ring-1 ring-white/10 flex items-center justify-center text-yellow-400"><i class="fa-regular fa-clock"></i></div>
+                <div class="flex-1">
+                  <dt id="locHoursLabel" class="text-[11px] uppercase tracking-wider text-slate-500 font-bold"></dt>
+                  <dd class="mt-1 space-y-1 text-xs">
+                    <div class="flex items-center justify-between gap-3"><span id="locWeekLabel" class="text-slate-300"></span><span id="locWeekHours" class="font-bold font-sans" dir="ltr"></span></div>
+                    <div class="flex items-center justify-between gap-3"><span id="locFriLabel" class="text-slate-300"></span><span id="locFriHours" class="font-bold font-sans" dir="ltr"></span></div>
+                  </dd>
+                </div>
+              </div>
+            </dl>
           </div>
 
+          <div class="flex flex-wrap gap-2.5">
+            <a id="locDirections" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 active:scale-95 text-slate-950 text-sm font-black px-5 py-3 rounded-xl transition">
+              <i class="fa-solid fa-diamond-turn-right"></i><span id="locDirectionsText"></span>
+            </a>
+            <a id="locWhatsapp" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 ring-1 ring-white/15 active:scale-95 text-white text-sm font-bold px-5 py-3 rounded-xl transition">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i><span id="locWhatsappText"></span>
+            </a>
+          </div>
         </div>
 
-        <!-- Interactive Map Container (7 cols) -->
-        <div class="lg:col-span-7 flex flex-col justify-between">
-          <div class="relative w-full h-72 sm:h-88 lg:h-full min-h-[300px] rounded-2xl overflow-hidden border border-slate-200 shadow-inner group">
-            
-            <!-- Live Google Maps Embed (Irbid University Street) -->
-            <iframe 
-              title="TOP CAM Irbid Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13488.54421290351!2d35.856715!3d32.537618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c769165b40d65%3A0x6bfa3e76161947a8!2sUniversity%20St%2C%20Irbid%2C%20Jordan!5e0!3m2!1sen!2sjo!4v1700000000000!5m2!1sen!2sjo" 
-              class="w-full h-full border-0 filter saturate-110" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-
-            <!-- Floating Showroom Pill Card on Map -->
-            <div class="absolute bottom-3 right-3 left-3 sm:left-auto bg-white/95 backdrop-blur-md p-3 rounded-xl border border-slate-200/90 shadow-lg flex items-center justify-between sm:justify-start gap-3 font-sans">
-              <div class="w-9 h-9 rounded-lg bg-yellow-400 flex items-center justify-center shrink-0 shadow-2xs">
-                <i class="fa-solid fa-store text-slate-950 text-sm"></i>
-              </div>
-              <div>
-                <h5 class="text-xs font-black text-slate-900 leading-tight font-sans">TOP CAM Store - فرع إربد</h5>
-                <p class="text-[10px] text-slate-500 font-medium font-sans">شارع الجامعة • متوفر مواقف سيارات</p>
-              </div>
-              <a 
-                href="https://maps.google.com/?q=32.5376,35.8567" 
-                target="_blank" 
-                class="bg-slate-900 hover:bg-slate-800 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-lg transition shrink-0 mr-auto flex items-center gap-1 font-sans"
-              >
-                <span>فتح الخريطة</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
-              </a>
-            </div>
-
-          </div>
+        <!-- الخريطة -->
+        <div class="lg:col-span-7 relative min-h-[320px] sm:min-h-[420px] lg:min-h-[520px] bg-slate-200">
+          <iframe id="locMapFrame" title="TOP CAM location" class="absolute inset-0 w-full h-full border-0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a id="locOpenMap" href="#" target="_blank" rel="noopener" class="absolute top-3 end-3 inline-flex items-center gap-1.5 bg-white/95 hover:bg-white text-slate-900 text-[11px] font-bold px-3 py-2 rounded-lg shadow-lg backdrop-blur transition">
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i><span id="locOpenMapText"></span>
+          </a>
         </div>
 
       </div>
-
     </div>
   </section>
-
 
   <!-- ═══════════════ VALUE PROPOSITIONS BAR (Responsive 2x2 Grid) ═══════════════ -->
   <section class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6">
@@ -2196,6 +2132,7 @@
       setTimeout(() => {
         const nextLang = currentLang === 'ar' ? 'en' : 'ar';
         applyLanguage(nextLang);
+        try { renderLocationSection(); } catch (e) {}
         body.style.opacity = '1';
       }, 150);
     }
@@ -3435,6 +3372,80 @@
       scrollToProducts();
     }
 
+
+    // ═══════════════ قسم الموقع والخريطة (من إعدادات الأدمن) ═══════════════
+    function renderLocationSection() {
+      const sec = document.getElementById('locationSection');
+      if (!sec || typeof storeDB === 'undefined') return;
+      const s = storeDB.getSettings();
+      const en = (currentLang === 'en');
+      const T = en ? {
+        eyebrow: 'Visit the showroom', title: 'Find us in store', intro: 'Come try the latest cinema cameras, lenses and gear with our specialist team.',
+        addr: 'Address', hours: 'Opening hours', week: 'Saturday – Thursday', fri: 'Friday',
+        directions: 'Get directions', whatsapp: 'Message the branch', openMap: 'Open in Maps',
+        open: 'Open now', closed: 'Closed now', closesAt: 'closes', opensAt: 'opens', wa: 'Hello TOP CAM, I would like to visit the showroom.'
+      } : {
+        eyebrow: 'زوروا المعرض', title: 'موقعنا ومعرضنا', intro: 'تفضلوا بزيارتنا وتجربة أحدث كاميرات السينما والعدسات والمعدات مع فريقنا المختص.',
+        addr: 'العنوان', hours: 'أوقات العمل', week: 'السبت – الخميس', fri: 'الجمعة',
+        directions: 'الاتجاهات', whatsapp: 'تواصل مع المعرض', openMap: 'فتح في الخرائط',
+        open: 'مفتوح الآن', closed: 'مغلق الآن', closesAt: 'يغلق', opensAt: 'يفتح', wa: 'مرحباً TOP CAM، أود زيارة معرضكم.'
+      };
+      const lat = Number(s.mapLat), lng = Number(s.mapLng);
+      const hasPos = isFinite(lat) && isFinite(lng);
+      const fmt = (hhmm) => {
+        const [h, m] = String(hhmm || '00:00').split(':').map(Number);
+        const ap = h >= 12 ? 'PM' : 'AM';
+        return ((h % 12) || 12) + ':' + String(m || 0).padStart(2, '0') + ' ' + ap;
+      };
+      const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+
+      setText('locEyebrow', T.eyebrow);
+      setText('locTitle', T.title);
+      setText('locIntro', T.intro);
+      setText('locAddrLabel', T.addr);
+      setText('locAddr', s.storeAddress || '');
+      setText('locAddrDetails', s.storeAddressDetails || '');
+      setText('locHoursLabel', T.hours);
+      setText('locWeekLabel', T.week);
+      setText('locFriLabel', T.fri);
+      setText('locWeekHours', fmt(s.openWeek) + ' – ' + fmt(s.closeWeek));
+      setText('locFriHours', fmt(s.openFri) + ' – ' + fmt(s.closeFri));
+      setText('locDirectionsText', T.directions);
+      setText('locWhatsappText', T.whatsapp);
+      setText('locOpenMapText', T.openMap);
+
+      const placeUrl = s.mapsLink && /^https?:\/\//i.test(s.mapsLink) ? s.mapsLink : (hasPos ? 'https://www.google.com/maps/search/?api=1&query=' + lat + ',' + lng : '#');
+      const dirUrl = hasPos ? 'https://www.google.com/maps/dir/?api=1&destination=' + lat + ',' + lng : placeUrl;
+      document.getElementById('locDirections').href = dirUrl;
+      document.getElementById('locOpenMap').href = placeUrl;
+      const wa = String(s.whatsappNumber || '').replace(/[^0-9]/g, '');
+      document.getElementById('locWhatsapp').href = 'https://wa.me/' + wa + '?text=' + encodeURIComponent(T.wa);
+
+      const frame = document.getElementById('locMapFrame');
+      if (hasPos) {
+        const src = 'https://www.google.com/maps?q=' + lat + ',' + lng + '&z=16&hl=' + (en ? 'en' : 'ar') + '&output=embed';
+        if (frame.getAttribute('src') !== src) frame.setAttribute('src', src);
+      }
+
+      // مفتوح الآن / مغلق الآن بتوقيت عمّان
+      const badge = document.getElementById('locOpenBadge');
+      try {
+        const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Amman', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+        const get = (t) => (parts.find(p => p.type === t) || {}).value;
+        const isFri = get('weekday') === 'Fri';
+        const nowMin = (parseInt(get('hour'), 10) % 24) * 60 + parseInt(get('minute'), 10);
+        const toMin = (hhmm) => { const [h, m] = String(hhmm || '0:0').split(':').map(Number); return h * 60 + (m || 0); };
+        const open = toMin(isFri ? s.openFri : s.openWeek), close = toMin(isFri ? s.closeFri : s.closeWeek);
+        const isOpen = close > open ? (nowMin >= open && nowMin < close) : (nowMin >= open || nowMin < close);
+        badge.className = 'mt-5 inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-bold border ' +
+          (isOpen ? 'bg-emerald-500/10 text-emerald-300 border-emerald-400/30' : 'bg-rose-500/10 text-rose-300 border-rose-400/30');
+        badge.innerHTML = '<span class="w-2 h-2 rounded-full ' + (isOpen ? 'bg-emerald-400 animate-pulse' : 'bg-rose-400') + '"></span><span>' +
+          (isOpen ? T.open + ' · ' + T.closesAt + ' ' + fmt(isFri ? s.closeFri : s.closeWeek) : T.closed) + '</span>';
+      } catch (e) {
+        badge.className = 'hidden';
+      }
+    }
+
     // تشغيل عند تحميل الصفحة فوراً
     function bootStorefront() {
       // 1. تطبيق لغة المتجر والاتجاه فوراً
@@ -3461,6 +3472,7 @@
       } catch (err) {
         console.warn('initStorefrontDynamicFeatures warning:', err);
       }
+      try { renderLocationSection(); } catch (err) { console.warn('renderLocationSection warning:', err); }
     }
 
     bootStorefront();
@@ -3473,6 +3485,7 @@
       renderStorefrontProducts(currentCategory, currentBrand);
     });
     window.addEventListener('banners_updated', () => initStorefrontDynamicFeatures());
+    window.addEventListener('settings_updated', () => { try { renderLocationSection(); } catch (e) {} });
     window.addEventListener('promo_popup_updated', () => initStorefrontDynamicFeatures());
 
     // مزامنة تلقائية فورية عند الرجوع إلى صفحة المتجر على الهاتف

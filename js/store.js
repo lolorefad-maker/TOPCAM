@@ -24,7 +24,17 @@ const DEFAULT_SETTINGS = {
   },
   activeCurrency: 'JOD',
   taxRate: 0.0,
-  freeShippingThreshold: 50
+  freeShippingThreshold: 50,
+  // موقع المعرض وساعات العمل (يُعدَّلان من لوحة الإدارة ← الإعدادات)
+  storeAddress: 'إربد - شارع الجامعة الرئيسي',
+  storeAddressDetails: 'قرب إشارة الإسكان ومجمع الدوار، مقابل البوابة الشمالية لجامعة اليرموك - مجمع الأندلس التجاري، الطابق الأرضي.',
+  mapLat: 32.5376,
+  mapLng: 35.8567,
+  mapsLink: '',
+  openWeek: '10:00',
+  closeWeek: '22:00',
+  openFri: '14:00',
+  closeFri: '22:00'
 };
 
 const DEFAULT_BANNERS = {

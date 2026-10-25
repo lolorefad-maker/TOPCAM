@@ -1,0 +1,215 @@
+/* ══════════════════════════════════════════════════════════════
+   TOP CAM Control Center — طبقة التصميم الراقية للوحة الإدارة
+   تُحمَّل بعد Tailwind وتعدّل المظهر فقط (لا تغيّر أي وظيفة).
+   ══════════════════════════════════════════════════════════════ */
+:root {
+  --ink: #0a0e17;
+  --ink-2: #101624;
+  --ink-3: #182033;
+  --gold: #e7b93a;
+  --gold-2: #f2cf63;
+  --gold-soft: rgba(231, 185, 58, .13);
+  --canvas: #f4f5f8;
+  --panel: #ffffff;
+  --line: #e7e9ef;
+  --line-2: #eef0f4;
+  --text: #141a26;
+  --muted: #6a7384;
+  --radius: 18px;
+  --shadow-xs: 0 1px 2px rgba(16, 24, 40, .05);
+  --shadow-sm: 0 1px 3px rgba(16, 24, 40, .06), 0 1px 2px rgba(16, 24, 40, .04);
+  --shadow-md: 0 14px 34px -14px rgba(16, 24, 40, .22);
+  --ring: 0 0 0 4px rgba(231, 185, 58, .2);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--canvas) !important;
+  color: var(--text);
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* شريط تمرير رفيع */
+* { scrollbar-width: thin; scrollbar-color: #cfd4de transparent; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #cfd4de; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #b6bdcb; }
+
+/* ───────────── السايدبار ───────────── */
+body #adminSidebar {
+  background:
+    radial-gradient(120% 60% at 100% 0%, rgba(231, 185, 58, .09), transparent 55%),
+    linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%) !important;
+  border-left: 1px solid rgba(255, 255, 255, .06) !important;
+  box-shadow: -20px 0 50px -30px rgba(0, 0, 0, .6) !important;
+}
+body #adminSidebar > div:first-child > div:first-child {
+  padding: 22px 20px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, .06) !important;
+}
+body #adminSidebar nav { padding: 14px 12px !important; }
+body #adminSidebar nav > div.text-\[10px\] {
+  color: #5b6478 !important;
+  letter-spacing: .14em !important;
+  padding: 10px 12px 6px !important;
+}
+body .sidebar-link {
+  border-radius: 12px !important;
+  padding: 10px 12px !important;
+  font-weight: 700 !important;
+  color: #aab2c3 !important;
+  border-right: 3px solid transparent;
+  transition: background .18s, color .18s, transform .18s !important;
+}
+body .sidebar-link:hover {
+  background: rgba(255, 255, 255, .05) !important;
+  color: #fff !important;
+}
+body .sidebar-link.active {
+  background: linear-gradient(90deg, var(--gold-soft), rgba(231, 185, 58, .03)) !important;
+  color: var(--gold-2) !important;
+  border-right-color: var(--gold) !important;
+}
+body .sidebar-link.active i { color: var(--gold-2) !important; }
+body #adminSidebar .border-t.border-white\/10 {
+  border-color: rgba(255, 255, 255, .06) !important;
+  background: rgba(0, 0, 0, .18);
+}
+
+/* ───────────── الهيدر العلوي ───────────── */
+body header.sticky {
+  background: rgba(255, 255, 255, .8) !important;
+  -webkit-backdrop-filter: saturate(160%) blur(16px);
+  backdrop-filter: saturate(160%) blur(16px);
+  border-bottom: 1px solid var(--line) !important;
+  box-shadow: none !important;
+}
+body #currentSectionTitle {
+  letter-spacing: -.01em;
+  color: var(--text);
+}
+
+/* ───────────── البطاقات ───────────── */
+body main .bg-white.rounded-2xl,
+body main .bg-white.rounded-3xl,
+body main .bg-white.rounded-xl {
+  border: 1px solid var(--line) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow-xs) !important;
+  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+body main .bg-white.rounded-2xl.hover\:shadow-md:hover {
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-2px);
+  border-color: #dfe3ea !important;
+}
+body main .bg-gradient-to-br.to-amber-50\/40 {
+  background: linear-gradient(135deg, #fffdf6, #fff6dd) !important;
+  border-color: #f1dfa6 !important;
+}
+
+/* أرقام المؤشرات */
+body main .text-2xl.font-black,
+body main .text-3xl.font-black {
+  letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ───────────── الجداول ───────────── */
+body main table { border-collapse: separate; border-spacing: 0; }
+body main table thead tr {
+  background: #fafbfc !important;
+}
+body main table thead th {
+  font-size: 11px !important;
+  letter-spacing: .04em;
+  color: var(--muted) !important;
+  font-weight: 800 !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  border-bottom: 1px solid var(--line) !important;
+  white-space: nowrap;
+}
+body main table tbody tr {
+  transition: background .15s;
+}
+body main table tbody tr:hover { background: #fafbfe; }
+body main table tbody td { border-color: var(--line-2) !important; }
+
+/* ───────────── الحقول ───────────── */
+body input[type="text"], body input[type="number"], body input[type="time"],
+body input[type="tel"], body input[type="password"], body input[type="search"],
+body input[type="url"], body input[type="email"], body select, body textarea {
+  border: 1px solid #e1e5ec !important;
+  border-radius: 12px !important;
+  background-color: #fbfcfd;
+  color: var(--text);
+  transition: border-color .15s, box-shadow .15s, background-color .15s;
+}
+body input:hover:not(:focus), body select:hover:not(:focus), body textarea:hover:not(:focus) {
+  border-color: #cdd3de !important;
+}
+body input:focus, body select:focus, body textarea:focus {
+  outline: none !important;
+  border-color: var(--gold) !important;
+  background-color: #fff;
+  box-shadow: var(--ring) !important;
+}
+body ::placeholder { color: #a3abbb; }
+
+/* ───────────── الأزرار ───────────── */
+body button, body a[class*="rounded-xl"] { transition: background-color .18s, transform .12s, box-shadow .18s, color .18s; }
+body button:focus-visible, body a:focus-visible, body .sidebar-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+body button.bg-yellow-400, body a.bg-yellow-400 {
+  background-image: linear-gradient(180deg, #f3d36b, #e3b22f);
+  box-shadow: 0 6px 16px -8px rgba(227, 178, 47, .8), inset 0 1px 0 rgba(255, 255, 255, .45);
+}
+body button.bg-yellow-400:hover { filter: brightness(1.03); }
+body button.bg-slate-900, body a.bg-slate-900 {
+  background-image: linear-gradient(180deg, #1b2438, #0e1422);
+  box-shadow: 0 8px 18px -10px rgba(10, 14, 23, .9);
+}
+
+/* الشارات */
+body main span.rounded-full, body main span.rounded-md { letter-spacing: .01em; }
+
+/* ───────────── النوافذ المنبثقة ───────────── */
+body .fixed.inset-0[class*="bg-slate-950"] {
+  background: rgba(8, 11, 20, .62) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+body .fixed.inset-0 > .bg-white.rounded-3xl {
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, .7) !important;
+  box-shadow: 0 40px 90px -30px rgba(8, 11, 20, .55) !important;
+}
+
+/* ───────────── التنبيهات (Toast) ───────────── */
+body #toastContainer > div {
+  background: rgba(12, 17, 29, .96) !important;
+  border: 1px solid rgba(255, 255, 255, .08) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 18px 40px -16px rgba(0, 0, 0, .6) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* حركة دخول خفيفة للأقسام */
+@keyframes adminFadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+body .admin-pane:not(.hidden) { animation: adminFadeUp .28s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* شاشة الدخول */
+#adminGate form {
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, .7);
+  background: linear-gradient(180deg, #121a2b, #0d1322) !important;
+}
