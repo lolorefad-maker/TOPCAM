@@ -250,20 +250,6 @@
                 <i class="fa-solid fa-chevron-left text-xs text-slate-400 group-hover:text-amber-500 transition"></i>
               </a>
 
-              <!-- Admin Panel Link -->
-              <a href="admin.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-amber-50/60 text-slate-800 text-xs sm:text-sm font-bold transition group border border-transparent hover:border-amber-200">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-shield-halved text-yellow-600 w-5 text-center"></i>
-                  <div>
-                    <div class="flex items-center gap-1.5">
-                      <span>لوحة التحكم والإدارة</span>
-                      <span class="bg-yellow-400 text-slate-950 text-[8px] font-black px-1.5 py-0.2 rounded uppercase">ADMIN</span>
-                    </div>
-                    <div class="text-[10px] text-slate-400 font-normal">الطلبات، المخزون، الأسعار، العروض</div>
-                  </div>
-                </div>
-                <i class="fa-solid fa-chevron-left text-xs text-slate-400 group-hover:text-yellow-600 transition"></i>
-              </a>
 
               <a href="#productsSection" onclick="filterByCategory('deals'); toggleMobileMenu();" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-bold transition">
                 <div class="flex items-center gap-3">
@@ -316,7 +302,7 @@
           <!-- Group 3: Services & Account -->
           <div class="pt-2 border-t border-slate-100">
             <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
-              خدماتي والإدارة
+              خدماتي
             </div>
             <div class="space-y-1">
               <button onclick="toggleCartDrawer(true); toggleMobileMenu();" class="w-full flex items-center justify-between px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
@@ -332,10 +318,6 @@
                 <span>قائمة المفضلة (Wishlist)</span>
               </button>
 
-              <a href="admin.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-500 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-sliders text-slate-500 w-5 text-center"></i>
-                <span>لوحة تحكم الإدارة</span>
-              </a>
             </div>
           </div>
 
@@ -1484,7 +1466,6 @@
         <div>
           <h5 class="font-bold text-slate-900 mb-2.5">Support</h5>
           <ul class="space-y-1.5 text-[11px] text-slate-500">
-            <li><a href="admin.html" class="hover:text-yellow-600 font-bold text-yellow-600"><i class="fa-solid fa-sliders mr-1"></i> لوحة الإدارة</a></li>
             <li><a href="#" class="hover:text-yellow-600">Track Order</a></li>
             <li><a href="#" class="hover:text-yellow-600">Returns & Refunds</a></li>
             <li><a href="#" class="hover:text-yellow-600">Warranty Policy</a></li>
@@ -1558,11 +1539,6 @@
     <!-- Official Website Footer Pill -->
     <div class="text-center text-[10px] text-slate-400 font-mono py-0.5 border-t border-slate-100 bg-slate-50/50 flex items-center justify-center gap-2">
       <a href="about.html" class="hover:text-amber-600 transition">youcamjor.com</a>
-      <span>•</span>
-      <a href="admin.html" class="text-yellow-600 hover:text-yellow-700 font-bold transition flex items-center gap-1">
-        <i class="fa-solid fa-shield-halved text-[9px]"></i>
-        <span>لوحة الإدارة</span>
-      </a>
     </div>
   </div>
 
@@ -1583,7 +1559,7 @@
 
       <div class="border-t border-slate-100 pt-3 sm:pt-4 space-y-2.5 pb-6 sm:pb-0">
         <div class="flex justify-between text-xs sm:text-sm font-bold">
-          <span>Total:</span>
+          <span id="cartTotalLabel">Total:</span>
           <span id="cartTotal" class="text-yellow-600 font-extrabold text-base">0 د.أ</span>
         </div>
 
@@ -1714,7 +1690,7 @@
         <i class="fa-solid fa-check"></i>
       </div>
       <h3 class="text-base font-black text-slate-900 mb-1">تم تسجيل طلبك بنجاح!</h3>
-      <p class="text-xs text-slate-500 mb-3">تم إرسال بياناتك وموقعك للتوصيل إلى لوحة الإدارة.</p>
+      <p class="text-xs text-slate-500 mb-3">تم إرسال بياناتك وموقعك للتوصيل إلى فريق المتجر.</p>
 
       <div class="bg-yellow-50 border border-yellow-200 rounded-lg py-1.5 px-3 inline-block font-mono font-bold text-slate-950 text-sm mb-4" id="successOrderNum">
         #ORD-00000
@@ -1939,6 +1915,8 @@
 
   <script src="js/data.js?v=20261020_v35"></script>
   <script src="js/store.js?v=20261025"></script>
+  <script src="js/i18n-dom.js?v=20261026"></script>
+  <script src="js/i18n-specs.js?v=20261026"></script>
   <script>
     let cart = [];
 
@@ -2098,7 +2076,7 @@
       if (cartHeading && cartCountEl) {
         cartHeading.innerHTML = `${dict.cartTitle} (<span id="cartCount">${cartCountEl.textContent}</span>)`;
       }
-      const cartTotalLabel = document.querySelector('#cartBox .flex.justify-between span:first-child');
+      const cartTotalLabel = document.getElementById('cartTotalLabel');
       if (cartTotalLabel) cartTotalLabel.textContent = dict.cartTotal;
 
       const checkoutBtnSpan = document.querySelector('#cartBox button[onclick="openCheckoutModal()"] span');
@@ -2192,8 +2170,11 @@
       }
 
       list.innerHTML = cart.map((item, index) => `
-        <div class="flex items-center justify-between p-2 sm:p-2.5 bg-slate-50 rounded-lg text-xs">
-          <div>
+        <div class="flex items-center justify-between gap-2.5 p-2 sm:p-2.5 bg-slate-50 rounded-lg text-xs">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-lg bg-white border border-slate-200 overflow-hidden flex items-center justify-center">
+            <img src="${item.image || 'images/camera_body.jpg'}" alt="${String(item.name).replace(/"/g, '&quot;')}" onerror="this.onerror=null;this.src='images/camera_body.jpg'" class="max-w-full max-h-full object-contain">
+          </div>
+          <div class="flex-1 min-w-0">
             <div class="font-bold text-slate-900 flex items-center gap-1.5 flex-wrap"><span>${item.name}</span>${item.isPreOrder ? `<span class="text-[9px] font-black bg-amber-100 text-amber-800 px-1.5 py-0.2 rounded font-sans">${currentLang === 'en' ? 'Pre-Order' : 'طلب مسبق'}</span>` : ''}</div>
             <div class="text-slate-500 font-semibold font-sans">${formatCurrency(item.price)} × ${item.qty}</div>
           </div>
@@ -2873,10 +2854,12 @@
       const specs = product.specs || {};
       const keys = Object.keys(specs).slice(0, 4);
       if (isEn) {
-        const name = product.nameEn || product.name || 'This product';
+        const trName = (x) => { const t = (window.TopcamI18n && TopcamI18n.translate(String(x))) || null; return t === null ? String(x) : t; };
+        const name = trName(product.nameEn || product.name || 'This product');
         const brand = product.brand ? ' from ' + product.brand : '';
         let text = name + brand + ' is available at TOP CAM Jordan with an official warranty from the authorised dealer.';
-        if (keys.length) text += ' Highlights: ' + keys.map(k => k + ': ' + specs[k]).join(' | ') + '.';
+        const tr = (x) => { const t = (window.TopcamI18n && TopcamI18n.translate(String(x))) || null; return t === null ? String(x) : t; };
+        if (keys.length) text += ' Highlights: ' + keys.map(k => tr(k) + ': ' + tr(specs[k])).join(' | ') + '.';
         text += ' Free delivery across Jordan and inspection before payment.';
         return text;
       }
@@ -2939,7 +2922,15 @@
 
       // Populate Main Product Elements
       const isEn = (currentLang === 'en');
-      document.getElementById('bubbleCategoryBadge').textContent = product.category || 'Gear';
+      const CAT_LABELS = {
+        cameras: ['كاميرات', 'Cameras'], filters: ['عدسات وفلاتر', 'Lenses & Filters'], lenses: ['عدسات', 'Lenses'],
+        audio: ['صوتيات', 'Audio'], lighting: ['إضاءة', 'Lighting'], gimbals: ['جيمبل', 'Gimbals'],
+        stabilizers: ['جيمبل وستيبلايزر', 'Stabilizers'], cages: ['كيج وتثبيت', 'Cages'], chargers_batteries: ['بطاريات وشواحن', 'Batteries & Chargers'],
+        batteries: ['بطاريات', 'Batteries'], bags: ['حقائب', 'Bags'], tripods: ['ترايبودز', 'Tripods'], stands: ['ستاندات', 'Stands'],
+        monitors: ['شاشات', 'Monitors'], memory: ['ذاكرة', 'Memory']
+      };
+      const catLabel = CAT_LABELS[product.category];
+      document.getElementById('bubbleCategoryBadge').textContent = catLabel ? catLabel[isEn ? 1 : 0] : (product.category || (isEn ? 'Gear' : 'معدات'));
       document.getElementById('bubbleSkuBadge').textContent = 'SKU: ' + (product.id || 'TOPCAM');
 
       // Availability badge and action buttons in showroom modal
@@ -3445,6 +3436,16 @@
         badge.className = 'hidden';
       }
     }
+
+    // ترجمة كاملة لكل نصوص المتجر عند تبديل اللغة (عربي ⇄ إنجليزي)
+    (function () {
+      const baseApplyLanguage = applyLanguage;
+      applyLanguage = function (lang) {
+        baseApplyLanguage(lang);
+        try { if (typeof renderLocationSection === 'function') renderLocationSection(); } catch (e) {}
+        try { window.TopcamI18n && TopcamI18n.apply(lang); } catch (e) { console.warn('i18n-dom:', e); }
+      };
+    })();
 
     // تشغيل عند تحميل الصفحة فوراً
     function bootStorefront() {
