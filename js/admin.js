@@ -1494,6 +1494,52 @@ function bulkSetAvailability(category, status) {
   showAdminToast('تم تغيير ' + targets.length + ' منتج في قسم "' + (catNames[category] || category) + '" إلى ' + labels[status] + '.', 'success');
 }
 
+// عدد منتجات "كتالوج هذا الجهاز" (النسخة المحفوظة قبل مزامنة السيرفر، وإلا الحالية)
+function updateAdoptCount() {
+  const el = document.getElementById('adoptCount');
+  if (!el) return;
+  const b = storeDB.getDeviceCatalogBackup();
+  el.textContent = b ? b.count : storeDB.getProducts().length;
+}
+
+// اعتماد كتالوج هذا الجهاز كنسخة رئيسية على السيرفر لكل الأجهزة
+async function adoptThisDeviceCatalog() {
+  const backup = storeDB.getDeviceCatalogBackup();
+  const list = backup ? backup.products : storeDB.getProducts();
+  if (!Array.isArray(list) || list.length === 0) {
+    showAdminToast('لا يوجد كتالوج على هذا الجهاز لاعتماده.', 'error');
+    return;
+  }
+  if (!confirm('سيتم اعتماد ' + list.length + ' منتج من هذا الجهاز كنسخة رئيسية لكل الأجهزة، واستبدال ما على السيرفر. هل تريد المتابعة؟')) return;
+
+  const keep = new Set(list.map(p => p.id));
+  const baseIds = (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : []).map(p => p.id);
+  const deletedIds = baseIds.filter(id => !keep.has(id));
+
+  try {
+    const r1 = await storeDB.apiFetch('/api/save-catalog', { method: 'POST', body: JSON.stringify({ products: list }) });
+    if (!r1.ok) throw new Error('catalog');
+    await storeDB.apiFetch('/api/reset-deleted', { method: 'POST' });
+    const r2 = await storeDB.apiFetch('/api/sync-deleted', { method: 'POST', body: JSON.stringify({ deletedIds }) });
+    if (!r2.ok) throw new Error('deleted');
+  } catch (e) {
+    showAdminToast('تعذر الحفظ على السيرفر. تأكد من تسجيل الدخول والاتصال ثم أعد المحاولة.', 'error');
+    return;
+  }
+
+  localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(deletedIds));
+  localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(list));
+  storeDB.dispatchChange('products_updated');
+  renderAdminStats();
+  renderAdminDashboardCharts();
+  renderAdminInventory();
+  renderAdminBrands();
+  showAdminToast('تم اعتماد ' + list.length + ' منتج كنسخة رئيسية. كل الأجهزة ستتطابق بعد تحديث الصفحة.', 'success');
+}
+
+document.addEventListener('DOMContentLoaded', () => { updateAdoptCount(); });
+window.addEventListener('products_updated', () => { updateAdoptCount(); });
+
 function toggleCustomBadgeInput(val) {
   const box = document.getElementById('customBadgeContainer');
   if (!box) return;

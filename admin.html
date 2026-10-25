@@ -547,6 +547,20 @@
             </div>
           </div>
 
+          <!-- اعتماد كتالوج هذا الجهاز -->
+          <div class="mb-4 rounded-2xl border border-slate-200 bg-slate-50 p-3.5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-slate-900 text-yellow-400 flex items-center justify-center"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <div>
+                <div class="text-xs font-black text-slate-900">اعتماد كتالوج هذا الجهاز كنسخة رئيسية</div>
+                <div class="text-[11px] text-slate-500">يرفع قائمة المنتجات المحفوظة في هذا الجهاز (<span id="adoptCount" class="font-en font-black text-slate-800">0</span> منتج) للسيرفر لتتطابق كل الأجهزة معها. افتح الأدمن من الجهاز الصحيح (مثل الهاتف) قبل الضغط.</div>
+              </div>
+            </div>
+            <button type="button" onclick="adoptThisDeviceCatalog()" class="shrink-0 bg-slate-900 hover:bg-slate-800 text-yellow-400 font-black text-xs px-4 py-2.5 rounded-xl transition">
+              <i class="fa-solid fa-cloud-arrow-up ml-1"></i> اعتماد هذا الجهاز
+            </button>
+          </div>
+
           <!-- Inventory Table -->
           <div class="overflow-x-auto rounded-2xl border border-slate-200">
             <table class="w-full text-right text-xs">

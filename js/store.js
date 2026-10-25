@@ -209,39 +209,40 @@ class StoreDB {
     try {
       const isAdmin = !!this.adminKey();
 
-      // 1. الأدمن يرسل المحذوفات المسجلة عنده أولاً
-      const localDeleted = this.getDeletedProductIds();
-      if (isAdmin && localDeleted.length > 0) {
-        await this.apiFetch('/api/sync-deleted', { method: 'POST', body: JSON.stringify({ deletedIds: localDeleted }) }).catch(() => {});
-      }
-
-      // 2. السيرفر هو المرجع: نسحب المحذوفات والكتالوج والإعدادات
+      // السيرفر هو المرجع: نسحب المحذوفات والكتالوج والإعدادات
       const [delRes, catRes, kvRes] = await Promise.all([
         fetch('/api/deleted-ids', { cache: 'no-store' }),
         fetch('/api/catalog', { cache: 'no-store' }),
         fetch('/api/kv', { cache: 'no-store' })
       ]);
 
-      if (delRes.ok) {
-        const serverDeleted = await delRes.json();
-        if (Array.isArray(serverDeleted)) {
-          const merged = isAdmin ? Array.from(new Set([...localDeleted, ...serverDeleted])) : serverDeleted;
-          localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(merged));
-        }
+      // saved = كتالوج اعتمده الأدمن (يطابق كل الأجهزة). seed = لم يُعتمد بعد، فنبقي كتالوج الجهاز كما هو.
+      const source = catRes.headers.get('X-Catalog-Source') || 'saved';
+      let catalogFromServer = null;
+      if (catRes.ok) {
+        const list = await catRes.json();
+        if (source === 'saved' && Array.isArray(list) && list.length > 0) catalogFromServer = list;
       }
 
-      if (catRes.ok) {
-        const serverCatalog = await catRes.json();
-        if (Array.isArray(serverCatalog) && serverCatalog.length > 0) {
-          const deleted = new Set(this.getDeletedProductIds());
-          const next = JSON.stringify(serverCatalog.filter(p => !deleted.has(p.id)));
-          if (localStorage.getItem(STORE_KEYS.PRODUCTS) !== next) {
-            localStorage.setItem(STORE_KEYS.PRODUCTS, next);
-            this.dispatchChange('products_updated');
-          }
-        } else if (this.getDeletedProductIds().length > 0) {
+      if (catalogFromServer) {
+        // كتالوج معتمد: يُستبدل كتالوج الجهاز به، وقائمة المحذوفات تُشتق منه
+        const next = JSON.stringify(catalogFromServer);
+        if (localStorage.getItem(STORE_KEYS.PRODUCTS) !== next) {
+          this.backupDeviceCatalog();
+          localStorage.setItem(STORE_KEYS.PRODUCTS, next);
+        }
+        const keep = new Set(catalogFromServer.map(p => p.id));
+        const base = (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : []);
+        localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(base.map(p => p.id).filter(id => !keep.has(id))));
+        this.dispatchChange('products_updated');
+      } else if (delRes.ok) {
+        // لا كتالوج معتمد بعد: نطبّق المحذوفات المسجلة على السيرفر فقط
+        const serverDeleted = await delRes.json();
+        if (Array.isArray(serverDeleted) && serverDeleted.length > 0) {
+          const merged = Array.from(new Set([...this.getDeletedProductIds(), ...serverDeleted]));
+          localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(merged));
           const current = this.getProducts();
-          const deleted = new Set(this.getDeletedProductIds());
+          const deleted = new Set(merged);
           const clean = current.filter(p => !deleted.has(p.id));
           if (clean.length !== current.length) this.saveProducts(clean, { noPush: true });
         }
@@ -272,6 +273,26 @@ class StoreDB {
     } catch (e) {
       // وضع غير متصل أو تشغيل بدون خادم
     }
+  }
+
+  // يحفظ نسخة من كتالوج هذا الجهاز (مرة واحدة فقط) قبل أن يستبدله كتالوج السيرفر،
+  // ليستطيع الأدمن اعتماده كنسخة رئيسية من لوحة الإدارة.
+  backupDeviceCatalog() {
+    try {
+      if (localStorage.getItem('topcam_device_catalog_backup')) return;
+      const raw = localStorage.getItem(STORE_KEYS.PRODUCTS);
+      if (!raw) return;
+      const products = JSON.parse(raw);
+      if (!Array.isArray(products) || !products.length) return;
+      localStorage.setItem('topcam_device_catalog_backup', JSON.stringify({ savedAt: new Date().toISOString(), count: products.length, products }));
+    } catch (e) {}
+  }
+
+  getDeviceCatalogBackup() {
+    try {
+      const b = JSON.parse(localStorage.getItem('topcam_device_catalog_backup') || 'null');
+      return b && Array.isArray(b.products) ? b : null;
+    } catch (e) { return null; }
   }
 
   // الأدمن: جلب كل الطلبات من السيرفر

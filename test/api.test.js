@@ -54,6 +54,7 @@ const call = (p, o) => fetch(base + p, o);
     await call('/api/deleted-ids', { method: 'POST', headers: A, body: JSON.stringify({ id: a[0].id }) });
     const c = await (await call('/api/catalog')).json();
     assert.equal(c.length, a.length - 1, 'المحذوف يُستبعد من الكتالوج الموحّد');
+    assert.equal((await call('/api/catalog')).headers.get('x-catalog-source'), 'seed');
     await call('/api/reset-deleted', { method: 'POST', headers: A });
   });
   await t('الأدمن مرفوض بدون كلمة سر', async () => {
@@ -119,6 +120,7 @@ const call = (p, o) => fetch(base + p, o);
     ];
     assert.equal((await call('/api/save-catalog', { method: 'POST', headers: A, body: JSON.stringify({ products: prods }) })).status, 200);
     assert.equal((await call('/api/save-catalog', { method: 'POST', headers: A, body: '{"products":[]}' })).status, 400);
+    assert.equal((await call('/api/catalog')).headers.get('x-catalog-source'), 'saved');
     const pub = await (await call('/api/catalog')).json();
     assert.equal(pub.length, 2);
     assert.equal(pub[0].availability, 'pre_order');

@@ -232,7 +232,9 @@ async function handleApi(req, res, reqPath) {
   try {
     // --- عامة (للزبائن) ---
     if (reqPath === '/api/catalog' && req.method === 'GET') {
-      return send(res, 200, currentProducts());
+      const saved = readJson(FILES.catalog, null);
+      const isSaved = Array.isArray(saved) && saved.length > 0;
+      return send(res, 200, isSaved ? saved : seededCatalog(), { 'X-Catalog-Source': isSaved ? 'saved' : 'seed' });
     }
     if (reqPath === '/api/deleted-ids' && req.method === 'GET') {
       return send(res, 200, readJson(FILES.deleted, []));
