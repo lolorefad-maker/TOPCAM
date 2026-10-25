@@ -506,6 +506,47 @@
             </div>
           </div>
 
+          <!-- تعديل جماعي: حالة التوفر لقسم كامل -->
+          <div class="mb-4 rounded-2xl border border-amber-200 bg-amber-50/60 p-3.5 flex flex-col gap-3 lg:flex-row lg:items-center">
+            <div class="flex items-center gap-2.5 lg:ml-2">
+              <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center"><i class="fa-solid fa-layer-group"></i></div>
+              <div>
+                <div class="text-xs font-black text-slate-900">تعديل جماعي لقسم كامل</div>
+                <div class="text-[11px] text-slate-500">غيّر حالة كل منتجات القسم دفعة واحدة بدل واحدة واحدة.</div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 lg:mr-auto">
+              <select id="bulkCategory" class="bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs outline-none focus:border-yellow-400 cursor-pointer">
+                <option value="cameras">كاميرات</option>
+                <option value="lighting">إضاءات واستوديو</option>
+                <option value="filters">فلاتر وعدسات</option>
+                <option value="memory">ميموريات وذاكرة</option>
+                <option value="monitors">شاشات (Monitors)</option>
+                <option value="tripods">ترايبودز (Tripods)</option>
+                <option value="stands">ستاندات</option>
+                <option value="stabilizers">جيمبل وستيبلايزر</option>
+                <option value="gimbals">جيمبل</option>
+                <option value="chargers_batteries">شواحن وبطاريات</option>
+                <option value="bags">شناتي وحقائب</option>
+                <option value="cages">كيج وتثبيت</option>
+                <option value="audio">صوتيات ومايكات</option>
+              </select>
+              <select id="bulkStatus" class="bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs outline-none focus:border-yellow-400 cursor-pointer">
+                <option value="pre_order">🟠 بري اوردر (Pre-Order)</option>
+                <option value="sold_out">🔴 سولد اوت (Sold Out)</option>
+                <option value="available">🟢 متوفر (Available)</option>
+                <option value="none">⚪ بدون علامة (إيقاف)</option>
+              </select>
+              <button type="button" onclick="bulkSetAvailability()" class="bg-slate-900 hover:bg-slate-800 text-yellow-400 font-black text-xs px-4 py-2 rounded-xl transition">
+                <i class="fa-solid fa-check ml-1"></i> تطبيق على القسم
+              </button>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 border-t border-amber-200/70 pt-3 lg:border-t-0 lg:pt-0 lg:border-r lg:pr-3">
+              <button type="button" onclick="bulkSetAvailability('filters','pre_order')" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-black text-[11px] px-3 py-2 rounded-xl transition">العدسات والفلاتر ← بري اوردر</button>
+              <button type="button" onclick="bulkSetAvailability('chargers_batteries','pre_order')" class="bg-amber-400 hover:bg-amber-500 text-slate-950 font-black text-[11px] px-3 py-2 rounded-xl transition">البطاريات ← بري اوردر</button>
+            </div>
+          </div>
+
           <!-- Inventory Table -->
           <div class="overflow-x-auto rounded-2xl border border-slate-200">
             <table class="w-full text-right text-xs">

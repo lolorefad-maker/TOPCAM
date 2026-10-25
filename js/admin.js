@@ -1464,6 +1464,36 @@ function handleInlineAvailabilityChange(productId, newStatus) {
   renderAdminInventory();
 }
 
+// تغيير حالة التوفر (بري اوردر / سولد اوت / متوفر / بدون) لكل منتجات قسم دفعة واحدة
+function bulkSetAvailability(category, status) {
+  category = category || document.getElementById('bulkCategory').value;
+  status = status || document.getElementById('bulkStatus').value;
+
+  const badges = { sold_out: 'سولد اوت', pre_order: 'بري اوردر', available: 'متوفر', none: '' };
+  const labels = { sold_out: 'سولد اوت', pre_order: 'بري اوردر', available: 'متوفر', none: 'بدون علامة' };
+  const catNames = {
+    cameras: 'كاميرات', lighting: 'إضاءات واستوديو', filters: 'فلاتر وعدسات', memory: 'ميموريات وذاكرة',
+    monitors: 'شاشات', tripods: 'ترايبودز', stands: 'ستاندات', stabilizers: 'جيمبل وستيبلايزر', gimbals: 'جيمبل',
+    chargers_batteries: 'شواحن وبطاريات', bags: 'شناتي وحقائب', cages: 'كيج وتثبيت', audio: 'صوتيات ومايكات'
+  };
+  if (!(status in badges)) return;
+
+  const products = storeDB.getProducts();
+  const targets = products.filter(p => p.category === category);
+  if (targets.length === 0) {
+    showAdminToast('لا توجد منتجات في قسم "' + (catNames[category] || category) + '".', 'info');
+    return;
+  }
+  if (!confirm('سيتم تغيير ' + targets.length + ' منتج في قسم "' + (catNames[category] || category) + '" إلى "' + labels[status] + '". هل تريد المتابعة؟')) return;
+
+  const updated = products.map(p => p.category === category ? Object.assign({}, p, { availability: status, badge: badges[status] }) : p);
+  storeDB.saveProducts(updated);
+  renderAdminStats();
+  renderAdminDashboardCharts();
+  renderAdminInventory();
+  showAdminToast('تم تغيير ' + targets.length + ' منتج في قسم "' + (catNames[category] || category) + '" إلى ' + labels[status] + '.', 'success');
+}
+
 function toggleCustomBadgeInput(val) {
   const box = document.getElementById('customBadgeContainer');
   if (!box) return;
