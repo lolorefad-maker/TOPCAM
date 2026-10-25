@@ -7,3 +7,10 @@ Thumbs.db
 
 # Node dependencies (if any)
 node_modules/
+
+# Runtime data (orders, admin password, catalog snapshots)
+data/orders.json
+data/kv.json
+data/catalog.json
+data/admin_password.txt
+data/*.tmp

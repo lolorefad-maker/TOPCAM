@@ -137,95 +137,7 @@ class StoreDB {
 
     // 2. Remove product from current list and persist
     if (!localStorage.getItem(STORE_KEYS.ORDERS)) {
-      const sampleOrders = [
-        {
-          id: 'ORD-72941',
-          date: new Date(Date.now() - 3600000 * 3).toISOString(),
-          customerName: 'طارق الأحمد',
-          phone: '+962791234567',
-          city: 'عمان',
-          address: 'عبدون - شارع دمشق - مجمع رقم 14',
-          paymentMethod: 'cash_on_delivery',
-          notes: 'يرجى التوصيل بعد الساعة 4 عصراً والتأكد من وجود الكفالة',
-          status: 'pending',
-          statusText: 'قيد المراجعة',
-          items: [
-            {
-              id: 'CAM-001',
-              name: 'Sony FX3 Cinema Line Full-Frame Camera',
-              price: 3899,
-              quantity: 1,
-              image: 'images/camera_body.jpg'
-            },
-            {
-              id: 'CAG-001',
-              name: 'قفص كاميرا سمول ريج SmallRig Cage FX3',
-              price: 99,
-              quantity: 1,
-              image: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=400&q=80'
-            }
-          ],
-          subtotal: 3998,
-          shipping: 0,
-          total: 3998
-        },
-        {
-          id: 'ORD-61830',
-          date: new Date(Date.now() - 3600000 * 20).toISOString(),
-          customerName: 'سارة خالد المنصور',
-          phone: '+962788765432',
-          city: 'عمان',
-          address: 'دابوق - قرب قصر المؤتمرات',
-          paymentMethod: 'bank_transfer',
-          notes: 'تم إرسال إشعار التحويل البنكي',
-          status: 'approved',
-          statusText: 'تمت الموافقة والتجهيز',
-          items: [
-            {
-              id: 'GMB-001',
-              name: 'DJI RS 3 Pro Gimbal Stabilizer Combo',
-              price: 869,
-              quantity: 1,
-              image: 'https://images.unsplash.com/photo-1589872545564-96464f89d311?auto=format&fit=crop&w=400&q=80'
-            },
-            {
-              id: 'MEM-001',
-              name: 'Sony TOUGH CFexpress Type A 160GB',
-              price: 369,
-              quantity: 2,
-              image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=400&q=80'
-            }
-          ],
-          subtotal: 1607,
-          shipping: 0,
-          total: 1607
-        },
-        {
-          id: 'ORD-54912',
-          date: new Date(Date.now() - 3600000 * 48).toISOString(),
-          customerName: 'محمد القيسي',
-          phone: '+962795551234',
-          city: 'إربد',
-          address: 'شارع الجامعة - مجمع التاج',
-          paymentMethod: 'cash_on_delivery',
-          notes: 'توصيل عبر شركة الشحن السريع',
-          status: 'completed',
-          statusText: 'تم التوصيل بنجاح',
-          items: [
-            {
-              id: 'CAM-002',
-              name: 'Sony Alpha 7 IV Mirrorless Camera',
-              price: 2499,
-              quantity: 1,
-              image: 'images/new_camera.jpg'
-            }
-          ],
-          subtotal: 2499,
-          shipping: 0,
-          total: 2499
-        }
-      ];
-      localStorage.setItem(STORE_KEYS.ORDERS, JSON.stringify(sampleOrders));
+      localStorage.setItem(STORE_KEYS.ORDERS, '[]');
     }
 
     // 3. تهيئة السلة
@@ -255,62 +167,151 @@ class StoreDB {
   }
 
   // ================= مزامنة السيرفر عبر الأجهزة =================
+  // مفتاح الأدمن يُحفظ في sessionStorage بعد تسجيل الدخول في لوحة الإدارة
+  adminKey() {
+    try { return sessionStorage.getItem('topcam_admin_key') || ''; } catch (e) { return ''; }
+  }
+
+  apiFetch(url, opts = {}) {
+    const headers = Object.assign({ 'Content-Type': 'application/json' }, opts.headers || {});
+    const key = this.adminKey();
+    if (key) headers['x-admin-key'] = key;
+    return fetch(url, Object.assign({}, opts, { headers, cache: 'no-store' }));
+  }
+
+  // رفع الكتالوج (للأدمن فقط) بعد أي تعديل، مع تجميع التعديلات المتتالية
+  pushCatalog() {
+    if (!this.adminKey()) return;
+    clearTimeout(this._catalogTimer);
+    this._catalogTimer = setTimeout(() => {
+      const prods = this.getProducts();
+      if (!Array.isArray(prods) || prods.length === 0) return;
+      this.apiFetch('/api/save-catalog', { method: 'POST', body: JSON.stringify({ products: prods }) }).catch(() => {});
+    }, 400);
+  }
+
+  pushKv(name, value) {
+    if (!this.adminKey()) return;
+    this.apiFetch('/api/kv/' + name, { method: 'PUT', body: JSON.stringify({ value }) }).catch(() => {});
+  }
+
   async syncWithServer() {
     try {
+      const isAdmin = !!this.adminKey();
+
+      // 1. الأدمن يرسل المحذوفات المسجلة عنده أولاً
       const localDeleted = this.getDeletedProductIds();
-      // 1. إرسال أي محذوفات محلية مسجلة على هذا الجهاز إلى السيرفر
-      if (localDeleted.length > 0) {
-        await fetch('/api/sync-deleted', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ deletedIds: localDeleted })
-        }).catch(() => {});
+      if (isAdmin && localDeleted.length > 0) {
+        await this.apiFetch('/api/sync-deleted', { method: 'POST', body: JSON.stringify({ deletedIds: localDeleted }) }).catch(() => {});
       }
 
-      // 2. إذا كنا على اللابتوب ويوجد كتالوج منتجات معدل، نرفعه فوراً للسيرفر ليكون هو الأساس
-      const stored = localStorage.getItem(STORE_KEYS.PRODUCTS);
-      if (stored) {
-        try {
-          const prods = JSON.parse(stored);
-          if (Array.isArray(prods) && prods.length > 0) {
-            fetch('/api/save-catalog', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ products: prods })
-            }).catch(() => {});
-          }
-        } catch(e) {}
-      } else {
-        // 3. إذا كنا على الهاتف ولا يوجد تخزين بعد، نسحب كتالوج اللابتوب المعتمد من السيرفر فوراً
-        const catRes = await fetch('/api/catalog');
-        if (catRes.ok) {
-          const serverCatalog = await catRes.json();
-          if (Array.isArray(serverCatalog) && serverCatalog.length > 0) {
-            localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(serverCatalog));
+      // 2. السيرفر هو المرجع: نسحب المحذوفات والكتالوج والإعدادات
+      const [delRes, catRes, kvRes] = await Promise.all([
+        fetch('/api/deleted-ids', { cache: 'no-store' }),
+        fetch('/api/catalog', { cache: 'no-store' }),
+        fetch('/api/kv', { cache: 'no-store' })
+      ]);
+
+      if (delRes.ok) {
+        const serverDeleted = await delRes.json();
+        if (Array.isArray(serverDeleted)) {
+          const merged = isAdmin ? Array.from(new Set([...localDeleted, ...serverDeleted])) : serverDeleted;
+          localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(merged));
+        }
+      }
+
+      if (catRes.ok) {
+        const serverCatalog = await catRes.json();
+        if (Array.isArray(serverCatalog) && serverCatalog.length > 0) {
+          const deleted = new Set(this.getDeletedProductIds());
+          const next = JSON.stringify(serverCatalog.filter(p => !deleted.has(p.id)));
+          if (localStorage.getItem(STORE_KEYS.PRODUCTS) !== next) {
+            localStorage.setItem(STORE_KEYS.PRODUCTS, next);
             this.dispatchChange('products_updated');
           }
-        }
-      }
-
-      // 4. سحب قائمة المحذوفات الموحدة من السيرفر (لتحديث الهاتف بأي حذف تم على اللابتوب)
-      const res = await fetch('/api/deleted-ids');
-      if (res.ok) {
-        const serverDeleted = await res.json();
-        if (Array.isArray(serverDeleted) && serverDeleted.length > 0) {
-          const merged = Array.from(new Set([...localDeleted, ...serverDeleted]));
-          localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(merged));
-
-          // إعادة تصفية المنتجات الحالية إذا وجد أي عنصر محذوف
+        } else if (this.getDeletedProductIds().length > 0) {
           const current = this.getProducts();
-          const clean = current.filter(p => !merged.includes(p.id));
-          if (clean.length !== current.length) {
-            this.saveProducts(clean);
-          }
+          const deleted = new Set(this.getDeletedProductIds());
+          const clean = current.filter(p => !deleted.has(p.id));
+          if (clean.length !== current.length) this.saveProducts(clean, { noPush: true });
         }
       }
+
+      if (kvRes.ok) {
+        const kv = await kvRes.json();
+        const map = {
+          settings: [STORE_KEYS.SETTINGS, 'settings_updated'],
+          banners: [STORE_KEYS.BANNERS, 'banners_updated'],
+          promo: [STORE_KEYS.PROMO_POPUP, 'promo_popup_updated'],
+          gearUp: [STORE_KEYS.GEAR_UP, 'gear_up_updated']
+        };
+        Object.keys(map).forEach(name => {
+          if (kv && kv[name] && typeof kv[name] === 'object') {
+            const next = JSON.stringify(kv[name]);
+            if (localStorage.getItem(map[name][0]) !== next) {
+              localStorage.setItem(map[name][0], next);
+              this.dispatchChange(map[name][1]);
+            }
+          }
+        });
+      }
+
+      // 3. طلبات معلّقة لم تصل السيرفر سابقاً، وطلبات الأدمن
+      await this.flushPendingOrders();
+      if (isAdmin) await this.syncOrders();
     } catch (e) {
-      // وضع غير متصل أو تشغيل بدون خادم محلي
+      // وضع غير متصل أو تشغيل بدون خادم
     }
+  }
+
+  // الأدمن: جلب كل الطلبات من السيرفر
+  async syncOrders() {
+    if (!this.adminKey()) return false;
+    try {
+      const res = await this.apiFetch('/api/orders');
+      if (res.status === 401) {
+        try { sessionStorage.removeItem('topcam_admin_key'); } catch (e) {}
+        window.dispatchEvent(new CustomEvent('admin_unauthorized'));
+        return false;
+      }
+      if (!res.ok) return false;
+      const list = await res.json();
+      if (!Array.isArray(list)) return false;
+      const next = JSON.stringify(list);
+      if (localStorage.getItem(STORE_KEYS.ORDERS) !== next) {
+        localStorage.setItem(STORE_KEYS.ORDERS, next);
+        this.dispatchChange('orders_updated');
+      }
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // الزبون: إرسال الطلب للسيرفر، وإن فشل نحتفظ به ونعيد المحاولة لاحقاً
+  async postOrder(order) {
+    try {
+      const res = await this.apiFetch('/api/orders', { method: 'POST', body: JSON.stringify(order) });
+      if (res.status >= 400 && res.status < 500 && res.status !== 429) return 'rejected';
+      return res.ok ? 'ok' : 'retry';
+    } catch (e) {
+      return 'retry';
+    }
+  }
+
+  getPendingOrders() {
+    try { return JSON.parse(localStorage.getItem('topcam_pending_orders') || '[]'); } catch (e) { return []; }
+  }
+
+  async flushPendingOrders() {
+    const pending = this.getPendingOrders();
+    if (!pending.length) return;
+    const left = [];
+    for (const o of pending) {
+      const r = await this.postOrder(o);
+      if (r === 'retry') left.push(o);
+    }
+    try { localStorage.setItem('topcam_pending_orders', JSON.stringify(left)); } catch (e) {}
   }
 
   // ================= المنتجات =================
@@ -380,11 +381,12 @@ class StoreDB {
     return products.find(p => p.id === id) || null;
   }
 
-  saveProducts(products) {
+  saveProducts(products, opts = {}) {
     const deleted = new Set(this.getDeletedProductIds());
     const cleanList = Array.isArray(products) ? products.filter(p => !deleted.has(p.id)) : [];
     localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(cleanList));
     this.dispatchChange('products_updated');
+    if (!opts.noPush) this.pushCatalog();
   }
 
   addProduct(productData) {
@@ -448,9 +450,8 @@ class StoreDB {
 
     // 2. إرسال فوري إلى السيرفر ليتزامن الحذف على الهواتف وكافة الأجهزة الأخرى
     try {
-      fetch('/api/deleted-ids', {
+      this.apiFetch('/api/deleted-ids', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id })
       }).catch(() => {});
     } catch (e) {}
@@ -606,6 +607,7 @@ class StoreDB {
     const updated = { ...current, ...banners };
     localStorage.setItem(STORE_KEYS.BANNERS, JSON.stringify(updated));
     this.dispatchChange('banners_updated');
+    this.pushKv('banners', updated);
     return updated;
   }
 
@@ -624,6 +626,7 @@ class StoreDB {
     const updated = { ...current, ...promo };
     localStorage.setItem(STORE_KEYS.PROMO_POPUP, JSON.stringify(updated));
     this.dispatchChange('promo_popup_updated');
+    this.pushKv('promo', updated);
     return updated;
   }
 
@@ -642,6 +645,7 @@ class StoreDB {
     const updated = { ...current, ...gearUpData };
     localStorage.setItem(STORE_KEYS.GEAR_UP, JSON.stringify(updated));
     this.dispatchChange('gear_up_updated');
+    this.pushKv('gearUp', updated);
     return updated;
   }
 
@@ -716,7 +720,7 @@ class StoreDB {
   createOrder(orderData) {
     const orders = this.getOrders();
     const settings = this.getSettings();
-    const orderId = 'ORD-' + Math.floor(10000 + Math.random() * 90000);
+    const orderId = 'ORD-' + Math.floor(100000 + Math.random() * 900000);
 
     const newOrder = {
       id: orderId,
@@ -735,20 +739,21 @@ class StoreDB {
       total: orderData.total
     };
 
-    // تقليل المخزون تلقائياً عند إنشاء الطلب
-    if (newOrder.items && Array.isArray(newOrder.items)) {
-      newOrder.items.forEach(item => {
-        const prod = this.getProductById(item.id) || this.getProducts().find(p => p.name === item.name);
-        if (prod) {
-          const newStock = Math.max(0, (prod.stock || 0) - (item.quantity || 1));
-          this.quickUpdateStock(prod.id, newStock);
-        }
-      });
+    // الطلب يُرسل للسيرفر (هو من يخصم المخزون ويعيد حساب السعر). إن فشل الإرسال نعيد المحاولة لاحقاً.
+    if (this.adminKey()) {
+      orders.unshift(newOrder);
+      this.saveOrders(orders);
     }
-
-    orders.unshift(newOrder);
-    this.saveOrders(orders);
     this.clearCart();
+    this.postOrder(newOrder).then(r => {
+      if (r === 'retry') {
+        const pending = this.getPendingOrders();
+        pending.push(newOrder);
+        try { localStorage.setItem('topcam_pending_orders', JSON.stringify(pending)); } catch (e) {}
+      }
+      if (this.adminKey()) this.syncOrders();
+      else this.syncWithServer();
+    });
 
     const whatsappUrl = this.generateWhatsAppMessage(newOrder, settings);
 
@@ -833,6 +838,8 @@ class StoreDB {
       order.statusText = statusMap[status] || status;
       order.updatedAt = new Date().toISOString();
       this.saveOrders(orders);
+      this.apiFetch('/api/orders/' + encodeURIComponent(orderId), { method: 'PATCH', body: JSON.stringify({ status }) })
+        .then(r => { if (!r.ok) this.syncOrders(); }).catch(() => {});
       return order;
     }
     return null;
@@ -842,6 +849,8 @@ class StoreDB {
     let orders = this.getOrders();
     orders = orders.filter(o => o.id !== orderId);
     this.saveOrders(orders);
+    this.apiFetch('/api/orders/' + encodeURIComponent(orderId), { method: 'DELETE' })
+      .then(r => { if (!r.ok) this.syncOrders(); }).catch(() => {});
     return true;
   }
 
@@ -871,6 +880,7 @@ class StoreDB {
     const updated = { ...current, ...newSettings };
     localStorage.setItem(STORE_KEYS.SETTINGS, JSON.stringify(updated));
     this.dispatchChange('settings_updated');
+    this.pushKv('settings', updated);
     return updated;
   }
 
@@ -889,3 +899,11 @@ class StoreDB {
 // إنشاء مثيل عام للمتجر
 const storeDB = new StoreDB();
 window.storeDB = storeDB;
+
+// الأدمن: تحديث الطلبات تلقائياً كل 8 ثوانٍ، والكتالوج والإعدادات كل دقيقة
+if (storeDB.adminKey()) {
+  setInterval(() => { if (!document.hidden) storeDB.syncOrders(); }, 8000);
+  setInterval(() => { if (!document.hidden) storeDB.syncWithServer(); }, 60000);
+}
+// الزبون: إعادة محاولة إرسال أي طلب لم يصل
+window.addEventListener('online', () => storeDB.flushPendingOrders());

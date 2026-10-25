@@ -1920,6 +1920,17 @@
 
         </div>
 
+        <!-- Product Description Section -->
+        <div id="bubbleDescriptionBox" class="pt-3 border-t border-slate-100">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded-lg bg-yellow-400/20 text-yellow-600 flex items-center justify-center text-xs">
+              <i class="fa-solid fa-align-right"></i>
+            </div>
+            <h4 id="bubbleDescriptionTitle" class="text-sm font-black text-slate-900">وصف المنتج</h4>
+          </div>
+          <p id="bubbleDescriptionText" class="text-xs sm:text-[13px] leading-7 text-slate-600"></p>
+        </div>
+
         <!-- Technical Specifications Section -->
         <div class="pt-3 border-t border-slate-100">
           <div class="flex items-center justify-between mb-4">
@@ -1965,7 +1976,7 @@
   </div>
 
   <script src="js/data.js?v=20261020_v35"></script>
-  <script src="js/store.js?v=20261020_v35"></script>
+  <script src="js/store.js?v=20261025"></script>
   <script>
     let cart = [];
 
@@ -2341,7 +2352,7 @@
         address: location,
         paymentMethod: paymentMethod,
         notes: notes,
-        items: cart.map(i => ({ id: i.id || 'PRD-CAM', name: i.name, price: i.price, quantity: i.qty, image: i.image || 'images/camera_body.jpg' })),
+        items: cart.map(i => ({ id: i.id || 'PRD-CAM', name: i.name, price: i.price, quantity: i.qty, image: i.image || 'images/camera_body.jpg', isPreOrder: !!i.isPreOrder })),
         subtotal: total,
         shipping: 0,
         total: total
@@ -2868,13 +2879,57 @@
     let currentBubbleProduct = null;
     let currentActiveAngleUrl = null;
 
+    // حالة توفر المنتج: sold_out | pre_order | available | none (من حقل availability أو من الشارة القديمة)
+    function getProductAvailability(product) {
+      if (!product) return 'none';
+      const a = String(product.availability || '').toLowerCase().trim();
+      if (['sold_out', 'pre_order', 'available'].includes(a)) return a;
+      const b = String(product.badge || '').toLowerCase();
+      if (b.includes('سولد') || b.includes('sold out') || b.includes('نفدت')) return 'sold_out';
+      if (b.includes('بري') || b.includes('pre-order') || b.includes('pre order') || b.includes('طلب مسبق')) return 'pre_order';
+      if (b.includes('متوفر') || b.includes('available')) return 'available';
+      return 'none';
+    }
+
+    // بطاقات ثابتة في الصفحة لمنتجات غير موجودة في الكتالوج: نبني نافذتها من بيانات زر "أضف للسلة"
+    function productFromStaticCard(productId) {
+      const btn = [...document.querySelectorAll('button[onclick^="addToCartMock("]')]
+        .find(b => b.getAttribute('onclick').includes("'" + productId + "'"));
+      if (!btn) return null;
+      const m = btn.getAttribute('onclick').match(/addToCartMock\(\s*'((?:[^'\\]|\\.)*)'\s*,\s*([\d.]+)\s*,\s*'((?:[^'\\]|\\.)*)'/);
+      if (!m) return null;
+      return { id: productId, name: m[1], nameEn: m[1], price: parseFloat(m[2]), image: m[3], brand: '', category: '', specs: {}, description: '' };
+    }
+
+    function buildProductDescription(product, isEn) {
+      const specs = product.specs || {};
+      const keys = Object.keys(specs).slice(0, 4);
+      if (isEn) {
+        const name = product.nameEn || product.name || 'This product';
+        const brand = product.brand ? ' from ' + product.brand : '';
+        let text = name + brand + ' is available at TOP CAM Jordan with an official warranty from the authorised dealer.';
+        if (keys.length) text += ' Highlights: ' + keys.map(k => k + ': ' + specs[k]).join(' | ') + '.';
+        text += ' Free delivery across Jordan and inspection before payment.';
+        return text;
+      }
+      let text = (product.description || '').trim();
+      // تنظيف تكرار عبارة الكفالة الموجودة في بعض الأوصاف
+      text = text.replace(/(كفالة رسمية)(?:\s+كفالة رسمية)+/g, '$1').replace(/\s{2,}/g, ' ');
+      if (!text) {
+        text = (product.name || 'هذا المنتج') + (product.brand ? ' من ' + product.brand : '') + ' متوفر لدى TOP CAM الأردن بكفالة رسمية من الوكيل المعتمد.';
+      }
+      if (keys.length) text += ' أبرز المواصفات: ' + keys.map(k => k + ': ' + specs[k]).join(' | ') + '.';
+      return text;
+    }
+
     function openCameraSpecsBubble(productId) {
       if (typeof storeDB !== 'undefined' && storeDB.isProductDeleted && storeDB.isProductDeleted(productId)) {
         console.warn('Product is deleted:', productId);
         return;
       }
       const product = (typeof storeDB !== 'undefined' && storeDB.getProductById ? storeDB.getProductById(productId) : null) || 
-                      (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS.find(p => p.id === productId) : null);
+                      (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS.find(p => p.id === productId) : null) ||
+                      productFromStaticCard(productId);
       if (!product) {
         console.warn('Product not found for modal:', productId);
         return;
@@ -2978,7 +3033,11 @@
       // Multi-Angle Gallery Strip Setup
       const mainImg = document.getElementById('bubbleCameraImg');
       const galleryStrip = document.getElementById('bubbleGalleryStrip');
-      const gallery = (product.gallery && product.gallery.length > 0) ? product.gallery : [product.image || 'images/camera_body.jpg'];
+      const rawGallery = Array.isArray(product.gallery) ? product.gallery
+        : (typeof product.gallery === 'string' && product.gallery ? [product.gallery]
+        : (product.gallery && typeof product.gallery === 'object' ? Object.values(product.gallery) : []));
+      const galleryList = rawGallery.filter(u => typeof u === 'string' && u);
+      const gallery = galleryList.length > 0 ? galleryList : [product.image || 'images/camera_body.jpg'];
       
       currentActiveAngleUrl = gallery[0];
       mainImg.src = currentActiveAngleUrl;
@@ -2998,6 +3057,10 @@
         `;
         galleryStrip.parentElement.classList.remove('hidden');
       }
+
+      // Product description
+      document.getElementById('bubbleDescriptionTitle').textContent = isEn ? 'Product Description' : 'وصف المنتج';
+      document.getElementById('bubbleDescriptionText').textContent = buildProductDescription(product, isEn);
 
       // Populate Technical Specs Cards
       const specsGrid = document.getElementById('bubbleSpecsGrid');

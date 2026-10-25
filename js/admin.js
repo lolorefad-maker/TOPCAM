@@ -1269,16 +1269,14 @@ async function forceSyncLaptopToPhone() {
     const deletedIds = storeDB.getDeletedProductIds();
 
     // 1. إرسال المحذوفات
-    await fetch('/api/sync-deleted', {
+    await storeDB.apiFetch('/api/sync-deleted', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ deletedIds: deletedIds })
     }).catch(() => {});
 
     // 2. إرسال الكتالوج الدقيق للابتوب إلى السيرفر ليتم اعتماده للتلفون
-    const res = await fetch('/api/save-catalog', {
+    const res = await storeDB.apiFetch('/api/save-catalog', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ products: prods })
     });
 
@@ -1315,7 +1313,7 @@ function resetStoreData() {
   if (confirm('هل أنت متأكد من استعادة بيانات المنتجات الافتراضية؟')) {
     try {
       localStorage.removeItem(STORE_KEYS.DELETED_IDS);
-      fetch('/api/reset-deleted', { method: 'POST' }).catch(() => {});
+      storeDB.apiFetch('/api/reset-deleted', { method: 'POST' }).catch(() => {});
     } catch (e) {}
     storeDB.saveProducts(typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : []);
     showAdminToast('تم استعادة البيانات الافتراضية بنجاح!', 'success');
