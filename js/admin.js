@@ -1494,18 +1494,36 @@ function bulkSetAvailability(category, status) {
   showAdminToast('تم تغيير ' + targets.length + ' منتج في قسم "' + (catNames[category] || category) + '" إلى ' + labels[status] + '.', 'success');
 }
 
-// عدد منتجات "كتالوج هذا الجهاز" (النسخة المحفوظة قبل مزامنة السيرفر، وإلا الحالية)
+// عدد منتجات كتالوج هذا الجهاز الحالي
 function updateAdoptCount() {
   const el = document.getElementById('adoptCount');
   if (!el) return;
-  const b = storeDB.getDeviceCatalogBackup();
-  el.textContent = b ? b.count : storeDB.getProducts().length;
+  el.textContent = storeDB.getProducts().length;
 }
+
+// تنبيه في الأدمن إذا كان تخزين السيرفر مؤقتاً (يُمسح عند إعادة التشغيل)
+async function checkStorageMode() {
+  try {
+    const r = await storeDB.apiFetch('/api/storage');
+    if (!r.ok) return;
+    const s = await r.json();
+    if (s.persistent || document.getElementById('storageWarning')) return;
+    const main = document.querySelector('main');
+    if (!main) return;
+    const el = document.createElement('div');
+    el.id = 'storageWarning';
+    el.className = 'rounded-2xl border border-amber-300 bg-amber-50 text-amber-900 p-4 text-xs leading-6';
+    el.innerHTML = '<b>⚠️ التخزين مؤقت:</b> الطلبات وتعديلات الكتالوج والإعدادات تُمسح من السيرفر عند كل إعادة تشغيل أو نشر، وستظهر عند الزبائن بالشكل الأصلي. فعّل قاعدة Upstash المجانية (متغيرا البيئة <span dir="ltr" class="font-en font-bold">UPSTASH_REDIS_REST_URL</span> و <span dir="ltr" class="font-en font-bold">UPSTASH_REDIS_REST_TOKEN</span>) لتبقى البيانات دائمة.';
+    main.prepend(el);
+  } catch (e) {}
+}
+document.addEventListener('DOMContentLoaded', () => { setTimeout(checkStorageMode, 1200); });
 
 // اعتماد كتالوج هذا الجهاز كنسخة رئيسية على السيرفر لكل الأجهزة
 async function adoptThisDeviceCatalog() {
+  const current = storeDB.getProducts();
   const backup = storeDB.getDeviceCatalogBackup();
-  const list = backup ? backup.products : storeDB.getProducts();
+  const list = (Array.isArray(current) && current.length) ? current : (backup ? backup.products : []);
   if (!Array.isArray(list) || list.length === 0) {
     showAdminToast('لا يوجد كتالوج على هذا الجهاز لاعتماده.', 'error');
     return;

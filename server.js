@@ -57,19 +57,129 @@ function isAdmin(req) {
   return crypto.timingSafeEqual(a, b);
 }
 
-// ---------- قراءة وكتابة ملفات البيانات ----------
-function readJson(file, fallback) {
-  try {
-    return JSON.parse(fs.readFileSync(file, 'utf8') || 'null') ?? fallback;
-  } catch (e) {
-    return fallback;
-  }
+// ---------- التخزين ----------
+// الوضع الافتراضي: ملفات في مجلد data (تُمسح على الاستضافة المجانية عند كل إعادة تشغيل).
+// الوضع الدائم: اضبط UPSTASH_REDIS_REST_URL و UPSTASH_REDIS_REST_TOKEN (قاعدة Upstash مجانية)،
+// فتُحفظ الطلبات والكتالوج والإعدادات خارج السيرفر وتبقى بعد أي إعادة تشغيل أو نشر.
+const UP_URL = String(process.env.UPSTASH_REDIS_REST_URL || '').replace(/\/+$/, '');
+const UP_TOKEN = String(process.env.UPSTASH_REDIS_REST_TOKEN || '');
+const REMOTE = !!(UP_URL && UP_TOKEN);
+const CHUNK = 200000; // حجم الجزء الواحد (حد Upstash المجاني للطلب 1MB)
+
+const cache = new Map();   // الاسم -> القيمة (القراءة دائماً من الذاكرة)
+const dirty = new Set();   // أسماء تنتظر الحفظ في Upstash
+let flushing = false;
+let flushTimer = null;
+const nameOf = (file) => path.basename(file, '.json');
+
+async function upstash(cmd) {
+  const r = await fetch(UP_URL, {
+    method: 'POST',
+    headers: { Authorization: 'Bearer ' + UP_TOKEN, 'Content-Type': 'application/json' },
+    body: JSON.stringify(cmd)
+  });
+  let j = null;
+  try { j = await r.json(); } catch (e) {}
+  if (!r.ok || !j || j.error) throw new Error('upstash ' + r.status + ' ' + (j && j.error ? j.error : ''));
+  return j.result;
 }
+
+async function remoteSave(name, value) {
+  const s = JSON.stringify(value);
+  const n = Math.max(1, Math.ceil(s.length / CHUNK));
+  for (let i = 0; i < n; i++) await upstash(['SET', 'topcam:' + name + ':' + i, s.slice(i * CHUNK, (i + 1) * CHUNK)]);
+  await upstash(['SET', 'topcam:' + name + ':n', String(n)]);
+}
+
+async function remoteLoad(name) {
+  const n = await upstash(['GET', 'topcam:' + name + ':n']);
+  if (n === null || n === undefined) return undefined;
+  let s = '';
+  for (let i = 0; i < Number(n); i++) {
+    const part = await upstash(['GET', 'topcam:' + name + ':' + i]);
+    if (part === null || part === undefined) throw new Error('missing chunk ' + name + ':' + i);
+    s += part;
+  }
+  return JSON.parse(s);
+}
+
+function readFileJson(file) {
+  try { return JSON.parse(fs.readFileSync(file, 'utf8') || 'null'); } catch (e) { return undefined; }
+}
+
+async function withRetry(fn, tries) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    try { return await fn(); } catch (e) { last = e; await new Promise(r => setTimeout(r, 400 * Math.pow(2, i))); }
+  }
+  throw last;
+}
+
+async function initStorage() {
+  for (const file of Object.values(FILES)) {
+    const name = nameOf(file);
+    let value;
+    if (REMOTE) {
+      // إن تعذّر الاتصال نوقف التشغيل بدل أن نبدأ فارغين ونكتب فوق بيانات سليمة
+      value = await withRetry(() => remoteLoad(name), 4);
+      if (value === undefined) value = readFileJson(file); // أول تشغيل: نأخذ الملفات الموجودة إن وجدت
+    } else {
+      value = readFileJson(file);
+    }
+    if (value !== undefined && value !== null) cache.set(name, value);
+  }
+  console.log(REMOTE ? '💾 التخزين: Upstash (دائم)' : '💾 التخزين: ملفات محلية (مؤقتة على الاستضافة المجانية)');
+}
+
+function readJson(file, fallback) {
+  const v = cache.get(nameOf(file));
+  return v === undefined || v === null ? fallback : v;
+}
+
+function scheduleFlush(delay) {
+  if (flushTimer) return;
+  flushTimer = setTimeout(() => { flushTimer = null; flushAll().catch(() => {}); }, delay);
+}
+
+async function flushAll() {
+  if (flushing) return;
+  flushing = true;
+  try {
+    while (dirty.size) {
+      const name = dirty.values().next().value;
+      dirty.delete(name);
+      try {
+        await withRetry(() => remoteSave(name, cache.get(name)), 3);
+      } catch (e) {
+        console.error('تعذّر حفظ ' + name + ' في Upstash:', e.message);
+        dirty.add(name);
+        scheduleFlush(5000);
+        break;
+      }
+    }
+  } finally { flushing = false; }
+}
+
 function writeJson(file, data) {
+  const name = nameOf(file);
+  cache.set(name, data);
+  if (REMOTE) {
+    dirty.add(name);
+    scheduleFlush(50);
+    return;
+  }
   const tmp = file + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(data, null, 2), 'utf8');
   fs.renameSync(tmp, file);
 }
+
+// عند إيقاف السيرفر (نشر جديد/إعادة تشغيل) نحفظ ما لم يُحفظ بعد
+async function shutdown() {
+  try { if (REMOTE) await Promise.race([flushAll(), new Promise(r => setTimeout(r, 8000))]); } catch (e) {}
+  process.exit(0);
+}
+process.on('SIGTERM', shutdown);
+process.on('SIGINT', shutdown);
 
 // أسعار المنتجات الأساسية (من js/data.js) لحساب إجمالي الطلب على السيرفر
 let BASE_PRODUCTS = [];
@@ -263,6 +373,9 @@ async function handleApi(req, res, reqPath) {
     }
     if (!isAdmin(req)) return deny();
 
+    if (reqPath === '/api/storage' && req.method === 'GET') {
+      return send(res, 200, { mode: REMOTE ? 'upstash' : 'files', persistent: REMOTE, pendingWrites: dirty.size });
+    }
     if (reqPath === '/api/orders' && req.method === 'GET') {
       return send(res, 200, readJson(FILES.orders, []));
     }
@@ -397,12 +510,16 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`=======================================================`);
-  console.log(`📸 متجر TOP CAM الأردن لمعدات التصوير والسينما يعمل الآن!`);
-  console.log(`🌐 المتجر الرئيسي: http://localhost:${PORT}`);
-  console.log(`⚙️  لوحة تحكم الإدارة: http://localhost:${PORT}/admin.html`);
-  console.log(`=======================================================`);
+initStorage().then(() => {
+  server.listen(PORT, () => {
+    console.log(`=======================================================`);
+    console.log(`📸 متجر TOP CAM الأردن لمعدات التصوير والسينما يعمل الآن!`);
+    console.log(`🌐 المتجر الرئيسي: http://localhost:${PORT}`);
+    console.log(`=======================================================`);
+  });
+}).catch((e) => {
+  console.error('فشل تحميل البيانات من Upstash، لن يبدأ السيرفر لتجنّب فقدان البيانات:', e.message);
+  process.exit(1);
 });
 
 module.exports = server;
