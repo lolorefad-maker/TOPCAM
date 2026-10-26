@@ -61,8 +61,10 @@ function isAdmin(req) {
 // الوضع الافتراضي: ملفات في مجلد data (تُمسح على الاستضافة المجانية عند كل إعادة تشغيل).
 // الوضع الدائم: اضبط UPSTASH_REDIS_REST_URL و UPSTASH_REDIS_REST_TOKEN (قاعدة Upstash مجانية)،
 // فتُحفظ الطلبات والكتالوج والإعدادات خارج السيرفر وتبقى بعد أي إعادة تشغيل أو نشر.
-const UP_URL = String(process.env.UPSTASH_REDIS_REST_URL || '').replace(/\/+$/, '');
-const UP_TOKEN = String(process.env.UPSTASH_REDIS_REST_TOKEN || '');
+// نتجاهل المسافات وعلامات الاقتباس إذا لُصقت مع القيمة بالخطأ
+const envClean = (v) => String(v || '').trim().replace(/^["']+|["']+$/g, '').trim();
+const UP_URL = envClean(process.env.UPSTASH_REDIS_REST_URL).replace(/\/+$/, '');
+const UP_TOKEN = envClean(process.env.UPSTASH_REDIS_REST_TOKEN);
 const REMOTE = !!(UP_URL && UP_TOKEN);
 const CHUNK = 200000; // حجم الجزء الواحد (حد Upstash المجاني للطلب 1MB)
 
