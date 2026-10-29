@@ -8,8 +8,11 @@
   --coal: #161514;
   --muted: color-mix(in oklab, var(--ink) 58%, var(--bg));
   --rule: color-mix(in oklab, var(--ink) 15%, transparent);
-  --f-sans: "Bricolage Grotesque", "Alexandria", system-ui, sans-serif;
-  --f-callig: "Aref Ruqaa", "Alexandria", serif;
+  /* Latin: Inter Tight · Arabic text: IBM Plex Sans Arabic · Arabic titles: Reem Kufi · accents: Instrument Serif italic */
+  --f-sans: "Inter Tight", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --f-display: "Inter Tight", "Reem Kufi", "IBM Plex Sans Arabic", sans-serif;
+  --f-accent: "Instrument Serif", "Reem Kufi", serif;
+  --f-callig: var(--f-accent);
   --gutter: clamp(16px, 4vw, 56px);
   --ease: cubic-bezier(.2, .7, .1, 1);
   color-scheme: dark;
@@ -119,7 +122,7 @@ html.has-cursor .cursor.is-big { width: 92px; height: 92px; margin: -46px 0 0 -4
   box-shadow: inset 0 0 0 calc(var(--D) * .014) #161514, inset 0 0 0 calc(var(--D) * .024) #e9dfc9, inset 0 0 0 calc(var(--D) * .028) #161514, 0 0 calc(var(--D) * .3) rgb(236 227 207 / .22);
 }
 .disc-ring { position: absolute; inset: 3.5%; width: 93%; height: 93%; direction: ltr; unicode-bidi: isolate; animation: spin 40s linear infinite; }
-.disc-ring text { font-size: 5.2px; letter-spacing: 1.6px; fill: #161514; font-weight: 600; font-family: "Bricolage Grotesque", sans-serif; }
+.disc-ring text { font-size: 5.2px; letter-spacing: 1.6px; fill: #161514; font-weight: 600; font-family: "Inter Tight", sans-serif; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .disc-cam { position: absolute; inset: 21% 17% 31%; display: grid; place-items: center; }
 .disc-cam img { width: 100%; height: 100%; object-fit: contain; filter: contrast(1.05); }
@@ -446,3 +449,56 @@ html.has-cursor .cursor.is-big { width: 92px; height: 92px; margin: -46px 0 0 -4
   .pm-specs { grid-template-columns: 1fr; }
   .pm-info { padding-bottom: 28px; }
 }
+
+
+/* ---------- typography ---------- */
+body { font-feature-settings: "ss01", "cv11"; text-rendering: optimizeLegibility; }
+:lang(ar) body { line-height: 1.7; }
+.hero-title, .cats-title, .process-title, .contact-title, .step-t, .cat-name, .manifesto-text, .tn-num, .tn-text,
+.stats b, .work-names, .hero-word, .foot-word, .intro-count, .pm-name, .card-name b, .brand-text b, .disc-word, .work-count .cur, .cat-num .cur { font-family: var(--f-display); }
+
+/* titles: Reem Kufi bold in Arabic, tight Inter in English */
+:lang(ar) .hero-title, :lang(ar) .cats-title, :lang(ar) .process-title, :lang(ar) .contact-title { font-weight: 700; letter-spacing: 0; line-height: 1.24; }
+:lang(ar) .hero-title { font-size: clamp(54px, 8.4vw, 150px); }
+:lang(ar) .contact-title { font-size: clamp(52px, 9.6vw, 176px); }
+:lang(en) .hero-title, :lang(en) .cats-title, :lang(en) .process-title, :lang(en) .contact-title { font-weight: 700; letter-spacing: -.045em; line-height: .95; }
+
+/* the gold accent words: light Kufi in Arabic, serif italic in English */
+.hero-title em, .cats-title em, .process-title em, .contact-title em { font-family: var(--f-accent); }
+:lang(ar) .hero-title em, :lang(ar) .cats-title em, :lang(ar) .process-title em, :lang(ar) .contact-title em { font-family: "Reem Kufi", serif; font-weight: 400; }
+:lang(en) .hero-title em, :lang(en) .cats-title em, :lang(en) .process-title em, :lang(en) .contact-title em { font-style: italic; font-weight: 400; letter-spacing: -.02em; }
+
+/* story */
+:lang(ar) .manifesto-text { font-family: "IBM Plex Sans Arabic", sans-serif; font-weight: 500; line-height: 1.7; max-width: 28ch; }
+:lang(en) .manifesto-text { font-weight: 500; letter-spacing: -.03em; line-height: 1.14; }
+:lang(en) .manifesto-text .w.hl { font-family: var(--f-accent); font-style: italic; font-weight: 400; letter-spacing: 0; }
+:lang(ar) .manifesto-text .w.hl { font-family: "Reem Kufi", serif; font-weight: 600; }
+
+/* steps */
+:lang(ar) .step-t { font-family: "Reem Kufi", serif; font-weight: 600; line-height: 1.3; }
+:lang(en) .step-t { font-family: var(--f-accent); font-style: italic; font-weight: 400; letter-spacing: -.01em; font-size: clamp(56px, 7vw, 112px); }
+
+/* small headings + names */
+.cat-name { font-weight: 700; letter-spacing: -.02em; }
+:lang(ar) .cat-name { font-family: "Reem Kufi", serif; font-weight: 600; letter-spacing: 0; line-height: 1.35; }
+.card-name b, .pm-name { font-weight: 700; letter-spacing: -.025em; }
+:lang(ar) .pm-name { line-height: 1.2; }
+.brand-text b { font-weight: 700; font-size: 19px; letter-spacing: -.01em; }
+:lang(ar) .brand-text b { font-family: "Reem Kufi", serif; font-size: 21px; }
+.disc-word { font-weight: 600; }
+:lang(en) .disc-word { font-family: var(--f-accent); font-style: italic; font-weight: 400; }
+
+/* big numbers & words */
+.tn-num, .stats b, .intro-count { font-weight: 700; letter-spacing: -.055em; }
+.hero-word, .foot-word { font-weight: 800; letter-spacing: -.06em; }
+.work-names { font-weight: 800; letter-spacing: -.05em; }
+:lang(ar) .tn-text { font-family: "Reem Kufi", serif; font-weight: 500; }
+
+/* reading text */
+.lead { font-weight: 500; letter-spacing: -.01em; }
+:lang(ar) .lead { font-family: "IBM Plex Sans Arabic", sans-serif; font-weight: 600; line-height: 1.6; }
+.small, .cat-desc, .step p, .tunnel-sub, .contact-note, .pm-desc, .work-hint { font-weight: 400; }
+:lang(ar) .small, :lang(ar) .cat-desc, :lang(ar) .step p, :lang(ar) .tunnel-sub, :lang(ar) .pm-desc { line-height: 1.9; }
+.meta, .eyebrow, .hero-services li, .clients-label { letter-spacing: .01em; }
+.meta-num, .hero-services b { font-family: "Inter Tight", sans-serif; font-weight: 600; letter-spacing: .02em; }
+.pill { font-weight: 600; letter-spacing: -.005em; }
