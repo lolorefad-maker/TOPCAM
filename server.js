@@ -196,8 +196,19 @@ try {
 } catch (e) {
   console.warn('تعذر قراءة js/data.js:', e.message);
 }
+// منتجات محذوفة افتراضياً من الكتالوج (قائمة في الكود data/default_deleted.json تبقى بعد أي إعادة تشغيل)
+const DEFAULT_DELETED = (() => {
+  try {
+    const a = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'default_deleted.json'), 'utf8'));
+    return Array.isArray(a) ? a.map(String) : [];
+  } catch (e) { return []; }
+})();
+function effectiveDeleted() {
+  return Array.from(new Set([...DEFAULT_DELETED, ...readJson(FILES.deleted, [])]));
+}
+
 function seededCatalog() {
-  const deleted = new Set(readJson(FILES.deleted, []));
+  const deleted = new Set(effectiveDeleted());
   return BASE_PRODUCTS.filter(p => !deleted.has(p.id));
 }
 function currentProducts() {
@@ -349,7 +360,7 @@ async function handleApi(req, res, reqPath) {
       return send(res, 200, isSaved ? saved : seededCatalog(), { 'X-Catalog-Source': isSaved ? 'saved' : 'seed' });
     }
     if (reqPath === '/api/deleted-ids' && req.method === 'GET') {
-      return send(res, 200, readJson(FILES.deleted, []));
+      return send(res, 200, effectiveDeleted());
     }
     if (reqPath === '/api/kv' && req.method === 'GET') {
       return send(res, 200, readJson(FILES.kv, {}));

@@ -12,6 +12,7 @@ const base = `http://127.0.0.1:${PORT}`;
 const A = { 'x-admin-key': PASS, 'Content-Type': 'application/json' };
 const J = { 'Content-Type': 'application/json' };
 
+const DEF = require('../data/default_deleted.json');
 let passed = 0;
 async function t(name, fn) {
   try { await fn(); passed++; console.log('  ok  ' + name); }
@@ -56,6 +57,13 @@ const call = (p, o) => fetch(base + p, o);
     assert.equal(c.length, a.length - 1, 'المحذوف يُستبعد من الكتالوج الموحّد');
     assert.equal((await call('/api/catalog')).headers.get('x-catalog-source'), 'seed');
     await call('/api/reset-deleted', { method: 'POST', headers: A });
+  });
+  await t('المنتجات المحذوفة افتراضياً لا تظهر (399 ناقص القائمة)', async () => {
+    const c = await (await call('/api/catalog')).json();
+    assert.equal(c.length, 399 - DEF.length);
+    assert.ok(DEF.every(id => !c.find(p => p.id === id)), 'ظهر منتج محذوف');
+    const d = await (await call('/api/deleted-ids')).json();
+    assert.ok(DEF.every(id => d.includes(id)));
   });
   await t('الأدمن مرفوض بدون كلمة سر', async () => {
     assert.equal((await call('/api/orders')).status, 401);
@@ -153,11 +161,11 @@ const call = (p, o) => fetch(base + p, o);
   });
   await t('حذف المنتجات وإعادتها', async () => {
     assert.equal((await call('/api/deleted-ids', { method: 'POST', headers: A, body: '{"id":"T-2"}' })).status, 200);
-    assert.deepEqual(await (await call('/api/deleted-ids')).json(), ['T-2']);
+    assert.deepEqual(await (await call('/api/deleted-ids')).json(), [...DEF, 'T-2']);
     assert.equal((await call('/api/sync-deleted', { method: 'POST', headers: A, body: '{"deletedIds":["T-3"]}' })).status, 200);
-    assert.equal((await (await call('/api/deleted-ids')).json()).length, 2);
+    assert.equal((await (await call('/api/deleted-ids')).json()).length, DEF.length + 2);
     assert.equal((await call('/api/reset-deleted', { method: 'POST', headers: A })).status, 200);
-    assert.deepEqual(await (await call('/api/deleted-ids')).json(), []);
+    assert.deepEqual(await (await call('/api/deleted-ids')).json(), DEF);
   });
   await t('حذف الطلب', async () => {
     assert.equal((await call('/api/orders/' + orderId, { method: 'DELETE', headers: A })).status, 200);

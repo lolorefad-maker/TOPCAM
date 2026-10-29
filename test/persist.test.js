@@ -11,6 +11,7 @@ const MOCK_PORT = 3921, APP_PORT = 3922, PASS = 'persist-pass';
 const base = `http://127.0.0.1:${APP_PORT}`;
 const A = { 'x-admin-key': PASS, 'Content-Type': 'application/json' };
 const J = { 'Content-Type': 'application/json' };
+const DEF = require('../data/default_deleted.json');
 let passed = 0;
 async function t(name, fn) {
   try { await fn(); passed++; console.log('  ok  ' + name); }
@@ -109,7 +110,7 @@ const call = (p, o) => fetch(base + p, o);
   await t('الإعدادات والمحذوفات بقيت', async () => {
     const kv = await (await call('/api/kv')).json();
     assert.equal(kv.settings.whatsappNumber, '962791110000');
-    assert.deepEqual(await (await call('/api/deleted-ids')).json(), ['GONE-1']);
+    assert.deepEqual(await (await call('/api/deleted-ids')).json(), [...DEF, 'GONE-1']);
   });
   await t('أي جهاز آخر يرى نفس الكتالوج المعتمد', async () => {
     const a = await (await call('/api/catalog')).json();
