@@ -250,6 +250,18 @@
                 <i class="fa-solid fa-chevron-left text-xs text-slate-400 group-hover:text-amber-500 transition"></i>
               </a>
 
+              <!-- Contact Link -->
+              <a href="contact.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-bold transition group">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-phone text-amber-500 w-5 text-center"></i>
+                  <div>
+                    <div>تواصل معنا (Contact Us)</div>
+                    <div class="text-[10px] text-slate-400 font-normal">أرقامنا وصفحاتنا على السوشال ميديا</div>
+                  </div>
+                </div>
+                <i class="fa-solid fa-chevron-left text-xs text-slate-400 group-hover:text-amber-500 transition"></i>
+              </a>
+
 
               <a href="#productsSection" onclick="filterByCategory('deals'); toggleMobileMenu();" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-bold transition">
                 <div class="flex items-center gap-3">
@@ -1442,11 +1454,10 @@
           </div>
           <p class="text-[11px] text-slate-400 max-w-xs leading-relaxed">Your Ultimate Pro Photography & Cinema Equipment Destination.</p>
           <div class="flex gap-3 text-slate-400 text-sm pt-1">
-            <a href="#" class="hover:text-yellow-600"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="hover:text-yellow-600"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="hover:text-yellow-600"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" class="hover:text-yellow-600"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://wa.me/962790000000" target="_blank" class="hover:text-emerald-500"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="contact.html" class="hover:text-yellow-600"><i class="fa-brands fa-facebook"></i></a>
+            <a href="contact.html" class="hover:text-yellow-600"><i class="fa-brands fa-instagram"></i></a>
+            <a href="contact.html" class="hover:text-emerald-500"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="contact.html" class="hover:text-yellow-600"><i class="fa-solid fa-phone"></i></a>
           </div>
         </div>
 
@@ -3480,6 +3491,21 @@
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', bootStorefront);
     }
+
+    // رابط مباشر لمنتج (من صفحة من نحن): index.html?product=ID يفتح نافذته
+    (function openLinkedProduct() {
+      const pid = new URLSearchParams(location.search).get('product');
+      if (!pid) return;
+      let tries = 0;
+      const tryOpen = () => {
+        if (storeDB.getProducts().some(p => p.id === pid)) {
+          try { openCameraSpecsBubble(pid); } catch (e) { console.warn('openLinkedProduct:', e); }
+          return;
+        }
+        if (++tries < 20) setTimeout(tryOpen, 500); // الكتالوج قد يصل من السيرفر بعد لحظات
+      };
+      setTimeout(tryOpen, 400);
+    })();
 
     // مزامنة فورية عند أي تعديل بالمنتجات أو البانرات
     window.addEventListener('products_updated', () => {

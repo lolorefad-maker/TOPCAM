@@ -21,6 +21,7 @@
     'Switch to العربية (Arabic)': 'Switch to Arabic',
     'التنقل الرئيسي': 'Main navigation',
     'قصتنا وماذا نوفر بالتفصيل': 'Our story and what we offer',
+    'أرقامنا وصفحاتنا على السوشال ميديا': 'Our numbers and social pages',
     'الطلبات، المخزون، الأسعار، العروض': 'Orders, stock, prices, offers',
     'أقسام المنتجات الاحترافية': 'Professional product categories',
     'كاميرات السينما والتصوير': 'Cinema & photo cameras',

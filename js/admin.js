@@ -1249,6 +1249,9 @@ function loadAdminSettings() {
   const set = (id, v) => { const el = document.getElementById(id); if (el) el.value = (v === undefined || v === null) ? '' : v; };
   set('settingStoreName', s.storeName);
   set('settingWhatsapp', s.whatsappNumber);
+  set('settingPhones', s.phoneNumbers);
+  set('settingFacebook', s.facebookUrl);
+  set('settingInstagram', s.instagramUrl);
   set('settingFreeShipping', s.freeShippingThreshold || 500);
   set('settingAddress', s.storeAddress);
   set('settingAddressDetails', s.storeAddressDetails);
@@ -1331,6 +1334,9 @@ function saveStoreSettings(e) {
   storeDB.saveSettings({
     storeName,
     whatsappNumber,
+    phoneNumbers: val('settingPhones'),
+    facebookUrl: val('settingFacebook'),
+    instagramUrl: val('settingInstagram'),
     freeShippingThreshold,
     storeAddress: val('settingAddress'),
     storeAddressDetails: val('settingAddressDetails'),

@@ -1,729 +1,238 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>About Us | TOP CAM & Accessories - Jordan</title>
-  
-  <!-- Favicon & Touch Icons -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>من نحن | TOP CAM Jordan</title>
+  <meta name="description" content="TOP CAM — وجهة المصورين وصناع المحتوى في الأردن: كاميرات، عدسات، إضاءة، صوتيات ومعدات سينما بكفالة الوكيل.">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TOP CAM">
+  <meta property="og:title" content="من نحن | TOP CAM Jordan">
+  <meta property="og:image" content="images/og_preview.jpg">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
-
-  <!-- Open Graph / Social & Link Preview -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="TOP CAM">
-  <meta property="og:title" content="من نحن | TOP CAM Jordan - رواد معدات السينما والتصوير">
-  <meta property="og:description" content="تعرف على شركة TOP CAM، الوجهة الأولى لصناع الأفلام والمصورين في الأردن.">
-  <meta property="og:image" content="images/og_preview.jpg">
-  <meta name="theme-color" content="#121212">
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandYellow: '#f59e0b',
-            brandGold: '#d4af37',
-            brandGoldDark: '#b8860b',
-            mustardYellow: '#b88931',
-            darkHeader: '#121212',
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'Cairo', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #ffffff;
-      color: #0f172a;
-      -webkit-tap-highlight-color: transparent;
-      overflow-x: hidden;
-    }
-
-    /* 3D Floating Animation */
-    @keyframes float3D {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-10px) rotate(0.6deg);
-      }
-    }
-
-    .animate-float-3d {
-      animation: float3D 6s ease-in-out infinite;
-    }
-
-    /* Realistic 3D Camera Drop Shadow */
-    .shadow-camera-3d {
-      filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.18)) drop-shadow(0 35px 35px rgba(0, 0, 0, 0.08));
-      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.25s ease;
-    }
-
-    .shadow-retro-3d {
-      filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.32)) drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2));
-      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-
-    /* 3D Stage / Pedestal Glow */
-    .studio-glow {
-      background: radial-gradient(circle at 50% 65%, rgba(229, 169, 59, 0.14) 0%, rgba(255, 255, 255, 0) 70%);
-    }
-
-    .mustard-gradient {
-      background: radial-gradient(circle at 50% 30%, #cb9736 0%, #b88931 60%, #a47623 100%);
-    }
-
-    /* Shimmer Gold Effect */
-    .gold-shimmer {
-      background: linear-gradient(135deg, #fff275 0%, #e5a93b 40%, #b87314 70%, #f3c35d 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Spec Badge Glass */
-    .spec-badge {
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;800;900&family=Aref+Ruqaa:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/about.css?v=8">
 </head>
-<body class="antialiased pb-24 text-left">
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
 
-  <!-- ═══════════════ TOP HEADER (EXACT 1:1 WITH REFERENCE SCREENSHOTS) ═══════════════ -->
-  <header class="sticky top-0 z-40 bg-[#141414] shadow-md border-b border-white/5">
-    
-    <!-- Top Black Header Bar: Hamburger | Enlarged TOP CAM Logo | Cart -->
-    <div class="max-w-4xl mx-auto px-4 h-14 sm:h-16 flex items-center justify-between">
-      
-      <!-- Hamburger Menu Button (Left) -->
-      <button 
-        onclick="toggleMobileMenu()" 
-        class="w-10 h-10 -ml-2 flex items-center justify-center text-white hover:text-amber-400 active:scale-90 transition cursor-pointer" 
-        aria-label="القائمة (Menu)"
-      >
-        <i class="fa-solid fa-bars text-xl"></i>
-      </button>
+  <!-- Intro: a lens aperture closes on a cream frame, the shutter clicks -->
+  <div id="intro" aria-hidden="true">
+    <svg viewBox="-100 -100 200 200" preserveAspectRatio="xMidYMid slice">
+      <path class="iris-body" fill-rule="evenodd"></path>
+      <path class="iris-edge"></path>
+    </svg>
+    <div class="intro-meta">
+      <span class="intro-count"><span class="num">0</span>%</span>
+      <span class="intro-tag" data-i18n="intro.tag">كاميرات · عدسات · إضاءة · صوت</span>
+    </div>
+  </div>
+  <div id="flash" aria-hidden="true"></div>
 
-      <!-- Centered Enlarged Official TOP CAM Logo (Pure Brand, No Subtext) -->
-      <a href="index.html" class="flex items-center justify-center py-1 group">
-        <img 
-          src="images/logo.svg" 
-          alt="TOP CAM" 
-          class="h-8 sm:h-9.5 md:h-11 w-auto transition-transform duration-300 group-hover:scale-105 object-contain"
-        >
-      </a>
-
-      <!-- Shopping Cart Icon with Orange Badge '2' (Right) -->
-      <a 
-        href="index.html#cart" 
-        class="relative w-10 h-10 -mr-2 flex items-center justify-center text-white hover:text-amber-400 active:scale-90 transition cursor-pointer" 
-        aria-label="عربة التسوق (Cart)"
-      >
-        <i class="fa-solid fa-bag-shopping text-xl"></i>
-        <span class="absolute top-1.5 right-1.5 bg-[#e5a93b] text-slate-950 font-black text-[10px] w-4 h-4 rounded-full flex items-center justify-center shadow-xs">2</span>
+  <header class="nav" id="nav">
+    <a class="brand" href="index.html" aria-label="TOP CAM">
+      <img src="images/logo_luxury.jpg" alt="" width="44" height="44">
+      <span class="brand-text"><b data-i18n="brand">توب كام</b><small>TOP CAM</small></span>
+    </a>
+    <nav class="links">
+      <a href="#about" data-i18n="nav.about">قصتنا</a>
+      <a href="#cats" data-i18n="nav.cats">الأقسام</a>
+      <a href="#work" data-i18n="nav.work">مختارات</a>
+      <a href="contact.html" data-i18n="nav.contact">تواصل</a>
+    </nav>
+    <div class="nav-end">
+      <button class="lang" type="button" id="langBtn">EN</button>
+      <a class="pill" href="index.html">
+        <span data-i18n="nav.cta">تسوّق الآن</span>
+        <i class="pill-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg></i>
       </a>
     </div>
-
   </header>
 
-  <!-- ═══════════════ CLEAN WHITE LUXURY SIDEBAR (MOBILE DRAWER MENU) ═══════════════ -->
-  <div id="mobileDrawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300">
-    <div id="drawerContent" class="fixed inset-y-0 left-0 w-84 max-w-[85vw] bg-white text-slate-900 p-5 flex flex-col justify-between -translate-x-full transition-transform duration-300 shadow-[10px_0_40px_rgba(0,0,0,0.18)] overflow-y-auto">
-      
-      <div>
-        <!-- Drawer Header with Sharp Dark Logo & Sleek Close Button -->
-        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-          <a href="index.html" class="flex items-center">
-            <img src="images/logo_dark.svg" alt="TOP CAM" class="h-8 sm:h-8.5 w-auto">
-          </a>
-          <button onclick="toggleMobileMenu()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 active:scale-90 flex items-center justify-center text-slate-700 transition cursor-pointer">
-            <i class="fa-solid fa-xmark text-sm"></i>
-          </button>
-        </div>
+  <main id="top">
+    <section class="hero" id="hero">
+      <div class="hero-word" aria-hidden="true">TOP CAM</div>
 
-        <!-- Verified Store Badge -->
-        <div class="mt-3.5 px-3 py-2 rounded-xl bg-amber-50 border border-amber-200/90 flex items-center gap-2 text-[11px] text-amber-900 font-bold" dir="rtl">
-          <i class="fa-solid fa-circle-check text-amber-600 text-xs"></i>
-          <span>الوجهة الرسمية الأولى لمعدات التصوير والسينما - الأردن</span>
-        </div>
-
-        <!-- Categorized & Organized Links -->
-        <nav class="mt-5 space-y-4 text-right" dir="rtl">
-          
-          <!-- Group 1: Navigation -->
-          <div>
-            <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
-              التنقل الرئيسي
-            </div>
-            <div class="space-y-1">
-              <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-bold transition">
-                <i class="fa-solid fa-house text-amber-500 w-5 text-center"></i>
-                <span>الرئيسية (Home)</span>
-              </a>
-
-              <a href="about.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-amber-500/10 text-amber-800 text-xs sm:text-sm font-black border border-amber-500/25">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-circle-info text-amber-600 w-5 text-center"></i>
-                  <span>من نحن (About TOP CAM)</span>
-                </div>
-                <span class="text-[10px] bg-amber-500 text-slate-950 px-2 py-0.5 rounded-full font-bold">الحالي</span>
-              </a>
-
-              <a href="index.html#deals" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-bold transition">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-bolt text-rose-500 w-5 text-center"></i>
-                  <span>العروض الحصرية (Hot Offers)</span>
-                </div>
-                <span class="text-[9px] bg-rose-600 text-white px-2 py-0.5 rounded-full font-black animate-pulse">SALE</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Group 2: Product Categories -->
-          <div class="pt-2 border-t border-slate-100">
-            <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
-              أقسام المنتجات الاحترافية
-            </div>
-            <div class="space-y-1">
-              <a href="index.html#productsSection" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-camera text-slate-600 w-5 text-center"></i>
-                <span>كاميرات السينما والتصوير</span>
-              </a>
-              <a href="index.html#productsSection" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-circle-notch text-slate-600 w-5 text-center"></i>
-                <span>العدسات والفلاتر الاحترافية</span>
-              </a>
-              <a href="index.html#productsSection" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-lightbulb text-slate-600 w-5 text-center"></i>
-                <span>إضاءات الاستوديو (Aputure / Godox)</span>
-              </a>
-              <a href="index.html#productsSection" onclick="toggleMobileMenu()" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-arrows-to-dot text-slate-600 w-5 text-center"></i>
-                <span>مثبتات الحركة والـ Rigs (DJI / Tilta)</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Group 3: Services & Account -->
-          <div class="pt-2 border-t border-slate-100">
-            <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
-              خدماتي
-            </div>
-            <div class="space-y-1">
-              <a href="index.html#cart" class="flex items-center justify-between px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-bag-shopping text-slate-600 w-5 text-center"></i>
-                  <span>عربة التسوق (Cart)</span>
-                </div>
-                <span class="text-[10px] bg-amber-500 text-slate-950 px-1.5 py-0.2 rounded-full font-mono font-bold">2</span>
-              </a>
-            </div>
-          </div>
-
-        </nav>
+      <div class="hero-stage">
+        <div class="disc"></div>
+        <svg class="disc-ring" viewBox="0 0 100 100" aria-hidden="true">
+          <defs><path id="ringPath" d="M50,50 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" /></defs>
+          <text><textPath href="#ringPath">TOP CAM · CAMERAS · LENSES · LIGHT · SOUND · IRBID · JORDAN · EST. 2024 ·</textPath></text>
+        </svg>
+        <svg class="star star-top" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2 10 10 2-10 2-2 10-2-10-10-2 10-2z" /></svg>
+        <div class="disc-cam" id="discCam"><img src="images/about_cam_cut.png" alt=""></div>
+        <div class="disc-word" aria-hidden="true" data-i18n="brand">توب كام</div>
+        <div class="shutter-flash" aria-hidden="true"></div>
       </div>
 
-      <!-- Drawer Footer with WhatsApp Card -->
-      <div class="pt-4 border-t border-slate-100 space-y-2">
-        <a href="https://wa.me/962790000000" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold text-xs py-3 rounded-xl flex items-center justify-center gap-2 transition shadow-md">
-          <i class="fa-brands fa-whatsapp text-base"></i>
-          <span>تواصل فوري عبر الواتساب (VIP)</span>
-        </a>
-        <div class="text-[10px] text-slate-400 text-center font-mono">عمان، الأردن • TOP CAM Official Store</div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ═══════════════ MAIN LUXURY ABOUT US CONTENT ═══════════════ -->
-  <main class="w-full">
-    
-    <!-- ══════════════════════════════════════════════════════════════════════
-         SECTION 1 (PURE WHITE): 3D SONY A7R CAMERA & PASSION STATEMENT
-         ══════════════════════════════════════════════════════════════════════ -->
-    <section class="relative max-w-xl mx-auto px-5 sm:px-6 pt-6 sm:pt-10 pb-12 studio-glow">
-      
-      <!-- Luxury Tagline -->
-      <div class="flex items-center justify-center gap-2 mb-3">
-        <span class="w-5 h-[1.5px] bg-amber-500"></span>
-        <span class="text-[11px] font-black uppercase tracking-[0.2em] text-amber-600 font-mono">Pro Cinema &amp; Imaging Sanctuary</span>
-        <span class="w-5 h-[1.5px] bg-amber-500"></span>
-      </div>
-
-      <!-- 3D SONY CAMERA SHOWCASE WITH INTERACTIVE 3D TILT & FLOATING BADGES -->
-      <div class="relative w-full py-4 flex flex-col items-center justify-center perspective-[1200px]" id="camera3DStage">
-        
-        <!-- Ambient Light Ring Behind Sensor -->
-        <div class="absolute w-44 h-44 rounded-full bg-amber-400/20 blur-2xl pointer-events-none -translate-y-4"></div>
-
-        <!-- 3D Camera Container with Floating Physics -->
-        <div class="relative w-full max-w-[390px] sm:max-w-[430px] animate-float-3d" id="tiltCard">
-          <img 
-            src="images/about_sony_3d_hero.jpg" 
-            alt="Sony Alpha Full Frame 3D Camera" 
-            class="w-full h-auto object-contain shadow-camera-3d select-none pointer-events-none"
-            id="sonyImg3D"
-          >
-
-          <!-- 3D Spec Badges (Floating in 3D Space) -->
-          <div class="absolute top-4 -right-1 sm:right-2 spec-badge bg-white/90 border border-slate-200/90 rounded-full px-2.5 py-1 flex items-center gap-1.5 shadow-lg transform hover:scale-105 transition cursor-default">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-            <span class="text-[10px] font-black text-slate-900 tracking-tight">61 MP Full-Frame BSI</span>
-          </div>
-
-          <div class="absolute bottom-16 -left-1 sm:left-2 spec-badge bg-white/90 border border-slate-200/90 rounded-full px-2.5 py-1 flex items-center gap-1.5 shadow-lg transform hover:scale-105 transition cursor-default">
-            <i class="fa-solid fa-video text-amber-600 text-[9px]"></i>
-            <span class="text-[10px] font-black text-slate-900 tracking-tight">8K 60p Cinema RAW</span>
-          </div>
-
-          <div class="absolute -bottom-2 right-4 spec-badge bg-slate-900/90 text-white border border-slate-700/80 rounded-full px-2.5 py-1 flex items-center gap-1.5 shadow-lg transform hover:scale-105 transition cursor-default">
-            <i class="fa-solid fa-bolt text-amber-400 text-[9px]"></i>
-            <span class="text-[10px] font-bold tracking-tight">5-Axis SteadyShot</span>
-          </div>
-        </div>
-
-        <!-- 3D Studio Pedestal Elliptical Ground Shadow -->
-        <div class="w-64 sm:w-80 h-4 rounded-full bg-slate-900/15 blur-md -mt-2"></div>
-      </div>
-
-      <!-- Section Title (Exact User Text with Luxury Typography) -->
-      <div class="mt-6 space-y-3">
-        <h1 class="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight leading-snug">
-          More Than a Camera Store: Sharing Our Passion for Photography
+      <div class="hero-copy">
+        <p class="eyebrow"><i class="dot"></i><span data-i18n="hero.eyebrow">متجر معدات تصوير وسينما · إربد</span></p>
+        <h1 class="hero-title">
+          <span class="line"><span data-i18n="hero.l1">كل لقطة</span></span>
+          <span class="line"><em data-i18n="hero.l2">تبدأ هنا.</em></span>
         </h1>
-
-        <!-- Section Paragraph (Exact User Text) -->
-        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal">
-          We continuously invest in providing our customers with top-tier equipment, expert insights, and exceptional service to ensure you experience the absolute best of photography. We don’t just sell cameras and accessories—we share a genuine passion and love for this craft with every member of our community.
-        </p>
+        <div class="hero-aside">
+          <p class="lead" data-i18n="hero.lead">الصورة العظيمة تبدأ بأداة تثق فيها.</p>
+          <p class="small" data-i18n="hero.small">كاميرات وعدسات وإضاءة وصوت من أكبر الماركات العالمية، بكفالة الوكيل وبأسعار عادلة.</p>
+        </div>
       </div>
 
-      <!-- Official Luxury Brands Strip -->
-      <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between text-slate-400 text-[10px] sm:text-xs font-black tracking-widest uppercase">
-        <span>SONY</span>
-        <span class="text-slate-300">•</span>
-        <span>CANON</span>
-        <span class="text-slate-300">•</span>
-        <span>APUTURE</span>
-        <span class="text-slate-300">•</span>
-        <span>TILTA</span>
-        <span class="text-slate-300">•</span>
-        <span>DJI</span>
-      </div>
-
+      <ol class="hero-services">
+        <li><b>#01</b><span data-i18n="s1">كاميرات</span></li>
+        <li><b>#02</b><span data-i18n="s2">عدسات</span></li>
+        <li><b>#03</b><span data-i18n="s3">إضاءة</span></li>
+        <li><b>#04</b><span data-i18n="s4">صوتيات</span></li>
+      </ol>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════════════════════
-         SECTION 2 (WARM MUSTARD/AMBER GOLD): WHAT WE OFFER & 3D RETRO CAMERA
-         ══════════════════════════════════════════════════════════════════════ -->
-    <section class="mustard-gradient w-full py-12 sm:py-16 text-black border-y border-amber-600/30 relative overflow-hidden">
-      
-      <!-- Subtle Luxury Ambient Glow -->
-      <div class="absolute top-0 right-1/2 translate-x-1/2 w-96 h-96 bg-yellow-200/20 blur-3xl rounded-full pointer-events-none"></div>
+    <section class="clients" aria-labelledby="clientsLabel">
+      <p class="clients-label" id="clientsLabel" data-i18n="clients.label">ماركات عالمية على رفوفنا</p>
+      <div class="marquee"><div class="marquee-track"></div></div>
+    </section>
 
-      <div class="max-w-xl mx-auto px-5 sm:px-6 relative z-10">
-        
-        <!-- 3D RETRO VINTAGE CAMERA WITH STUDIO SHADOW & LEICA VIBE -->
-        <div class="w-full flex flex-col items-center justify-center mb-6">
-          <div class="relative w-full max-w-[340px] sm:max-w-[380px] animate-float-3d" style="animation-delay: -3s;">
-            <img 
-              src="images/about_retro_camera_3d.jpg" 
-              alt="3D Classic Camera Masterpiece" 
-              class="w-full h-auto object-contain shadow-retro-3d mix-blend-multiply select-none"
-            >
-
-            <!-- Floating Retro Badges -->
-            <div class="absolute top-2 left-0 spec-badge bg-black/85 text-amber-300 border border-amber-400/30 rounded-full px-2.5 py-0.8 flex items-center gap-1.5 shadow-xl">
-              <i class="fa-solid fa-gem text-[9px] text-amber-400"></i>
-              <span class="text-[9px] font-black uppercase tracking-wider">Heritage Craft</span>
-            </div>
-
-            <div class="absolute bottom-4 right-0 spec-badge bg-black/85 text-white border border-amber-400/30 rounded-full px-2.5 py-0.8 flex items-center gap-1.5 shadow-xl">
-              <span class="text-[9px] font-bold">Brass &amp; Leather</span>
-            </div>
-          </div>
-          
-          <!-- Soft Realistic Ground Drop Shadow on Yellow -->
-          <div class="w-56 sm:w-64 h-3.5 rounded-full bg-black/35 blur-md -mt-1"></div>
-        </div>
-
-        <!-- Title: What We Offer -->
-        <div class="space-y-1 mb-4">
-          <div class="text-[10px] uppercase font-black tracking-widest text-black/70">
-            COMPREHENSIVE PRO INVENTORY
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-black text-black tracking-tight">
-            What We Offer
-          </h2>
-        </div>
-
-        <!-- Subheading: Wide Selection of Products -->
-        <div class="text-xs sm:text-sm font-bold text-black mb-2 tracking-tight">
-          Wide Selection of Products:
-        </div>
-
-        <!-- Product List Paragraph (Exact Screenshot Text) -->
-        <p class="text-xs sm:text-sm text-black/90 leading-relaxed font-medium mb-8">
-          Digital cameras – camcorders – Lenses -printers – tripods – Flash Lights – Continuous Lights – Monitors, Recorders – Stands &amp; Sliders – Microphones – Stabilizers &amp; Gimbals – Chroma &amp; Backgrounds- and other accessories.
-        </p>
-
-        <!-- LUXURY CURATED PRODUCTS GRID (4 PREMIUM PILLARS) -->
-        <div class="grid grid-cols-2 gap-2.5 sm:gap-3 mb-10 text-black">
-          
-          <div class="p-3 rounded-2xl bg-black/10 border border-black/15 backdrop-blur-xs flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-black text-amber-400 flex items-center justify-center shrink-0 text-xs shadow-md">
-              <i class="fa-solid fa-camera"></i>
-            </div>
-            <div>
-              <div class="text-xs font-black">Cinema Bodies</div>
-              <div class="text-[10px] text-black/75">Full-Frame &amp; Super35</div>
-            </div>
-          </div>
-
-          <div class="p-3 rounded-2xl bg-black/10 border border-black/15 backdrop-blur-xs flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-black text-amber-400 flex items-center justify-center shrink-0 text-xs shadow-md">
-              <i class="fa-solid fa-circle-notch"></i>
-            </div>
-            <div>
-              <div class="text-xs font-black">Master Primes</div>
-              <div class="text-[10px] text-black/75">Anamorphic &amp; Cine</div>
-            </div>
-          </div>
-
-          <div class="p-3 rounded-2xl bg-black/10 border border-black/15 backdrop-blur-xs flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-black text-amber-400 flex items-center justify-center shrink-0 text-xs shadow-md">
-              <i class="fa-solid fa-sun"></i>
-            </div>
-            <div>
-              <div class="text-xs font-black">Studio Lighting</div>
-              <div class="text-[10px] text-black/75">Aputure &amp; Godox</div>
-            </div>
-          </div>
-
-          <div class="p-3 rounded-2xl bg-black/10 border border-black/15 backdrop-blur-xs flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-black text-amber-400 flex items-center justify-center shrink-0 text-xs shadow-md">
-              <i class="fa-solid fa-arrows-to-dot"></i>
-            </div>
-            <div>
-              <div class="text-xs font-black">Gimbals &amp; Rigs</div>
-              <div class="text-[10px] text-black/75">DJI Ronin &amp; Tilta</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Dynamic Statistics Counters Grid (Exact Screenshot Numbers with Luxury Typography) -->
-        <div class="grid grid-cols-2 gap-y-7 gap-x-6 pt-6 border-t border-black/20 font-sans">
-          
-          <!-- Stat 1: +2250 Products -->
-          <div class="space-y-0.5">
-            <div class="text-3xl sm:text-4xl font-black text-black tracking-tight flex items-center gap-1">
-              <span>+</span>
-              <span class="font-black">2250</span>
-            </div>
-            <div class="text-xs sm:text-sm font-bold text-black/85">
-              Products
-            </div>
-          </div>
-
-          <!-- Stat 2: +3000 Happy Clients -->
-          <div class="space-y-0.5">
-            <div class="text-3xl sm:text-4xl font-black text-black tracking-tight flex items-center gap-1">
-              <span>+</span>
-              <span class="font-black">3000</span>
-            </div>
-            <div class="text-xs sm:text-sm font-bold text-black/85">
-              Satisfied Photographers
-            </div>
-          </div>
-
-          <!-- Stat 3: +100 Global Brands -->
-          <div class="space-y-0.5">
-            <div class="text-3xl sm:text-4xl font-black text-black tracking-tight flex items-center gap-1">
-              <span>+</span>
-              <span class="font-black">100</span>
-            </div>
-            <div class="text-xs sm:text-sm font-bold text-black/85">
-              Global Brands
-            </div>
-          </div>
-
-          <!-- Stat 4: Established in 2024 -->
-          <div class="space-y-0.5">
-            <div class="text-3xl sm:text-4xl font-black text-black tracking-tight flex items-center gap-1">
-              <span class="font-black">2024</span>
-            </div>
-            <div class="text-xs sm:text-sm font-bold text-black/85">
-              Founded &amp; Established
-            </div>
-          </div>
-
-        </div>
-
+    <section class="manifesto" id="about">
+      <p class="meta"><span class="meta-num">01 /</span><span data-i18n="man.label">قصتنا</span></p>
+      <div>
+        <p class="manifesto-text"></p>
+        <p class="manifesto-sign"><span class="lens-badge">f/1.4</span><span data-i18n="man.sign">من 2024 · إربد، الأردن</span></p>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════════════════════
-         SECTION 3 (WHITE BACKGROUND): OUR STORY & CINEMA LENSES PHOTO
-         ══════════════════════════════════════════════════════════════════════ -->
-    <section class="max-w-xl mx-auto px-5 sm:px-6 py-12 sm:py-16">
-      
-      <!-- High-End Cinema Lenses Photo with Luxury Badge -->
-      <div class="relative mb-8 rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-        <img 
-          src="images/about_cinema_lenses.jpg" 
-          alt="TOP CAM Cinema Lenses" 
-          class="w-full h-[230px] sm:h-[310px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
-        >
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
-          <div class="text-xs font-bold font-mono tracking-wider text-amber-300">EST. 2024 • AMMAN, JORDAN</div>
-          <span class="bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-bold">Authorized Store</span>
+    <section class="cats" id="cats">
+      <div class="cats-side">
+        <div class="cats-head">
+          <p class="meta"><span class="meta-num">02 /</span><span data-i18n="ct.label">الأقسام</span></p>
+          <h2 class="cats-title"><span data-i18n="ct.t1">ثمانية أقسام.</span> <em data-i18n="ct.t2">عدسة واحدة.</em></h2>
+        </div>
+        <div class="cat-detail" aria-live="polite">
+          <p class="cat-num"><bdi dir="ltr"><span class="cur">01</span> / 08</bdi></p>
+          <h3 class="cat-name"></h3>
+          <p class="cat-desc"></p>
+          <ul class="cat-tags"></ul>
         </div>
       </div>
-
-      <!-- Tagline -->
-      <div class="text-[#ca8a04] font-black text-xs sm:text-sm tracking-wide mb-1">
-        Our Story
+      <div class="cats-stage">
+        <svg class="ray" aria-hidden="true"><line x1="0" y1="0" x2="0" y2="0" /><circle r="4" cx="0" cy="0" /></svg>
+        <div class="lens-disc"><span class="count-badge"></span></div>
+        <ol class="cat-list"></ol>
       </div>
+    </section>
 
-      <!-- Title -->
-      <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-4">
-        TOP CAM &amp; Accessories
+    <section class="work" id="work">
+      <div class="work-head">
+        <p class="meta"><span class="meta-num">03 /</span><span data-i18n="work.label">مختارات من المتجر</span></p>
+        <p class="work-count"><span class="cur">01</span><span class="sep">/</span><span class="total">08</span></p>
+      </div>
+      <div class="work-names" aria-hidden="true"><div class="names-track"></div></div>
+      <div class="ring-viewport"><div class="ring-stage"></div></div>
+      <div class="work-foot">
+        <div class="work-info">
+          <p class="work-cat"></p>
+          <p class="work-hint" data-i18n="work.hint">مرّر — الصفحة كلها بتلبس ألوان كل ماركة</p>
+        </div>
+        <div class="camo">
+          <span data-i18n="work.camo">ألوان الماركة</span>
+          <i class="sw sw-bg"></i><i class="sw sw-ink"></i><i class="sw sw-accent"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="tunnel" id="tunnel">
+      <div class="tunnel-view" aria-hidden="true"><div class="tunnel-world"></div></div>
+      <div class="tunnel-glow" aria-hidden="true"></div>
+      <div class="tunnel-copy">
+        <p class="meta"><span class="meta-num">04 /</span><span data-i18n="tn.label">من الرفوف</span></p>
+        <h2 class="tunnel-title"><span class="tn-num">+<span class="tn-count">0</span></span><span class="tn-text" data-i18n="tn.t">منتج جاهز للطلب</span></h2>
+        <p class="tunnel-sub" data-i18n="tn.sub">كاميرات، عدسات، إضاءة، مايكات، جيمبل وكل الإكسسوارات — في مكان واحد.</p>
+      </div>
+      <div class="tunnel-light" aria-hidden="true"><img src="images/logo_dark.svg" alt=""></div>
+    </section>
+
+    <section class="process" id="process">
+      <p class="meta"><span class="meta-num">05 /</span><span data-i18n="pr.label">كيف نشتغل</span></p>
+      <h2 class="process-title"><span data-i18n="pr.t1">من الرف…</span> <em data-i18n="pr.t2">إلى لقطتك.</em></h2>
+      <div class="steps-wrap">
+        <svg class="ink-path" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 96C150 20 260 150 420 90S700 10 820 80 1080 150 1200 60" /></svg>
+        <ol class="steps">
+          <li class="step"><span class="step-n">01</span><h3 class="step-t" data-i18n="pr.s1">اختر</h3><p data-i18n="pr.s1d">احكي معنا عن شغلك وميزانيتك، ونرشّحلك اللي بيناسبك فعلًا — بدون مبالغة.</p></li>
+          <li class="step"><span class="step-n">02</span><h3 class="step-t" data-i18n="pr.s2">جرّب</h3><p data-i18n="pr.s2d">جرّب القطعة بإيدك بالمحل، أو افحص طلبك عند الاستلام قبل ما تدفع.</p></li>
+          <li class="step"><span class="step-n">03</span><h3 class="step-t" data-i18n="pr.s3">صوّر</h3><p data-i18n="pr.s3d">توصيل خلال 24 ساعة لكل المحافظات، كفالة الوكيل، ودعم بعد البيع.</p></li>
+        </ol>
+      </div>
+      <ul class="stats">
+        <li><b><span data-count="380" id="stProducts">0</span>+</b><p data-i18n="st.1">منتج في المتجر</p></li>
+        <li><b><span data-count="25" id="stBrands">0</span>+</b><p data-i18n="st.2">ماركة عالمية</p></li>
+        <li><b><span data-count="24">0</span>h</b><p data-i18n="st.3">توصيل لكل المحافظات</p></li>
+        <li><b><span data-count="2024" data-from="2000">2000</span></b><p data-i18n="st.4">سنة التأسيس</p></li>
+      </ul>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="meta"><span class="meta-num">06 /</span><span data-i18n="contact.label">تواصل</span></p>
+      <h2 class="contact-title">
+        <span class="line"><span data-i18n="contact.l1">خلّينا نجهّز</span></span>
+        <span class="line"><em data-i18n="contact.l2">لقطتك الجاية.</em></span>
       </h2>
-
-      <!-- Paragraph 1 -->
-      <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal mb-3">
-        TOP CAM &amp; Accessories, operating under the Cameras Store Company registered in the Hashemite Kingdom of Jordan, launched its journey in 2024.
-      </p>
-
-      <!-- Paragraph 2 -->
-      <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal mb-3">
-        Ever since, we have been dedicated to serving professionals and hobbyists alike by offering expert advice through our specialized team and delivering the most competitive prices in Jordan.
-      </p>
-
-      <!-- Paragraph 3 -->
-      <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal mb-6">
-        As Jordan's premier e-commerce destination dedicated exclusively to photography and videography, we take immense pride in offering the country's widest selection of cameras, lenses, lighting equipment, audio gear, and filmmaking accessories.
-      </p>
-
-      <!-- Editorial Founder Quote Card -->
-      <div class="p-5 rounded-2xl bg-slate-50 border-r-4 border-amber-500 border-l border-y border-slate-200/80 shadow-sm" dir="rtl">
-        <i class="fa-solid fa-quote-right text-amber-500 text-xl mb-2 block"></i>
-        <p class="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed">
-          "هدفنا ليس مجرد بيع الكاميرات، بل تمكين كل صانع محتوى ومصور سينمائي في الأردن من الوصول إلى أحدث تقنيات التصوير العالمية بأفضل الأسعار ومع ضمان الوكالة الكامل."
-        </p>
-        <div class="mt-3 text-[11px] font-bold text-amber-700">
-          — إدارة TOP CAM Jordan
-        </div>
-      </div>
-
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════════════════════
-         SECTION 4: WELCOME & MISSION STATEMENT
-         ══════════════════════════════════════════════════════════════════════ -->
-    <section class="max-w-xl mx-auto px-5 sm:px-6 pb-12">
-      
-      <div class="space-y-4 mb-8">
-        <!-- Tagline -->
-        <div class="text-[#ca8a04] font-black text-xs sm:text-sm tracking-wide">
-          Welcome to TOP CAM,
-        </div>
-
-        <!-- H2 Title -->
-        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug">
-          Your Ultimate Destination for All Pro Imaging Gears.
-        </h2>
-
-        <!-- At TOP CAM & Accessories -->
-        <div class="pt-3 space-y-2">
-          <h3 class="text-sm sm:text-base font-bold text-slate-900">
-            At TOP CAM &amp; Accessories
-          </h3>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal">
-            We are more than just a camera store; we are a thriving community of passionate photographers and industry professionals united by the art of capturing life's most precious moments.
-          </p>
-        </div>
-
-        <!-- Our Mission -->
-        <div class="pt-2 space-y-2">
-          <h3 class="text-sm sm:text-base font-bold text-slate-900">
-            Our Mission
-          </h3>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal">
-            is to inspire and equip creators of all skill levels, making photography &amp; videography accessible, enjoyable, and rewarding art form for everyone.
-          </p>
-        </div>
-      </div>
-
-      <!-- Warm Bokeh Studio Lamps Banner -->
-      <div class="my-8 rounded-3xl overflow-hidden shadow-xl border border-slate-100">
-        <img 
-          src="images/about_warm_bokeh.jpg" 
-          alt="TOP CAM Studio Ambience" 
-          class="w-full h-[160px] sm:h-[200px] object-cover"
-        >
-      </div>
-
-      <!-- LUXURY GUARANTEES (4 CORE PILLARS) -->
-      <div class="grid grid-cols-2 gap-3 mb-8" dir="rtl">
-        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-right space-y-1">
-          <i class="fa-solid fa-shield-halved text-amber-500 text-base"></i>
-          <div class="text-xs font-bold text-slate-900">ضمان أصلي 100%</div>
-          <div class="text-[10px] text-slate-500 leading-tight">كفالة الوكالة المعتمدة للأجهزة</div>
-        </div>
-        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-right space-y-1">
-          <i class="fa-solid fa-truck-fast text-amber-500 text-base"></i>
-          <div class="text-xs font-bold text-slate-900">توصيل سريع وفوري</div>
-          <div class="text-[10px] text-slate-500 leading-tight">شحن آمن لكافة محافظات الأردن</div>
-        </div>
-        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-right space-y-1">
-          <i class="fa-solid fa-user-tie text-amber-500 text-base"></i>
-          <div class="text-xs font-bold text-slate-900">فريق خبراء استشاري</div>
-          <div class="text-[10px] text-slate-500 leading-tight">مساعدة متخصصة لاختيار العدة</div>
-        </div>
-        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-right space-y-1">
-          <i class="fa-solid fa-hand-holding-dollar text-amber-500 text-base"></i>
-          <div class="text-xs font-bold text-slate-900">أفضل سعر في المملكة</div>
-          <div class="text-[10px] text-slate-500 leading-tight">أسعار منافسة وعروض حصرية</div>
-        </div>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a 
-          href="index.html#productsSection" 
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#141414] hover:bg-black text-amber-400 font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full transition shadow-xl active:scale-95"
-        >
-          <span>تصفح جميع المنتجات (Explore Products)</span>
-          <i class="fa-solid fa-arrow-left text-[10px]"></i>
+      <div class="contact-row">
+        <a class="pill pill-big" id="waLink" href="contact.html" target="_blank" rel="noopener">
+          <span data-i18n="contact.cta">احكي معنا على واتساب</span>
+          <i class="pill-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg></i>
         </a>
-
-        <a 
-          href="https://wa.me/962790000000" 
-          target="_blank"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full transition shadow-xl active:scale-95"
-        >
-          <i class="fa-brands fa-whatsapp text-sm"></i>
-          <span>تواصل مع الخبير عبر الواتساب</span>
+        <a class="pill pill-big ghost" href="contact.html">
+          <span data-i18n="contact.cta2">كل طرق التواصل</span>
+          <i class="pill-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg></i>
         </a>
+        <p class="contact-note" data-i18n="contact.note">إربد · شارع الجامعة — يوميًا من 10 الصبح لـ 10 بالليل.</p>
       </div>
-
     </section>
-
   </main>
 
-  <!-- ═══════════════ FLOATING BACK-TO-TOP BUTTON ═══════════════ -->
-  <button 
-    onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-    class="fixed right-4 bottom-20 z-40 w-11 h-11 rounded-full bg-white shadow-xl border border-slate-200 flex items-center justify-center text-slate-700 hover:text-black active:scale-90 transition cursor-pointer"
-    aria-label="Back to Top"
-  >
-    <i class="fa-solid fa-chevron-up text-sm"></i>
-  </button>
-
-  <!-- ═══════════════ MOBILE BOTTOM NAVIGATION BAR ═══════════════ -->
-  <div class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-200 shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
-    <div class="max-w-4xl mx-auto px-4 py-2 flex items-center justify-around font-sans">
-      <!-- 1. Shop -->
-      <a href="index.html#productsSection" class="flex flex-col items-center gap-0.5 text-slate-800 hover:text-amber-500 active:scale-95 transition">
-        <i class="fa-solid fa-store text-lg text-slate-700"></i>
-        <span class="text-[10px] font-medium tracking-tight">Shop</span>
-      </a>
-
-      <!-- 2. Wishlist -->
-      <a href="index.html#wishlist" class="flex flex-col items-center gap-0.5 text-slate-800 hover:text-amber-500 active:scale-95 transition">
-        <i class="fa-regular fa-heart text-lg text-slate-700"></i>
-        <span class="text-[10px] font-medium tracking-tight">Wishlist</span>
-      </a>
-
-      <!-- 3. Cart with Counter Badge -->
-      <a href="index.html#cart" class="relative flex flex-col items-center gap-0.5 text-slate-800 hover:text-amber-500 active:scale-95 transition">
-        <i class="fa-solid fa-bag-shopping text-lg text-slate-700"></i>
-        <span class="absolute -top-1 -right-2 bg-amber-500 text-slate-950 font-bold font-mono text-[9px] w-4 h-4 rounded-full flex items-center justify-center border border-white">2</span>
-        <span class="text-[10px] font-medium tracking-tight">Cart</span>
-      </a>
-
-      <!-- 4. My Account (Active on About Page) -->
-      <a href="about.html" class="flex flex-col items-center gap-0.5 text-amber-600 font-bold active:scale-95 transition">
-        <i class="fa-regular fa-user text-lg text-amber-600"></i>
-        <span class="text-[10px] font-bold tracking-tight">My account</span>
-      </a>
+  <footer class="foot">
+    <div class="foot-row">
+      <span>© <span id="yr">2026</span> TOP CAM & Accessories</span>
+      <span data-i18n="foot.note">كفالة الوكيل المعتمد في الأردن · منتجات أصلية 100%</span>
     </div>
+    <div class="foot-word" aria-hidden="true">TOP CAM</div>
+  </footer>
 
-    <!-- Official Website Footer Pill -->
-    <div class="text-center text-[10px] text-slate-400 font-mono py-0.5 border-t border-slate-100 bg-slate-50/50">
-      <span>topcamjor.com</span>
+
+  <!-- Product window: opens from any product on the page -->
+  <div class="pm" id="pm" role="dialog" aria-modal="true" aria-labelledby="pmName">
+    <div class="pm-backdrop" data-close></div>
+    <div class="pm-panel">
+      <div class="pm-media">
+        <svg class="pm-ring" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="pmRingPath" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" /></defs><text><textPath href="#pmRingPath">TOP CAM · GENUINE · DEALER WARRANTY ·</textPath></text></svg>
+        <div class="main"><img id="pmImg" alt=""></div>
+        <div class="pm-thumbs" id="pmThumbs"></div>
+      </div>
+      <div class="pm-info">
+        <div class="pm-top"><span class="pm-brand" id="pmBrand"></span><button class="pm-close" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg></button></div>
+        <h2 class="pm-name" id="pmName"></h2>
+        <div class="pm-price" id="pmPrice"></div>
+        <span class="pm-chip" id="pmChip"><i></i><span></span></span>
+        <p class="pm-desc" id="pmDesc"></p>
+        <ul class="pm-specs" id="pmSpecs"></ul>
+        <div class="pm-perks" id="pmPerks"></div>
+        <div class="pm-actions">
+          <a class="pill wa" id="pmWa" target="_blank" rel="noopener" href="#"><span id="pmWaT"></span><i class="pill-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg></i></a>
+          <a class="pill" id="pmStore" href="index.html"><span id="pmStoreT"></span><i class="pill-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg></i></a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Interactive 3D Camera Tilt Logic -->
-  <script>
-    function toggleMobileMenu() {
-      const drawer = document.getElementById('mobileDrawer');
-      const content = document.getElementById('drawerContent');
-      if (!drawer || !content) return;
-
-      if (drawer.classList.contains('opacity-0')) {
-        drawer.classList.remove('opacity-0', 'pointer-events-none');
-        content.classList.remove('-translate-x-full');
-      } else {
-        drawer.classList.add('opacity-0', 'pointer-events-none');
-        content.classList.add('-translate-x-full');
-      }
-    }
-
-    document.getElementById('mobileDrawer')?.addEventListener('click', (e) => {
-      if (e.target.id === 'mobileDrawer') {
-        toggleMobileMenu();
-      }
-    });
-
-    // 3D Perspective Tilt on Mouse Movement
-    const stage = document.getElementById('camera3DStage');
-    const tiltCard = document.getElementById('tiltCard');
-
-    if (stage && tiltCard) {
-      stage.addEventListener('mousemove', (e) => {
-        const rect = stage.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        const rotateX = ((y - centerY) / centerY) * -10;
-        const rotateY = ((x - centerX) / centerX) * 12;
-
-        tiltCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
-      });
-
-      stage.addEventListener('mouseleave', () => {
-        tiltCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-        tiltCard.style.transition = 'transform 0.5s ease';
-      });
-
-      stage.addEventListener('mouseenter', () => {
-        tiltCard.style.transition = 'none';
-      });
-    }
-  </script>
+  <script src="js/i18n-dom.js"></script>
+  <script src="js/i18n-specs.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/about.js?v=4"></script>
 </body>
 </html>
