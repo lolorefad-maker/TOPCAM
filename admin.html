@@ -576,6 +576,20 @@
             </button>
           </div>
 
+          <!-- إضافة المنتجات الجديدة من البوستات -->
+          <div class="mb-4 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-3.5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center"><i class="fa-solid fa-plus"></i></div>
+              <div>
+                <div class="text-xs font-black text-slate-900">إضافة المنتجات الجديدة (من البوستات)</div>
+                <div class="text-[11px] text-slate-500">يضيف <span id="newProdCount" class="font-en font-black text-slate-800">0</span> منتج جديد غير موجود في الكتالوج الحالي، ويحفظ ذلك لكل الأجهزة.</div>
+              </div>
+            </div>
+            <button type="button" onclick="applyNewProducts()" class="shrink-0 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs px-4 py-2.5 rounded-xl transition">
+              <i class="fa-solid fa-plus ml-1"></i> إضافة الآن
+            </button>
+          </div>
+
           <!-- Inventory Table -->
           <div class="overflow-x-auto rounded-2xl border border-slate-200">
             <table class="w-full text-right text-xs">

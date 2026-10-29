@@ -13,6 +13,7 @@ const A = { 'x-admin-key': PASS, 'Content-Type': 'application/json' };
 const J = { 'Content-Type': 'application/json' };
 
 const DEF = require('../data/default_deleted.json');
+const NEWP = require('../data/new_products.json');
 let passed = 0;
 async function t(name, fn) {
   try { await fn(); passed++; console.log('  ok  ' + name); }
@@ -58,9 +59,16 @@ const call = (p, o) => fetch(base + p, o);
     assert.equal((await call('/api/catalog')).headers.get('x-catalog-source'), 'seed');
     await call('/api/reset-deleted', { method: 'POST', headers: A });
   });
+  await t('المنتجات الجديدة تظهر في الكتالوج وفي /api/new-products', async () => {
+    const np = await (await call('/api/new-products')).json();
+    assert.equal(np.length, NEWP.length);
+    const c = await (await call('/api/catalog')).json();
+    assert.ok(NEWP.every(p => c.find(x => x.id === p.id && x.image && x.price > 0)));
+  });
+
   await t('المنتجات المحذوفة افتراضياً لا تظهر (399 ناقص القائمة)', async () => {
     const c = await (await call('/api/catalog')).json();
-    assert.equal(c.length, 399 - DEF.length);
+    assert.equal(c.length, 399 - DEF.length + NEWP.length);
     assert.ok(DEF.every(id => !c.find(p => p.id === id)), 'ظهر منتج محذوف');
     const d = await (await call('/api/deleted-ids')).json();
     assert.ok(DEF.every(id => d.includes(id)));

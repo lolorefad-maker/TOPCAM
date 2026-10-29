@@ -207,9 +207,16 @@ function effectiveDeleted() {
   return Array.from(new Set([...DEFAULT_DELETED, ...readJson(FILES.deleted, [])]));
 }
 
+// منتجات جديدة تضاف فوق الكتالوج الأساسي (data/new_products.json)
+const NEW_PRODUCTS = (() => {
+  try {
+    const a = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'new_products.json'), 'utf8'));
+    return Array.isArray(a) ? a : [];
+  } catch (e) { return []; }
+})();
 function seededCatalog() {
   const deleted = new Set(effectiveDeleted());
-  return BASE_PRODUCTS.filter(p => !deleted.has(p.id));
+  return BASE_PRODUCTS.concat(NEW_PRODUCTS).filter(p => !deleted.has(p.id));
 }
 function currentProducts() {
   const cat = readJson(FILES.catalog, null);
@@ -358,6 +365,9 @@ async function handleApi(req, res, reqPath) {
       const saved = readJson(FILES.catalog, null);
       const isSaved = Array.isArray(saved) && saved.length > 0;
       return send(res, 200, isSaved ? saved : seededCatalog(), { 'X-Catalog-Source': isSaved ? 'saved' : 'seed' });
+    }
+    if (reqPath === '/api/new-products' && req.method === 'GET') {
+      return send(res, 200, NEW_PRODUCTS);
     }
     if (reqPath === '/api/deleted-ids' && req.method === 'GET') {
       return send(res, 200, effectiveDeleted());

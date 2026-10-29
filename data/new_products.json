@@ -1,0 +1,1234 @@
+[
+ {
+  "id": "NEW-001",
+  "name": "PLOKAMA Auto-A7 Selfie Stick Tripod 360° AI Face Tracking with LED Fill Light",
+  "nameEn": "PLOKAMA Auto-A7 Selfie Stick Tripod 360° AI Face Tracking with LED Fill Light",
+  "brand": "Plokama",
+  "category": "tripods",
+  "price": 25,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/plokama-auto-a7.jpg",
+  "gallery": [
+   "images/products/plokama-auto-a7.jpg"
+  ],
+  "description": "ترايبود وعصا سيلفي Plokama Auto-A7 بدوران 360 درجة وتتبع ذكي للوجه، مع إضاءة LED وريموت تحكم.",
+  "specs": {
+   "النوع": "ترايبود وعصا سيلفي بتتبع الوجه",
+   "الارتفاع الأقصى": "180cm",
+   "الدوران": "360°",
+   "الاستخدام": "إضاءة LED مدمجة وريموت تحكم",
+   "التصنيف": "ترايبودز وحوامل",
+   "الشركة": "Plokama"
+  }
+ },
+ {
+  "id": "NEW-002",
+  "name": "Mobile Dental Photography Fill Light",
+  "nameEn": "Mobile Dental Photography Fill Light",
+  "brand": "",
+  "category": "lighting",
+  "price": 65,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/dental-fill-light.jpg",
+  "gallery": [
+   "images/products/dental-fill-light.jpg"
+  ],
+  "description": "إضاءة تصوير أسنان للموبايل بدرجة حرارة لونية 2500–6500K ودقة ألوان CRI 95+، بقدرة 20 واط.",
+  "specs": {
+   "درجة حرارة اللون": "2500–6500K",
+   "دقة الألوان": "CRI 95+",
+   "القدرة": "20W",
+   "شدة الإضاءة": "32000lx",
+   "الاستخدام": "تصوير الأسنان بالموبايل",
+   "التصنيف": "إضاءات واستوديو احترافي"
+  }
+ },
+ {
+  "id": "NEW-003",
+  "name": "Godox P260C Bi-Color LED Light Panel",
+  "nameEn": "Godox P260C Bi-Color LED Light Panel",
+  "brand": "Godox",
+  "category": "lighting",
+  "price": 80,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/godox-p260c.jpg",
+  "gallery": [
+   "images/products/godox-p260c.jpg"
+  ],
+  "description": "لوح إضاءة LED ثنائي اللون Godox P260C بقدرة 40 واط ودرجة حرارة لونية 3300–5600K ودقة ألوان CRI/TLCI ≥98.",
+  "specs": {
+   "القدرة": "40W",
+   "درجة حرارة اللون": "3300–5600K",
+   "دقة الألوان": "CRI/TLCI ≥98",
+   "الحجم": "24×36cm",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "Godox"
+  }
+ },
+ {
+  "id": "NEW-004",
+  "name": "Godox ML-SF 50 Octa Softbox with Grid 50cm",
+  "nameEn": "Godox ML-SF 50 Octa Softbox with Grid 50cm",
+  "brand": "Godox",
+  "category": "lighting",
+  "price": 29,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/godox-ml-sf50.jpg",
+  "gallery": [
+   "images/products/godox-ml-sf50.jpg"
+  ],
+  "description": "سوفت بوكس مثمّن Godox ML-SF 50 بقطر 50 سم مع شبكة (Grid) لتحكم أدق بالإضاءة.",
+  "specs": {
+   "النوع": "سوفت بوكس مثمّن مع شبكة",
+   "الحجم": "50cm",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "Godox"
+  }
+ },
+ {
+  "id": "NEW-005",
+  "name": "Godox SB-MS Softbox 50x70cm",
+  "nameEn": "Godox SB-MS Softbox 50x70cm",
+  "brand": "Godox",
+  "category": "lighting",
+  "price": 15,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/godox-sb-ms.jpg",
+  "gallery": [
+   "images/products/godox-sb-ms.jpg"
+  ],
+  "description": "سوفت بوكس مستطيل Godox SB-MS بمقاس 50×70 سم لإضاءة ناعمة ومتجانسة.",
+  "specs": {
+   "النوع": "سوفت بوكس مستطيل",
+   "الحجم": "50×70cm",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "Godox"
+  }
+ },
+ {
+  "id": "NEW-006",
+  "name": "Canon PowerShot SX740 HS Digital Camera",
+  "nameEn": "Canon PowerShot SX740 HS Digital Camera",
+  "brand": "Canon",
+  "category": "cameras",
+  "price": 560,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/canon-sx740.jpg",
+  "gallery": [
+   "images/products/canon-sx740.jpg"
+  ],
+  "description": "كاميرا Canon PowerShot SX740 HS الرقمية بتقريب بصري 40x ومستشعر CMOS بدقة 20.3 ميجابكسل وفيديو 4K.",
+  "specs": {
+   "العدسة": "Zoom 40x Optical",
+   "المستشعر": "20.3MP CMOS",
+   "الفيديو": "4K/30fps",
+   "التصنيف": "كاميرات تصوير",
+   "الشركة": "Canon"
+  }
+ },
+ {
+  "id": "NEW-007",
+  "name": "DJI Osmo Pocket 4P Vlog Combo 3-Axis Gimbal",
+  "nameEn": "DJI Osmo Pocket 4P Vlog Combo 3-Axis Gimbal",
+  "brand": "DJI",
+  "category": "gimbals",
+  "price": 740,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/dji-pocket-4p-vlog.jpg",
+  "gallery": [
+   "images/products/dji-pocket-4p-vlog.jpg"
+  ],
+  "description": "كاميرا جيمبل DJI Osmo Pocket 4P Vlog Combo بثلاثة محاور تثبيت، لون 10-Bit D-Log 2، وزوم حتى 12x وفيديو 4K/240fps.",
+  "specs": {
+   "المستشعر": "37MP",
+   "الفيديو": "4K/240fps",
+   "اللون": "10-Bit D-Log 2",
+   "الزوم": "Up to 12x",
+   "التصنيف": "مثبتات حركة وجيمبل",
+   "الشركة": "DJI"
+  },
+  "oldPrice": 850
+ },
+ {
+  "id": "NEW-008",
+  "name": "Godox AD200Pro II TTL Pocket Flash",
+  "nameEn": "Godox AD200Pro II TTL Pocket Flash",
+  "brand": "Godox",
+  "category": "lighting",
+  "price": 315,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/godox-ad200pro-ii.jpg",
+  "gallery": [
+   "images/products/godox-ad200pro-ii.jpg"
+  ],
+  "description": "فلاش جيب Godox AD200Pro II بنظام TTL وقدرة 200 واط، مناسب للتصوير في الاستوديو والخارج.",
+  "specs": {
+   "القدرة": "200W",
+   "النوع": "فلاش جيب TTL",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "Godox"
+  }
+ },
+ {
+  "id": "NEW-009",
+  "name": "ZSYB YM1000R RGB LED Light",
+  "nameEn": "ZSYB YM1000R RGB LED Light",
+  "brand": "ZSYB",
+  "category": "lighting",
+  "price": 100,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/zsyb-ym1000r.jpg",
+  "gallery": [
+   "images/products/zsyb-ym1000r.jpg"
+  ],
+  "description": "كشاف LED بألوان RGB من ZSYB موديل YM1000R بقدرة 200 واط ودرجة حرارة لونية 2700–6500K.",
+  "specs": {
+   "القدرة": "200W",
+   "درجة حرارة اللون": "2700–6500K",
+   "النوع": "كشاف LED بألوان RGB",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "ZSYB"
+  },
+  "oldPrice": 150
+ },
+ {
+  "id": "NEW-010",
+  "name": "ZSYB Y-500S Bi Color LED Video Light",
+  "nameEn": "ZSYB Y-500S Bi Color LED Video Light",
+  "brand": "ZSYB",
+  "category": "lighting",
+  "price": 220,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/zsyb-y500s.jpg",
+  "gallery": [
+   "images/products/zsyb-y500s.jpg"
+  ],
+  "description": "كشاف فيديو LED ثنائي اللون ZSYB Y-500S بقدرة 500 واط ودرجة حرارة لونية 2700–6500K.",
+  "specs": {
+   "القدرة": "500W",
+   "درجة حرارة اللون": "2700–6500K",
+   "النوع": "كشاف فيديو LED ثنائي اللون",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "ZSYB"
+  }
+ },
+ {
+  "id": "NEW-011",
+  "name": "Tamron 17-70mm f/2.8 Di III-A VC RXD Lens for Sony E",
+  "nameEn": "Tamron 17-70mm f/2.8 Di III-A VC RXD Lens for Sony E",
+  "brand": "Tamron",
+  "category": "filters",
+  "price": 580,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/tamron-17-70.jpg",
+  "gallery": [
+   "images/products/tamron-17-70.jpg"
+  ],
+  "description": "عدسة Tamron 17-70mm f/2.8 Di III-A VC RXD لكاميرات Sony E-Mount (Crop-Frame) بفتحة ثابتة f/2.8 ومثبت بصري.",
+  "specs": {
+   "المانت": "Sony E",
+   "حجم المستشعر": "Crop-Frame (APS-C)",
+   "الفتحة": "f/2.8",
+   "العدسة": "17-70mm VC RXD",
+   "التصنيف": "عدسات وفلاتر",
+   "الشركة": "Tamron"
+  }
+ },
+ {
+  "id": "NEW-012",
+  "name": "Hollyland Lark M2 Combo Wireless Microphone",
+  "nameEn": "Hollyland Lark M2 Combo Wireless Microphone",
+  "brand": "Hollyland",
+  "category": "audio",
+  "price": 80,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/hollyland-lark-m2.jpg",
+  "gallery": [
+   "images/products/hollyland-lark-m2.jpg"
+  ],
+  "description": "مايك لاسلكي Hollyland Lark M2 Combo بمدى إرسال حتى 300 متر وعمر بطارية 40 ساعة مع علبة الشحن.",
+  "specs": {
+   "مدى الإرسال": "Up to 300m",
+   "عمر البطارية": "40 hours",
+   "النوع": "نظام مايك لاسلكي",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "Hollyland"
+  },
+  "oldPrice": 99
+ },
+ {
+  "id": "NEW-013",
+  "name": "DJI Mic Mini 2S Wireless Mic (2 TX + 1 RX + Charging Case)",
+  "nameEn": "DJI Mic Mini 2S Wireless Mic (2 TX + 1 RX + Charging Case)",
+  "brand": "DJI",
+  "category": "audio",
+  "price": 125,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/dji-mic-mini-2s.jpg",
+  "gallery": [
+   "images/products/dji-mic-mini-2s.jpg"
+  ],
+  "description": "مايك لاسلكي DJI Mic Mini بجهازي إرسال وجهاز استقبال مع علبة شحن، بعمر بطارية 48 ساعة ومدى إرسال 400 متر.",
+  "specs": {
+   "عمر البطارية": "48 hours",
+   "مدى الإرسال": "400m",
+   "النوع": "نظام مايك لاسلكي (2 TX + 1 RX)",
+   "الاستخدام": "للكاميرا والموبايل (USB-C)",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "DJI"
+  },
+  "oldPrice": 150
+ },
+ {
+  "id": "NEW-014",
+  "name": "Godox Cube-SC Kit2 Wireless Microphones",
+  "nameEn": "Godox Cube-SC Kit2 Wireless Microphones",
+  "brand": "Godox",
+  "category": "audio",
+  "price": 75,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/godox-cube-sc-kit2.jpg",
+  "gallery": [
+   "images/products/godox-cube-sc-kit2.jpg"
+  ],
+  "description": "مايكات لاسلكية Godox Cube-SC Kit2 لأجهزة Type-C بعمر بطارية 30 ساعة ومدى إرسال 300 متر.",
+  "specs": {
+   "عمر البطارية": "30 hours",
+   "مدى الإرسال": "300m",
+   "المنفذ": "Type-C",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "Godox"
+  },
+  "oldPrice": 99
+ },
+ {
+  "id": "NEW-015",
+  "name": "LENSGO LWM-318C Wireless Lavalier Microphone for Camera",
+  "nameEn": "LENSGO LWM-318C Wireless Lavalier Microphone for Camera",
+  "brand": "LENSGO",
+  "category": "audio",
+  "price": 25,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/lensgo-lwm-318c.jpg",
+  "gallery": [
+   "images/products/lensgo-lwm-318c.jpg"
+  ],
+  "description": "مايك ياقة لاسلكي LENSGO LWM-318C للكاميرا بعمر بطارية 5 ساعات ومدى إرسال 50 متر ومنفذ 3.5mm.",
+  "specs": {
+   "عمر البطارية": "5 hours",
+   "مدى الإرسال": "50m",
+   "المنفذ": "3.5mm",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "LENSGO"
+  }
+ },
+ {
+  "id": "NEW-016",
+  "name": "SmallRig RF 05B Portable Zoom LED Video Light 12 effects RGB",
+  "nameEn": "SmallRig RF 05B Portable Zoom LED Video Light 12 effects RGB",
+  "brand": "SmallRig",
+  "category": "lighting",
+  "price": 55,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/smallrig-rf05b.jpg",
+  "gallery": [
+   "images/products/smallrig-rf05b.jpg"
+  ],
+  "description": "كشاف LED محمول بخاصية الزوم SmallRig RF 05B مع 12 تأثير RGB، بدرجة حرارة لونية 1900–8000K وبطارية 2600mAh.",
+  "specs": {
+   "البطارية": "2600mAh",
+   "درجة حرارة اللون": "1900–8000K",
+   "القدرة": "8W",
+   "التأثيرات": "12 effects",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "SmallRig"
+  }
+ },
+ {
+  "id": "NEW-017",
+  "name": "K&F Concept VA18 + VH081 Heavy Duty Tripod Fluid Head",
+  "nameEn": "K&F Concept VA18 + VH081 Heavy Duty Tripod Fluid Head",
+  "brand": "K&F Concept",
+  "category": "tripods",
+  "price": 129,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/kf-va18-vh081.jpg",
+  "gallery": [
+   "images/products/kf-va18-vh081.jpg"
+  ],
+  "description": "ترايبود فيديو ثقيل K&F Concept VA18 مع رأس فلويد VH081 من الألمنيوم، بارتفاع أقصى 184 سم وحمولة حتى 8 كغم.",
+  "specs": {
+   "المادة": "Aluminum",
+   "الارتفاع الأقصى": "184cm",
+   "الحمولة القصوى": "8KG",
+   "الرأس": "Fluid head VH081",
+   "التصنيف": "ترايبودز وحوامل",
+   "الشركة": "K&F Concept"
+  }
+ },
+ {
+  "id": "NEW-018",
+  "name": "K&F Concept ND8 Nano-X Series & MRC",
+  "nameEn": "K&F Concept ND8 Nano-X Series & MRC",
+  "brand": "K&F Concept",
+  "category": "filters",
+  "price": 19,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/kf-nd8-nano-x.jpg",
+  "gallery": [
+   "images/products/kf-nd8-nano-x.jpg"
+  ],
+  "description": "فلتر ND8 من K&F Concept سلسلة Nano-X مع طبقة MRC، متوفر بأحجام 67 و72 و77 و82 مم.",
+  "specs": {
+   "الأحجام": "67, 72, 77, 82mm",
+   "النوع": "فلتر ND8 مع طبقة MRC",
+   "التصنيف": "عدسات وفلاتر",
+   "الشركة": "K&F Concept"
+  }
+ },
+ {
+  "id": "NEW-019",
+  "name": "K&F Concept KF-V99 Pro Battery (V-Mount) 6700mAh",
+  "nameEn": "K&F Concept KF-V99 Pro Battery (V-Mount) 6700mAh",
+  "brand": "K&F Concept",
+  "category": "chargers_batteries",
+  "price": 95,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/kf-v99-pro.jpg",
+  "gallery": [
+   "images/products/kf-v99-pro.jpg"
+  ],
+  "description": "بطارية V-Mount من K&F Concept موديل KF-V99 Pro بسعة 6700mAh وطاقة 99Wh، بمخرجين USB-C ومخرج USB-A.",
+  "specs": {
+   "السعة": "6700mAh",
+   "الطاقة": "99Wh",
+   "المخرجات": "2 x USB-C, 1 x USB-A",
+   "النوع": "V-Mount",
+   "التصنيف": "بطاريات وشواحن",
+   "الشركة": "K&F Concept"
+  }
+ },
+ {
+  "id": "NEW-020",
+  "name": "Viltrox DC-L1 7\" HDMI On-Camera Monitor Touchscreen",
+  "nameEn": "Viltrox DC-L1 7\" HDMI On-Camera Monitor Touchscreen",
+  "brand": "Viltrox",
+  "category": "monitors",
+  "price": 170,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/viltrox-dc-l1.jpg",
+  "gallery": [
+   "images/products/viltrox-dc-l1.jpg"
+  ],
+  "description": "شاشة مونيتور Viltrox DC-L1 مقاس 7 إنش بشاشة لمس ودقة 1280×800، مع مدخل HDMI ومخرج HDMI.",
+  "specs": {
+   "الشاشة": "7\" touchscreen",
+   "الدقة": "1280 x 800",
+   "المنافذ": "1 x HDMI input, 1 x HDMI output",
+   "التصنيف": "شاشات مونيتور",
+   "الشركة": "Viltrox"
+  }
+ },
+ {
+  "id": "NEW-021",
+  "name": "Godox TL30 RGB LED Tube Light",
+  "nameEn": "Godox TL30 RGB LED Tube Light",
+  "brand": "Godox",
+  "category": "lighting",
+  "price": 80,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/godox-tl30.jpg",
+  "gallery": [
+   "images/products/godox-tl30.jpg"
+  ],
+  "description": "أنبوب إضاءة LED بألوان RGB من Godox موديل TL30 بطول 30 سم، بدرجة حرارة لونية 2700–6500K وقدرة 8 واط.",
+  "specs": {
+   "القدرة": "8W",
+   "درجة حرارة اللون": "2700–6500K",
+   "عمر البطارية": "1 hour",
+   "الحجم": "30cm",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "Godox"
+  }
+ },
+ {
+  "id": "NEW-022",
+  "name": "Zoom H6essential Handheld Recorder",
+  "nameEn": "Zoom H6essential Handheld Recorder",
+  "brand": "Zoom",
+  "category": "audio",
+  "price": 240,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/zoom-h6essential.jpg",
+  "gallery": [
+   "images/products/zoom-h6essential.jpg"
+  ],
+  "description": "مسجل صوت محمول Zoom H6essential بست مسارات تسجيل و32-Bit Float وأربعة مداخل XLR/TRS.",
+  "specs": {
+   "التسجيل": "6-Track",
+   "المداخل": "4 x XLR/TRS",
+   "الدقة": "32-Bit Float",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "Zoom"
+  }
+ },
+ {
+  "id": "NEW-023",
+  "name": "Sony 240GB CFexpress 4.0 Type A TOUGH Memory Card",
+  "nameEn": "Sony 240GB CFexpress 4.0 Type A TOUGH Memory Card",
+  "brand": "Sony",
+  "category": "memory",
+  "price": 250,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/sony-cfexpress-240.jpg",
+  "gallery": [
+   "images/products/sony-cfexpress-240.jpg"
+  ],
+  "description": "بطاقة ذاكرة Sony CFexpress 4.0 Type A فئة TOUGH بسعة 240GB، بسرعة قراءة حتى 1800MB/s وكتابة حتى 1700MB/s.",
+  "specs": {
+   "السعة": "240GB",
+   "سرعة القراءة": "1800MB/s",
+   "سرعة الكتابة": "1700MB/s",
+   "الفئة": "VPG400",
+   "التصنيف": "بطاقات ذاكرة",
+   "الشركة": "Sony"
+  }
+ },
+ {
+  "id": "NEW-024",
+  "name": "Kodak Charmera Keychain Digital Camera",
+  "nameEn": "Kodak Charmera Keychain Digital Camera",
+  "brand": "Kodak",
+  "category": "cameras",
+  "price": 54,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/kodak-charmera.jpg",
+  "gallery": [
+   "images/products/kodak-charmera.jpg"
+  ],
+  "description": "كاميرا ميدالية رقمية Kodak Charmera بمستشعر 1.6MP، تدعم 4 إطارات و7 فلاتر وفيديو 1440×1080.",
+  "specs": {
+   "المستشعر": "1.6MP 1/4\" CMOS",
+   "الفيديو": "1440 x 1080 / 30fps",
+   "المميزات": "4 frames & 7 filters",
+   "التصنيف": "كاميرات تصوير",
+   "الشركة": "Kodak"
+  }
+ },
+ {
+  "id": "NEW-025",
+  "name": "Kodak PIXPRO FZ55 Digital Camera",
+  "nameEn": "Kodak PIXPRO FZ55 Digital Camera",
+  "brand": "Kodak",
+  "category": "cameras",
+  "price": 170,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/kodak-pixpro-fz55.jpg",
+  "gallery": [
+   "images/products/kodak-pixpro-fz55.jpg"
+  ],
+  "description": "كاميرا رقمية Kodak PIXPRO FZ55 بتقريب بصري 5x ومستشعر CMOS بدقة 16 ميجابكسل وفيديو Full HD.",
+  "specs": {
+   "العدسة": "Zoom 5x Optical",
+   "المستشعر": "16MP CMOS",
+   "الفيديو": "HD 1080/30fps",
+   "التصنيف": "كاميرات تصوير",
+   "الشركة": "Kodak"
+  }
+ },
+ {
+  "id": "NEW-026",
+  "name": "LENSGO Smoke Master PRO Handheld Fog Machine",
+  "nameEn": "LENSGO Smoke Master PRO Handheld Fog Machine",
+  "brand": "LENSGO",
+  "category": "lighting",
+  "price": 150,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/lensgo-smoke-master-pro.jpg",
+  "gallery": [
+   "images/products/lensgo-smoke-master-pro.jpg"
+  ],
+  "description": "ماكينة دخان محمولة LENSGO Smoke Master PRO بقدرة 100 واط وتعمل حتى 110 دقيقة.",
+  "specs": {
+   "القدرة": "100W",
+   "مدة التشغيل": "Up to 110 minutes",
+   "النوع": "ماكينة دخان محمولة",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "LENSGO"
+  }
+ },
+ {
+  "id": "NEW-027",
+  "name": "DJI Osmo Action 5 Adventure Combo",
+  "nameEn": "DJI Osmo Action 5 Adventure Combo",
+  "brand": "DJI",
+  "category": "cameras",
+  "price": 360,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/dji-osmo-action-5.jpg",
+  "gallery": [
+   "images/products/dji-osmo-action-5.jpg"
+  ],
+  "description": "كاميرا أكشن DJI Osmo Action 5 باقة Adventure Combo مع ملحقات المغامرات.",
+  "specs": {
+   "النوع": "كاميرا أكشن",
+   "الباقة": "Adventure Combo",
+   "التصنيف": "كاميرات تصوير",
+   "الشركة": "DJI"
+  }
+ },
+ {
+  "id": "NEW-028",
+  "name": "Insta360 X4 Air 360 Action Camera (Standard Bundle)",
+  "nameEn": "Insta360 X4 Air 360 Action Camera (Standard Bundle)",
+  "brand": "Insta360",
+  "category": "cameras",
+  "price": 390,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/insta360-x4-air.jpg",
+  "gallery": [
+   "images/products/insta360-x4-air.jpg"
+  ],
+  "description": "كاميرا أكشن 360 درجة Insta360 X4 Air (باقة ستاندرد) بدقة 8K/30fps مع بطارية إضافية وعصا سيلفي.",
+  "specs": {
+   "الفيديو": "8K/30fps 360°",
+   "الباقة": "Standard Bundle",
+   "الملحقات": "Extra battery and selfie stick",
+   "التصنيف": "كاميرات تصوير",
+   "الشركة": "Insta360"
+  }
+ },
+ {
+  "id": "NEW-029",
+  "name": "GoPro Hero13 Black Accessory Bundle 64GB SanDisk",
+  "nameEn": "GoPro Hero13 Black Accessory Bundle 64GB SanDisk",
+  "brand": "GoPro",
+  "category": "cameras",
+  "price": 390,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/gopro-hero13.jpg",
+  "gallery": [
+   "images/products/gopro-hero13.jpg"
+  ],
+  "description": "كاميرا أكشن GoPro Hero13 Black باقة الملحقات مع بطاقة SanDisk سعة 64GB.",
+  "specs": {
+   "النوع": "كاميرا أكشن",
+   "الذاكرة": "SanDisk 64GB",
+   "الباقة": "Accessory Bundle",
+   "التصنيف": "كاميرات تصوير",
+   "الشركة": "GoPro"
+  }
+ },
+ {
+  "id": "NEW-030",
+  "name": "Comica EJoy Uni Pro Wireless USB Microphone with Boom Arm",
+  "nameEn": "Comica EJoy Uni Pro Wireless USB Microphone with Boom Arm",
+  "brand": "Comica",
+  "category": "audio",
+  "price": 48,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/comica-ejoy-uni-pro.jpg",
+  "gallery": [
+   "images/products/comica-ejoy-uni-pro.jpg"
+  ],
+  "description": "مايك USB لاسلكي Comica EJoy Uni Pro بإضاءة RGB ونمط Cardioid، يعمل لاسلكياً أو بالسلك مع ذراع تعليق معدني، مناسب للبث والبودكاست والألعاب.",
+  "specs": {
+   "النوع": "مايك USB لاسلكي وسلكي",
+   "جودة التسجيل": "48kHz / 24-bit",
+   "الاتصال": "2.4GHz + USB-C",
+   "الملحقات": "ذراع تعليق معدني",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "Comica"
+  },
+  "oldPrice": 70
+ },
+ {
+  "id": "NEW-031",
+  "name": "Comica EJoy D10 PRO RGB Cardioid Dynamic USB Microphone",
+  "nameEn": "Comica EJoy D10 PRO RGB Cardioid Dynamic USB Microphone",
+  "brand": "Comica",
+  "category": "audio",
+  "price": 98,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/comica-d10-pro.jpg",
+  "gallery": [
+   "images/products/comica-d10-pro.jpg"
+  ],
+  "description": "مايك ديناميكي Comica EJoy D10 PRO بنمط Cardioid وإضاءة RGB، بمخرجي USB-C وXLR ووضع لاسلكي، مع ذراع تعليق مكتبي.",
+  "specs": {
+   "النوع": "مايك ديناميكي Cardioid",
+   "المخرجات": "USB-C, XLR",
+   "جودة التسجيل": "48kHz / 24-bit",
+   "الملحقات": "ذراع تعليق مكتبي",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "Comica"
+  },
+  "oldPrice": 130
+ },
+ {
+  "id": "NEW-032",
+  "name": "Comica ADCaster C2 Audio Interface",
+  "nameEn": "Comica ADCaster C2 Audio Interface",
+  "brand": "Comica",
+  "category": "audio",
+  "price": 119,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/comica-adcaster-c2.jpg",
+  "gallery": [
+   "images/products/comica-adcaster-c2.jpg"
+  ],
+  "description": "واجهة صوتية متعددة الوظائف Comica ADCaster C2 للبث والبودكاست والتسجيل، بجودة 48kHz/24-bit واتصال بلوتوث وتقليل ضوضاء.",
+  "specs": {
+   "النوع": "واجهة صوتية متعددة الوظائف",
+   "جودة التسجيل": "48kHz / 24-bit",
+   "الاتصال": "Bluetooth + USB",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "Comica"
+  },
+  "oldPrice": 150
+ },
+ {
+  "id": "NEW-033",
+  "name": "7RYMS 7Caster SE2 Audio Interface for Streaming & Podcasting",
+  "nameEn": "7RYMS 7Caster SE2 Audio Interface for Streaming & Podcasting",
+  "brand": "7RYMS",
+  "category": "audio",
+  "price": 169,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/7ryms-7caster-se2.jpg",
+  "gallery": [
+   "images/products/7ryms-7caster-se2.jpg"
+  ],
+  "description": "واجهة صوتية احترافية 7RYMS 7Caster SE2 للبث والبودكاست والتسجيل، بمداخل XLR و6.35mm و3.5mm واتصال بلوتوث وبطارية مدمجة.",
+  "specs": {
+   "النوع": "واجهة صوتية احترافية",
+   "المداخل": "XLR / 6.35mm / 3.5mm",
+   "الاتصال": "Bluetooth + USB-C",
+   "البطارية": "1800mAh",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "7RYMS"
+  },
+  "oldPrice": 220
+ },
+ {
+  "id": "NEW-034",
+  "name": "LENSGO Smoke GO Handheld Fog Machine 30W",
+  "nameEn": "LENSGO Smoke GO Handheld Fog Machine 30W",
+  "brand": "LENSGO",
+  "category": "lighting",
+  "price": 50,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/lensgo-smoke-go.jpg",
+  "gallery": [
+   "images/products/lensgo-smoke-go.jpg"
+  ],
+  "description": "جهاز دخان محمول LENSGO Smoke GO بقدرة 30 واط وبطارية مدمجة وريموت لاسلكي، لتأثيرات الدخان في التصوير والفيديو.",
+  "specs": {
+   "القدرة": "30W",
+   "النوع": "جهاز دخان محمول",
+   "التحكم": "ريموت لاسلكي",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "LENSGO"
+  },
+  "oldPrice": 90
+ },
+ {
+  "id": "NEW-035",
+  "name": "LENSGO Typhoon 1 Professional Styling Fan",
+  "nameEn": "LENSGO Typhoon 1 Professional Styling Fan",
+  "brand": "LENSGO",
+  "category": "lighting",
+  "price": 69,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/lensgo-typhoon-1.jpg",
+  "gallery": [
+   "images/products/lensgo-typhoon-1.jpg"
+  ],
+  "description": "مروحة تصوير احترافية LENSGO Typhoon 1 بقدرة 50 واط و10 مستويات سرعة وريموت لاسلكي، تعمل ببطاريات NP-F لحركة الشعر والأقمشة.",
+  "specs": {
+   "القدرة": "50W",
+   "السرعات": "10",
+   "البطارية": "NP-F x2",
+   "التحكم": "ريموت لاسلكي",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "LENSGO"
+  },
+  "oldPrice": 100
+ },
+ {
+  "id": "NEW-036",
+  "name": "Atomos Shinobi II 5.2\" HDMI HDR Camera Monitor",
+  "nameEn": "Atomos Shinobi II 5.2\" HDMI HDR Camera Monitor",
+  "brand": "Atomos",
+  "category": "monitors",
+  "price": 270,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/atomos-shinobi-ii.jpg",
+  "gallery": [
+   "images/products/atomos-shinobi-ii.jpg"
+  ],
+  "description": "شاشة مونيتور Atomos Shinobi II مقاس 5.2 إنش HDR بسطوع 1500 nits ودقة 1920×1080 بشاشة لمس، مع مدخل HDMI وتشغيل كاميرات Sony وCanon.",
+  "specs": {
+   "الشاشة": "5.2\" touchscreen",
+   "السطوع": "1500 nits",
+   "الدقة": "1920 x 1080",
+   "المنافذ": "HDMI, USB-C",
+   "التصنيف": "شاشات مونيتور",
+   "الشركة": "Atomos"
+  },
+  "oldPrice": 350
+ },
+ {
+  "id": "NEW-037",
+  "name": "RODE Wireless PRO 2-Person Clip-On Wireless Microphone System",
+  "nameEn": "RODE Wireless PRO 2-Person Clip-On Wireless Microphone System",
+  "brand": "RODE",
+  "category": "audio",
+  "price": 277,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/rode-wireless-pro.jpg",
+  "gallery": [
+   "images/products/rode-wireless-pro.jpg"
+  ],
+  "description": "نظام مايك لاسلكي RODE Wireless PRO بجهازي إرسال وجهاز استقبال، تسجيل داخلي 32-bit float وتايم كود، مع مايكين ياقة وعلبة شحن.",
+  "specs": {
+   "النوع": "نظام مايك لاسلكي (2 TX + 1 RX)",
+   "التسجيل": "32-bit float",
+   "مدى الإرسال": "Up to 260m",
+   "الملحقات": "مايكين ياقة وعلبة شحن",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "RODE"
+  },
+  "oldPrice": 350
+ },
+ {
+  "id": "NEW-038",
+  "name": "Ulanzi MT-81 Aluminum Video Tripod with Fluid Head",
+  "nameEn": "Ulanzi MT-81 Aluminum Video Tripod with Fluid Head",
+  "brand": "Ulanzi",
+  "category": "tripods",
+  "price": 60,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/ulanzi-mt-81.jpg",
+  "gallery": [
+   "images/products/ulanzi-mt-81.jpg"
+  ],
+  "description": "ترايبود فيديو Ulanzi MT-81 من الألمنيوم مع رأس فلويد يدور 360 درجة، بارتفاع أقصى 155 سم وحمولة حتى 8 كغم.",
+  "specs": {
+   "المادة": "Aluminum",
+   "الارتفاع الأقصى": "155cm",
+   "الحمولة القصوى": "8KG",
+   "الرأس": "Fluid head 360°",
+   "التصنيف": "ترايبودز وحوامل",
+   "الشركة": "Ulanzi"
+  },
+  "oldPrice": 100
+ },
+ {
+  "id": "NEW-039",
+  "name": "SanDisk Extreme PRO 256GB SDXC Memory Card 200MB/s",
+  "nameEn": "SanDisk Extreme PRO 256GB SDXC Memory Card 200MB/s",
+  "brand": "SanDisk",
+  "category": "memory",
+  "price": 48,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/sandisk-extreme-pro-256.jpg",
+  "gallery": [
+   "images/products/sandisk-extreme-pro-256.jpg"
+  ],
+  "description": "بطاقة ذاكرة SanDisk Extreme PRO سعة 256 جيجا بسرعة قراءة حتى 200MB/s وكتابة 140MB/s، فئة V30 U3 لتصوير 4K.",
+  "specs": {
+   "السعة": "256GB",
+   "سرعة القراءة": "200MB/s",
+   "سرعة الكتابة": "140MB/s",
+   "الفئة": "UHS-I / V30 / U3 / Class 10",
+   "التصنيف": "بطاقات ذاكرة",
+   "الشركة": "SanDisk"
+  },
+  "oldPrice": 60
+ },
+ {
+  "id": "NEW-040",
+  "name": "Lexar 128GB 800x PRO SDXC Memory Card 150MB/s",
+  "nameEn": "Lexar 128GB 800x PRO SDXC Memory Card 150MB/s",
+  "brand": "Lexar",
+  "category": "memory",
+  "price": 21,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/lexar-800x-128.jpg",
+  "gallery": [
+   "images/products/lexar-800x-128.jpg"
+  ],
+  "description": "بطاقة ذاكرة Lexar 800x PRO سعة 128 جيجا بسرعة قراءة حتى 150MB/s، فئة V30 U3 لتصوير 4K.",
+  "specs": {
+   "السعة": "128GB",
+   "سرعة القراءة": "150MB/s",
+   "الفئة": "UHS-I / V30 / U3 / Class 10",
+   "التصنيف": "بطاقات ذاكرة",
+   "الشركة": "Lexar"
+  },
+  "oldPrice": 40
+ },
+ {
+  "id": "NEW-041",
+  "name": "Lexar 64GB 800x PRO SDXC Memory Card 150MB/s",
+  "nameEn": "Lexar 64GB 800x PRO SDXC Memory Card 150MB/s",
+  "brand": "Lexar",
+  "category": "memory",
+  "price": 22,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/lexar-800x-64b.jpg",
+  "gallery": [
+   "images/products/lexar-800x-64b.jpg"
+  ],
+  "description": "بطاقة ذاكرة Lexar 800x PRO سعة 64 جيجا بسرعة قراءة حتى 150MB/s، فئة V30 U3.",
+  "specs": {
+   "السعة": "64GB",
+   "سرعة القراءة": "150MB/s",
+   "الفئة": "UHS-I / V30 / U3 / Class 10",
+   "التصنيف": "بطاقات ذاكرة",
+   "الشركة": "Lexar"
+  }
+ },
+ {
+  "id": "NEW-042",
+  "name": "SanDisk Ultra 64GB SDXC Memory Card 140MB/s",
+  "nameEn": "SanDisk Ultra 64GB SDXC Memory Card 140MB/s",
+  "brand": "SanDisk",
+  "category": "memory",
+  "price": 15,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/sandisk-ultra-64.jpg",
+  "gallery": [
+   "images/products/sandisk-ultra-64.jpg"
+  ],
+  "description": "بطاقة ذاكرة SanDisk Ultra سعة 64 جيجا بسرعة قراءة حتى 140MB/s، فئة UHS-I U1 Class 10.",
+  "specs": {
+   "السعة": "64GB",
+   "سرعة القراءة": "140MB/s",
+   "الفئة": "UHS-I / U1 / Class 10",
+   "التصنيف": "بطاقات ذاكرة",
+   "الشركة": "SanDisk"
+  }
+ },
+ {
+  "id": "NEW-043",
+  "name": "DigiPod TR-462 Camera Tripod 157cm",
+  "nameEn": "DigiPod TR-462 Camera Tripod 157cm",
+  "brand": "DigiPod",
+  "category": "tripods",
+  "price": 22,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/digipod-tr-462.jpg",
+  "gallery": [
+   "images/products/digipod-tr-462.jpg"
+  ],
+  "description": "ترايبود كاميرا وموبايل DigiPod TR-462 من الألمنيوم بارتفاع أقصى 157 سم وحمولة حتى 5 كغم، مع رأس ثلاثي الاتجاهات.",
+  "specs": {
+   "المادة": "Aluminum",
+   "الارتفاع الأقصى": "157cm",
+   "الحمولة القصوى": "5KG",
+   "التصنيف": "ترايبودز وحوامل",
+   "الشركة": "DigiPod"
+  },
+  "oldPrice": 29
+ },
+ {
+  "id": "NEW-044",
+  "name": "ZSYB Y300S Bi-Color LED Video Light 300W",
+  "nameEn": "ZSYB Y300S Bi-Color LED Video Light 300W",
+  "brand": "ZSYB",
+  "category": "lighting",
+  "price": 155,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/zsyb-y300s.jpg",
+  "gallery": [
+   "images/products/zsyb-y300s.jpg"
+  ],
+  "description": "كشاف فيديو LED ثنائي اللون ZSYB Y300S بقدرة 300 واط ودرجة حرارة لونية 2700–6500K بمانت Bowens.",
+  "specs": {
+   "القدرة": "300W",
+   "درجة حرارة اللون": "2700–6500K",
+   "النوع": "كشاف فيديو LED ثنائي اللون",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "ZSYB"
+  }
+ },
+ {
+  "id": "NEW-045",
+  "name": "LENSGO 40SHB Retro Handheld Light Bi-Color 40W",
+  "nameEn": "LENSGO 40SHB Retro Handheld Light Bi-Color 40W",
+  "brand": "LENSGO",
+  "category": "lighting",
+  "price": 59,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/lensgo-40shb.jpg",
+  "gallery": [
+   "images/products/lensgo-40shb.jpg"
+  ],
+  "description": "إضاءة يدوية بتصميم كلاسيكي LENSGO 40SHB بقدرة 40 واط ثنائية اللون 2700–7000K ودقة ألوان CRI 96+، للكاميرات والموبايل.",
+  "specs": {
+   "القدرة": "40W",
+   "درجة حرارة اللون": "2700–7000K",
+   "دقة الألوان": "CRI 96+",
+   "الاستخدام": "للكاميرات والموبايل",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "LENSGO"
+  }
+ },
+ {
+  "id": "NEW-046",
+  "name": "LENSGO 40H Retro Handheld Light Bi-Color 40W",
+  "nameEn": "LENSGO 40H Retro Handheld Light Bi-Color 40W",
+  "brand": "LENSGO",
+  "category": "lighting",
+  "price": 55,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/lensgo-40h.jpg",
+  "gallery": [
+   "images/products/lensgo-40h.jpg"
+  ],
+  "description": "إضاءة يدوية بتصميم كلاسيكي LENSGO 40H بقدرة 40 واط ثنائية اللون 2700–7000K ودقة ألوان CRI 96+، مع حامل كاميرا وموبايل.",
+  "specs": {
+   "القدرة": "40W",
+   "درجة حرارة اللون": "2700–7000K",
+   "دقة الألوان": "CRI 96+",
+   "الاستخدام": "للكاميرات والموبايل",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "LENSGO"
+  }
+ },
+ {
+  "id": "NEW-047",
+  "name": "LENSGO 40SHC PRO Retro Handheld Light Bi-Color 40W",
+  "nameEn": "LENSGO 40SHC PRO Retro Handheld Light Bi-Color 40W",
+  "brand": "LENSGO",
+  "category": "lighting",
+  "price": 50,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/lensgo-40shc-pro.jpg",
+  "gallery": [
+   "images/products/lensgo-40shc-pro.jpg"
+  ],
+  "description": "إضاءة يدوية بتصميم كلاسيكي LENSGO 40SHC PRO بقدرة 40 واط ثنائية اللون 2600–7000K مع 8 تأثيرات وشحن USB-C.",
+  "specs": {
+   "القدرة": "40W",
+   "درجة حرارة اللون": "2600–7000K",
+   "التأثيرات": "8 effects",
+   "الاستخدام": "للكاميرات والموبايل",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "LENSGO"
+  }
+ },
+ {
+  "id": "NEW-048",
+  "name": "PLOKAMA R45 Pro Ring Light 18\" with Remote Control",
+  "nameEn": "PLOKAMA R45 Pro Ring Light 18\" with Remote Control",
+  "brand": "Plokama",
+  "category": "lighting",
+  "price": 40,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/plokama-r45.jpg",
+  "gallery": [
+   "images/products/plokama-r45.jpg"
+  ],
+  "description": "رينغ لايت PLOKAMA R45 Pro مقاس 18 إنش (45 سم) بقدرة 60 واط ودرجة حرارة لونية 3000–6500K، مع ريموت وثلاث حوامل موبايل.",
+  "specs": {
+   "الحجم": "45cm (18\")",
+   "القدرة": "60W",
+   "درجة حرارة اللون": "3000–6500K",
+   "التحكم": "ريموت لاسلكي",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "Plokama"
+  }
+ },
+ {
+  "id": "NEW-049",
+  "name": "DJI RS 5 Combo Gimbal Stabilizer with AI Tracking Module & Briefcase Handle",
+  "nameEn": "DJI RS 5 Combo Gimbal Stabilizer with AI Tracking Module & Briefcase Handle",
+  "brand": "DJI",
+  "category": "gimbals",
+  "price": 699,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/dji-rs5-combo.jpg",
+  "gallery": [
+   "images/products/dji-rs5-combo.jpg"
+  ],
+  "description": "جيمبل DJI RS 5 Combo بثلاثة محاور لكاميرات Mirrorless وDSLR، مع موديول التتبع الذكي ومقبض الحقيبة.",
+  "specs": {
+   "النوع": "جيمبل كاميرا بثلاثة محاور",
+   "الحمولة القصوى": "3KG",
+   "الملحقات": "موديول تتبع ذكي ومقبض حقيبة",
+   "التصنيف": "مثبتات حركة وجيمبل",
+   "الشركة": "DJI"
+  }
+ },
+ {
+  "id": "NEW-050",
+  "name": "Insta360 Flow 2 Pro AI Tracking Smartphone Stabilizer",
+  "nameEn": "Insta360 Flow 2 Pro AI Tracking Smartphone Stabilizer",
+  "brand": "Insta360",
+  "category": "gimbals",
+  "price": 199,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/insta360-flow-2-pro.jpg",
+  "gallery": [
+   "images/products/insta360-flow-2-pro.jpg"
+  ],
+  "description": "جيمبل موبايل Insta360 Flow 2 Pro بثلاثة محاور وتتبع ذكي AI، مع ترايبود وعصا سيلفي مدمجين وبطارية حتى 10 ساعات.",
+  "specs": {
+   "النوع": "جيمبل موبايل بثلاثة محاور",
+   "عمر البطارية": "10 hours",
+   "المميزات": "تتبع ذكي AI",
+   "التصنيف": "مثبتات حركة وجيمبل",
+   "الشركة": "Insta360"
+  }
+ },
+ {
+  "id": "NEW-051",
+  "name": "Ulanzi i-Light Compact Magnetic RGB LED Tube Light 2637",
+  "nameEn": "Ulanzi i-Light Compact Magnetic RGB LED Tube Light 2637",
+  "brand": "Ulanzi",
+  "category": "lighting",
+  "price": 25,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/ulanzi-i-light.jpg",
+  "gallery": [
+   "images/products/ulanzi-i-light.jpg"
+  ],
+  "description": "أنبوب إضاءة RGB صغير Ulanzi i-Light مغناطيسي بدرجة حرارة لونية 2500–9000K و20 تأثير إضاءة وبطارية 2000mAh.",
+  "specs": {
+   "درجة حرارة اللون": "2500–9000K",
+   "التأثيرات": "20 effects",
+   "البطارية": "2000mAh",
+   "دقة الألوان": "CRI 95+",
+   "التصنيف": "إضاءات واستوديو احترافي",
+   "الشركة": "Ulanzi"
+  }
+ },
+ {
+  "id": "NEW-052",
+  "name": "Comica Seekcom S1 Wireless Intercom Headset System (Five Set)",
+  "nameEn": "Comica Seekcom S1 Wireless Intercom Headset System (Five Set)",
+  "brand": "Comica",
+  "category": "audio",
+  "price": 480,
+  "stock": 5,
+  "badge": "",
+  "availability": "none",
+  "image": "images/products/comica-seekcom-s1.jpg",
+  "gallery": [
+   "images/products/comica-seekcom-s1.jpg"
+  ],
+  "description": "نظام إنتركم لاسلكي Comica Seekcom S1 (خمس سماعات) بتقنية 2.4GHz للمحادثة الثنائية الكاملة، بمدى حتى 500 متر وتقليل ضوضاء.",
+  "specs": {
+   "النوع": "نظام إنتركم لاسلكي",
+   "مدى الإرسال": "Up to 500m",
+   "الباقة": "5 headsets",
+   "التصنيف": "مايكات وصوتيات",
+   "الشركة": "Comica"
+  }
+ }
+]

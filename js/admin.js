@@ -1539,8 +1539,41 @@ async function applyDefaultDeleted() {
   updateDefaultDeletedCount();
   showAdminToast('تم حذف ' + present.length + ' منتج. الكتالوج الآن ' + kept.length + ' منتج.', 'success');
 }
-document.addEventListener('DOMContentLoaded', () => { setTimeout(updateDefaultDeletedCount, 1500); });
-window.addEventListener('products_updated', () => { updateDefaultDeletedCount(); });
+// المنتجات الجديدة (data/new_products.json) الناقصة من الكتالوج الحالي
+async function getMissingNewProducts() {
+  let extra = [];
+  try {
+    const r = await fetch('/api/new-products', { cache: 'no-store' });
+    if (r.ok) extra = await r.json();
+  } catch (e) {}
+  const have = new Set(storeDB.getProducts().map(p => p.id));
+  return (Array.isArray(extra) ? extra : []).filter(p => p && p.id && !have.has(p.id));
+}
+
+async function updateNewProductsCount() {
+  const el = document.getElementById('newProdCount');
+  if (!el) return;
+  el.textContent = (await getMissingNewProducts()).length;
+}
+
+async function applyNewProducts() {
+  const missing = await getMissingNewProducts();
+  if (missing.length === 0) {
+    showAdminToast('كل المنتجات الجديدة موجودة في الكتالوج.', 'info');
+    return;
+  }
+  if (!confirm('سيتم إضافة ' + missing.length + ' منتج جديد للكتالوج لكل الأجهزة. هل تريد المتابعة؟')) return;
+  const next = storeDB.getProducts().concat(missing);
+  storeDB.saveProducts(next);
+  renderAdminStats();
+  renderAdminDashboardCharts();
+  renderAdminInventory();
+  renderAdminBrands();
+  updateNewProductsCount();
+  showAdminToast('تمت إضافة ' + missing.length + ' منتج. الكتالوج الآن ' + next.length + ' منتج.', 'success');
+}
+document.addEventListener('DOMContentLoaded', () => { setTimeout(updateDefaultDeletedCount, 1500); setTimeout(updateNewProductsCount, 1500); });
+window.addEventListener('products_updated', () => { updateDefaultDeletedCount(); updateNewProductsCount(); });
 
 // تنبيه في الأدمن إذا كان تخزين السيرفر مؤقتاً (يُمسح عند إعادة التشغيل)
 async function checkStorageMode() {

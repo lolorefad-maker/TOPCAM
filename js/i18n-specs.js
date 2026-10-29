@@ -214,3 +214,103 @@
 };
   if (window.TopcamI18n && window.TopcamI18n.extend) window.TopcamI18n.extend(DICT);
 })();
+
+// منتجات بوستات topcamjo الجديدة (مفاتيح وقيم المواصفات)
+(function () {
+  var DICT2 = {
+ "القدرة": "Power",
+ "درجة حرارة اللون": "Color temperature",
+ "دقة الألوان": "Color accuracy",
+ "شدة الإضاءة": "Luminous intensity",
+ "الحجم": "Size",
+ "الارتفاع الأقصى": "Max height",
+ "الدوران": "Rotation",
+ "الزوم": "Zoom",
+ "اللون": "Color profile",
+ "حجم المستشعر": "Sensor size",
+ "الفتحة": "Aperture",
+ "مدى الإرسال": "Transmission range",
+ "عمر البطارية": "Battery life",
+ "المنفذ": "Port",
+ "التأثيرات": "Effects",
+ "الحمولة القصوى": "Max load",
+ "الرأس": "Head",
+ "المادة": "Material",
+ "الأحجام": "Sizes",
+ "السعة": "Capacity",
+ "الطاقة": "Energy",
+ "المخرجات": "Outputs",
+ "الدقة": "Resolution",
+ "المنافذ": "Ports",
+ "التسجيل": "Recording",
+ "المداخل": "Inputs",
+ "سرعة القراءة": "Read speed",
+ "سرعة الكتابة": "Write speed",
+ "الفئة": "Class",
+ "المميزات": "Features",
+ "مدة التشغيل": "Run time",
+ "الباقة": "Bundle",
+ "الملحقات": "Accessories",
+ "الذاكرة": "Memory",
+ "ترايبود وعصا سيلفي بتتبع الوجه": "Selfie stick tripod with AI face tracking",
+ "إضاءة LED مدمجة وريموت تحكم": "Built-in LED fill light with remote control",
+ "ترايبودز وحوامل": "Tripods & stands",
+ "تصوير الأسنان بالموبايل": "Dental photography with a smartphone",
+ "سوفت بوكس مثمّن مع شبكة": "Octagonal softbox with grid",
+ "سوفت بوكس مستطيل": "Rectangular softbox",
+ "كاميرات تصوير": "Cameras",
+ "مثبتات حركة وجيمبل": "Gimbals & stabilizers",
+ "فلاش جيب TTL": "TTL pocket flash",
+ "كشاف LED بألوان RGB": "RGB LED video light",
+ "كشاف فيديو LED ثنائي اللون": "Bi-color LED video light",
+ "عدسات وفلاتر": "Lenses & filters",
+ "نظام مايك لاسلكي": "Wireless microphone system",
+ "مايكات وصوتيات": "Microphones & audio",
+ "نظام مايك لاسلكي (2 TX + 1 RX)": "Wireless microphone system (2 TX + 1 RX)",
+ "للكاميرا والموبايل (USB-C)": "For cameras and phones (USB-C)",
+ "فلتر ND8 مع طبقة MRC": "ND8 filter with MRC coating",
+ "بطاريات وشواحن": "Batteries & chargers",
+ "شاشات مونيتور": "Monitors",
+ "بطاقات ذاكرة": "Memory cards",
+ "ماكينة دخان محمولة": "Handheld fog machine",
+ "كاميرا أكشن": "Action camera"
+};
+  if (window.TopcamI18n && window.TopcamI18n.extend) window.TopcamI18n.extend(DICT2);
+})();
+
+// الدفعة الثانية من منتجات البوستات
+(function () {
+  var DICT3 = {
+ "جودة التسجيل": "Recording quality",
+ "الاتصال": "Connectivity",
+ "البطارية": "Battery",
+ "التحكم": "Control",
+ "السرعات": "Speed levels",
+ "الشاشة": "Display",
+ "السطوع": "Brightness",
+ "الاستخدام": "Use",
+ "مايك USB لاسلكي وسلكي": "Wireless and wired USB microphone",
+ "ذراع تعليق معدني": "Metal boom arm",
+ "مايكات وصوتيات": "Microphones & audio",
+ "مايك ديناميكي Cardioid": "Cardioid dynamic microphone",
+ "ذراع تعليق مكتبي": "Desk boom arm",
+ "واجهة صوتية متعددة الوظائف": "Multi-functional audio interface",
+ "واجهة صوتية احترافية": "Professional audio interface",
+ "جهاز دخان محمول": "Handheld fog machine",
+ "ريموت لاسلكي": "Wireless remote",
+ "شاشات مونيتور": "Monitors",
+ "نظام مايك لاسلكي (2 TX + 1 RX)": "Wireless microphone system (2 TX + 1 RX)",
+ "مايكين ياقة وعلبة شحن": "Two lavalier mics and charging case",
+ "ترايبودز وحوامل": "Tripods & stands",
+ "بطاقات ذاكرة": "Memory cards",
+ "كشاف فيديو LED ثنائي اللون": "Bi-color LED video light",
+ "للكاميرات والموبايل": "For cameras and smartphones",
+ "جيمبل كاميرا بثلاثة محاور": "3-axis camera gimbal",
+ "موديول تتبع ذكي ومقبض حقيبة": "AI tracking module and briefcase handle",
+ "مثبتات حركة وجيمبل": "Gimbals & stabilizers",
+ "جيمبل موبايل بثلاثة محاور": "3-axis smartphone gimbal",
+ "تتبع ذكي AI": "AI tracking",
+ "نظام إنتركم لاسلكي": "Wireless intercom headset system"
+};
+  if (window.TopcamI18n && window.TopcamI18n.extend) window.TopcamI18n.extend(DICT3);
+})();

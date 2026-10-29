@@ -219,6 +219,7 @@ class StoreDB {
       // saved = كتالوج اعتمده الأدمن (يطابق كل الأجهزة). seed = لم يُعتمد بعد، فنبقي كتالوج الجهاز كما هو.
       const source = catRes.headers.get('X-Catalog-Source') || 'saved';
       let catalogFromServer = null;
+      let serverDeleted = [];
       if (catRes.ok) {
         const list = await catRes.json();
         if (source === 'saved' && Array.isArray(list) && list.length > 0) catalogFromServer = list;
@@ -237,7 +238,7 @@ class StoreDB {
         this.dispatchChange('products_updated');
       } else if (delRes.ok) {
         // لا كتالوج معتمد بعد: نطبّق المحذوفات المسجلة على السيرفر فقط
-        const serverDeleted = await delRes.json();
+        serverDeleted = await delRes.json();
         if (Array.isArray(serverDeleted) && serverDeleted.length > 0) {
           const merged = Array.from(new Set([...this.getDeletedProductIds(), ...serverDeleted]));
           localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(merged));
@@ -246,6 +247,21 @@ class StoreDB {
           const clean = current.filter(p => !deleted.has(p.id));
           if (clean.length !== current.length) this.saveProducts(clean, { noPush: true });
         }
+      }
+
+      // وضع seed: المنتجات الجديدة (data/new_products.json) تُضاف للجهاز إن لم تكن موجودة
+      if (!catalogFromServer) {
+        try {
+          const nr = await fetch('/api/new-products', { cache: 'no-store' });
+          if (nr.ok) {
+            const extra = await nr.json();
+            const current = this.getProducts();
+            const have = new Set(current.map(p => p.id));
+            const gone = new Set(Array.isArray(serverDeleted) ? serverDeleted : []);
+            const add = (Array.isArray(extra) ? extra : []).filter(p => p && p.id && !have.has(p.id) && !gone.has(p.id));
+            if (add.length) this.saveProducts(current.concat(add), { noPush: true });
+          }
+        } catch (e) {}
       }
 
       if (kvRes.ok) {
