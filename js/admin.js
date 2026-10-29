@@ -1501,6 +1501,47 @@ function updateAdoptCount() {
   el.textContent = storeDB.getProducts().length;
 }
 
+// المنتجات المحذوفة (قائمة الحذف الافتراضية + ما حذفه الأدمن) التي ما زالت في الكتالوج الحالي
+async function getDeletedStillPresent() {
+  let ids = [];
+  try {
+    const r = await fetch('/api/deleted-ids', { cache: 'no-store' });
+    if (r.ok) ids = await r.json();
+  } catch (e) {}
+  const set = new Set(Array.isArray(ids) ? ids : []);
+  return { set, present: storeDB.getProducts().filter(p => set.has(p.id)) };
+}
+
+async function updateDefaultDeletedCount() {
+  const el = document.getElementById('defaultDelCount');
+  if (!el) return;
+  const { present } = await getDeletedStillPresent();
+  el.textContent = present.length;
+}
+
+// حذف منتجات قائمة الحذف من الكتالوج المحفوظ (يُحفظ على السيرفر لكل الأجهزة)
+async function applyDefaultDeleted() {
+  const { set, present } = await getDeletedStillPresent();
+  if (present.length === 0) {
+    showAdminToast('لا يوجد في الكتالوج الحالي أي منتج من قائمة الحذف.', 'info');
+    return;
+  }
+  if (!confirm('سيتم حذف ' + present.length + ' منتج من الكتالوج لكل الأجهزة (المنتجات المحددة سابقاً من الصور). هل تريد المتابعة؟')) return;
+  const kept = storeDB.getProducts().filter(p => !set.has(p.id));
+  storeDB.saveProducts(kept);
+  const base = (typeof INITIAL_PRODUCTS !== 'undefined' ? INITIAL_PRODUCTS : []).map(p => p.id);
+  const keepIds = new Set(kept.map(p => p.id));
+  localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(base.filter(id => !keepIds.has(id))));
+  renderAdminStats();
+  renderAdminDashboardCharts();
+  renderAdminInventory();
+  renderAdminBrands();
+  updateDefaultDeletedCount();
+  showAdminToast('تم حذف ' + present.length + ' منتج. الكتالوج الآن ' + kept.length + ' منتج.', 'success');
+}
+document.addEventListener('DOMContentLoaded', () => { setTimeout(updateDefaultDeletedCount, 1500); });
+window.addEventListener('products_updated', () => { updateDefaultDeletedCount(); });
+
 // تنبيه في الأدمن إذا كان تخزين السيرفر مؤقتاً (يُمسح عند إعادة التشغيل)
 async function checkStorageMode() {
   try {
