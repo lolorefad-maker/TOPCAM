@@ -521,7 +521,7 @@ function renderAdminInventory() {
   }
 
   if (categoryFilter !== 'all') {
-    products = products.filter(p => p.category === categoryFilter);
+    products = products.filter(p => inCategory(p, categoryFilter));
   }
 
   if (availabilityFilter !== 'all') {
@@ -566,7 +566,9 @@ function renderAdminInventory() {
     memory: 'ميموريات وذاكرة',
     chargers_batteries: 'شواحن وبطاريات',
     bags: 'شناتي وحقائب',
-    stabilizers: 'ستيبلايزرز وجيمبل',
+    stabilizers: 'جيمبل وستيبلايزر',
+    gimbals: 'جيمبل وستيبلايزر',
+    audio: 'مايكات وصوتيات',
     cages: 'كيج كاميرا وتثبيت',
     straps: 'أحزمة وستراب',
     covers: 'أغطية وحماية'
@@ -1125,8 +1127,16 @@ function openProductEditModal(productId = null) {
     document.getElementById('editProductId').value = product.id;
     document.getElementById('prodName').value = product.name || '';
     document.getElementById('prodNameEn').value = product.nameEn || '';
-    document.getElementById('prodBrand').value = product.brand || 'Sony';
-    document.getElementById('prodCategory').value = product.category || 'cameras';
+    // ماركة غير موجودة في القائمة تُضاف كخيار حتى لا تُمسح عند الحفظ
+    const brandSel = document.getElementById('prodBrand');
+    const brand = product.brand || 'Sony';
+    if (![...brandSel.options].some(o => o.value === brand)) brandSel.add(new Option(brand, brand));
+    brandSel.value = brand;
+    // قسم غير موجود في القائمة (قديم أو مخصص) يُضاف كخيار حتى لا يتغير عند الحفظ
+    const catSel = document.getElementById('prodCategory');
+    const cat = product.category || 'cameras';
+    if (![...catSel.options].some(o => o.value === cat)) catSel.add(new Option(cat, cat));
+    catSel.value = cat;
     const currentAvail = product.availability || (
       (product.badge || '').includes('سولد') ? 'sold_out' :
       (product.badge || '').includes('بري') ? 'pre_order' :
@@ -1241,6 +1251,12 @@ function confirmDeleteProduct(id) {
     renderAdminInventory();
     renderAdminBrands();
   }
+}
+
+// أقسام تحمل أكثر من اسم في البيانات (مثل الجيمبل): الفلترة والتعديل الجماعي يعاملونها كقسم واحد
+const CATEGORY_ALIASES = { gimbals: ['gimbals', 'stabilizers'], stabilizers: ['gimbals', 'stabilizers'] };
+function inCategory(product, category) {
+  return (CATEGORY_ALIASES[category] || [category]).includes(product.category);
 }
 
 // ================= 10. إعدادات المتجر العامة =================
@@ -1479,13 +1495,13 @@ function bulkSetAvailability(category, status) {
   const labels = { sold_out: 'سولد اوت', pre_order: 'بري اوردر', available: 'متوفر', none: 'بدون علامة' };
   const catNames = {
     cameras: 'كاميرات', lighting: 'إضاءات واستوديو', filters: 'فلاتر وعدسات', memory: 'ميموريات وذاكرة',
-    monitors: 'شاشات', tripods: 'ترايبودز', stands: 'ستاندات', stabilizers: 'جيمبل وستيبلايزر', gimbals: 'جيمبل',
+    monitors: 'شاشات', tripods: 'ترايبودز', stands: 'ستاندات', stabilizers: 'جيمبل وستيبلايزر', gimbals: 'جيمبل وستيبلايزر',
     chargers_batteries: 'شواحن وبطاريات', bags: 'شناتي وحقائب', cages: 'كيج وتثبيت', audio: 'صوتيات ومايكات'
   };
   if (!(status in badges)) return;
 
   const products = storeDB.getProducts();
-  const targets = products.filter(p => p.category === category);
+  const targets = products.filter(p => inCategory(p, category));
   if (targets.length === 0) {
     showAdminToast('لا توجد منتجات في قسم "' + (catNames[category] || category) + '".', 'info');
     return;
