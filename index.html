@@ -2489,7 +2489,10 @@
     const CATEGORY_META = {
       all: { ar: 'جميع المعدات وأنظمة التصوير (500 منتج أصلي)', sub: 'تصفح كافة المعدات السينمائية والفوتوغرافية المتوفرة' },
       accessories: { ar: 'الإكسسوارات وأغطية العدسات (Accessories & Caps)', sub: 'أغطية الحماية، هودات العدسات، أطقم التنظيف، وأكياس التثبيت' },
+      caps: { ar: 'أغطية العدسات والكاميرات (Caps)', sub: 'أغطية حماية العدسات الأمامية والخلفية وأغطية مستشعر الكاميرا' },
       teleprompters: { ar: 'شاشات التلقين (Teleprompter)', sub: 'شاشات تلقين النصوص الاحترافية للكاميرات والأجهزة اللوحية والموبايل' },
+      teleprompter: { ar: 'شاشات التلقين (Teleprompter)', sub: 'شاشات تلقين النصوص الاحترافية للكاميرات والأجهزة اللوحية والموبايل' },
+      telepropmter: { ar: 'شاشات التلقين (Teleprompter)', sub: 'شاشات تلقين النصوص الاحترافية للكاميرات والأجهزة اللوحية والموبايل' },
       wireless_video_and_intercom: { ar: 'أنظمة البث والإنتركوم اللاسلكي', sub: 'أجهزة نقل الفيديو والاتصال الميداني اللاسلكي' },
       tripods: { ar: 'الترايبودز والحوامل الثلاثية', sub: 'ترايبودز الكاميرا والفيديو' },
       stands: { ar: 'الستاندات وحوامل الإضاءة', sub: 'ستاندات الإضاءة والحوامل' },
@@ -2724,11 +2727,10 @@
         catProducts = allProducts.filter(p => p.category === 'accessories' || p.category === 'caps' || (p.name && (p.name.toLowerCase().includes('cap') || p.name.toLowerCase().includes('hood') || p.name.toLowerCase().includes('cleaning') || p.name.toLowerCase().includes('sandbag'))));
       } else if (cat === 'caps') {
         catProducts = allProducts.filter(p => p.category === 'caps' || (p.name && p.name.toLowerCase().includes('cap')));
-      } else if (cat === 'teleprompters') {
-        catProducts = allProducts.filter(p => p.category === 'teleprompters' || (p.name && p.name.toLowerCase().includes('teleprompter')));
+      } else if (cat === 'teleprompters' || cat === 'teleprompter' || cat === 'telepropmter') {
+        catProducts = allProducts.filter(p => p.category === 'teleprompters' || p.category === 'teleprompter' || (p.name && p.name.toLowerCase().includes('teleprompter')));
       } else if (cat !== 'all') {
         catProducts = allProducts.filter(p => p.category === cat);
-      } else { catProducts = allProducts.filter(p => p.category === cat); }
       } else {
         catProducts = allProducts;
       }
