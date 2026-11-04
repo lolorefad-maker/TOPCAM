@@ -2,7 +2,7 @@
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
-  PRODUCTS: 'camera_store_products_v24_availability_badges',
+  PRODUCTS: 'camera_store_products_v25_2026_full_catalog',
   DELETED_IDS: 'camera_store_deleted_ids_v1',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
