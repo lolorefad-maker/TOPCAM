@@ -2720,8 +2720,15 @@
         catProducts = allProducts.filter(p => p.category === 'filters' || p.category === 'lenses');
       } else if (cat === 'batteries' || cat === 'chargers_batteries') {
         catProducts = allProducts.filter(p => p.category === 'chargers_batteries' || p.category === 'batteries');
+      } else if (cat === 'accessories') {
+        catProducts = allProducts.filter(p => p.category === 'accessories' || p.category === 'caps' || (p.name && (p.name.toLowerCase().includes('cap') || p.name.toLowerCase().includes('hood') || p.name.toLowerCase().includes('cleaning') || p.name.toLowerCase().includes('sandbag'))));
+      } else if (cat === 'caps') {
+        catProducts = allProducts.filter(p => p.category === 'caps' || (p.name && p.name.toLowerCase().includes('cap')));
+      } else if (cat === 'teleprompters') {
+        catProducts = allProducts.filter(p => p.category === 'teleprompters' || (p.name && p.name.toLowerCase().includes('teleprompter')));
       } else if (cat !== 'all') {
-        if (cat === 'accessories') { catProducts = allProducts.filter(p => p.category === 'accessories' || p.category === 'caps'); } else { catProducts = allProducts.filter(p => p.category === cat); }
+        catProducts = allProducts.filter(p => p.category === cat);
+      } else { catProducts = allProducts.filter(p => p.category === cat); }
       } else {
         catProducts = allProducts;
       }

@@ -2,8 +2,8 @@
 // Camera Store Database & State Layer - TOP CAM Jordan
 
 const STORE_KEYS = {
-  PRODUCTS: 'camera_store_products_v25_2026_full_catalog',
-  DELETED_IDS: 'camera_store_deleted_ids_v1',
+  PRODUCTS: 'camera_store_products_v31_master',
+  DELETED_IDS: 'camera_store_deleted_ids_v31_clean',
   ORDERS: 'camera_store_orders_v1',
   CART: 'camera_store_cart_v1',
   SETTINGS: 'camera_store_settings_v1',
@@ -97,48 +97,38 @@ class StoreDB {
   init() {
     // 1. Permanently track in deleted IDs list so it never resurrects
     const legacyKeys = [
-      'camera_store_products_v1',
-      'camera_store_products_v2',
-      'camera_store_products_v3',
-      'camera_store_products_v4',
-      'camera_store_products_v5',
-      'camera_store_products_v6',
-      'camera_store_products_v7',
-      'camera_store_products_v8',
-      'camera_store_products_v9',
-      'camera_store_products_v10_real_images',
-      'camera_store_products_v11_pure_authentic',
-      'camera_store_products_v12_flawless_authentic',
-      'camera_store_products_v15_332_full_catalog',
-      'camera_store_products_v16_500_full_catalog',
-      'camera_store_promo_popup_v1',
-      'camera_store_promo_popup_v2_free_delivery'
+      'camera_store_products_v24_availability_badges',
+      'camera_store_products_v25_2026_full_catalog',
+      'camera_store_products_v25_accessories_and_prompters',
+      'camera_store_deleted_ids_v1',
+      'camera_store_deleted_ids_v2',
+      'camera_store_deleted_ids_v2_clean'
     ];
     legacyKeys.forEach(k => {
       try { localStorage.removeItem(k); } catch(e){}
     });
 
     let currentProds = [];
+    const baseProds = (typeof INITIAL_PRODUCTS !== 'undefined' && Array.isArray(INITIAL_PRODUCTS)) ? INITIAL_PRODUCTS : [];
     try {
       const stored = localStorage.getItem(STORE_KEYS.PRODUCTS);
-      currentProds = stored ? JSON.parse(stored) : (typeof INITIAL_PRODUCTS !== 'undefined' ? JSON.parse(JSON.stringify(INITIAL_PRODUCTS)) : []);
+      currentProds = stored ? JSON.parse(stored) : JSON.parse(JSON.stringify(baseProds));
     } catch(e) {
-      currentProds = typeof INITIAL_PRODUCTS !== 'undefined' ? JSON.parse(JSON.stringify(INITIAL_PRODUCTS)) : [];
+      currentProds = JSON.parse(JSON.stringify(baseProds));
     }
 
-    // تصفية وحصر الكتالوج بالكامل على المنتجات الأصلية الحقيقية فقط
+    // دمج كافة المنتجات الأصلية تلقائياً
     const deletedIds = new Set(this.getDeletedProductIds());
-    const stored = localStorage.getItem(STORE_KEYS.PRODUCTS);
-
-    if (!stored) {
-      if (typeof INITIAL_PRODUCTS !== 'undefined' && INITIAL_PRODUCTS.length > 0) {
-        currentProds = JSON.parse(JSON.stringify(INITIAL_PRODUCTS)).filter(p => !deletedIds.has(p.id));
-      }
-    } else {
-      if (Array.isArray(currentProds)) {
-        currentProds = currentProds.filter(p => !deletedIds.has(p.id));
-      }
+    const currentMap = new Map();
+    if (Array.isArray(currentProds)) {
+      currentProds.forEach(p => { if (p && p.id && !deletedIds.has(p.id)) currentMap.set(p.id, p); });
     }
+    baseProds.forEach(bp => {
+      if (bp && bp.id && !currentMap.has(bp.id) && !deletedIds.has(bp.id)) {
+        currentMap.set(bp.id, bp);
+      }
+    });
+    currentProds = Array.from(currentMap.values());
     try {
       localStorage.setItem(STORE_KEYS.PRODUCTS, JSON.stringify(currentProds));
     } catch (e) {
@@ -370,28 +360,7 @@ class StoreDB {
         try { deleted = JSON.parse(data) || []; } catch(e) { deleted = []; }
       }
 
-      // كشف تلقائي ذكي: أي صنف غير موجود في قائمة المنتجات المخزنة على هذا الجهاز يتم احتسابه كمحذوف تلقائياً
-      const storedProds = localStorage.getItem(STORE_KEYS.PRODUCTS);
-      if (storedProds && typeof INITIAL_PRODUCTS !== 'undefined') {
-        try {
-          const prods = JSON.parse(storedProds);
-          if (Array.isArray(prods) && prods.length > 0 && prods.length < INITIAL_PRODUCTS.length) {
-            const currentIds = new Set(prods.map(p => p.id));
-            let addedNew = false;
-            INITIAL_PRODUCTS.forEach(ip => {
-              if (!currentIds.has(ip.id) && !deleted.includes(ip.id)) {
-                deleted.push(ip.id);
-                addedNew = true;
-              }
-            });
-            if (addedNew) {
-              try { localStorage.setItem(STORE_KEYS.DELETED_IDS, JSON.stringify(deleted)); } catch(e) {}
-            }
-          }
-        } catch(e) {}
-      }
-
-      return deleted;
+      return Array.isArray(deleted) ? deleted : [];
     } catch (e) {
       return [];
     }
