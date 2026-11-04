@@ -564,6 +564,22 @@
         <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Batteries</span>
       </div>
 
+            <!-- 11. Accessories & Caps -->
+      <div onclick="filterByCategory('accessories')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#fef9c3] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/products/nikon-front-lens-cap-pinch.jpg" alt="Accessories" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Accessories</span>
+      </div>
+
+      <!-- 12. Teleprompters -->
+      <div onclick="filterByCategory('teleprompters')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
+        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#e0e7ff] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
+          <img src="images/products/feelworld-tp16-teleprompter-16.jpg" alt="Teleprompters" class="w-full h-full object-contain rounded-full">
+        </div>
+        <span class="text-[11px] sm:text-xs font-semibold text-slate-700 text-center">Prompters</span>
+      </div>
+
       <!-- 10. Bags & Straps -->
       <div onclick="filterByCategory('bags')" class="flex flex-col items-center gap-1.5 cursor-pointer group min-w-[64px] sm:min-w-[72px] shrink-0">
         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#fce7f3] flex items-center justify-center p-2 transition transform group-hover:scale-105 active:scale-95 shadow-sm">
@@ -2472,6 +2488,9 @@
 
     const CATEGORY_META = {
       all: { ar: 'جميع المعدات وأنظمة التصوير (500 منتج أصلي)', sub: 'تصفح كافة المعدات السينمائية والفوتوغرافية المتوفرة' },
+      accessories: { ar: 'الإكسسوارات وأغطية العدسات (Accessories & Caps)', sub: 'أغطية الحماية، هودات العدسات، أطقم التنظيف، وأكياس التثبيت' },
+      teleprompters: { ar: 'شاشات التلقين والبرومبتر (Teleprompters)', sub: 'شاشات تلقين النصوص للكاميرات والأجهزة اللوحية والموبايل' },
+      wireless_video_and_intercom: { ar: 'أنظمة البث والإنتركوم اللاسلكي', sub: 'أجهزة نقل الفيديو والاتصال الميداني اللاسلكي' },
       tripods: { ar: 'الترايبودز والحوامل الثلاثية', sub: 'ترايبودز الكاميرا والفيديو' },
       stands: { ar: 'الستاندات وحوامل الإضاءة', sub: 'ستاندات الإضاءة والحوامل' },
       monitors: { ar: 'شاشات المونيتور', sub: 'شاشات المونيتور للتصوير والسينما' },
@@ -2702,7 +2721,7 @@
       } else if (cat === 'batteries' || cat === 'chargers_batteries') {
         catProducts = allProducts.filter(p => p.category === 'chargers_batteries' || p.category === 'batteries');
       } else if (cat !== 'all') {
-        catProducts = allProducts.filter(p => p.category === cat);
+        if (cat === 'accessories') { catProducts = allProducts.filter(p => p.category === 'accessories' || p.category === 'caps'); } else { catProducts = allProducts.filter(p => p.category === cat); }
       } else {
         catProducts = allProducts;
       }

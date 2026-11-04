@@ -63,6 +63,20 @@ const INITIAL_CATEGORIES = [
     "icon": "fa-suitcase-rolling",
     "count": 6,
     "image": "images/camera_bag.jpg"
+  },
+  {
+    "id": "accessories",
+    "name": "إكسسوارات وأغطية (Accessories)",
+    "icon": "fa-toolbox",
+    "count": 25,
+    "image": "images/products/nikon-front-lens-cap-pinch.jpg"
+  },
+  {
+    "id": "teleprompters",
+    "name": "ملقنات وشاشات تلقين (Teleprompters)",
+    "icon": "fa-tv",
+    "count": 5,
+    "image": "images/products/feelworld-tp16-teleprompter-16.jpg"
   }
 ];
 
