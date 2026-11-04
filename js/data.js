@@ -6,7 +6,7 @@ const INITIAL_CATEGORIES = [
     "id": "all",
     "name": "جميع المعدات",
     "icon": "fa-layer-group",
-    "count": 497
+    "count": 496
   },
   {
     "id": "cameras",
@@ -73,7 +73,7 @@ const INITIAL_CATEGORIES = [
   },
   {
     "id": "teleprompters",
-    "name": "ملقنات وشاشات تلقين (Teleprompters)",
+    "name": "شاشات تلقين (Teleprompter)",
     "icon": "fa-tv",
     "count": 5,
     "image": "images/products/feelworld-tp16-teleprompter-16.jpg"
@@ -10235,25 +10235,6 @@ const INITIAL_PRODUCTS = [
       "الكمية": "3 أكياس مزدوجة السحاب + حلقات كارابينر معدنية",
       "المادة": "قماش أكسفورد نايلون عالي الكثافة مقاوم للماء والتمزق",
       "الاستخدام": "تثبيت ستاندات الإضاءة، السي-ستاند (C-Stand)، وحوامل الكاميرا"
-    }
-  },
-  {
-    "id": "NEW-063",
-    "stock": 25,
-    "name": "Panda 3D Decorative Hot Shoe Cap",
-    "nameEn": "Panda 3D Cute Hot Shoe Cover Protector",
-    "badge": "كاب باندا كيوت",
-    "price": 6,
-    "category": "accessories",
-    "brand": "Custom",
-    "image": "images/products/panda-3d-hotshoe-cap.jpg",
-    "gallery": [
-      "images/products/panda-3d-hotshoe-cap.jpg"
-    ],
-    "description": "غطاء هوت شو (Hot Shoe) ثلاثي الأبعاد بتصميم الباندا اللطيف، يحمي نقاط التوصيل الإلكترونية من الرطوبة والغبار ويمنح الكاميرا مظهراً مميزاً.",
-    "specs": {
-      "التصميم": "باندا كرتوني مجسم 3D",
-      "التوافق": "جميع كاميرات كانون، نيكون، سوني، فوجي مع منفذ Hot Shoe قياسي"
     }
   },
   {
