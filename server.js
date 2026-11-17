@@ -214,9 +214,24 @@ const NEW_PRODUCTS = (() => {
     return Array.isArray(a) ? a : [];
   } catch (e) { return []; }
 })();
+// صور الزوايا لكل منتج (data/galleries.json): { version, items: { id: [صور...] } }
+// تُطبّق مرة واحدة لكل version على الكتالوج المحفوظ، وبعدها أي تعديل من الأدمن يبقى كما هو.
+const GALLERIES = (() => {
+  try {
+    const g = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'galleries.json'), 'utf8'));
+    return g && g.version && g.items ? g : null;
+  } catch (e) { return null; }
+})();
+function withGalleries(list) {
+  if (!GALLERIES) return list;
+  return list.map(p => {
+    const g = GALLERIES.items[p.id];
+    return Array.isArray(g) && g.length ? Object.assign({}, p, { gallery: g.slice() }) : p;
+  });
+}
 function seededCatalog() {
   const deleted = new Set(effectiveDeleted());
-  return BASE_PRODUCTS.concat(NEW_PRODUCTS).filter(p => !deleted.has(p.id));
+  return withGalleries(BASE_PRODUCTS.concat(NEW_PRODUCTS).filter(p => !deleted.has(p.id)));
 }
 function currentProducts() {
   const cat = readJson(FILES.catalog, null);
@@ -368,11 +383,21 @@ async function handleApi(req, res, reqPath) {
       const existingIds = new Set(catalog.map(p => p.id));
       const deleted = new Set(effectiveDeleted());
       const missing = NEW_PRODUCTS.filter(p => !existingIds.has(p.id) && !deleted.has(p.id));
+      let changed = false;
       if (missing.length > 0) {
-        catalog = catalog.concat(missing);
-        if (isSaved) {
-          writeJson(FILES.catalog, catalog);
+        catalog = catalog.concat(withGalleries(missing));
+        changed = true;
+      }
+      if (isSaved && GALLERIES) {
+        const kv = readJson(FILES.kv, {});
+        if (kv.galleriesVersion !== GALLERIES.version) {
+          catalog = withGalleries(catalog);
+          writeJson(FILES.kv, Object.assign({}, kv, { galleriesVersion: GALLERIES.version }));
+          changed = true;
         }
+      }
+      if (changed && isSaved) {
+        writeJson(FILES.catalog, catalog);
       }
       return send(res, 200, catalog, { 'X-Catalog-Source': isSaved ? 'saved' : 'seed' });
     }
