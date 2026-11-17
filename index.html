@@ -190,50 +190,1019 @@
 
   </header>
 
-  <!-- ═══════════════ CLEAN WHITE LUXURY SIDEBAR (MOBILE DRAWER MENU) ═══════════════ -->
+  
+  <!-- ═══════════════ YOUCAM STYLE PROFESSIONAL CATEGORY DRAWER / SIDEBAR ═══════════════ -->
   <div id="mobileDrawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300">
-    <div id="drawerContent" class="fixed inset-y-0 left-0 w-84 max-w-[85vw] bg-white text-slate-900 p-5 flex flex-col justify-between -translate-x-full transition-transform duration-300 shadow-[10px_0_40px_rgba(0,0,0,0.18)] overflow-y-auto">
-      <div>
-        <!-- Drawer Header with Sharp Dark Logo & Sleek Close Button -->
-        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+    <div id="drawerContent" class="fixed inset-y-0 left-0 w-84 sm:w-96 max-w-[92vw] bg-white text-slate-900 flex flex-col justify-between -translate-x-full transition-transform duration-300 shadow-[10px_0_40px_rgba(0,0,0,0.22)] overflow-hidden">
+      
+      <!-- Top Sticky Drawer Header -->
+      <div class="p-4 pb-2 border-b border-slate-100 shrink-0 bg-white z-10">
+        <!-- Logo & Close Button -->
+        <div class="flex items-center justify-between pb-3">
           <a href="index.html" class="flex items-center">
-            <img src="images/logo_dark.svg" alt="TOP CAM" class="h-8 sm:h-8.5 w-auto">
+            <img src="images/logo_dark.svg" alt="TOP CAM" class="h-8 sm:h-9 w-auto">
           </a>
-          <button onclick="toggleMobileMenu()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 active:scale-90 flex items-center justify-center text-slate-700 transition cursor-pointer">
+          <button onclick="toggleMobileMenu()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 active:scale-90 flex items-center justify-center text-slate-700 transition cursor-pointer" title="إغلاق">
             <i class="fa-solid fa-xmark text-sm"></i>
           </button>
         </div>
 
         <!-- Verified Store Badge -->
-        <div class="mt-3.5 px-3 py-2 rounded-xl bg-amber-50 border border-amber-200/90 flex items-center gap-2 text-[11px] text-amber-900 font-bold" id="drawerVerifiedBadge" dir="rtl">
+        <div class="px-3 py-1.5 rounded-xl bg-amber-50 border border-amber-200/90 flex items-center gap-2 text-[11px] text-amber-900 font-bold" id="drawerVerifiedBadge" dir="rtl">
           <i class="fa-solid fa-circle-check text-amber-600 text-xs"></i>
-          <span>الوجهة الرسمية الأولى لمعدات التصوير والسينما - الأردن</span>
+          <span class="truncate">الوكيل الرسمي الأول لمعدات التصوير والسينما - الأردن</span>
         </div>
 
-        <!-- Mobile Drawer Language Switcher Button -->
-        <div class="mt-3">
+        <!-- Navigation Tabs: Categories (YouCam Style) vs Menu -->
+        <div class="grid grid-cols-2 gap-1 bg-slate-100 p-1 rounded-xl mt-3 font-bold text-xs" dir="rtl">
           <button 
-            onclick="toggleLanguage()" 
-            class="w-full py-2.5 px-3.5 rounded-xl bg-slate-100 hover:bg-amber-100 border border-slate-200 text-slate-800 text-xs font-bold transition flex items-center justify-between group cursor-pointer active:scale-98"
+            id="tabBtnCategories" 
+            onclick="toggleDrawerTab('categories')" 
+            class="py-2 px-3 rounded-lg bg-white text-slate-950 shadow-xs flex items-center justify-center gap-2 transition"
           >
-            <div class="flex items-center gap-2">
-              <i class="fa-solid fa-globe text-amber-500 text-sm"></i>
-              <span id="drawerLangLabel">تغيير اللغة إلى English</span>
-            </div>
-            <span class="text-[10px] font-black uppercase tracking-wider bg-amber-400 text-slate-950 px-2 py-0.5 rounded-md" id="drawerLangBadge">EN</span>
+            <i class="fa-solid fa-layer-group text-amber-500"></i>
+            <span>التصنيفات (Categories)</span>
+          </button>
+          <button 
+            id="tabBtnMenu" 
+            onclick="toggleDrawerTab('menu')" 
+            class="py-2 px-3 rounded-lg text-slate-500 hover:text-slate-950 flex items-center justify-center gap-2 transition"
+          >
+            <i class="fa-solid fa-compass text-slate-400"></i>
+            <span>القائمة (Menu)</span>
           </button>
         </div>
 
-        <!-- Categorized & Organized Links -->
-        <nav class="mt-5 space-y-4 text-right" dir="rtl">
+        <!-- Quick Filter Input inside Drawer -->
+        <div class="relative mt-2.5" id="drawerSearchBox">
+          <input 
+            type="text" 
+            id="drawerCatSearch" 
+            placeholder="ابحث داخل أقسام المتجر..." 
+            oninput="searchDrawerCategories(this.value)"
+            class="w-full bg-slate-50 text-slate-900 placeholder-slate-400 text-xs rounded-xl pl-3 pr-8 py-2 border border-slate-200 focus:border-amber-500 focus:bg-white focus:outline-none transition"
+            dir="rtl"
+          >
+          <i class="fa-solid fa-magnifying-glass absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+        </div>
+      </div>
+
+      <!-- Scrollable Middle Section: Tab 1 (Categories) & Tab 2 (Menu) -->
+      <div class="flex-1 overflow-y-auto px-4 py-2 space-y-1" dir="rtl">
+        
+        <!-- ═══ TAB 1: YOUCAM CATEGORIES ACCORDION ═══ -->
+        <div id="drawerTabCategories" class="space-y-0.5">
+          <div class="flex items-center justify-between text-[11px] font-bold text-slate-400 px-1 py-1">
+            <span>تصفح حسب قسم المعدات</span>
+            <span class="text-[10px] font-mono text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200/80">2,304 منتج أصلي</span>
+          </div>
+
+          <!-- All 11 YouCam Jordan Hierarchical Categories -->
           
-          <!-- Group 1: Navigation -->
+      <!-- Category: Cameras & Cinema -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="cameras" data-keywords="cameras cameras & cinema الكاميرات والسينما">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('cameras', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('cameras', 'all', 'الكاميرات والسينما', 'Cameras & Cinema')">
+            <div class="w-8 h-8 rounded-lg text-amber-500 bg-amber-50 border-amber-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-camera"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">الكاميرات والسينما</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Cameras & Cinema</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">140</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-cameras" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-cameras" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('cameras', 'all', 'الكاميرات والسينما', 'Cameras & Cinema')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في الكاميرات والسينما</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">140</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('cameras', 'mirrorless-cameras', 'كاميرات ميرورليس', 'Mirrorless Cameras')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mirrorless-cameras mirrorless cameras كاميرات ميرورليس">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كاميرات ميرورليس <span class="text-[10px] text-slate-400 font-normal">(Mirrorless Cameras)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">52</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('cameras', '360-action-cameras', 'كاميرات 360 وأكشن', '360 & Action Cameras')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="360-action-cameras 360 & action cameras كاميرات 360 وأكشن">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كاميرات 360 وأكشن <span class="text-[10px] text-slate-400 font-normal">(360 & Action Cameras)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">36</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('cameras', 'compact-cameras', 'كاميرات مدمجة', 'Compact Cameras')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="compact-cameras compact cameras كاميرات مدمجة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كاميرات مدمجة <span class="text-[10px] text-slate-400 font-normal">(Compact Cameras)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">12</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('cameras', 'camcorders', 'كاميرات تصوير فيديو', 'Camcorders')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="camcorders camcorders كاميرات تصوير فيديو">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كاميرات تصوير فيديو <span class="text-[10px] text-slate-400 font-normal">(Camcorders)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">11</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('cameras', 'instant-cameras', 'كاميرات فورية', 'Instant Cameras')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="instant-cameras instant cameras كاميرات فورية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كاميرات فورية <span class="text-[10px] text-slate-400 font-normal">(Instant Cameras)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">9</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('cameras', 'webcam', 'ويب كام وبث', 'WebCam')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="webcam webcam ويب كام وبث">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ويب كام وبث <span class="text-[10px] text-slate-400 font-normal">(WebCam)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">6</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('cameras', 'dslr-cameras', 'كاميرات احترافية DSLR', 'DSLR Cameras')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="dslr-cameras dslr cameras كاميرات احترافية DSLR">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كاميرات احترافية DSLR <span class="text-[10px] text-slate-400 font-normal">(DSLR Cameras)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">2</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Lenses & Optics -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="lenses" data-keywords="lenses lenses & optics العدسات وملحقاتها">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('lenses', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('lenses', 'all', 'العدسات وملحقاتها', 'Lenses & Optics')">
+            <div class="w-8 h-8 rounded-lg text-blue-500 bg-blue-50 border-blue-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-circle-dot"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">العدسات وملحقاتها</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Lenses & Optics</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">162</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-lenses" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-lenses" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('lenses', 'all', 'العدسات وملحقاتها', 'Lenses & Optics')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في العدسات وملحقاتها</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">162</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('lenses', 'mirrorrless-lenses', 'عدسات ميرورليس', 'Mirrorrless Lenses')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mirrorrless-lenses mirrorrless lenses عدسات ميرورليس">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">عدسات ميرورليس <span class="text-[10px] text-slate-400 font-normal">(Mirrorrless Lenses)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">72</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lenses', 'lens-accessories', 'فلاتر وملحقات العدسات', 'Lens Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="lens-accessories lens accessories فلاتر وملحقات العدسات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">فلاتر وملحقات العدسات <span class="text-[10px] text-slate-400 font-normal">(Lens Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">43</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lenses', 'dslr-lenses', 'عدسات DSLR', 'DSLR Lenses')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="dslr-lenses dslr lenses عدسات DSLR">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">عدسات DSLR <span class="text-[10px] text-slate-400 font-normal">(DSLR Lenses)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">30</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lenses', 'lens-adapters', 'محولات العدسات', 'Lens Adapters')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="lens-adapters lens adapters محولات العدسات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">محولات العدسات <span class="text-[10px] text-slate-400 font-normal">(Lens Adapters)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">11</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lenses', 'cine-lenses', 'عدسات سينمائية', 'Cine Lenses')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="cine-lenses cine lenses عدسات سينمائية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">عدسات سينمائية <span class="text-[10px] text-slate-400 font-normal">(Cine Lenses)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">11</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Lighting & Studio -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="lightingandstudio" data-keywords="lightingandstudio lighting & studio إضاءة واستوديو">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('lightingandstudio', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('lightingandstudio', 'all', 'إضاءة واستوديو', 'Lighting & Studio')">
+            <div class="w-8 h-8 rounded-lg text-yellow-500 bg-yellow-50 border-yellow-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">إضاءة واستوديو</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Lighting & Studio</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">636</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-lightingandstudio" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-lightingandstudio" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('lightingandstudio', 'all', 'إضاءة واستوديو', 'Lighting & Studio')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في إضاءة واستوديو</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">636</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'video-lighting', 'إضاءة فيديو مستمرة', 'Video Lighting')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="video-lighting video lighting إضاءة فيديو مستمرة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">إضاءة فيديو مستمرة <span class="text-[10px] text-slate-400 font-normal">(Video Lighting)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">237</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'light-stands-holders', 'ستاندات وحوامل إضاءة', 'Light Stands & Holders')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="light-stands-holders light stands & holders ستاندات وحوامل إضاءة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ستاندات وحوامل إضاءة <span class="text-[10px] text-slate-400 font-normal">(Light Stands & Holders)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">114</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'photo-lighting', 'فلاشات وإضاءة صور', 'Photo Lighting')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="photo-lighting photo lighting فلاشات وإضاءة صور">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">فلاشات وإضاءة صور <span class="text-[10px] text-slate-400 font-normal">(Photo Lighting)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">80</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'modifiers', 'سوفت بوكس وموزعات', 'Modifiers')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="modifiers modifiers سوفت بوكس وموزعات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">سوفت بوكس وموزعات <span class="text-[10px] text-slate-400 font-normal">(Modifiers)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">74</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'lighting-accessories', 'إكسسوارات الإضاءة', 'Lighting Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="lighting-accessories lighting accessories إكسسوارات الإضاءة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">إكسسوارات الإضاءة <span class="text-[10px] text-slate-400 font-normal">(Lighting Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">48</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'on-camera-lighting', 'إضاءات محمولة للكاميرا', 'On-Camera Lighting')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="on-camera-lighting on-camera lighting إضاءات محمولة للكاميرا">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">إضاءات محمولة للكاميرا <span class="text-[10px] text-slate-400 font-normal">(On-Camera Lighting)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">40</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'backgrounds', 'خلفيات ورول استوديو', 'Backgrounds')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="backgrounds backgrounds خلفيات ورول استوديو">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">خلفيات ورول استوديو <span class="text-[10px] text-slate-400 font-normal">(Backgrounds)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">32</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'reflectors-diffusers', 'عواكس ومشتتات', 'Reflectors & Diffusers')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="reflectors-diffusers reflectors & diffusers عواكس ومشتتات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">عواكس ومشتتات <span class="text-[10px] text-slate-400 font-normal">(Reflectors & Diffusers)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">29</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'ring-lights', 'رينج لايت وإضاءة تجميل', 'Ring & Beauty Lighting')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="ring-lights ring & beauty lighting رينج لايت وإضاءة تجميل">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">رينج لايت وإضاءة تجميل <span class="text-[10px] text-slate-400 font-normal">(Ring & Beauty Lighting)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">16</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('lightingandstudio', 'shooting-tent', 'خيام تصوير المنتجات', 'Shooting Tent')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="shooting-tent shooting tent خيام تصوير المنتجات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">خيام تصوير المنتجات <span class="text-[10px] text-slate-400 font-normal">(Shooting Tent)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">5</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Audio & Microphones -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="audio" data-keywords="audio audio & microphones معدات الصوت والمايكات">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('audio', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('audio', 'all', 'معدات الصوت والمايكات', 'Audio & Microphones')">
+            <div class="w-8 h-8 rounded-lg text-rose-500 bg-rose-50 border-rose-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-microphone-lines"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">معدات الصوت والمايكات</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Audio & Microphones</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">188</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-audio" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-audio" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('audio', 'all', 'معدات الصوت والمايكات', 'Audio & Microphones')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في معدات الصوت والمايكات</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">188</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('audio', 'neck-microphones', 'مايكات لافالير وياقة لاسلكية', 'Neck Microphones')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="neck-microphones neck microphones مايكات لافالير وياقة لاسلكية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">مايكات لافالير وياقة لاسلكية <span class="text-[10px] text-slate-400 font-normal">(Neck Microphones)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">55</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('audio', 'audio-accessories', 'ملحقات صوتية وموانع رياح', 'Audio Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="audio-accessories audio accessories ملحقات صوتية وموانع رياح">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ملحقات صوتية وموانع رياح <span class="text-[10px] text-slate-400 font-normal">(Audio Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">54</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('audio', 'cables-adapters', 'كابلات ومحولات صوتية', 'Cables & Adapters')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="cables-adapters cables & adapters كابلات ومحولات صوتية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كابلات ومحولات صوتية <span class="text-[10px] text-slate-400 font-normal">(Cables & Adapters)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">26</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('audio', 'mixers-recorders', 'ميكسر ومسجلات صوتية', 'Mixers & Recorders')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mixers-recorders mixers & recorders ميكسر ومسجلات صوتية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ميكسر ومسجلات صوتية <span class="text-[10px] text-slate-400 font-normal">(Mixers & Recorders)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">21</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('audio', 'podcasting', 'معدات واستوديو البودكاست', 'Podcasting')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="podcasting podcasting معدات واستوديو البودكاست">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">معدات واستوديو البودكاست <span class="text-[10px] text-slate-400 font-normal">(Podcasting)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">18</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('audio', 'shotgun-microphones', 'مايكات شوت جن توجيهية', 'Shotgun Microphones')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="shotgun-microphones shotgun microphones مايكات شوت جن توجيهية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">مايكات شوت جن توجيهية <span class="text-[10px] text-slate-400 font-normal">(Shotgun Microphones)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">12</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('audio', 'boom-microphones', 'مايكات بوم وعصي توجيه', 'Boom Microphones')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="boom-microphones boom microphones مايكات بوم وعصي توجيه">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">مايكات بوم وعصي توجيه <span class="text-[10px] text-slate-400 font-normal">(Boom Microphones)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">8</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Video & Broadcasting -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="video" data-keywords="video video & broadcasting معدات الفيديو والسينما">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('video', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('video', 'all', 'معدات الفيديو والسينما', 'Video & Broadcasting')">
+            <div class="w-8 h-8 rounded-lg text-purple-500 bg-purple-50 border-purple-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">معدات الفيديو والسينما</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Video & Broadcasting</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">265</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-video" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-video" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('video', 'all', 'معدات الفيديو والسينما', 'Video & Broadcasting')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في معدات الفيديو والسينما</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">265</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('video', 'cage-suction-mounts', 'أقفاص وحوامل تثبيت Cages', 'Cage & Suction Mounts')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="cage-suction-mounts cage & suction mounts أقفاص وحوامل تثبيت Cages">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">أقفاص وحوامل تثبيت Cages <span class="text-[10px] text-slate-400 font-normal">(Cage & Suction Mounts)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">71</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('video', 'video-accessories', 'إكسسوارات وملحقات الفيديو', 'Video Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="video-accessories video accessories إكسسوارات وملحقات الفيديو">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">إكسسوارات وملحقات الفيديو <span class="text-[10px] text-slate-400 font-normal">(Video Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">60</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('video', 'gimbals-dolly', 'مانعات اهتزاز وسلايدرات', 'Gimbals & Dolly')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="gimbals-dolly gimbals & dolly مانعات اهتزاز وسلايدرات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">مانعات اهتزاز وسلايدرات <span class="text-[10px] text-slate-400 font-normal">(Gimbals & Dolly)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">40</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('video', 'monitors-recorders', 'شاشات تصوير ومسجلات', 'Monitors & Recorders')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="monitors-recorders monitors & recorders شاشات تصوير ومسجلات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">شاشات تصوير ومسجلات <span class="text-[10px] text-slate-400 font-normal">(Monitors & Recorders)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">34</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('video', 'wireless-transmission', 'أجهزة بث لاسلكي للفيديو', 'Wireless Transmission')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="wireless-transmission wireless transmission أجهزة بث لاسلكي للفيديو">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">أجهزة بث لاسلكي للفيديو <span class="text-[10px] text-slate-400 font-normal">(Wireless Transmission)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">22</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('video', 'autocue-teleprompters', 'ملقنات نصوص تلي برومبتر', 'Autocue/Teleprompters')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="autocue-teleprompters autocue/teleprompters ملقنات نصوص تلي برومبتر">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ملقنات نصوص تلي برومبتر <span class="text-[10px] text-slate-400 font-normal">(Autocue/Teleprompters)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">17</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('video', 'mixers-live-streaming', 'سويتشات ومكسرات بث مباشر', 'Mixers & Live Streaming')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mixers-live-streaming mixers & live streaming سويتشات ومكسرات بث مباشر">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">سويتشات ومكسرات بث مباشر <span class="text-[10px] text-slate-400 font-normal">(Mixers & Live Streaming)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">16</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('video', 'sliders', 'سلايدرات حركة احترافية', 'Sliders')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="sliders sliders سلايدرات حركة احترافية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">سلايدرات حركة احترافية <span class="text-[10px] text-slate-400 font-normal">(Sliders)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">12</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Tripods & Support -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="tripods-and-support" data-keywords="tripods-and-support tripods & support الترايبودز والحوامل">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('tripods-and-support', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('tripods-and-support', 'all', 'الترايبودز والحوامل', 'Tripods & Support')">
+            <div class="w-8 h-8 rounded-lg text-emerald-500 bg-emerald-50 border-emerald-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-cubes-stacked"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">الترايبودز والحوامل</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Tripods & Support</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">153</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-tripods-and-support" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-tripods-and-support" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('tripods-and-support', 'all', 'الترايبودز والحوامل', 'Tripods & Support')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في الترايبودز والحوامل</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">153</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('tripods-and-support', 'tripods-accessories', 'ملحقات ورؤوس ترايبود', 'Tripods Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="tripods-accessories tripods accessories ملحقات ورؤوس ترايبود">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ملحقات ورؤوس ترايبود <span class="text-[10px] text-slate-400 font-normal">(Tripods Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">48</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('tripods-and-support', 'video-tripods', 'ترايبود فيديو احترافي', 'Video Tripods')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="video-tripods video tripods ترايبود فيديو احترافي">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ترايبود فيديو احترافي <span class="text-[10px] text-slate-400 font-normal">(Video Tripods)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">40</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('tripods-and-support', 'photo-tripods', 'ترايبود تصوير فوتوغرافي', 'Photo Tripods')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="photo-tripods photo tripods ترايبود تصوير فوتوغرافي">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ترايبود تصوير فوتوغرافي <span class="text-[10px] text-slate-400 font-normal">(Photo Tripods)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">30</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('tripods-and-support', 'mini-tripods', 'ترايبود مكتبي صغير', 'Mini Tripods')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mini-tripods mini tripods ترايبود مكتبي صغير">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ترايبود مكتبي صغير <span class="text-[10px] text-slate-400 font-normal">(Mini Tripods)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">25</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('tripods-and-support', 'monopods', 'حوامل أحادية مونوبود', 'Monopods')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="monopods monopods حوامل أحادية مونوبود">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">حوامل أحادية مونوبود <span class="text-[10px] text-slate-400 font-normal">(Monopods)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">19</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Batteries & Power -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="batteries-power" data-keywords="batteries-power batteries & power البطاريات ومصادر الطاقة">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('batteries-power', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('batteries-power', 'all', 'البطاريات ومصادر الطاقة', 'Batteries & Power')">
+            <div class="w-8 h-8 rounded-lg text-teal-500 bg-teal-50 border-teal-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-battery-full"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">البطاريات ومصادر الطاقة</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Batteries & Power</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">159</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-batteries-power" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-batteries-power" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('batteries-power', 'all', 'البطاريات ومصادر الطاقة', 'Batteries & Power')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في البطاريات ومصادر الطاقة</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">159</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('batteries-power', 'batteries', 'بطاريات كاميرات وإضاءة', 'Batteries')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="batteries batteries بطاريات كاميرات وإضاءة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">بطاريات كاميرات وإضاءة <span class="text-[10px] text-slate-400 font-normal">(Batteries)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">84</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('batteries-power', 'battery-grips-adapters', 'باتري جريب ومحولات', 'Battery Grips & Adapters')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="battery-grips-adapters battery grips & adapters باتري جريب ومحولات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">باتري جريب ومحولات <span class="text-[10px] text-slate-400 font-normal">(Battery Grips & Adapters)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">33</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('batteries-power', 'chargers', 'شواحن بطاريات ذكية', 'Chargers')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="chargers chargers شواحن بطاريات ذكية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">شواحن بطاريات ذكية <span class="text-[10px] text-slate-400 font-normal">(Chargers)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">29</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('batteries-power', 'ac-power-dummy-battery', 'محولات وبطاريات وهمية', 'AC Power & Dummy Battery')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="ac-power-dummy-battery ac power & dummy battery محولات وبطاريات وهمية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">محولات وبطاريات وهمية <span class="text-[10px] text-slate-400 font-normal">(AC Power & Dummy Battery)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">15</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Bags & Hard Cases -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="bags-cases" data-keywords="bags-cases bags & hard cases الحقائب وحافظات الحماية">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('bags-cases', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('bags-cases', 'all', 'الحقائب وحافظات الحماية', 'Bags & Hard Cases')">
+            <div class="w-8 h-8 rounded-lg text-stone-500 bg-stone-50 border-stone-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-suitcase-rolling"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">الحقائب وحافظات الحماية</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Bags & Hard Cases</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">111</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-bags-cases" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-bags-cases" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('bags-cases', 'all', 'الحقائب وحافظات الحماية', 'Bags & Hard Cases')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في الحقائب وحافظات الحماية</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">111</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('bags-cases', 'backpacks-bags', 'حقائب ظهر للمعدات', 'Backpacks Bags')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="backpacks-bags backpacks bags حقائب ظهر للمعدات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">حقائب ظهر للمعدات <span class="text-[10px] text-slate-400 font-normal">(Backpacks Bags)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">38</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('bags-cases', 'carrying-hard-cases', 'حقائب صلبة مقاومة للصدمات', 'Carrying & Hard Cases')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="carrying-hard-cases carrying & hard cases حقائب صلبة مقاومة للصدمات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">حقائب صلبة مقاومة للصدمات <span class="text-[10px] text-slate-400 font-normal">(Carrying & Hard Cases)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">30</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('bags-cases', 'sling-shoulder-bags', 'حقائب كتف وحزام', 'Sling & Shoulder Bags')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="sling-shoulder-bags sling & shoulder bags حقائب كتف وحزام">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">حقائب كتف وحزام <span class="text-[10px] text-slate-400 font-normal">(Sling & Shoulder Bags)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">22</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('bags-cases', 'protection-covers', 'أغطية وحافظات حماية', 'Protection Covers')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="protection-covers protection covers أغطية وحافظات حماية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">أغطية وحافظات حماية <span class="text-[10px] text-slate-400 font-normal">(Protection Covers)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">21</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Memory & Storage -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="memory-storage" data-keywords="memory-storage memory & storage الذاكرة ووحدات التخزين">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('memory-storage', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('memory-storage', 'all', 'الذاكرة ووحدات التخزين', 'Memory & Storage')">
+            <div class="w-8 h-8 rounded-lg text-cyan-500 bg-cyan-50 border-cyan-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-hard-drive"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">الذاكرة ووحدات التخزين</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Memory & Storage</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">71</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-memory-storage" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-memory-storage" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('memory-storage', 'all', 'الذاكرة ووحدات التخزين', 'Memory & Storage')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في الذاكرة ووحدات التخزين</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">71</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('memory-storage', 'memory-accessories', 'قارئات كروت وحافظات', 'Memory Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="memory-accessories memory accessories قارئات كروت وحافظات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">قارئات كروت وحافظات <span class="text-[10px] text-slate-400 font-normal">(Memory Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">25</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('memory-storage', 'sd-memories', 'كروت ذاكرة SD سريعة', 'SD Memories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="sd-memories sd memories كروت ذاكرة SD سريعة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كروت ذاكرة SD سريعة <span class="text-[10px] text-slate-400 font-normal">(SD Memories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">21</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('memory-storage', 'cf-memories', 'كروت ذاكرة CFexpress / CFast', 'CF Memories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="cf-memories cf memories كروت ذاكرة CFexpress / CFast">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كروت ذاكرة CFexpress / CFast <span class="text-[10px] text-slate-400 font-normal">(CF Memories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">9</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('memory-storage', 'portable-ssd', 'هاردات سريعة SSD', 'Portable SSD')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="portable-ssd portable ssd هاردات سريعة SSD">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">هاردات سريعة SSD <span class="text-[10px] text-slate-400 font-normal">(Portable SSD)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">9</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('memory-storage', 'microsd-memories', 'كروت مايكرو SD', 'MicroSD Memories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="microsd-memories microsd memories كروت مايكرو SD">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">كروت مايكرو SD <span class="text-[10px] text-slate-400 font-normal">(MicroSD Memories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">7</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Mobile Filmmaking -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="mobile" data-keywords="mobile mobile filmmaking تصوير الموبايل وصناع المحتوى">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('mobile', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('mobile', 'all', 'تصوير الموبايل وصناع المحتوى', 'Mobile Filmmaking')">
+            <div class="w-8 h-8 rounded-lg text-indigo-500 bg-indigo-50 border-indigo-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">تصوير الموبايل وصناع المحتوى</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Mobile Filmmaking</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">173</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-mobile" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-mobile" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('mobile', 'all', 'تصوير الموبايل وصناع المحتوى', 'Mobile Filmmaking')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في تصوير الموبايل وصناع المحتوى</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">173</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('mobile', 'mobile-tripods-selfie-sticks', 'ترايبودات وعصي سيلفي', 'Mobile Tripods & Selfie sticks')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mobile-tripods-selfie-sticks mobile tripods & selfie sticks ترايبودات وعصي سيلفي">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ترايبودات وعصي سيلفي <span class="text-[10px] text-slate-400 font-normal">(Mobile Tripods & Selfie sticks)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">55</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('mobile', 'mobile-microphones', 'مايكات مخصصة للهواتف', 'Mobile Microphones')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mobile-microphones mobile microphones مايكات مخصصة للهواتف">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">مايكات مخصصة للهواتف <span class="text-[10px] text-slate-400 font-normal">(Mobile Microphones)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">52</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('mobile', 'mobile-lighting', 'إضاءات سيلفي ومحمولة', 'Mobile Lighting')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mobile-lighting mobile lighting إضاءات سيلفي ومحمولة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">إضاءات سيلفي ومحمولة <span class="text-[10px] text-slate-400 font-normal">(Mobile Lighting)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">24</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('mobile', 'mobile-grips-cages', 'أقفاص وماسكات للموبايل', 'Mobile Grips & Cages')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mobile-grips-cages mobile grips & cages أقفاص وماسكات للموبايل">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">أقفاص وماسكات للموبايل <span class="text-[10px] text-slate-400 font-normal">(Mobile Grips & Cages)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">22</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('mobile', 'mobile-accessories', 'ملحقات ومحولات للهواتف', 'Mobile Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mobile-accessories mobile accessories ملحقات ومحولات للهواتف">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ملحقات ومحولات للهواتف <span class="text-[10px] text-slate-400 font-normal">(Mobile Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">19</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('mobile', 'mobile-gimbals', 'مانعات اهتزاز للموبايل', 'Mobile Gimbals')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="mobile-gimbals mobile gimbals مانعات اهتزاز للموبايل">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">مانعات اهتزاز للموبايل <span class="text-[10px] text-slate-400 font-normal">(Mobile Gimbals)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">8</span>
+          </div>
+        
+        </div>
+      </div>
+    
+
+      <!-- Category: Accessories & Gear -->
+      <div class="sidebar-cat-group border-b border-slate-100 last:border-b-0 py-1" data-cat="accessories" data-keywords="accessories accessories & gear الإكسسوارات والمستلزمات">
+        <div class="flex items-center justify-between py-2 px-2.5 rounded-xl hover:bg-slate-50 transition cursor-pointer group" onclick="toggleCategoryAccordion('accessories', event)">
+          <div class="flex items-center gap-2.5 min-w-0" onclick="event.stopPropagation(); filterByYouCamCat('accessories', 'all', 'الإكسسوارات والمستلزمات', 'Accessories & Gear')">
+            <div class="w-8 h-8 rounded-lg text-amber-600 bg-amber-50 border-amber-200 border flex items-center justify-center shrink-0 text-sm shadow-2xs group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <div class="text-right truncate">
+              <div class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-600 transition truncate">الإكسسوارات والمستلزمات</div>
+              <div class="text-[10px] text-slate-400 font-normal font-sans truncate">Accessories & Gear</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0 mr-1">
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-900 transition">270</span>
+            <button class="w-7 h-7 rounded-md hover:bg-slate-200/70 text-slate-400 hover:text-slate-800 flex items-center justify-center transition" aria-label="Toggle Subcategories">
+              <i id="accordion-icon-accessories" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Subcategories Dropdown -->
+        <div id="accordion-body-accessories" class="hidden pr-3 pl-1 py-1 space-y-0.5 border-r-2 border-amber-400/40 mr-4 mt-0.5 transition-all duration-300">
+          
+      <div onclick="filterByYouCamCat('accessories', 'all', 'الإكسسوارات والمستلزمات', 'Accessories & Gear')" class="flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-amber-50 text-slate-700 hover:text-amber-900 transition text-[11px] sm:text-xs font-bold cursor-pointer group">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-arrow-turn-down text-[10px] text-amber-500 scale-x-[-1]"></i>
+          <span>عرض الكل في الإكسسوارات والمستلزمات</span>
+        </div>
+        <span class="text-[9px] bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-md font-mono font-bold">270</span>
+      </div>
+    \n
+          <div onclick="filterByYouCamCat('accessories', '360-action-camera-accessories', 'إكسسوارات أكشن و360', '360 & Action Camera Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="360-action-camera-accessories 360 & action camera accessories إكسسوارات أكشن و360">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">إكسسوارات أكشن و360 <span class="text-[10px] text-slate-400 font-normal">(360 & Action Camera Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">95</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('accessories', 'commercial-accessories', 'مستلزمات تجارية واستوديو', 'Commercial Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="commercial-accessories commercial accessories مستلزمات تجارية واستوديو">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">مستلزمات تجارية واستوديو <span class="text-[10px] text-slate-400 font-normal">(Commercial Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">55</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('accessories', 'printers', 'طابعات صور فورية', 'Printers')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="printers printers طابعات صور فورية">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">طابعات صور فورية <span class="text-[10px] text-slate-400 font-normal">(Printers)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">35</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('accessories', 'protection-cleaning', 'أدوات تنظيف وحماية العدسات', 'Protection & Cleaning')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="protection-cleaning protection & cleaning أدوات تنظيف وحماية العدسات">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">أدوات تنظيف وحماية العدسات <span class="text-[10px] text-slate-400 font-normal">(Protection & Cleaning)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">32</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('accessories', 'straps', 'أحزمة كاميرات مريحة', 'Straps')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="straps straps أحزمة كاميرات مريحة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">أحزمة كاميرات مريحة <span class="text-[10px] text-slate-400 font-normal">(Straps)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">18</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('accessories', 'other-accessories', 'ملحقات متنوعة', 'Other Accessories')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="other-accessories other accessories ملحقات متنوعة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ملحقات متنوعة <span class="text-[10px] text-slate-400 font-normal">(Other Accessories)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">16</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('accessories', 'remotes', 'ريموتات وتحكم عن بعد', 'Remotes')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="remotes remotes ريموتات وتحكم عن بعد">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">ريموتات وتحكم عن بعد <span class="text-[10px] text-slate-400 font-normal">(Remotes)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">13</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('accessories', 'view-finders', 'محددات الرؤية Viewfinders', 'View Finders')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="view-finders view finders محددات الرؤية Viewfinders">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">محددات الرؤية Viewfinders <span class="text-[10px] text-slate-400 font-normal">(View Finders)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">8</span>
+          </div>
+        \n
+          <div onclick="filterByYouCamCat('accessories', 'booth-360', 'منصات تصوير 360 دوارة', 'Booth 360')" class="sidebar-sub-item flex items-center justify-between py-1.5 px-3 rounded-lg hover:bg-slate-100 text-slate-600 hover:text-slate-950 transition text-[11px] sm:text-xs font-semibold cursor-pointer group" data-keywords="booth-360 booth 360 منصات تصوير 360 دوارة">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-amber-500 transition-colors"></span>
+              <span class="line-clamp-1">منصات تصوير 360 دوارة <span class="text-[10px] text-slate-400 font-normal">(Booth 360)</span></span>
+            </div>
+            <span class="text-[9px] bg-slate-100 text-slate-500 group-hover:bg-amber-100 group-hover:text-amber-800 px-1.5 py-0.2 rounded-md font-mono">7</span>
+          </div>
+        
+        </div>
+      </div>
+    
+        </div>
+
+        <!-- ═══ TAB 2: MENU & SERVICES ═══ -->
+        <div id="drawerTabMenu" class="hidden space-y-3 pt-2">
+          <!-- Main Links -->
           <div>
             <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
               التنقل الرئيسي
             </div>
             <div class="space-y-1">
-              <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber-500/10 text-amber-800 text-xs sm:text-sm font-black border border-amber-500/25">
+              <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber-500/10 text-amber-900 text-xs sm:text-sm font-black border border-amber-500/25">
                 <i class="fa-solid fa-house text-amber-600 w-5 text-center"></i>
                 <span>الرئيسية (Home)</span>
               </a>
@@ -256,13 +1225,13 @@
                   <i class="fa-solid fa-phone text-amber-500 w-5 text-center"></i>
                   <div>
                     <div>تواصل معنا (Contact Us)</div>
-                    <div class="text-[10px] text-slate-400 font-normal">أرقامنا وصفحاتنا على السوشال ميديا</div>
+                    <div class="text-[10px] text-slate-400 font-normal">أرقامنا ومعارضنا وساعات العمل</div>
                   </div>
                 </div>
                 <i class="fa-solid fa-chevron-left text-xs text-slate-400 group-hover:text-amber-500 transition"></i>
               </a>
 
-
+              <!-- Hot Offers -->
               <a href="#productsSection" onclick="filterByCategory('deals'); toggleMobileMenu();" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-bold transition">
                 <div class="flex items-center gap-3">
                   <i class="fa-solid fa-bolt text-rose-500 w-5 text-center"></i>
@@ -273,79 +1242,55 @@
             </div>
           </div>
 
-          <!-- Group 2: Product Categories -->
+          <!-- Services & Cart -->
           <div class="pt-2 border-t border-slate-100">
             <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
-              أقسام المنتجات الاحترافية
+              خدمات التسوق والمفضلة
             </div>
             <div class="space-y-1">
-              <a href="#productsSection" onclick="filterByCategory('cameras'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-camera text-slate-600 w-5 text-center"></i>
-                <span>كاميرات السينما والتصوير</span>
-              </a>
-
-              <a href="#productsSection" onclick="filterByCategory('lighting'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-lightbulb text-slate-600 w-5 text-center"></i>
-                <span>إضاءات الاستوديو (Aputure / Godox)</span>
-              </a>
-
-              <a href="#productsSection" onclick="filterByCategory('filters'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-circle-notch text-slate-600 w-5 text-center"></i>
-                <span>العدسات والفلاتر الاحترافية</span>
-              </a>
-
-              <a href="#productsSection" onclick="filterByCategory('gimbals'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-arrows-to-dot text-slate-600 w-5 text-center"></i>
-                <span>مثبتات الحركة والـ Rigs (DJI / Tilta)</span>
-              </a>
-
-              <a href="#productsSection" onclick="filterByCategory('monitors'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-tv text-slate-600 w-5 text-center"></i>
-                <span>الشاشات (Monitors)</span>
-              </a>
-
-              <a href="#productsSection" onclick="filterByCategory('tripods'); toggleMobileMenu();" class="flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
-                <i class="fa-solid fa-camera-retro text-slate-600 w-5 text-center"></i>
-                <span>الترايبودز (Tripods)</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Group 3: Services & Account -->
-          <div class="pt-2 border-t border-slate-100">
-            <div class="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 mb-2 px-1">
-              خدماتي
-            </div>
-            <div class="space-y-1">
-              <button onclick="toggleCartDrawer(true); toggleMobileMenu();" class="w-full flex items-center justify-between px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition">
+              <button onclick="toggleCartDrawer(true); toggleMobileMenu();" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition cursor-pointer">
                 <div class="flex items-center gap-3">
                   <i class="fa-solid fa-bag-shopping text-slate-600 w-5 text-center"></i>
                   <span>عربة التسوق (Cart)</span>
                 </div>
-                <span class="text-[10px] bg-amber-500 text-slate-950 px-1.5 py-0.2 rounded-full font-mono font-bold">2</span>
+                <span class="text-[10px] bg-amber-500 text-slate-950 px-2 py-0.5 rounded-full font-mono font-bold" id="drawerCartBadge">0</span>
               </button>
 
-              <button onclick="toggleWishlistModal(); toggleMobileMenu();" class="w-full flex items-center gap-3 px-3.5 py-2 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition text-right">
+              <button onclick="toggleWishlistModal(); toggleMobileMenu();" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-semibold transition text-right cursor-pointer">
                 <i class="fa-regular fa-heart text-slate-600 w-5 text-center"></i>
                 <span>قائمة المفضلة (Wishlist)</span>
               </button>
-
             </div>
           </div>
 
-        </nav>
+          <!-- Language Switcher in Drawer -->
+          <div class="pt-2 border-t border-slate-100">
+            <button 
+              onclick="toggleLanguage()" 
+              class="w-full py-2.5 px-3.5 rounded-xl bg-slate-100 hover:bg-amber-100 border border-slate-200 text-slate-800 text-xs font-bold transition flex items-center justify-between group cursor-pointer active:scale-98"
+            >
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-globe text-amber-500 text-sm"></i>
+                <span id="drawerLangLabel">تغيير اللغة إلى English</span>
+              </div>
+              <span class="text-[10px] font-black uppercase tracking-wider bg-amber-400 text-slate-950 px-2 py-0.5 rounded-md" id="drawerLangBadge">EN</span>
+            </button>
+          </div>
+        </div>
+
       </div>
 
       <!-- Drawer Footer with WhatsApp Card -->
-      <div class="pt-4 border-t border-slate-100 space-y-2">
+      <div class="p-4 border-t border-slate-100 space-y-2 bg-slate-50/70 shrink-0">
         <a href="https://wa.me/962790000000" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold text-xs py-3 rounded-xl flex items-center justify-center gap-2 transition shadow-md">
           <i class="fa-brands fa-whatsapp text-base"></i>
           <span>تواصل فوري عبر الواتساب (VIP)</span>
         </a>
-        <div class="text-[10px] text-slate-400 text-center font-mono">عمان، الأردن • TOP CAM Official Store</div>
+        <div class="text-[10px] text-slate-400 text-center font-mono">عمان / إربد، الأردن • TOP CAM Official Store</div>
       </div>
     </div>
   </div>
+
 
   <!-- ═══════════════ INTERACTIVE 3-SLIDE HERO BANNER (With Rotating Flip Arrows) ═══════════════ -->
   <section class="relative w-full bg-[#0a0a0c] overflow-hidden select-none">
@@ -2715,20 +3660,38 @@
 
       if (cat === 'deals') {
         catProducts = allProducts.filter(p => p.oldPrice || (p.badge && (p.badge.includes('خصم') || p.badge.includes('وفر') || p.badge.includes('الأكثر') || p.badge.includes('عرض'))));
-      } else if (cat === 'gimbals' || cat === 'stabilizers') {
-        catProducts = allProducts.filter(p => p.category === 'gimbals' || p.category === 'stabilizers');
-      } else if (cat === 'stands') {
-        catProducts = allProducts.filter(p => p.category === 'stands');
-      } else if (cat === 'filters' || cat === 'lenses') {
-        catProducts = allProducts.filter(p => p.category === 'filters' || p.category === 'lenses');
-      } else if (cat === 'batteries' || cat === 'chargers_batteries') {
-        catProducts = allProducts.filter(p => p.category === 'chargers_batteries' || p.category === 'batteries');
+      } else if (cat.startsWith('sub:')) {
+        const subSlug = cat.replace('sub:', '').toLowerCase().trim();
+        const cleanSub = subSlug.replace(/-/g, ' ');
+        catProducts = allProducts.filter(p => {
+          if (Array.isArray(p.youcamCategories)) {
+            if (p.youcamCategories.some(c => c.toLowerCase().includes(subSlug) || c.toLowerCase().includes(cleanSub) || cleanSub.includes(c.toLowerCase()))) return true;
+          }
+          const text = ((p.name || '') + ' ' + (p.nameEn || '') + ' ' + (p.description || '')).toLowerCase();
+          return text.includes(cleanSub) || text.includes(subSlug);
+        });
+      } else if (cat === 'cameras') {
+        catProducts = allProducts.filter(p => p.category === 'cameras' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('camera'))));
+      } else if (cat === 'lenses' || cat === 'filters') {
+        catProducts = allProducts.filter(p => p.category === 'lenses' || p.category === 'filters' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('lens'))));
+      } else if (cat === 'lighting' || cat === 'lightingandstudio' || cat === 'stands') {
+        catProducts = allProducts.filter(p => p.category === 'lighting' || p.category === 'stands' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('light') || c.toLowerCase().includes('modifier') || c.toLowerCase().includes('studio'))));
+      } else if (cat === 'audio') {
+        catProducts = allProducts.filter(p => p.category === 'audio' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('audio') || c.toLowerCase().includes('mic'))));
+      } else if (cat === 'video') {
+        catProducts = allProducts.filter(p => p.category === 'video' || p.category === 'gimbals' || p.category === 'stabilizers' || p.category === 'cages' || p.category === 'monitors' || p.category === 'teleprompters' || p.category === 'teleprompter' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('video') || c.toLowerCase().includes('gimbal') || c.toLowerCase().includes('cage') || c.toLowerCase().includes('monitor') || c.toLowerCase().includes('autocue') || c.toLowerCase().includes('transmission'))));
+      } else if (cat === 'tripods' || cat === 'tripods-and-support') {
+        catProducts = allProducts.filter(p => p.category === 'tripods' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('tripod') || c.toLowerCase().includes('monopod'))));
+      } else if (cat === 'batteries' || cat === 'batteries-power' || cat === 'chargers_batteries') {
+        catProducts = allProducts.filter(p => p.category === 'chargers_batteries' || p.category === 'batteries' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('batter') || c.toLowerCase().includes('charger') || c.toLowerCase().includes('power'))));
+      } else if (cat === 'bags' || cat === 'bags-cases') {
+        catProducts = allProducts.filter(p => p.category === 'bags' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('bag') || c.toLowerCase().includes('case'))));
+      } else if (cat === 'memory' || cat === 'memory-storage') {
+        catProducts = allProducts.filter(p => p.category === 'memory' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('memor') || c.toLowerCase().includes('sd') || c.toLowerCase().includes('storage'))));
+      } else if (cat === 'mobile') {
+        catProducts = allProducts.filter(p => (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('mobile'))) || (p.name && (p.name.toLowerCase().includes('phone') || p.name.toLowerCase().includes('mobile') || p.name.toLowerCase().includes('selfie'))));
       } else if (cat === 'accessories') {
-        catProducts = allProducts.filter(p => p.category === 'accessories' || p.category === 'caps' || (p.name && (p.name.toLowerCase().includes('cap') || p.name.toLowerCase().includes('hood') || p.name.toLowerCase().includes('cleaning') || p.name.toLowerCase().includes('sandbag'))));
-      } else if (cat === 'caps') {
-        catProducts = allProducts.filter(p => p.category === 'caps' || (p.name && p.name.toLowerCase().includes('cap')));
-      } else if (cat === 'teleprompters' || cat === 'teleprompter' || cat === 'telepropmter') {
-        catProducts = allProducts.filter(p => p.category === 'teleprompters' || p.category === 'teleprompter' || (p.name && p.name.toLowerCase().includes('teleprompter')));
+        catProducts = allProducts.filter(p => p.category === 'accessories' || p.category === 'caps' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('accessor') || c.toLowerCase().includes('printer') || c.toLowerCase().includes('strap'))));
       } else if (cat !== 'all') {
         catProducts = allProducts.filter(p => p.category === cat);
       } else {
@@ -3551,6 +4514,119 @@
         }).catch(() => {});
       }
     });
+
+  
+    // ═══════════════ YOUCAM SIDEBAR INTERACTIVE LOGIC ═══════════════
+    function toggleDrawerTab(tab) {
+      const catTab = document.getElementById('drawerTabCategories');
+      const menuTab = document.getElementById('drawerTabMenu');
+      const btnCat = document.getElementById('tabBtnCategories');
+      const btnMenu = document.getElementById('tabBtnMenu');
+      const searchBox = document.getElementById('drawerSearchBox');
+
+      if (tab === 'categories') {
+        catTab?.classList.remove('hidden');
+        menuTab?.classList.add('hidden');
+        searchBox?.classList.remove('hidden');
+        btnCat?.classList.add('bg-white', 'text-slate-950', 'shadow-xs');
+        btnCat?.classList.remove('text-slate-500');
+        btnMenu?.classList.remove('bg-white', 'text-slate-950', 'shadow-xs');
+        btnMenu?.classList.add('text-slate-500');
+      } else {
+        catTab?.classList.add('hidden');
+        menuTab?.classList.remove('hidden');
+        searchBox?.classList.add('hidden');
+        btnMenu?.classList.add('bg-white', 'text-slate-950', 'shadow-xs');
+        btnMenu?.classList.remove('text-slate-500');
+        btnCat?.classList.remove('bg-white', 'text-slate-950', 'shadow-xs');
+        btnCat?.classList.add('text-slate-500');
+      }
+    }
+
+    function toggleCategoryAccordion(slug, e) {
+      if (e) e.stopPropagation();
+      const body = document.getElementById('accordion-body-' + slug);
+      const icon = document.getElementById('accordion-icon-' + slug);
+      if (!body) return;
+
+      const isHidden = body.classList.contains('hidden');
+      if (isHidden) {
+        body.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180', 'text-amber-500');
+      } else {
+        body.classList.add('hidden');
+        if (icon) icon.classList.remove('rotate-180', 'text-amber-500');
+      }
+    }
+
+    function filterByYouCamCat(mainSlug, subSlug, displayNameAr, displayNameEn) {
+      const isEn = (typeof currentLang !== 'undefined' && currentLang === 'en');
+      const displayTitle = isEn ? displayNameEn : displayNameAr;
+
+      if (subSlug === 'all') {
+        // Map slug to topcam internal category
+        filterByCategory(mainSlug);
+      } else {
+        filterByCategory('sub:' + subSlug);
+      }
+
+      // Update section header title if element exists
+      const titleEl = document.getElementById('productsSectionTitle');
+      const catTitleEl = document.getElementById('categoryDisplayTitle');
+      if (titleEl) titleEl.textContent = displayTitle;
+      if (catTitleEl) catTitleEl.textContent = displayTitle;
+
+      // Close mobile drawer smoothly
+      toggleMobileMenu();
+      scrollToProducts();
+    }
+
+    function searchDrawerCategories(q) {
+      const query = (q || '').trim().toLowerCase();
+      const catGroups = document.querySelectorAll('.sidebar-cat-group');
+      if (!query) {
+        catGroups.forEach(g => {
+          g.classList.remove('hidden');
+          const slug = g.getAttribute('data-cat');
+          const body = document.getElementById('accordion-body-' + slug);
+          const icon = document.getElementById('accordion-icon-' + slug);
+          if (body) body.classList.add('hidden');
+          if (icon) icon.classList.remove('rotate-180', 'text-amber-500');
+          g.querySelectorAll('.sidebar-sub-item').forEach(si => si.classList.remove('hidden'));
+        });
+        return;
+      }
+
+      catGroups.forEach(g => {
+        const catKw = (g.getAttribute('data-keywords') || '').toLowerCase();
+        let matchInGroup = catKw.includes(query);
+
+        const subItems = g.querySelectorAll('.sidebar-sub-item');
+        let visibleSubs = 0;
+        subItems.forEach(si => {
+          const subKw = (si.getAttribute('data-keywords') || '').toLowerCase();
+          if (subKw.includes(query) || catKw.includes(query)) {
+            si.classList.remove('hidden');
+            visibleSubs++;
+          } else {
+            si.classList.add('hidden');
+          }
+        });
+
+        const slug = g.getAttribute('data-cat');
+        const body = document.getElementById('accordion-body-' + slug);
+        const icon = document.getElementById('accordion-icon-' + slug);
+
+        if (matchInGroup || visibleSubs > 0) {
+          g.classList.remove('hidden');
+          if (body) body.classList.remove('hidden');
+          if (icon) icon.classList.add('rotate-180', 'text-amber-500');
+        } else {
+          g.classList.add('hidden');
+        }
+      });
+    }
+
 
   </script>
 </body>
