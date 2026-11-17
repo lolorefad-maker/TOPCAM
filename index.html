@@ -2955,8 +2955,8 @@
     </div>
   </div>
 
-  <script src="js/data.js?v=20261117_v36"></script>
-  <script src="js/store.js?v=20261117_v36"></script>
+  <script src="js/data.js?v=20261117_v37"></script>
+  <script src="js/store.js?v=20261117_v37"></script>
   <script src="js/i18n-dom.js?v=20261026"></script>
   <script src="js/i18n-specs.js?v=20261026"></script>
   <script>
@@ -3516,27 +3516,35 @@
     let isShowingAllProducts = false;
 
     const CATEGORY_META = {
-      all: { ar: 'جميع المعدات وأنظمة التصوير (500 منتج أصلي)', sub: 'تصفح كافة المعدات السينمائية والفوتوغرافية المتوفرة' },
-      accessories: { ar: 'الإكسسوارات وأغطية العدسات (Accessories & Caps)', sub: 'أغطية الحماية، هودات العدسات، أطقم التنظيف، وأكياس التثبيت' },
+      all: { ar: 'جميع المعدات وأنظمة التصوير', sub: 'تصفح كافة المعدات السينمائية والفوتوغرافية المتوفرة' },
+      accessories: { ar: 'الإكسسوارات ومعدات الكاميرا (Accessories & Gear)', sub: 'أغطية الحماية، هودات العدسات، أطقم التنظيف، وأكياس التثبيت' },
       caps: { ar: 'أغطية العدسات والكاميرات (Caps)', sub: 'أغطية حماية العدسات الأمامية والخلفية وأغطية مستشعر الكاميرا' },
       teleprompters: { ar: 'شاشات التلقين (Teleprompter)', sub: 'شاشات تلقين النصوص الاحترافية للكاميرات والأجهزة اللوحية والموبايل' },
       teleprompter: { ar: 'شاشات التلقين (Teleprompter)', sub: 'شاشات تلقين النصوص الاحترافية للكاميرات والأجهزة اللوحية والموبايل' },
       telepropmter: { ar: 'شاشات التلقين (Teleprompter)', sub: 'شاشات تلقين النصوص الاحترافية للكاميرات والأجهزة اللوحية والموبايل' },
       wireless_video_and_intercom: { ar: 'أنظمة البث والإنتركوم اللاسلكي', sub: 'أجهزة نقل الفيديو والاتصال الميداني اللاسلكي' },
-      tripods: { ar: 'الترايبودز والحوامل الثلاثية', sub: 'ترايبودز الكاميرا والفيديو' },
+      tripods: { ar: 'الترايبودز والحوامل الثلاثية', sub: 'ترايبودز الكاميرا والفيديو الاحترافية' },
+      'tripods-and-support': { ar: 'الترايبودز والحوامل الثلاثية (Tripods & Support)', sub: 'ترايبودز ومونوبودز وحوامل الكاميرا الاحترافية' },
       stands: { ar: 'الستاندات وحوامل الإضاءة', sub: 'ستاندات الإضاءة والحوامل' },
-      monitors: { ar: 'شاشات المونيتور', sub: 'شاشات المونيتور للتصوير والسينما' },
+      monitors: { ar: 'شاشات المونيتور للتصوير', sub: 'شاشات المونيتور للتصوير والسينما' },
+      video: { ar: 'شاشات المونيتور والبث والفيديو (Video & Broadcasting)', sub: 'شاشات المونيتور، التلقين، وأجهزة النقل اللاسلكي' },
       lenses: { ar: 'العدسات وفلاتر التصوير', sub: 'اختر الماركة لتصفح العدسات الاحترافية وفلاتر ND' },
       stabilizers: { ar: 'مانعات الاهتزاز والجمبل', sub: 'اختر الماركة لتصفح مثبتات الحركة والـ Gimbals' },
       batteries: { ar: 'البطاريات والشواحن ومحطات الطاقة', sub: 'اختر الماركة لتصفح بطاريات V-Mount والشواحن' },
-      cameras: { ar: 'الكاميرات وأنظمة السينما', sub: 'اختر الماركة لتصفح كاميرات السينما والميرورليس' },
+      'batteries-power': { ar: 'البطاريات والشواحن ومحطات الطاقة (Batteries & Power)', sub: 'اختر الماركة لتصفح بطاريات الكاميرات وV-Mount والشواحن' },
+      cameras: { ar: 'الكاميرات وأنظمة السينما (Cameras & Cinema)', sub: 'اختر الماركة لتصفح كاميرات السينما والميرورليس الأصلية فقط' },
       filters: { ar: 'العدسات وفلاتر التصوير', sub: 'اختر الماركة لتصفح العدسات الاحترافية وفلاتر ND' },
       lighting: { ar: 'إضاءات وسوفت بوكس الاستوديو', sub: 'اختر الماركة لتصفح أضواء الاستوديو المستمرة والإضاءة المحمولة' },
-      gimbals: { ar: 'مانعات الاهتزاز والجمبل', sub: 'اختر الماركة لتصفح مثبتات الحركة والـ Gimbals' },
+      lightingandstudio: { ar: 'إضاءات وسوفت بوكس ومعدات الاستوديو (Lighting & Studio)', sub: 'اختر الماركة لتصفح أضواء الاستوديو، الإضاءة المحمولة، وحوامل الإضاءة' },
+      gimbals: { ar: 'مانعات الاهتزاز والجمبل (Gimbals & Stabilizers)', sub: 'اختر الماركة لتصفح مثبتات الحركة والـ Gimbals' },
       cages: { ar: 'أقفاص الكاميرا والمقابض (Cages & Rigs)', sub: 'اختر الماركة لتصفح أقفاص الحماية وإكسسوارات التثبيت' },
-      audio: { ar: 'مايكات وأنظمة الصوت اللاسلكية', sub: 'اختر الماركة لتصفح مايكات الشوت جن والميكروفونات اللاسلكية' },
+      audio: { ar: 'مايكات وأنظمة الصوت اللاسلكية (Audio & Microphones)', sub: 'اختر الماركة لتصفح مايكات الشوت جن والميكروفونات اللاسلكية' },
       chargers_batteries: { ar: 'البطاريات والشواحن ومحطات الطاقة', sub: 'اختر الماركة لتصفح بطاريات V-Mount والشواحن' },
-      bags: { ar: 'حقائب الكاميرات ومعدات الحماية', sub: 'اختر الماركة لتصفح حقائب الظهر وحقائب النقل الصلبة' },
+      bags: { ar: 'حقائب الكاميرات ومعدات الحماية (Bags & Cases)', sub: 'اختر الماركة لتصفح حقائب الظهر وحقائب النقل الصلبة' },
+      'bags-cases': { ar: 'حقائب الكاميرات ومعدات الحماية (Bags & Cases)', sub: 'اختر الماركة لتصفح حقائب الظهر وحقائب النقل الصلبة' },
+      memory: { ar: 'كروت الذاكرة ووحدات التخزين (Memory & Storage)', sub: 'اختر الماركة لتصفح كروت SD و CFexpress ووحدات SSD' },
+      'memory-storage': { ar: 'كروت الذاكرة ووحدات التخزين (Memory & Storage)', sub: 'اختر الماركة لتصفح كروت SD و CFexpress ووحدات SSD' },
+      mobile: { ar: 'معدات تصوير الهواتف الذكية (Mobile Filmmaking)', sub: 'اختر الماركة لتصفح مايكات ومانعات اهتزاز الهواتف الذكية' },
       deals: { ar: 'عروض وتخفيضات حصرية', sub: 'معدات مميزة بأسعار وتخفيضات خاصة' }
     };
 
@@ -3745,9 +3753,30 @@
       if (cat === 'deals') {
         catProducts = allProducts.filter(p => p.oldPrice || (p.badge && (p.badge.includes('خصم') || p.badge.includes('وفر') || p.badge.includes('الأكثر') || p.badge.includes('عرض'))));
       } else if (cat.startsWith('sub:')) {
-        const subSlug = cat.replace('sub:', '').toLowerCase().trim();
+        const subRaw = cat.replace('sub:', '');
+        let mainSlug = '';
+        let subSlug = subRaw;
+        if (subRaw.includes(':')) {
+          const parts = subRaw.split(':');
+          mainSlug = parts[0].toLowerCase().trim();
+          subSlug = parts[1].toLowerCase().trim();
+        }
         const cleanSub = subSlug.replace(/-/g, ' ');
+
         catProducts = allProducts.filter(p => {
+          // Strict main category boundary if mainSlug is provided
+          if (mainSlug === 'cameras' && p.category !== 'cameras') return false;
+          if (mainSlug === 'lenses' && p.category !== 'lenses' && p.category !== 'filters') return false;
+          if (mainSlug === 'lightingandstudio' && p.category !== 'lighting' && p.category !== 'stands') return false;
+          if (mainSlug === 'audio' && p.category !== 'audio') return false;
+          if (mainSlug === 'tripods-and-support' && p.category !== 'tripods') return false;
+          if (mainSlug === 'batteries-power' && p.category !== 'chargers_batteries' && p.category !== 'batteries') return false;
+          if (mainSlug === 'bags-cases' && p.category !== 'bags') return false;
+          if (mainSlug === 'accessories' && p.category !== 'accessories' && p.category !== 'caps') return false;
+          if (mainSlug === 'memory-storage' && p.category !== 'memory') return false;
+          if (mainSlug === 'video' && p.category !== 'video' && p.category !== 'monitors' && p.category !== 'teleprompters' && p.category !== 'teleprompter' && p.category !== 'cages' && p.category !== 'gimbals' && p.category !== 'wireless_video_and_intercom') return false;
+
+          // Subcategory matching within that verified department
           if (Array.isArray(p.youcamCategories)) {
             if (p.youcamCategories.some(c => c.toLowerCase().includes(subSlug) || c.toLowerCase().includes(cleanSub) || cleanSub.includes(c.toLowerCase()))) return true;
           }
@@ -3755,27 +3784,31 @@
           return text.includes(cleanSub) || text.includes(subSlug);
         });
       } else if (cat === 'cameras') {
-        catProducts = allProducts.filter(p => p.category === 'cameras' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('camera'))));
+        catProducts = allProducts.filter(p => p.category === 'cameras');
       } else if (cat === 'lenses' || cat === 'filters') {
-        catProducts = allProducts.filter(p => p.category === 'lenses' || p.category === 'filters' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('lens'))));
+        catProducts = allProducts.filter(p => p.category === 'lenses' || p.category === 'filters');
       } else if (cat === 'lighting' || cat === 'lightingandstudio' || cat === 'stands') {
-        catProducts = allProducts.filter(p => p.category === 'lighting' || p.category === 'stands' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('light') || c.toLowerCase().includes('modifier') || c.toLowerCase().includes('studio'))));
+        catProducts = allProducts.filter(p => p.category === 'lighting' || p.category === 'stands');
       } else if (cat === 'audio') {
-        catProducts = allProducts.filter(p => p.category === 'audio' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('audio') || c.toLowerCase().includes('mic'))));
+        catProducts = allProducts.filter(p => p.category === 'audio');
       } else if (cat === 'video') {
-        catProducts = allProducts.filter(p => p.category === 'video' || p.category === 'gimbals' || p.category === 'stabilizers' || p.category === 'cages' || p.category === 'monitors' || p.category === 'teleprompters' || p.category === 'teleprompter' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('video') || c.toLowerCase().includes('gimbal') || c.toLowerCase().includes('cage') || c.toLowerCase().includes('monitor') || c.toLowerCase().includes('autocue') || c.toLowerCase().includes('transmission'))));
+        catProducts = allProducts.filter(p => p.category === 'video' || p.category === 'monitors' || p.category === 'teleprompters' || p.category === 'teleprompter' || p.category === 'wireless_video_and_intercom');
+      } else if (cat === 'gimbals') {
+        catProducts = allProducts.filter(p => p.category === 'gimbals');
+      } else if (cat === 'cages') {
+        catProducts = allProducts.filter(p => p.category === 'cages');
       } else if (cat === 'tripods' || cat === 'tripods-and-support') {
-        catProducts = allProducts.filter(p => p.category === 'tripods' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('tripod') || c.toLowerCase().includes('monopod'))));
+        catProducts = allProducts.filter(p => p.category === 'tripods');
       } else if (cat === 'batteries' || cat === 'batteries-power' || cat === 'chargers_batteries') {
-        catProducts = allProducts.filter(p => p.category === 'chargers_batteries' || p.category === 'batteries' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('batter') || c.toLowerCase().includes('charger') || c.toLowerCase().includes('power'))));
+        catProducts = allProducts.filter(p => p.category === 'chargers_batteries' || p.category === 'batteries');
       } else if (cat === 'bags' || cat === 'bags-cases') {
-        catProducts = allProducts.filter(p => p.category === 'bags' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('bag') || c.toLowerCase().includes('case'))));
+        catProducts = allProducts.filter(p => p.category === 'bags');
       } else if (cat === 'memory' || cat === 'memory-storage') {
-        catProducts = allProducts.filter(p => p.category === 'memory' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('memor') || c.toLowerCase().includes('sd') || c.toLowerCase().includes('storage'))));
+        catProducts = allProducts.filter(p => p.category === 'memory');
       } else if (cat === 'mobile') {
-        catProducts = allProducts.filter(p => (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('mobile'))) || (p.name && (p.name.toLowerCase().includes('phone') || p.name.toLowerCase().includes('mobile') || p.name.toLowerCase().includes('selfie'))));
+        catProducts = allProducts.filter(p => p.category === 'mobile' || (p.name && (p.name.toLowerCase().includes('phone') || p.name.toLowerCase().includes('mobile') || p.name.toLowerCase().includes('selfie'))));
       } else if (cat === 'accessories') {
-        catProducts = allProducts.filter(p => p.category === 'accessories' || p.category === 'caps' || (p.youcamCategories && p.youcamCategories.some(c => c.toLowerCase().includes('accessor') || c.toLowerCase().includes('printer') || c.toLowerCase().includes('strap'))));
+        catProducts = allProducts.filter(p => p.category === 'accessories' || p.category === 'caps');
       } else if (cat !== 'all') {
         catProducts = allProducts.filter(p => p.category === cat);
       } else {
@@ -4659,7 +4692,7 @@
         // Map slug to topcam internal category
         filterByCategory(mainSlug);
       } else {
-        filterByCategory('sub:' + subSlug);
+        filterByCategory('sub:' + mainSlug + ':' + subSlug);
       }
 
       // Update section header title if element exists
