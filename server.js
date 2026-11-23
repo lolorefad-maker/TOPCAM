@@ -229,9 +229,23 @@ function withGalleries(list) {
     return Array.isArray(g) && g.length ? Object.assign({}, p, { gallery: g.slice() }) : p;
   });
 }
+// تصحيح تصنيف المنتجات (data/category_fixes.json): { version, items: { id: category } } — نفس فكرة الصور
+const CATEGORY_FIXES = (() => {
+  try {
+    const g = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'category_fixes.json'), 'utf8'));
+    return g && g.version && g.items ? g : null;
+  } catch (e) { return null; }
+})();
+function withCategoryFixes(list) {
+  if (!CATEGORY_FIXES) return list;
+  return list.map(p => {
+    const c = CATEGORY_FIXES.items[p.id];
+    return c && c !== p.category ? Object.assign({}, p, { category: c }) : p;
+  });
+}
 function seededCatalog() {
   const deleted = new Set(effectiveDeleted());
-  return withGalleries(BASE_PRODUCTS.concat(NEW_PRODUCTS).filter(p => !deleted.has(p.id)));
+  return withCategoryFixes(withGalleries(BASE_PRODUCTS.concat(NEW_PRODUCTS).filter(p => !deleted.has(p.id))));
 }
 function currentProducts() {
   const cat = readJson(FILES.catalog, null);
@@ -385,7 +399,7 @@ async function handleApi(req, res, reqPath) {
       const missing = NEW_PRODUCTS.filter(p => !existingIds.has(p.id) && !deleted.has(p.id));
       let changed = false;
       if (missing.length > 0) {
-        catalog = catalog.concat(withGalleries(missing));
+        catalog = catalog.concat(withCategoryFixes(withGalleries(missing)));
         changed = true;
       }
       if (isSaved && GALLERIES) {
@@ -393,6 +407,14 @@ async function handleApi(req, res, reqPath) {
         if (kv.galleriesVersion !== GALLERIES.version) {
           catalog = withGalleries(catalog);
           writeJson(FILES.kv, Object.assign({}, kv, { galleriesVersion: GALLERIES.version }));
+          changed = true;
+        }
+      }
+      if (isSaved && CATEGORY_FIXES) {
+        const kv = readJson(FILES.kv, {});
+        if (kv.categoryFixesVersion !== CATEGORY_FIXES.version) {
+          catalog = withCategoryFixes(catalog);
+          writeJson(FILES.kv, Object.assign({}, kv, { categoryFixesVersion: CATEGORY_FIXES.version }));
           changed = true;
         }
       }

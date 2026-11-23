@@ -52,6 +52,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,600;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/desktop-shell.css?v=20261123e">
 
   <style>
     body {
@@ -96,10 +97,74 @@
 <body class="antialiased pb-16 md:pb-0">
 
   <!-- ═══════════════ TOP CAM HEADER (Exact 1:1 Matching Reference Screenshots) ═══════════════ -->
+  <!-- ═══════════ شريط علوي (ديسكتوب) ═══════════ -->
+  <div class="hidden lg:block tc-topbar">
+    <div class="max-w-7xl mx-auto px-6 h-9 flex items-center justify-between text-[12px] font-semibold">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-truck-fast"></i>
+        <span>توصيل مجاني لكل المملكة عند استخدام الكود</span>
+        <span class="tc-code">FREESHIP</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/topcamjo/" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/962788000067" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <span class="tc-sep"></span>
+        <a href="tel:0788000067" class="flex items-center gap-1.5"><i class="fa-solid fa-phone"></i><span class="font-en">0788000067</span></a>
+        <a href="#locationSection" onclick="document.getElementById('locationSection')?.scrollIntoView({behavior:'smooth'});return false;" class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i><span>زورنا - إربد</span></a>
+      </div>
+    </div>
+  </div>
+
   <header class="sticky top-0 z-40 bg-[#141414] shadow-md border-b border-white/5">
-    
+
+    <!-- ═══════════ الهيدر الكامل (ديسكتوب) ═══════════ -->
+    <div class="hidden lg:block">
+      <div class="max-w-7xl mx-auto px-6 h-[76px] flex items-center gap-8">
+        <a href="index.html" class="shrink-0"><img src="images/logo.svg" alt="TOP CAM" class="h-11 w-auto object-contain"></a>
+        <div class="tc-search flex-1 max-w-2xl">
+          <input id="tcDeskSearch" type="text" placeholder="ابحث عن منتج، ماركة أو موديل..." oninput="tcDeskSearch()" onkeydown="if(event.key==='Enter'){tcDeskSearch(true)}">
+          <select id="tcDeskSearchCat" onchange="tcDeskSearch(true)"></select>
+          <button onclick="tcDeskSearch(true)" title="بحث"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="flex items-center gap-5 shrink-0 text-white">
+          <a href="https://wa.me/962788000067" target="_blank" rel="noopener" class="tc-hdr-pill"><i class="fa-brands fa-whatsapp text-lg"></i><span>اطلب عبر واتساب</span></a>
+          <button onclick="toggleLanguage()" class="tc-hdr-icon" title="English / عربي"><i class="fa-solid fa-globe"></i></button>
+          <button onclick="toggleCartDrawer(true)" class="flex items-center gap-2.5 cursor-pointer group" title="السلة">
+            <span class="relative"><i class="fa-solid fa-cart-shopping text-[22px] group-hover:text-amber-400 transition"></i><span id="tcDeskCartCount" class="tc-badge">0</span></span>
+            <span class="text-right leading-tight"><span class="block text-[11px] text-white/60">سلة المشتريات</span><span id="tcDeskCartTotal" class="block text-sm font-black text-amber-400 font-en">0 د.أ</span></span>
+          </button>
+        </div>
+      </div>
+      <!-- شريط التنقل الأبيض -->
+      <div class="bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-[52px] flex items-stretch">
+          <div class="tc-browse relative w-[260px] shrink-0" id="tcBrowse">
+            <button class="tc-browse-btn" onclick="document.getElementById('tcBrowse').classList.toggle('open')">
+              <i class="fa-solid fa-bars"></i><span>تصفح الأقسام</span><i class="fa-solid fa-chevron-down text-[10px] ms-auto"></i>
+            </button>
+            <div class="tc-browse-menu" id="tcBrowseMenu"></div>
+          </div>
+          <nav class="tc-nav flex items-center gap-1 ps-6">
+            <a href="#" onclick="showFeaturedStorefrontProducts();window.scrollTo({top:0,behavior:'smooth'});return false;" class="active">الرئيسية</a>
+            <a href="#" onclick="showAllCatalogProducts();return false;">المتجر</a>
+            <a href="#" onclick="filterByCategory('deals');return false;">العروض</a>
+            <a href="#" onclick="document.getElementById('locationSection')?.scrollIntoView({behavior:'smooth'});return false;">موقعنا</a>
+            <a href="https://wa.me/962788000067" target="_blank" rel="noopener">تواصل معنا</a>
+          </nav>
+          <div class="ms-auto flex items-center gap-5">
+            <button onclick="filterByCategory('deals')" class="flex items-center gap-2 cursor-pointer group">
+              <span class="tc-sale">SALE</span><span class="text-[13px] font-extrabold text-slate-800 group-hover:text-amber-600">عروض حصرية</span>
+            </button>
+            <button onclick="filterByCategory('cameras')" class="flex items-center gap-2 cursor-pointer group">
+              <span class="tc-new"><i class="fa-solid fa-camera"></i></span><span class="text-[13px] font-extrabold text-slate-800 group-hover:text-amber-600">وصل حديثاً</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Top Black Header Bar: Hamburger | Centered TOP CAM Logo | Cart -->
-    <div class="max-w-7xl mx-auto px-4 h-14 sm:h-16 flex items-center justify-between">
+    <div class="lg:hidden max-w-7xl mx-auto px-4 h-14 sm:h-16 flex items-center justify-between">
       
       <!-- Hamburger Menu Button (Left) -->
       <button 
@@ -147,7 +212,7 @@
     </div>
 
     <!-- Sub-Bar: Search Input & Hot Offers SALE Badge (Exact Screenshot Layout) -->
-    <div class="bg-white border-b border-slate-200/90 py-2.5 px-3 sm:px-4">
+    <div class="lg:hidden bg-white border-b border-slate-200/90 py-2.5 px-3 sm:px-4">
       <div class="max-w-7xl mx-auto flex items-center gap-2 sm:gap-3">
         
         <!-- Search Input -->
@@ -221,7 +286,7 @@
             class="py-2 px-3 rounded-lg bg-white text-slate-950 shadow-xs flex items-center justify-center gap-2 transition"
           >
             <i class="fa-solid fa-layer-group text-amber-500"></i>
-            <span>التصنيفات (Categories)</span>
+            <span>الأقسام</span>
           </button>
           <button 
             id="tabBtnMenu" 
@@ -229,7 +294,7 @@
             class="py-2 px-3 rounded-lg text-slate-500 hover:text-slate-950 flex items-center justify-center gap-2 transition"
           >
             <i class="fa-solid fa-compass text-slate-400"></i>
-            <span>القائمة (Menu)</span>
+            <span>القائمة</span>
           </button>
         </div>
 
@@ -1432,12 +1497,12 @@
         </div>
       </div>
 
-      <!-- SLIDE 3: YOUCAM PRO IMAGING GEAR (Exact 1:1 Image 3 with Director Chair) -->
+      <!-- SLIDE 3: TOP CAM STUDIO -->
       <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-700 opacity-0 z-0 flex items-center justify-center text-center">
         <!-- Professional Cinema Studio with Leather Chair (Hyper-Realistic, Zero Yellow Mud) -->
         <img 
           src="images/slide_youcam_studio.jpg" 
-          alt="YouCam Pro Imaging Gear" 
+          alt="TOP CAM Studio Gear" 
           class="absolute inset-0 w-full h-full object-cover object-center"
         >
         <!-- Clean Neutral Studio Shadow Gradient -->
@@ -1452,11 +1517,11 @@
           </div>
 
           <h2 class="text-xl sm:text-3xl lg:text-4xl font-normal text-white tracking-wide font-sans drop-shadow-md">
-            2,000+ Products, 50+ Brands.
+            كل معدات التصوير في مكان واحد
           </h2>
 
           <p class="text-sm sm:text-lg text-slate-200 font-light tracking-wide font-sans">
-            ( Pro Imaging Gear )
+            كاميرات · عدسات · إضاءة · صوتيات — أصلية وبكفالة
           </p>
 
           <!-- Dual Buttons: VIEW MORE & TO SHOP (Exact Screenshot 3) -->
@@ -1623,7 +1688,16 @@
   </section>
 
   <!-- ═══════════════ SECTION 1: TRENDING PRODUCTS (Responsive 2-Col Mobile Grid) ═══════════════ -->
-  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6" id="productsSection">
+  <section class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6 lg:flex lg:gap-7 lg:items-start" id="productsSection">
+    <!-- ═══════════ الشريط الجانبي للفلاتر (ديسكتوب) ═══════════ -->
+    <!-- ═══════════ شريط الفلاتر الجانبي ═══════════ -->
+    <div id="tcSideBackdrop" class="tc-side-backdrop" onclick="tcSideToggle(false)"></div>
+    <aside id="tcSidebar" class="tc-side w-[270px] shrink-0">
+      <div class="tc-side-head lg:hidden"><span>الفلاتر</span><button onclick="tcSideToggle(false)" title="إغلاق"><i class="fa-solid fa-xmark"></i></button></div>
+      <div id="tcSideBody"></div>
+    </aside>
+
+    <div class="flex-1 min-w-0">
     <!-- Section Top Bar -->
     <div class="flex items-center justify-between mb-3 sm:mb-4">
       <div>
@@ -1650,6 +1724,22 @@
       <!-- Dynamic Brands Logos Row (Centered, 100% Transparent Background) -->
       <div class="flex items-center justify-center flex-wrap gap-2 sm:gap-3.5 py-1" id="brandFilterContainer">
         <!-- Rendered dynamically with real brand logos e.g. [الكل] [Canon] [Sony] [DJI] -->
+      </div>
+    </div>
+
+    <!-- شريط الترتيب والعدد -->
+    <div class="flex tc-toolbar">
+      <button class="tc-filter-open lg:hidden" onclick="tcSideToggle(true)"><i class="fa-solid fa-sliders"></i><span>فلترة</span><em id="tcActiveCount"></em></button>
+      <span id="tcCrumb" class="tc-crumb"></span><span id="tcResultCount" class="text-[13px] text-slate-500"></span>
+      <div class="flex items-center gap-2 ms-auto">
+        <label for="tcSort" class="text-[13px] text-slate-500">ترتيب:</label>
+        <select id="tcSort" onchange="tcApplyFilters()" class="tc-sort">
+          <option value="default">الترتيب الافتراضي</option>
+          <option value="price-asc">السعر: من الأقل للأعلى</option>
+          <option value="price-desc">السعر: من الأعلى للأقل</option>
+          <option value="name">الاسم</option>
+          <option value="discount">الأكثر خصماً</option>
+        </select>
       </div>
     </div>
 
@@ -1762,6 +1852,7 @@
       </div>
 
     </div>
+    </div><!-- /flex-1 -->
   </section>
 
 
@@ -2472,79 +2563,67 @@
   </section>
 
   <!-- ═══════════════ FOOTER (Responsive Multi-Column) ═══════════════ -->
-  <footer class="bg-white border-t border-slate-200 mt-8 sm:mt-12 pt-8 sm:pt-12 pb-6 text-xs text-slate-600">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 pb-8 border-b border-slate-200">
-        
-        <!-- Col 1: TOP CAM Logo -->
-        <div class="col-span-2 space-y-3">
-          <div class="flex items-center gap-3">
-            <div class="bg-black px-4 py-2 rounded-xl border border-yellow-400/60 shadow-md flex items-center">
-              <img src="images/logo.svg" alt="TOP CAM - لبيع جميع معدات التصوير" class="h-8 sm:h-9 w-auto">
-            </div>
-          </div>
-          <p class="text-[11px] text-slate-400 max-w-xs leading-relaxed">Your Ultimate Pro Photography & Cinema Equipment Destination.</p>
-          <div class="flex gap-3 text-slate-400 text-sm pt-1">
-            <a href="contact.html" class="hover:text-yellow-600"><i class="fa-brands fa-facebook"></i></a>
-            <a href="contact.html" class="hover:text-yellow-600"><i class="fa-brands fa-instagram"></i></a>
-            <a href="contact.html" class="hover:text-emerald-500"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="contact.html" class="hover:text-yellow-600"><i class="fa-solid fa-phone"></i></a>
+  <!-- شريط الماركات -->
+  <section class="tc-brands-strip mt-8 sm:mt-12">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-6 flex items-center justify-center flex-wrap gap-x-10 gap-y-4">
+      <img src="images/brands/sony.svg" alt="Sony">
+      <img src="images/brands/canon.svg" alt="Canon">
+      <img src="images/brands/dji.svg" alt="DJI">
+      <img src="images/brands/godox.svg" alt="Godox">
+      <img src="images/brands/aputure.svg" alt="Aputure">
+      <img src="images/brands/rode.svg" alt="RODE">
+      <img src="images/brands/smallrig.svg" alt="SmallRig">
+      <img src="images/brands/nanlite.svg" alt="Nanlite">
+      <img src="images/brands/hollyland.svg" alt="Hollyland">
+    </div>
+  </section>
+
+  <footer class="tc-footer text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="col-span-2 md:col-span-1 space-y-3">
+          <img src="images/logo.svg" alt="TOP CAM" class="h-10 w-auto">
+          <p class="text-[12px] leading-relaxed text-white/60">لبيع جميع معدات التصوير — كاميرات، عدسات، إضاءة، صوتيات وإكسسوارات أصلية بكفالة.</p>
+          <div class="flex gap-3 text-base">
+            <a href="https://www.instagram.com/topcamjo/" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/962788000067" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:0788000067" title="اتصل بنا"><i class="fa-solid fa-phone"></i></a>
           </div>
         </div>
-
-        <!-- Col 2: Shop -->
         <div>
-          <h5 class="font-bold text-slate-900 mb-2.5">Shop Gear</h5>
-          <ul class="space-y-1.5 text-[11px] text-slate-500">
-            <li><a href="#" onclick="filterByCategory('cameras'); return false;" class="hover:text-yellow-600">Cinema Cameras</a></li>
-            <li><a href="#" onclick="filterByCategory('lighting'); return false;" class="hover:text-yellow-600">Studio Lights</a></li>
-            <li><a href="#" onclick="filterByCategory('gimbals'); return false;" class="hover:text-yellow-600">Gimbals</a></li>
-            <li><a href="#" onclick="filterByCategory('tripods'); return false;" class="hover:text-yellow-600">Tripods</a></li>
-            <li><a href="#" onclick="filterByCategory('deals'); return false;" class="hover:text-yellow-600">Special Deals</a></li>
+          <h5>الأقسام</h5>
+          <ul>
+            <li><a href="#" onclick="filterByCategory('cameras');return false;">الكاميرات</a></li>
+            <li><a href="#" onclick="filterByCategory('lenses');return false;">العدسات والفلاتر</a></li>
+            <li><a href="#" onclick="filterByCategory('lighting');return false;">الإضاءة والاستوديو</a></li>
+            <li><a href="#" onclick="filterByCategory('audio');return false;">الصوتيات والمايكات</a></li>
+            <li><a href="#" onclick="filterByCategory('gimbals');return false;">الجيمبل</a></li>
+            <li><a href="#" onclick="filterByCategory('deals');return false;">العروض</a></li>
           </ul>
         </div>
-
-        <!-- Col 3: Support & Admin -->
         <div>
-          <h5 class="font-bold text-slate-900 mb-2.5">Support</h5>
-          <ul class="space-y-1.5 text-[11px] text-slate-500">
-            <li><a href="#" class="hover:text-yellow-600">Track Order</a></li>
-            <li><a href="#" class="hover:text-yellow-600">Returns & Refunds</a></li>
-            <li><a href="#" class="hover:text-yellow-600">Warranty Policy</a></li>
-            <li><a href="https://wa.me/962790000000" target="_blank" class="hover:text-emerald-500">WhatsApp Support</a></li>
+          <h5>معلومات</h5>
+          <ul>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="#" onclick="document.getElementById('locationSection')?.scrollIntoView({behavior:'smooth'});return false;">موقع المحل</a></li>
+            <li><a href="https://wa.me/962788000067" target="_blank" rel="noopener">الدعم عبر واتساب</a></li>
           </ul>
         </div>
-
-        <!-- Col 4: About & App Download -->
-        <div class="col-span-2 md:col-span-1">
-          <h5 class="font-bold text-slate-900 mb-2.5">About</h5>
-          <ul class="space-y-1.5 text-[11px] text-slate-500 mb-3">
-            <li><a href="#" class="hover:text-yellow-600">Our Studio Story</a></li>
-            <li><a href="#" class="hover:text-yellow-600">Filmmaking Blog</a></li>
-            <li><a href="#" class="hover:text-yellow-600">Contact Us</a></li>
+        <div>
+          <h5>تواصل معنا</h5>
+          <ul class="tc-contact">
+            <li><i class="fa-solid fa-location-dot"></i><span>إربد، شارع الجامعة — بجانب مندي الجامعة</span></li>
+            <li><i class="fa-solid fa-phone"></i><a href="tel:0788000067" class="font-en">078 8000 067</a></li>
+            <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/962788000067" target="_blank" rel="noopener" class="font-en">+962 78 8000 067</a></li>
           </ul>
-
-          <h5 class="font-bold text-slate-900 mb-1.5 text-[11px]">Download App</h5>
-          <div class="flex md:flex-col gap-1.5">
-            <button class="bg-black text-white text-[9px] px-2.5 py-1 rounded flex items-center gap-1.5 hover:bg-slate-900">
-              <i class="fa-brands fa-google-play"></i> Google Play
-            </button>
-            <button class="bg-black text-white text-[9px] px-2.5 py-1 rounded flex items-center gap-1.5 hover:bg-slate-900">
-              <i class="fa-brands fa-apple"></i> App Store
-            </button>
-          </div>
         </div>
-
       </div>
-
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[10px] sm:text-[11px] text-slate-400 text-center sm:text-left">
-        <p>© 2026 YouCam. All rights reserved. (youcamjor.com - Pro Imaging Gear)</p>
-        <div class="flex items-center gap-3 text-slate-400">
-          <span class="flex items-center gap-1"><i class="fa-solid fa-lock text-[9px]"></i> Secure Checkout</span>
-          <span class="font-bold text-slate-600">VISA</span>
-          <span class="font-bold text-slate-600">MasterCard</span>
-          <span class="font-bold text-slate-600">Apple Pay</span>
-        </div>
+    </div>
+    <div class="tc-footer-bar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-[12px]">
+        <p>© <span class="font-en">2026</span> TOP CAM — جميع الحقوق محفوظة</p>
+        <p class="flex items-center gap-2"><i class="fa-solid fa-lock text-[10px]"></i>الدفع عند الاستلام · كاش أو فيزا</p>
       </div>
     </div>
   </footer>
@@ -3201,6 +3280,10 @@
 
       if (badge) badge.textContent = totalQty;
       if (mobileBadge) mobileBadge.textContent = totalQty;
+      const tcCnt = document.getElementById('tcDeskCartCount');
+      const tcTot = document.getElementById('tcDeskCartTotal');
+      if (tcCnt) tcCnt.textContent = totalQty;
+      if (tcTot) tcTot.textContent = formatCurrency(totalPrice);
       if (count) count.textContent = totalQty;
       if (totalEl) totalEl.textContent = formatCurrency(totalPrice);
 
@@ -3607,9 +3690,15 @@
       const categoryBadge = product.badge || product.brand || '';
       const addToCartText = isEn ? 'Add to Cart' : 'أضف للسلة';
 
+      const tcLogo = (window.tcBrandLogoSrc && window.tcBrandLogoSrc(product.brand)) || '';
+      const tcOff = (Number(product.oldPrice) > Number(product.price) && Number(product.price) > 0) ? Math.round((1 - Number(product.price) / Number(product.oldPrice)) * 100) : 0;
       return `
-        <div onclick="openCameraSpecsBubble('${safeId}')" class="bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group cursor-pointer ${extraClasses}">
-          <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 right-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
+        <div onclick="openCameraSpecsBubble('${safeId}')" class="tc-card bg-white rounded-xl border border-slate-200 p-2.5 sm:p-3.5 flex flex-col justify-between hover:shadow-md transition relative group cursor-pointer ${extraClasses}">
+          <div class="tc-card-top">
+            ${tcLogo ? `<img src="${tcLogo}" alt="${(product.brand || '').replace(/"/g, '&quot;')}" class="tc-card-logo" loading="lazy">` : (product.brand && product.brand !== 'Universal' ? `<span class="tc-card-brand">${product.brand}</span>` : '<span></span>')}
+            ${tcOff >= 3 ? `<span class="tc-card-off">-${tcOff}%</span>` : ''}
+          </div>
+          <button onclick="event.stopPropagation(); toggleWish(this)" class="absolute top-2.5 left-2.5 text-slate-300 hover:text-yellow-400 transition text-sm z-10 p-1" title="إضافة للمفضلة">
             <i class="fa-regular fa-heart"></i>
           </button>
           <div 
@@ -3619,15 +3708,14 @@
             <img src="${safeImg}" alt="${safeNameForAttr}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300" loading="lazy">
           </div>
           <div>
-            ${categoryBadge ? `<span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-0.5 line-clamp-1">${categoryBadge}</span>` : ''}
-            <h4 
-              class="text-xs font-bold text-slate-900 line-clamp-1 hover:text-yellow-600 transition" 
+            <h4
+              class="tc-card-name text-xs font-bold text-slate-900 line-clamp-2 hover:text-yellow-600 transition"
               title="${safeNameForAttr}"
             >
               ${rawName}
             </h4>
             <div class="flex items-baseline gap-1.5 mt-1 font-sans">
-              <span class="text-xs sm:text-sm font-bold text-slate-900">${formatCurrency(product.price)}</span>
+              <span class="tc-card-price text-xs sm:text-sm font-bold">${formatCurrency(product.price)}</span>
               ${product.oldPrice ? `<span class="text-[10px] text-slate-400 line-through">${formatCurrency(product.oldPrice)}</span>` : ''}
             </div>
           </div>
@@ -3920,6 +4008,8 @@
       if (currentBrand && currentBrand !== 'all') {
         finalProducts = catProducts.filter(p => p.brand === currentBrand);
       }
+      // فلاتر الشريط الجانبي (السعر، الماركات، الترتيب)
+      finalProducts = tcFilterAndSort(finalProducts, catProducts, cat, searchTerm);
 
       if (finalProducts.length === 0) {
         grid.innerHTML = `
@@ -3934,8 +4024,10 @@
         return;
       }
 
-      grid.className = 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4';
-      grid.innerHTML = finalProducts.map(p => renderStorefrontProductCard(p)).join('');
+      grid.className = 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4';
+      const TC_PAGE = 60;
+      grid.innerHTML = finalProducts.slice(0, tcShown).map(p => renderStorefrontProductCard(p)).join('') +
+        (finalProducts.length > tcShown ? `<div class="col-span-full flex justify-center pt-2"><button onclick="tcShown+=${TC_PAGE};renderStorefrontProducts(currentCategory,currentBrand,tcLastSearch)" class="tc-more">عرض المزيد (${finalProducts.length - tcShown} منتج)</button></div>` : '');
     }
 
     function filterByBrand(brand) {
@@ -4754,5 +4846,8 @@
 
 
   </script>
+  <script src="js/cat-icons.js?v=20261123"></script>
+  <script src="js/desktop-shell.js?v=20261123c"></script>
+  <script src="js/cat-page.js?v=20261123b"></script>
 </body>
 </html>
